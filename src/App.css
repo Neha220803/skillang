@@ -1,0 +1,111 @@
+section{
+    height: 100vh;
+}
+
+header{
+    height: 100vh;
+  }
+
+
+  h1{
+    font-size: 46px !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 700 !important;
+  }
+  
+  h2{
+    font-size: 40px !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 700 !important;
+  }
+  
+  h3{
+    font-size: 28px !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600 !important;
+  }
+
+  h3{
+    font-size: 22px !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600 !important;
+  }
+
+
+  
+  p{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    text-align: justify;
+  }
+
+
+
+/* Responsive Font Sizes for h1, h2, h3, and p */
+/* @media (max-width: 991px) {
+    h1 {
+      font-size: 1.9rem !important;
+    }
+    h2 {
+      font-size: 1.7rem !important;
+    }
+    h3 {
+      font-size: 1.5rem !important;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+  }
+  
+  @media (max-width: 761px) {
+    h1 {
+      font-size: 1.6rem !important;
+    }
+    h2 {
+      font-size: 1.5rem !important;
+    }
+    h3 {
+      font-size: 1.4rem !important;
+    }
+    p {
+      font-size: 0.9rem !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.9rem !important;
+    }
+    h2 {
+      font-size: 1.6rem !important;
+    }
+    h3 {
+      font-size: 1.4rem !important;
+    }
+    p {
+      font-size: 0.95rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.3rem !important;
+    }
+    h2 {
+      font-size: 1.2rem !important;
+    }
+    h3 {
+      font-size: 1.1rem !important;
+    }
+    p {
+      font-size: 0.85rem !important;
+    }
+  }
+  
+   */
