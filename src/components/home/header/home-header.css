@@ -1,0 +1,66 @@
+/* Form container styling */
+#header-section{
+  height: 100vh !important;  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(D:\Neha\React\skillang\src\images\home\carousel-1.png);
+}
+
+.content-heading, .content-desc{
+  color: white !important;
+  font-style: bold !important;
+}
+
+
+.form-container {
+  background-color: white;
+  padding: 24px;
+  border-radius: 32px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+
+  border-bottom: none !important;
+  border-left: none !important;
+    border-top: 10px solid transparent !important;
+    border-right: 4px solid transparent !important;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to bottom left, #8484F0, white) border-box;
+    border-radius: 32px; /* Optional for rounded corners */
+    border-width: 4px;
+    border-style: solid;
+
+}
+
+/* Form fields styling */
+.form-control,
+.form-container .form-select {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+.form-container .btn-primary {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--primary-colour);
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.form-container .btn-primary:hover {
+  background-color: darken(var(--primary-colour), 10%);
+}
+
+/* OTP Modal styling */
+.otp-modal .modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px var(--primary-colour);
+}
+
+.otp-modal .form-control {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 3px;
+}

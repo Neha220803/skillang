@@ -1,3 +1,17 @@
+:root {
+  --primary-color: #9473F2; /* Primary - Red-500 (C) */
+  --primary-variant: #360FA3 !important; /* Primary variant - Red-700 */
+  --secondary-color: #1A202C; /* Secondary - Grey-900 */
+  --secondary-variant: #4A5568; /* Secondary variant - Grey-700 */
+  
+  --background-primary: #FFFFFF; /* Background Primary - G-100 */
+  --background-secondary: #FAFBFC; /* Background Secondary - G-200 */
+  --background-tertiary: #DFE1E6; /* Background Tertiary - G-400 */
+
+  --content-primary: #1A202C;
+  --content-secondary: #4A5568 ;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +21,114 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-primary{
+  background-color: #E86E39 !important;
+    color: white !important;
+    border: none !important;
+    padding: 0px 24px !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+}
+
+.btn-primary:hover{
+  background-color: #EC9F7E !important;
+}
+
+.btn-primary-outline{
+    background-color: white !important;
+    color: #E86E39 !important;
+    border: 1px solid #E86E39 !important;
+    padding: 0px 24px !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+}
+
+.btn-primary-outline:hover{
+  background-color: #FCF1ED !important;
+   color: #E86E39 !important;
+  border: 1px solid #E86E39 !important;
+}
+
+.btn-primary-outline:active{
+  background-color: #F7D6C8 !important;
+  color: #E86E39 !important;
+  border: 2px solid #E86E39 !important;
+}
+
+.btn-secondary{
+  background-color: #2D3748 !important;
+    color: white !important;
+    border: none !important;
+    padding: 0px 24px !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+}
+
+.btn-secondary:hover{
+  background-color: #7C8698 !important;
+}
+
+.btn-secondary-outline{
+    background-color: white !important;
+    color: #2D3748 !important;
+    border: 1px solid #2D3748 !important;
+    padding: 0px 24px !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+}
+
+.btn-bare{
+    background-color: white !important;
+    color: #E86E39 !important;
+    border: none !important;
+    padding: 0px 24px !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+}
+
+.btn-bare:hover{
+  background-color: #FCF1ED !important;
+  /* color: #E86E39 !important; */
+}
+
+.btn-bare:active {
+  background-color: #F7D6C8 !important;
+}
+
+.btn-ghost{
+  background-color: white !important;
+    color: #E86E39 !important;
+    border: none !important;
+    padding: 0px 24px !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+}
+
+.btn-ghost:hover{
+  color: #EC9F7E !important;
+}
+
+.btn-ghost:active{
+  color: #E0612A !important;
+}
+
+@media (max-width: 1024px) {
+  .btn-primary, .btn-secondary {
+    height: 40px !important;
+    padding: 0px 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary {
+    height: 32px !important;
+    font-size: 12px !important;
+    padding: 0px 12px !important;
+  }
 }
