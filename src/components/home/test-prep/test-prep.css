@@ -1,0 +1,10 @@
+.test-prep-card{
+    background-color: #F9EDE7 !important;
+    width: 180px !important;
+    height: 180px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    border-radius: 24px !important;
+}

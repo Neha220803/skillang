@@ -1,0 +1,48 @@
+/* .loan-section {
+  padding: 60px 0;
+  background-color: #f4f7fc;
+} */
+
+.loan-image {
+  border-top-left-radius: 24px !important;
+  border-bottom-left-radius: 24px !important;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left; */
+}
+
+
+.loan-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+/* .loan-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+} */
+
+/* .loan-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+} */
+
+/* .loan-apply-btn {
+  background-color: #0056b3;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loan-apply-btn:hover {
+  background-color: #004085;
+} */

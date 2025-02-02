@@ -1,0 +1,67 @@
+/* Footer styles */
+
+footer{
+    background-color: var(--primary-variant) !important;
+}
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Social media icons styles */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Change to any color you prefer on hover */
+}
+
+.fb:hover {
+  color: #3b5998;
+}
+
+.ig:hover {
+  color: #e1306c;
+}
+
+.tw:hover {
+  color: #00acee;
+}
+
+.gl:hover {
+  color: #ff0000;
+}
+
+/* Additional footer details */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-button {
+  margin-bottom: 10px;
+}

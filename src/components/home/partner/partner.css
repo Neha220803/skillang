@@ -1,0 +1,11 @@
+.partner-bg {
+  background-image: url('../../../images/home/partner-bg.png');
+  color: white !important;
+}
+
+.partner-heading {
+  color: white ;
+  font-size: 46px;
+  font-weight: bolder;
+}
+

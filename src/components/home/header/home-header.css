@@ -1,7 +1,7 @@
 /* Form container styling */
 #header-section{
   height: 100vh !important;  
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(D:\Neha\React\skillang\src\images\home\carousel-1.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url('../../../images/home/carousel-1.png');
 }
 
 .content-heading, .content-desc{

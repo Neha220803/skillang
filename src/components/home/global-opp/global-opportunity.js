@@ -4,7 +4,7 @@ import './global-opportunity.css';
 
 const GlobalOpportunity = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center py-5 bg-primary">
+    <div className="d-flex align-items-center justify-content-center py-5">
       <Container className="text-center py-5">
         <Row>
            <Col lg={2}> 
