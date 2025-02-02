@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.ad5ec450.css",
-    "main.js": "/skillang/static/js/main.3db44871.js",
+    "main.css": "/skillang/static/css/main.ac43ef92.css",
+    "main.js": "/skillang/static/js/main.964585c7.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/loan-img.png": "/skillang/static/media/loan-img.566629c2713e7a36bb35.png",
     "static/media/intern-3.svg": "/skillang/static/media/intern-3.6b59c03adf5f7863b19a468297b88f28.svg",
@@ -56,11 +56,11 @@
     "static/media/work-opp-4.svg": "/skillang/static/media/work-opp-4.dca1c4372f0bae7cafb4fd58b22d0534.svg",
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.5eedbc003e78465711f5f49e72ca11a0.svg",
     "index.html": "/skillang/index.html",
-    "main.ad5ec450.css.map": "/skillang/static/css/main.ad5ec450.css.map",
-    "main.3db44871.js.map": "/skillang/static/js/main.3db44871.js.map"
+    "main.ac43ef92.css.map": "/skillang/static/css/main.ac43ef92.css.map",
+    "main.964585c7.js.map": "/skillang/static/js/main.964585c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad5ec450.css",
-    "static/js/main.3db44871.js"
+    "static/css/main.ac43ef92.css",
+    "static/js/main.964585c7.js"
   ]
 }
