@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.ac43ef92.css",
-    "main.js": "/skillang/static/js/main.964585c7.js",
+    "main.css": "/skillang/static/css/main.234f52a7.css",
+    "main.js": "/skillang/static/js/main.51ae7639.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/loan-img.png": "/skillang/static/media/loan-img.566629c2713e7a36bb35.png",
     "static/media/intern-3.svg": "/skillang/static/media/intern-3.6b59c03adf5f7863b19a468297b88f28.svg",
@@ -32,6 +32,7 @@
     "static/media/work-journey-3.svg": "/skillang/static/media/work-journey-3.c39a37508eb5ec91fb97bc14a2854edd.svg",
     "static/media/work-opp-2.png": "/skillang/static/media/work-opp-2.dfd52af1e7096df2fffe.png",
     "static/media/uni-9.png": "/skillang/static/media/uni-9.40f88ab7fd367e5052be.png",
+    "static/media/work-opp-7.svg": "/skillang/static/media/work-opp-7.3fee02bdd3b8fa1aa0948dbb11e35e39.svg",
     "static/media/work-journey-5.svg": "/skillang/static/media/work-journey-5.7ac7dfad5b0236745499c11766f88962.svg",
     "static/media/work-opp-5.svg": "/skillang/static/media/work-opp-5.723c9eb3585f14023c05058f5df6f442.svg",
     "static/media/uni-14.png": "/skillang/static/media/uni-14.eecbe05a7643970eb8e5.png",
@@ -52,15 +53,15 @@
     "static/media/work-journey-2.svg": "/skillang/static/media/work-journey-2.1db51850bcd353330512d2c7496f2302.svg",
     "static/media/uni-8.png": "/skillang/static/media/uni-8.20a53114038d3795968b.png",
     "static/media/work-opp-10.svg": "/skillang/static/media/work-opp-10.4232be95d57fc9a52d9f6141b1892a59.svg",
-    "static/media/work-opp-9.svg": "/skillang/static/media/work-opp-9.cccf5e28b3c641e1786a5ed16714a968.svg",
-    "static/media/work-opp-4.svg": "/skillang/static/media/work-opp-4.dca1c4372f0bae7cafb4fd58b22d0534.svg",
-    "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.5eedbc003e78465711f5f49e72ca11a0.svg",
+    "static/media/work-opp-9.svg": "/skillang/static/media/work-opp-9.5d190ffedaae1c8bb37566391cb9c35f.svg",
+    "static/media/work-opp-4.svg": "/skillang/static/media/work-opp-4.8a90c0a187e8a127506b2defb7846a36.svg",
+    "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "index.html": "/skillang/index.html",
-    "main.ac43ef92.css.map": "/skillang/static/css/main.ac43ef92.css.map",
-    "main.964585c7.js.map": "/skillang/static/js/main.964585c7.js.map"
+    "main.234f52a7.css.map": "/skillang/static/css/main.234f52a7.css.map",
+    "main.51ae7639.js.map": "/skillang/static/js/main.51ae7639.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac43ef92.css",
-    "static/js/main.964585c7.js"
+    "static/css/main.234f52a7.css",
+    "static/js/main.51ae7639.js"
   ]
 }
