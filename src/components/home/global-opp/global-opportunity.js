@@ -17,7 +17,12 @@ const GlobalOpportunity = () => {
           Tailored guidance to help you succeed in your dream career 
           abroad!
         </p>
-        <button className='btn-primary-outline'>Learn More</button>
+        <button className='btn-primary-outline' onClick={() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }}>Learn More</button>
         </Col>
         <Col lg={2}>
         </Col>

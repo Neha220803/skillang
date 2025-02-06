@@ -1,6 +1,31 @@
-.custom-card{
-  width: 570px !important;
-  height: 300px !important;
-  border-radius: 12px !important;
-  padding: 24px !important;
+.custom-card {
+  width: 100%; 
+  max-width: 570px; 
+  height: 300px !important; 
+  border-radius: 12px;
+  padding: 16px; 
+  box-sizing: border-box; 
+}
+
+@media (min-width: 640px) {
+  .custom-card {
+    width: 90%; 
+    height: 280px;
+    padding: 20px;
+  }
+}
+
+/* Large screens (Laptops & Desktops) */
+@media (min-width: 1024px) {
+  .custom-card {
+    width: 570px;
+    height: 300px;
+    padding: 24px;
+  }
+}
+
+.study-card-icon{
+  width:100% !important;
+   height: auto;
+   align-items: end !important;
 }

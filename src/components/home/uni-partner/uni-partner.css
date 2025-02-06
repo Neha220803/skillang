@@ -2,12 +2,19 @@
   .scroller {
     max-width: 100;
   }
+
+  img{
+    height: 50px;
+    width: auto !important;
+    margin-right: 50px;
+  }
   
   .scroller__inner {
     padding-block: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    
   }
   
   .scroller[data-animated="true"] {

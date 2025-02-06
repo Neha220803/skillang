@@ -1,0 +1,10 @@
+.custom-image{
+    height: 250px !important;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .custom-image {
+        height: 100px !important;
+    }
+}

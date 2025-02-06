@@ -11,7 +11,7 @@ const testPrepItems = [
 
 const TestPrep = () => {
   return (
-    <section className="test-prep-section d-flex flex-column align-items-center justify-content-center">
+    <section className="test-prep-section d-flex flex-column align-items-center justify-content-center" id='lang-test'>
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
         <Row>
           <h1 className="text-center my-4">Test and Language Preparation</h1>
@@ -27,8 +27,18 @@ const TestPrep = () => {
         </Row>
         <Row className="g-3 mt-3 d-flex align-items-center justify-content-center">
   <div className="d-flex gap-3">
-    <button className="btn-primary-outline">Mock Test</button>
-    <button className="btn-primary-outline">Schedule Demo</button>
+    <button className="btn-primary-outline" onClick={() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }}>Mock Test</button>
+    <button className="btn-primary-outline" onClick={() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }}>Schedule Demo</button>
   </div>
 </Row>
 

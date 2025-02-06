@@ -11,7 +11,7 @@ const UniPartner = () => {
         <div className='d-flex flex-column align-items-center justify-content-center my-4'>
         <Container className='my-4'>
         <Row >
-          <h1 className='d-flex flex-column align-items-center justify-content-center'>Our Partnered Universities</h1>
+          <h1 className='d-flex flex-column align-items-center justify-content-center mb-4'>Our Partnered Universities</h1>
           <ScrollEle />
         </Row>
        </Container>

@@ -32,7 +32,12 @@ const LoanSection = () => {
                   challenging. That's why we offer dedicated education loan services
                   to help cover tuition, living expenses, and other study-related costs.
                 </p>
-                <button className="btn-primary">Apply Now</button>
+                <button className="btn-primary" onClick={() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }}>Apply Now</button>
               
           
           </Col>

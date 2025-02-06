@@ -10,7 +10,7 @@ import work3 from '../../../images/home/work-opp-3.png';
 import work4 from '../../../images/home/work-opp-4.svg'; // New image
 import work5 from '../../../images/home/work-opp-5.svg'; // New image
 import work6 from '../../../images/home/work-opp-6.svg'; // New image
-import work7 from '../../../images/home/work-opp-7.png'; // New image
+import work7 from '../../../images/home/work-opp-7.svg'; // New image
 import work8 from '../../../images/home/work-opp-8.svg'; 
 import work9 from '../../../images/home/work-opp-9.svg'; 
 import work10 from '../../../images/home/work-opp-10.svg'; 
@@ -23,7 +23,7 @@ const primCardData = [
 ];
 
 const secCardData = [
-  { title: "Electrical & Electronics", img: work4, color: "#E5ECF9" },
+  { title: "Electrical and Electronics", img: work4, color: "#E5ECF9" },
   { title: "Plumbing", img: work5, color: "#F3EEFC" },
   { title: "Vehicle Painting", img: work6, color: "#FBEAEA" },
   { title: "Automobile", img: work7, color: "#E5ECF9" },
@@ -45,8 +45,8 @@ const WorkAbroadOpportunity = () => {
         <Row className='d-flex align-items-center justify-content-center'>
           {primCardData.map((card, index) => (
             <Col key={index} lg={4} md={6} sm={12}>
-              <Card className='prim-card d-flex flex-row-reverse border-0' style={{ backgroundColor: card.color }}>
-                <Card.Img variant="top" src={card.img} alt="Card image" style={{ width: '45%' }} />
+              <Card className='prim-card d-flex flex-row-reverse border-0 mb-3' style={{ backgroundColor: card.color }}>
+                <Card.Img variant="top" src={card.img} alt="Card image"  style={{ width: '45%' ,height:'auto' }} />
                 <CardBody className='d-flex flex-column justify-content-around'>
                   <CardTitle>{card.title}</CardTitle>
                   <button className='btn-primary' style={{ width: '120px' }}>Get Started</button>
@@ -59,13 +59,13 @@ const WorkAbroadOpportunity = () => {
         {/* Secondary Cards */}
         <Row className='d-flex align-items-center justify-content-center'>
           {secCardData.map((card, index) => (
-            <Col key={index} lg={3} md={6} sm={12} className='mb-3'>
+            <Col key={index} lg={3} md={6} sm={6} xs={6} className='mb-3'>
               <Card className='sec-card d-flex flex-row border-0 '>
                 <div className="sec-card-icon-wrapper">
                   <img src={card.img} alt="Icon" className="sec-card-icon" />
                 </div>
-                <CardBody className='d-flex flex-column justify-content-around'>
-                  <CardTitle>{card.title}</CardTitle>
+                <CardBody className='d-flex flex-column justify-content-around align-items-end'>
+                  <CardTitle className='sec-card-text-wrapper'>{card.title}</CardTitle>
                 </CardBody>
               </Card>
             </Col>

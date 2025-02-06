@@ -45,27 +45,33 @@ const InternshipSection = () => {
             <Row className='d-flex align-items-center justify-content-center'>
                       {internCardData.map((card, index) => (
                         <Col key={index} lg={4} md={6} sm={12} className='mb-3'>
-                          <Card className='sec-card d-flex flex-row border-0 '>
-                            <div className="sec-card-icon-wrapper">
-                              <img src={card.img} alt="Icon" className="sec-card-icon" />
+                          <Card className='intern-card d-flex flex-row border-0 '>
+                            <div className="intern-card-icon-wrapper">
+                              <img src={card.img} alt="Icon" className="intern-card-icon" />
                             </div>
-                            <CardBody className='d-flex flex-column justify-content-around'>
-                              <CardTitle>{card.title}</CardTitle>
+                            <CardBody className='d-flex flex-column justify-content-around align-items-end '>
+                              <div className="intern-card-text-wrapper">
+                                <CardTitle >{card.title}</CardTitle>
                               <p className="card-desc">{card.desc}</p>
+
+                              </div>
+                              
                             </CardBody>
                           </Card>
                         </Col>
                       ))}
                     </Row>
                     <Row>
-                                                      <button className='btn-primary-outline'>Explore Now</button>
+                                                      <button className='btn-primary-outline' onClick={() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }}>Enquiry Now</button>
 
                     </Row>
             </Container>
             </section>
-
-
-
 
     // <section className='d-flex flex-column align-items-center justify-content-center'>
     //   <Container className='d-flex flex-column align-items-center justify-content-center'>

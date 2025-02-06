@@ -1,9 +1,16 @@
 .prim-card {
   padding-left: 40px;
   padding-bottom: 0%;
+  padding-right: 5px ;
   width: 100%;
   height: 180px !important;
   border-radius: 12px !important;
+  justify-content:space-evenly !important;
+}
+
+img{
+  padding: 0% !important;
+  margin: 0 !important;
 }
 
 .sec-card {
@@ -16,7 +23,7 @@
   overflow: hidden !important;
   text-align: end !important;
   padding-left: 40px !important;
-   border-radius: 12px !important;
+  border-radius: 12px !important;
 }
 
 .sec-card-icon-wrapper {
@@ -34,10 +41,15 @@
   overflow: hidden;
 }
 
+.sec-card-text-wrapper{
+  width: 65%;
+  text-align: center !important;
+}
+
 .sec-card-icon {
-  width: 80%; /* Icon size, adjust as necessary */
-  height: 80%;
-  object-fit: cover; /* Ensures the image fits in the circle */
+  width: 80% !important; 
+  height:80%  !important;
+  object-fit: scale-down !important; /* Ensures the image fits in the circle */
 }
 
 .sec-card-img {

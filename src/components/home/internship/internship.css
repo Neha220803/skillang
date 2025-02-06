@@ -1,4 +1,4 @@
-.sec-card {
+.intern-card {
   background-color: #F8F8F8 !important;
   color: #5B5B5B !important;
   font-weight: 400 !important;
@@ -11,7 +11,7 @@
    border-radius: 12px !important;
 }
 
-.sec-card-icon-wrapper {
+.intern-card-icon-wrapper {
   position: absolute;
   top: -20px; 
   left: -20px; 
@@ -26,12 +26,15 @@
   overflow: hidden;
 }
 
-.sec-card-icon {
+.intern-card-icon {
   width: 80%; /* Icon size, adjust as necessary */
   height: 80%;
-  object-fit: cover; /* Ensures the image fits in the circle */
+  object-fit:scale-down; /* Ensures the image fits in the circle */
+  
 }
 
-.sec-card-img {
-  background-color: #F2F2F9 !important;
+.intern-card-text-wrapper{
+  /* background-color: pink; */
+   width: 80%;
+  text-align: start !important;
 }

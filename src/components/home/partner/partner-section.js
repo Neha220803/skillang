@@ -12,7 +12,12 @@ const PartnerSection = () => {
           <Col className="justify-content-center align-items-center">
             <div className="p-2 partner-heading">Partner with Us</div>
             <h4 className="pb-2">For Institutions, Companies, and Recruiters</h4>
-            <button className=" py-2 btn-primary ">Contact Now</button>
+            <button className=" py-2 btn-primary  " onClick={() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }}>Contact Now</button>
           </Col>
         </Row>
       </Container>

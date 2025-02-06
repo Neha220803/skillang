@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* .plus-jakarta-sans-<uniquifier> {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
 section {
   min-height: 100vh !important;
 }
@@ -9,34 +17,34 @@ header {
 
 h1 {
   font-size: 46px !important;
-  font-family: "Montserrat", serif;
+  font-family: "Plus Jakarta Sans", serif !important;
   font-optical-sizing: auto;
   font-weight: 700 !important;
 }
 
 h2 {
   font-size: 40px !important;
-  font-family: "Montserrat", serif;
+  font-family: "Plus Jakarta Sans", serif;
   font-optical-sizing: auto;
   font-weight: 700 !important;
 }
 
 h3 {
   font-size: 28px !important;
-  font-family: "Montserrat", serif;
+  font-family: "Plus Jakarta Sans", serif;
   font-optical-sizing: auto;
   font-weight: 600 !important;
 }
 
 h3 {
   font-size: 22px !important;
-  font-family: "Montserrat", serif;
+  font-family: "Plus Jakarta Sans", serif;
   font-optical-sizing: auto;
   font-weight: 600 !important;
 }
 
 p {
-  font-family: "Montserrat", serif;
+  font-family: "Plus Jakarta Sans", serif;
   font-optical-sizing: auto;
   font-weight: 400 !important;
   font-size: 18px !important;

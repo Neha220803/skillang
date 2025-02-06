@@ -15,10 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/nursing" element={<NursePage />} />
+        {/* <Route path="/nursing" element={<NursePage />} />
         <Route path="/work-abroad" element={<WorkAboradPage />} />
         <Route path="/study-abroad" element={<StudyAbroadPage />} />
-        <Route path="/lang-test-prep" element={<LangTestPage />} />
+        <Route path="/lang-test-prep" element={<LangTestPage />} /> */}
         {/* <Route path="/more" element={<Contact />} /> */}
       </Routes>
       <FooterSection />
