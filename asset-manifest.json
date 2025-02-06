@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/skillang/static/css/main.234f52a7.css",
-    "main.js": "/skillang/static/js/main.51ae7639.js",
+    "main.js": "/skillang/static/js/main.825de254.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/loan-img.png": "/skillang/static/media/loan-img.566629c2713e7a36bb35.png",
     "static/media/intern-3.svg": "/skillang/static/media/intern-3.6b59c03adf5f7863b19a468297b88f28.svg",
-    "static/media/intern-7.svg": "/skillang/static/media/intern-7.6f5e193fadfee64e0591ec22babb5b30.svg",
+    "static/media/intern-7.svg": "/skillang/static/media/intern-7.edd3d2af2f1c18c135bd8c28c980a4a4.svg",
     "static/media/s-journey-9.svg": "/skillang/static/media/s-journey-9.2ee9c31265e3b0c7d428e3d0c29ade78.svg",
     "static/media/partner-bg.png": "/skillang/static/media/partner-bg.efba1243194e47aa929b.png",
     "static/media/s-journey-7.svg": "/skillang/static/media/s-journey-7.8a6315d0d57d914624f045e7b3ad7114.svg",
@@ -19,7 +19,7 @@
     "static/media/s-journey-8.svg": "/skillang/static/media/s-journey-8.b6b26501f5a620de6b61c593dd596704.svg",
     "static/media/intern-1.svg": "/skillang/static/media/intern-1.e6227c58c7d86545e2325464ebaba4ba.svg",
     "static/media/uni-3.png": "/skillang/static/media/uni-3.23eadadecd9eec9be1b9.png",
-    "static/media/intern-5.svg": "/skillang/static/media/intern-5.f812b5306e26e6b50b347c800ae1ac36.svg",
+    "static/media/intern-5.svg": "/skillang/static/media/intern-5.8f51385054743692cad57a74184ac8dd.svg",
     "static/media/uni-11.png": "/skillang/static/media/uni-11.b22b56c2519fbba6145a.png",
     "static/media/uni-10.png": "/skillang/static/media/uni-10.6e39c1da11e0bce49f6a.png",
     "static/media/intern-4.svg": "/skillang/static/media/intern-4.f3a0c44ad700997226500af8bd3effb7.svg",
@@ -58,10 +58,10 @@
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "index.html": "/skillang/index.html",
     "main.234f52a7.css.map": "/skillang/static/css/main.234f52a7.css.map",
-    "main.51ae7639.js.map": "/skillang/static/js/main.51ae7639.js.map"
+    "main.825de254.js.map": "/skillang/static/js/main.825de254.js.map"
   },
   "entrypoints": [
     "static/css/main.234f52a7.css",
-    "static/js/main.51ae7639.js"
+    "static/js/main.825de254.js"
   ]
 }
