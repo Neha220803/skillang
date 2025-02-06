@@ -32,7 +32,7 @@
   export default function StudyAbroad() {
     return (
       <Container className="max-w-4xl mx-auto">
-        <h1 className="text-center my-4">Study Abroad Journey</h1>
+        <h1 className="text-center my-lg-4">Study Abroad Journey</h1>
         <Swiper className="mx-4"
           modules={[Navigation, Pagination]}
           navigation

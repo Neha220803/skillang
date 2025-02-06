@@ -60,15 +60,15 @@ const HomeHeader = () => {
     <header className="d-flex align-items-end justify-content-center py-5" id="header-section">
       <Container>
         <Row>
-          <Col lg={6} className="d-flex flex-column align-items-end justify-content-center py-5">
+          <Col lg={6} md={5} sm={12} xs={12}  className="d-flex flex-column align-items-end justify-content-center py-5">
             <h1 className="content-heading">Transform your career with Skillang</h1>
             <p className="content-desc">
               Start with our personalised career guidance for Study & Work Abroad, German and other language prep.
             </p>
           </Col>
-          <Col>
+          <Col lg={1} md={0} sm={0} xs={0}>
           </Col>
-          <Col lg={5} className="d-flex align-items-center justify-content-center">
+          <Col lg={5} md={6} sm={12} xs={12}  className="d-flex align-items-center justify-content-center">
            <Container className="d-flex align-items-center justify-content-center flex-column p-3">
     <div className="form-container">
     <h3>Let's Connect to Explore More!</h3>
