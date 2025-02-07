@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.234f52a7.css",
-    "main.js": "/skillang/static/js/main.d99cfa02.js",
+    "main.css": "/skillang/static/css/main.1da4dee9.css",
+    "main.js": "/skillang/static/js/main.1a59d65d.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/loan-img.png": "/skillang/static/media/loan-img.566629c2713e7a36bb35.png",
+    "static/media/header-bg1.png": "/skillang/static/media/header-bg1.00523a41396ec6656cc5.png",
+    "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.00523a41396ec6656cc585f21bb79344.svg",
     "static/media/intern-3.svg": "/skillang/static/media/intern-3.6b59c03adf5f7863b19a468297b88f28.svg",
     "static/media/intern-7.svg": "/skillang/static/media/intern-7.edd3d2af2f1c18c135bd8c28c980a4a4.svg",
     "static/media/s-journey-9.svg": "/skillang/static/media/s-journey-9.2ee9c31265e3b0c7d428e3d0c29ade78.svg",
@@ -57,11 +59,11 @@
     "static/media/work-opp-4.svg": "/skillang/static/media/work-opp-4.8a90c0a187e8a127506b2defb7846a36.svg",
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "index.html": "/skillang/index.html",
-    "main.234f52a7.css.map": "/skillang/static/css/main.234f52a7.css.map",
-    "main.d99cfa02.js.map": "/skillang/static/js/main.d99cfa02.js.map"
+    "main.1da4dee9.css.map": "/skillang/static/css/main.1da4dee9.css.map",
+    "main.1a59d65d.js.map": "/skillang/static/js/main.1a59d65d.js.map"
   },
   "entrypoints": [
-    "static/css/main.234f52a7.css",
-    "static/js/main.d99cfa02.js"
+    "static/css/main.1da4dee9.css",
+    "static/js/main.1a59d65d.js"
   ]
 }
