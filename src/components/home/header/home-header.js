@@ -58,9 +58,9 @@ const HomeHeader = () => {
 
   return (
     <header className="d-flex align-items-end justify-content-center py-5" id="header-section">
-      <Container>
+      <Container >
         <Row>
-          <Col lg={6} md={5} sm={12} xs={12}  className="d-flex flex-column align-items-end justify-content-center py-5">
+          <Col lg={6} md={5} sm={12} xs={12}  className="d-flex flex-column align-items-start justify-content-center py-lg-5">
             <h1 className="content-heading">Transform your career with Skillang</h1>
             <p className="content-desc">
               Start with our personalised career guidance for Study & Work Abroad, German and other language prep.

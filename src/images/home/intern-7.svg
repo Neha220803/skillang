@@ -1,9 +1,9 @@
-<svg width="82" height="73" viewBox="0 0 82 73" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="0.218506" y="0.441895" width="71.5168" height="71.5168" fill="url(#pattern0_2154_42818)"/>
-<rect x="43.3982" y="36.1729" width="37.7825" height="36.4331" fill="url(#pattern1_2154_42818)"/>
+<svg width="70" height="73" viewBox="0 0 70 73" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="60" height="72" fill="url(#pattern0_2154_42818)"/>
+<rect x="31.3982" y="36.1729" width="37.7825" height="36.4331" fill="url(#pattern1_2154_42818)"/>
 <defs>
 <pattern id="pattern0_2154_42818" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_2154_42818" transform="scale(0.00195312)"/>
+<use xlink:href="#image0_2154_42818" transform="matrix(0.00232802 0 0 0.00194002 -0.196358 0.00613742)"/>
 </pattern>
 <pattern id="pattern1_2154_42818" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_2154_42818" transform="matrix(0.000978474 0 0 0.001002 -0.454012 -0.487976)"/>

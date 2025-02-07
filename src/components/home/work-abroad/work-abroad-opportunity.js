@@ -59,7 +59,7 @@ const WorkAbroadOpportunity = () => {
         {/* Secondary Cards */}
         <Row className='d-flex align-items-center justify-content-center'>
           {secCardData.map((card, index) => (
-            <Col key={index} lg={3} md={6} sm={6} xs={6} className='mb-3'>
+            <Col key={index} lg={3} md={6} sm={12} xs={12} className='mb-3'>
               <Card className='sec-card d-flex flex-row border-0 '>
                 <div className="sec-card-icon-wrapper">
                   <img src={card.img} alt="Icon" className="sec-card-icon" />
