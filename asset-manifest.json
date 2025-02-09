@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.d39afd4f.css",
-    "main.js": "/skillang/static/js/main.e17e9526.js",
+    "main.css": "/skillang/static/css/main.b85f1a8f.css",
+    "main.js": "/skillang/static/js/main.d2fc9427.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
-    "static/media/loan-img.png": "/skillang/static/media/loan-img.566629c2713e7a36bb35.png",
     "static/media/header-bg1.png": "/skillang/static/media/header-bg1.00523a41396ec6656cc5.png",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.00523a41396ec6656cc585f21bb79344.svg",
     "static/media/intern-3.svg": "/skillang/static/media/intern-3.6b59c03adf5f7863b19a468297b88f28.svg",
+    "static/media/loan-img.png": "/skillang/static/media/loan-img.db83039f71c9d193b210.png",
     "static/media/intern-7.svg": "/skillang/static/media/intern-7.edd3d2af2f1c18c135bd8c28c980a4a4.svg",
     "static/media/partner-img.png": "/skillang/static/media/partner-img.ffbf34802679fcbfacb2.png",
     "static/media/s-journey-9.svg": "/skillang/static/media/s-journey-9.2ee9c31265e3b0c7d428e3d0c29ade78.svg",
     "static/media/s-journey-7.svg": "/skillang/static/media/s-journey-7.8a6315d0d57d914624f045e7b3ad7114.svg",
     "static/media/s-journey-6.svg": "/skillang/static/media/s-journey-6.dcf14bdda1075bcc55f6ab5a6c014dbc.svg",
+    "static/media/footer-img.png": "/skillang/static/media/footer-img.22acc9e959cc3be13823.png",
     "static/media/s-journey-1.svg": "/skillang/static/media/s-journey-1.cb6949ec47ffbebfa79321313b27d81d.svg",
     "static/media/s-journey-2.svg": "/skillang/static/media/s-journey-2.a595bf52d3ea3340fcaf1ece5cc60f28.svg",
     "static/media/intern-6.svg": "/skillang/static/media/intern-6.6060946ee2e91dc244660463b0d6f278.svg",
@@ -23,6 +24,7 @@
     "static/media/uni-3.png": "/skillang/static/media/uni-3.23eadadecd9eec9be1b9.png",
     "static/media/intern-5.svg": "/skillang/static/media/intern-5.8f51385054743692cad57a74184ac8dd.svg",
     "static/media/uni-11.png": "/skillang/static/media/uni-11.b22b56c2519fbba6145a.png",
+    "static/media/footer-bg.png": "/skillang/static/media/footer-bg.bcd416e4fc6dd39a9614.png",
     "static/media/uni-10.png": "/skillang/static/media/uni-10.6e39c1da11e0bce49f6a.png",
     "static/media/intern-4.svg": "/skillang/static/media/intern-4.f3a0c44ad700997226500af8bd3effb7.svg",
     "static/media/uni-2.png": "/skillang/static/media/uni-2.1fa233154334b0d5631f.png",
@@ -55,20 +57,17 @@
     "static/media/work-journey-6.svg": "/skillang/static/media/work-journey-6.f5d08500d2f1fa4b08217637b2304815.svg",
     "static/media/work-journey-2.svg": "/skillang/static/media/work-journey-2.1db51850bcd353330512d2c7496f2302.svg",
     "static/media/uni-8.png": "/skillang/static/media/uni-8.20a53114038d3795968b.png",
+    "static/media/logo-3.svg": "/skillang/static/media/logo-3.381ba4d78548fb295b13c7923ad8c590.svg",
     "static/media/work-opp-10.svg": "/skillang/static/media/work-opp-10.4232be95d57fc9a52d9f6141b1892a59.svg",
     "static/media/work-opp-9.svg": "/skillang/static/media/work-opp-9.5d190ffedaae1c8bb37566391cb9c35f.svg",
-    "static/media/slick.svg": "/skillang/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/skillang/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/skillang/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/work-opp-4.svg": "/skillang/static/media/work-opp-4.8a90c0a187e8a127506b2defb7846a36.svg",
-    "static/media/slick.woff": "/skillang/static/media/slick.295183786cd8a1389865.woff",
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "index.html": "/skillang/index.html",
-    "main.d39afd4f.css.map": "/skillang/static/css/main.d39afd4f.css.map",
-    "main.e17e9526.js.map": "/skillang/static/js/main.e17e9526.js.map"
+    "main.b85f1a8f.css.map": "/skillang/static/css/main.b85f1a8f.css.map",
+    "main.d2fc9427.js.map": "/skillang/static/js/main.d2fc9427.js.map"
   },
   "entrypoints": [
-    "static/css/main.d39afd4f.css",
-    "static/js/main.e17e9526.js"
+    "static/css/main.b85f1a8f.css",
+    "static/js/main.d2fc9427.js"
   ]
 }
