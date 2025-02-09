@@ -1,105 +1,77 @@
 import React from "react";
-import logo from "../../images/logo-white.png";
-import { Container, Col, Row } from "react-bootstrap";
-import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link for routing
+import logo from "../../images/logo-3.svg";
+import { Container, Col, Row, Image } from "react-bootstrap";
+import { FaPhone, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import './footer.css';
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import footerimg from '../../images/home/footer-img.png';
 
 const FooterSection = () => {
   return (
-    <footer className="px-2 text-white" >
-      <Container className="py-4">
-       
-        <Row className="mt-2">
-          <Col lg={5} sm={12}>
-            <div className="justify-text">
-               <div className="d-flex align-items-center justify-content-start">
-              <img src={logo} alt="logo" />
-            </div>
-              We offer personalized guidance for study abroad, work abroad and
-              language & test prep, helping you explore global opportunities,
-              find the right programs or jobs, and support you throughout your
-              journey. Our expert team ensures a smooth experience and
-              transition of your career.
-            </div>
+    <footer className="footer-container">
+      <Container className="footer-bg rounded-4 p-4 mb-4">
+        <Row className="align-items-center">
+          <Col>
+            <Image fluid src={footerimg} />
           </Col>
-          <Col lg={3} className="d-none d-sm-block">
-            <div className="d-flex align-items-center justify-content-center">
-              <ul className="footer-nav">
-                <li>
-                  <Link to="/" className="footer-nav-link">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="footer-nav-link">
-                    Nursing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/programs" className="footer-nav-link">
-                    Work Abroad
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/heros" className="footer-nav-link">
-                    Study Abroad
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/gallery" className="footer-nav-link">
-                    Language & Test Prep
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </Col>
-          <Col lg={4} sm={12} xs={12}>
-            <div>
-              <div className="d-flex align-items-center mb-3">
-                <span>Usefull Information</span>
-              </div>
-              <ul className="social-links mb-3">
-                <li>
-                  <a href="https://www.facebook.com/people/Patna-Jesuit-Society-Youth-Ministry/61558331201148/">
-                    <FaFacebook className="social-icon" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/patnajesuityouthministry/">
-                    <FaInstagram className="social-icon" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.twitter.com">
-                    <FaTwitter className="social-icon" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com">
-                    <FaYoutube className="social-icon" />
-                  </a>
-                </li>
-              </ul>
-              <div className="d-flex align-items-center mb-3">
-                <FaPhone className="me-3" />
-                <span>+91 - 7200 630 336</span>
-              </div>
-              <div className="d-flex align-items-center">
-                <FaMapMarkerAlt className="me-3" />
-                <span>
-                  The Executive zone, 766, Anna Salai,
-                  <br />
-                  Shakti Tower-1, Thousand Lights,
-                  <br />
-                  Chennai – 600002.
-                </span>
-              </div>
-            </div>
+          <Col className="text-start">
+            <h1 className="mb-4">Gateway to Global Education</h1>
+            <img src={logo} alt="Logo" className="mb-3" />
+            <p>© 2025 All Rights Reserved, Skillang</p>
           </Col>
         </Row>
-        <Row>Copyright Ⓒ 2025, Skillang.com. All rights reserved.</Row>
+      </Container>
+
+      <Container className="rounded-4 mb-4 d-flex flex-column align-items-stretch justify-content-end">
+        <Row className="d-flex align-items-stretch justify-content-end">
+          <Col lg={8} className="bg-light rounded-4 p-3">
+            <Row className="d-flex flex-wrap gap-4 px-5 py-4">
+              <Col>
+                <ul className="footer-nav">
+                  <li><Link to="/" className="footer-nav-link"><p>Home</p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>Nursing </p></Link></li>
+                  <li><Link to="/programs" className="footer-nav-link"><p>Work Abroad </p></Link></li>
+                </ul>
+              </Col>
+              <Col>
+                <ul className="footer-nav">
+                  <li><Link to="/" className="footer-nav-link"><p>Study Abroad </p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>Language & Test Prep </p></Link></li>
+                </ul>
+              </Col>
+              <Col>
+                <ul className="footer-nav">
+                  <li><Link to="/" className="footer-nav-link"><p>Login/Sign Up </p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>Contact Us </p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>News & Blogs </p></Link></li>
+                </ul>
+              </Col>
+              <Col>
+                <ul className="footer-nav">
+                  <li><Link to="/" className="footer-nav-link"><p>Terms of Use </p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>Privacy Policy </p></Link></li>
+                </ul>
+              </Col>
+            </Row>
+          </Col>
+          
+         <Col lg={4} className="d-flex justify-content-end align-items-end ">
+  <div className="bg-light rounded-4 ">
+    <div className="d-flex flex-column align-items-start p-3">
+      <h4>Socials</h4>
+      <div className="d-flex gap-3 mb-3">
+        <FaFacebook className="social-icon fb" />
+        <FaInstagram className="social-icon ig" />
+        <FaTwitter className="social-icon tw" />
+        <FaYoutube className="social-icon gl" />
+      </div>
+      <p><FaPhone /> +91 - 7200 630 336</p>
+      <p>The Executive zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights, Chennai – 600002.</p>
+    </div>
+  </div>
+</Col>
+
+        </Row>
       </Container>
     </footer>
   );

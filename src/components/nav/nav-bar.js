@@ -1,9 +1,10 @@
 import {React,useState} from "react";
-import Container from "react-bootstrap/Container";
+import {Container,Image} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./nav.css";
 import "../../index.css";
+import logo from '../../images/logo-3.svg';
 
 // Dynamically set the base path
 const BASE_PATH = process.env.PUBLIC_URL || '';
@@ -36,7 +37,8 @@ function CustomNavbar() {
       <Container className="d-flex align-items-center">
         {/* Left: Brand */}
         <Navbar.Brand href={`${BASE_PATH}/#`}>
-          <div className="nav-head">Skillang</div> 
+          {/* <div className="nav-head">Skillang</div>  */}
+          <Image src={logo} style={{width:'150px' , height:'50px'}}/>
         </Navbar.Brand>
 
         {/* Center: Nav Links */}

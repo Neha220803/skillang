@@ -23,8 +23,6 @@ import intern6 from '../../../images/home/intern-6.svg';
 import intern7 from '../../../images/home/intern-7.svg';
 import intern8 from '../../../images/home/intern-8.svg';
 
-
-
 const internCardData = [
   { title: "Job Oriented free study", img: intern1, desc:"No or minimal fee charged for the Ausbildung program in germany." },
   { title: "No Block Account needed", img: intern2, desc:"There is no block account required to show the fund backup" },
@@ -35,8 +33,6 @@ const internCardData = [
   { title: "Job Oriented free study", img: intern7, desc:"1.5 years stay-back for post-study work. Placement assistance for job opportunities." },
   { title: "No Block Account needed", img: intern8, desc:"Diverse industry options available. Over 300+ formal training programs offered." },
 ];
-
-
 
 const InternshipSection = () => {
   const settings = {
