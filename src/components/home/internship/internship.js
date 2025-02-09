@@ -1,4 +1,8 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import {
   CardBody,
   CardTitle,
@@ -35,41 +39,47 @@ const internCardData = [
 
 
 const InternshipSection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
   return (
-     <section className='d-flex flex-column align-items-center justify-content-center'>
+     <section className=' d-flex flex-column align-items-center justify-content-center'>
           <Container className='d-flex flex-column align-items-center justify-content-center gap-4'>
             <Row>
               <h1>Ausbildung (internship) Program in Germany</h1>
             </Row>
-            {/* Primary Cards */}
-            <Row className='d-flex align-items-center justify-content-center'>
-                      {internCardData.map((card, index) => (
-                        <Col key={index} lg={4} md={6} sm={12} className='mb-3'>
-                          <Card className='intern-card d-flex flex-row border-0 '>
-                            <div className="intern-card-icon-wrapper">
-                              <img src={card.img} alt="Icon" className="intern-card-icon" />
-                            </div>
-                            <CardBody className='d-flex flex-column justify-content-around align-items-end '>
-                              <div className="intern-card-text-wrapper">
-                                <CardTitle >{card.title}</CardTitle>
-                              <p className="card-desc">{card.desc}</p>
+            {/* <Row className='d-flex align-items-center justify-content-center'> */}
+              {/* <Slider {...settings}>
+                    {internCardData.map((card, index) => (
+                      <div key={index} className='mb-3'>
+                        <Card className='intern-card d-flex flex-row border-0'>
+                          <div className="intern-card-icon-wrapper">
+                            <img src={card.img} alt="Icon" className="intern-card-icon" />
+                          </div>
+                          <CardBody className='d-flex flex-column justify-content-around align-items-end'>
+                            <CardTitle>{card.title}</CardTitle>
+                            <p className="card-desc">{card.desc}</p>
+                          </CardBody>
+                        </Card>
+                      </div>
+                    ))}
+                    
+              </Slider> */}
+            {/* </Row> */}
+            <Row>
+               <button className='btn-primary-outline' onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                  });
+                }}>Enquiry Now
+              </button>
 
-                              </div>
-                              
-                            </CardBody>
-                          </Card>
-                        </Col>
-                      ))}
-                    </Row>
-                    <Row>
-                                                      <button className='btn-primary-outline' onClick={() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }}>Enquiry Now</button>
-
-                    </Row>
+            </Row>
             </Container>
             </section>
 

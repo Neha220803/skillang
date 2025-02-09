@@ -49,7 +49,6 @@ p {
   font-optical-sizing: auto;
   font-weight: 400 !important;
   font-size: 18px !important;
-  /* text-align: justify; */
 }
 
 /* Responsive Font Sizes */
@@ -100,7 +99,7 @@ p {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 20px !important; /* Mobile: 20px */
+    font-size: 20px !important; 
   }
   h2 {
     font-size: 18px !important;

@@ -12,6 +12,100 @@
 
   --content-primary: #1A202C;
   --content-secondary: #4A5568 ;
+
+
+   --font-family: "Plus Jakarta Sans", sans-serif;
+
+  /* Headings */
+  --heading-big-medium: 500 60px/72px var(--font-family);
+  --heading-small-medium: 500 48px/56px var(--font-family);
+
+  /* Subheadings */
+  --subheading-big-regular: 400 32px/40px var(--font-family);
+  --subheading-big-medium: 500 32px/40px var(--font-family);
+  --subheading-small-regular: 400 24px/32px var(--font-family);
+  --subheading-small-medium: 500 24px/32px var(--font-family);
+
+  /* Caption */
+  --caption-regular: 400 16px/20px var(--font-family);
+  --caption-medium: 500 16px/20px var(--font-family);
+  --caption-bold: 700 16px/20px var(--font-family);
+
+  /* Paragraph */
+  --paragraph-big-regular: 400 18px/28px var(--font-family);
+  --paragraph-big-medium: 500 18px/28px var(--font-family);
+  --paragraph-small-regular: 400 16px/24px var(--font-family);
+  --paragraph-small-medium: 500 16px/24px var(--font-family);
+
+  /* Display */
+  --display-medium: 500 96px/72px var(--font-family);
+  --display-regular: 400 96px/56px var(--font-family);
+
+  /* Mobile Typography */
+  --mobile-heading-big-medium: 500 40px/52px var(--font-family);
+  --mobile-heading-small-medium: 500 32px/40px var(--font-family);
+
+  --mobile-subheading-big-regular: 400 24px/32px var(--font-family);
+  --mobile-subheading-big-medium: 500 24px/32px var(--font-family);
+  --mobile-subheading-small-regular: 400 20px/28px var(--font-family);
+  --mobile-subheading-small-medium: 500 20px/28px var(--font-family);
+
+  --mobile-caption-regular: 400 12px/16px var(--font-family);
+  --mobile-caption-medium: 500 12px/16px var(--font-family);
+  --mobile-caption-bold: 700 12px/16px var(--font-family);
+
+  --mobile-paragraph-big-regular: 400 16px/24px var(--font-family);
+  --mobile-paragraph-big-medium: 500 16px/24px var(--font-family);
+  --mobile-paragraph-small-regular: 400 14px/20px var(--font-family);
+  --mobile-paragraph-small-medium: 500 14px/20px var(--font-family);
+
+  --mobile-display-medium: 500 96px/72px var(--font-family);
+  --mobile-display-regular: 400 96px/56px var(--font-family);
+}
+
+/* Universal Typography Classes */
+.heading-big-medium { font: var(--heading-big-medium); }
+.heading-small-medium { font: var(--heading-small-medium); }
+
+.subheading-big-regular { font: var(--subheading-big-regular); }
+.subheading-big-medium { font: var(--subheading-big-medium); }
+.subheading-small-regular { font: var(--subheading-small-regular); }
+.subheading-small-medium { font: var(--subheading-small-medium); }
+
+.caption-regular { font: var(--caption-regular); }
+.caption-medium { font: var(--caption-medium); }
+.caption-bold { font: var(--caption-bold); }
+
+.paragraph-big-regular { font: var(--paragraph-big-regular); }
+.paragraph-big-medium { font: var(--paragraph-big-medium); }
+.paragraph-small-regular { font: var(--paragraph-small-regular); }
+.paragraph-small-medium { font: var(--paragraph-small-medium); }
+
+.display-medium { font: var(--display-medium); }
+.display-regular { font: var(--display-regular); }
+
+/* Mobile Specific */
+@media (max-width: 768px) {
+  .heading-big-medium { font: var(--mobile-heading-big-medium); }
+  .heading-small-medium { font: var(--mobile-heading-small-medium); }
+
+  .subheading-big-regular { font: var(--mobile-subheading-big-regular); }
+  .subheading-big-medium { font: var(--mobile-subheading-big-medium); }
+  .subheading-small-regular { font: var(--mobile-subheading-small-regular); }
+  .subheading-small-medium { font: var(--mobile-subheading-small-medium); }
+
+  .caption-regular { font: var(--mobile-caption-regular); }
+  .caption-medium { font: var(--mobile-caption-medium); }
+  .caption-bold { font: var(--mobile-caption-bold); }
+
+  .paragraph-big-regular { font: var(--mobile-paragraph-big-regular); }
+  .paragraph-big-medium { font: var(--mobile-paragraph-big-medium); }
+  .paragraph-small-regular { font: var(--mobile-paragraph-small-regular); }
+  .paragraph-small-medium { font: var(--mobile-paragraph-small-medium); }
+
+  .display-medium { font: var(--mobile-display-medium); }
+  .display-regular { font: var(--mobile-display-regular); }
+
 }
 
 body {
@@ -127,16 +221,20 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary, .btn-ghost, .btn-primary-outline, .btn-secondary, .btn-secondary-outline , .btn-bare:hover {
     height: 40px !important;
     padding: 0px 16px !important;
   }
 }
 
 @media (max-width: 768px) {
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary, .btn-ghost, .btn-primary-outline, .btn-secondary, .btn-secondary-outline , .btn-bare:hover{
     height: 32px !important;
     font-size: 12px !important;
     padding: 0px 12px !important;
   }
 }
+
+
+/* Typography */
+

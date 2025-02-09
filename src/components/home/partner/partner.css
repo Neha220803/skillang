@@ -1,11 +1,8 @@
 .partner-bg {
   background-image: url('../../../images/home/partner-bg.png');
-  color: white !important;
-}
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border-radius: 40px !important;
 
-.partner-heading {
-  color: white ;
-  font-size: 46px;
-  font-weight: bolder;
+  /* padding: 0; */
 }
-

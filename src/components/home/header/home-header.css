@@ -64,3 +64,67 @@
   text-align: center;
   letter-spacing: 3px;
 }
+
+/*2nd header*/
+
+/* Background Container */
+.header-bg-design {
+  background-image: url('../../../images/home/header-bg1.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  /* background-position:fit; */
+  border-radius: 35px;
+  width: 100%;
+  height: 100%; /* Full viewport height for better layout */
+  display: flex;
+  flex-direction: column;   /* Stack elements vertically */
+  justify-content: space-between; /* Space between top and bottom */
+  /* padding: 20px; */
+  box-sizing: border-box;   /* Include padding within width/height */
+}
+
+.white-right-box{
+  background-color: white !important;
+  padding: 20px !important;
+  border-radius: 0 0 0 35px !important;
+}
+
+.white-left-box{
+  background-color: white !important;
+  padding: 20px !important;
+  border-radius: 0 0 35px 0 !important;
+}
+
+/* Top Boxes Container */
+.top-boxes {
+  display: flex;
+  justify-content: space-between; /* Purple left, Orange right */
+  align-items: flex-start;
+}
+
+/* Purple Box (Left-Top) */
+.left-top-box {
+  background-color: #B6AFFF;
+  border-radius: 35px;
+  width: 125px;
+  height: 125px;
+}
+
+/* Orange Box (Right-Top) */
+.right-top-box {
+  background-color: #E86E39;
+  border-radius: 35px;
+  width: 95px;
+  height: 89px;
+}
+
+/* Bottom-Right Text Box */
+.right-bottom-box {
+  background-color: white;
+  /* padding: 20px; */
+  border-radius:  34px 0 0 0;
+  width: 400px;
+  height: 100px;
+  align-self: flex-end; /* Align to bottom-right */
+  
+}

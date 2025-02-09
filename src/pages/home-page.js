@@ -9,11 +9,12 @@ import InternshipSection from "../components/home/internship/internship";
 import TestPrep from "../components/home/test-prep/test-prep";
 import LoanSection from "../components/home/loan/loan-section";
 import PartnerSection from "../components/home/partner/partner-section";
+import HomeHeader2 from "../components/home/header/home-header-2";
 
 const HomePage = () => {
   return (
     <div>
-      <HomeHeader />
+      <HomeHeader2 />
       <GlobalOprtunity />
       <WorkAbroadOpportunity />
       <WorkAbroadJourney />
