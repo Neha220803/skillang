@@ -9,7 +9,7 @@ import footerimg from '../../images/home/footer-img.png';
 const FooterSection = () => {
   return (
     <footer className="footer-container">
-      <Container className="footer-bg rounded-4 p-4 mb-4">
+      <Container className="footer-bg rounded-4 p-0 px-4 my-4">
         <Row className="align-items-center">
           <Col>
             <Image fluid src={footerimg} />
@@ -36,7 +36,8 @@ const FooterSection = () => {
               <Col>
                 <ul className="footer-nav">
                   <li><Link to="/" className="footer-nav-link"><p>Study Abroad </p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>Language & Test Prep </p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>Language Prep </p></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><p>Test Prep </p></Link></li>
                 </ul>
               </Col>
               <Col>
@@ -56,7 +57,7 @@ const FooterSection = () => {
           </Col>
           
          <Col lg={4} className="d-flex justify-content-end align-items-end ">
-  <div className="bg-light rounded-4 ">
+  <div className="bg-light rounded-4 px-3">
     <div className="d-flex flex-column align-items-start p-3">
       <h4>Socials</h4>
       <div className="d-flex gap-3 mb-3">
@@ -66,7 +67,7 @@ const FooterSection = () => {
         <FaYoutube className="social-icon gl" />
       </div>
       <p><FaPhone /> +91 - 7200 630 336</p>
-      <p>The Executive zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights, Chennai – 600002.</p>
+      <p>The Executive zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights, Chennai <br></br>Pincode - 600002.</p>
     </div>
   </div>
 </Col>

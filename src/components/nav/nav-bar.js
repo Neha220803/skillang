@@ -1,5 +1,5 @@
-import {React,useState} from "react";
-import {Container,Image} from "react-bootstrap";
+import { React, useState, useEffect } from "react";
+import { Container, Image, NavDropdown } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./nav.css";
@@ -10,53 +10,96 @@ import logo from '../../images/logo-3.svg';
 const BASE_PATH = process.env.PUBLIC_URL || '';
 
 function CustomNavbar() {
-   const [expanded, setExpanded] = useState(false);
+  const [activeSection, setActiveSection] = useState('home'); // Track active section
+  const [expanded, setExpanded] = useState(false);
 
-    // Function to handle scrolling to sections and collapsing the navbar
+  // Handle Scroll to Section & Navbar Collapse
   const handleScroll = (sectionId, event) => {
-  event.preventDefault(); // Prevent the default link behavior
-  if (sectionId) {
-    const targetId = `#${sectionId}`;
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: 'smooth',
-      });
+    event.preventDefault();
+    if (sectionId) {
+      const targetElement = document.getElementById(sectionId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70, // Adjust for fixed navbar height
+          behavior: 'smooth',
+        });
+      }
     }
-  }
-  setExpanded(false); // Collapse the navbar
-};
+    setExpanded(false);
+  };
+
+  // Scroll Listener to Detect Active Section
+  useEffect(() => {
+  const handleScrollSpy = () => {
+    const sections = ['home', 'work-abroad', 'work-abroad-journey', 'study-abroad', 'lang-test'];
+    let currentSection = ''; // Default: no section active
+
+    for (const sectionId of sections) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const offset = 80; // Adjust for fixed navbar height
+
+        if (rect.top <= offset && rect.bottom >= offset) {
+          currentSection = sectionId;
+          break; // Exit loop once a section is found
+        }
+      }
+    }
+
+    setActiveSection(currentSection);
+  };
+
+  window.addEventListener('scroll', handleScrollSpy);
+  return () => window.removeEventListener('scroll', handleScrollSpy);
+}, []);
 
 
-
-
-    const handleNavbarToggle = () => setExpanded(!expanded);
   return (
-    <Navbar expand="lg" className="py-2 fixed-top navcont">
+    <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
       <Container className="d-flex align-items-center">
-        {/* Left: Brand */}
-        <Navbar.Brand href={`${BASE_PATH}/#`}>
-          {/* <div className="nav-head">Skillang</div>  */}
-          <Image src={logo} style={{width:'150px' , height:'50px'}}/>
+        <Navbar.Brand href={`${BASE_PATH}/#home`} onClick={(e) => handleScroll('home', e)}>
+          <Image src={logo} style={{ width: '150px', height: '50px' }} />
         </Navbar.Brand>
 
-        {/* Center: Nav Links */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-          <Nav className="mx-auto"> {/* Centers the nav items */}
-            <Nav.Link href={`${BASE_PATH}/#`} onClick={(e) => handleScroll('', e)} className="navpaths">Home</Nav.Link>
-<Nav.Link href={`${BASE_PATH}/#work-abroad`} onClick={(e) => handleScroll('work-abroad', e)} className="navpaths">Nursing</Nav.Link>
-<Nav.Link href={`${BASE_PATH}/#work-abroad-journey`} onClick={(e) => handleScroll('work-abroad-journey', e)} className="navpaths">Work Abroad</Nav.Link>
-<Nav.Link href={`${BASE_PATH}/#study-abroad`} onClick={(e) => handleScroll('study-abroad', e)} className="navpaths">Study Abroad</Nav.Link>
-<Nav.Link href={`${BASE_PATH}/#lang-test`} onClick={(e) => handleScroll('lang-test', e)} className="navpaths">Language & Test</Nav.Link>
-  </Nav>
+          <Nav className="mx-auto d-flex align-items-center">
+            {[
+              { id: 'home', label: 'Home' },
+              { id: 'work-abroad', label: 'Nursing' },
+              { id: 'work-abroad-journey', label: 'Work Abroad' },
+              { id: 'study-abroad', label: 'Study Abroad' },
+            ].map(({ id, label }) => (
+              <Nav.Link
+                key={id}
+                href={`${BASE_PATH}/#${id}`}
+                onClick={(e) => handleScroll(id, e)}
+                className={`navpaths d-flex align-items-center ${activeSection === id ? 'active-link' : ''}`}
+              >
+                {label}
+              </Nav.Link>
+            ))}
+
+            <NavDropdown
+              title="Language & Test"
+              id="lang-test-dropdown"
+              className={`navpaths d-flex align-items-center ${activeSection === 'lang-test' ? 'active-link' : ''}`}
+            >
+              <NavDropdown.Item href={`${BASE_PATH}/#lang-test`} onClick={(e) => handleScroll('lang-test', e)}>
+                Test Preparation
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href={`${BASE_PATH}/#lang-test`} onClick={(e) => handleScroll('lang-test', e)}>
+                German Language Preparation
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
         </Navbar.Collapse>
 
-        {/* Right: Buttons */}
-        <div className="ms-auto d-flex">
-          <button href="#contact" className="btn-bare me-2">Login</button>
-          <button href="#contact" className="btn-primary-outline">Sign Up</button>
+        <div className="ms-auto d-flex align-items-center">
+          <button className="btn-bare me-2">Login</button>
+          <button className="btn-primary-outline">Sign Up</button>
         </div>
       </Container>
     </Navbar>

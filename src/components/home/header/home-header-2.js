@@ -59,7 +59,7 @@ const HomeHeader2 = () => {
   };
 
   return (
-    <header className="d-flex align-items-end justify-content-center py-5 h-100vh">
+    <header className="d-flex align-items-end justify-content-center py-5 h-100vh" id="home">
       <Container >
         <Row>
           <Col lg={7} md={5} sm={12} xs={12}  className="d-flex flex-column align-items-start justify-content-center">

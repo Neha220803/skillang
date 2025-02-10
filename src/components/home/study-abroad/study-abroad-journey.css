@@ -11,7 +11,7 @@
   .custom-card {
     width: 90%; 
     height: 280px;
-    padding: 20px;
+    padding: 0px !important;
   }
 }
 
@@ -19,7 +19,7 @@
   .custom-card {
     width: 90%; 
     height: 280px !important;
-    padding: 20px;
+    padding: 10px !important;
   }
 }
 

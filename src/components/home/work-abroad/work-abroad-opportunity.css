@@ -55,3 +55,20 @@ img{
 .sec-card-img {
   background-color: #F2F2F9 !important;
 }
+
+/* Change arrow color to black */
+.slick-prev:before, 
+.slick-next:before {
+  color: grey;  /* Sets the arrow color to black */
+  font-size: 24px;  /* Adjusts the arrow size if needed */
+  opacity: 1;       /* Ensures full visibility */
+}
+
+/* Optional: Adjust arrow positioning */
+.slick-prev {
+  left: -30px;  /* Moves the left arrow slightly outside */
+}
+
+.slick-next {
+  right: -30px; /* Moves the right arrow slightly outside */
+}

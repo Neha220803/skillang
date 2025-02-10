@@ -3,7 +3,7 @@
   color: #5B5B5B !important;
   font-weight: 400 !important;
   width: 100% !important;
-  height: 140px !important;
+  height: 200px !important;
   position: relative; /* Required for positioning the circle */
   overflow: hidden !important;
   text-align: end !important;
@@ -35,6 +35,16 @@
 
 .intern-card-text-wrapper{
   /* background-color: pink; */
-   width: 80%;
+   width: 70%;
   text-align: start !important;
+}
+
+
+.internship-slider-wrapper {
+  width: 100%;
+  padding: 0 20px; /* Optional for spacing */
+}
+
+.intern-card-wrapper {
+  padding: 10px; 
 }

@@ -24,9 +24,9 @@ const LoanSection = () => {
         </Row>
 
         <Row className="align-items-center">
-          <Col xs={12} sm={12} md={6} className="mb-4">
-            <Image fluid src={loanImg} className="loan-image" />
-          </Col>
+           <Col xs={12} sm={12} md={6} className="mb-4">
+              <Image fluid src={loanImg} className="loan-image rounded-4" />
+            </Col>
           <Col xs={12} sm={12} md={6}>
             {/* This heading will only show on md and larger screens */}
             <h1 className="loan-heading d-none d-md-block">Loan and Scholarships Assistance</h1>
@@ -47,6 +47,7 @@ const LoanSection = () => {
               Apply Now
             </button>
           </Col>
+         
         </Row>
       </Container>
     </div>
