@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.b85f1a8f.css",
-    "main.js": "/skillang/static/js/main.d2fc9427.js",
+    "main.css": "/skillang/static/css/main.f8fde343.css",
+    "main.js": "/skillang/static/js/main.8ffcce30.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/header-bg1.png": "/skillang/static/media/header-bg1.00523a41396ec6656cc5.png",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.00523a41396ec6656cc585f21bb79344.svg",
@@ -60,14 +60,18 @@
     "static/media/logo-3.svg": "/skillang/static/media/logo-3.381ba4d78548fb295b13c7923ad8c590.svg",
     "static/media/work-opp-10.svg": "/skillang/static/media/work-opp-10.4232be95d57fc9a52d9f6141b1892a59.svg",
     "static/media/work-opp-9.svg": "/skillang/static/media/work-opp-9.5d190ffedaae1c8bb37566391cb9c35f.svg",
+    "static/media/slick.svg": "/skillang/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/skillang/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/skillang/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/work-opp-4.svg": "/skillang/static/media/work-opp-4.8a90c0a187e8a127506b2defb7846a36.svg",
+    "static/media/slick.woff": "/skillang/static/media/slick.295183786cd8a1389865.woff",
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "index.html": "/skillang/index.html",
-    "main.b85f1a8f.css.map": "/skillang/static/css/main.b85f1a8f.css.map",
-    "main.d2fc9427.js.map": "/skillang/static/js/main.d2fc9427.js.map"
+    "main.f8fde343.css.map": "/skillang/static/css/main.f8fde343.css.map",
+    "main.8ffcce30.js.map": "/skillang/static/js/main.8ffcce30.js.map"
   },
   "entrypoints": [
-    "static/css/main.b85f1a8f.css",
-    "static/js/main.d2fc9427.js"
+    "static/css/main.f8fde343.css",
+    "static/js/main.8ffcce30.js"
   ]
 }
