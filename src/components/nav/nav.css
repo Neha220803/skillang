@@ -1,4 +1,11 @@
 /* Navbar Container */
+.navbar-logo {
+  width: 150px !important;
+  height: 50px !important;
+  object-fit: contain; /* Ensures proper scaling */
+}
+
+
 .navcont {
   background-color: white !important;
   color: var(--content-secondary) !important;

@@ -30,12 +30,25 @@
   transition: all 0.3s ease;
 }
 
-.social-icon:hover {
+/* .social-icon:hover {
   color: #007bff;
-}
+} */
 
 .fb:hover { color: #3b5998; }
-.ig:hover { color: #e1306c; }
+.ig {
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.ig:hover{
+   color: #cc2366 !important;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Optional hover effect */
+}
+
 .tw:hover { color: #00acee; }
 .gl:hover { color: #ff0000; }
 
@@ -45,4 +58,9 @@
   background-position: center;
   padding: 20px;
   border-radius: 16px;
+}
+
+.footer-logo{
+  width: 150px !important;
+  height: auto !important;
 }

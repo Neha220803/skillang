@@ -7,19 +7,21 @@
   box-sizing: border-box; 
 }
 
-@media (min-width: 640px) {
+/* Mobile screens (up to 640px) */
+@media (max-width: 640px) {
   .custom-card {
     width: 90%; 
-    height: 280px;
-    padding: 0px !important;
+    height: 240px !important;
+    padding: 0 !important; /* Set padding to 0 for mobile */
   }
 }
 
-@media (min-width: 440px) {
+/* Medium screens (between 440px and 640px) */
+@media (min-width: 440px) and (max-width: 1023px) {
   .custom-card {
     width: 90%; 
     height: 280px !important;
-    padding: 10px !important;
+    padding: 0px !important;
   }
 }
 
@@ -32,8 +34,8 @@
   }
 }
 
-.study-card-icon{
-  width:100% !important;
-   height: auto;
-   align-items: end !important;
+.study-card-icon {
+  width: 100% !important;
+  height: auto;
+  align-items: end !important;
 }

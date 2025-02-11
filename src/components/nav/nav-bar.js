@@ -59,7 +59,7 @@ function CustomNavbar() {
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
       <Container className="d-flex align-items-center">
         <Navbar.Brand href={`${BASE_PATH}/#home`} onClick={(e) => handleScroll('home', e)}>
-          <Image src={logo} style={{ width: '150px', height: '50px' }} />
+         <Image src={logo} className="navbar-logo" />  
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
@@ -94,13 +94,12 @@ function CustomNavbar() {
                 German Language Preparation
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-
-        <div className="ms-auto d-flex align-items-center">
+            <div className="ms-auto d-flex align-items-center">
           <button className="btn-bare me-2">Login</button>
           <button className="btn-primary-outline">Sign Up</button>
         </div>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

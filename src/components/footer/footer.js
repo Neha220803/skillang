@@ -16,7 +16,7 @@ const FooterSection = () => {
           </Col>
           <Col className="text-start">
             <h1 className="mb-4">Gateway to Global Education</h1>
-            <img src={logo} alt="Logo" className="mb-3" />
+            <img src={logo} alt="Logo" className="mb-3 footer-logo" />
             <p>© 2025 All Rights Reserved, Skillang</p>
           </Col>
         </Row>
@@ -57,7 +57,7 @@ const FooterSection = () => {
           </Col>
           
          <Col lg={4} className="d-flex justify-content-end align-items-end ">
-  <div className="bg-light rounded-4 px-3">
+  <div className="bg-light rounded-4 px-3 mt-2 mt-lg-0">
     <div className="d-flex flex-column align-items-start p-3">
       <h4>Socials</h4>
       <div className="d-flex gap-3 mb-3">
@@ -66,7 +66,7 @@ const FooterSection = () => {
         <FaTwitter className="social-icon tw" />
         <FaYoutube className="social-icon gl" />
       </div>
-      <p><FaPhone /> +91 - 7200 630 336</p>
+      <p><FaPhone className="me-2"/> +91 - 7200 630 336</p>
       <p>The Executive zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights, Chennai <br></br>Pincode - 600002.</p>
     </div>
   </div>

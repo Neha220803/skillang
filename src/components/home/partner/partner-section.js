@@ -7,9 +7,9 @@ import partnerImg from '../../../images/home/partner-img.png';
 
 const PartnerSection = () => {
   return (
-    <div className="partner-bg justify-content-center align-items-center my-5 partner-div">
-      <Container className="text-center justify-content-center align-items-center">
-        <Row className="justify-content-center align-items-center px-4">
+    <div className=" justify-content-center align-items-center my-5 partner-div">
+      <Container className="text-center justify-content-center align-items-center rounded-4">
+        <Row className="justify-content-center align-items-center px-4 partner-bg">
           <Col>
           <Image fluid src={partnerImg} alt="Partner Image" />
           </Col>
