@@ -64,13 +64,7 @@ const HomeHeader2 = () => {
         <Row>
           <Col lg={7} md={5} sm={12} xs={12}  className="d-flex flex-column align-items-start justify-content-center">
             <Image src={headerbg} fluid />
-           
-            {/* <h1 className="content-heading">Transform your career with Skillang</h1>
-            <p className="content-desc">
-              Start with our personalised career guidance for Study & Work Abroad, German and other language prep.
-            </p> */}
           </Col>
-         
           <Col lg={5} md={6} sm={12} xs={12}  className="d-flex align-items-center justify-content-start">
            <Container className="d-flex align-items-start justify-content-center flex-column p-3">
     <div className="form-container">
@@ -100,13 +94,13 @@ const HomeHeader2 = () => {
         />
       </Form.Group>
 
-      <Row className="mb-3">
-        <Col md={6}>
+      <Row className="">
+        <Col md={6} className="mb-3">
           <Form.Group controlId="formNumber">
             <Form.Control
               type="tel"
               placeholder="Mobile"
-              name="mobile"
+              name="number"
               value={formData.number}
               onChange={handleInputChange}
               required
@@ -115,7 +109,7 @@ const HomeHeader2 = () => {
             />
           </Form.Group>
         </Col>
-        <Col md={6}>
+        <Col md={6} className="mb-3">
           <Form.Group controlId="formPinCode">
             <Form.Control
               type="text"
@@ -142,8 +136,7 @@ const HomeHeader2 = () => {
           <option value="Nursing">Nursing</option>
           <option value="Work Abroad">Work Abroad</option>
           <option value="Study Abroad">Study Abroad</option>
-          <option value="Language Prep">Language Prep</option>
-          <option value="Test Prep">Test Prep</option>
+          <option value="Language Prep">Language & Test Prep</option>
         </Form.Select>
       </Form.Group>
 

@@ -58,11 +58,12 @@ function CustomNavbar() {
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
       <Container className="d-flex align-items-center">
+         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
         <Navbar.Brand href={`${BASE_PATH}/#home`} onClick={(e) => handleScroll('home', e)}>
          <Image src={logo} className="navbar-logo" />  
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
+       
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
           <Nav className="mx-auto d-flex align-items-center">
             {[
@@ -70,6 +71,7 @@ function CustomNavbar() {
               { id: 'work-abroad', label: 'Nursing' },
               { id: 'work-abroad-journey', label: 'Work Abroad' },
               { id: 'study-abroad', label: 'Study Abroad' },
+              { id: 'lang-test', label: 'Language & Test'}
             ].map(({ id, label }) => (
               <Nav.Link
                 key={id}
@@ -80,8 +82,7 @@ function CustomNavbar() {
                 {label}
               </Nav.Link>
             ))}
-
-            <NavDropdown
+            {/* <NavDropdown
               title="Language & Test"
               id="lang-test-dropdown"
               className={`navpaths d-flex align-items-center ${activeSection === 'lang-test' ? 'active-link' : ''}`}
@@ -93,13 +94,14 @@ function CustomNavbar() {
               <NavDropdown.Item href={`${BASE_PATH}/#lang-test`} onClick={(e) => handleScroll('lang-test', e)}>
                 German Language Preparation
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
             <div className="ms-auto d-flex align-items-center">
-          <button className="btn-bare me-2">Login</button>
-          <button className="btn-primary-outline">Sign Up</button>
+          {/* <button className="btn-bare me-2">Login</button> */}
+          
         </div>
           </Nav>
         </Navbar.Collapse>
+        <button className="btn-primary-outline">Contact Us</button>
       </Container>
     </Navbar>
   );

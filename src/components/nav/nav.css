@@ -96,7 +96,7 @@
 /* Dropdown Item Styling */
 .dropdown-item {
   padding: 10px 20px !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   color: rgb(96, 96, 96) !important;
   transition: background-color 0.3s ease-in-out;
 }
@@ -124,7 +124,7 @@
 @media (max-width: 992px) {
   .navpaths,
   .dropdown-toggle {
-    font-size: 16px !important;
+    font-size: 14px !important;
     padding: 10px 15px !important;
   }
 

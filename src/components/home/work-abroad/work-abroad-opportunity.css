@@ -56,7 +56,43 @@ img{
   background-color: #F2F2F9 !important;
 }
 
-/* Change arrow color to black */
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sec-card {
+    height: 100px !important;
+    font-weight: 200 !important;
+    font-size: 14px !important;
+  }
+
+  .sec-card-icon-wrapper {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 15px !important;
+  }
+  .sec-card-text-wrapper {
+    width: 75%;
+    
+  }
+}
+
+@media (max-width: 576px) {
+ 
+  .sec-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+   
+  }
+  .sec-card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .sec-card-text-wrapper {
+    width: 95% !important;
+    font-size: 15px !important;
+  }
+}
+
 .slick-prev:before, 
 .slick-next:before {
   color: grey;  /* Sets the arrow color to black */

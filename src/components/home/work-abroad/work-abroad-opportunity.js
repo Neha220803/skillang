@@ -45,13 +45,17 @@ const WorkAbroadOpportunity = () => {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
+                     dots: true,
+        arrows: true, 
         }
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
+           dots: true,
+        arrows: false, 
         }
       }
     ]

@@ -83,27 +83,32 @@ const WorkAbroadJourney = () => {
       <Container id="work-abroad-journey">
         <h1 className="text-center my-5">Work Abroad Journey</h1>
         <Timeline position={isMobile ? 'right' : 'alternate'}>
-          {timelineData.map((item, index) => (
-            <TimelineItem key={index} className='mb-2'>
-              <TimelineOppositeContent color="text.secondary">
-                <Image
-                  className="custom-image"
-                  src={item.image}
-                  alt={item.title}
-                  // style={{ height: '300px', width: 'auto' }}
-                />
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot style={{ backgroundColor: '#E86E39' }} />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
+  {timelineData.map((item, index) => (
+    <TimelineItem key={index} className="mb-4"> {/* Added mb-4 for spacing */}
+      <TimelineOppositeContent 
+        style={{ flex: isMobile ? '0' : '1' }}  // Collapse opposite content on mobile
+      >
+        <div className='d-none d-md-block'>
+          <Image className="custom-image" src={item.image} alt={item.title} />
+
+        </div>
+        
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <TimelineDot style={{ backgroundColor: '#E86E39' }} />
+        {index !== timelineData.length - 1 && <TimelineConnector />} {/* Avoid connector after last dot */}
+      </TimelineSeparator>
+      <TimelineContent>
+        <h3>{item.title}</h3>
+        <div className='d-block d-md-none'>
+          <Image className="custom-image" src={item.image} alt={item.title} />
+        </div>
+        <p>{item.description}</p>
+      </TimelineContent>
+    </TimelineItem>
+  ))}
+</Timeline>
+
       {/* <Row className="text-center"  >
         <button className='btn-primary-outline' onClick={() => {
     window.scrollTo({

@@ -1,6 +1,6 @@
   import React from "react";
   import Slider from "react-slick";
-  import { Card, CardBody, Col, Container } from "react-bootstrap";
+  import { Card, CardBody, Col, Container, Row } from "react-bootstrap";
   import "slick-carousel/slick/slick.css";
   import "slick-carousel/slick/slick-theme.css";
   import '../../../App.css';
@@ -48,25 +48,31 @@
           breakpoint: 640,
           settings: {
             slidesToShow: 1,
+             dots: true,
+        arrows: false, 
           },
         },
         {
           breakpoint: 425,
           settings: {
             slidesToShow: 1,
+             dots: true,
+        arrows: false, 
           },
         },
         {
           breakpoint: 320,
           settings: {
             slidesToShow: 1,
+             dots: true,
+        arrows: false, 
           },
         },
       ],
     };
 
     return (
-      <Container className="max-w-4xl mx-auto" id="study-abroad">
+      <Container className="max-w-4xl mx-auto align-items-center justify-content-center gap-4" id="study-abroad">
         <h1 className="text-center my-lg-4">Study Abroad Journey</h1>
         <Slider {...settings} className="mx-4">
           {cardData.map((card, index) => (
@@ -81,7 +87,7 @@
                   <CardBody>
                     <Card.Title className="fw-bold">{card.title}</Card.Title>
                     <p className="card-desc">{card.desc}</p>
-                    <button className="btn btn-primary" onClick={() => {
+                    <button className="btn btn-primary " onClick={() => {
                 window.scrollTo({
                   top: 0,
                   behavior: 'smooth',
@@ -93,6 +99,19 @@
             </div>
           ))}
         </Slider>
+        <div className="text-center mt-4">
+           <button className="btn btn-primary-outline mt-4 " onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}>Book Your Free Counselling Slot Now</button>
+
+        </div>
+   
+          
+          
+       
       </Container>
     );
   }
