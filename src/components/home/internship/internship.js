@@ -4,7 +4,6 @@ import {
   CardBody,
   CardTitle,
   Container,
-  Col,
   Row,
   Card,
 } from "react-bootstrap";
@@ -98,8 +97,6 @@ const InternshipSection = () => {
     ))}
   </Slider>
 </Row>
-
-
         <Row>
           <button
             className="btn-primary-outline mt-4"

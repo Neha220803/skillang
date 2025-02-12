@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Card, CardBody, CardFooter, CardTitle, Container } from 'react-bootstrap'
 import '../home-page.css';
 import '../../../App.css';
 import './uni-partner.css';

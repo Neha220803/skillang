@@ -1,6 +1,6 @@
   import React from "react";
   import Slider from "react-slick";
-  import { Card, CardBody, Col, Container, Row } from "react-bootstrap";
+  import { Card, CardBody, Col, Container } from "react-bootstrap";
   import "slick-carousel/slick/slick.css";
   import "slick-carousel/slick/slick-theme.css";
   import '../../../App.css';

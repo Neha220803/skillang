@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../home-page.css';
 import '../../../App.css';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import ScrollEle from './scroll';
 
 

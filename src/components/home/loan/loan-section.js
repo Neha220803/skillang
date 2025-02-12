@@ -1,8 +1,6 @@
 import React from "react";
 import loanImg from "../../../images/home/loan-img.png";
 import {
-  CardBody,
-  CardTitle,
   Container,
   Col,
   Row,
