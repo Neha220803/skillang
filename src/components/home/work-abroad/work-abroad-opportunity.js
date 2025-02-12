@@ -76,7 +76,7 @@ const WorkAbroadOpportunity = () => {
                 <Card.Img variant="top" src={card.img} alt="Card image" style={{ width: '45%', height: 'auto' }} />
                 <CardBody className='d-flex flex-column justify-content-around'>
                   <CardTitle>{card.title}</CardTitle>
-                  <button className='btn-primary' style={{ width: '120px' }} onClick={() => {
+                  <button className='btn-primary-outline' style={{ width: '120px' }} onClick={() => {
               window.scrollTo({
                 top: 0,
                 behavior: 'smooth',

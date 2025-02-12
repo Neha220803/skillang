@@ -5,20 +5,27 @@ import { FaPhone, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-ic
 import { Link } from "react-router-dom";
 import './footer.css';
 import footerimg from '../../images/home/footer-img.png';
+import '../../index.css';
+import '../../App.css';
 
 const FooterSection = () => {
   return (
     <footer className="footer-container">
       <Container className="footer-bg rounded-4 p-0 px-4 my-4">
         <Row className="align-items-center">
-          <Col>
+          <Col md={6} className="d-none d-md-block" >
             <Image fluid src={footerimg} />
           </Col>
-          <Col className="text-start">
-            <h1 className="mb-4">Gateway to Global Education</h1>
+          <Col md={6} className="justify-content-start align-items-start text-start">
+            <h1 className="my-4">Gateway to Global Education</h1>
             <img src={logo} alt="Logo" className="mb-3 footer-logo" />
             <p>© 2025 All Rights Reserved, Skillang</p>
           </Col>
+          <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-start ">
+  <Image src={footerimg} alt="Partner Image" style={{ height: '142px' }} />
+</Col>
+
+
         </Row>
       </Container>
 

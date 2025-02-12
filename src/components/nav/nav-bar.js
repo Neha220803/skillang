@@ -101,7 +101,12 @@ function CustomNavbar() {
         </div>
           </Nav>
         </Navbar.Collapse>
-        <button className="btn-primary-outline">Contact Us</button>
+        <button className="btn-primary-outline"  onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>Contact Us</button>
       </Container>
     </Navbar>
   );
