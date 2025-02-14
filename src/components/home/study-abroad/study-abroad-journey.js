@@ -75,30 +75,28 @@
       <Container className="max-w-4xl mx-auto align-items-center justify-content-center gap-4" id="study-abroad">
         <h1 className="text-center my-lg-4">Study Abroad Journey</h1>
         <Slider {...settings} className="mx-4">
-          {cardData.map((card, index) => (
-            <div key={index} className="px-lg-3 py-5">
-              <Card className="custom-card border-0 d-flex flex-row-reverse shadow-sm align-items-center justify-content-center" style={{ backgroundColor: card.color }}>
-                <Col lg={4} md={4} sm={4} xs={4}>
-                  <div className="p-lg-3 p-2">
-                    <img src={card.img} alt={card.title} className="study-card-icon" />
-                  </div>
-                </Col>
-                <Col lg={8} md={8} sm={8} xs={8}>
-                  <CardBody>
-                    <Card.Title className="fw-bold">{card.title}</Card.Title>
-                    <p className="card-desc">{card.desc}</p>
-                    <button className="btn btn-primary " onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth',
-                });
-              }}>Learn More</button>
-                  </CardBody>
-                </Col>
-              </Card>
-            </div>
-          ))}
-        </Slider>
+  {cardData.map((card, index) => (
+    <div key={index} className="px-3"> {/* Add padding around each slide */}
+      <Card className="custom-card my-4 border-0 d-flex flex-row-reverse align-items-center justify-content-center" style={{ backgroundColor: card.color }}>
+        <Col lg={4} md={4} sm={4} xs={4}>
+          <div className="p-lg-3 p-2">
+            <img src={card.img} alt={card.title} className="study-card-icon" />
+          </div>
+        </Col>
+        <Col lg={8} md={8} sm={8} xs={8}>
+          <CardBody>
+            <Card.Title className="fw-bold">{card.title}</Card.Title>
+            <p className="card-desc">{card.desc}</p>
+            <button className="btn btn-primary" onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>Learn More</button>
+          </CardBody>
+        </Col>
+      </Card>
+    </div>
+  ))}
+</Slider>
+
         <div className="text-center mt-4">
            <button className="btn btn-primary-outline mt-4 " onClick={() => {
                 window.scrollTo({
