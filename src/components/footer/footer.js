@@ -21,8 +21,8 @@ const FooterSection = () => {
             <img src={logo} alt="Logo" className="mb-3 footer-logo" />
             <p>© 2025 All Rights Reserved, Skillang</p>
           </Col>
-          <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-start ">
-  <Image src={footerimg} alt="Partner Image" style={{ height: '142px' }} />
+          <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-start " style={{overflow:'hidden'}}>
+  <Image src={footerimg} alt="Partner Image" style={{ height: '130px'}} />
 </Col>
 
 

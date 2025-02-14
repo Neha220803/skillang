@@ -60,7 +60,7 @@
         {
           breakpoint: 425,
           settings: {
-            slidesToShow: 1.8,
+            slidesToShow: 2,
              dots: true,
         arrows: false, 
           },

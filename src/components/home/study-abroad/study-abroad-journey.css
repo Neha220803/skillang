@@ -12,7 +12,6 @@
   white-space: normal !important; /* Allows text to wrap */
   word-wrap: break-word !important; /* Breaks long words */
   overflow: hidden;
-
   display: block;
   max-width: 100%;
 }
@@ -61,11 +60,12 @@
   display: flex !important;
   flex-wrap: nowrap !important; /* Forces all items to stay in a single row */
   white-space: nowrap !important;
+  margin-left: -15px !important ;
 }
 
 .slick-slide {
   display: inline-block !important; /* Ensures each slide respects variable width */
-   margin: 0 -5px !important; /* Reduce spacing between slides */
+   margin: 0 -10px !important; /* Reduce spacing between slides */
 }
 
 .slick-prev:before, 
