@@ -36,7 +36,7 @@
 
 .fb:hover { color: #3b5998; }
 .ig {
-    -webkit-background-clip: text;
+    background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
 }
