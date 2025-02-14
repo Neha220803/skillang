@@ -1,23 +1,33 @@
+.prim-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 .prim-card {
   padding-left: 40px;
   padding-bottom: 0%;
   padding-right: 5px ;
-  width: 100%;
+  width: 100% !important;
   height: 180px !important;
   border-radius: 12px !important;
   justify-content:space-evenly !important;
+  overflow: hidden !important;
 }
 
 img{
   padding: 0% !important;
   margin: 0 !important;
+
 }
 
 .sec-card {
   background-color: #F8F8F8 !important;
   color: #5B5B5B !important;
   font-weight: 400 !important;
-  width: 100% !important;
+  width: fit-content !important;
+  /* width: 100% !important; */
   height: 140px !important;
   position: relative; /* Required for positioning the circle */
   overflow: hidden !important;
@@ -67,11 +77,10 @@ img{
   .sec-card-icon-wrapper {
     width: 80px !important;
     height: 80px !important;
-    padding: 15px !important;
+    padding: 14px !important;
   }
   .sec-card-text-wrapper {
     width: 75%;
-    
   }
 }
 
@@ -81,7 +90,10 @@ img{
     flex-direction: column;
     align-items: center;
     padding: 15px;
-   
+   height: 60px !important;
+   width: max-content !important;
+   min-width: 140px !important;
+   /* background-color: black !important; */
   }
   .sec-card-icon-wrapper {
     width: 60px;
@@ -89,7 +101,14 @@ img{
   }
   .sec-card-text-wrapper {
     width: 95% !important;
-    font-size: 12px !important;
+    /* background-color: pink; */
+    font-size: 9px !important;
+     white-space: normal !important;  /* Allows multi-word text to wrap */
+  word-wrap: break-word !important; /* Ensures long single words wrap */
+  overflow-wrap: break-word  !important; /* Alternative for better browser support */
+  text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
+  overflow: hidden  !important; /* Hides overflowing content */
+  display: block ; /* Ensures proper block behavior */
   }
 }
 

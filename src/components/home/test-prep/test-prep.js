@@ -11,10 +11,10 @@ const testPrepItems = [
 
 const TestPrep = () => {
   return (
-    <div className="test-prep-section d-flex flex-column align-items-center justify-content-center my-5" id='lang-test'>
+    <div className="test-prep-section d-flex flex-column align-items-center justify-content-center my-lg-5" id='lang-test'>
       <Container className="d-flex flex-column align-items-center justify-content-center my-4 gap-4">
         <Row>
-          <h1 className="text-center mb-5">Test and Language Preparation</h1>
+          <h1 className="text-center mb-lg-5 mb-md-5 mb-2">Test and Language Preparation</h1>
         </Row>
         <Row className="g-3 d-flex align-items-center justify-content-center">
           {testPrepItems.map((item, index) => (

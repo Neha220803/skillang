@@ -39,22 +39,24 @@ const WorkAbroadOpportunity = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
+    swipeToSlide: true, // Allows users to swipe freely
+    variableWidth: true, // Allows cards to have variable widths and move naturally
     arrows:true,
     responsive: [
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 3,
-                     dots: true,
+          dots: false,
         arrows: true, 
         }
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 2,
-           dots: true,
+          slidesToShow: 1,
+           dots: false,
         arrows: false, 
         }
       }
@@ -64,14 +66,14 @@ const WorkAbroadOpportunity = () => {
   return (
     <section className='d-flex flex-column align-items-center justify-content-center' id="work-abroad">
       <Container className='d-flex flex-column align-items-center justify-content-center gap-4'>
-        <Row className='my-4'>
+        <Row className='my-lg-4 my-md-4 mt-4 mb-1'>
           <h1> Work Abroad Opportunities </h1>
         </Row>
 
         {/* Primary Cards */}
-        <Row className='d-flex align-items-center justify-content-center'>
+        <Row className=' align-items-center justify-content-center w-100'>
           {primCardData.map((card, index) => (
-            <Col key={index} lg={4} md={6} sm={12}>
+            <Col key={index} lg={4} md={6} sm={12} xs={12}>
               <Card className='prim-card d-flex flex-row-reverse border-0 mb-3' style={{ backgroundColor: card.color }}>
                 <Card.Img variant="top" src={card.img} alt="Card image" style={{ width: '45%', height: 'auto' }} />
                 <CardBody className='d-flex flex-column justify-content-around'>
@@ -87,9 +89,7 @@ const WorkAbroadOpportunity = () => {
             </Col>
           ))}
         </Row>
-
-        {/* Secondary Cards Slider */}
-        <Row className='w-100'>
+        <Row className='w-100 '>
           <Slider {...sliderSettings}>
             {secCardData.map((card, index) => (
               <div key={index} className='px-2'>
@@ -97,7 +97,7 @@ const WorkAbroadOpportunity = () => {
                   <div className="sec-card-icon-wrapper">
                     <img src={card.img} alt="Icon" className="sec-card-icon" />
                   </div>
-                  <CardBody className='d-flex flex-column justify-content-around align-items-end'>
+                  <CardBody className='d-flex flex-column justify-content-center align-items-end'>
                     <CardTitle className='sec-card-text-wrapper'>{card.title}</CardTitle>
                   </CardBody>
                 </Card>
@@ -107,7 +107,7 @@ const WorkAbroadOpportunity = () => {
         </Row>
 
         <Row>
-          <button className='btn-primary-outline mt-5' onClick={() => {
+          <button className='btn-primary-outline mt-py-5 mt-3' onClick={() => {
               window.scrollTo({
                 top: 0,
                 behavior: 'smooth',

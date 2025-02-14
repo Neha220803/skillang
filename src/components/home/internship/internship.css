@@ -2,13 +2,25 @@
   background-color: #F8F8F8 !important;
   color: #5B5B5B !important;
   font-weight: 400 !important;
-  width: 100% !important;
+  /* width: 100% !important; */
   height: 200px !important;
   position: relative; /* Required for positioning the circle */
   overflow: hidden !important;
   text-align: end !important;
   padding-left: 40px !important;
    border-radius: 12px !important;
+
+     width: fit-content !important; 
+     min-width: 250px !important;
+  max-width: 570px; 
+}
+
+.intern-card p, .intern-card h3, .intern-card span {
+  white-space: normal !important; /* Allows text to wrap */
+  word-wrap: break-word !important; /* Breaks long words */
+  overflow: hidden !important;
+  display: block;
+  max-width: 100%;
 }
 
 .intern-card-icon-wrapper {
@@ -42,9 +54,42 @@
 
 .internship-slider-wrapper {
   width: 100%;
-  padding: 0 20px; /* Optional for spacing */
+
 }
 
 .intern-card-wrapper {
   padding: 10px; 
+}
+
+
+
+.slick-slider {
+  overflow: hidden; /* Prevents unwanted wrapping */
+}
+
+.slick-track {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* Forces all items to stay in a single row */
+  white-space: nowrap !important;
+}
+
+.slick-slide {
+  display: inline-block !important; /* Ensures each slide respects variable width */
+   margin: 0 -5px !important; /* Reduce spacing between slides */
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  color: grey;  /* Sets the arrow color to black */
+  font-size: 24px;  /* Adjusts the arrow size if needed */
+  opacity: 1;       /* Ensures full visibility */
+}
+
+/* Optional: Adjust arrow positioning */
+.slick-prev {
+  left: -30px;  /* Moves the left arrow slightly outside */
+}
+
+.slick-next {
+  right: -30px; /* Moves the right arrow slightly outside */
 }

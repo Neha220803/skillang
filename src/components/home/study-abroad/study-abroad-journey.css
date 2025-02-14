@@ -1,19 +1,30 @@
 .custom-card {
-  width: 100%; 
+   flex: 0 0 auto; 
+  width: fit-content !important; 
   max-width: 570px; 
   height: 300px !important; 
   border-radius: 12px;
   padding: 16px; 
   box-sizing: border-box; 
-  
 }
+
+.custom-card p, .custom-card h3, .custom-card span {
+  white-space: normal !important; /* Allows text to wrap */
+  word-wrap: break-word !important; /* Breaks long words */
+  overflow: hidden;
+
+  display: block;
+  max-width: 100%;
+}
+
 
 /* Mobile screens (up to 640px) */
 @media (max-width: 640px) {
   .custom-card {
     /* width: 90%;  */
-    height: 240px !important;
-    padding: 0 !important; /* Set padding to 0 for mobile */
+    height: 230px !important;
+    padding: 10 !important; /* Set padding to 0 for mobile */
+        width: 320px !important;
   }
 }
 
@@ -32,6 +43,7 @@
     /* width: 570px; */
     height: 300px;
     padding: 24px;
+
   }
 }
 
@@ -39,4 +51,35 @@
   width: 100% !important;
   height: auto;
   align-items: end !important;
+}
+
+.slick-slider {
+  overflow: hidden; /* Prevents unwanted wrapping */
+}
+
+.slick-track {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* Forces all items to stay in a single row */
+  white-space: nowrap !important;
+}
+
+.slick-slide {
+  display: inline-block !important; /* Ensures each slide respects variable width */
+   margin: 0 -5px !important; /* Reduce spacing between slides */
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  color: grey;  /* Sets the arrow color to black */
+  font-size: 24px;  /* Adjusts the arrow size if needed */
+  opacity: 1;       /* Ensures full visibility */
+}
+
+/* Optional: Adjust arrow positioning */
+.slick-prev {
+  left: -30px;  /* Moves the left arrow slightly outside */
+}
+
+.slick-next {
+  right: -30px; /* Moves the right arrow slightly outside */
 }

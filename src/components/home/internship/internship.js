@@ -36,8 +36,10 @@ const sliderSettings = {
   dots: true,
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 2,
   slidesToScroll: 1,
+      swipeToSlide: true, // Allows users to swipe freely
+    variableWidth: true, // Allows cards to have variable widths and move naturally
   arrows: true,
   responsive: [
     {
@@ -52,7 +54,7 @@ const sliderSettings = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         dots: true,
         arrows: false, 
@@ -61,7 +63,7 @@ const sliderSettings = {
      {
       breakpoint: 400,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         dots: true,
         arrows: false, 
@@ -74,7 +76,7 @@ const InternshipSection = () => {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center py-5">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-4">
+        <Row className="mb-lg-4 mb-md-4 mb-1 text-center ">
           <h1>Ausbildung (internship) Program in Germany</h1>
         </Row>
 
@@ -88,7 +90,7 @@ const InternshipSection = () => {
           </div>
           <CardBody className="d-flex flex-column justify-content-around align-items-end">
             <div className="intern-card-text-wrapper">
-              <CardTitle>{card.title}</CardTitle>
+              <CardTitle><h3>{card.title}</h3></CardTitle>
               <p className="card-desc">{card.desc}</p>
             </div>
           </CardBody>

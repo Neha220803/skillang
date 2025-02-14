@@ -81,7 +81,7 @@ const WorkAbroadJourney = () => {
   return (
     <section>
       <Container id="work-abroad-journey">
-        <h1 className="text-center my-5">Work Abroad Journey</h1>
+        <h1 className="text-center my-lg-5 my-md-5 mt-5 mb-3">Work Abroad Journey</h1>
         <Timeline position={isMobile ? 'right' : 'alternate'}>
   {timelineData.map((item, index) => (
     <TimelineItem key={index} className="mb-4"> {/* Added mb-4 for spacing */}
@@ -101,11 +101,12 @@ const WorkAbroadJourney = () => {
       <TimelineContent>
         <h3>{item.title}</h3>
         <div className='d-block d-md-none'>
-          <Image className="custom-image" src={item.image} alt={item.title} />
+          <Image className="custom-image my-2" src={item.image} alt={item.title} />
         </div>
         <p>{item.description}</p>
       </TimelineContent>
     </TimelineItem>
+    
   ))}
 </Timeline>
 
