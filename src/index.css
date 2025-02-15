@@ -63,6 +63,58 @@
   --mobile-display-regular: 400 96px/56px var(--font-family);
 }
 
+/* Primary Colors */
+.text-primary-color {
+  color: var(--primary-color);
+}
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.text-primary-variant {
+  color: var(--primary-variant);
+}
+.bg-primary-variant {
+  background-color: var(--primary-variant);
+}
+
+/* Secondary Colors */
+.text-secondary-color {
+  color: var(--secondary-color);
+}
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.text-secondary-variant {
+  color: var(--secondary-variant);
+}
+.bg-secondary-variant {
+  background-color: var(--secondary-variant);
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--background-primary);
+}
+
+.bg-secondary {
+  background-color: var(--background-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--background-tertiary);
+}
+
+/* Content Colors */
+.text-content-primary {
+  color: var(--content-primary);
+}
+.text-content-secondary {
+  color: var(--content-secondary);
+}
+
+
 /* Universal Typography Classes */
 .heading-big-medium { font: var(--heading-big-medium); }
 .heading-small-medium { font: var(--heading-small-medium); }

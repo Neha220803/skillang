@@ -22,8 +22,8 @@
   .custom-card {
     /* width: 90%;  */
     height: 230px !important;
-    padding: 10 !important; /* Set padding to 0 for mobile */
-        width: 320px !important;
+    padding: 10 !important; 
+        width: 305px !important;
   }
 }
 

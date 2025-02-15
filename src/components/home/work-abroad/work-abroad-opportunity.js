@@ -6,16 +6,16 @@ import 'slick-carousel/slick/slick-theme.css';
 import '../../../App.css';
 import './work-abroad-opportunity.css';
 import '../../../index.css';
-import work1 from '../../../images/home/work-opp-1.png';
-import work2 from '../../../images/home/work-opp-2.png';
-import work3 from '../../../images/home/work-opp-3.png';
-import work4 from '../../../images/home/work-opp-4.svg';
-import work5 from '../../../images/home/work-opp-5.svg';
-import work6 from '../../../images/home/work-opp-6.svg';
-import work7 from '../../../images/home/work-opp-7.svg';
-import work8 from '../../../images/home/work-opp-8.svg'; 
-import work9 from '../../../images/home/work-opp-9.svg'; 
-import work10 from '../../../images/home/work-opp-10.svg'; 
+import work1 from '../../../assets/images/home/work-opp-1.png';
+import work2 from '../../../assets/images/home/work-opp-2.png';
+import work3 from '../../../assets/images/home/work-opp-3.png';
+import work4 from '../../../assets/images/home/work-opp-4.svg';
+import work5 from '../../../assets/images/home/work-opp-5.svg';
+import work6 from '../../../assets/images/home/work-opp-6.svg';
+import work7 from '../../../assets/images/home/work-opp-7.svg';
+import work8 from '../../../assets/images/home/work-opp-8.svg'; 
+import work9 from '../../../assets/images/home/work-opp-9.svg'; 
+import work10 from '../../../assets/images/home/work-opp-10.svg'; 
 
 const primCardData = [
   { title: "Nursing and Health care", img: work1, color: "#E5ECF9" },

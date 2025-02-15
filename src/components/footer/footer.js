@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../../images/logo-3.svg";
+import logo from "../../assets/images/logo-3.svg";
 import { Container, Col, Row, Image } from "react-bootstrap";
 import { FaPhone, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import './footer.css';
-import footerimg from '../../images/home/footer-img.png';
+import footerimg from '../../assets/images/home/footer-img.png';
 import '../../index.css';
 import '../../App.css';
 

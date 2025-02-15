@@ -54,7 +54,7 @@
 .gl:hover { color: #ff0000; }
 
 .footer-bg {
-  background-image: url('../../images/home/footer-bg.png');
+  background-image: url('../../assets/images/home/footer-bg.png');
   background-size: cover;
   background-position: center;
   padding: 20px;

@@ -5,7 +5,7 @@
   import "../../../index.css";
   import "./home-header.css";
   import "../../../App.css";
-  import headerbg from "../../../images/home/header-bg1.svg";
+  import headerbg from "../../../assets/images/home/header-bg1.svg";
   import successSound from '../../../assets/sounds/success.mp3';
   import errorSound from '../../../assets/sounds/rejected.mp3';
 

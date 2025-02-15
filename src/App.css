@@ -7,6 +7,11 @@
   font-style: normal;
 } */
 
+input.form-control, select.form-select {
+  border-radius: 8px !important;
+  border: 1px solid #D0D5DD !important;
+}
+
 section {
   min-height: 100vh !important;
   /* padding: 0 2rem !important; */

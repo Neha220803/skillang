@@ -3,7 +3,7 @@ import "../home-page.css";
 import "../../../index.css";
 import './partner.css';
 import { Container, Row, Col, Image } from "react-bootstrap";
-import partnerImg from '../../../images/home/partner-img.png';
+import partnerImg from '../../../assets/images/home/partner-img.png';
 
 const PartnerSection = () => {
   return (

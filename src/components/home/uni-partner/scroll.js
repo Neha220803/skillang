@@ -2,22 +2,22 @@ import React, { useEffect } from 'react';
 import '../home-page.css';
 import '../../../App.css';
 import './uni-partner.css';
-import uni1 from '../../../images/home/uni-1.png';
-import uni2 from '../../../images/home/uni-2.png';
-import uni3 from '../../../images/home/uni-3.png';
-import uni4 from '../../../images/home/uni-4.png';
-import uni5 from '../../../images/home/uni-5.png';
-import uni6 from '../../../images/home/uni-6.png';
-import uni7 from '../../../images/home/uni-7.png';
-import uni8 from '../../../images/home/uni-8.png';
-import uni9 from '../../../images/home/uni-9.png';
-import uni10 from '../../../images/home/uni-10.png';
-import uni11 from '../../../images/home/uni-11.png';
-import uni12 from '../../../images/home/uni-12.png';
-import uni13 from '../../../images/home/uni-13.png';
-import uni14 from '../../../images/home/uni-14.png';
-import uni15 from '../../../images/home/uni-15.png';
-import uni16 from '../../../images/home/uni-16.png';
+import uni1 from '../../../assets/images/home/uni-1.png';
+import uni2 from '../../../assets/images/home/uni-2.png';
+import uni3 from '../../../assets/images/home/uni-3.png';
+import uni4 from '../../../assets/images/home/uni-4.png';
+import uni5 from '../../../assets/images/home/uni-5.png';
+import uni6 from '../../../assets/images/home/uni-6.png';
+import uni7 from '../../../assets/images/home/uni-7.png';
+import uni8 from '../../../assets/images/home/uni-8.png';
+import uni9 from '../../../assets/images/home/uni-9.png';
+import uni10 from '../../../assets/images/home/uni-10.png';
+import uni11 from '../../../assets/images/home/uni-11.png';
+import uni12 from '../../../assets/images/home/uni-12.png';
+import uni13 from '../../../assets/images/home/uni-13.png';
+import uni14 from '../../../assets/images/home/uni-14.png';
+import uni15 from '../../../assets/images/home/uni-15.png';
+import uni16 from '../../../assets/images/home/uni-16.png';
 
 
 const ScrollEle = () => {

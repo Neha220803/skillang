@@ -1,10 +1,9 @@
 import React from "react";
-import loanImg from "../../../images/home/loan-img.png";
+import loanImg from "../../../assets/images/home/loan-img.png";
 import {
   Container,
   Col,
   Row,
-  Card,
   Image,
 } from "react-bootstrap";
 import "../home-page.css";

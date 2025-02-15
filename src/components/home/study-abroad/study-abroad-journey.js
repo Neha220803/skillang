@@ -6,15 +6,15 @@
   import '../../../App.css';
   import '../home-page.css';
   import './study-abroad-journey.css';
-  import work1 from "../../../images/home/s-journey-1.svg";
-  import work2 from "../../../images/home/s-journey-2.svg";
-  import work3 from "../../../images/home/s-journey-3.svg";
-  import work4 from "../../../images/home/s-journey-4.svg";
-  import work5 from "../../../images/home/s-journey-5.svg";
-  import work6 from "../../../images/home/s-journey-6.svg";
-  import work7 from "../../../images/home/s-journey-7.svg";
-  import work8 from "../../../images/home/s-journey-8.svg";
-  import work9 from "../../../images/home/s-journey-9.svg";
+  import work1 from "../../../assets/images/home/s-journey-1.svg";
+  import work2 from "../../../assets/images/home/s-journey-2.svg";
+  import work3 from "../../../assets/images/home/s-journey-3.svg";
+  import work4 from "../../../assets/images/home/s-journey-4.svg";
+  import work5 from "../../../assets/images/home/s-journey-5.svg";
+  import work6 from "../../../assets/images/home/s-journey-6.svg";
+  import work7 from "../../../assets/images/home/s-journey-7.svg";
+  import work8 from "../../../assets/images/home/s-journey-8.svg";
+  import work9 from "../../../assets/images/home/s-journey-9.svg";
 
   const cardData = [
     { title: "Explore Universities and Courses", desc: "Experts guide you based on interests and background. Recommendations tailored to fit your budget.", img: work1, color: "#F7F7F2" },

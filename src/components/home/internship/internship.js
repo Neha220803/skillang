@@ -12,14 +12,14 @@ import "../../../App.css";
 import "./internship.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import intern1 from "../../../images/home/intern-1.svg";
-import intern2 from "../../../images/home/intern-2.svg";
-import intern3 from "../../../images/home/intern-3.svg";
-import intern4 from "../../../images/home/intern-4.svg";
-import intern5 from "../../../images/home/intern-5.svg";
-import intern6 from "../../../images/home/intern-6.svg";
-import intern7 from "../../../images/home/intern-7.svg";
-import intern8 from "../../../images/home/intern-8.svg";
+import intern1 from "../../../assets/images/home/intern-1.svg";
+import intern2 from "../../../assets/images/home/intern-2.svg";
+import intern3 from "../../../assets/images/home/intern-3.svg";
+import intern4 from "../../../assets/images/home/intern-4.svg";
+import intern5 from "../../../assets/images/home/intern-5.svg";
+import intern6 from "../../../assets/images/home/intern-6.svg";
+import intern7 from "../../../assets/images/home/intern-7.svg";
+import intern8 from "../../../assets/images/home/intern-8.svg";
 
 const internCardData = [
   { title: "Job Oriented free study", img: intern1, desc: "No or minimal fee charged for the Ausbildung program in germany." },

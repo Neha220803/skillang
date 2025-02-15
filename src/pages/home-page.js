@@ -1,5 +1,4 @@
 import React from "react";
-import HomeHeader from "../components/home/header/home-header";
 import GlobalOprtunity from "../components/home/global-opp/global-opportunity";
 import WorkAbroadOpportunity from "../components/home/work-abroad/work-abroad-opportunity";
 import WorkAbroadJourney from "../components/home/work-abroad-journey";
