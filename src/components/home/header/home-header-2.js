@@ -89,7 +89,7 @@ const HomeHeader2 = () => {
         setOtpVisible(true);
         setResendDisabled(true);
         setCountdown(30);
-        setStatus("🔔 OTP has been sent to your mobile!");
+        setStatus("📩 OTP has been sent to your mail!");
         setToastVariant("info");
         setShowToast(true);
         return;
@@ -114,17 +114,29 @@ const HomeHeader2 = () => {
     setOtp(e.target.value);
   };
 
-  const handleVerifyOtp = () => {
-    if (otp.trim() === "1234") {
-      setIsOtpVerified(true);
-      setStatus("✅ OTP verified successfully! You can now proceed.");
-      setToastVariant("success");
-    } else {
-      setStatus("❌ Invalid OTP. Please check and enter the correct OTP.");
+  const handleVerifyOtp = async () => {
+    try {
+      const response = await axios.post(`https://skillang.com/api/verify-otp`, {
+        email: formData.email,
+        otp: otp.trim(),
+      });
+
+      if (response.data.success) {
+        setIsOtpVerified(true);
+        setStatus("✅ OTP verified successfully!");
+        setToastVariant("success");
+      } else {
+        setStatus("❌ Invalid OTP. Please check and enter the correct OTP.");
+        setToastVariant("danger");
+      }
+    } catch (error) {
+      console.error("❌ Error verifying OTP:", error);
+      setStatus("❌ Error verifying OTP. Please try again.");
       setToastVariant("danger");
     }
     setShowToast(true);
   };
+
 
   const handleResendOtp = () => {
     setStatus("🔁 OTP resent successfully!");
@@ -141,28 +153,19 @@ const HomeHeader2 = () => {
       [name]: value,
     }));
   };
-
   const sendFormData = async () => {
     const payload = {
-      ...formData,
-      dateTime: new Date().toISOString(), // Send current date and time
+      email: formData.email,
     };
 
     try {
-      const response = await axios.post("http://localhost:3001/submit-inquiry", payload);
+      const response = await axios.post(`https://skillang.com/api/send-otp`, payload);
       setStatus(response.data.message);
       setToastVariant("success");
       setShowToast(true);
-
-      // Reset form after successful submission
-      setFormData({ name: "", email: "", number: "", pinCode: "", lookingFor: "" });
-      setOtp("");
-      setOtpVisible(false);
-      setIsOtpVerified(false);
-      setValidated(false);
     } catch (error) {
-      console.error("❌ Error submitting inquiry:", error);
-      setStatus("❌ Error submitting inquiry. Please try again.");
+      console.error("❌ Error sending OTP:", error);
+      setStatus("❌ Error sending OTP. Please try again.");
       setToastVariant("danger");
       setShowToast(true);
     }
@@ -212,7 +215,7 @@ const HomeHeader2 = () => {
                   {otpVisible && (
                     <Row className="mb-3">
                       <Col lg={8}>
-                        <Form.Control type="text" placeholder="Enter OTP" value={otp} onChange={handleOtpChange} required />
+                        <Form.Control type="text" placeholder="Enter OTP-Send in mail" value={otp} onChange={handleOtpChange} required />
                         <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
                           🔔 Resend OTP {resendDisabled ? `(${countdown}s)` : ""}
                         </div>
