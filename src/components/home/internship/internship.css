@@ -18,8 +18,8 @@
 @media (max-width: 640px) {
 
   .intern-card{
-    width: 300px !important;
-    height: 135px !important;
+    width: 280px !important;
+    height: 160px !important;
   }
 
 }
@@ -63,6 +63,8 @@
 
 .internship-slider-wrapper {
   width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
 
 }
 
@@ -85,7 +87,7 @@
 
 .slick-slide {
   display: inline-block !important; /* Ensures each slide respects variable width */
-   margin: 0 -5px !important; /* Reduce spacing between slides */
+   margin: 0 -6px !important; /* Reduce spacing between slides */
 }
 
 .slick-prev:before, 
