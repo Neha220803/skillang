@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 
@@ -14,7 +15,9 @@
   border-radius: 12px !important;
   justify-content:space-evenly !important;
   overflow: hidden !important;
+  border-radius: 12px !important;
 }
+
 
 img{
   padding: 0% !important;
@@ -26,22 +29,23 @@ img{
   background-color: #F8F8F8 !important;
   color: #5B5B5B !important;
   font-weight: 400 !important;
-  width: fit-content !important;
-  /* width: 100% !important; */
-  height: 140px !important;
+  /* width: fit-content !important; */
+  width: 275px !important;
+  height: 130px !important;
   position: relative; /* Required for positioning the circle */
   overflow: hidden !important;
   text-align: end !important;
   padding-left: 40px !important;
-  border-radius: 12px !important;
+  border-radius: 21px !important;
+  
 }
 
 .sec-card-icon-wrapper {
   position: absolute;
   top: -20px; 
   left: -20px; 
-  width: 130px; 
-  height: 130px; 
+  width: 125px; 
+  height: 125px; 
   background-color: #F2F2F9; 
   border-radius: 50%;
   /* border: 2px solid #E5ECF9;  */
@@ -54,6 +58,12 @@ img{
 .sec-card-text-wrapper{
   width: 65%;
   text-align: center !important;
+   white-space: normal !important;  /* Allows multi-word text to wrap */
+  word-wrap: break-word !important; /* Ensures long single words wrap */
+  overflow-wrap: break-word  !important; /* Alternative for better browser support */
+  text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
+  overflow: hidden  !important; /* Hides overflowing content */
+  display: block ; /* Ensures proper block behavior */
 }
 
 .sec-card-icon {
@@ -72,11 +82,13 @@ img{
     height: 100px !important;
     font-weight: 200 !important;
     font-size: 14px !important;
+    border-radius: 12px !important;
+    
   }
 
   .sec-card-icon-wrapper {
-    width: 80px !important;
-    height: 80px !important;
+    width: 75px !important;
+    height: 75px !important;
     padding: 14px !important;
   }
   .sec-card-text-wrapper {
@@ -89,26 +101,32 @@ img{
   .sec-card {
     flex-direction: column;
     align-items: center;
+    border-radius: 10px !important;
     padding: 15px;
    height: 60px !important;
    width: max-content !important;
-   min-width: 140px !important;
-   /* background-color: black !important; */
+   min-width: 120px !important;
+    max-width: 180px !important;
   }
   .sec-card-icon-wrapper {
     width: 60px;
     height: 60px;
   }
   .sec-card-text-wrapper {
-    width: 95% !important;
-    /* background-color: pink; */
+    width: 90% !important;
+    padding-left: 20px !important;
     font-size: 9px !important;
-     white-space: normal !important;  /* Allows multi-word text to wrap */
-  word-wrap: break-word !important; /* Ensures long single words wrap */
-  overflow-wrap: break-word  !important; /* Alternative for better browser support */
-  text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
-  overflow: hidden  !important; /* Hides overflowing content */
-  display: block ; /* Ensures proper block behavior */
+    white-space: normal !important;  /* Allows multi-word text to wrap */
+    word-wrap: break-word !important; /* Ensures long single words wrap */
+    overflow-wrap: break-word  !important; /* Alternative for better browser support */
+    text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
+    overflow: hidden  !important; /* Hides overflowing content */
+    display: block ; /* Ensures proper block behavior */
+  }
+
+  .inside-text{
+    font-size: 10px !important;
+
   }
 }
 

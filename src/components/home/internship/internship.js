@@ -33,7 +33,6 @@ const internCardData = [
 ];
 
 const sliderSettings = {
-  dots: true,
   infinite: false,
   speed: 500,
   slidesToShow: 2,
@@ -41,6 +40,7 @@ const sliderSettings = {
       swipeToSlide: true, // Allows users to swipe freely
     variableWidth: true, // Allows cards to have variable widths and move naturally
   arrows: true,
+  dots: false,
   responsive: [
     {
       breakpoint: 1024,
@@ -48,7 +48,7 @@ const sliderSettings = {
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+        dots: false,
       },
     },
     {
@@ -76,15 +76,15 @@ const InternshipSection = () => {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center py-5">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-lg-4 mb-md-4 mb-1 text-center ">
+        <Row className="mb-lg-4 mb-md-4  text-center ">
           <h1>Ausbildung (internship) Program in Germany</h1>
         </Row>
 
        <Row className="internship-slider-wrapper">
   <Slider {...sliderSettings}>
     {internCardData.map((card, index) => (
-      <div key={index} className="intern-card-wrapper">  {/* Changed from Col to div */}
-        <Card className="intern-card d-flex flex-row border-0">
+      <div key={index} className="intern-card-wrapper">
+        <Card className="intern-card d-flex flex-row border-0 ms-1">
           <div className="intern-card-icon-wrapper">
             <img src={card.img} alt="Icon" className="intern-card-icon" />
           </div>
@@ -101,7 +101,7 @@ const InternshipSection = () => {
 </Row>
         <Row>
           <button
-            className="btn-primary-outline mt-4"
+            className="btn-primary-outline mt-lg-4 mt-md-4"
             onClick={() => {
               window.scrollTo({
                 top: 0,

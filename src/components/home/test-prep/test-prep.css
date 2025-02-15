@@ -1,12 +1,21 @@
 .test-prep-card{
     background-color: #F9EDE7 !important;
     width: 100% !important;
-    padding: 3.5% 2.77% !important;
+    padding: 15px 10px !important;
     min-height: 90px !important;
     max-height: 200px !important;
+    height: 160px !important;
+    width: 180px !important;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none !important;
     border-radius: 24px !important;
+}
+
+@media (max-width: 640px) {
+    .test-prep-card{
+        height: 60px !important;
+        padding: 18px !important;
+    }
 }

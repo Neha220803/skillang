@@ -38,8 +38,8 @@ const WorkAbroadOpportunity = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 2,
+    slidesToScroll: 1,
     swipeToSlide: true, // Allows users to swipe freely
     variableWidth: true, // Allows cards to have variable widths and move naturally
     arrows:true,
@@ -93,12 +93,12 @@ const WorkAbroadOpportunity = () => {
           <Slider {...sliderSettings}>
             {secCardData.map((card, index) => (
               <div key={index} className='px-2'>
-                <Card className='sec-card d-flex flex-row border-0'>
+                <Card className='sec-card d-flex flex-row border-0 ms-4'>
                   <div className="sec-card-icon-wrapper">
                     <img src={card.img} alt="Icon" className="sec-card-icon" />
                   </div>
-                  <CardBody className='d-flex flex-column justify-content-center align-items-end'>
-                    <CardTitle className='sec-card-text-wrapper'>{card.title}</CardTitle>
+                  <CardBody className='d-flex flex-column justify-content-center align-items-end sec-card-text-wrapper'>
+                    <CardTitle className='inside-text'>{card.title}</CardTitle>
                   </CardBody>
                 </Card>
               </div>
@@ -107,7 +107,7 @@ const WorkAbroadOpportunity = () => {
         </Row>
 
         <Row>
-          <button className='btn-primary-outline mt-py-5 mt-3' onClick={() => {
+          <button className='btn-primary-outline mt-py-5 mt-2' onClick={() => {
               window.scrollTo({
                 top: 0,
                 behavior: 'smooth',

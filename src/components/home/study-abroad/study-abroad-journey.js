@@ -33,7 +33,7 @@
       dots: true,
       infinite: false,
       speed: 500,
-      swipeToSlide: true,
+      
       swipe: true,
       arrows: true,
       slidesToShow: 2,
@@ -102,8 +102,8 @@
           ))}
         </Slider>
 
-        <div className="text-center mt-4">
-           <button className="btn btn-primary-outline mt-4 " onClick={() => {
+        <div className="text-center mt-3">
+           <button className="btn btn-primary-outline  " onClick={() => {
                 window.scrollTo({
                   top: 0,
                   behavior: 'smooth',
