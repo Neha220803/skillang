@@ -97,11 +97,8 @@ function CustomNavbar() {
               });
               setExpanded(false);
             }}>Contact Us</button>
-
           </div>
-          
         </Navbar.Collapse>
-       
       </Container>
     </Navbar>
   );
