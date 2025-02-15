@@ -65,6 +65,29 @@
   letter-spacing: 3px;
 }
 
+.otp-input,
+.verify-otp-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.resend-enabled {
+  color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+/* .resend-enabled:hover {
+  text-decoration: underline;
+} */
+
+.resend-disabled {
+  color: grey;
+  cursor: default;
+}
+
+
 /*2nd header*/
 
 /* Background Container */
