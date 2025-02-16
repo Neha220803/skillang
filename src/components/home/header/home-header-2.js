@@ -50,7 +50,7 @@ const HomeHeader2 = () => {
   const [resendDisabled, setResendDisabled] = useState(true);
   const [countdown, setCountdown] = useState(30);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
-
+const [isOtpSent, setIsOtpSent] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -78,37 +78,53 @@ const HomeHeader2 = () => {
   }, [resendDisabled, otpVisible]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
+  e.preventDefault();
+  const form = e.currentTarget;
 
-    if (form.checkValidity() === false) {
-      e.stopPropagation();
-    } else {
-      if (!otpVisible) {
-        // Step 1: Show OTP field
-        setOtpVisible(true);
-        setResendDisabled(true);
-        setCountdown(30);
-        setStatus("📩 OTP has been sent to your mail!");
-        setToastVariant("info");
-        setShowToast(true);
-        return;
-      }
-
-      if (!isOtpVerified) {
-        // Step 2: OTP must be verified before submission
-        setStatus("❌ Please verify the OTP before submitting.");
-        setToastVariant("danger");
-        setShowToast(true);
-        return;
-      }
-
-      // Step 3: Send the data if OTP is verified
+  if (form.checkValidity() === false) {
+    e.stopPropagation();
+  } else {
+    if (!isOtpSent) {
+      // Step 1: Send OTP only once
       sendFormData();
+      setOtpVisible(true);
+      setResendDisabled(true);
+      setCountdown(30);
+      setIsOtpSent(true);
+      setStatus("📩 OTP has been sent to your mail!");
+      setToastVariant("info");
+      setShowToast(true);
+      return;
     }
 
-    setValidated(true);
-  };
+    if (!isOtpVerified) {
+      // Step 2: Ensure OTP is verified before proceeding
+      setStatus("❌ Please verify the OTP before submitting.");
+      setToastVariant("danger");
+      setShowToast(true);
+      return;
+    }
+
+    // Step 3: If OTP is verified, submit the inquiry
+    submitInquiry();
+  }
+
+  setValidated(true);
+};
+
+const submitInquiry = async () => {
+  try {
+    const response = await axios.post(`https://skillang.com/api/submit-inquiry`, formData);
+    setStatus(response.data.message || "✅ Inquiry submitted successfully!");
+    setToastVariant("success");
+    setShowToast(true);
+  } catch (error) {
+    console.error("❌ Error submitting inquiry:", error);
+    setStatus("❌ Error submitting inquiry. Please try again.");
+    setToastVariant("danger");
+    setShowToast(true);
+  }
+};
 
   const handleOtpChange = (e) => {
     setOtp(e.target.value);
