@@ -7,7 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const LandingNavBar = () => {
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont">
-      <Container className="d-flex align-items-center">
+      <Container className="d-flex align-items-center justify-content-between">
         {/* Logo on the left */}
         <Navbar.Brand>
           <Image src={logo} className="navbar-logo" />

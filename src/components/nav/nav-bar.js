@@ -57,7 +57,7 @@ function CustomNavbar() {
 
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
-      <Container className="d-flex align-items-center">
+      <Container className="d-flex align-items-center ">
          
         <Navbar.Brand href={`${BASE_PATH}/#home`} onClick={(e) => handleScroll('home', e)}>
          <Image src={logo} className="navbar-logo" />  
@@ -66,7 +66,7 @@ function CustomNavbar() {
 
        
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-          <Nav className="mx-auto d-flex align-items-center">
+          <Nav className="mx-auto d-flex align-items-center  ">
             {[
               { id: 'home', label: 'Home' },
               { id: 'work-abroad', label: 'Nursing' },
@@ -88,7 +88,7 @@ function CustomNavbar() {
         </div>
          
           </Nav>
-          <div className='mx-auto align-items-center justify-content-center text-center my-2'>
+          <div className='ms-auto align-items-center justify-content-center text-center my-2'>
 
             <button className="btn-primary-outline "  onClick={() => {
               window.scrollTo({
@@ -98,6 +98,7 @@ function CustomNavbar() {
               setExpanded(false);
             }}>Contact Us</button>
           </div>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
