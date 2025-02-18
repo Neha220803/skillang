@@ -50,14 +50,15 @@ const HomeHeader2 = () => {
   const [resendDisabled, setResendDisabled] = useState(true);
   const [countdown, setCountdown] = useState(30);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
-const [isOtpSent, setIsOtpSent] = useState(false);
+  const [isOtpSent, setIsOtpSent] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    number: "",
-    pinCode: "",
+    phone: "", // ✅ Corrected key to match backend
+    pincode: "",
     lookingFor: "",
   });
+
 
   // Countdown logic for Resend OTP
   useEffect(() => {
@@ -78,53 +79,83 @@ const [isOtpSent, setIsOtpSent] = useState(false);
   }, [resendDisabled, otpVisible]);
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  const form = e.currentTarget;
+    e.preventDefault();
+    const form = e.currentTarget;
 
-  if (form.checkValidity() === false) {
-    e.stopPropagation();
-  } else {
-    if (!isOtpSent) {
-      // Step 1: Send OTP only once
-      sendFormData();
-      setOtpVisible(true);
-      setResendDisabled(true);
-      setCountdown(30);
-      setIsOtpSent(true);
-      setStatus("📩 OTP has been sent to your mail!");
-      setToastVariant("info");
-      setShowToast(true);
-      return;
+    if (form.checkValidity() === false) {
+      e.stopPropagation();
+    } else {
+      if (!isOtpSent) {
+        // Step 1: Send OTP only once
+        sendFormData();
+        setOtpVisible(true);
+        setResendDisabled(true);
+        setCountdown(30);
+        setIsOtpSent(true);
+        setStatus("📩 OTP has been sent to your mail!");
+        setToastVariant("info");
+        setShowToast(true);
+        return;
+      }
+
+      if (!isOtpVerified) {
+        // Step 2: Ensure OTP is verified before proceeding
+        setStatus("❌ Please verify the OTP before submitting.");
+        setToastVariant("danger");
+        setShowToast(true);
+        return;
+      }
+
+      // Step 3: If OTP is verified, submit the inquiry
+      submitInquiry();
     }
 
-    if (!isOtpVerified) {
-      // Step 2: Ensure OTP is verified before proceeding
-      setStatus("❌ Please verify the OTP before submitting.");
+    setValidated(true);
+  };
+
+  const submitInquiry = async () => {
+    try {
+      const requestData = {
+        name: formData.name,  // ✅ Match backend's expected field names
+        email: formData.email,
+        phone: formData.phone, // ✅ Use `phone` instead of `number`
+        pincode: formData.pincode,
+        lookingFor: formData.lookingFor,
+      };
+
+
+      console.log("📤 Sending request to Google Sheets with data:", requestData);
+
+      const response = await axios.post("https://skillang.com/api/submit-to-google-sheets", requestData, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      console.log("✅ Response received:", response.data);
+
+      setStatus(response.data.message || "✅ Inquiry submitted successfully!");
+      setToastVariant("success");
+      setShowToast(true);
+    } catch (error) {
+      console.error("❌ Error submitting inquiry:", error);
+
+      if (error.response) {
+        console.error("🔴 Server responded with:", error.response.data);
+        console.error("🔴 Status code:", error.response.status);
+        console.error("🔴 Headers:", error.response.headers);
+      } else if (error.request) {
+        console.error("🔴 No response received from the server:", error.request);
+      } else {
+        console.error("🔴 Request error:", error.message);
+      }
+
+      setStatus("❌ Error submitting inquiry. Please try again.");
       setToastVariant("danger");
       setShowToast(true);
-      return;
     }
+  };
 
-    // Step 3: If OTP is verified, submit the inquiry
-    submitInquiry();
-  }
-
-  setValidated(true);
-};
-
-const submitInquiry = async () => {
-  try {
-    const response = await axios.post(`https://skillang.com/api/submit-inquiry`, formData);
-    setStatus(response.data.message || "✅ Inquiry submitted successfully!");
-    setToastVariant("success");
-    setShowToast(true);
-  } catch (error) {
-    console.error("❌ Error submitting inquiry:", error);
-    setStatus("❌ Error submitting inquiry. Please try again.");
-    setToastVariant("danger");
-    setShowToast(true);
-  }
-};
 
   const handleOtpChange = (e) => {
     setOtp(e.target.value);
@@ -209,12 +240,12 @@ const submitInquiry = async () => {
                   <Row>
                     <Col md={6} className="mb-3">
                       <Form.Group controlId="formNumber">
-                        <Form.Control type="tel" placeholder="Mobile" name="number" value={formData.number} onChange={handleInputChange} required pattern="[0-9]{10}" />
+                        <Form.Control type="tel" placeholder="Mobile" name="phone" value={formData.phone} onChange={handleInputChange} required pattern="[0-9]{10}" />
                       </Form.Group>
                     </Col>
                     <Col md={6} className="mb-3">
-                      <Form.Group controlId="formPinCode">
-                        <Form.Control type="text" placeholder="Pin code" name="pinCode" value={formData.pinCode} onChange={handleInputChange} required pattern="[0-9]{6}" />
+                      <Form.Group controlId="formpincode">
+                        <Form.Control type="text" placeholder="Pin code" name="pincode" value={formData.pincode} onChange={handleInputChange} required pattern="[0-9]{6}" />
                       </Form.Group>
                     </Col>
                   </Row>
