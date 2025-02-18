@@ -116,13 +116,12 @@ const HomeHeader2 = () => {
   const submitInquiry = async () => {
     try {
       const requestData = {
-        name: formData.name,  // ✅ Match backend's expected field names
+        name: formData.name,
         email: formData.email,
-        phone: formData.phone, // ✅ Use `phone` instead of `number`
+        phone: formData.phone,
         pincode: formData.pincode,
         lookingFor: formData.lookingFor,
       };
-
 
       console.log("📤 Sending request to Google Sheets with data:", requestData);
 
@@ -137,24 +136,35 @@ const HomeHeader2 = () => {
       setStatus(response.data.message || "✅ Inquiry submitted successfully!");
       setToastVariant("success");
       setShowToast(true);
+
+      // ✅ Reset form fields after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        pincode: "",
+        lookingFor: "",
+      });
+
+      // ✅ Reset OTP-related states
+      setOtp("");
+      setIsOtpVerified(false);
+      setIsOtpSent(false);
+      setOtpVisible(false);
+
+      // ✅ Reset validation to prevent re-checking
+      setValidated(false);
+
     } catch (error) {
       console.error("❌ Error submitting inquiry:", error);
-
-      if (error.response) {
-        console.error("🔴 Server responded with:", error.response.data);
-        console.error("🔴 Status code:", error.response.status);
-        console.error("🔴 Headers:", error.response.headers);
-      } else if (error.request) {
-        console.error("🔴 No response received from the server:", error.request);
-      } else {
-        console.error("🔴 Request error:", error.message);
-      }
 
       setStatus("❌ Error submitting inquiry. Please try again.");
       setToastVariant("danger");
       setShowToast(true);
     }
   };
+
+
 
 
   const handleOtpChange = (e) => {
