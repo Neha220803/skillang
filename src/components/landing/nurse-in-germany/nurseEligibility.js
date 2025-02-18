@@ -16,18 +16,19 @@ const eligibilityData = [
 
 const NurseEligibility = () => {
   return (
-    <Container>
+    <div className='px-lg-5 px-2'>
+    <Container fluid>
       <Row>
-        <h2 className='subheading-small-medium text-content-primary text-center py-4'>
+        <div className='heading-small-medium text-content-primary text-center py-4 mb-5'>
           Eligibility
-        </h2>
+        </div>
       </Row>
       <Row>
         {eligibilityData.map((item, index) => (
-          <Col key={index} lg={3} md={3} sm={12} xs={12} className=''>
+          <Col key={index} lg={3} md={3} sm={12} xs={12} className='mb-4'>
             <Card className='nurse-eligible-cards'>
-              <CardImg src={item.img} alt={`Eligibility ${index + 1}`} />
-              <CardBody className='p-0'>
+              <CardImg src={item.img} alt={`Eligibility ${index + 1}`}  />
+              <CardBody className='p-0 mt-3'>
                 <div className='nurse-eligible-cards-text paragraph-small-medium text-content-secondary'>{item.text}</div>
               </CardBody>
             </Card>
@@ -35,6 +36,7 @@ const NurseEligibility = () => {
         ))}
       </Row>
     </Container>
+     </div>
   );
 };
 

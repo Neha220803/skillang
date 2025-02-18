@@ -27,7 +27,8 @@ function Layout() {
         <Route path="/lang-test-prep" element={<LangTestPage />} /> */}
       </Routes>
 
-      <FooterSection />
+      {location.pathname !== "/nursing-in-germany" && <FooterSection />}
+
     </>
   );
 }

@@ -17,7 +17,6 @@ const LandingNursePage = () => {
         <NurseEligibility />
         <WhyGermany />
         <NurseStats />
-        <BookShelf />
         <LandingFooter />
     </div>
   )

@@ -25,15 +25,15 @@ const WhyUsNurse = () => {
   ];
 
   return (
-    <section className="justify-conent-center align-items-start d-flex  pt-5">
-    <div className="why-us-nurse-bg mx-5 justify-conent-center align-items-center d-flex flex-column py-4 my-5">
+    <section className="justify-conent-center align-items-start d-flex  pt-lg-5">
+    <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column py-4 my-5">
       <h2 className="text-center text-white py-4">Why Choose Us?</h2>
       <div className="why-us-container">
         {services.map((service, index) => (
-          <Card key={index} className="why-us-card flex-row">
+          <Card key={index} className="why-us-card flex-row ">
             <Card.Img variant="top" src={service.img} />
-            <Card.Body>
-              <Card.Text>{service.text}</Card.Text>
+            <Card.Body className="d-flex align-items-center  justify-conent-center">
+              <Card.Text className="">{service.text}</Card.Text>
             </Card.Body>
           </Card>
         ))}

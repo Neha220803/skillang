@@ -1,8 +1,30 @@
 import React from 'react'
+import { Container, Row, Col, Image } from 'react-bootstrap'
+import nurseImg from '../../../assets/images/landing/nurse-img.png';
+import logo from "../../../assets/images/logo-3.svg";
+
 
 const LandingFooter = () => {
   return (
-    <div>LandingFooter</div>
+    <footer className='m-lg-5 m-2 py-3'>
+      <Container fluid className='footer-bg rounded-4 p-0 px-4 my-4'>
+        <Row className='align-items-center'>
+          <Col md={6} className="d-none d-md-block">
+          <Image fluid src={nurseImg} alt ="nurse Image" />
+          </Col>
+          <Col md={6} className="justify-content-start align-items-start text-start pe-5">
+          <div className='heading-small-medium my-4'>Gateway to Global Nursing Career</div>
+          <div><img src={logo} alt="Logo" className="mb-3 footer-logo" /></div>
+          <p>© 2025 All Rights Reserved, Skillang</p>
+
+          </Col>
+          <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-end align-items-end" style={{overflow:'hidden'}}>
+  <Image src={nurseImg} alt="nurse Image" style={{ height: '250px'}} />
+</Col>
+        </Row>
+      </Container>
+
+    </footer>
   )
 }
 

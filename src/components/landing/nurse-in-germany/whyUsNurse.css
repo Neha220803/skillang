@@ -50,3 +50,25 @@
   height: auto;
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  .why-us-card {
+    height: 45px !important;
+    padding: 8px 8px !important;
+    vertical-align: middle !important;
+  }
+
+  .why-us-card img {
+  width: 25px; /* Adjust image size */}
+
+  .why-us-nurse-bg::after {
+    content: "";  /* Required for pseudo-elements */
+    display: block; /* Ensure it takes up space */
+    height: 20px;
+    width: 100%;
+       border-bottom-left-radius: 50% 50px; /* Half-circle effect */
+    border-bottom-right-radius: 50% 50px; /* Half-circle effect */
+     bottom: -20px;
+}
+
+}

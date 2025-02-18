@@ -22,27 +22,24 @@ const WhyGermany = () => {
   ];
 
   return (
-    <Container>
-      <Row>
+    <div className='px-lg-5 px-2'>
+    <Container fluid className='py-lg-5 my-5'>
+      <Row className=''>
         {/* First Column: "Why Choose Germany?" */}
-        <Col md={4} lg={6} className="why-germany-bg text-white d-flex align-items-center justify-content-center text-center">
-          <h2>Why Choose Germany?</h2>
+        <Col md={4} lg={6} className="why-germany-bg text-white d-flex align-items-start justify-content-center py-4 text-center mb-4">
+          <div className='text-white heading-small-medium'>Why Choose Germany?</div>
         </Col>
 
         {/* Second Column: Two Cards per Row */}
         <Col md={8} lg={6}>
           <Row>
             {whyGer.map((service, index) => (
-              <Col key={index} md={6} className="mb-3">
-                <Card className="why-us-ger-card">
-                  <Row className="align-items-center">
-                    <Col  className='flex-row'>
-                      <CardImg src={service.img} alt={`Reason ${index + 1}`} className="p-2" />
+              <Col key={index} md={6} ms={6} xs={6} className="mb-3" >
+                <Card className="why-us-ger-card flex-row" style={{width:"100%"}}>
+                      <CardImg variant='top' src={service.img} alt={`Reason ${index + 1}`} className="" style={{height:"100%"}} />
                       <CardBody className='why-ger-text'>
                         <Card.Text className="paragraph-small-medium text-content-secondary ">{service.text}</Card.Text>
                       </CardBody>
-                    </Col>
-                  </Row>
                 </Card>
               </Col>
             ))}
@@ -50,6 +47,7 @@ const WhyGermany = () => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@
   --content-secondary: #4A5568 ;
 
 
-   --font-family: "Plus Jakarta Sans", sans-serif;
+   --font-family: "Plus Jakarta Sans" !important;
 
   /* Headings */
   --heading-big-medium: 500 60px/72px var(--font-family);
@@ -112,6 +112,10 @@
 }
 .text-content-secondary {
   color: var(--content-secondary);
+}
+
+.text-primary-inverse{
+  color: white;
 }
 
 
