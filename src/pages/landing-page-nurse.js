@@ -6,6 +6,7 @@ import NurseEligibility from '../components/landing/nurse-in-germany/nurseEligib
 import WhyGermany from '../components/landing/nurse-in-germany/whyGermany'
 import NurseStats from '../components/landing/nurse-in-germany/nurseStats'
 import LandingFooter from '../components/landing/landing-footer/landingFooter'
+import BookShelf from '../components/nursing/bookShelf'
 
 const LandingNursePage = () => {
   return (
@@ -16,6 +17,7 @@ const LandingNursePage = () => {
         <NurseEligibility />
         <WhyGermany />
         <NurseStats />
+        <BookShelf />
         <LandingFooter />
     </div>
   )

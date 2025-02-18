@@ -1,9 +1,41 @@
-import React from 'react'
+import React from 'react';
+import { Container, Row, Col, Card, CardImg, CardBody } from 'react-bootstrap';
+import eli1 from '../../../assets/images/landing/nurse-eli1.svg';
+import eli2 from '../../../assets/images/landing/nurse-eli2.svg';
+import eli3 from '../../../assets/images/landing/nurse-eli3.svg';
+import eli4 from '../../../assets/images/landing/nurse-eli4.svg';
+import '../../../index.css';
+import './nurseEligibility.css';
+
+const eligibilityData = [
+  { img: eli1, text: 'A recognized 3 years nursing diploma or Bachelor degree in nursing' },
+  { img: eli2, text: 'Language proficiency proof in German (usually B2 level) via any authorized institutes (GOETHE / TELC / ECL/ OSD).' },
+  { img: eli3, text: 'A valid nursing license from your home country. ' },
+  { img: eli4, text: 'A certificate of professional qualification recognition, which we help you to facilitate.' },
+];
 
 const NurseEligibility = () => {
   return (
-    <div>Nurse Eligibility Cards</div>
-  )
-}
+    <Container>
+      <Row>
+        <h2 className='subheading-small-medium text-content-primary text-center py-4'>
+          Eligibility
+        </h2>
+      </Row>
+      <Row>
+        {eligibilityData.map((item, index) => (
+          <Col key={index} lg={3} md={3} sm={12} xs={12} className=''>
+            <Card className='nurse-eligible-cards'>
+              <CardImg src={item.img} alt={`Eligibility ${index + 1}`} />
+              <CardBody className='p-0'>
+                <div className='nurse-eligible-cards-text paragraph-small-medium text-content-secondary'>{item.text}</div>
+              </CardBody>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
-export default NurseEligibility
+export default NurseEligibility;

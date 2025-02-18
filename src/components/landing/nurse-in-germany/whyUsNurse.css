@@ -37,12 +37,12 @@
 
 .why-us-card {
   width: fit-content !important; /* Set a fixed width for each card */
-  text-align: center;
+  text-align: center !important;
   padding: 8px 16px !important;
-  border-radius: 10px;
-  background-color: #222A39;
-  border: 1px solid #2E384B;
-  color: white;
+  border-radius: 10px !important;
+  background-color: #222A39 !important;
+  border: 1px solid #2E384B !important;
+  color: white !important;
 }
 
 .why-us-card img {

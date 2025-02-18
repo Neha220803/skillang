@@ -18,7 +18,7 @@
 
   /* Headings */
   --heading-big-medium: 500 60px/72px var(--font-family);
-  --heading-small-medium: 500 48px/56px var(--font-family);
+  --heading-small-medium: 500 48px/56px var(--font-family) !important;
 
   /* Subheadings */
   --subheading-big-regular: 400 32px/40px var(--font-family);
@@ -117,7 +117,7 @@
 
 /* Universal Typography Classes */
 .heading-big-medium { font: var(--heading-big-medium); }
-.heading-small-medium { font: var(--heading-small-medium); }
+.heading-small-medium { font: var(--heading-small-medium) !important; }
 
 .subheading-big-regular { font: var(--subheading-big-regular); }
 .subheading-big-medium { font: var(--subheading-big-medium); }
