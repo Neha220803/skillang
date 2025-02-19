@@ -1,6 +1,6 @@
-header{
+header {
   height: 100vh !important;
-  overflow: hidden !important ;
+  overflow: hidden !important;
   margin: 90px;
 }
 
@@ -8,19 +8,22 @@ header{
 .nurse-landing-card {
   height: 85vh !important;
   padding: 10px !important;
-  border: 1px solid  #DFE1E6;
+  border: 1px solid #DFE1E6;
   border-radius: 24px !important;
-  width:fit-content;
+  width: fit-content;
 }
 
 .nurse-img-carousel img {
-  height: 82vh !important;  /* Ensures consistent height */
-  object-fit: cover; /* Prevents image distortion */
+  height: 82vh !important;
+  /* Ensures consistent height */
+  object-fit: cover;
+  /* Prevents image distortion */
   width: 100% !important;
 }
 
 .nurse-img-carousel {
-  height: 82vh !important; /* Fixed height for carousel */
+  height: 82vh !important;
+  /* Fixed height for carousel */
   overflow: hidden;
   border-radius: 16px !important;
   width: 100% !important;
@@ -37,8 +40,9 @@ header{
   transition: all 0.3s ease-in-out;
   text-align: center;
   font-weight: 500;
-  width: fit-content !important ;
-   white-space: nowrap; /* Prevents text from wrapping */
+  width: fit-content !important;
+  white-space: nowrap;
+  /* Prevents text from wrapping */
 
 }
 
@@ -65,7 +69,8 @@ header{
 }
 
 .carousel-indicators .active {
-  width: 37px !important; /* Expanding the active dot */
+  width: 37px !important;
+  /* Expanding the active dot */
   height: 5px !important;
   border-radius: 0px !important;
   background-color: #E86E39 !important;
