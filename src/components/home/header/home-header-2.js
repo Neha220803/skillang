@@ -217,9 +217,9 @@ const HomeHeader2 = () => {
 
     try {
       const response = await axios.post(`https://skillang.com/api/send-otp`, payload);
-      setStatus(response.data.message);
-      setToastVariant("success");
-      setShowToast(true);
+      // setStatus(response.data.message);
+      // setToastVariant("success");
+      // setShowToast(true);
     } catch (error) {
       console.error("❌ Error sending OTP:", error);
       setStatus("❌ Error sending OTP. Please try again.");
@@ -229,8 +229,8 @@ const HomeHeader2 = () => {
   };
 
   return (
-    <header className="d-flex align-items-center justify-content-center pt-5" id="home">
-      <Container className="my-lg-0 mt-5">
+    <header className="d-flex align-items-center justify-content-center my-5 " id="home">
+      <Container className="my-lg-0">
         <Row className=""> {/* Remove gutter spacing */}
   <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
     <Image src={headerbg} fluid className="w-100 px-lg-2"  />

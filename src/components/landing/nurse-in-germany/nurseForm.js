@@ -193,7 +193,7 @@ const handleExperienceSelect = (option) => {
   };
 
   return (
-    <header>
+    <header className=''>
       <Container className="d-flex justify-content-center align-items-end">
         <Row className=" justify-content-center align-items-center">
           <Col lg={1}></Col>
