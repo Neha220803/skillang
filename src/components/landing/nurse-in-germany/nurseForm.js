@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container, Col,Card,Button, Row, Form, Image, Toast, ToastContainer } from "react-bootstrap";
+import { Container, Col,Card,Button, Row, Form, Image, Toast, ToastContainer, Carousel } from "react-bootstrap";
 import axios from "axios";
-import nurseImage from "../../../assets/images/landing/nurse-1.png"; // Replace with your image path
+import nurseImage1 from "../../../assets/images/landing/nurse-1.png"; // Replace with your image path
+import nurseImage2 from "../../../assets/images/landing/nurse-2.png"; // Replace with your image path
+import nurseImage3 from "../../../assets/images/landing/nurse-3.png"; // Replace with your image path
 import "./nurseForm.css";
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
@@ -193,13 +195,38 @@ const handleExperienceSelect = (option) => {
   return (
     <header>
       <Container className="d-flex justify-content-center align-items-end">
-        <Row className="d-flex justify-content-center align-items-center">
+        <Row className=" justify-content-center align-items-center">
           <Col lg={1}></Col>
-          <Col lg={10} className="d-flex justify-content-center align-items-center">
+          <Col lg={10} className=" justify-content-center align-items-center">
             <div className=" nurse-landing-card">
-              <Row className=" d-flex justify-content-center align-items-center pb-5">
-                <Col md={6} className="d-flex justify-content-start align-items-center">
-                  <Image fluid  src={nurseImage} className="w-100" alt="Nurse" />
+              <Row className="  justify-content-center align-items-center pb-5">
+                <Col md={6} className="justify-content-start align-items-stretch">
+                  <div className="nurse-img-carousel">
+        
+                  <Carousel interval={3000} controls={false}>
+                    <Carousel.Item>
+                      <Image fluid src={nurseImage1}  alt="Slide 1" />
+                      <Carousel.Caption className=" ">
+                        <p>Free German Language Courses Tailored for International Nurses</p>
+                        
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                       <Image fluid src={nurseImage2}  alt="Slide 1" />
+                      <Carousel.Caption>
+                        <p>Access to online and in-person training options from highly qualified trainers</p>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                       <Image fluid src={nurseImage3}  alt="Slide 1" />
+                      <Carousel.Caption>
+                        <p>
+                          Flexible learning schedules to fit work commitments
+                        </p>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  </Carousel>
+                  </div>
                 </Col>
                 {/* Right Side - Form */}
                 <Col md={6} className="p-4 text-center ">

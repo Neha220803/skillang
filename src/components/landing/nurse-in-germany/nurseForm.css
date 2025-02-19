@@ -12,19 +12,28 @@ header{
   border-radius: 24px !important;
 }
 
-.nurse-landing-card img {
-  max-height: 82vh;
-  object-fit: cover;
-  border-radius: 24px !important;
-
+.nurse-img-carousel img {
+  height: 82vh !important;  /* Ensures consistent height */
+  object-fit: cover; /* Prevents image distortion */
+  width: 100% !important;
 }
+
+.nurse-img-carousel {
+  height: 82vh !important; /* Fixed height for carousel */
+  overflow: hidden;
+  border-radius: 16px !important;
+  width: 100% !important;
+}
+
+
+
 
 
 
 .experience-option {
   cursor: pointer;
   padding: 6px 12px;
-  border: 1px solid var(--content-secondary);
+  border: 1px solid #D0D5DD;
   border-radius: 12px;
   background-color: transparent;
   color: var(--content-secondary);
