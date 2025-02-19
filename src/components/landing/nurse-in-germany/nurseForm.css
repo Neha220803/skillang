@@ -56,17 +56,17 @@ header{
 
 
 .carousel-indicators [data-bs-target] {
-  width: 6px !important;
+  width: 10px !important;
   height: 5px !important;
-  border-radius: 50% !important;
+  /* border-radius: 50% !important; */
   background-color: white !important;
   border: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .carousel-indicators .active {
   width: 37px !important; /* Expanding the active dot */
   height: 5px !important;
-  border-radius: 12px !important;
-  background-color: #E86E39 !important; /* Active color */
+  border-radius: 0px !important;
+  background-color: #E86E39 !important;
 }
