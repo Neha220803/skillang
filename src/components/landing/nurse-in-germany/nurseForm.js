@@ -202,13 +202,11 @@ const handleExperienceSelect = (option) => {
               <Row className="  justify-content-center align-items-center pb-5">
                 <Col md={6} className="justify-content-start align-items-stretch">
                   <div className="nurse-img-carousel">
-        
-                  <Carousel interval={3000} controls={false}>
+                  <Carousel interval={2500} controls={false}>
                     <Carousel.Item>
                       <Image fluid src={nurseImage1}  alt="Slide 1" />
                       <Carousel.Caption className=" ">
                         <p>Free German Language Courses Tailored for International Nurses</p>
-                        
                       </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
