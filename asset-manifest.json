@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.12d80802.css",
-    "main.js": "/skillang/static/js/main.5b2d2808.js",
+    "main.css": "/skillang/static/css/main.b4780250.css",
+    "main.js": "/skillang/static/js/main.dcb99a5b.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.9a38863b324106658161818739779ea8.svg",
     "static/media/header-bg1.png": "/skillang/static/media/header-bg1.00523a41396ec6656cc5.png",
@@ -9,7 +9,9 @@
     "static/media/loan-img.png": "/skillang/static/media/loan-img.db83039f71c9d193b210.png",
     "static/media/intern-7.svg": "/skillang/static/media/intern-7.edd3d2af2f1c18c135bd8c28c980a4a4.svg",
     "static/media/partner-img.png": "/skillang/static/media/partner-img.ffbf34802679fcbfacb2.png",
+    "static/media/nurse-2.png": "/skillang/static/media/nurse-2.2b7c3af9372a8a7be7d1.png",
     "static/media/nurse-1.png": "/skillang/static/media/nurse-1.17d4cf53fbc294d4fd54.png",
+    "static/media/nurse-3.png": "/skillang/static/media/nurse-3.9d64ba345352620f451d.png",
     "static/media/s-journey-9.svg": "/skillang/static/media/s-journey-9.2ee9c31265e3b0c7d428e3d0c29ade78.svg",
     "static/media/s-journey-7.svg": "/skillang/static/media/s-journey-7.8a6315d0d57d914624f045e7b3ad7114.svg",
     "static/media/s-journey-6.svg": "/skillang/static/media/s-journey-6.dcf14bdda1075bcc55f6ab5a6c014dbc.svg",
@@ -95,11 +97,11 @@
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "index.html": "/skillang/index.html",
-    "main.12d80802.css.map": "/skillang/static/css/main.12d80802.css.map",
-    "main.5b2d2808.js.map": "/skillang/static/js/main.5b2d2808.js.map"
+    "main.b4780250.css.map": "/skillang/static/css/main.b4780250.css.map",
+    "main.dcb99a5b.js.map": "/skillang/static/js/main.dcb99a5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.12d80802.css",
-    "static/js/main.5b2d2808.js"
+    "static/css/main.b4780250.css",
+    "static/js/main.dcb99a5b.js"
   ]
 }
