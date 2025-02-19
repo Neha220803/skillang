@@ -217,9 +217,7 @@ const NurseForm = () => {
 
     try {
       const response = await axios.post(`https://skillang.com/api/send-otp`, payload);
-      setStatus(response.data.message);
-      setToastVariant("success");
-      setShowToast(true);
+  
     } catch (error) {
       console.error("❌ Error sending OTP:", error);
       setStatus("❌ Error sending OTP. Please try again.");
@@ -229,43 +227,41 @@ const NurseForm = () => {
   };
 
   return (
-    <header>
-      <Container className="d-flex justify-content-center align-items-end ">
+    <header id="nurse-landing">
+      <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
         <Row className=" justify-content-center align-items-center ">
-          <Col lg={1}></Col>
-          <Col lg={10} className=" justify-content-center align-items-center">
-            <div className=" nurse-landing-card">
-              <Row className="  justify-content-center align-items-center pb-5">
-                <Col md={6} className="justify-content-start align-items-stretch">
+          <Col lg={1} className="d-none d-md-block"></Col>
+          <Col lg={10}  sm={12} xs={12} className=" justify-content-center align-items-center ">
+            <div className="nurse-landing-card">
+              <Row className=" d-flex justify-content-center align-items-center ">
+                <Col md={6} lg={6} sm={12} xs={12} className="justify-content-start align-items-center ">
                   <div className="nurse-img-carousel">
-                    <Carousel interval={2500} controls={false}>
+                    <Carousel interval={2500} controls={false} style={{ minHeight: "45vh" }}>
                       <Carousel.Item>
-                        <Image fluid src={nurseImage1} alt="Slide 1" width={600} height={400} />
-
-                        <Carousel.Caption className=" ">
+                        <Image fluid src={nurseImage1} alt="Slide 1" style={{ minHeight: "45vh", objectFit: "cover" }} />
+                        <Carousel.Caption>
                           <p>Free German Language Courses Tailored for International Nurses</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid src={nurseImage2} alt="Slide 1" />
+                        <Image fluid src={nurseImage2} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
                           <p>Access to online and in-person training options from highly qualified trainers</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid src={nurseImage3} alt="Slide 1" />
+                        <Image fluid src={nurseImage3} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
-                          <p>
-                            Flexible learning schedules to fit work commitments
-                          </p>
+                          <p>Flexible learning schedules to fit work commitments</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                     </Carousel>
+
                   </div>
                 </Col>
                 {/* Right Side - Form */}
-                <Col md={6} className="p-4 text-center ">
-                  <div className="subheading-big-medium text-content-primary my-2">Join the German Nurse Force</div>
+                <Col md={6} lg={6} sm={12} xs={12}  className="p-lg-4 p-2 text-center ">
+                  <div className="subheading-big-medium text-content-primary mt-2 my-lg-2">Join the German Nurse Force</div>
                   <div className="mb-3 paragraph-small-medium text-content-secondary py-2">Tell Us About Yourself!</div>
                   <Form validated={validated} onSubmit={handleSubmit}>
                     <Form.Group className="mb-3">
@@ -377,7 +373,7 @@ const NurseForm = () => {
               </Row>
             </div>
           </Col>
-          <Col lg={1}></Col>
+          <Col lg={1}  className="d-none d-md-block"></Col>
         </Row>
       </Container>
       <ToastContainer position="top-end" className="p-3">

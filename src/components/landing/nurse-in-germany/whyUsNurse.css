@@ -16,11 +16,11 @@
 .why-us-nurse-bg::after {
     content: "";  /* Required for pseudo-elements */
     display: block; /* Ensure it takes up space */
-    height: 100px;
+    height: 130px;
     width: 100%;
     background-color: #1A202C;
     position: absolute;
-    bottom: -100px; /* Position it below the parent */
+    bottom: -130px; /* Position it below the parent */
     left: 0;
        border-bottom-left-radius: 50% 80px; /* Half-circle effect */
     border-bottom-right-radius: 50% 80px; /* Half-circle effect */

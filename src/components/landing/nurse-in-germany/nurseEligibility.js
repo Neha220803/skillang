@@ -19,7 +19,7 @@ const NurseEligibility = () => {
     <div className='px-lg-5 px-2'>
     <Container>
       <Row>
-        <div className='heading-small-medium text-content-primary text-center py-4 mb-5'>
+        <div className='heading-small-medium text-content-primary text-center mt-lg-0 my-5'>
           Eligibility
         </div>
       </Row>
