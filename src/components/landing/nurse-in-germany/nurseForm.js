@@ -192,18 +192,17 @@ const handleExperienceSelect = (option) => {
 
   return (
     <header>
-      <Container className="d-flex justify-content-center align-items-end mt-5">
-        <Row className="d-flex justify-content-center align-items-center mt-5">
+      <Container className="d-flex justify-content-center align-items-end">
+        <Row className="d-flex justify-content-center align-items-center">
           <Col lg={1}></Col>
           <Col lg={10} className="d-flex justify-content-center align-items-center">
-            <Card className="p-2 rounded-4">
-              <Row className="g-0 d-flex justify-content-center align-items-center">
-                <Col md={6} className="position-relative">
-                  <Image fluid src={nurseImage} className="img-fluid rounded-4" alt="Nurse" />
+            <div className=" nurse-landing-card">
+              <Row className=" d-flex justify-content-center align-items-center pb-5">
+                <Col md={6} className="d-flex justify-content-start align-items-center">
+                  <Image fluid  src={nurseImage} className="w-100" alt="Nurse" />
                 </Col>
-
                 {/* Right Side - Form */}
-                <Col md={6} className="p-4 text-center">
+                <Col md={6} className="p-4 text-center ">
                   <div className="subheading-big-medium text-content-primary my-2">Join the German Nurse Force</div>
                   <div className="mb-3 paragraph-small-medium text-content-secondary py-2">Tell Us About Yourself!</div>
                   <Form validated={validated} onSubmit={handleSubmit}>
@@ -308,7 +307,7 @@ const handleExperienceSelect = (option) => {
                   </Form>
                 </Col>
               </Row>
-            </Card>
+            </div>
           </Col>
           <Col lg={1}></Col>
         </Row>
