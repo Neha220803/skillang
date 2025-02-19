@@ -96,7 +96,7 @@ const WorkAbroadJourney = () => {
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot style={{ backgroundColor: '#E86E39' }} />
-        {index !== timelineData.length - 1 && <TimelineConnector />} {/* Avoid connector after last dot */}
+        {index !== timelineData.length  && <TimelineConnector />} {/* Avoid connector after last dot */}
       </TimelineSeparator>
       <TimelineContent>
         <h3>{item.title}</h3>
@@ -106,6 +106,7 @@ const WorkAbroadJourney = () => {
         <p>{item.description}</p>
       </TimelineContent>
     </TimelineItem>
+    
     
   ))}
 </Timeline>

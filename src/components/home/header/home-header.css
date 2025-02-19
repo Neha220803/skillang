@@ -17,13 +17,9 @@
   width: 100%;
   max-width: 450px;
   text-align: center;
-
-  border-bottom: none !important;
-  border-left: none !important;
-    border-top: 10px solid transparent !important;
-    border-right: 4px solid transparent !important;
+    border: 2px solid transparent !important;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(to bottom left, #8484F0, white) border-box;
+                linear-gradient(to bottom left, #8484F0, #EFEFFF) border-box;
     border-radius: 32px; /* Optional for rounded corners */
     border-width: 4px;
     border-style: solid;

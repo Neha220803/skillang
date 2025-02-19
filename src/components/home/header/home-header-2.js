@@ -231,11 +231,12 @@ const HomeHeader2 = () => {
   return (
     <header className="d-flex align-items-center justify-content-center pt-5" id="home">
       <Container className="my-lg-0 mt-5">
-        <Row>
-          <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center">
-            <Image src={headerbg} fluid />
-          </Col>
-          <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-start">
+        <Row className=""> {/* Remove gutter spacing */}
+  <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
+    <Image src={headerbg} fluid className="w-100 px-lg-2"  />
+  </Col>
+
+          <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center">
             <Container className="d-flex align-items-start justify-content-center flex-column p-3">
               <div className="form-container">
                 <h3>Let's Connect to Explore More!</h3>
