@@ -17,7 +17,7 @@ const eligibilityData = [
 const NurseEligibility = () => {
   return (
     <div className='px-lg-5 px-2'>
-    <Container fluid>
+    <Container>
       <Row>
         <div className='heading-small-medium text-content-primary text-center py-4 mb-5'>
           Eligibility
