@@ -25,7 +25,7 @@ const WhyUsNurse = () => {
   ];
 
   return (
-    <section className="justify-conent-center align-items-start d-flex bg-primary">
+    <section className="justify-conent-center align-items-start d-flex">
     <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column my-5">
       <h2 className="text-center text-white py-4">Why Choose Us?</h2>
       <div className="why-us-container">
