@@ -229,16 +229,16 @@ const HomeHeader2 = () => {
   };
 
   return (
-    <header className="d-flex align-items-center justify-content-center my-5 " id="home">
+    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
       <Container className="my-lg-0">
-        <Row className=""> {/* Remove gutter spacing */}
+        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
   <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
     <Image src={headerbg} fluid className="w-100 px-lg-2"  />
   </Col>
 
-          <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center">
-            <Container className="d-flex align-items-start justify-content-center flex-column p-3">
-              <div className="form-container">
+          <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
+            <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
+              <div className="form-container m-0">
                 <h3>Let's Connect to Explore More!</h3>
                 <div className="mb-3">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>

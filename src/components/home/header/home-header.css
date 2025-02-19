@@ -26,6 +26,14 @@
 
 }
 
+
+@media (max-width: 640px) {
+  .form-container {
+    margin: 0 !important;
+  }
+
+}
+
 /* Form fields styling */
 .form-control,
 .form-container .form-select {
