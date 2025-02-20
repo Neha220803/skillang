@@ -76,3 +76,20 @@ header {
   border-radius: 0px !important;
   background-color: #E86E39 !important;
 }
+
+/* Position the carousel caption higher above the bottom */
+.nurse-img-carousel .carousel-caption {
+  position: absolute;
+  bottom: 120px;
+  /* Increase or decrease as needed */
+  left: 20px;
+  /* Adjust horizontal positioning if desired */
+  z-index: 10;
+  color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  /* Optional translucent background */
+  padding: 8px 12px;
+  /* Spacing around the text */
+  border-radius: 6px;
+  /* Rounded corners */
+}
