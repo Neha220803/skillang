@@ -41,9 +41,9 @@ const WhyGermany = () => {
                 >
                   <Card className="why-us-ger-card flex-row" style={{ width: "100%" }}>
                     <CardImg variant='top' src={service.img} alt={`Reason ${index + 1}`} />
-                    <CardBody className='why-ger-text'>
+                    <CardBody className='why-ger-body p-0'>
                       <Card.Text className="paragraph-small-medium text-content-secondary">
-                        <div className='paragraph-small-medium text-content-secondary'>{service.text}</div>
+                        <div className='paragraph-small-medium text-content-secondary why-ger-text'>{service.text}</div>
                       </Card.Text>
                     </CardBody>
                   </Card>
