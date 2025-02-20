@@ -8,6 +8,8 @@ import "../../../App.css";
 import headerbg from "../../../assets/images/home/header-bg1.svg";
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
+import useFormHandler from "../../../hooks/useFormHandler";
+
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -41,193 +43,29 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
 
 
 const HomeHeader2 = () => {
-  const [validated, setValidated] = useState(false);
-  const [otpVisible, setOtpVisible] = useState(false);
-  const [otp, setOtp] = useState("");
-  const [showToast, setShowToast] = useState(false);
-  const [toastVariant, setToastVariant] = useState("success");
-  const [status, setStatus] = useState("");
-  const [resendDisabled, setResendDisabled] = useState(true);
-  const [countdown, setCountdown] = useState(30);
-  const [isOtpVerified, setIsOtpVerified] = useState(false);
-  const [isOtpSent, setIsOtpSent] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "", // ✅ Corrected key to match backend
-    pincode: "",
-    lookingFor: "",
-  });
 
-
-  // Countdown logic for Resend OTP
-  useEffect(() => {
-    let timer;
-    if (resendDisabled && otpVisible) {
-      timer = setInterval(() => {
-        setCountdown((prev) => {
-          if (prev === 1) {
-            clearInterval(timer);
-            setResendDisabled(false);
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => clearInterval(timer);
-  }, [resendDisabled, otpVisible]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-
-    if (form.checkValidity() === false) {
-      e.stopPropagation();
-    } else {
-      if (!isOtpSent) {
-        // Step 1: Send OTP only once
-        sendFormData();
-        setOtpVisible(true);
-        setResendDisabled(true);
-        setCountdown(30);
-        setIsOtpSent(true);
-        setStatus("📩 OTP has been sent to your mail!");
-        setToastVariant("info");
-        setShowToast(true);
-        return;
-      }
-
-      if (!isOtpVerified) {
-        // Step 2: Ensure OTP is verified before proceeding
-        setStatus("❌ Please verify the OTP before submitting.");
-        setToastVariant("danger");
-        setShowToast(true);
-        return;
-      }
-
-      // Step 3: If OTP is verified, submit the inquiry
-      submitInquiry();
-    }
-
-    setValidated(true);
-  };
-
-  const submitInquiry = async () => {
-    try {
-      const requestData = {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        pincode: formData.pincode,
-        lookingFor: formData.lookingFor,
-      };
-
-      console.log("📤 Sending request to Google Sheets with data:", requestData);
-
-      const response = await axios.post("https://skillang.com/api/submit-to-google-sheets", requestData, {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
-
-      console.log("✅ Response received:", response.data);
-
-      setStatus(response.data.message || "✅ Inquiry submitted successfully!");
-      setToastVariant("success");
-      setShowToast(true);
-
-      // ✅ Reset form fields after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        pincode: "",
-        lookingFor: "",
-      });
-
-      // ✅ Reset OTP-related states
-      setOtp("");
-      setIsOtpVerified(false);
-      setIsOtpSent(false);
-      setOtpVisible(false);
-
-      // ✅ Reset validation to prevent re-checking
-      setValidated(false);
-
-    } catch (error) {
-      console.error("❌ Error submitting inquiry:", error);
-
-      setStatus("❌ Error submitting inquiry. Please try again.");
-      setToastVariant("danger");
-      setShowToast(true);
-    }
-  };
-
-
-
-
-  const handleOtpChange = (e) => {
-    setOtp(e.target.value);
-  };
-
-  const handleVerifyOtp = async () => {
-    try {
-      const response = await axios.post(`https://skillang.com/api/verify-otp`, {
-        email: formData.email,
-        otp: otp.trim(),
-      });
-
-      if (response.data.success) {
-        setIsOtpVerified(true);
-        setStatus("✅ OTP verified successfully!");
-        setToastVariant("success");
-      } else {
-        setStatus("❌ Invalid OTP. Please check and enter the correct OTP.");
-        setToastVariant("danger");
-      }
-    } catch (error) {
-      console.error("❌ Error verifying OTP:", error);
-      setStatus("❌ Error verifying OTP. Please try again.");
-      setToastVariant("danger");
-    }
-    setShowToast(true);
-  };
-
-
-  const handleResendOtp = () => {
-    setStatus("🔁 OTP resent successfully!");
-    setToastVariant("info");
-    setShowToast(true);
-    setResendDisabled(true);
-    setCountdown(30);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-  const sendFormData = async () => {
-    const payload = {
-      email: formData.email,
-      name: formData.name,
-    };
-
-    try {
-      const response = await axios.post(`https://skillang.com/api/send-otp`, payload);
-      // setStatus(response.data.message);
-      // setToastVariant("success");
-      // setShowToast(true);
-    } catch (error) {
-      console.error("❌ Error sending OTP:", error);
-      setStatus("❌ Error sending OTP. Please try again.");
-      setToastVariant("danger");
-      setShowToast(true);
-    }
-  };
+   const {
+    formData,
+    otp,
+    otpVisible,
+    showToast,
+    toastVariant,
+    status,
+    resendDisabled,
+    countdown,
+    isOtpVerified,
+    isOtpSent,
+    validated,
+    handleInputChange,
+    handleExperienceSelect,
+    handleSubmit,
+    handleOtpChange,
+    handleVerifyOtp,
+    handleResendOtp,
+    setOtp,
+    setShowToast,
+  } = useFormHandler();
+  formData.experience="Not Applicable (Home Page Form)"
 
   return (
     <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
@@ -257,7 +95,7 @@ const HomeHeader2 = () => {
                     </Col>
                     <Col md={6} className="mb-3">
                       <Form.Group controlId="formpincode">
-                        <Form.Control type="text" placeholder="Pin code" name="pincode" value={formData.pincode} onChange={handleInputChange} required pattern="[0-9]{6}" />
+                        <Form.Control type="tel" placeholder="Pin Code" name="pincode" value={formData.pincode} onChange={handleInputChange} required pattern="[0-9]{6}" />
                       </Form.Group>
                     </Col>
                   </Row>
@@ -274,7 +112,7 @@ const HomeHeader2 = () => {
                   {otpVisible && (
                     <Row className="mb-3">
                       <Col lg={8}>
-                        <Form.Control type="text" placeholder="Enter OTP-Send in mail" value={otp} onChange={handleOtpChange} required />
+                        <Form.Control type="text" placeholder="Enter OTP - Sent in mail" value={otp} onChange={handleOtpChange} required />
                         <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
                           🔔 Resend OTP {resendDisabled ? `(${countdown}s)` : ""}
                         </div>

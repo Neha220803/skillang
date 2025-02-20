@@ -8,6 +8,7 @@ import "./nurseForm.css";
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import '../../../index.css';
+import useFormHandler from "../../../hooks/useFormHandler";
 
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
@@ -42,190 +43,29 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
 
 
 const NurseForm = () => {
-  const [validated, setValidated] = useState(false);
-  const [otpVisible, setOtpVisible] = useState(false);
-  const [otp, setOtp] = useState("");
-  const [showToast, setShowToast] = useState(false);
-  const [toastVariant, setToastVariant] = useState("success");
-  const [status, setStatus] = useState("");
-  const [resendDisabled, setResendDisabled] = useState(true);
-  const [countdown, setCountdown] = useState(30);
-  const [isOtpVerified, setIsOtpVerified] = useState(false);
-  const [isOtpSent, setIsOtpSent] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    pincode: "",
-    lookingFor: "Nursing",
-    experience: ""
-  });
+   const {
+    formData,
+    otp,
+    otpVisible,
+    showToast,
+    toastVariant,
+    status,
+    resendDisabled,
+    countdown,
+    isOtpVerified,
+    isOtpSent,
+    validated,
+    handleInputChange,
+    handleExperienceSelect,
+    handleSubmit,
+    handleOtpChange,
+    handleVerifyOtp,
+    handleResendOtp,
+    setOtp,
+    setShowToast,
+  } = useFormHandler();
 
-  // Countdown logic for Resend OTP
-  useEffect(() => {
-    let timer;
-    if (resendDisabled && otpVisible) {
-      timer = setInterval(() => {
-        setCountdown((prev) => {
-          if (prev === 1) {
-            clearInterval(timer);
-            setResendDisabled(false);
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => clearInterval(timer);
-  }, [resendDisabled, otpVisible]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-
-    if (form.checkValidity() === false) {
-      e.stopPropagation();
-    } else {
-      if (!isOtpSent) {
-        sendFormData();
-        setOtpVisible(true);
-        setResendDisabled(true);
-        setCountdown(30);
-        setIsOtpSent(true);
-        setStatus("📩 OTP has been sent to your mail!");
-        setToastVariant("info");
-        setShowToast(true);
-        return;
-      }
-
-      if (!isOtpVerified) {
-        setStatus("❌ Please verify the OTP before submitting.");
-        setToastVariant("danger");
-        setShowToast(true);
-        return;
-      }
-      if (!formData.experience) {
-        setStatus("❌ Please select your experience level.");
-        setToastVariant("danger");
-        setShowToast(true);
-        return;
-      }
-
-
-      // Debugging: Check if experience is correctly assigned
-      console.log("Form Data:", formData);
-
-      submitInquiry();
-    }
-
-    setValidated(true);
-  };
-
-  const submitInquiry = async () => {
-    try {
-      const payload = { ...formData, experience: formData.experience };
-      const response = await axios.post(`https://skillang.com/api/submit-to-google-sheets`, payload);
-
-      setStatus(response.data.message || "✅ Inquiry submitted successfully!");
-      setToastVariant("success");
-      setShowToast(true);
-
-      // ✅ Delay clearing the form to allow toast to appear
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        pinCode: "",
-        lookingFor: "",
-        experience: "",
-      });
-
-      // ✅ Reset OTP-related states
-      setOtp("");
-      setIsOtpVerified(false);
-      setIsOtpSent(false);
-      setOtpVisible(false);
-
-      // ✅ Reset validation to prevent re-checking
-      setValidated(false);
-      // Delay for 2 seconds (adjust if needed)
-
-    } catch (error) {
-      console.error("❌ Error submitting inquiry:", error);
-      setStatus("❌ Error submitting inquiry. Please try again.");
-      setToastVariant("danger");
-      setShowToast(true);
-    }
-  };
-
-
-
-
-  const handleExperienceSelect = (value) => {
-    setFormData((prevState) => ({ ...prevState, experience: value }));
-  };
-
-
-  const handleOtpChange = (e) => {
-    setOtp(e.target.value);
-  };
-
-  const handleVerifyOtp = async () => {
-    try {
-      const response = await axios.post(`https://skillang.com/api/verify-otp`, {
-        email: formData.email,
-        otp: otp.trim(),
-      });
-
-      if (response.data.success) {
-        setIsOtpVerified(true);
-        setStatus("✅ OTP verified successfully!");
-        setToastVariant("success");
-      } else {
-        setStatus("❌ Invalid OTP. Please check and enter the correct OTP.");
-        setToastVariant("danger");
-      }
-    } catch (error) {
-      console.error("❌ Error verifying OTP:", error);
-      setStatus("❌ Error verifying OTP. Please try again.");
-      setToastVariant("danger");
-    }
-    setShowToast(true);
-  };
-
-
-  const handleResendOtp = () => {
-    setStatus("🔁 OTP resent successfully!");
-    setToastVariant("info");
-    setShowToast(true);
-    setResendDisabled(true);
-    setCountdown(30);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-  const sendFormData = async () => {
-    const payload = {
-      email: formData.email,
-      name: formData.name
-    };
-
-    try {
-      const response = await axios.post(`https://skillang.com/api/send-otp`, payload);
-  
-    } catch (error) {
-      console.error("❌ Error sending OTP:", error);
-      setStatus("❌ Error sending OTP. Please try again.");
-      setToastVariant("danger");
-      setShowToast(true);
-    }
-  };
+  formData.lookingFor="Nursing ";
 
   return (
     <header id="nurse-landing">
@@ -241,19 +81,19 @@ const NurseForm = () => {
                       <Carousel.Item>
                         <Image fluid src={nurseImage1} alt="Slide 1" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
-                          <p>Free German Language Courses Tailored for International Nurses</p>
+                          <div className="subheading-small-medium ">Free German Language Courses Tailored for International Nurses</div>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
                         <Image fluid src={nurseImage2} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
-                          <p>Access to online and in-person training options from highly qualified trainers</p>
+                          <div className="subheading-small-medium ">Access to online and in-person training options from highly qualified trainers</div>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
                         <Image fluid src={nurseImage3} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
-                        <Carousel.Caption>
-                          <p>Flexible learning schedules to fit work commitments</p>
+                        <Carousel.Caption className="">
+                          <div className="subheading-small-medium ">Flexible learning schedules to fit work commitments</div>
                         </Carousel.Caption>
                       </Carousel.Item>
                     </Carousel>
@@ -348,7 +188,7 @@ const NurseForm = () => {
                     {otpVisible && (
                       <Row className="mb-3">
                         <Col lg={8}>
-                          <Form.Control type="text" placeholder="Enter OTP-Send in mail" value={otp} onChange={handleOtpChange} required />
+                          <Form.Control type="text" placeholder="Enter OTP - Sent in mail" value={otp} onChange={handleOtpChange} required />
                           <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
                             🔔 Resend OTP {resendDisabled ? `(${countdown}s)` : ""}
                           </div>

@@ -12,13 +12,13 @@ const LandingFooter = () => {
           <Col md={6} className="d-none d-md-block">
             <Image fluid src={nurseImg} alt="nurse Image" />
           </Col>
-          <Col md={6} className="justify-content-start align-items-start text-start pe-5">
+          <Col md={6} sm={12} xs={12} className="justify-content-start align-items-start text-start pe-5">
             <div className='heading-small-medium my-4'>Gateway to Global Nursing Career</div>
             <div><img src={logo} alt="Logo" className="mb-3 footer-logo" /></div>
             <p>© 2025 All Rights Reserved, Skillang</p>
 
           </Col>
-          <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-end align-items-end" style={{ overflow: 'hidden' }}>
+          <Col sm={12} xs={12} className="d-block d-md-none ms-auto d-flex justify-content-end align-items-end" style={{ overflow: 'hidden' }}>
             <Image src={nurseImg} alt="nurse Image" style={{ height: '250px' }} />
           </Col>
         </Row>

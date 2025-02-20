@@ -37,7 +37,7 @@ const NurseStats = () => {
           <Col lg={2}>
             
           </Col>
-          <div className='caption-regular mt-4 text-content-secondary'>*Salaries may vary depending on region, experience, and specialization.</div>
+          <div className='caption-regular mt-4 text-content-secondary'>* Salaries may vary depending on region, experience, and specialization.</div>
       
         </Row>
       </Container>
