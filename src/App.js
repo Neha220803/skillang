@@ -8,30 +8,38 @@ import LangTestPage from "./pages/lang-test-page";
 import StudyAbroadPage from "./pages/study-abroad-page";
 import FooterSection from "./components/footer/footer";
 import LandingNursePage from "./pages/landing-page-nurse";
+import LandingStudyAbroadPage from "./pages/landing-page-study";
+import LandingWorkAbroadPage from "./pages/landing-page-work";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
 
+  const hideNavbarPaths = ["/nursing-in-germany", "/study-now-abroad", "/work-now-abroad"];
+
   return (
     <>
-      {/* Show Navbar only if not on Landing Page */}
-      {location.pathname !== "/nursing-in-germany" && <CustomNavbar />}
+      {/* Show Navbar only if not on specified Landing Pages */}
+      {!hideNavbarPaths.includes(location.pathname) && <CustomNavbar />}
 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/nursing-in-germany" element={<LandingNursePage />} />
+        <Route path="/study-now-abroad" element={<LandingStudyAbroadPage />} />
+        <Route path="/work-now-abroad" element={<LandingWorkAbroadPage />} />
+
         {/* <Route path="/nursing" element={<NursePage />} />
         <Route path="/work-abroad" element={<WorkAboradPage />} />
         <Route path="/study-abroad" element={<StudyAbroadPage />} />
         <Route path="/lang-test-prep" element={<LangTestPage />} /> */}
       </Routes>
 
-      {location.pathname !== "/nursing-in-germany" && <FooterSection />}
-
+      {/* Show Footer only if not on specified Landing Pages */}
+      {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}
     </>
   );
 }
+
 
 function App() {
   return (
