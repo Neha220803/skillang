@@ -213,6 +213,7 @@ const HomeHeader2 = () => {
   const sendFormData = async () => {
     const payload = {
       email: formData.email,
+      name: formData.name,
     };
 
     try {
