@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.f5effe1c.css",
-    "main.js": "/skillang/static/js/main.62353525.js",
+    "main.css": "/skillang/static/css/main.db1371be.css",
+    "main.js": "/skillang/static/js/main.f81e635d.js",
     "static/media/carousel-1.png": "/skillang/static/media/carousel-1.788b76eaa0f1c5b2e72b.png",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.9a38863b324106658161818739779ea8.svg",
     "static/media/header-bg1.png": "/skillang/static/media/header-bg1.00523a41396ec6656cc5.png",
@@ -61,7 +61,7 @@
     "static/media/uni-13.png": "/skillang/static/media/uni-13.e55f9246acaf041befab.png",
     "static/media/uni-12.png": "/skillang/static/media/uni-12.fba31db3adda74b1e7d3.png",
     "static/media/work-journey-4.svg": "/skillang/static/media/work-journey-4.7ba68c2f608c406d09eefb90365c8ad9.svg",
-    "static/media/stats-bg.png": "/skillang/static/media/stats-bg.772ac8ca22913ff6f5eb.png",
+    "static/media/stats-bg.png": "/skillang/static/media/stats-bg.cd3dcde22b0e2ffae1e2.png",
     "static/media/work-journey-6.svg": "/skillang/static/media/work-journey-6.f5d08500d2f1fa4b08217637b2304815.svg",
     "static/media/work-journey-2.svg": "/skillang/static/media/work-journey-2.1db51850bcd353330512d2c7496f2302.svg",
     "static/media/uni-8.png": "/skillang/static/media/uni-8.20a53114038d3795968b.png",
@@ -97,11 +97,11 @@
     "static/media/work-opp-8.svg": "/skillang/static/media/work-opp-8.dcf170dd418adc1d8d611efb3ecfe57f.svg",
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "index.html": "/skillang/index.html",
-    "main.f5effe1c.css.map": "/skillang/static/css/main.f5effe1c.css.map",
-    "main.62353525.js.map": "/skillang/static/js/main.62353525.js.map"
+    "main.db1371be.css.map": "/skillang/static/css/main.db1371be.css.map",
+    "main.f81e635d.js.map": "/skillang/static/js/main.f81e635d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5effe1c.css",
-    "static/js/main.62353525.js"
+    "static/css/main.db1371be.css",
+    "static/js/main.f81e635d.js"
   ]
 }
