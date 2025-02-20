@@ -9,6 +9,7 @@ import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import '../../../index.css';
 
+
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
     if (showToast) {
@@ -38,6 +39,7 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
     </Toast>
   );
 };
+
 
 const NurseForm = () => {
   const [validated, setValidated] = useState(false);
@@ -109,7 +111,10 @@ const NurseForm = () => {
         return;
       }
 
+
+      // Debugging: Check if experience is correctly assigned
       console.log("Form Data:", formData);
+
       submitInquiry();
     }
 
@@ -125,7 +130,8 @@ const NurseForm = () => {
       setToastVariant("success");
       setShowToast(true);
 
-      // Reset form data after submission
+      // ✅ Delay clearing the form to allow toast to appear
+
       setFormData({
         name: "",
         email: "",
@@ -135,12 +141,16 @@ const NurseForm = () => {
         experience: "",
       });
 
-      // Reset OTP-related states
+      // ✅ Reset OTP-related states
       setOtp("");
       setIsOtpVerified(false);
       setIsOtpSent(false);
       setOtpVisible(false);
+
+      // ✅ Reset validation to prevent re-checking
       setValidated(false);
+      // Delay for 2 seconds (adjust if needed)
+
     } catch (error) {
       console.error("❌ Error submitting inquiry:", error);
       setStatus("❌ Error submitting inquiry. Please try again.");
@@ -149,9 +159,13 @@ const NurseForm = () => {
     }
   };
 
+
+
+
   const handleExperienceSelect = (value) => {
     setFormData((prevState) => ({ ...prevState, experience: value }));
   };
+
 
   const handleOtpChange = (e) => {
     setOtp(e.target.value);
@@ -180,6 +194,7 @@ const NurseForm = () => {
     setShowToast(true);
   };
 
+
   const handleResendOtp = () => {
     setStatus("🔁 OTP resent successfully!");
     setToastVariant("info");
@@ -195,7 +210,6 @@ const NurseForm = () => {
       [name]: value,
     }));
   };
-
   const sendFormData = async () => {
     const payload = {
       email: formData.email,
@@ -203,9 +217,7 @@ const NurseForm = () => {
 
     try {
       const response = await axios.post(`https://skillang.com/api/send-otp`, payload);
-      setStatus(response.data.message);
-      setToastVariant("success");
-      setShowToast(true);
+  
     } catch (error) {
       console.error("❌ Error sending OTP:", error);
       setStatus("❌ Error sending OTP. Please try again.");
@@ -215,40 +227,41 @@ const NurseForm = () => {
   };
 
   return (
-    <header>
-      <Container className="d-flex justify-content-center align-items-end">
-        <Row className="justify-content-center align-items-center">
-          <Col lg={1}></Col>
-          <Col lg={10} className="justify-content-center align-items-center">
+    <header id="nurse-landing">
+      <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
+        <Row className=" justify-content-center align-items-center ">
+          <Col lg={1} className="d-none d-md-block"></Col>
+          <Col lg={10}  sm={12} xs={12} className=" justify-content-center align-items-center ">
             <div className="nurse-landing-card">
-              <Row className="justify-content-center align-items-center pb-5">
-                <Col md={6} className="justify-content-start align-items-stretch">
+              <Row className=" d-flex justify-content-center align-items-center ">
+                <Col md={6} lg={6} sm={12} xs={12} className="justify-content-start align-items-center ">
                   <div className="nurse-img-carousel">
-                    <Carousel interval={2500} controls={false}>
+                    <Carousel interval={2500} controls={false} style={{ minHeight: "45vh" }}>
                       <Carousel.Item>
-                        <Image fluid className="carousel-img" src={nurseImage1} alt="Slide 1" />
+                        <Image fluid src={nurseImage1} alt="Slide 1" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
                           <p>Free German Language Courses Tailored for International Nurses</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid className="carousel-img" src={nurseImage2} alt="Slide 2" />
+                        <Image fluid src={nurseImage2} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
                           <p>Access to online and in-person training options from highly qualified trainers</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid className="carousel-img" src={nurseImage3} alt="Slide 3" />
+                        <Image fluid src={nurseImage3} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
                           <p>Flexible learning schedules to fit work commitments</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                     </Carousel>
+
                   </div>
                 </Col>
                 {/* Right Side - Form */}
-                <Col md={6} className="p-4 text-center">
-                  <div className="subheading-big-medium text-content-primary my-2">Join the German Nurse Force</div>
+                <Col md={6} lg={6} sm={12} xs={12}  className="p-lg-4 p-2 text-center ">
+                  <div className="subheading-big-medium text-content-primary mt-2 my-lg-2">Join the German Nurse Force</div>
                   <div className="mb-3 paragraph-small-medium text-content-secondary py-2">Tell Us About Yourself!</div>
                   <Form validated={validated} onSubmit={handleSubmit}>
                     <Form.Group className="mb-3">
@@ -258,11 +271,10 @@ const NurseForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
-                        minLength={3}
-                        maxLength={40}
+                        // isInvalid={!!errors.name}
+                        required minLength={3} maxLength={40}
                       />
-                      <Form.Control.Feedback type="invalid" />
+                      <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group className="mb-3">
@@ -272,9 +284,10 @@ const NurseForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
+                        // isInvalid={!!errors.email}
                         required
                       />
-                      <Form.Control.Feedback type="invalid" />
+                      <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                     </Form.Group>
 
                     <Row>
@@ -286,10 +299,10 @@ const NurseForm = () => {
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            required
-                            pattern="[0-9]{10}"
+                            // isInvalid={!!errors.phone}
+                            required pattern="[0-9]{10}"
                           />
-                          <Form.Control.Feedback type="invalid" />
+                          <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                         </Form.Group>
                       </Col>
                       <Col lg={6} className="mb-3">
@@ -300,10 +313,10 @@ const NurseForm = () => {
                             name="pincode"
                             value={formData.pincode}
                             onChange={handleInputChange}
-                            required
-                            pattern="[0-9]{6}"
+                            // isInvalid={!!errors.pincode}
+                            required pattern="[0-9]{6}"
                           />
-                          <Form.Control.Feedback type="invalid" />
+                          <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                         </Form.Group>
                       </Col>
                     </Row>
@@ -334,13 +347,7 @@ const NurseForm = () => {
                     {otpVisible && (
                       <Row className="mb-3">
                         <Col lg={8}>
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter OTP - sent in mail"
-                            value={otp}
-                            onChange={handleOtpChange}
-                            required
-                          />
+                          <Form.Control type="text" placeholder="Enter OTP-Send in mail" value={otp} onChange={handleOtpChange} required />
                           <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
                             🔔 Resend OTP {resendDisabled ? `(${countdown}s)` : ""}
                           </div>
@@ -350,6 +357,7 @@ const NurseForm = () => {
                         </Col>
                       </Row>
                     )}
+
 
                     {/* Book Free Consultation Button */}
                     <Button variant="primary" className="w-100" type="submit">
@@ -365,7 +373,7 @@ const NurseForm = () => {
               </Row>
             </div>
           </Col>
-          <Col lg={1}></Col>
+          <Col lg={1}  className="d-none d-md-block"></Col>
         </Row>
       </Container>
       <ToastContainer position="top-end" className="p-3">
