@@ -5,6 +5,13 @@
   object-fit: contain; /* Ensures proper scaling */
 }
 
+@media (max-width: 768px){
+
+  .navbar-logo {
+    width: 100px !important;
+  }
+
+}
 
 .navcont {
   background-color: white !important;
