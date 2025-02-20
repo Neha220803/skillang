@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card , Row, Col, Container} from "react-bootstrap";
 import whynurse1 from "../../../assets/images/landing/whyus1.svg";
 import whynurse2 from "../../../assets/images/landing/whyus2.svg";
 import whynurse3 from "../../../assets/images/landing/whyus3.svg";
@@ -21,12 +21,13 @@ const WhyUsNurse = () => {
     { img: whynurse5, text: "Certification Support" },
     { img: whynurse6, text: "Visa Assistance" },
     { img: whynurse7, text: "Cultural Integration" },
-    { img: whynurse8, text: "Free German Language" },
     { img: whynurse9, text: "Relocation Services" },
+      { img: whynurse8, text: "Free German Language Training" },
   ];
 
   return (
-    <section className="justify-conent-center align-items-start d-flex">
+    <>
+    <section className="justify-conent-center align-items-start d-flex d-none d-md-block">
     <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column ">
       <div className="text-center heading-small-medium text-white py-lg-4 mb-4">Why Choose Us?</div>
       <div className="why-us-container">
@@ -43,6 +44,36 @@ const WhyUsNurse = () => {
     <div>
     </div>
     </section>
+
+    <div className="justify-content-center align-items-start d-flex d-block d-md-none">
+  <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-content-center align-items-center d-flex flex-column">
+    <div className="text-center heading-small-medium text-white py-lg-4 mb-4">Why Choose Us?</div>
+    <Container className="why-us-container">
+      <Row>
+        {services.map((service, index) => (
+          <Col
+            key={index}
+            xs={index === services.length - 1 ? 12 : 6} // Last card full width
+            md="auto"
+            className="d-flex justify-content-center align-items-center"
+          >
+            <Card className="why-us-card flex-row mb-2">
+              <Card.Img variant="top" src={service.img} />
+              <Card.Body className="d-flex align-items-center justify-content-center">
+                <Card.Text className="text-start why-us-text">{service.text}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  </div>
+</div>
+
+  
+
+    </>
+    
   );
 };
 

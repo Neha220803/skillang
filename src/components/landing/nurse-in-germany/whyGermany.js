@@ -24,7 +24,7 @@ const WhyGermany = () => {
   return (
     <div className='px-lg-5 px-2'>
       <Container className='py-lg-5 my-5'>
-        <Row>
+        <Row className=''>
           {/* First Column: "Why Choose Germany?" */}
           <Col md={4} lg={6} className="why-germany-bg text-white d-flex align-items-start justify-content-center py-4 text-center mb-4">
             <div className='text-white heading-small-medium'>Why Choose Germany?</div>
@@ -32,7 +32,7 @@ const WhyGermany = () => {
 
           {/* Second Column: Cards Layout */}
           <Col md={8} lg={6}>
-            <Row>
+            <Row >
               {whyGer.map((service, index) => (
                 <Col
                   key={index}
@@ -43,7 +43,7 @@ const WhyGermany = () => {
                     <CardImg variant='top' src={service.img} alt={`Reason ${index + 1}`} />
                     <CardBody className='why-ger-body p-0'>
                       <Card.Text className="paragraph-small-medium text-content-secondary">
-                        <div className='paragraph-small-medium text-content-secondary why-ger-text'>{service.text}</div>
+                        <div className='paragraph-small-medium text-content-secondary why-ger-text text-start'>{service.text}</div>
                       </Card.Text>
                     </CardBody>
                   </Card>

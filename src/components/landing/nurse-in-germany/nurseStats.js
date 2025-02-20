@@ -16,20 +16,20 @@ const NurseStats = () => {
             <div className='text-primary-inverse caption-medium'>Competitive Salaries</div>
           </div>
           <div className='subheading-small-medium text-content-secondary'>Before Recognition</div>
-          <div  className='d-flex align-items-end'>
+          <div  className=' align-items-end'>
              <div className='subheading-big-medium text-content-secondary me-1'>
             €2,200 - €2,400 PM
           </div>
-          <div className=''>+Benefits per month</div>
+          <div className='text-content-secondary'>+ Benefits per month</div>
 
           </div>
           
           </Col>
           <Col lg={5} sm={12} xs={12} className='d-flex flex-column align-items-start justify-content-end mt-4'>
           <div className='subheading-small-medium text-content-secondary'>After Recognition</div>
-          <div style={{color:'#4F8AFB'}} className='d-flex align-items-end'>
+          <div style={{color:'#4F8AFB'}} className=' align-items-end'>
              <div className='subheading-big-medium' >€3,200 - €3,400 PM</div>
-          <div className='text-content-secondary'>+Benefits per month</div>
+          <div >+ Benefits per month</div>
 
           </div>
          
@@ -37,7 +37,7 @@ const NurseStats = () => {
           <Col lg={2}>
             
           </Col>
-          <div className='caption-regular mt-4'>*Salaries may vary depending on region, experience, and specialization.</div>
+          <div className='caption-regular mt-4 text-content-secondary'>*Salaries may vary depending on region, experience, and specialization.</div>
       
         </Row>
       </Container>
