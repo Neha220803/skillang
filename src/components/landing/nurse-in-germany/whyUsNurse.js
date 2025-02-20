@@ -10,6 +10,7 @@ import whynurse7 from "../../../assets/images/landing/whyus7.svg";
 import whynurse8 from "../../../assets/images/landing/whyus8.svg";
 import whynurse9 from "../../../assets/images/landing/whyus9.svg";
 import "./whyUsNurse.css"; // Import the CSS file
+import '../../../index.css';
 
 const WhyUsNurse = () => {
   const services = [
@@ -26,8 +27,8 @@ const WhyUsNurse = () => {
 
   return (
     <section className="justify-conent-center align-items-start d-flex">
-    <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column my-5">
-      <h2 className="text-center text-white py-4">Why Choose Us?</h2>
+    <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column ">
+      <div className="text-center heading-small-medium text-white py-lg-4 mb-4">Why Choose Us?</div>
       <div className="why-us-container">
         {services.map((service, index) => (
           <Card key={index} className="why-us-card flex-row ">

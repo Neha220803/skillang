@@ -6,6 +6,8 @@
   background-color: #F8FAFF !important;
   border: 1px solid #C4D8FE !important;
   color: black !important;
+
+
 }
 
 .why-germany-bg{
@@ -21,4 +23,22 @@
   white-space: nowrap;  /* Prevent text from wrapping */
   overflow: hidden;  /* Hide overflow */
   text-overflow: ellipsis;  /* Add '...' if text overflows */
+}
+
+@media (max-width: 768px) {
+  .why-us-ger-card {
+  font-size: 12px !important;
+  white-space: normal !important;
+
+}
+.tryy{
+  font-size: 12px !important;
+margin: 0 !important;
+padding: 0 !important;
+
+
+}
+
+
+
 }

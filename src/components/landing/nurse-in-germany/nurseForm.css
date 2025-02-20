@@ -1,7 +1,8 @@
-header {
-  height: 100vh !important;
+#nurse-landing {
+  min-height: 100vh !important;
   overflow: hidden !important;
-  margin: 90px;
+  margin: 90px !important;
+  margin-bottom: 0 !important;
 }
 
 .nurse-landing-card {
@@ -10,9 +11,40 @@ header {
   border: 1px solid #DFE1E6;
   border-radius: 24px !important;
   width: fit-content;
+  height: 100% !important;
 }
 
+<<<<<<< HEAD
 /* Updated Carousel CSS */
+=======
+.nurse-img-carousel img {
+  height: 82vh !important;
+  /* Ensures consistent height */
+  object-fit: cover;
+  /* Prevents image distortion */
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .nurse-img-carousel {
+    max-height: 45vh; /* Limit height */
+    overflow: hidden;
+  }
+
+  .nurse-img-carousel img {
+    max-height: 45vh; /* Ensure images scale properly */
+    object-fit: cover; /* Crop instead of stretching */
+    width: 100%; /* Maintain width */
+  }
+
+   #nurse-landing{
+    margin: 0 !important;
+  }
+}
+
+
+
+>>>>>>> 11420e99ea940e291549d31e12eeccd6e2f9b89c
 .nurse-img-carousel {
   position: relative;
   height: 82vh !important;
