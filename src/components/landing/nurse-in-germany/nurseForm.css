@@ -4,7 +4,6 @@ header {
   margin: 90px;
 }
 
-
 .nurse-landing-card {
   height: 85vh !important;
   padding: 10px !important;
@@ -13,23 +12,35 @@ header {
   width: fit-content;
 }
 
-.nurse-img-carousel img {
-  height: 82vh !important;
-  /* Ensures consistent height */
-  object-fit: cover;
-  /* Prevents image distortion */
-  width: 100% !important;
-}
-
+/* Updated Carousel CSS */
 .nurse-img-carousel {
+  position: relative;
   height: 82vh !important;
-  /* Fixed height for carousel */
+  /* Fixed height for the carousel container */
   overflow: hidden;
   border-radius: 16px !important;
   width: 100% !important;
 }
 
+/* Force the inner carousel container to fill the parent height */
+.nurse-img-carousel .carousel-inner {
+  height: 100%;
+}
 
+/* Ensure each carousel item takes up the full height */
+.nurse-img-carousel .carousel-item {
+  height: 100%;
+}
+
+/* Apply fixed dimensions to all images inside the carousel */
+.nurse-img-carousel img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover;
+  /* This will cover the container without distorting the image */
+}
+
+/* Experience option styling */
 .experience-option {
   cursor: pointer;
   padding: 6px 12px;
@@ -42,8 +53,6 @@ header {
   font-weight: 500;
   width: fit-content !important;
   white-space: nowrap;
-  /* Prevents text from wrapping */
-
 }
 
 .experience-option.selected {
@@ -52,17 +61,10 @@ header {
   border-color: var(--secondary-variant);
 }
 
-/* .experience-option:hover {
-  border-color: var(--primary-variant);
-  color: var(--primary-variant);
-} */
-
-
-
+/* Carousel indicators styling */
 .carousel-indicators [data-bs-target] {
   width: 10px !important;
   height: 5px !important;
-  /* border-radius: 50% !important; */
   background-color: white !important;
   border: none;
   transition: all 0.3s ease-in-out;
@@ -70,7 +72,6 @@ header {
 
 .carousel-indicators .active {
   width: 37px !important;
-  /* Expanding the active dot */
   height: 5px !important;
   border-radius: 0px !important;
   background-color: #E86E39 !important;
