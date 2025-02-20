@@ -213,6 +213,7 @@ const NurseForm = () => {
   const sendFormData = async () => {
     const payload = {
       email: formData.email,
+      name: formData.name
     };
 
     try {
@@ -229,9 +230,9 @@ const NurseForm = () => {
   return (
     <header id="nurse-landing">
       <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
-        <Row className=" justify-content-center align-items-center ">
-          <Col lg={1} className="d-none d-md-block"></Col>
-          <Col lg={10}  sm={12} xs={12} className=" justify-content-center align-items-center ">
+        <Row className=" justify-content-center align-items-center  ">
+          <Col lg={1} md={1} className="d-none d-md-block "></Col>
+          <Col lg={10} md={10} sm={12} xs={12} className="d-flex justify-content-center align-items-center ">
             <div className="nurse-landing-card">
               <Row className=" d-flex justify-content-center align-items-center ">
                 <Col md={6} lg={6} sm={12} xs={12} className="justify-content-start align-items-center ">
@@ -373,7 +374,7 @@ const NurseForm = () => {
               </Row>
             </div>
           </Col>
-          <Col lg={1}  className="d-none d-md-block"></Col>
+          <Col lg={1} md={1} className="d-none d-md-block"></Col>
         </Row>
       </Container>
       <ToastContainer position="top-end" className="p-3">
