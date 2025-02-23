@@ -57,7 +57,6 @@ img{
 
 .sec-card-text-wrapper{
   width: 80% !important;
-  background-color: pink;
   text-align: center !important;
    white-space: normal !important;  /* Allows multi-word text to wrap */
   word-wrap: break-word !important; /* Ensures long single words wrap */
@@ -88,8 +87,8 @@ img{
   }
 
   .sec-card-icon-wrapper {
-    width: 75px !important;
-    height: 75px !important;
+    width: 100px !important;
+    height: 100px !important;
     padding: 14px !important;
   }
   .sec-card-text-wrapper {
@@ -110,14 +109,14 @@ img{
     max-width: 180px !important;
   }
   .sec-card-icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 70px !important;
+    height: 70px !important;
   }
   .sec-card-text-wrapper {
     width: 90% !important;
-    padding-left: 20px !important;
-    font-size: 9px !important;
-    white-space: normal !important;  /* Allows multi-word text to wrap */
+    /* padding-left: 5px !important; */
+    font-size: 8px !important;
+    white-space: normal !important;  
     word-wrap: break-word !important; /* Ensures long single words wrap */
     overflow-wrap: break-word  !important; /* Alternative for better browser support */
     text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
@@ -126,7 +125,14 @@ img{
   }
 
   .inside-text{
-    font-size: 10px !important;
+    font-size: 8px !important;
+    background-color: pink !important;
+     white-space: normal !important;  
+     width: 60px !important;
+    word-wrap: break-word !important; /* Ensures long single words wrap */
+    overflow-wrap: break-word  !important; /* Alternative for better browser support */
+    
+    
 
   }
 }

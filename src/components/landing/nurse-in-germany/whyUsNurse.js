@@ -14,6 +14,7 @@ import '../../../index.css';
 
 const WhyUsNurse = () => {
   const services = [
+    { img: whynurse8, text: "Free German Language Training" },
     { img: whynurse1, text: "Personalized Consultation" },
     { img: whynurse2, text: "Documentation Support" },
     { img: whynurse3, text: "Interview Preparation" },
@@ -22,7 +23,7 @@ const WhyUsNurse = () => {
     { img: whynurse6, text: "Visa Assistance" },
     { img: whynurse7, text: "Cultural Integration" },
     { img: whynurse9, text: "Relocation Services" },
-      { img: whynurse8, text: "Free German Language Training" },
+      
   ];
 
   return (
@@ -53,9 +54,9 @@ const WhyUsNurse = () => {
         {services.map((service, index) => (
           <Col
             key={index}
-            xs={index === services.length - 1 ? 12 : 6} // Last card full width
+            xs={index === 0 ? 12 : 6} // Last card full width
             md="auto"
-            className="d-flex justify-content-center align-items-center"
+            className="d-flex justify-content-center align-items-center px-3"
           >
             <Card className="why-us-card flex-row mb-2">
               <Card.Img variant="top" src={service.img} />
