@@ -56,7 +56,7 @@ const WhyUsNurse = () => {
             key={index}
             xs={index === 0 ? 12 : 6} // Last card full width
             md="auto"
-            className="d-flex justify-content-center align-items-center px-3"
+            className="d-flex justify-content-center align-items-center px-1"
           >
             <Card className="why-us-card flex-row mb-2">
               <Card.Img variant="top" src={service.img} />
