@@ -97,8 +97,11 @@ const WorkAbroadOpportunity = () => {
                   <div className="sec-card-icon-wrapper">
                     <img src={card.img} alt="Icon" className="sec-card-icon" />
                   </div>
-                  <CardBody className='d-flex flex-column justify-content-center align-items-end sec-card-text-wrapper'>
-                    <CardTitle className='inside-text'>{card.title}</CardTitle>
+                  <CardBody className='d-flex flex-column justify-content-center align-items-end '>
+                    <div className='sec-card-text-wrapper'>
+                       <CardTitle className='inside-text'>{card.title}</CardTitle>
+                    </div>
+                   
                   </CardBody>
                 </Card>
               </div>

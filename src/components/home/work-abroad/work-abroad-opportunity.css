@@ -56,7 +56,8 @@ img{
 }
 
 .sec-card-text-wrapper{
-  width: 65%;
+  width: 80% !important;
+  background-color: pink;
   text-align: center !important;
    white-space: normal !important;  /* Allows multi-word text to wrap */
   word-wrap: break-word !important; /* Ensures long single words wrap */
