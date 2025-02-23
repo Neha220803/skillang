@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Col, Button, Row, Form, Image, Toast, ToastContainer, Carousel } from "react-bootstrap";
 import axios from "axios";
-import nurseImage1 from "../../../assets/images/landing/nurse-1.png"; // Replace with your image path
-import nurseImage2 from "../../../assets/images/landing/nurse-2.png"; // Replace with your image path
-import nurseImage3 from "../../../assets/images/landing/nurse-3.png"; // Replace with your image path
-// import "./nurseForm.css";
+import workImage1 from "../../../assets/images/landing/work-1.png"; // Replace with your image path
+
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import '../../../index.css';
@@ -70,29 +68,29 @@ const WorkForm = () => {
     <header id="nurse-landing">
       <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
         <Row className=" justify-content-center align-items-center  ">
-          <Col lg={1} md={1} className="d-none d-md-block "></Col>
-          <Col lg={10} md={10} sm={12} xs={12} className="d-flex justify-content-center align-items-center ">
+          {/* <Col lg={1} md={1} className="d-none d-md-block "></Col> */}
+          <Col lg={12} md={12} sm={12} xs={12} className="d-flex justify-content-center align-items-center ">
             <div className="nurse-landing-card">
               <Row className=" d-flex justify-content-center align-items-center ">
                 <Col md={6} lg={6} sm={12} xs={12} className="justify-content-start align-items-center ">
                   <div className="nurse-img-carousel">
                     <Carousel interval={2500} controls={false} style={{ minHeight: "45vh" }}>
                       <Carousel.Item>
-                        <Image fluid src={nurseImage1} alt="Slide 1" style={{ minHeight: "45vh", objectFit: "cover" }} />
+                        <Image fluid src={workImage1} alt="Slide 1" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
-                          <p>Free German Language Courses Tailored for International Nurses</p>
+                          <p>One-to-One Visa Assistance</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid src={nurseImage2} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
+                        <Image fluid src={workImage1} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
-                          <p>Access to online and in-person training options from highly qualified trainers</p>
+                          <p>One-to-One Visa Assistance</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid src={nurseImage3} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
+                        <Image fluid src={workImage1} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
-                          <p>Flexible learning schedules to fit work commitments</p>
+                          <p>One-to-One Visa Assistance</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                     </Carousel>
@@ -201,7 +199,7 @@ const WorkForm = () => {
 
                     {/* Book Free Consultation Button */}
                     <Button variant="primary" className="w-100" type="submit">
-                      Book Free Consultation
+                      Book a Free Consultation
                     </Button>
 
                     {/* Terms and Privacy Policy */}
@@ -213,7 +211,7 @@ const WorkForm = () => {
               </Row>
             </div>
           </Col>
-          <Col lg={1} md={1} className="d-none d-md-block"></Col>
+          {/* <Col lg={1} md={1} className="d-none d-md-block"></Col> */}
         </Row>
       </Container>
       <ToastContainer position="top-end" className="p-3">
