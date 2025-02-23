@@ -11,6 +11,7 @@ import LandingNursePage from "./pages/landing-page-nurse";
 import LandingStudyAbroadPage from "./pages/landing-page-study";
 import LandingWorkAbroadPage from "./pages/landing-page-work";
 
+
 function Layout() {
   const location = useLocation(); // Now inside Router context
 
@@ -18,6 +19,7 @@ function Layout() {
 
   return (
     <>
+   
       {/* Show Navbar only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <CustomNavbar />}
 

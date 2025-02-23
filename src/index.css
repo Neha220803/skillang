@@ -285,31 +285,28 @@ body {
 
 @media (max-width: 768px) {
   .btn-primary, .btn-secondary, .btn-ghost, .btn-primary-outline, .btn-secondary, .btn-secondary-outline , .btn-bare:hover{
-    height: 38px !important;
+    height: 42px !important;
     font-size: 12px !important;
     padding: 0px 12px !important;
   }
 }
 
-
 /* Typography */
-
-
 /* For Webkit-based browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  /* background: #f1f1f1;  */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color); 
+  background: #DBD0FB !important; 
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8e71defb;
+  background: #AC92F5 !important;
 }
