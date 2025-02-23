@@ -126,7 +126,7 @@ img{
 
   .inside-text{
     font-size: 8px !important;
-    background-color: pink !important;
+    /* background-color: pink !important; */
      white-space: normal !important;  
      width: 60px !important;
     word-wrap: break-word !important; /* Ensures long single words wrap */
