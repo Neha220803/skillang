@@ -18,10 +18,13 @@ const NurseEligibility = () => {
   return (
     <div className='px-lg-5 px-2'>
     <Container>
-      <Row>
-        <div className='heading-small-medium text-content-primary text-center mt-lg-0 my-5'>
+      <Row className='mt-lg-0 my-5'>
+        <div className='heading-small-medium text-content-primary text-center mb-2'>
           Eligibility
         </div>
+        {/* <div className='paragraph-big-medium text-content-secondary text-center'>
+          To work as a nurse in Germany, you need
+        </div> */}
       </Row>
       <Row>
         {eligibilityData.map((item, index) => (
