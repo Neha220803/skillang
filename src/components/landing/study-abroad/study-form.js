@@ -95,7 +95,6 @@ formData.lookingFor="Study Aborad";
                         </Carousel.Caption>
                       </Carousel.Item>
                     </Carousel>
-
                   </div>
                 </Col>
                 {/* Right Side - Form */}
@@ -187,13 +186,13 @@ formData.lookingFor="Study Aborad";
                       <Form.Label>Country</Form.Label>
                       <div className="d-flex gap-2 flex-wrap">
                         {["USA", "UK", "Germany", "Australia", "Europe"].map((option, index) => (
-                          <div key={index} className={`experience-option ${formData.experience === option ? "selected" : ""}`}>
+                          <div key={index} className={`experience-option ${formData.county === option ? "selected" : ""}`}>
                             <input
                               type="radio"
                               id={`experience-${index}`}
                               name="experience"
                               value={option}
-                              checked={formData.experience === option}
+                              checked={formData.county === option}
                               onChange={(e) => handleExperienceSelect(e.target.value)}
                               hidden
                             />

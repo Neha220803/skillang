@@ -18,7 +18,8 @@ const useFormHandler = () => {
     phone: "",
     pincode: "",
     lookingFor: "",
-    experience: ""
+    experience: "",
+    county: ""
   });
 
   // Countdown logic for Resend OTP

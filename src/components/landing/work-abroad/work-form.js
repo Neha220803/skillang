@@ -63,6 +63,7 @@ const WorkForm = () => {
   } = useFormHandler();
 
   formData.lookingFor="Work Abroad";
+  formData.county="Not Applicable";
 
   return (
     <header className="d-flex justify-content-center align-items-center " >
