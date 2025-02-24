@@ -66,7 +66,7 @@ const StudyForm = () => {
 formData.lookingFor="Study Aborad"; 
   return (
     
-    <header className="d-flex justify-content-center align-items-center " >
+    <header className="d-flex justify-content-center align-items-center ">
       <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
         <Row className=" justify-content-center align-items-center mt-2 ">
           {/* <Col lg={1} md={1} className="d-none d-md-block "></Col> */}
