@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Container, Col, Button, Row, Form, Image, Toast, ToastContainer, Carousel } from "react-bootstrap";
 import axios from "axios";
 import studyImage1 from "../../../assets/images/landing/study-1.png"; // Replace with your image path
-
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import '../../../index.css';
 import useFormHandler from "../../../hooks/useFormHandler";
+import './study-form.css';
 
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
@@ -66,11 +66,11 @@ const StudyForm = () => {
 formData.lookingFor="Study Aborad"; 
   return (
     
-    <header id="nurse-landing">
+    <header className="d-flex justify-content-center align-items-center " >
       <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
-        <Row className=" justify-content-center align-items-center  ">
+        <Row className=" justify-content-center align-items-center mt-2 ">
           {/* <Col lg={1} md={1} className="d-none d-md-block "></Col> */}
-          <Col lg={12} md={12} sm={12} xs={12} className="d-flex justify-content-center align-items-center ">
+          <Col lg={12} md={12} sm={12} xs={12} className="d-flex justify-content-center align-items-center mt-lg-5">
             <div className="nurse-landing-card">
               <Row className=" d-flex justify-content-center align-items-center ">
                 <Col md={6} lg={6} sm={12} xs={12} className="justify-content-start align-items-center ">

@@ -22,7 +22,7 @@ const WhyUsNurse = () => {
     { img: whynurse5, text: "Certification Support" },
     { img: whynurse6, text: "Visa Assistance" },
     { img: whynurse7, text: "Cultural Integration" },
-    { img: whynurse9, text: "Relocation Services" },
+    { img: whynurse9, text: "Relocation assistance" },
       
   ];
 
@@ -31,7 +31,7 @@ const WhyUsNurse = () => {
     <section className="justify-conent-center align-items-start d-flex d-none d-md-block">
     <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column ">
       <div className="text-center heading-small-medium text-white py-lg-4 mb-4">Why Choose Us?</div>
-      <div className="why-us-container">
+      <div className="why-us-container px-1">
         {services.map((service, index) => (
           <Card key={index} className="why-us-card flex-row ">
             <Card.Img variant="top" src={service.img} />

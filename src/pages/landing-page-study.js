@@ -8,7 +8,7 @@ const LandingStudyAbroadPage = () => {
     <div>
         <LandingNavBar />
         <StudyForm />
-        <LandingFooter />
+        {/* <LandingFooter /> */}
     </div>
   )
 }

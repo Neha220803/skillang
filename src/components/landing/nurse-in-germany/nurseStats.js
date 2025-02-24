@@ -18,7 +18,7 @@ const NurseStats = () => {
           <div className='subheading-small-medium text-content-secondary'>Before Recognition</div>
           <div  className=' align-items-end'>
              <div className='subheading-big-medium text-content-secondary me-1'>
-            €2,200 - €2,400 PM
+            €2,200 - €2,950 PM
           </div>
           <div className='text-content-secondary'>+ Benefits per month</div>
 
@@ -28,7 +28,7 @@ const NurseStats = () => {
           <Col lg={5} sm={12} xs={12} className='d-flex flex-column align-items-start justify-content-end mt-4'>
           <div className='subheading-small-medium text-content-secondary'>After Recognition</div>
           <div style={{color:'#4F8AFB'}} className=' align-items-end'>
-             <div className='subheading-big-medium' >€3,200 - €3,400 PM</div>
+             <div className='subheading-big-medium' >€3,200 - €3,490 PM</div>
           <div >+ Benefits per month</div>
 
           </div>

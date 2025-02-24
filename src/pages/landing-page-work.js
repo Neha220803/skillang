@@ -8,7 +8,7 @@ const LandingWorkAbroadPage = () => {
     <div>
         <LandingNavBar />
 <WorkForm />
-        <LandingFooter />
+        {/* <LandingFooter /> */}
     </div>
   )
 }
