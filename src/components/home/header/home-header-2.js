@@ -66,6 +66,7 @@ const HomeHeader2 = () => {
     setShowToast,
   } = useFormHandler();
   formData.experience="Not Applicable (Home Page Form)"
+  formData.county="Not Applicable (Home Page Form)";
 
   return (
     <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">

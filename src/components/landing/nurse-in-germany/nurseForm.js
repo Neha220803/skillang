@@ -66,6 +66,7 @@ const NurseForm = () => {
   } = useFormHandler();
 
   formData.lookingFor="Nursing ";
+  formData.county="Germany";
 
   return (
     <header id="nurse-landing">
