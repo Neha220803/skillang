@@ -17,7 +17,7 @@ const FooterSection = () => {
             <Image fluid src={footerimg} />
           </Col>
           <Col md={6} className="justify-content-start align-items-start text-start">
-            <h1 className="my-4">Gateway to Global Education</h1>
+            <h1 className="my-4">Gateway to Global Career</h1>
             <img src={logo} alt="Logo" className="mb-3 footer-logo" />
             <p>© 2025 All Rights Reserved, Skillang</p>
           </Col>
