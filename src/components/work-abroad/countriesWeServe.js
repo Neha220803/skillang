@@ -36,14 +36,21 @@ const CountriesWeServe = () => {
 
                 {/* Scrollable container */}
                 <div
-                    className="d-flex overflow-auto pb-3"
-                    style={{
-                        scrollSnapType: "x mandatory",
-                        gap: "16px",
-                        whiteSpace: "nowrap",
-                        paddingBottom: "10px",
-                    }}
-                >
+    className="d-flex overflow-auto pb-3"
+    style={{
+        scrollSnapType: "x mandatory",
+        gap: "16px",
+        whiteSpace: "nowrap",
+        paddingBottom: "10px",
+        overflowX: "auto", // Enable horizontal scrolling
+        scrollbarWidth: "none", // Hide scrollbar in Firefox
+        msOverflowStyle: "none", // Hide scrollbar in Internet Explorer and Edge
+    }}
+    onScroll={(e) => {
+        e.target.style.WebkitOverflowScrolling = "touch"; // Smooth scrolling for iOS
+    }}
+>
+
                     {countries.map((country, index) => (
                         <Card
                             key={index}

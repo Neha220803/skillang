@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../../index.css'; // Ensure styling is applied
 import '../../components/work-abroad/skillShartage.css'
+import './skillShartage.css';
 
 const SkillShortage = () => {
     const [openIndex, setOpenIndex] = useState(1); // Default open item (Information Technology)
@@ -23,13 +24,13 @@ const SkillShortage = () => {
                 <Row>
                     {/* Left Side (Title & Description) */}
                     <Col lg={6} className="d-flex flex-column justify-content-center left-content">
-                        <h1 className="mb-3 text-white">Industries with Skill Shortages</h1>
+                        <div className="mb-3 text-white heading-big-medium ">Industries with Skill Shortages</div>
 
-                        <p>
+                        <div className='paragraph-small-regular '>
                             We focus on sectors with a high demand for skilled professionals,
                             increasing your chances of securing employment and a work visa.
                             Here are some primary industries we serve.
-                        </p>
+                        </div>
                     </Col>
 
                     {/* Right Side (Fixed Position for List) */}
