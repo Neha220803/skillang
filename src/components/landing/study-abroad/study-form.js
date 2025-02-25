@@ -64,6 +64,7 @@ const StudyForm = () => {
     setShowToast,
   } = useFormHandler();
 formData.lookingFor="Study Aborad"; 
+formData.origin="Study Abroad Landing Page Form";
   return (
     
     <header className="d-flex justify-content-center align-items-center ">

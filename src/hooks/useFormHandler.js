@@ -19,7 +19,8 @@ const useFormHandler = () => {
     pincode: "",
     lookingFor: "",
     experience: "",
-    county: ""
+    county: "",
+    origin:""
   });
 
   // Countdown logic for Resend OTP

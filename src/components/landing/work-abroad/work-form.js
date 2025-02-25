@@ -64,6 +64,7 @@ const WorkForm = () => {
 
   formData.lookingFor="Work Abroad";
   formData.county="Not Applicable";
+  formData.origin="Work Abroad Landing Page Form";
 
   return (
     <header className="d-flex justify-content-center align-items-center " >
