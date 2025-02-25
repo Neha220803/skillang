@@ -72,9 +72,9 @@ const WorkAbroadHeader = () => {
   formData.county = "Not Applicable (Home Page Form)";
   formData.origin = "Home Page Form";
   return (
-    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
+    <header className="d-flex align-items-center justify-content-center my-lg-4 m-0 px-2" id="home">
       <Container className="my-lg-0">
-        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
+        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-4"> {/* Remove gutter spacing */}
           <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
             <Image src={headerbg} fluid className="w-100 px-lg-4" />
           </Col>
@@ -103,24 +103,28 @@ const WorkAbroadHeader = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="mb-3" controlId="formExperience">
-                    <div className="mb-2">Select Experience</div>
-                    <div className="d-flex flex-wrap">
-                      {["Nursing", "Information Technology", "Hospitality", "Blue collared jobs"].map((experience) => (
-                        <button
-                          key={experience}
-                          type="button"
-                          className={`btn btn-outline-secondary m-1 ${formData.lookingFor === experience ? "btn-primary text-white" : ""}`}
-                          onClick={() => setFormData({ ...formData, lookingFor: experience })}
-                        >
-                          {experience}
-                        </button>
-                      ))}
-                    </div>
-                  </Form.Group>
-
-
-
+                  <Form.Group className="mb-3 text-start">
+                                        <Form.Label>Select Experience</Form.Label>
+                                        <div className="d-flex gap-2 flex-wrap">
+                                          {["Student", "Freshers", "0-1 Years", "1-3 Years", "3-5 Years", "5+ Years"].map((option, index) => (
+                                            <div key={index} className={`experience-option ${formData.experience === option ? "selected" : ""}`}>
+                                              <input
+                                                type="radio"
+                                                id={`experience-${index}`}
+                                                name="experience"
+                                                value={option}
+                                                checked={formData.experience === option}
+                                                onChange={(e) => handleExperienceSelect(e.target.value)}
+                                                hidden
+                                              />
+                                              <label htmlFor={`experience-${index}`} className="w-100">
+                                                {option}
+                                              </label>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      </Form.Group>
+                
                   {otpVisible && (
                     <Row className="mb-3">
                       <Col lg={8}>

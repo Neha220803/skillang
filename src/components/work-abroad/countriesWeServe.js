@@ -25,13 +25,13 @@ const countries = [
 
 const CountriesWeServe = () => {
     return (
-        <section className="bg-white py-5">
+        <div className=" py-5 my-5 d-flex align-items-center justify-content-center ">
             <Container>
                 <div className="text-center mb-4">
                     <h2 className="heading-small-medium text-content-primary">Countries We Serve</h2>
-                    <p className="paragraph-small-regular text-content-secondary">
+                    <div className="paragraph-small-regular text-content-secondary">
                         Each destination offers unique opportunities and challenges. We provide tailored guidance on job markets, salary expectations, cultural norms, and legal requirements for working abroad.
-                    </p>
+                    </div>
                 </div>
 
                 {/* Scrollable container */}
@@ -108,7 +108,7 @@ const CountriesWeServe = () => {
                     ))}
                 </div>
             </Container>
-        </section>
+        </div>
     );
 
 };
