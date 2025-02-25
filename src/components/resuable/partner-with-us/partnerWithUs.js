@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import  nursePartnerImg from '../../assets/images/nursing/nursePartner.png';
+import  nursePartnerImg from '../../../assets/images/nursing/nursePartner.png';
 
-const NursePartner = () => {
+const PartnerWithUsSection = () => {
   return (
     <div>
         <Container className='bg-primary text-white'>
@@ -31,4 +31,4 @@ const NursePartner = () => {
   )
 }
 
-export default NursePartner
+export default PartnerWithUsSection

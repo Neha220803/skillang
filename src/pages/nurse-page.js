@@ -13,7 +13,7 @@ import NurseStats from '../components/resuable/nurse-stats/nurseStats'
 import NurseEligibility from '../components/resuable/nurse-eligibility/nurseEligibility'
 import PermResidentSection from '../components/nursing/permResidentSection'
 import NurseCareerAdvSection from '../components/nursing/nurseCareerAdvSection'
-import NursePartner from '../components/nursing/nursePartner'
+import NursePartner from '../components/resuable/partner-with-us/partnerWithUs'
 
 const NursePage = () => {
   return (
