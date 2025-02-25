@@ -44,7 +44,7 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
 
 const HomeHeader2 = () => {
 
-   const {
+  const {
     formData,
     otp,
     otpVisible,
@@ -65,17 +65,17 @@ const HomeHeader2 = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  formData.experience="Not Applicable (Home Page Form)"
-  formData.county="Not Applicable (Home Page Form)";
-  formData.origin="Home Page Form";
+  formData.experience = "Not Applicable (Home Page Form)"
+  formData.county = "Not Applicable (Home Page Form)";
+  formData.origin = "Home Page Form";
 
   return (
     <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
-      <Container className="my-lg-0">
+      <Container className="my-lg-1">
         <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
-  <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
-    <Image src={headerbg} fluid className="w-100 px-lg-2" />
-  </Col>
+          <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
+            <Image src={headerbg} fluid className="w-100 px-lg-2" />
+          </Col>
 
           <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
             <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
