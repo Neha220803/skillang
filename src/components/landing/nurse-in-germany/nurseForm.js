@@ -95,7 +95,7 @@ const NurseForm = () => {
                       <Carousel.Item>
                         <Image fluid src={nurseImage3} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption className="">
-                          <div className="subheading-small-medium ">Flexible learning schedules to fit work commitments</div>
+                          <div className="subheading-small-regular">Flexible learning schedules to fit work commitments</div>
                         </Carousel.Caption>
                       </Carousel.Item>
                     </Carousel>

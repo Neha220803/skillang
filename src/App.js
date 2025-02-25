@@ -30,10 +30,10 @@ function Layout() {
         <Route path="/study-now-abroad" element={<LandingStudyAbroadPage />} />
         <Route path="/work-now-abroad" element={<LandingWorkAbroadPage />} />
 
-        {/* <Route path="/nursing" element={<NursePage />} />
+        <Route path="/nursing" element={<NursePage />} />
         <Route path="/work-abroad" element={<WorkAboradPage />} />
         <Route path="/study-abroad" element={<StudyAbroadPage />} />
-        <Route path="/lang-test-prep" element={<LangTestPage />} /> */}
+        <Route path="/lang-test-prep" element={<LangTestPage />} />
       </Routes>
 
       {/* Show Footer only if not on specified Landing Pages */}
