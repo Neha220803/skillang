@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card, CardTitle, CardText } from 'react-bootstrap';
-import nurseResi from '../../assets/images/nursing/resi.png';
+import nurseResi from '../../../assets/images/nursing/resi.png';
+import './permResidentSection.css';
 
 const benefits = [
   { title: 'Path to Permanent Residency', text: 'Nurses in Germany can apply for permanent residency after working for about five years, meeting language and integration requirements.' },
@@ -12,22 +13,22 @@ const benefits = [
 
 const PermResidentSection = () => {
   return (
-    <div className="bg-dark text-white p-5">
+    <div className="bg-dark text-white p-5 my-5">
       <Container>
         <Row className="mb-4">
           <Col lg={6}>
             <div className="heading-big-medium">Permanent Residency and Citizenship Pathways</div>
           </Col>
           <Col lg={6}>
-            <Image src={nurseResi} alt="Permanent Residency" className="w-100 h-100" />
+            <Image fluid src={nurseResi} alt="Permanent Residency" className="w-100 h-auto" />
           </Col>
         </Row>
-        <Row>
+        <Row className='row-equal-height'>
           {benefits.map((benefit, index) => (
             <Col key={index} lg={index < 3 ? 4 : 6} className="mb-4">
-              <Card className="p-3 shadow-sm">
-                <CardTitle>{benefit.title}</CardTitle>
-                <CardText>{benefit.text}</CardText>
+              <Card className="nurse-perm-card">
+                <CardTitle className='subheading-small-medium'>{benefit.title}</CardTitle>
+                <CardText className='paragraph-small-regular'>{benefit.text}</CardText>
               </Card>
             </Col>
           ))}

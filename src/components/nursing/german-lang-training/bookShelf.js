@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-bootstrap";
-import book1 from '../../assets/images/nursing/nurseBook1.png';
-import book2 from '../../assets/images/nursing/nurseBook2.png';
-import book3 from '../../assets/images/nursing/nurseBook3.png';
-import book4 from '../../assets/images/nursing/nurseBook4.png';
-import book5 from '../../assets/images/nursing/nurseBook5.png';
+import book1 from '../../../assets/images/nursing/nurseBook1.png';
+import book2 from '../../../assets/images/nursing/nurseBook2.png';
+import book3 from '../../../assets/images/nursing/nurseBook3.png';
+import book4 from '../../../assets/images/nursing/nurseBook4.png';
+import book5 from '../../../assets/images/nursing/nurseBook5.png';
 
 
 const BookShelf = () => {
@@ -59,7 +59,6 @@ const BookShelf = () => {
                     transformOrigin: 'right bottom',
                     opacity: activeIndex === index ? 1 : 0,
                     height: activeIndex === index ? 'auto' : 0,
-                    
                     overflow: 'hidden'
                   }}
                 >

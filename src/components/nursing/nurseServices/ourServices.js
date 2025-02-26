@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardText, CardTitle, Container, Image, Col, Row } from 'react-bootstrap';
-import nurseService from '../../assets/images/nursing/nurseService.png';
+import nurseService from '../../../assets/images/nursing/nurseService.png';
+import './ourServices.css';
 
 const services = [
   { title: 'Screening Process', text: 'Screening and checking the eligibility that matches the requirements.' },
@@ -12,24 +13,24 @@ const services = [
 
 const OurServices = () => {
   return (
-    <Container className="py-5 my-5">
-      <Row>
-        <Col md={6}>
-          <Image src={nurseService} alt="nurse" className="w-100 h-50" />
-          <div>
-            <div className="heading-big-medium">Our Services</div>
-            <div className="paragraph-big-medium">
+    <Container className="py-5 my-5 ">
+      <Row className='bg-primar'>
+        <Col md={8}>
+          <Image fluid src={nurseService} alt="nurse" className="w-100 h-auto" />
+          <div className='mt-2'>
+            <div className="heading-big-medium mb-1 text-content-primary">Our Services</div>
+            <div className="paragraph-big-medium text-content-tertiary">
               We offer tailored support for your study and work abroad journey, including career guidance, 
               visa assistance, documentation help, language prep, job placement, and relocation aid. 
               Our expert mentorship helps turn your international dreams into reality.
             </div>
           </div>
         </Col>
-        <Col md={6}>
+        <Col md={4}>
           {services.map((service, index) => (
-            <Card key={index} className="mb-3 p-3 shadow-sm">
-              <CardTitle>{service.title}</CardTitle>
-              <CardText>{service.text}</CardText>
+            <Card key={index} className="mt-4 nurse-serv-card">
+              <CardTitle className='subheading-small-medium'>{service.title}</CardTitle>
+              <CardText className='paragraph-small-medium text-content-secondary'>{service.text}</CardText>
             </Card>
           ))}
         </Col>
