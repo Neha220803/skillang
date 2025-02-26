@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import  nursePartnerImg from '../../../assets/images/nursing/nursePartner.png';
+import './partnerWithUs.css';
 
 const PartnerWithUsSection = () => {
   return (

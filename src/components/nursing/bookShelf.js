@@ -59,7 +59,6 @@ const BookShelf = () => {
                     transformOrigin: 'right bottom',
                     opacity: activeIndex === index ? 1 : 0,
                     height: activeIndex === index ? 'auto' : 0,
-                    
                     overflow: 'hidden'
                   }}
                 >

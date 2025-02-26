@@ -5,7 +5,7 @@ import errorSound from '../../assets/sounds/rejected.mp3';
 import useFormHandler from "../../hooks/useFormHandler";
 import '../../index.css';
 import '../../App.css';
-import nurseHeaderImage from '../../assets/images/nursing/nurseHeaderImg.png';
+import nurseHeaderImage from '../../assets/images/nursing/nurseHeaderImg.svg';
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
