@@ -1,13 +1,14 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import walletIcon from '../../assets/icons/nurse/carAdv1.svg';
+import walletIcon from '../../../assets/icons/nurse/carAdv1.svg';
+import './nurseCareerAdvSection.css';
 
 const NurseCareerAdvSection = () => {
   return (
     <div className='px-lg-5  d-flex align-items-center justify-content-center w-100'>
       <Container className='w-100 d-flex justify-content-center align-items-center'>
        
-        <Row  className='nurseStatsbg py-4 ' >
+        <Row  className='nurseCareerAdvbg py-4 ' >
              <Row>
             <div className='subheading-big-medium mb-4'>
                 Career Advancement Opportunities

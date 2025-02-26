@@ -1,5 +1,5 @@
-.nurse-partner-bg{
-    background-image: url('../../../assets/images/nursing/nursePartnerBg.png') !important;
+.nurseCareerAdvbg{
+    background-image: url('../../../assets/images/nursing/nurseAdvBg.png') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
@@ -8,5 +8,4 @@
     border: #C4D8FE 1px solid;
     border-radius: 24px !important;
     padding: 24px !important;
-    padding-bottom: 0px !important;
 }

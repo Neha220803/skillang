@@ -1,0 +1,19 @@
+.nurse-posi-card{
+    border: #EAEAEC 1px solid !important;
+    background-color: #F8F8F9 !important;
+    padding: 24px !important;
+    border-radius: 12px !important;
+    /* border-left: #9473F2 2px solid !important; */
+     position: relative; 
+}
+
+.nurse-posi-card::before {
+    content: "";
+    position: absolute;
+    left: 0 !important;
+    top: 10%; /* Start slightly below the top */
+    height: 80%; /* Covers 80% of the card */
+    width: 4px; /* Border thickness */
+    background-color: #9473F2;
+    border-radius: 2px; /* Optional: Slightly rounded edges */
+}

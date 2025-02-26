@@ -12,6 +12,7 @@
 
   --content-primary: #1A202C;
   --content-secondary: #4A5568 ;
+  --content-tertiary: #8A8A8A !important;
 
 
    --font-family: "Plus Jakarta Sans" !important;
@@ -116,6 +117,10 @@
 
 .text-primary-inverse{
   color: white;
+}
+
+.text-content-tertiary{
+  color: var(--content-tertiary) !important;
 }
 
 

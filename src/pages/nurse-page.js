@@ -3,17 +3,18 @@ import NurseMainHeader from '../components/nursing/nurseMain'
 import NursePathwaySection from '../components/nursing/pathway/nursePathway'
 import WhyNursingSection from '../components/nursing/why-nursing-ger/whyNursingSection'
 import WhySkillangSection from '../components/resuable/why-skillang/whySkillangSection'
-import OurServices from '../components/nursing/ourServices'
-import OurReqProcess from '../components/nursing/ourReqProcess'
-import NurseLangSection from '../components/nursing/nurseLangSection'
-import BookShelf from '../components/nursing/bookShelf'
-import NursingPosition from '../components/nursing/nursingPosi'
-import NurseChallengeSection from '../components/nursing/nurseChallengeSection'
+import OurServices from '../components/nursing/nurseServices/ourServices'
+import OurReqProcess from '../components/nursing/req-process/ourReqProcess'
+import NurseLangSection from '../components/nursing/german-lang-training/nurseLangSection'
+import BookShelf from '../components/nursing/german-lang-training/bookShelf'
+import NursingPosition from '../components/nursing/nursing-posi/nursingPosi'
+import NurseChallengeSection from '../components/nursing/nurse-int-challenge/nurseChallengeSection'
 import NurseStats from '../components/resuable/nurse-stats/nurseStats'
 import NurseEligibility from '../components/resuable/nurse-eligibility/nurseEligibility'
-import PermResidentSection from '../components/nursing/permResidentSection'
-import NurseCareerAdvSection from '../components/nursing/nurseCareerAdvSection'
+import PermResidentSection from '../components/nursing/nurse-citizenship/permResidentSection'
+import NurseCareerAdvSection from '../components/nursing/career-adv/nurseCareerAdvSection'
 import NursePartner from '../components/resuable/partner-with-us/partnerWithUs'
+import TypesHealthCareSection from '../components/nursing/types-nurse/typesHealthCareSection'
 
 const NursePage = () => {
   return (
@@ -28,9 +29,14 @@ const NursePage = () => {
       <NursingPosition />
       <NurseChallengeSection />
       <NurseStats />
-      <NurseEligibility />
+      <div className='my-5 py-5'>
+        <NurseEligibility  />
+      </div>
+
+      
         <PermResidentSection />
         <NurseCareerAdvSection />
+        <TypesHealthCareSection />
         <NursePartner />
 
     </div>
