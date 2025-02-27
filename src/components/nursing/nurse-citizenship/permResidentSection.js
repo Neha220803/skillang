@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image, Card, CardTitle, CardText } from 'react-bootstrap';
+import { Container, Row, Col, Image, Card, CardTitle, CardText, Accordion } from 'react-bootstrap';
 import nurseResi from '../../../assets/images/nursing/resi.png';
 import './permResidentSection.css';
 
@@ -13,17 +13,34 @@ const benefits = [
 
 const PermResidentSection = () => {
   return (
-    <div className="bg-dark text-white p-5 my-5">
+    <div className="bg-dark text-white p-md-5 py-3 my-5">
       <Container>
         <Row className="mb-4">
-          <Col lg={6}>
+          <Col lg={6} className='d-block d-md-none'>
+            <Image fluid src={nurseResi} alt="Permanent Residency" />
+          </Col>
+          <Col lg={6} sm={12} xs={12}>
             <div className="heading-big-medium">Permanent Residency and Citizenship Pathways</div>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className='d-none d-md-block'>
             <Image fluid src={nurseResi} alt="Permanent Residency" className="w-100 h-auto" />
           </Col>
         </Row>
-        <Row className='row-equal-height'>
+
+        {/* Mobile View - Accordion */}
+        <div className="d-block d-md-none">
+          <Accordion className="custom-accordion">
+            {benefits.map((benefit, index) => (
+              <Accordion.Item eventKey={index.toString()} key={index} className="dark-accordion-item">
+                <Accordion.Header>{benefit.title}</Accordion.Header>
+                <Accordion.Body>{benefit.text}</Accordion.Body>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Desktop View - Cards */}
+        <Row className='row-equal-height d-none d-md-flex'>
           {benefits.map((benefit, index) => (
             <Col key={index} lg={index < 3 ? 4 : 6} className="mb-4">
               <Card className="nurse-perm-card">

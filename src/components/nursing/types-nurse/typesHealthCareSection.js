@@ -23,7 +23,7 @@ const TypesHealthCareSection = () => {
       <Container className="py-5 my-5">
         <Row>
             <div>
-              <div className="heading-big-medium text-center">Types of Healthcare Facilities Hiring Nurses</div>
+              <div className="heading-big-medium text-md-center px-2">Types of Healthcare Facilities Hiring Nurses</div>
             </div>
      
           

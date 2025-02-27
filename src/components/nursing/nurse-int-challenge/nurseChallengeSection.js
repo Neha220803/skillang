@@ -16,7 +16,7 @@ const NurseChallengeSection = () => {
     <div className=' py-5'>
       <Container>
        
-        <Row className='text-center'>
+        <Row className='text-md-center'>
           <div className='heading-big-medium mb-2'>Challenges for International Nurses</div>
           <div className='paragraph-big-regular mb-4'>Following are the challenges faced by international nurses & how we help them overcome these challenges</div>
         </Row>

@@ -35,9 +35,11 @@ const NursePage = () => {
 
       
         <PermResidentSection />
-        <NurseCareerAdvSection />
+        
         <TypesHealthCareSection />
+         <NurseCareerAdvSection />
         <NursePartner />
+       
 
     </div>
   )

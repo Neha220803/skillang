@@ -28,7 +28,7 @@ const SkillShortage = () => {
                     
                     {/* Right Side (Accordion List) */}
                     <Col lg={6} className="d-flex flex-column right-content">
-                        <Accordion defaultActiveKey="1" alwaysOpen className="custom-accordion">
+                        <Accordion defaultActiveKey="1"  className="custom-accordion">
                             {industries.map((industry, index) => (
                                 <Accordion.Item key={index} eventKey={index.toString()} className="dark-accordion-item">
                                     <Accordion.Header>{industry.title}</Accordion.Header>

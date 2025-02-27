@@ -10,40 +10,47 @@ const NurseCareerAdvSection = () => {
        
         <Row  className='nurseCareerAdvbg py-4 ' >
              <Row>
-            <div className='subheading-big-medium mb-4'>
+            <div className='heading-big-medium mb-4'>
                 Career Advancement Opportunities
             </div>
-        </Row>
+            </Row>
           
-            <Col lg={3} sm={12} xs={12} className='d-flex flex-column text-start justify-content-start align-items-start'>
+            <Col lg={3} sm={12} xs={12} className='d-flex flex-row flex-md-column text-start justify-content-start align-items-start gap-3 mb-3'>
             <img src={walletIcon} alt="" />
-          
-          <div className='subheading-small-medium text-content-secondary'>Higher Positions</div>
+            <div>
+              <div className='subheading-small-medium text-content-secondary'>Higher Positions</div>
           <div  className=' align-items-end'>
              <div className='paragraph-small-medium text-content-secondary me-1'>
             Nurse leadership, care management, and education
           </div>
+              
+            </div>
+          
         
           </div>
           
           </Col>
-          <Col lg={3} sm={12} xs={12} className='d-flex flex-column text-start justify-content-start align-items-start'>
+          <Col lg={3} sm={12} xs={12} className='d-flex flex-row flex-md-column text-start justify-content-start align-items-start gap-3 mb-3'>
           <img src={walletIcon} alt="" />
+          <div>
+
+
           <div className='subheading-small-medium text-content-secondary'>Specialization</div>
           <div  className=' align-items-end'>
-             <div className='paragraph-small-medium' >ICU, surgery, pediatrics, and more</div>
+             <div className='paragraph-small-medium text-content-secondary' >ICU, surgery, pediatrics, and more</div>
     
           </div>
-         
+         </div>
           </Col>
          
-          <Col lg={3} sm={12} xs={12} className='d-flex flex-column text-start justify-content-start align-items-start'>
+          <Col lg={3} sm={12} xs={12} className='d-flex flex-row flex-md-column text-start justify-content-start align-items-start gap-3 mb-3'>
           <img src={walletIcon} alt="" />
+          <div>
           <div className='subheading-small-medium text-content-secondary'> Ongoing Training </div>
           <div  className=' align-items-end'>
-             <div className='paragraph-small-medium' >Access to continuous professional development and courses</div>
+             <div className='paragraph-small-medium text-content-secondary' >Access to continuous professional development and courses</div>
         
-
+</div>
           </div>
          
           </Col>

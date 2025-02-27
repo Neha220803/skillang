@@ -45,7 +45,7 @@ useEffect(() => {
     return (
         <section className="py-5">
             <Container>
-                <Row className='d-flex align-items-start justify-content-center text-center mb-4'>
+                <Row className='d-flex align-items-start justify-content-center text-md-center mb-4'>
                     <div className='heading-small-medium text-content-primary'>
                         Why Nursing in Germany?
                     </div>

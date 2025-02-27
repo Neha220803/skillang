@@ -70,8 +70,8 @@ const OurServices = () => {
     <Container className="py-5 my-5 ">
       <Row className='bg-primar'>
         <Col md={8}>
-          <Image fluid src={nurseService} alt="nurse" className="w-100 h-auto" />
-          <div className='mt-2'>
+          <Image fluid src={nurseService} alt="nurse" className="nurse-service-img" />
+          <div className='my-3'>
             <div className="heading-big-medium mb-1 text-content-primary">Our Services</div>
             <div className="paragraph-big-medium text-content-tertiary">
               We offer tailored support for your study and work abroad journey, including career guidance,

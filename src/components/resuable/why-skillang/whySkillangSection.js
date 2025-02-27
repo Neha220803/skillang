@@ -26,10 +26,10 @@ const whySkillangCardData = [
 
 const WhySkillangSection = () => {
   return (
-    <div className='whi-skillang-bg text-white py-5'>
+    <div className='why-skillang-bg text-white py-5 px-2'>
       <Container>
         <Row className='mb-3'>
-          <div className='emp-cont caption-bold'>Empowering Global Careers</div>
+          <div className='emp-cont caption-bold ms-2'>Empowering Global Careers</div>
         </Row>
         <Row>
           <div className='heading-big-medium mb-2'>Why Choose <span style={{color:'#AC92F5'}}>Skillang?</span></div>
@@ -42,9 +42,9 @@ const WhySkillangSection = () => {
             <Col lg={4} key={index}>
               <Card className='why-skillang-card'>
                 <img src={card.image} alt={`why skillang ${index + 1}`} />
-                <CardBody>
-                  <CardTitle>{card.title}</CardTitle>
-                  <CardText>{card.text}</CardText>
+                <CardBody className='px-0'>
+                  <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
+                  <CardText className='paragraph-small-regular'>{card.text}</CardText>
                 </CardBody>
               </Card>
             </Col>

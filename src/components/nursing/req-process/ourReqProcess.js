@@ -1,10 +1,11 @@
 import React from 'react'
-import { Container, Row, Col, Image } from 'react-bootstrap'
+import { Container, Row, Image } from 'react-bootstrap'
 import reqImg from '../../../assets/images/nursing/reqProcess.svg';
+import './ourReqProcess.css';
 
 const OurReqProcess = () => {
   return (
-    <div className='my-5 py-5 text-center'>
+    <div className='my-5 py-5 text-md-center'>
         <Container>
             <Row>
                 <div className='heading-big-medium mb-2'>Our Recruitment Process and Timeline</div>
@@ -13,11 +14,13 @@ const OurReqProcess = () => {
         </Container>
         <Container>
             <Row>
-                <Image src={reqImg} alt="" className='w-100 h-75' />
+                <div className="req-process-container">
+                    <Image src={reqImg} alt="Recruitment Process" className='req-process-img' />
+                </div>
             </Row>
         </Container>
     </div>
   )
 }
 
-export default OurReqProcess
+export default OurReqProcess;
