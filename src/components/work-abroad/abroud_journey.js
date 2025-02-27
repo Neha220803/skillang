@@ -13,7 +13,7 @@ const AbroudJourney = () => {
             <div className="work-abroad-wrapper">
                 <div className="work-abroad-header">
                     <h1>Work Abroad Journey</h1>
-                    <p>Start your work abroad journey in 3 simple steps</p>
+                    <p>Start your   work abroad journey in 3 simple steps</p>
                 </div>
 
                 <div className="journey-content">
@@ -23,7 +23,7 @@ const AbroudJourney = () => {
                     </div>
 
                     {/* Images Section */}
-                    <div className="journey-images">
+                    {/* <div className="journey-images">
                         <div className="journey-image-item">
                             <img src={languageImage} alt="Language & Test Prep" />
                             <p className="journey-label">Language & Test Prep</p>
@@ -36,7 +36,7 @@ const AbroudJourney = () => {
                             <img src={visaImage} alt="Visa & Relocation Support" />
                             <p className="journey-label">Visa & Relocation Support</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

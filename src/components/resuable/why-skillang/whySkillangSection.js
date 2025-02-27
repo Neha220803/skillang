@@ -26,7 +26,7 @@ const whySkillangCardData = [
 
 const WhySkillangSection = () => {
   return (
-    <div className='bg-dark text-white py-5'>
+    <div className='whi-skillang-bg text-white py-5'>
       <Container>
         <Row className='mb-3'>
           <div className='emp-cont caption-bold'>Empowering Global Careers</div>
