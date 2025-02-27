@@ -8,10 +8,10 @@
 }
 
 .book-img{
-    position: absolute !important;
+    position: relative !important;
     bottom: 0 !important;
     right: 0 !important;
-    top: 30px !important;
+    /* top: 30px !important; */
 }
 
 .book-item {
@@ -23,7 +23,8 @@
   cursor: pointer;
   overflow: hidden;
   height: 400px !important;
-   border-radius: 16px !important;
+  border-radius: 16px !important;
+    transition: all 0.5s ease;
 }
 
 .book-item.active {
@@ -31,10 +32,15 @@
   padding-left: 64px !important;
   padding-top: 64px !important;
     position: relative;
+  margin-left: 12px !important;
+
 }
 
 .book-item.inactive {
   width: 100px !important;
+  transform: rotate(4deg) !important;
+  margin-left: 12px !important;
+  background-position: left !important;
 }
 
 .book-title {
@@ -47,16 +53,22 @@
 }
 
 .book-title.inactive {
-  transform: rotate(90deg);
-  transform-origin: right bottom;
+  transform: rotate(86deg);
+  transform-origin: top center;
+  white-space: nowrap;
+  position: absolute;
+  left: 20%;
+  top: 92%;
+  transform: translate(-50%, -50%) rotate(-90deg);
 }
+
 
 .book-content {
   width: 100%;
   padding: 0 0.75rem;
   text-align: start;
-  transition: all 1s ease-in-out;
-  transform-origin: right bottom;
+  transition: all 0.8s ease-in-out;
+  transform-origin: top center;
   overflow: hidden;
 }
 
