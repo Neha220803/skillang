@@ -1,0 +1,76 @@
+/* BookShelf.css */
+
+.bookshelf-container {
+  display: flex;
+  height: 100%;
+  margin: 0.75rem;
+
+}
+
+.book-img{
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    top: 30px !important;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  transition: width 0.5s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  height: 400px !important;
+   border-radius: 16px !important;
+}
+
+.book-item.active {
+  width: 832px !important;
+  padding-left: 64px !important;
+  padding-top: 64px !important;
+    position: relative;
+}
+
+.book-item.inactive {
+  width: 100px !important;
+}
+
+.book-title {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: start;
+  font-weight: bold;
+  transition: transform 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.book-title.inactive {
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+}
+
+.book-content {
+  width: 100%;
+  padding: 0 0.75rem;
+  text-align: start;
+  transition: all 1s ease-in-out;
+  transform-origin: right bottom;
+  overflow: hidden;
+}
+
+.book-content.active {
+  opacity: 1;
+  height: auto;
+}
+
+.book-content.inactive {
+  transform: rotate(90deg);
+  opacity: 0;
+  height: 0;
+}
+
+.bg-primary {
+  background-color: #F6F67F !important;
+}

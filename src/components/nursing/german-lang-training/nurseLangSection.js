@@ -1,5 +1,8 @@
 import React from "react";
+import './nurseLangSection.css';
+import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-bootstrap";
 import BookShelf from "./bookShelf";
+import wood from '../../../assets/images/nursing/woord.png';
 
 const NurseLangSection = () => {
   return (
@@ -10,6 +13,7 @@ const NurseLangSection = () => {
         from application to job placement.
       </div>
       <BookShelf />
+          <Image fluid src={wood} alt="" />
     </div>
   );
 };
