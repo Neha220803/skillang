@@ -10,6 +10,7 @@ import usaImage from "../../assets/images/work-abroad/countryusa.png";
 import "../home/home-page.css";
 import "../home/header/home-header.css";
 import "../../../src/index.css";
+import "../work-abroad/countriesWeServe.css";
 
 import "../../../src/App.css";
 
@@ -54,7 +55,7 @@ const CountriesWeServe = () => {
                     {countries.map((country, index) => (
                         <Card
                             key={index}
-                            className="shadow-sm border bg-grey rounded flex-shrink-0 d-flex flex-row align-items-center"
+                            className="shadow-sm border bg-grey rounded flex-shrink-0 d-flex flex-row align-items-center "
                             style={{
                                 width: "619px",
                                 height: "205px",
@@ -67,7 +68,7 @@ const CountriesWeServe = () => {
                             {/* Country Image */}
                             <Card.Img
                                 src={country.image}
-                                className="rounded"
+                                className="rounded mobile-view-card-img "
                                 style={{
                                     width: "286px",
                                     height: "173px",
@@ -78,7 +79,7 @@ const CountriesWeServe = () => {
 
                             {/* Country Text */}
                             <Card.Body
-                                className="d-flex flex-column align-items-start"
+                                className="d-flex flex-column align-items-start mobile-view-card-body"
                                 style={{
                                     width: "285px",
                                     height: "173px",
@@ -87,9 +88,9 @@ const CountriesWeServe = () => {
                                     justifyContent: "flex-start",
                                 }}
                             >
-                                <h5 className="subheading-small-medium text-content-primary">{country.name}</h5>
+                                <h5 className="subheading-small-medium text-content-primary mobile-view-card-body">{country.name}</h5>
                                 <p
-                                    className="paragraph-small-regular text-content-secondary m-0"
+                                    className="paragraph-small-regular text-content-secondary m-0 mobile-view-card"
                                     style={{
                                         maxWidth: "100%",
                                         wordWrap: "break-word",

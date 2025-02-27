@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .mobile-view-card-img {
+        width: 227px !important;
+        height: 166 !important;
+    }
+
+    .mobile-view-card-body {
+        flex-direction: column !important;
+        padding: 16px !important;
+        width: 227px !important;
+        height: 166 !important;
+
+    }
+}
