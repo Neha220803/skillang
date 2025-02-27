@@ -1,0 +1,120 @@
+/* Main container for the work abroad section */
+.work-abroad-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Wrapper with background image */
+.work-abroad-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    height: 538px;
+    margin: 0 auto;
+    padding: 0 80px;
+    background-image: url('../../../src/assets/images/work-abroad/journey/jorneybg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Header styles */
+.work-abroad-header {
+    text-align: center;
+    padding-top: 48px;
+    margin-bottom: 60px;
+}
+
+.work-abroad-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.work-abroad-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Centered Journey Content */
+.journey-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Centering the progress line */
+.journey-progress {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+    z-index: 1;
+    /* Progress line should be below images */
+    margin-bottom: -40px;
+    /* Align it properly */
+}
+
+/* Styling for progress line */
+.progress-line-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Images Section */
+.journey-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    gap: 40px;
+    margin-top: 20px;
+    /* Adjusted to prevent overlap */
+    position: relative;
+    z-index: 2;
+    /* Ensuring images appear above progress line */
+}
+
+/* Image styling */
+.journey-image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+
+.journey-image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    /* Ensuring no duplicate display */
+}
+
+/* Labels below each step */
+.journey-label {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Fixing the curve at the bottom */
+.work-abroad-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50% 50% 0 0 / 100%;
+    box-shadow: 0 40px 0 0 white;
+    z-index: 1;
+}

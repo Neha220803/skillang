@@ -55,8 +55,8 @@
 .service-item.top-center {
     top: 50px;
     /* Adjusted slightly lower */
-    left: 50%;
-    transform: translateX(-50%);
+    left: 35%;
+    /* transform: translateX(-50%); */
 }
 
 .service-item.top-right {
