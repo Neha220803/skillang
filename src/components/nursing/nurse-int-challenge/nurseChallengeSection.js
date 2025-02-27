@@ -3,6 +3,7 @@ import { Card, Container, Image, Col, Row, CardBody, CardTitle, CardText } from 
 import nurseChallenge1 from '../../../assets/images/nursing/nurseChallenge1.png';
 import nurseChallenge2 from '../../../assets/images/nursing/nurseChallenge1.png';
 import nurseChallenge3 from '../../../assets/images/nursing/nurseChallenge1.png';
+import './nurseChallengeSection.css';
 
 const nurseCallenges = [
   { title: 'Licensing Challenges', text: 'We assist with the recognition of your qualifications.',img:nurseChallenge1 },
@@ -24,11 +25,11 @@ const NurseChallengeSection = () => {
         <Row className='row-equal-height'>
           {nurseCallenges.map((card, index) => (
             <Col lg={4} key={index}>
-              <Card className='why-skillang-card' >
+              <Card className='int-challenge-card' >
                 <img src={card.img} alt={`why skillang ${index + 1}`} />
-                <CardBody>
-                  <CardTitle>{card.title}</CardTitle>
-                  <CardText>{card.text}</CardText>
+                <CardBody className='p-0'>
+                  <CardTitle className='mb-2 subheading-small-medium'>{card.title}</CardTitle>
+                  <CardText className='paragraph-small-medium text-content-secondary'>{card.text}</CardText>
                 </CardBody>
               </Card>
             </Col>

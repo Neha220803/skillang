@@ -11,17 +11,17 @@ const PartnerWithUsSection = () => {
                 <Col>
                 <Image fluid src={nursePartnerImg} alt="" />
                 </Col>
-                <Col className='d-flex flex-column justify-content-center align-items-center text-start'>
-                <div className='heading-big-medium text-start'>
+                <Col className='d-flex flex-column justify-content-center align-items-start text-start'>
+                <div className='heading-big-medium text-start mb-2'>
                     Partner 🤝 with Us
                 </div>
-                <div className='paragraph-big-medium text-start' >
+                <div className='paragraph-big-medium text-start mb-3' >
                     Join hands with us to create opportunities for students seeking world-class education and global exposure.
                 </div>
-                <div className='d-flex gap-3'>
-                    <div>Institutions</div>
-                    <div>Companies</div>
-                    <div>Recruiters</div>
+                <div className='d-flex gap-3 mb-3'>
+                    <div className='partner-subbox'>Institutions</div>
+                    <div className='partner-subbox'>Companies</div>
+                    <div className='partner-subbox'>Recruiters</div>
                 </div>
                 <button className='btn-primary'> Connect Now
                 </button>

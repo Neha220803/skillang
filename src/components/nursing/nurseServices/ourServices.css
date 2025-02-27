@@ -4,6 +4,39 @@
     border-radius: 0 !important;
     border-left: 4px solid #9473F2 !important;
     border-right: none !important;
-    border-top: none !important;   
-    border-bottom: none !important; 
+    border-top: none !important;  
+    border-bottom: none !important;
+    cursor:  pointer !important;
 }
+
+.nurse-serv-card{
+    align-items: start;
+    padding-left: 12px !important;
+    border-radius: 0 !important;
+    border-left: 4px solid #9473F2 !important;
+    border-right: none !important;
+    border-top: none !important;  
+    border-bottom: none !important;
+}
+
+/* Styles for the scrollable container */
+.services-scrollable-container {
+    max-height: 400px; 
+    overflow-y: auto;
+    padding-right: 10px;
+    position: relative;
+    
+    /* Fade effect for bottom of container */
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    
+    /* Hide scrollbar by default */
+    scrollbar-width: none !important;
+}
+
+/* Show subtle scrollbar when user is manually scrolling */
+.services-scrollable-container.user-scrolling {
+    width: 0px !important;
+    scrollbar-width:none !important;
+}
+

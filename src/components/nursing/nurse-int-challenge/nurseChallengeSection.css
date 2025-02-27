@@ -1,0 +1,17 @@
+.int-challenge-card{
+  width: fit-content !important; /* Set a fixed width for each card */
+  text-align: start !important;
+  padding: 24px !important;
+  border-radius: 24px !important;
+  background-color: white !important;
+  border: 1px solid #E3E3E3 !important;
+  color: black !important;
+  height: 100% !important;
+}
+
+.int-challenge-card img {
+  width: 100% !important; 
+  height: auto;
+   border-radius: 15px !important;
+  margin-bottom: 16px !important;
+}
