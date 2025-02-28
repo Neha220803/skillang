@@ -6,10 +6,9 @@ import '../../../index.css'
 
 const NurseStats = () => {
   return (
-    <div className='px-lg-5  d-flex align-items-center justify-content-center w-100'>
+    <div className='px-lg-5 d-flex align-items-center justify-content-center w-100'>
       <Container className='w-100 d-flex justify-content-center align-items-center'>
-        <Row  className='nurseStatsbg py-4 ' >
-          
+        <Row  className='nurseStatsbg ' >
             <Col lg={5} sm={12} xs={12} className='d-flex flex-column '>
           <div className='compSal d-flex flex-row'>
             <img src={walletIcon} alt='wallet' className='image-fluid' />

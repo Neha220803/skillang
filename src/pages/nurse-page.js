@@ -29,7 +29,7 @@ const NursePage = () => {
 <div className="section-spacing"><NurseLangSection /></div>
 <div className="section-spacing"><NursingPosition /></div>
 <div className="section-spacing"><NurseChallengeSection /></div>
-<div className="section-spacin pb-5"><NurseStats /></div>
+<div className="section-spacing"><NurseStats /></div>
 <div className="section-spacing"><NurseEligibility /></div>
 <div className="section-spacing"><PermResidentSection /></div>
 <div className="section-spacing"><TypesHealthCareSection /></div>
