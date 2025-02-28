@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ServiceOfferCountryWise.css";
 
@@ -76,76 +77,70 @@ const ServiceOfferCountryWise = () => {
         <div className="service-container">
             {/* Service Offerings Section */}
             <div className="service-bg">
-                <div className="container py-5">
-                    <div className="row justify-content-center mb-4">
-                        <div className="col-md-8 text-center">
-                            <h2 className="section-title">Service Offerings</h2>
-                            <p className="section-description">
+                <Container className="py-5">
+                    <Row className="justify-content-center mb-4">
+                        <Col md={8} className="text-center">
+                            <div className="section-title heading-big-medium">Service Offerings</div>
+                            <p className="paragraph-big-medium text-content-secondary">
                                 Our comprehensive services are designed to streamline the process of securing a job
                                 and work visa in your chosen country.
                             </p>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
 
-                    <div className="service-wave-layout">
+                    <Row className="service-wave-layout justify-content-center">
                         {serviceOfferings.map((service, index) => (
-                            <div
-                                key={index}
-                                className={`service-item ${service.position}`}
+                            <Col md={3} key={index} className={`service-item ${service.position}`}
                                 onMouseEnter={() => setHoveredService(service.title)}
                                 onMouseLeave={() => setHoveredService(null)}
                             >
                                 <img src={service.icon} alt={service.title} className="service-icon" />
-                                <div className="service-name-pill">{service.title}</div>
+                                <div className="service-name-pill caption-bold">{service.title}</div>
                                 {hoveredService === service.title && (
                                     <div className="service-description-popup">
-                                        <p className="service-text">{service.description}</p>
+                                        <p className="service-text paragraph-small-medium text-content-secondary">{service.description}</p>
                                     </div>
                                 )}
-                            </div>
+                            </Col>
                         ))}
-                    </div>
-                </div>
+                    </Row>
+                </Container>
 
                 {/* Country Guidance Section */}
-                <div className="service-container">
-                    {/* Country Guidance Section */}
-                    <div className="container py-5">
-                        <div className="row justify-content-center mb-3">
-                            <div className="col-md-8 text-center">
-                                <button className="tag-button">
-                                    <img src={airplane} alt="Airplane" className="tag-icon" />
-                                    Skill Shortage Visas
-                                </button>
-                                <h2 className="section-title">Work Visa Guidance Country-wise</h2>
-                                <p className="section-description">
-                                    Our comprehensive services are designed to streamline the process of securing a job and work visa in your chosen country.
-                                </p>
+                <Container className="py-5">
+                    <Row className="justify-content-center mb-3 ">
+                         
+                        <Col md={8} className="text-center">
+                        <div className="tag-button text-center caption-bold">
+                                <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
+                                Skill Shortage Visas
                             </div>
-                        </div>
+                           
+                            <div className="heading-big-medium">Work Visa Guidance Country-wise</div>
+                            <div className="paragraph-big-medium text-content-secondary">
+                                Our comprehensive services are designed to streamline the process of securing a job and work visa in your chosen country.
+                            </div>
+                        </Col>
+                    </Row>
 
-                        {/* Country Cards */}
-                        <div className="row justify-content-center">
-                            {countryGuidance.map((country, index) => (
-                                <div key={index} className="col-md-4 mb-4">
-                                    <div className="country-card">
-                                        <div className="country-header">
-                                            <h3 className="country-name">{country.country}</h3>
-                                            <img src={country.flag} alt={country.country} className="country-flag" />
-                                        </div>
-                                        <p className="country-text">{country.details}</p>
+                    {/* Country Cards */}
+                    <Row className="justify-content-center">
+                        {countryGuidance.map((country, index) => (
+                            <Col md={4} key={index} className="mb-4">
+                                <div className="country-card">
+                                    <div className="country-header">
+                                        <div className="country-name subheading-small-medium">{country.country}</div>
+                                        <img src={country.flag} alt={country.country} className="country-flag" />
                                     </div>
+                                    <div className="country-text paragraph-small-regular">{country.details}</div>
                                 </div>
-                            ))}
-                        </div>
-
-                        <div className="row justify-content-center mt-4">
-                            <div className="col-auto">
-                                <button className="consultation-button">Book Free Consultation</button>
-                            </div>
-                        </div>
+                            </Col>
+                        ))}
+                    </Row>
+                    <div className="d-flex justify-content-center mx-auto align-items-center mt-4">
+                            <button className="btn-primary">Book Free Consultation</button>
                     </div>
-                </div>
+                </Container>
             </div>
         </div>
     );
