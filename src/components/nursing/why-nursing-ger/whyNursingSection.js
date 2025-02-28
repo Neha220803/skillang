@@ -54,14 +54,15 @@ useEffect(() => {
                     </div>
                 </Row>
                 <div 
-                    ref={cardsRef} 
-                    className="why-nurse-cards-container row-equal-height" 
-                    style={{ 
-                        maxHeight: screenWidth < 768 ? maxHeight : "none", 
-                        transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none", 
-                        overflow: screenWidth < 768 ? "hidden" : "visible"
-                    }}
-                >
+    ref={cardsRef} 
+    className={`why-nurse-cards-container row-equal-height ${showAll ? "expanded" : ""}`} 
+    style={{ 
+        maxHeight: screenWidth < 768 ? maxHeight : "none", 
+        transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none", 
+        overflow: screenWidth < 768 ? "hidden" : "visible"
+    }}
+>
+
                     <Row>
                         {WhyNurseCardData.map((card, index) => (
                             <Col key={index} className="px-3 mb-4" lg={3} md={6} sm={12} xs={12}>
@@ -83,7 +84,7 @@ useEffect(() => {
                 </div>
 
                 {/* Toggle Button */}
-                <div className="text-center d-block d-md-none mt-3">
+                <div className="text-center d-block d-md-none mt-1">
       <button className="btn-secondary-outline" onClick={() => setShowAll(!showAll)}>
         {showAll ? (
           <>

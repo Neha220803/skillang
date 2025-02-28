@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Container, Col, Row, Card, CardBody, Button } from "react-bootstrap";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import "./nursePosi.css";
+import '../../../index.css';
 
 const nursingPositions = [
   { title: "General Nurses", text: "Providing essential patient care in hospitals and clinics." },
@@ -37,7 +38,7 @@ const NursingPosition = () => {
           <div className="heading-big-medium text-content-primary mb-1">
             Available Nursing Positions in Germany
           </div>
-          <div className="paragraph-big-medium text-content-secondary mb-4">
+          <div className="paragraph-big-medium text-content-secondary mb-md-4">
             Position availability depends on regional healthcare needs
           </div>
         </Row>
@@ -45,7 +46,7 @@ const NursingPosition = () => {
         {/* Cards Section */}
         <div
           ref={cardsRef}
-          className="nurse-cards-container row-equal-height"
+          className="nurse-cards-container row-equal-height m-0"
           style={{
             maxHeight: screenWidth < 768 ? maxHeight : "none",
             transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none",
@@ -67,8 +68,8 @@ const NursingPosition = () => {
         </div>
 
         {/* View All / Close Button */}
-        <div className="text-center d-block d-md-none">
-          <Button variant="outline-secondary" onClick={() => setShowAll(!showAll)}>
+        <div className="text-center d-block d-md-none m-0">
+          <button className="btn-secondary-outline" onClick={() => setShowAll(!showAll)}>
             {showAll ? (
               <>
                 Close <ChevronUp className="ms-1" />
@@ -78,7 +79,7 @@ const NursingPosition = () => {
                 View All <ChevronDown className="ms-1" />
               </>
             )}
-          </Button>
+          </button>
         </div>
       </Container>
     </div>

@@ -15,7 +15,7 @@ const PermResidentSection = () => {
   return (
     <div className="bg-dark text-white">
       <Container>
-        <Row className="mb-4">
+        <Row className="py-4">
           <Col lg={6} className='d-block d-md-none'>
             <Image fluid src={nurseResi} alt="Permanent Residency" />
           </Col>
@@ -28,8 +28,8 @@ const PermResidentSection = () => {
         </Row>
 
         {/* Mobile View - Accordion */}
-        <div className="d-block d-md-none">
-          <Accordion className="custom-accordion">
+        <div className="d-block d-md-none pb-2">
+          <Accordion defaultActiveKey="1"  className="custom-accordion">
             {benefits.map((benefit, index) => (
               <Accordion.Item eventKey={index.toString()} key={index} className="dark-accordion-item">
                 <Accordion.Header>{benefit.title}</Accordion.Header>

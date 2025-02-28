@@ -1,6 +1,13 @@
 .why-nurse-cards-container {
     overflow: hidden;
     transition: max-height 0.8s ease-in-out;
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+.why-nurse-cards-container.expanded {
+    -webkit-mask-image: none;
+    mask-image: none;
 }
 
 .why-nurse-card {
