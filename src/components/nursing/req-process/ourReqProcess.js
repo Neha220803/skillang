@@ -5,7 +5,7 @@ import './ourReqProcess.css';
 
 const OurReqProcess = () => {
   return (
-    <div className='my-5 py-5 text-md-center'>
+    <div className='text-md-center'>
         <Container>
             <Row>
                 <div className='heading-big-medium mb-2'>Our Recruitment Process and Timeline</div>

@@ -6,7 +6,7 @@ import './partnerWithUs.css';
 const PartnerWithUsSection = () => {
   return (
     <div>
-        <Container className='nurse-partner-bg text-white my-5 text-start'>
+        <Container className='nurse-partner-bg text-white text-start'>
             <Row>
                 <Col className='d-none d-md-block' md={6} sm={12} xs={12}>
                 <Image fluid src={nursePartnerImg} alt="" />

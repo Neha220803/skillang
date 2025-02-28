@@ -31,7 +31,7 @@ const NursingPosition = () => {
   }, [showAll]);
 
   return (
-    <section className="py-5">
+    <div className="">
       <Container>
         <Row className="text-md-center">
           <div className="heading-big-medium text-content-primary mb-1">
@@ -81,7 +81,7 @@ const NursingPosition = () => {
           </Button>
         </div>
       </Container>
-    </section>
+    </div>
   );
 };
 

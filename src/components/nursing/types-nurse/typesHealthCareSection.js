@@ -20,7 +20,7 @@ const nurseTypes = [
 const TypesHealthCareSection = () => {
   return (
     <div>
-      <Container className="py-5 my-5">
+      <Container className="">
         <Row>
             <div>
               <div className="heading-big-medium text-md-center px-2">Types of Healthcare Facilities Hiring Nurses</div>

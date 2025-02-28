@@ -15,6 +15,20 @@ input.form-control, select.form-select {
 section {
   min-height: 100vh !important;
   /* padding: 0 2rem !important; */
+  /* margin-bottom: 0 !important; */
+}
+
+.section-spacing {
+    /* background-color: #000; */
+    padding-bottom: 154px !important;
+    margin-bottom: 0px !important;
+  }
+
+@media (max-width: 768px) {
+  .section-spacing {
+    /* background-color: pink !important; */
+    padding-bottom: 80px !important;
+  }
 }
 
 header {

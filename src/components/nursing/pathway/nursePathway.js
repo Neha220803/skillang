@@ -6,8 +6,8 @@ import './nursePathway.css';
 
 const NursePathwaySection = () => {
   return (
-    <div className="d-flex align-items-start justify-content-start my-5 bg-primar nurse-path-card">
-      <Container className="text-center mb-5 bg-whit">
+    <div className="d-flex align-items-start justify-content-start nurse-path-card">
+      <Container className="text-center bg-whit">
         <Row className='bg-primar'>
            <Col lg={1}> 
           </Col>

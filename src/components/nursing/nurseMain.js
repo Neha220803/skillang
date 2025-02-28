@@ -62,7 +62,7 @@ const NurseMainHeader = () => {
 formData.lookingFor="Study Aborad"; 
 formData.origin="Nursing Page Form";
   return (
-    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
+    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2" id="home">
       <Container className="my-lg-0">
         <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
   <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">

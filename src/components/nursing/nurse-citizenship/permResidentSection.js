@@ -13,7 +13,7 @@ const benefits = [
 
 const PermResidentSection = () => {
   return (
-    <div className="bg-dark text-white p-md-5 py-3 my-5">
+    <div className="bg-dark text-white">
       <Container>
         <Row className="mb-4">
           <Col lg={6} className='d-block d-md-none'>

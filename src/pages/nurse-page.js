@@ -15,30 +15,27 @@ import PermResidentSection from '../components/nursing/nurse-citizenship/permRes
 import NurseCareerAdvSection from '../components/nursing/career-adv/nurseCareerAdvSection'
 import NursePartner from '../components/resuable/partner-with-us/partnerWithUs'
 import TypesHealthCareSection from '../components/nursing/types-nurse/typesHealthCareSection'
+import '../App.css';
 
 const NursePage = () => {
   return (
     <div>
-      <NurseMainHeader />
-      <NursePathwaySection />
-      <WhyNursingSection />
-      <WhySkillangSection />
-      <OurServices />
-      <OurReqProcess />
-      <NurseLangSection />
-      <NursingPosition />
-      <NurseChallengeSection />
-      <NurseStats />
-      <div className='my-5 py-5'>
-        <NurseEligibility  />
-      </div>
+      <div className="section-spacing"><NurseMainHeader /></div>
+<div className="section-spacing"><NursePathwaySection /></div>
+<div className="section-spacing"><WhyNursingSection /></div>
+<div className="section-spacing"><WhySkillangSection /></div>
+<div className="section-spacing"><OurServices /></div>
+<div className="section-spacing"><OurReqProcess /></div>
+<div className="section-spacing"><NurseLangSection /></div>
+<div className="section-spacing"><NursingPosition /></div>
+<div className="section-spacing"><NurseChallengeSection /></div>
+<div className="section-spacin pb-5"><NurseStats /></div>
+<div className="section-spacing"><NurseEligibility /></div>
+<div className="section-spacing"><PermResidentSection /></div>
+<div className="section-spacing"><TypesHealthCareSection /></div>
+<div className="section-spacing"><NurseCareerAdvSection /></div>
+<div className="section-spacing"><NursePartner /></div>
 
-      
-        <PermResidentSection />
-        
-        <TypesHealthCareSection />
-         <NurseCareerAdvSection />
-        <NursePartner />
        
 
     </div>

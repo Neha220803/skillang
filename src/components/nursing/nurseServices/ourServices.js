@@ -67,7 +67,7 @@ const OurServices = () => {
   }, []);
 
   return (
-    <Container className="py-5 my-5 ">
+    <Container className="py-5">
       <Row className='bg-primar'>
         <Col md={8}>
           <Image fluid src={nurseService} alt="nurse" className="nurse-service-img" />

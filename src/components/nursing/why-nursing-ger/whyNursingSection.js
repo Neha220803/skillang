@@ -43,7 +43,7 @@ useEffect(() => {
     }, [showAll]);
 
     return (
-        <section className="py-5">
+        <section className="">
             <Container>
                 <Row className='d-flex align-items-start justify-content-center text-md-center mb-4'>
                     <div className='heading-small-medium text-content-primary'>
