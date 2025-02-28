@@ -29,7 +29,7 @@ const CountriesWeServe = () => {
             <Container>
                 <div className="text-center mb-4">
                     <h2 className="heading-small-medium text-content-primary">Countries We Serve</h2>
-                    <div className="paragraph-small-regular text-content-secondary">
+                    <div className="paragraph-small-regular text-content-secondary text-center">
                         Each destination offers unique opportunities and challenges. We provide tailored guidance on job markets, salary expectations, cultural norms, and legal requirements for working abroad.
                     </div>
                 </div>
@@ -38,20 +38,20 @@ const CountriesWeServe = () => {
                     {countries.map((country, index) => (
                         <Card
                             key={index}
-                            className="shadow-sm border bg-grey countrys-card"
+                            className="  countrys-card"
                         >
                             <div className="country-image-container">
                                 <Card.Img
                                     src={country.image}
-                                    className="rounded country-image"
+                                    className=" country-image"
                                     alt={`${country.name} image`}
                                 />
                             </div>
-                            <Card.Body className="country-card-heading p-0 ps-md-3">
-                                <h3 className="subheading-small-medium text-content-primary mb-2">{country.name}</h3>
-                                <p className="paragraph-small-regular text-content-secondary country-card-content m-0">
+                            <Card.Body className="country-card-heading p-0 ps-md-3  d-flex flex-column align-items-start justify-content-center  ">
+                                <Card.Title className="subheading-small-medium text-content-primary mb-2">{country.name}</Card.Title>
+                                <Card.Text className="paragraph-small-regular text-content-secondary country-card-content m-0  ">
                                     {country.description}
-                                </p>
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     ))}

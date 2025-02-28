@@ -15,16 +15,18 @@
 }
 
 .countrys-card {
-    border-radius: 16px;
-    border-width: 1px;
-    padding: 16px;
-    scroll-snap-align: start;
-    background-color: #f8f9fa;
-    flex-shrink: 0;
+    border-radius: 16px !important;
+
+    padding: 16px !important;
+    scroll-snap-align: start !important;
+
+    flex-shrink: 0 !important;
+    /* background-color: #E3E3E3 !important; */
+    border: 1px solid #E3E3E3 !important;
 }
 
 .country-image {
-    border-radius: 12px;
+    border-radius: 12px !important;
     object-fit: cover;
 }
 
