@@ -37,16 +37,8 @@ const CountriesWeServe = () => {
 
                 {/* Scrollable container */}
                 <div
-                    className="d-flex overflow-auto pb-3"
-                    style={{
-                        scrollSnapType: "x mandatory",
-                        gap: "16px",
-                        whiteSpace: "nowrap",
-                        paddingBottom: "10px",
-                        overflowX: "auto", // Enable horizontal scrolling
-                        scrollbarWidth: "none", // Hide scrollbar in Firefox
-                        msOverflowStyle: "none", // Hide scrollbar in Internet Explorer and Edge
-                    }}
+                    className="d-flex overflow-auto pb-3 countrys-list"
+
                     onScroll={(e) => {
                         e.target.style.WebkitOverflowScrolling = "touch"; // Smooth scrolling for iOS
                     }}
@@ -55,55 +47,28 @@ const CountriesWeServe = () => {
                     {countries.map((country, index) => (
                         <Card
                             key={index}
-                            className="shadow-sm border bg-grey rounded flex-shrink-0 d-flex flex-row align-items-center "
-                            style={{
-                                width: "619px",
-                                height: "205px",
-                                borderRadius: "16px",
-                                borderWidth: "1px",
-                                padding: "16px",
-                                scrollSnapAlign: "start",
-                            }}
+                            className="shadow-sm border bg-grey rounded flex-shrink-0  align-items-center countrys-card "
+
                         >
                             {/* Country Image */}
                             <Card.Img
                                 src={country.image}
-                                className="rounded mobile-view-card-img "
-                                style={{
-                                    width: "286px",
-                                    height: "173px",
-                                    borderRadius: "12px",
-                                    objectFit: "cover",
-                                }}
+                                className="rounded mobile-view-card-img country-image "
+
                             />
 
                             {/* Country Text */}
                             <Card.Body
-                                className="d-flex flex-column align-items-start mobile-view-card-body"
-                                style={{
-                                    width: "285px",
-                                    height: "173px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    justifyContent: "flex-start",
-                                }}
+                                className="d-flex flex-column align-items-start mobile-view-card-body country-card-heading"
+
                             >
-                                <h5 className="subheading-small-medium text-content-primary mobile-view-card-body">{country.name}</h5>
-                                <p
-                                    className="paragraph-small-regular text-content-secondary m-0 mobile-view-card"
-                                    style={{
-                                        maxWidth: "100%",
-                                        wordWrap: "break-word",
-                                        whiteSpace: "normal",
-                                        overflow: "hidden",
-                                        textOverflow: "ellipsis",
-                                        display: "-webkit-box",
-                                        // WebkitLineClamp: 3, // Limit to 3-4 lines
-                                        WebkitBoxOrient: "vertical",
-                                    }}
+                                <div className="subheading-small-medium text-content-primary mobile-view-card-body">{country.name}</div>
+                                <div
+                                    className="paragraph-small-regular text-content-secondary m-0 mobile-view-card country-card-content"
+
                                 >
                                     {country.description}
-                                </p>
+                                </div>
                             </Card.Body>
                         </Card>
                     ))}
