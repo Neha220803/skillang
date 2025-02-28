@@ -34,7 +34,7 @@ const BookShelf = () => {
           }}
         >
           <Row>
-            <Col lg={6}>
+            <Col lg={6} sm={8} xs={8}>
               {/* Title */}
               <div className={`subheading-big-medium book-title ${activeIndex === index ? '' : 'inactive'}`}>
                 {rectangle.title}
