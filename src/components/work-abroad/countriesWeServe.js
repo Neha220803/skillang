@@ -11,7 +11,6 @@ import "../home/home-page.css";
 import "../home/header/home-header.css";
 import "../../../src/index.css";
 import "../work-abroad/countriesWeServe.css";
-
 import "../../../src/App.css";
 
 const countries = [
@@ -26,7 +25,7 @@ const countries = [
 
 const CountriesWeServe = () => {
     return (
-        <div className=" py-5 my-5 d-flex align-items-center justify-content-center ">
+        <div className="py-5 my-5 d-flex align-items-center justify-content-center">
             <Container>
                 <div className="text-center mb-4">
                     <h2 className="heading-small-medium text-content-primary">Countries We Serve</h2>
@@ -35,40 +34,24 @@ const CountriesWeServe = () => {
                     </div>
                 </div>
 
-                {/* Scrollable container */}
-                <div
-                    className="d-flex overflow-auto pb-3 countrys-list"
-
-                    onScroll={(e) => {
-                        e.target.style.WebkitOverflowScrolling = "touch"; // Smooth scrolling for iOS
-                    }}
-                >
-
+                <div className="countrys-list">
                     {countries.map((country, index) => (
                         <Card
                             key={index}
-                            className="shadow-sm border bg-grey rounded flex-shrink-0  align-items-center countrys-card "
-
+                            className="shadow-sm border bg-grey countrys-card"
                         >
-                            {/* Country Image */}
-                            <Card.Img
-                                src={country.image}
-                                className="rounded mobile-view-card-img country-image "
-
-                            />
-
-                            {/* Country Text */}
-                            <Card.Body
-                                className="d-flex flex-column align-items-start mobile-view-card-body country-card-heading"
-
-                            >
-                                <div className="subheading-small-medium text-content-primary mobile-view-card-body">{country.name}</div>
-                                <div
-                                    className="paragraph-small-regular text-content-secondary m-0 mobile-view-card country-card-content"
-
-                                >
+                            <div className="country-image-container">
+                                <Card.Img
+                                    src={country.image}
+                                    className="rounded country-image"
+                                    alt={`${country.name} image`}
+                                />
+                            </div>
+                            <Card.Body className="country-card-heading p-0 ps-md-3">
+                                <h3 className="subheading-small-medium text-content-primary mb-2">{country.name}</h3>
+                                <p className="paragraph-small-regular text-content-secondary country-card-content m-0">
                                     {country.description}
-                                </div>
+                                </p>
                             </Card.Body>
                         </Card>
                     ))}
@@ -76,7 +59,6 @@ const CountriesWeServe = () => {
             </Container>
         </div>
     );
-
 };
 
 export default CountriesWeServe;
