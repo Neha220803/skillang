@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.623ff102.css",
-    "main.js": "/skillang/static/js/main.105ead8d.js",
+    "main.css": "/skillang/static/css/main.8eb86e85.css",
+    "main.js": "/skillang/static/js/main.c0625a01.js",
     "static/media/nurseHeaderImg.svg": "/skillang/static/media/nurseHeaderImg.c9f3653e073aca270662032d1b0b6b05.svg",
     "static/media/nursePathBg.svg": "/skillang/static/media/nursePathBg.4683a696eeab5cf14db9.svg",
     "static/media/nursePathMobBg.svg": "/skillang/static/media/nursePathMobBg.f65cf99ba1356df51d5e.svg",
@@ -68,6 +68,7 @@
     "static/media/uni-6.png": "/skillang/static/media/uni-6.fb3739485b1904164d6b.png",
     "static/media/skillshortage-bg.png": "/skillang/static/media/skillshortage-bg.6b3a3a665d003dc0b4cf.png",
     "static/media/uni-5.png": "/skillang/static/media/uni-5.4a08ec215c1e5bff36b7.png",
+    "static/media/nurseChallenge3.png": "/skillang/static/media/nurseChallenge3.368c9a4028932e1af0fe.png",
     "static/media/whySkillang2.png": "/skillang/static/media/whySkillang2.a548812c4870ebfa0801.png",
     "static/media/uni-4.png": "/skillang/static/media/uni-4.1030ac8bf99e5a0f9112.png",
     "static/media/work-opp-1.png": "/skillang/static/media/work-opp-1.4233504a0d0a09754761.png",
@@ -78,6 +79,7 @@
     "static/media/work-opp-2.png": "/skillang/static/media/work-opp-2.dfd52af1e7096df2fffe.png",
     "static/media/rejected.mp3": "/skillang/static/media/rejected.9b20c86ce38035b51a1f.mp3",
     "static/media/whySkillang1.png": "/skillang/static/media/whySkillang1.d7809f96f080fed3f40b.png",
+    "static/media/nurseChallenge2.png": "/skillang/static/media/nurseChallenge2.78c51a86c7f7fc509786.png",
     "static/media/nurseChallenge1.png": "/skillang/static/media/nurseChallenge1.67592d9f804a375a82e9.png",
     "static/media/uni-9.png": "/skillang/static/media/uni-9.40f88ab7fd367e5052be.png",
     "static/media/work-opp-7.svg": "/skillang/static/media/work-opp-7.3fee02bdd3b8fa1aa0948dbb11e35e39.svg",
@@ -145,11 +147,11 @@
     "static/media/whySkillangBg.svg": "/skillang/static/media/whySkillangBg.6c4cb31db94650b98333.svg",
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "index.html": "/skillang/index.html",
-    "main.623ff102.css.map": "/skillang/static/css/main.623ff102.css.map",
-    "main.105ead8d.js.map": "/skillang/static/js/main.105ead8d.js.map"
+    "main.8eb86e85.css.map": "/skillang/static/css/main.8eb86e85.css.map",
+    "main.c0625a01.js.map": "/skillang/static/js/main.c0625a01.js.map"
   },
   "entrypoints": [
-    "static/css/main.623ff102.css",
-    "static/js/main.105ead8d.js"
+    "static/css/main.8eb86e85.css",
+    "static/js/main.c0625a01.js"
   ]
 }
