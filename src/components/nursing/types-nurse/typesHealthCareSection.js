@@ -25,8 +25,6 @@ const TypesHealthCareSection = () => {
             <div>
               <div className="heading-big-medium text-md-center px-2">Types of Healthcare Facilities Hiring Nurses</div>
             </div>
-     
-          
             {nurseTypes.map((challenge, index) => (
               <Col lg={4} sm={12} xs={12} className='mt-4'>
               <Card key={index} className="nurse-types-card">

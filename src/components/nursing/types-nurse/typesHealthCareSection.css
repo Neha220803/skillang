@@ -12,3 +12,7 @@
     width: 100% !important;
     height: auto !important;
 }
+
+.nurse-types-card:hover{
+    cursor: pointer !important;
+}

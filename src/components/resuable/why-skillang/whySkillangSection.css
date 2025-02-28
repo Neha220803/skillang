@@ -27,11 +27,16 @@
      border: 2px solid transparent !important;
      background: linear-gradient(#3B3B3B, #3B3B3B) padding-box,
                 linear-gradient(to top right, #232323, #8A8A8A) border-box !important;
+    transition: all 0.5s ease-in-out !important;
 }
 
-.why-skillang-card img{
+.why-skillang-card-img{
     width: 100% !important;
     height: auto !important;
+}
+
+.why-skillang-card:hover {
+    transform: scale(1.02);
 }
 
 .emp-cont{

@@ -41,7 +41,7 @@ const WhySkillangSection = () => {
           {whySkillangCardData.map((card, index) => (
             <Col lg={4} key={index}>
               <Card className='why-skillang-card'>
-                <img src={card.image} alt={`why skillang ${index + 1}`} />
+                <img src={card.image} alt={`why skillang ${index + 1}`} className='why-skillang-card-img' />
                 <CardBody className='px-0'>
                   <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
                   <CardText className='paragraph-small-regular'>{card.text}</CardText>
