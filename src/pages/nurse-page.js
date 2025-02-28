@@ -6,7 +6,6 @@ import WhySkillangSection from '../components/resuable/why-skillang/whySkillangS
 import OurServices from '../components/nursing/nurseServices/ourServices'
 import OurReqProcess from '../components/nursing/req-process/ourReqProcess'
 import NurseLangSection from '../components/nursing/german-lang-training/nurseLangSection'
-import BookShelf from '../components/nursing/german-lang-training/bookShelf'
 import NursingPosition from '../components/nursing/nursing-posi/nursingPosi'
 import NurseChallengeSection from '../components/nursing/nurse-int-challenge/nurseChallengeSection'
 import NurseStats from '../components/resuable/nurse-stats/nurseStats'
