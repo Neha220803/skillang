@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import '../../index.css'; // Ensure styling is applied
-import '../../components/work-abroad/skillShartage.css';
 import './skillShartage.css';
 
 const SkillShortage = () => {
@@ -14,30 +13,32 @@ const SkillShortage = () => {
 
     return (
         <section className="skillshortage-bg position-relative my-5">
-            <Container className="p-5 rounded-4 text-light skillshortage-container">
-                <Row>
-                    {/* Left Side (Title & Description) */}
-                    <Col lg={6} className="d-flex flex-column justify-content-center left-content">
-                        <div className="mb-3 text-white heading-big-medium">Industries with Skill Shortages</div>
-                        <div className='paragraph-small-regular'>
-                            We focus on sectors with a high demand for skilled professionals,
-                            increasing your chances of securing employment and a work visa.
-                            Here are some primary industries we serve.
-                        </div>
-                    </Col>
-                    
-                    {/* Right Side (Accordion List) */}
-                    <Col lg={6} className="d-flex flex-column right-content">
-                        <Accordion defaultActiveKey="1"  className="custom-accordion">
-                            {industries.map((industry, index) => (
-                                <Accordion.Item key={index} eventKey={index.toString()} className="dark-accordion-item">
-                                    <Accordion.Header>{industry.title}</Accordion.Header>
-                                    <Accordion.Body className="bg-secondary text-light">{industry.description}</Accordion.Body>
-                                </Accordion.Item>
-                            ))}
-                        </Accordion>
-                    </Col>
-                </Row>
+            <Container className="p-0"> {/* Removed padding from container */}
+                <div className="skillshortage-container">
+                    <Row className="w-100 m-0">
+                        {/* Left Side (Title & Description) */}
+                        <Col lg={6} className="d-flex flex-column justify-content-center left-content mb-4 mb-lg-0">
+                            <div className="mb-3 text-white heading-big-medium">Industries with Skill Shortages</div>
+                            <div className='paragraph-small-regular'>
+                                We focus on sectors with a high demand for skilled professionals,
+                                increasing your chances of securing employment and a work visa.
+                                Here are some primary industries we serve.
+                            </div>
+                        </Col>
+
+                        {/* Right Side (Accordion List) */}
+                        <Col lg={6} className="d-flex flex-column right-content">
+                            <Accordion defaultActiveKey="1" className="custom-accordion w-100">
+                                {industries.map((industry, index) => (
+                                    <Accordion.Item key={index} eventKey={index.toString()} className="dark-accordion-item">
+                                        <Accordion.Header>{industry.title}</Accordion.Header>
+                                        <Accordion.Body className="bg-secondary text-light">{industry.description}</Accordion.Body>
+                                    </Accordion.Item>
+                                ))}
+                            </Accordion>
+                        </Col>
+                    </Row>
+                </div>
             </Container>
         </section>
     );
