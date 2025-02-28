@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.8eb86e85.css",
-    "main.js": "/skillang/static/js/main.c0625a01.js",
+    "main.css": "/skillang/static/css/main.7ef610b3.css",
+    "main.js": "/skillang/static/js/main.57bba2f0.js",
     "static/media/nurseHeaderImg.svg": "/skillang/static/media/nurseHeaderImg.c9f3653e073aca270662032d1b0b6b05.svg",
     "static/media/nursePathBg.svg": "/skillang/static/media/nursePathBg.4683a696eeab5cf14db9.svg",
     "static/media/nursePathMobBg.svg": "/skillang/static/media/nursePathMobBg.f65cf99ba1356df51d5e.svg",
@@ -147,11 +147,11 @@
     "static/media/whySkillangBg.svg": "/skillang/static/media/whySkillangBg.6c4cb31db94650b98333.svg",
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "index.html": "/skillang/index.html",
-    "main.8eb86e85.css.map": "/skillang/static/css/main.8eb86e85.css.map",
-    "main.c0625a01.js.map": "/skillang/static/js/main.c0625a01.js.map"
+    "main.7ef610b3.css.map": "/skillang/static/css/main.7ef610b3.css.map",
+    "main.57bba2f0.js.map": "/skillang/static/js/main.57bba2f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.8eb86e85.css",
-    "static/js/main.c0625a01.js"
+    "static/css/main.7ef610b3.css",
+    "static/js/main.57bba2f0.js"
   ]
 }
