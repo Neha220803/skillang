@@ -1,7 +1,7 @@
 /* Updated CSS for Service Offerings and Country Guidance */
 
 .service-bg {
-    background-image: url("../../../src/assets/images/work-abroad/service_offer_vis_guidence.png");
+    background-image: url("../../../src/assets/images/work-abroad/service.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,11 +17,12 @@
     height: 100vh;
     /* Adjust as needed */
     width: 100%;
+
 }
 
 .section-title {
     color: #4F8AFB !important;
-    margin-bottom: 12px !important;
+    margin-bottom: -100 !important;
 }
 
 .service-wave-layout {
@@ -145,6 +146,10 @@
     margin-bottom: 8px;
 }
 
+#chan {
+    height: fit-content;
+}
+
 .country-flag {
     width: 56px !important;
     height: auto !important;
@@ -186,4 +191,5 @@
     .country-card {
         margin-bottom: 20px;
     }
+
 }

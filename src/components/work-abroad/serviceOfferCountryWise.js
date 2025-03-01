@@ -77,7 +77,7 @@ const ServiceOfferCountryWise = () => {
         <div className="service-container">
             {/* Service Offerings Section */}
             <div className="service-bg">
-                <Container className="py-5">
+                <Container className="py-5 con1">
                     <Row className="justify-content-center mb-4">
                         <Col md={8} className="text-center">
                             <div className="section-title heading-big-medium">Service Offerings</div>
@@ -111,7 +111,7 @@ const ServiceOfferCountryWise = () => {
                     <Row className="justify-content-center mb-3 ">
 
                         <Col md={8} className="text-center">
-                            <div className="center-container">
+                            <div className="center-container " id="chan">
                                 <div className="tag-button text-center caption-bold">
                                     <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
                                     Skill Shortage Visas
@@ -119,7 +119,7 @@ const ServiceOfferCountryWise = () => {
                             </div>
 
 
-                            <div className="heading-big-medium">Work Visa Guidance Country-wise</div>
+                            <div className="heading-big-medium">Work Visa Guidance<br />Country-wise</div>
                             <div className="paragraph-big-medium text-content-secondary">
                                 Our comprehensive services are designed to streamline the process of securing a job and work visa in your chosen country.
                             </div>
