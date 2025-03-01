@@ -14,24 +14,20 @@ import '../../../App.css';
 
 const LoanSection = () => {
   return (
-    <div className="loan-section d-flex flex-column align-items-center justify-content-evenly h-md-100vh py-5 h-lg-100vh">
-      <Container>
+    <div className="d-flex flex-column align-items-center justify-content-evenly h-md-100vh py-5 h-lg-100vh">
+      <Container className="d-flex flex-column align-items-start justify-content-center">
         <Row className="mb-3 d-block d-md-none">
-          <h1>Loan and Scholarships Assistance</h1>
+          <div className="heading-big-medium">Loan and Scholarships Assistance</div>
         </Row>
-
-        <Row className="align-items-center">
-           <Col xs={12} sm={12} md={6} className="mb-4">
-              <Image fluid src={loanImg} className="loan-image rounded-4" />
-            </Col>
-          <Col xs={12} sm={12} md={6}>
+        <Row className="align-items-start">
+          <Col xs={12} sm={12} md={7} >
             {/* This heading will only show on md and larger screens */}
-            <h1 className="loan-heading d-none d-md-block">Loan and Scholarships Assistance</h1>
-            <p className="loan-description px-2">
+            <div className="heading-big-medium d-none d-md-block">Loan and Scholarships Assistance</div>
+            <div className="paragraph-big-medium text-content-secondary px-2">
               At SKILLANG, we understand that funding education abroad can be
               challenging. That's why we offer dedicated education loan services
               to help cover tuition, living expenses, and other study-related costs.
-            </p>
+            </div>
             <button
               className="btn-primary"
               onClick={() => {
@@ -44,6 +40,10 @@ const LoanSection = () => {
               Apply Now
             </button>
           </Col>
+
+          <Col xs={12} sm={12} md={6} lg={5} className="mb-4">
+              <Image fluid src={loanImg} className="loan-image rounded-4" />
+            </Col>
          
         </Row>
       </Container>

@@ -1,7 +1,5 @@
 import React from 'react';
 import './abroud_journey.css';
-
-import backgroundImage from '../../../src/assets/images/work-abroad/journey/jorneybg.png';
 import lineImage from '../../../src/assets/images/work-abroad/journey/line.png';
 import mobileTimelineImage from '../../../src/assets/images/work-abroad/journey/verticalline.png'; // Your mobile timeline image
 

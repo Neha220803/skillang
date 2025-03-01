@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import nurseBookBg1 from '../../../assets/images/nursing/nurseBookBg1.svg';
 import nurseBookBg2 from '../../../assets/images/nursing/nurseBookBg2.svg';
 import nurseBookBg3 from '../../../assets/images/nursing/nurseBookBg3.svg';

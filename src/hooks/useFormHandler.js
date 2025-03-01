@@ -20,7 +20,7 @@ const useFormHandler = () => {
     lookingFor: "",
     experience: "",
     county: "",
-    origin:""
+    origin: ""
   });
 
   // Countdown logic for Resend OTP
@@ -49,6 +49,12 @@ const useFormHandler = () => {
     }));
   };
 
+  // More generic handler for any option selection
+  const handleOptionSelect = (field, value) => {
+    setFormData((prevState) => ({ ...prevState, [field]: value }));
+  };
+
+  // Keep the original function for backward compatibility
   const handleExperienceSelect = (value) => {
     setFormData((prevState) => ({ ...prevState, experience: value }));
   };
@@ -56,7 +62,7 @@ const useFormHandler = () => {
   const sendFormData = async () => {
     try {
       const payload = { email: formData.email, name: formData.name };
-      await axios.post(`https://skillang.com/api/send-otp`, payload);
+      await axios.post("https://skillang.com/api/send-otp", payload);
       setStatus("📩 OTP has been sent to your mail!");
       setToastVariant("info");
       setShowToast(true);
@@ -76,7 +82,7 @@ const useFormHandler = () => {
 
   const handleVerifyOtp = async () => {
     try {
-      const response = await axios.post(`https://skillang.com/api/verify-otp`, {
+      const response = await axios.post("https://skillang.com/api/verify-otp", {
         email: formData.email,
         otp: otp.trim(),
       });
@@ -99,7 +105,7 @@ const useFormHandler = () => {
 
   const submitInquiry = async () => {
     try {
-      const response = await axios.post(`https://skillang.com/api/submit-to-google-sheets`, formData);
+      const response = await axios.post("https://skillang.com/api/submit-to-google-sheets", formData);
 
       setStatus(response.data.message || "✅ Inquiry submitted successfully!");
       setToastVariant("success");
@@ -112,6 +118,8 @@ const useFormHandler = () => {
         pincode: "",
         lookingFor: "",
         experience: "",
+        county: "",
+        origin: ""
       });
 
       setOtp("");
@@ -128,9 +136,8 @@ const useFormHandler = () => {
   };
 
   const handleOtpChange = (e) => {
-  setOtp(e.target.value);
-};
-
+    setOtp(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -155,8 +162,9 @@ const useFormHandler = () => {
         return;
       }
 
-      if (!formData.experience) {
-        setStatus("❌ Please select your experience level.");
+      // Check if lookingFor is selected
+      if (!formData.lookingFor) {
+        setStatus("❌ Please select what you're looking for.");
         setToastVariant("danger");
         setShowToast(true);
         return;
@@ -182,6 +190,7 @@ const useFormHandler = () => {
     validated,
     handleInputChange,
     handleExperienceSelect,
+    handleOptionSelect,
     handleSubmit,
     handleVerifyOtp,
     handleResendOtp,

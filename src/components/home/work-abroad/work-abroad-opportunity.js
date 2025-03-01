@@ -1,123 +1,50 @@
 import React from 'react';
-import { CardTitle, Container, Card, Row, Col, CardBody } from 'react-bootstrap';
-import Slider from 'react-slick';
+import { CardTitle, Container, Card, Row, Col, CardBody, CardText } from 'react-bootstrap';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import '../../../App.css';
 import './work-abroad-opportunity.css';
 import '../../../index.css';
-import work1 from '../../../assets/images/home/work-opp-1.png';
-import work2 from '../../../assets/images/home/work-opp-2.png';
-import work3 from '../../../assets/images/home/work-opp-3.png';
-import work4 from '../../../assets/images/home/work-opp-4.svg';
-import work5 from '../../../assets/images/home/work-opp-5.svg';
-import work6 from '../../../assets/images/home/work-opp-6.svg';
-import work7 from '../../../assets/images/home/work-opp-7.svg';
-import work8 from '../../../assets/images/home/work-opp-8.svg'; 
-import work9 from '../../../assets/images/home/work-opp-9.svg'; 
-import work10 from '../../../assets/images/home/work-opp-10.svg'; 
+import work1 from '../../../assets/images/home/workAbroadCard1.png';
+import work2 from '../../../assets/images/home/workAbroadCard2.png';
+import work3 from '../../../assets/images/home/workAbroadCard3.png';
 
 const primCardData = [
-  { title: "Nursing and Health care", img: work1, color: "#E5ECF9" },
-  { title: "Information Technology", img: work2, color: "#F3EEFC" },
-  { title: "Hospitality Management", img: work3, color: "#FBEAEA" }
-];
-
-const secCardData = [
-  { title: "Electrical and Electronics", img: work4, color: "#E5ECF9" },
-  { title: "Plumbing", img: work5, color: "#F3EEFC" },
-  { title: "Vehicle Painting", img: work6, color: "#FBEAEA" },
-  { title: "Automobile", img: work7, color: "#E5ECF9" },
-  { title: "Mechanical", img: work8, color: "#F3EEFC" },
-  { title: "Heavy Welding", img: work9, color: "#FBEAEA" },
-  { title: "Heavy Vehicle Driver", img: work10, color: "#E5ECF9" }
+  { title: "Nursing & Healthcare", img: work1, color: "#FCEBC3", colSize: 6, desc: 'Security testing involves evaluating software to ensure information protection.' },
+  { title: "Hospitality Management", img: work2, color: "#FFFFFF", colSize: 3,desc: 'Security testing involves evaluating software to ensure information protection.'  },
+  { title: "Information Technology", img: work3, color: "#FFFFFF", colSize: 3,desc: 'Security testing involves evaluating software to ensure information protection.' }
 ];
 
 const WorkAbroadOpportunity = () => {
-  const sliderSettings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    swipeToSlide: true, // Allows users to swipe freely
-    variableWidth: true, // Allows cards to have variable widths and move naturally
-    arrows:true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-          dots: false,
-        arrows: true, 
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-           dots: false,
-        arrows: false, 
-        }
-      }
-    ]
-  };
-
   return (
     <section className='d-flex flex-column align-items-center justify-content-center' id="work-abroad">
-      <Container className='d-flex flex-column align-items-center justify-content-center gap-4'>
-        <Row className='my-lg-4 my-md-4 mt-4 mb-1'>
-          <h1> Work Abroad Opportunities </h1>
-        </Row>
-
         {/* Primary Cards */}
-        <Row className=' align-items-center justify-content-center w-100'>
+        <Container className='work-abroad-bg-card align-items-center justify-content-center w-100'>
+          <Row className=' mb-2'>
+          <div className='heading-big-medium text-content-primary text-center'> Work Abroad Opportunities </div>
+        </Row>
+          <Row>
           {primCardData.map((card, index) => (
-            <Col key={index} lg={4} md={6} sm={12} xs={12}>
-              <Card className='prim-card d-flex flex-row-reverse border-0 mb-3' style={{ backgroundColor: card.color }}>
-                <Card.Img variant="top" src={card.img} alt="Card image" style={{ width: '45%', height: 'auto' }} />
-                <CardBody className='d-flex flex-column justify-content-around'>
-                  <CardTitle>{card.title}</CardTitle>
-                  <button className='btn-primary-outline' style={{ width: '120px' }} onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }}>Get Started</button>
+            <Col key={index} lg={card.colSize} md={6} sm={12} xs={12} className='g-3'>
+              <Card className='prim-card d-flex border-0 mb-2' style={{ backgroundColor: card.color }}>
+                <Card.Img variant="top" className='work-card-img' src={card.img} alt="Card image"  />
+                <CardBody className='d-flex flex-column justify-content-around px-1'>
+                  <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
+                  <CardText className='paragraph-small-regular'>{card.desc}</CardText>
+                  <div>
+                  <button className='btn-secondary' onClick={() => {
+                      window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth',
+                      });
+                    }}>Get Started</button>
+                    </div>
                 </CardBody>
               </Card>
             </Col>
           ))}
-        </Row>
-        <Row className='w-100 '>
-          <Slider {...sliderSettings}>
-            {secCardData.map((card, index) => (
-              <div key={index} className='px-2'>
-                <Card className='sec-card d-flex flex-row border-0 ms-4'>
-                  <div className="sec-card-icon-wrapper">
-                    <img src={card.img} alt="Icon" className="sec-card-icon" />
-                  </div>
-                  <CardBody className='d-flex flex-column justify-content-center align-items-end '>
-                    <div className='sec-card-text-wrapper'>
-                       <CardTitle className='inside-text'>{card.title}</CardTitle>
-                    </div>
-                   
-                  </CardBody>
-                </Card>
-              </div>
-            ))}
-          </Slider>
-        </Row>
-
-        <Row>
-          <button className='btn-primary-outline mt-py-5 mt-2' onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }}>Apply Now</button>
-        </Row>
-      </Container>
+          </Row>
+        </Container>
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-bootstrap";
 import axios from "axios";
 import "../home-page.css";
@@ -9,7 +9,6 @@ import headerbg from "../../../assets/images/home/header-bg1.svg";
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import useFormHandler from "../../../hooks/useFormHandler";
-
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -41,9 +40,7 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   );
 };
 
-
 const HomeHeader2 = () => {
-
   const {
     formData,
     otp,
@@ -57,7 +54,7 @@ const HomeHeader2 = () => {
     isOtpSent,
     validated,
     handleInputChange,
-    handleExperienceSelect,
+    handleOptionSelect,
     handleSubmit,
     handleOtpChange,
     handleVerifyOtp,
@@ -65,54 +62,80 @@ const HomeHeader2 = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  formData.experience = "Not Applicable (Home Page Form)"
-  formData.county = "Not Applicable (Home Page Form)";
-  formData.origin = "Home Page Form";
+  
+  // Set default values for form
+  useEffect(() => {
+    // Only set these values once on component mount
+    handleOptionSelect("experience", "Not Applicable (Home Page Form)");
+    handleOptionSelect("county", "Not Applicable (Home Page Form)");
+    handleOptionSelect("origin", "Home Page Form");
+  }, []);
+
+  // Handler for the looking-for selection with direct label click
+  const handleLookingForSelect = (option) => {
+    handleOptionSelect("lookingFor", option);
+  };
 
   return (
     <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
-      <Container className="my-lg-1">
-        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
-          <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
-            <Image src={headerbg} fluid className="w-100 px-lg-2" />
+      <Container className="">
+        <Row className="">
+          <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-0">
+            <Image src={headerbg} fluid className="w-100 px-lg-5" />
           </Col>
 
-          <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
-            <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
+          <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
+            <Container className="d-flex align-items-center justify-content-center flex-column">
               <div className="form-container m-0">
-                <h3>Let's Connect to Explore More!</h3>
-                <div className="mb-3">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
+                <div className="subheading-small-medium text-center mb-1">Let's Connect to Explore More!</div>
+                <div className="mb-3 text-center paragraph-small-regular text-content-tertiary">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                  <Form.Group className="mb-3" controlId="formName">
+                  <Form.Group className="" controlId="formName">
                     <Form.Control type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} required minLength={3} maxLength={40} />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formEmail">
+                  <Form.Group className="" controlId="formEmail">
                     <Form.Control type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />
                   </Form.Group>
                   <Row>
-                    <Col md={6} className="mb-3">
+                    <Col md={6} className="">
                       <Form.Group controlId="formNumber">
                         <Form.Control type="tel" placeholder="Mobile" name="phone" value={formData.phone} onChange={handleInputChange} required pattern="[0-9]{10}" />
                       </Form.Group>
                     </Col>
-                    <Col md={6} className="mb-3">
+                    <Col md={6} className="">
                       <Form.Group controlId="formpincode">
                         <Form.Control type="tel" placeholder="Pin Code" name="pincode" value={formData.pincode} onChange={handleInputChange} required pattern="[0-9]{6}" />
                       </Form.Group>
                     </Col>
                   </Row>
                   <Form.Group className="mb-3" controlId="formLookingFor">
-                    <Form.Select name="lookingFor" value={formData.lookingFor} onChange={handleInputChange} required>
-                      <option value="">Looking For?</option>
-                      <option value="Nursing">Nursing</option>
-                      <option value="Work Abroad">Work Abroad</option>
-                      <option value="Study Abroad">Study Abroad</option>
-                      <option value="Language Prep">Language & Test Prep</option>
-                    </Form.Select>
+                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking For ?</Form.Label>
+                    <div className="d-flex gap-2 flex-wrap">
+                      {["Nursing", "Study Abroad", "Work Abroad", "Test & Language Prep"].map((option, index) => (
+                        <div 
+                          key={index} 
+                          className={`experience-option ${formData.lookingFor === option ? "selected" : ""}`}
+                          onClick={() => handleLookingForSelect(option)}
+                        >
+                          <label className="w-100 m-0 caption-regular text-content-secondary">
+                            {option}
+                          </label>
+                          <input
+                            type="radio"
+                            id={`looking-for-${index}`}
+                            name="lookingFor"
+                            value={option}
+                            checked={formData.lookingFor === option}
+                            onChange={() => {}} // Handled by the onClick on parent div
+                            hidden
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </Form.Group>
 
                   {otpVisible && (
-                    <Row className="mb-3">
+                    <Row className="">
                       <Col lg={8}>
                         <Form.Control type="text" placeholder="Enter OTP - Sent in mail" value={otp} onChange={handleOtpChange} required />
                         <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
@@ -120,13 +143,13 @@ const HomeHeader2 = () => {
                         </div>
                       </Col>
                       <Col lg={4}>
-                        <button className="btn-secondary w-100" type="button" onClick={handleVerifyOtp}>Verify OTP</button>
+                        <button className="btn-secondary w-100"  onClick={handleVerifyOtp}>Verify OTP</button>
                       </Col>
                     </Row>
                   )}
 
-                  <button className="btn-primary mt-3" type="submit">Book your free consultation</button>
-                  <div className="text-center">By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
+                  <button className="btn-primary " type="submit">Book your free consultation</button>
+                  <div className="text-center caption-regular text-content-secondary mt-1">By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
                 </Form>
               </div>
             </Container>
