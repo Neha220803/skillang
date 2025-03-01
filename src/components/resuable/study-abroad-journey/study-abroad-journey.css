@@ -12,6 +12,8 @@
   white-space: nowrap;
   display: flex;
   padding-bottom: 15px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Hide scrollbar */
@@ -19,15 +21,48 @@
   display: none;
 }
 
-.custom-card {
+.card-container {
+  width: 300px;
   flex: 0 0 auto;
+}
+
+.custom-card {
   width: 300px !important;
-  max-width: 300px !important;
-  height: 100% !important;
   border-radius: 12px;
-  padding: 12px !important;
   box-sizing: border-box;
+  height: 100% !important;
   background-color: #3B3B3B !important;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Card description styling */
+.card-desc {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button styling */
+.btn-learn-more {
+  margin-top: auto;
+  font-size: 0.9rem;
+  padding: 5px 15px;
+}
+
+/* Card body content */
+.card-body-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* Background Image for Cards */
@@ -37,29 +72,4 @@
   background-size: cover;
   background-position: center;
   border-radius: 12px 12px 0 0;
-}
-
-/* Mobile screens (up to 640px) */
-@media (max-width: 640px) {
-  .custom-card {
-    height: 230px !important;
-    padding: 10px !important;
-    width: 305px !important;
-  }
-}
-
-/* Medium screens (between 440px and 1023px) */
-@media (min-width: 440px) and (max-width: 1023px) {
-  .custom-card {
-    height: 280px !important;
-    padding: 0px !important;
-  }
-}
-
-/* Large screens (Laptops & Desktops) */
-@media (min-width: 1024px) {
-  .custom-card {
-    height: 300px;
-    padding: 24px;
-  }
 }

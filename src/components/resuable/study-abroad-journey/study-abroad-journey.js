@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardImg, CardText, Container, Row } from "react-bootstrap";
+import { Card, Container, Row } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../../App.css';
@@ -30,21 +30,23 @@ export default function StudyAbroad() {
   return (
     <Container className="mx-auto align-items-center justify-content-center study-abroad-bg text-white" id="study-abroad">
       <div className="text-center my-lg-4 heading-big-medium">Study Abroad Journey</div>
-      
+     
       {/* Scrollable Row */}
       <div className="countrys-list">
-        <Row className="d-flex flex-nowrap">
+        <Row className="d-flex flex-nowrap scrollable-container">
           {cardData.map((card, index) => (
-            <div key={index} className="px-3">
-              <Card className="custom-card my-4 border-0 d-flex align-items-center justify-content-center text-white" >
-                <div className="p-lg-3 p-2 card-image-wrapper" style={{ backgroundImage: `url(${card.img})` }}></div>
-                <CardBody>
-                  <Card.Title className="fw-bold"><h3>{card.title}</h3></Card.Title>
-                  <CardText className="card-desc">{card.desc}</CardText>
-                  <button className="btn btn-primary" onClick={() => {
+            <div key={index} className="card-container px-3">
+              <Card className="custom-card my-4 border-0 text-white">
+                <div className="card-image-wrapper p-lg-3 p-2" style={{ backgroundImage: `url(${card.img})` }}></div>
+                <Card.Body className="card-body-content">
+                  <Card.Title className="card-title fw-bold">{card.title}</Card.Title>
+                  <Card.Text className="card-desc">{card.desc}</Card.Text>
+                  <div className="text-center mt-2">
+                    <button className="btn btn-primary btn-learn-more" onClick={() => {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}>Learn More</button>
-                </CardBody>
+                    }}>Learn More</button>
+                  </div>
+                </Card.Body>
               </Card>
             </div>
           ))}
