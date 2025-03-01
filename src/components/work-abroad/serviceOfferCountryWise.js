@@ -109,13 +109,16 @@ const ServiceOfferCountryWise = () => {
                 {/* Country Guidance Section */}
                 <Container className="py-5">
                     <Row className="justify-content-center mb-3 ">
-                         
+
                         <Col md={8} className="text-center">
-                        <div className="tag-button text-center caption-bold">
-                                <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
-                                Skill Shortage Visas
+                            <div className="center-container">
+                                <div className="tag-button text-center caption-bold">
+                                    <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
+                                    Skill Shortage Visas
+                                </div>
                             </div>
-                           
+
+
                             <div className="heading-big-medium">Work Visa Guidance Country-wise</div>
                             <div className="paragraph-big-medium text-content-secondary">
                                 Our comprehensive services are designed to streamline the process of securing a job and work visa in your chosen country.
@@ -138,7 +141,7 @@ const ServiceOfferCountryWise = () => {
                         ))}
                     </Row>
                     <div className="d-flex justify-content-center mx-auto align-items-center mt-4">
-                            <button className="btn-primary">Book Free Consultation</button>
+                        <button className="btn-primary">Book Free Consultation</button>
                     </div>
                 </Container>
             </div>

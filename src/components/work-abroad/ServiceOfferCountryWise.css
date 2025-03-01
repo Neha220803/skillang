@@ -10,6 +10,15 @@
     padding: 3rem 0;
 }
 
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust as needed */
+    width: 100%;
+}
+
 .section-title {
     color: #4F8AFB !important;
     margin-bottom: 12px !important;
@@ -144,6 +153,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .service-item:hover .service-description-popup {
+        display: none !important;
+    }
+
     .service-wave-layout {
         height: auto;
         background: none;

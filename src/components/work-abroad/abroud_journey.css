@@ -7,9 +7,9 @@
 
 /* Wrapper with background image */
 .work-abroad-wrapper {
-    width: 100%;
-    max-width: 1440px;
-    height: 538px;
+    width: 100% !important;
+    max-width: 1440px !important;
+    height: 538px !important;
     margin: 0 auto;
     padding: 0 80px;
     background-image: url('../../../src/assets/images/work-abroad/journey/jorneybg.png');
@@ -66,43 +66,25 @@
     height: auto;
 }
 
-/* Images Section */
-.journey-images {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    gap: 40px;
-    margin-top: 20px;
-    /* Adjusted to prevent overlap */
-    position: relative;
-    z-index: 2;
-    /* Ensuring images appear above progress line */
-}
-
-/* Image styling */
-.journey-image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 180px;
-}
-
-.journey-image-item img {
+/* Mobile view - hidden by default */
+.mobile-journey {
+    display: none;
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    /* Ensuring no duplicate display */
+    text-align: center;
 }
 
-/* Labels below each step */
-.journey-label {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 500;
-    text-align: center;
+.mobile-timeline-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility classes for responsive design */
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
 }
 
 /* Fixing the curve at the bottom */
@@ -117,4 +99,49 @@
     border-radius: 50% 50% 0 0 / 100%;
     box-shadow: 0 40px 0 0 white;
     z-index: 1;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .work-abroad-wrapper {
+        padding: 20px;
+        height: auto !important;
+        min-height: auto;
+        background-image: none;
+        /* Remove background image in mobile */
+        background-color: white;
+        /* Set white background */
+    }
+
+    .work-abroad-header {
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .work-abroad-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .work-abroad-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Hide desktop elements, show mobile elements */
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-journey {
+        display: block;
+        margin: 0;
+    }
+
+    /* Remove the curved bottom in mobile */
+    .work-abroad-wrapper::after {
+        display: none;
+    }
 }
