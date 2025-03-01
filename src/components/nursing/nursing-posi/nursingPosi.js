@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Container, Col, Row, Card, CardBody, Button } from "react-bootstrap";
+import { Container, Col, Row, Card, CardBody } from "react-bootstrap";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import "./nursePosi.css";
 import '../../../index.css';

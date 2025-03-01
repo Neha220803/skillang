@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardText, CardTitle, Container, Image, Col, Card, Row } from 'react-bootstrap';
+import { CardTitle, Container, Col, Card, Row } from 'react-bootstrap';
 import ntype1 from '../../../assets/images/nursing/nType1.png';
 import ntype2 from '../../../assets/images/nursing/nType2.png';
 import ntype3 from '../../../assets/images/nursing/nType3.png';

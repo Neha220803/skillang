@@ -7,10 +7,8 @@ import UniPartner from "../components/resuable/uni-partner/uni-partner";
 import InternshipSection from "../components/home/internship/internship";
 import TestPrep from "../components/home/test-prep/test-prep";
 import LoanSection from "../components/home/loan/loan-section";
-import PartnerSection from "../components/home/partner/partner-section";
 import HomeHeader2 from "../components/home/header/home-header-2";
 import PartnerWithUsSection from "../components/resuable/partner-with-us/partnerWithUs";
-import ScrollEle from "../components/resuable/uni-partner/scroll";
 
 const HomePage = () => {
   return (

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Container, Col, Button, Row, Form, Image, Toast, ToastContainer, Carousel } from "react-bootstrap";
-import axios from "axios";
 import workImage1 from "../../../assets/images/landing/work-1.png"; // Replace with your image path
 
 import successSound from '../../../assets/sounds/success.mp3';
