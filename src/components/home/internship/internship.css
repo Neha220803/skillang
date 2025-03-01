@@ -2,16 +2,15 @@
   background-color: #F8F8F8 !important;
   color: #5B5B5B !important;
   font-weight: 400 !important;
-  width: 450px !important;
+  width: 100% !important;
   height: 200px !important;
-  position: relative; 
   overflow: hidden !important;
-  text-align: end !important;
-  padding-left: 40px !important;
-   border-radius: 15px !important;
-     min-width: 250px !important;
-  max-width: 570px; 
-  vertical-align: middle !important;
+  text-align: start !important;
+  border-radius: 8px !important;
+  min-width: 250px !important;
+  justify-items: start !important;
+  justify-content: start !important;
+  padding: 15px !important;
 }
 
 
@@ -24,84 +23,17 @@
 
 }
 
-.intern-card p, .intern-card h3, .intern-card span {
-  white-space: normal !important; /* Allows text to wrap */
-  word-wrap: break-word !important; /* Breaks long words */
-  overflow: hidden !important;
-  display: block;
-  max-width: 100%;
-}
-
-.intern-card-icon-wrapper {
-  position: absolute;
-  top: -20px; 
-  left: -20px; 
-  width: 115px; 
-  height: 115px; 
-  background-color: #F2F2F9; 
-  border-radius: 50%;
-  /* border: 2px solid #E5ECF9;  */
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
-}
-
-.intern-card-icon {
-  width: 80%; /* Icon size, adjust as necessary */
-  height: 80%;
-  object-fit:scale-down; /* Ensures the image fits in the circle */
-  
-}
 
 .intern-card-text-wrapper{
   /* background-color: pink; */
-   width: 70%;
+   width: 65%;
   text-align: start !important;
 }
 
-
-.internship-slider-wrapper {
-  width: 100%;
+.internship-slider-wrapper{
+  /* background-color: pink !important; */
+  row-gap: 20px !important;
+  border-radius: 24px !important;
   padding: 0 !important;
-  margin: 0 !important;
-
-}
-
-.intern-card-wrapper {
-  padding: 10px !important; 
-
-}
-
-
-
-.slick-slider {
-  overflow: hidden; /* Prevents unwanted wrapping */
-}
-
-.slick-track {
-  display: flex !important;
-  flex-wrap: nowrap !important; /* Forces all items to stay in a single row */
-  white-space: nowrap !important;
-}
-
-.slick-slide {
-  display: inline-block !important; /* Ensures each slide respects variable width */
-   margin: 0 -6px !important; /* Reduce spacing between slides */
-}
-
-.slick-prev:before, 
-.slick-next:before {
-  color: grey;  /* Sets the arrow color to black */
-  font-size: 24px;  /* Adjusts the arrow size if needed */
-  opacity: 1;       /* Ensures full visibility */
-}
-
-/* Optional: Adjust arrow positioning */
-.slick-prev {
-  left: -30px;  /* Moves the left arrow slightly outside */
-}
-
-.slick-next {
-  right: -30px; /* Moves the right arrow slightly outside */
+  overflow: hidden !important;
 }

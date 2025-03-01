@@ -1,12 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
-import {
-  CardBody,
-  CardTitle,
-  Container,
-  Row,
-  Card,
-} from "react-bootstrap";
+import { Container, Row, Col, Card, CardBody, CardTitle } from "react-bootstrap";
 import "../home-page.css";
 import "../../../App.css";
 import "./internship.css";
@@ -22,98 +15,50 @@ import intern7 from "../../../assets/images/home/intern-7.svg";
 import intern8 from "../../../assets/images/home/intern-8.svg";
 
 const internCardData = [
-  { title: "Job Oriented free study", img: intern1, desc: "No or minimal fee charged for the Ausbildung program in germany." },
-  { title: "No Block Account needed", img: intern2, desc: "There is no block account required to show the fund backup" },
-  { title: "Earn while you Learn", img: intern3, desc: "Students earn and gain industry experience through paid internships." },
-  { title: "Language Training", img: intern4, desc: "Our language training programs provide expert coaching in German Language" },
-  { title: "Eligibility", img: intern5, desc: "German Language proficiency: A2 level. 12th passed with aboave 50%. Age limit: Below 37 years." },
-  { title: "PR Possibility", img: intern6, desc: "Our Employability program boosts PR chances in Germany." },
-  { title: "Post Study Visa & Placement Assistance", img: intern7, desc: "1.5 years stay-back for post-study work. Placement assistance for job opportunity" },
-  { title: "Diverse Industry Options", img: intern8, desc: "Diverse industry options available. Over 300+ formal training programs offered" },
+  { title: "Job Oriented free study", img: intern1, desc: "No or minimal fee charged for the Ausbildung program in Germany.", colSpan: 4 },
+  { title: "No Block Account needed", img: intern2, desc: "There is no block account required to show the fund backup", colSpan: 4 },
+  { title: "Earn while you Learn", img: intern3, desc: "Students earn and gain industry experience through paid internships.", colSpan: 4 },
+  { title: "Post Study Visa & Placement Assistance", img: intern4, desc: "1.5 years stay-back for post-study work. Placement assistance for job opportunity", colSpan: 6 },
+  { title: "Diverse Industry Options", img: intern5, desc: "Diverse industry options available. Over 300+ formal training programs offered", colSpan: 6 },
+  { title: "Language Training", img: intern6, desc: "Our language training programs provide expert coaching in German Language", colSpan: 4 },
+  { title: "Eligibility", img: intern7, desc: "German Language proficiency: A2 level. 12th passed with above 50%. Age limit: Below 37 years.", colSpan: 4 },
+  { title: "PR Possibility", img: intern8, desc: "Our Employability program boosts PR chances in Germany.", colSpan: 4 },
 ];
-
-const sliderSettings = {
-  infinite: false,
-  speed: 500,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-      swipeToSlide: true, // Allows users to swipe freely
-    variableWidth: true, // Allows cards to have variable widths and move naturally
-  arrows: true,
-  dots: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false, 
-      },
-    },
-     {
-      breakpoint: 400,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false, 
-      },
-    },
-  ],
-};
 
 const InternshipSection = () => {
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center py-5">
+    <section className="d-flex flex-column align-items-center justify-content-center py-5">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-lg-4 mb-md-4  text-center ">
-          <h1>Ausbildung (internship) Program in Germany</h1>
+        <Row className="mb-lg-4 mb-md-4 text-center w-75">
+          <div className="heading-big-medium">Ausbildung (Internship) Program in Germany</div>
+          <div className="paragraph-big-medium text-content-secondary">
+            Gain hands-on experience and build a successful career in Germany with the Ausbildung Internship Program.
+          </div>
         </Row>
 
-       <Row className="internship-slider-wrapper">
-  <Slider {...sliderSettings}>
-    {internCardData.map((card, index) => (
-      <div key={index} className="intern-card-wrapper">
-        <Card className="intern-card d-flex flex-row border-0 ms-1">
-          <div className="intern-card-icon-wrapper">
-            <img src={card.img} alt="Icon" className="intern-card-icon" />
-          </div>
-          <CardBody className="d-flex flex-column justify-content-around align-items-end">
-            <div className="intern-card-text-wrapper">
-              <CardTitle><h3>{card.title}</h3></CardTitle>
-              <p className="card-desc">{card.desc}</p>
-            </div>
-          </CardBody>
-        </Card>
-      </div>
-    ))}
-  </Slider>
-</Row>
-        <Row>
-          <button
-            className="btn-primary-outline mt-lg-4 mt-md-4"
-            onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              });
-            }}
-          >
-            Enquiry Now
-          </button>
+        <Row className="internship-slider-wrapper p-0 m-0">
+          {internCardData.map((card, index) => (
+            <Col key={index} lg={card.colSpan} md={6} sm={12} className="intern-card-wrapper">
+              <Card 
+                className="intern-card d-flex flex-row border-0 "
+                style={{
+                  backgroundImage: `url(${card.img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <CardBody className="d-flex flex-column justify-content-start align-items-start">
+                  <div className="intern-card-text-wrapper">
+                    <CardTitle><div className="subheading-small-medium text-content-secondary">{card.title}</div></CardTitle>
+                    <p className="caption-medium text-content-tertiary">{card.desc}</p>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 

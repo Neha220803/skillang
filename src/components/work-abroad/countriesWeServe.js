@@ -38,7 +38,7 @@ const CountriesWeServe = () => {
                     {countries.map((country, index) => (
                         <Card
                             key={index}
-                            className="  countrys-card"
+                            className="countrys-card"
                         >
                             <div className="country-image-container">
                                 <Card.Img

@@ -5,7 +5,7 @@ import './partnerWithUs.css';
 
 const PartnerWithUsSection = () => {
   return (
-    <div>
+    <div className='d-flex flex-column align-items-center justify-content-center mb-5'>
         <Container className='nurse-partner-bg text-white text-start'>
             <Row>
                 <Col className='d-none d-md-block' md={6} sm={12} xs={12}>

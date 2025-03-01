@@ -1,154 +1,44 @@
-.prim-card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-}
-
-
 .prim-card {
-  padding-left: 40px;
-  padding-bottom: 0%;
-  padding-right: 5px ;
+  padding: 24px !important;
   width: 100% !important;
-  height: 180px !important;
-  border-radius: 12px !important;
+  height: 100% !important;
+  border-radius: 23px !important;
   justify-content:space-evenly !important;
   overflow: hidden !important;
   border-radius: 12px !important;
 }
 
 
-img{
+.work-card-img{
   padding: 0% !important;
   margin: 0 !important;
+  height: auto !important;
+  width: 100% !important;
+  border-radius: 12px !important;
 
 }
 
-.sec-card {
-  background-color: #F8F8F8 !important;
-  color: #5B5B5B !important;
-  font-weight: 400 !important;
-  /* width: fit-content !important; */
-  width: 275px !important;
-  height: 130px !important;
-  position: relative; /* Required for positioning the circle */
-  overflow: hidden !important;
-  text-align: end !important;
-  padding-left: 40px !important;
-  border-radius: 21px !important;
-  
-}
-
-.sec-card-icon-wrapper {
-  position: absolute;
-  top: -20px; 
-  left: -20px; 
-  width: 125px; 
-  height: 125px; 
-  background-color: #F2F2F9; 
-  border-radius: 50%;
-  /* border: 2px solid #E5ECF9;  */
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
-}
-
-.sec-card-text-wrapper{
-  width: 80% !important;
-  text-align: center !important;
-   white-space: normal !important;  /* Allows multi-word text to wrap */
-  word-wrap: break-word !important; /* Ensures long single words wrap */
-  overflow-wrap: break-word  !important; /* Alternative for better browser support */
-  text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
-  overflow: hidden  !important; /* Hides overflowing content */
-  display: block ; /* Ensures proper block behavior */
-}
-
-.sec-card-icon {
-  width: 80% !important; 
-  height:80%  !important;
-  object-fit: scale-down !important; /* Ensures the image fits in the circle */
-}
-
-.sec-card-img {
-  background-color: #F2F2F9 !important;
+.work-abroad-bg-card{
+  background-image: url('../../../assets/images/home/workAbroadBg.svg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius: 24px !important;
+  padding: 56px 40px 40px !important;
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .sec-card {
-    height: 100px !important;
-    font-weight: 200 !important;
-    font-size: 14px !important;
-    border-radius: 12px !important;
-    
-  }
-
-  .sec-card-icon-wrapper {
-    width: 100px !important;
-    height: 100px !important;
-    padding: 14px !important;
-  }
-  .sec-card-text-wrapper {
-    width: 75%;
-  }
+  
 }
 
 @media (max-width: 576px) {
+
+  .work-card-img{
+    height: 180px !important;
+    width: auto;
+    object-fit: cover;
+  }
  
-  .sec-card {
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px !important;
-    padding: 15px;
-   height: 60px !important;
-   width: max-content !important;
-   min-width: 120px !important;
-    max-width: 180px !important;
-  }
-  .sec-card-icon-wrapper {
-    width: 70px !important;
-    height: 70px !important;
-  }
-  .sec-card-text-wrapper {
-    width: 90% !important;
-    /* padding-left: 5px !important; */
-    font-size: 8px !important;
-    white-space: normal !important;  
-    word-wrap: break-word !important; /* Ensures long single words wrap */
-    overflow-wrap: break-word  !important; /* Alternative for better browser support */
-    text-overflow: ellipsis  !important; /* Adds "..." if overflow occurs */
-    overflow: hidden  !important; /* Hides overflowing content */
-    display: block ; /* Ensures proper block behavior */
-  }
 
-  .inside-text{
-    font-size: 8px !important;
-    /* background-color: pink !important; */
-     white-space:wrap !important;  
-     width: 70px !important;
-    word-wrap: break-word !important; /* Ensures long single words wrap */
-    overflow-wrap: break-word  !important; /* Alternative for better browser support */
-    
-    
-
-  }
-}
-
-.slick-prev:before, 
-.slick-next:before {
-  color: grey;  /* Sets the arrow color to black */
-  font-size: 24px;  /* Adjusts the arrow size if needed */
-  opacity: 1;       /* Ensures full visibility */
-}
-
-/* Optional: Adjust arrow positioning */
-.slick-prev {
-  left: -30px;  /* Moves the left arrow slightly outside */
-}
-
-.slick-next {
-  right: -30px; /* Moves the right arrow slightly outside */
+  
 }
