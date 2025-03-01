@@ -7,7 +7,6 @@ import germanyImage from "../../assets/images/work-abroad/countrygermany.png";
 import irelandImage from "../../assets/images/work-abroad/countryireland.png";
 import ukImage from "../../assets/images/work-abroad/countryuk.png";
 import usaImage from "../../assets/images/work-abroad/countryusa.png";
-import "../home/home-page.css";
 import "../home/header/home-header.css";
 import "../../../src/index.css";
 import "../work-abroad/countriesWeServe.css";

@@ -1,0 +1,113 @@
+/* ParallaxScrollSnap.css - Properly scoped to avoid affecting other components */
+
+/* Main container that holds all the parallax sections */
+.parallax-outer-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Only takes up one viewport height in the page flow */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory !important;
+  /* scroll-behavior: smooth !important; */
+  scrollbar-width: none !important;
+}
+
+/* Individual parallax sections */
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+
+/* Modified approach - we'll use scroll snapping instead of absolute positioning */
+.parallax-section {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.parallax-section.active {
+  opacity: 1;
+}
+
+/* .parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: -1;
+} */
+
+.section-content {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 100%;
+  height: fit-content !important;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Navigation dots */
+.parallax-nav-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.parallax-nav-dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white; /* Default color will be overridden */
+  margin: 10px 0;
+  opacity: 0.5;
+  transition: opacity 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+/* Custom colors for each dot */
+.parallax-nav-dot:nth-child(1) {
+  background-color: #E95454;
+}
+
+.parallax-nav-dot:nth-child(2) {
+  background-color: #E86E39;
+}
+
+.parallax-nav-dot:nth-child(3) {
+  background-color: #F6C24C;
+}
+
+.parallax-nav-dot:nth-child(4) {
+  background-color: #4F8AFB;
+}
+
+.parallax-nav-dot:nth-child(5) {
+  background-color: #9473F2;
+}
+
+.parallax-nav-dot:hover {
+  opacity: 0.75;
+}
+
+/* Active state with different dimensions */
+.parallax-nav-dot.active {
+  opacity: 1;
+  width: 4px;
+  height: 64px;
+  border-radius: 2px; /* Changing to a pill shape when active */
+}

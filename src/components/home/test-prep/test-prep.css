@@ -1,41 +1,39 @@
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.test-lag-bg {
+  background-image: url('../../../assets/images/home/testLangbg.png') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  border-radius: 24px !important;
+  padding: 8px !important;
 }
 
-/* Initially hidden */
-.test-prep-card {
-    background-color: #F9EDE7 !important;
-    width: 100% !important;
-    padding: 15px 10px !important;
-    min-height: 90px !important;
-    max-height: 200px !important;
-    height: 160px !important;
-    width: 180px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none !important;
-    border-radius: 24px !important;
-
-    opacity: 0; /* Start hidden */
-    transform: translateY(30px); /* Keep out of view */
+.test-lang-left-bg {
+  background-image: url('../../../assets/images/home/testLangLeftBg.png') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  padding: 40px !important;
+  border-radius: 18px !important;
+  height: 100% !important;
 }
 
-/* Apply animation when in view */
-.fade-in .test-prep-card {
-    animation: fadeInUp 0.5s ease-out forwards;
+.test-lang-card {
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 24px 24px !important;
+  /* gap: 4px !important; */
+  width: 100% !important;
+  height: 76px !important;
+  background-color: #FFFFFF !important;
+  border: 2px solid #E3E3E3 !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px !important;
 }
 
-@media (max-width: 640px) {
-    .test-prep-card {
-        height: 60px !important;
-        padding: 18px !important;
-    }
+.test-lang-card span {
+  color: #240A6D !important;
+  background-color: #F3EFFE !important;
+  border-radius: 8px !important;
+  padding: 4px !important;
 }

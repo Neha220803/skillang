@@ -1,10 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "react-bootstrap";
-import "../home-page.css";
 import "../../../App.css";
 import "./internship.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import intern1 from "../../../assets/images/home/intern-1.svg";
 import intern2 from "../../../assets/images/home/intern-2.svg";
 import intern3 from "../../../assets/images/home/intern-3.svg";

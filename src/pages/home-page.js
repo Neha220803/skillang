@@ -9,14 +9,19 @@ import TestPrep from "../components/home/test-prep/test-prep";
 import LoanSection from "../components/home/loan/loan-section";
 import HomeHeader2 from "../components/home/header/home-header-2";
 import PartnerWithUsSection from "../components/resuable/partner-with-us/partnerWithUs";
+import ParallaxScrollSnap from "../components/home/work-abroad-journey/workAbroadJourney";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="home-page-container">
       <HomeHeader2 />
       <GlobalOprtunity />
       <WorkAbroadOpportunity />
-      <WorkAbroadJourney />
+      {/* The ParallaxScrollSnap component should be in its own section without other elements */}
+      <div className="parallax-section-wrapper">
+        <ParallaxScrollSnap />
+      </div>
+      {/* <WorkAbroadJourney /> */}
       <StudyAbroadJourney />
       <UniPartner />
       <InternshipSection />

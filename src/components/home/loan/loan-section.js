@@ -6,7 +6,6 @@ import {
   Row,
   Image,
 } from "react-bootstrap";
-import "../home-page.css";
 import "../../../App.css";
 import './loan-section.css';
 import '../../../index.css';

@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-bootstrap";
-import axios from "axios";
-import "../home-page.css";
 import "../../../index.css";
 import "./home-header.css";
 import "../../../App.css";

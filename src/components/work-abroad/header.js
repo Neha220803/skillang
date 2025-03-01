@@ -1,9 +1,6 @@
 import React, {  useEffect } from "react";
 import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-bootstrap";
-import "../home/home-page.css";
-import "../home/header/home-header.css";
 import "../../../src/index.css";
-
 import "../../../src/App.css";
 import headerbg from "../../assets/images/work-abroad/workAbroadMainBg.png"
 import successSound from '../../assets/sounds/success.mp3';
