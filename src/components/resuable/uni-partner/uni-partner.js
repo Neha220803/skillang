@@ -9,7 +9,7 @@ const UniPartner = () => {
     <div className='d-flex flex-column align-items-center justify-content-center my-5'>
       <Container className='my-4'>
         <Row>
-          <Col lg={8} md={8} sm={12} xs={12} className='d-flex align-items-center justify-content-center'>
+          <Col lg={8} md={8} sm={12} xs={12} className='d-flex align-items-center justify-content-center mb-4'>
             <div className="scroll-wrapper d-flex align-items-center justify-content-center uni-partner-bg w-100 h-100">
               <ScrollEle />
             </div>
@@ -30,10 +30,11 @@ const UniPartner = () => {
                   <div className='num-cards-subtitle'>Countries</div>
                 </div>
               </Col>
-            </Row>
-            <div className='text-center text-lg-start'>
-               <button className='btn-primary'>Book a Free Consultation</button>
+              <div className='text-center text-lg-start mt-3 ps-0'>
+               <button className='btn-primary text-center'>Book a Free Consultation</button>
             </div>
+            </Row>
+            
 
           </Col>
         </Row>

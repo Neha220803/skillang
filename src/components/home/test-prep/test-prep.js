@@ -14,8 +14,7 @@ const testPrepCourses = [
 const TestPrep = () => {
   return (
     <Container className="test-lag-bg">
-      <Row className=" ">
-        {/* Left Section */}
+      <Row className="">
         <Col className="test-lang-left-bg text-start" lg={6}>
           <div className="heading-big-medium mb-4">Test and Language Preparation</div>
           <div className="paragraph-big-medium text-content-secondary mb-4">
@@ -26,15 +25,15 @@ const TestPrep = () => {
         </Col>
 
         {/* Right Section */}
-        <Col className="ps-1 p-0 d-flex flex-column " lg={6}>
+        <Col className="ps-1 p-0 d-flex flex-column mt-3" lg={6}>
           {testPrepCourses.map(([course1, course2, isBestSeller], index) => (
-            <Row key={index} className="w-100 d-flex">
-              <Col className="pe-0" lg={6}>
+            <Row key={index} className="w-lg-100 d-flex">
+              <Col className="pe-0  " lg={6} sm={6} xs={6}>
                 <div className="test-lang-card paragraph-big-medium">{course1}</div>
               </Col>
-              <Col className="pe-0" lg={6}>
+              <Col className="pe-3 pe-lg-0 " lg={6} sm={6} xs={6}>
                 <div className="test-lang-card paragraph-big-medium">
-                  {course2} {isBestSeller && <span className="best-seller">Best Seller</span>}
+                  {course2} {isBestSeller && <span className="best-seller d-none md-block">Best Seller</span>}
                 </div>
               </Col>
             </Row>

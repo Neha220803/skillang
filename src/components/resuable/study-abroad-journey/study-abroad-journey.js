@@ -31,7 +31,7 @@ export default function StudyAbroad() {
     <Container className="mx-auto align-items-center justify-content-center study-abroad-bg text-white" id="study-abroad">
       <div className="text-center my-lg-4 heading-big-medium">Study Abroad Journey</div>
       <div className="text-center">
-        <button className="btn-primary">Book a Free Consultation</button>
+        <button className="btn-primary d-none d-md-block">Book a Free Consultation</button>
       </div>
      
       {/* Scrollable Row */}

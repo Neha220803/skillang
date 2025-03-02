@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "react-bootstrap";
 import "../../../App.css";
 import "./internship.css";
+import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import intern1 from "../../../assets/images/home/intern-1.svg";
-import intern2 from "../../../assets/images/home/intern-2.svg";
+import intern2 from '../../../assets/images/home/intern-2.svg';
 import intern3 from "../../../assets/images/home/intern-3.svg";
 import intern4 from "../../../assets/images/home/intern-4.svg";
 import intern5 from "../../../assets/images/home/intern-5.svg";
@@ -23,21 +24,44 @@ const internCardData = [
 ];
 
 const InternshipSection = () => {
+   const [showAll, setShowAll] = useState(false);
+      const [maxHeight, setMaxHeight] = useState("500px"); // Default max height
+      const cardsRef = useRef(null);
+      const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+      const handleResize = () => setScreenWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+      useEffect(() => {
+          if (cardsRef.current) {
+              setMaxHeight(showAll ? `${cardsRef.current.scrollHeight}px` : "500px");
+          }
+      }, [showAll]);
+      
   return (
     <section className="d-flex flex-column align-items-center justify-content-center py-5">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-lg-4 mb-md-4 text-center w-75">
+        <Row className="mb-lg-4 mb-md-4 text-center w-md-75">
           <div className="heading-big-medium">Ausbildung (Internship) Program in Germany</div>
           <div className="paragraph-big-medium text-content-secondary">
             Gain hands-on experience and build a successful career in Germany with the Ausbildung Internship Program.
           </div>
         </Row>
-
+      <div  ref={cardsRef} 
+    className={`why-nurse-cards-container row-equal-height ${showAll ? "expanded" : ""}`} 
+    style={{ 
+        maxHeight: screenWidth < 768 ? maxHeight : "none", 
+        transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none", 
+        overflow: screenWidth < 768 ? "hidden" : "visible"
+    }}>
         <Row className="internship-slider-wrapper p-0 m-0">
           {internCardData.map((card, index) => (
-            <Col key={index} lg={card.colSpan} md={6} sm={12} className="intern-card-wrapper">
+            <Col key={index} lg={card.colSpan} md={6} sm={12} xs={12} className=" intern-card-wrapper ">
               <Card 
-                className="intern-card d-flex flex-row border-0 "
+                className="intern-card d-flex flex-row border-0 me-1"
                 style={{
                   backgroundImage: `url(${card.img})`,
                   backgroundSize: "cover",
@@ -54,6 +78,21 @@ const InternshipSection = () => {
             </Col>
           ))}
         </Row>
+        </div>
+        {/* Toggle Button */}
+                        <div className="text-center d-block d-md-none mt-1">
+              <button className="btn-secondary-outline" onClick={() => setShowAll(!showAll)}>
+                {showAll ? (
+                  <>
+                    Close <ChevronUp className="ms-1" />
+                  </>
+                ) : (
+                  <>
+                    View All <ChevronDown className="ms-1" />
+                  </>
+                )}
+              </button>
+            </div>
       </Container>
     </section>
   );

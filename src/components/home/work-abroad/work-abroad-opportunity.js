@@ -44,11 +44,11 @@ const WorkAbroadOpportunity = () => {
             <Col key={index} lg={card.colSize} md={6} sm={12} xs={12} className='g-3'>
               <Card className='prim-card d-flex border-0 mb-2' style={{ backgroundColor: card.color }}>
                 <Card.Img variant="top" className='work-card-img' src={card.img} alt="Card image"  />
-                <CardBody className='d-flex flex-column justify-content-around px-1'>
+                <CardBody className='d-flex flex-column justify-content-around px-1 pt-2 py-0'>
                   <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
                   <CardText className='paragraph-small-regular'>{card.desc}</CardText>
-                  <div>
-                  <button className='btn-secondary' onClick={() => {
+                  <div className='w-sm-100'>
+                  <button className='btn-secondary w-sm-100' onClick={() => {
                       window.scrollTo({
                         top: 0,
                         behavior: 'smooth',
@@ -86,8 +86,7 @@ const WorkAbroadOpportunity = () => {
                 <Col
                   key={index}
                   className="mb-3 mx-auto g-3"
-                  lg={6}
-                  
+                  lg={6} sm={6} xs={6}
                 >
                   <Card className="work-abroad-card flex-column" >
                     <CardImg variant='top' src={service.img} alt={`Reason ${index + 1}`} className='work-abroad-card-img' />

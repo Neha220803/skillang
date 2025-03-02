@@ -62,3 +62,17 @@
   width: 100% !important;
   text-align: start !important;
 }
+
+
+@media (max-width: 576px) {
+  .study-abroad-bg {
+    /* Frame 1618872842 */
+padding: 32px 16px !important;
+gap: 16px;
+
+
+  }  
+ 
+
+  
+}

@@ -17,8 +17,14 @@
 @media (max-width: 640px) {
 
   .intern-card{
-    width: 280px !important;
-    height: 160px !important;
+    width: 100% !important;
+    height: fit-content !important;
+    background-position: bottom right !important;
+
+  }
+
+  .internship-slider-wrapper{
+    padding: 0px !important;
   }
 
 }
@@ -34,6 +40,7 @@
   /* background-color: pink !important; */
   row-gap: 20px !important;
   border-radius: 24px !important;
+  padding: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
 }
