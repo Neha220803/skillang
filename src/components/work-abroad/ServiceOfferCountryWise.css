@@ -7,7 +7,13 @@
     background-position: center;
     width: 100%;
     min-height: 100vh;
-    padding: 3rem 0;
+    padding: 0 0 3rem 0;
+    /* Reduced top padding to start content higher */
+}
+
+.con1 {
+    padding-top: 1rem !important;
+    /* Reduce the padding specifically for the first container */
 }
 
 .center-container {
@@ -17,20 +23,23 @@
     height: 100vh;
     /* Adjust as needed */
     width: 100%;
-
 }
 
 .section-title {
     color: #4F8AFB !important;
     margin-bottom: -100 !important;
+    margin-top: 0;
+    /* Remove any top margin */
+    /* padding-top: 2rem; */
+    /* Add some padding to the title */
 }
 
 .service-wave-layout {
     position: relative;
     height: 360px;
-    margin: 3rem auto;
+    margin: 1.5rem auto 3rem;
+    /* Reduced top margin */
     max-width: 850px;
-
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -45,32 +54,30 @@
     transition: transform 0.3s ease;
 }
 
-
-
 .service-item.top-center {
-    top: 50px;
-    /* Adjusted slightly lower */
+    top: 30px;
+    /* Moved up slightly */
     left: 35%;
     /* transform: translateX(-50%); */
 }
 
 .service-item.top-right {
-    top: 50px;
-    /* Adjusted slightly lower */
+    top: 30px;
+    /* Moved up slightly */
     right: 10px;
     /* Moved further to the right */
 }
 
 .service-item.bottom-left {
-    top: 200px;
-    /* Moved slightly lower */
+    top: 180px;
+    /* Adjusted position */
     left: 130px;
     /* Moved slightly outward */
 }
 
 .service-item.bottom-right {
-    bottom: 60px;
-    /* Moved slightly lower */
+    bottom: 80px;
+    /* Adjusted position */
     right: 140px;
     /* Kept previous adjustment */
 }
@@ -100,16 +107,16 @@
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    padding: 8px 16px;
+    /* padding: 8px 16px; */
     /* Slightly increased padding for better spacing */
     border-radius: 12px;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
     width: 340px;
     text-align: center;
     /* Align text to the left */
-    z-index: 10;
-    margin-top: 10px;
-    border: 2px solid #C4D8FE !important;
+    z-index: 6;
+    margin-top: 5px;
+    /* border: 2px solid #C4D8FE !important; */
 }
 
 /* Country Guidance Section */
@@ -182,14 +189,39 @@
     }
 
     .service-description-popup {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        width: 100%;
+        display: none !important;
+        /* Completely hides the element */
+        visibility: hidden !important;
+        /* Ensures it's not visible */
+        opacity: 0 !important;
+        /* Makes it fully transparent */
+        transition: none !important;
+        /* Disables any animations or transitions */
     }
 
     .country-card {
-        margin-bottom: 20px;
+        margin-bottom: -20px;
+        position: relative;
+        /* Enables movement */
+        top: 30px;
     }
 
+    .visadiscrip {
+        position: relative;
+        /* Enables movement */
+        top: 30px;
+    }
+
+    .tag-button {
+        background: #FEF8EB !important;
+        color: #664905 !important;
+        padding: 10px 12px;
+        border-radius: 8px !important;
+        border: 20px !important;
+        max-width: 250px !important;
+        position: relative;
+        /* Enables movement */
+        top: 30px;
+        /* Move button down */
+    }
 }

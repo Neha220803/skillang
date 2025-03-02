@@ -119,8 +119,8 @@ const ServiceOfferCountryWise = () => {
                             </div>
 
 
-                            <div className="heading-big-medium">Work Visa Guidance<br />Country-wise</div>
-                            <div className="paragraph-big-medium text-content-secondary">
+                            <div className="heading-big-medium visadiscrip">Work Visa Guidance<br />Country-wise</div>
+                            <div className="paragraph-big-medium text-content-secondary visadiscrip">
                                 Our comprehensive services are designed to streamline the process of securing a job and work visa in your chosen country.
                             </div>
                         </Col>
@@ -140,7 +140,7 @@ const ServiceOfferCountryWise = () => {
                             </Col>
                         ))}
                     </Row>
-                    <div className="d-flex justify-content-center mx-auto align-items-center mt-4">
+                    <div className="d-flex justify-content-center mx-auto align-items-center mt-4 visadiscrip">
                         <button className="btn-primary">Book Free Consultation</button>
                     </div>
                 </Container>
