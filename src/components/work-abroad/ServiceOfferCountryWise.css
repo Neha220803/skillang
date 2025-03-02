@@ -62,7 +62,7 @@
 }
 
 .service-item.top-right {
-    top: -10px;
+    top: -30px;
     /* Moved up slightly */
     right: 10px;
     /* Moved further to the right */
@@ -76,7 +76,7 @@
 }
 
 .service-item.bottom-right {
-    bottom: 80px;
+    bottom: 120px;
     /* Adjusted position */
     right: 140px;
     /* Kept previous adjustment */
