@@ -1,16 +1,17 @@
 import React from "react";
 import { Container, Card } from "react-bootstrap";
-import australiaImage from "../../assets/images/work-abroad/countryaustralia.png";
-import canadaImage from "../../assets/images/work-abroad/countrycanada.png";
-import franceImage from "../../assets/images/work-abroad/countryfrance.png";
-import germanyImage from "../../assets/images/work-abroad/countrygermany.png";
-import irelandImage from "../../assets/images/work-abroad/countryireland.png";
-import ukImage from "../../assets/images/work-abroad/countryuk.png";
-import usaImage from "../../assets/images/work-abroad/countryusa.png";
-import "../home/header/home-header.css";
-import "../../../src/index.css";
-import "../work-abroad/countriesWeServe.css";
-import "../../../src/App.css";
+
+import "../../../index.css";
+import "./countriesWeServe.css";
+import "../../../App.css";
+
+import australiaImage from "../../../assets/images/work-abroad/countryaustralia.png";
+import canadaImage from "../../../assets/images/work-abroad/countrycanada.png";
+import franceImage from "../../../assets/images/work-abroad/countryfrance.png";
+import germanyImage from "../../../assets/images/work-abroad/countrygermany.png";
+import irelandImage from "../../../assets/images/work-abroad/countryireland.png";
+import ukImage from "../../../assets/images/work-abroad/countryuk.png";
+import usaImage from "../../../assets/images/work-abroad/countryusa.png";
 
 const countries = [
     { name: "Germany", description: "A thriving economy with jobs in Nursing, IT, and Engineering. Enjoy a balanced work-life and competitive pay.", image: germanyImage },
@@ -35,20 +36,19 @@ const CountriesWeServe = () => {
 
                 <div className="countrys-list">
                     {countries.map((country, index) => (
-                        <Card
-                            key={index}
-                            className="countrys-card"
-                        >
+                        <Card key={index} className="countrys-card">
                             <div className="country-image-container">
                                 <Card.Img
                                     src={country.image}
-                                    className=" country-image"
+                                    className="country-image"
                                     alt={`${country.name} image`}
                                 />
                             </div>
-                            <Card.Body className="country-card-heading p-0 ps-md-3  d-flex flex-column align-items-start justify-content-center  ">
-                                <Card.Title className="subheading-small-medium text-content-primary mb-2">{country.name}</Card.Title>
-                                <Card.Text className="paragraph-small-regular text-content-secondary country-card-content m-0  ">
+                            <Card.Body className="country-card-heading p-0 ps-md-3 d-flex flex-column align-items-start justify-content-center">
+                                <Card.Title className="subheading-small-medium text-content-primary mb-2">
+                                    {country.name}
+                                </Card.Title>
+                                <Card.Text className="paragraph-small-regular text-content-secondary country-card-content m-0">
                                     {country.description}
                                 </Card.Text>
                             </Card.Body>

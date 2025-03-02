@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './workAbroadJourney.css';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Image } from 'react-bootstrap';
 import workJor1 from '../../../assets/images/home/workJourney1.png';
 
 import workJor2 from '../../../assets/images/home/workJourney2.png';
@@ -132,7 +132,7 @@ const ParallaxScrollSnap = () => {
           ref={el => sectionRefs.current[index] = el}
         >
           <Row className='bg-dar w-100'>
-            <Col lg={6} md={6} sm={12} xs={12}><img src={section.img} alt='' className='image-fluid overflow-hidden' /> </Col>
+            <Col lg={6} md={6} sm={12} xs={12}><Image fluid src={section.img} alt='' className='image-fluid overflow-hidden' /> </Col>
             <Col lg={6} md={6} sm={12} xs={12} className='b'> 
                {/* <div className={`parallax-bg ${section.bgClass}`}></div> 
            */}

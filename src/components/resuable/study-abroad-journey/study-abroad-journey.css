@@ -2,74 +2,63 @@
   background-image: url('../../../assets/images/studyAbroadBg.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position:left !important;
   border-radius: 24px !important;
-  padding: 56px 40px 40px !important;
+  padding: 16px 0px 16px 80px !important;
 }
 
 /* Scrollable Row */
 .scrollable-container {
-  overflow-x: auto;
-  white-space: nowrap;
   display: flex;
-  padding-bottom: 15px;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-/* Hide scrollbar */
-.scrollable-container::-webkit-scrollbar {
-  display: none;
+  scroll-snap-type: x mandatory !important;
+  gap: 16px !important;
+  overflow-x: auto !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  scrollbar-width: none !important;
 }
 
 .card-container {
-  width: 300px;
-  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-width: 300px;
+  display: flex !important;
 }
 
 .custom-card {
   width: 300px !important;
-  border-radius: 12px;
-  box-sizing: border-box;
-  height: 100% !important;
+  border-radius: 16px !important;
+  box-sizing: border-box !important;
+  padding: 12px !important;
   background-color: #3B3B3B !important;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* Card title styling */
-.card-title {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-/* Card description styling */
-.card-desc {
-  font-size: 0.9rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Button styling */
-.btn-learn-more {
-  margin-top: auto;
-  font-size: 0.9rem;
-  padding: 5px 15px;
-}
-
-/* Card body content */
-.card-body-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  flex: 1 !important; /* Make card take full height of container */
 }
 
 /* Background Image for Cards */
 .card-image-wrapper {
-  width: 100%;
-  height: 150px;
+  width: 100% !important;
+  height: 160px !important;
   background-size: cover;
   background-position: center;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Card body takes remaining space */
+.custom-card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  white-space: normal !important;
+  padding: 0 !important;
+}
+
+
+.button-container {
+  margin-top: auto !important;
+  width: 100% !important;
+  text-align: start !important;
 }
