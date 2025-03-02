@@ -17,9 +17,9 @@ const FooterSection = () => {
             <Image fluid src={footerimg} />
           </Col>
           <Col md={6} className="justify-content-start align-items-start text-start">
-            <h1 className="my-4">Gateway to Global Career</h1>
+            <div className="heading-big-medium text-content-primary my-4">Gateway to Global Career</div>
             <img src={logo} alt="Logo" className="mb-3 footer-logo" />
-            <p>© 2025 All Rights Reserved, Skillang</p>
+            <div className="paragraph-big-medium text-content-secondary">© 2025 All Rights Reserved, Skillang</div>
           </Col>
           <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-start " style={{overflow:'hidden'}}>
   <Image src={footerimg} alt="Partner Image" style={{ height: '130px'}} />
@@ -35,29 +35,29 @@ const FooterSection = () => {
             <Row className="d-flex flex-wrap gap-4 px-5 py-4">
               <Col>
                 <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><p>Home</p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>Nursing </p></Link></li>
-                  <li><Link to="/programs" className="footer-nav-link"><p>Work Abroad </p></Link></li>
+                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Home</div></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Nursing </div></Link></li>
+                  <li><Link to="/programs" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Work Abroad </div></Link></li>
                 </ul>
               </Col>
               <Col>
                 <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><p>Study Abroad </p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>Language Prep </p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>Test Prep </p></Link></li>
+                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Study Abroad </div></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Language Prep </div></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Test Prep </div></Link></li>
                 </ul>
               </Col>
               <Col>
                 <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><p>Login/Sign Up </p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>Contact Us </p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>News & Blogs </p></Link></li>
+                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Login/Sign Up </div></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Contact Us </div></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">News & Blogs </div></Link></li>
                 </ul>
               </Col>
               <Col>
                 <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><p>Terms of Use </p></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><p>Privacy Policy </p></Link></li>
+                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Terms of Use </div></Link></li>
+                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Privacy Policy </div></Link></li>
                 </ul>
               </Col>
             </Row>

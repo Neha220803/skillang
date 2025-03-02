@@ -21,9 +21,57 @@
 .work-abroad-bg-card{
   background-image: url('../../../assets/images/home/workAbroadBg.svg');
   background-size:cover;
+  width: 100% !important;
   background-repeat: no-repeat;
   border-radius: 24px !important;
   padding: 56px 40px 40px !important;
+}
+
+.work-abroad-left-bg{
+  background-image: url('../../../assets/images/home/opsLeftImg.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius: 24px !important;
+  /* height: 100% !important; */
+
+}
+
+.work-abroad-right-bg{
+  background-image: url('../../../assets/images/home/opsBg.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius: 24px !important;
+  padding: 24px !important;
+
+
+}
+
+.work-abroad-card{
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 16px 8px 8px !important;
+  gap: 12px !important;
+  width: 100% !important;
+  height: 104.67px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E3E3E3 !important;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.04) !important;
+  border-radius: 16px !important;
+}
+
+.work-abroad-card-img{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.work-abroad-card-text {
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  
 }
 
 /* Responsive Design */
