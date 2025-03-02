@@ -134,7 +134,6 @@ const ParallaxScrollSnap = () => {
   return (
     <div className="parallax-outer-container bg-primar" ref={containerRef}>
 
-      <div>heloooooooooooooooooo</div>
 
       {sections.map((section, index) => (
         <Container
@@ -158,7 +157,16 @@ const ParallaxScrollSnap = () => {
               </Col>
             
              
-            
+            <div className="parallax-nav-dots">
+              {sections.map((section, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToSection(index)}
+                  className={`parallax-nav-dot ${activeSection === index ? 'active' : ''}`}
+                  aria-label={`Scroll to ${section.title}`}
+                ></button>
+              ))}
+            </div>
          
 
 
@@ -167,16 +175,7 @@ const ParallaxScrollSnap = () => {
         </Container>
       ))}
       
-      <div className="parallax-nav-dots">
-        {sections.map((section, index) => (
-          <button
-            key={index}
-            onClick={() => scrollToSection(index)}
-            className={`parallax-nav-dot ${activeSection === index ? 'active' : ''}`}
-            aria-label={`Scroll to ${section.title}`}
-          ></button>
-        ))}
-      </div>
+      
     </div>
   );
 };

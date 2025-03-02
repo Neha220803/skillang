@@ -59,7 +59,7 @@
 
 /* Navigation dots */
 .parallax-nav-dots {
-  position: fixed;
+  position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
