@@ -47,36 +47,91 @@
     position: relative;
 }
 
-/* Centering the progress line */
+/* Desktop View - Keep Original Styles */
 .journey-progress {
     display: flex;
     justify-content: center;
     width: 60%;
     position: relative;
     z-index: 1;
-    /* Progress line should be below images */
     margin-bottom: -40px;
-    /* Align it properly */
 }
 
-/* Styling for progress line */
 .progress-line-image {
     width: 100%;
     max-width: 600px;
     height: auto;
 }
 
-/* Mobile view - hidden by default */
+/* Mobile Timeline - Exact layout matching the image */
 .mobile-journey {
-    display: none;
     width: 100%;
-    text-align: center;
+    padding: 0 20px;
 }
 
-.mobile-timeline-image {
-    max-width: 100%;
-    height: auto;
+.mobile-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
 }
+
+.mobile-step-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.mobile-step-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.mobile-step-text {
+    flex-grow: 1;
+}
+
+.mobile-step-text h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.active-step {
+    color: #00C170;
+}
+
+.pending-step {
+    color: #666;
+}
+
+/* Adjusting connector lines */
+/* Default Connector Line */
+.mobile-connector-line {
+    width: 3px;
+    height: 120px !important;
+    /* Increased height to fully touch both circles */
+    background-color: #E5E5E5;
+    margin-left: 24px;
+    margin-top: -10px;
+    /* Pull up to touch the above circle */
+    margin-bottom: -10px;
+    /* Push down to touch the below circle */
+    align-self: flex-start;
+    position: relative;
+}
+
+/* First connector line with small green start */
+.mobile-connector-line.first {
+    background: linear-gradient(to bottom, #00C170 15%, #E5E5E5 15%);
+}
+
 
 /* Utility classes for responsive design */
 .desktop-only {
@@ -108,9 +163,7 @@
         height: auto !important;
         min-height: auto;
         background-image: none;
-        /* Remove background image in mobile */
         background-color: white;
-        /* Set white background */
     }
 
     .work-abroad-header {
@@ -123,7 +176,7 @@
     }
 
     .work-abroad-header p {
-        font-size: 0.9rem;
+        font-size: 3rem;
     }
 
     /* Hide desktop elements, show mobile elements */
@@ -133,11 +186,6 @@
 
     .mobile-only {
         display: block;
-    }
-
-    .mobile-journey {
-        display: block;
-        margin: 0;
     }
 
     /* Remove the curved bottom in mobile */

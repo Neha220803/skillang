@@ -82,7 +82,7 @@ const ServiceOfferCountryWise = () => {
                         <Col md={8} className="text-center">
                             <div className="section-title heading-big-medium">Service Offerings</div>
                             <p className="paragraph-big-medium text-content-secondary">
-                                Our comprehensive services are designed to streamline the process of securing a job
+                                Our comprehensive services are designed to streamline the process of <br />securing a job
                                 and work visa in your chosen country.
                             </p>
                         </Col>
