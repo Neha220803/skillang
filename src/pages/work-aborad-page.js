@@ -4,7 +4,7 @@ import WhyChooseSkillang from '../components/resuable/why-skillang/whySkillangSe
 import CountriesWeServe from '../components/resuable/countries-we-serve/countriesWeServe';
 import SkillShortage from '../components/work-abroad/skillShortage';
 import ServiceOfferCountryWise from '../components/work-abroad/serviceOfferCountryWise'
-import Abroud_journey from '../components/work-abroad/abroud_journey'
+import AbroudJourney from '../components/work-abroad/abroud_journey'
 import PartnerWithUsSection from '../components/resuable/partner-with-us/partnerWithUs';
 
 
@@ -21,7 +21,7 @@ const WorkAboradPage = () => {
 
 
       <PartnerWithUsSection />
-      <Abroud_journey />
+      <AbroudJourney />
     </div>
   )
 }

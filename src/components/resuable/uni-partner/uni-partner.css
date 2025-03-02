@@ -52,7 +52,7 @@
 }
 
 .uni-partner-bg{
-   background-image: url('../../../assets/images/uniPartnerBg.svg') !important;
+   background-image: url('../../../assets/images/reusable/uniPartnerBg.svg') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;

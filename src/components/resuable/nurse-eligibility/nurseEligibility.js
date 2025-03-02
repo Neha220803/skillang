@@ -30,7 +30,7 @@ const NurseEligibility = () => {
         {eligibilityData.map((item, index) => (
           <Col key={index} lg={3} md={3} sm={12} xs={12} className='mb-4'>
             <Card className='nurse-eligible-cards'>
-              <CardImg src={item.img} alt={`Eligibility ${index + 1}`}  />
+              <CardImg src={item.img} alt={`Eligibility ${index + 1}`} className='nurse-eligibility-img' />
               <CardBody className='p-0 mt-3'>
                 <div className='nurse-eligible-cards-text paragraph-small-medium text-content-secondary'>{item.text}</div>
               </CardBody>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Container, Col, Button, Row, Form, Image, Toast, ToastContainer, Carousel } from "react-bootstrap";
-import axios from "axios";
 import nurseImage1 from "../../../assets/images/landing/nurse-1.png"; // Replace with your image path
 import nurseImage2 from "../../../assets/images/landing/nurse-2.png"; // Replace with your image path
 import nurseImage3 from "../../../assets/images/landing/nurse-3.png"; // Replace with your image path

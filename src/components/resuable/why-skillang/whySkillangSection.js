@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'react-bootstrap';
 import './whySkillangSection.css';
 
-import whySkill1 from '../../../assets/images/whySkillang1.png';
-import whySkill2 from '../../../assets/images/whySkillang2.png';
-import whySkill3 from '../../../assets/images/whySkillang3.png';
+import whySkill1 from '../../../assets/images/reusable/whySkillang1.png';
+import whySkill2 from '../../../assets/images/reusable/whySkillang2.png';
+import whySkill3 from '../../../assets/images/reusable/whySkillang3.png';
 
 const whySkillangCardData = [
   {

@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./nav.css";
 import "../../index.css";
-import logo from '../../assets/images/logo-3.svg';
+import logo from '../../assets/images/logos/logo-3.svg';
 
 // Dynamically set the base path
 const BASE_PATH = process.env.PUBLIC_URL || '';

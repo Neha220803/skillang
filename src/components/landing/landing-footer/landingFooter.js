@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import nurseImg from '../../../assets/images/landing/nurse-img.png';
-import logo from "../../../assets/images/logo-3.svg";
+import logo from "../../../assets/images/logos/logo-3.svg";
 
 
 const LandingFooter = () => {

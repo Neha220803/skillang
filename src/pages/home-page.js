@@ -1,7 +1,6 @@
 import React from "react";
 import GlobalOprtunity from "../components/home/global-opp/global-opportunity";
 import WorkAbroadOpportunity from "../components/home/work-abroad/work-abroad-opportunity";
-import WorkAbroadJourney from "../components/home/work-abroad-journey";
 import StudyAbroadJourney from "../components/resuable/study-abroad-journey/study-abroad-journey";
 import UniPartner from "../components/resuable/uni-partner/uni-partner";
 import InternshipSection from "../components/home/internship/internship";
@@ -21,7 +20,6 @@ const HomePage = () => {
       <div className="parallax-section-wrapper">
         <ParallaxScrollSnap />
       </div>
-      {/* <WorkAbroadJourney /> */}
       <StudyAbroadJourney />
       <UniPartner />
       <InternshipSection />

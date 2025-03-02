@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Container, Image } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../../assets/images/logo-3.svg";
+import logo from "../../../assets/images/logos/logo-3.svg";
 import { FiPhoneCall } from "react-icons/fi";
 import '../../../index.css';
 import '../../../App.css';

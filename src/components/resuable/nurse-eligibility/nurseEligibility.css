@@ -8,3 +8,8 @@
     border-top: none !important;   
     border-bottom: none !important; 
 }
+
+.nurse-eligibility-img{
+    width: 50px !important;
+    height: auto !important;
+}
