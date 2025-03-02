@@ -55,21 +55,21 @@
 }
 
 .service-item.top-center {
-    top: 30px;
+    top: -10px;
     /* Moved up slightly */
     left: 35%;
     /* transform: translateX(-50%); */
 }
 
 .service-item.top-right {
-    top: 30px;
+    top: -10px;
     /* Moved up slightly */
     right: 10px;
     /* Moved further to the right */
 }
 
 .service-item.bottom-left {
-    top: 180px;
+    top: 130px;
     /* Adjusted position */
     left: 130px;
     /* Moved slightly outward */
@@ -128,7 +128,10 @@
     border-radius: 8px !important;
     border: none;
     max-width: 250px !important;
+    margin-top: -60px;
+    /* Adjust this value to move it further up */
 }
+
 
 .tag-icon {
     width: 30px !important;
@@ -188,6 +191,34 @@
         margin: 1rem;
     }
 
+    .service-item.top-center {
+        top: 30px;
+        /* Moved up slightly */
+        left: 120px;
+        /* transform: translateX(-50%); */
+    }
+
+    .service-item.top-right {
+        top: 30px;
+        /* Moved up slightly */
+        right: 120px;
+        /* Moved further to the right */
+    }
+
+    .service-item.bottom-left {
+        top: 180px;
+        /* Adjusted position */
+        left: 130px;
+        /* Moved slightly outward */
+    }
+
+    .service-item.bottom-right {
+        bottom: 80px;
+        /* Adjusted position */
+        right: 120px;
+        /* Kept previous adjustment */
+    }
+
     .service-description-popup {
         display: none !important;
         /* Completely hides the element */
@@ -221,7 +252,7 @@
         max-width: 250px !important;
         position: relative;
         /* Enables movement */
-        top: 30px;
+        /* top: 30px; */
         /* Move button down */
     }
 }
