@@ -7,7 +7,6 @@
     background-position: center;
     width: 100%;
     min-height: 100vh;
-    padding: 0 0 3rem 0;
     /* Reduced top padding to start content higher */
 }
 
@@ -16,14 +15,6 @@
     /* Reduce the padding specifically for the first container */
 }
 
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* Adjust as needed */
-    width: 100%;
-}
 
 .section-title {
     color: #4F8AFB !important;
@@ -57,7 +48,7 @@
 .service-item.top-center {
     top: -10px;
     /* Moved up slightly */
-    left: 35%;
+    right: -250px !important;
     /* transform: translateX(-50%); */
 }
 
@@ -128,7 +119,6 @@
     border-radius: 8px !important;
     border: none;
     max-width: 250px !important;
-    margin-top: -60px;
     /* Adjust this value to move it further up */
 }
 
@@ -154,10 +144,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0px;
-}
-
-#chan {
-    height: fit-content;
 }
 
 .country-flag {
@@ -219,28 +205,27 @@
     }
 
     .service-item.top-center {
-        top: 30px;
-        /* Moved up slightly */
-        left: 120px;
+        top: 0px;
+        left: 80px;
         /* transform: translateX(-50%); */
     }
 
     .service-item.top-right {
-        top: 30px;
+        top: -100px;
         /* Moved up slightly */
-        right: 120px;
+        right: 100px;
         /* Moved further to the right */
     }
 
     .service-item.bottom-left {
-        top: 180px;
+        top: 80px;
         /* Adjusted position */
         left: 130px;
         /* Moved slightly outward */
     }
 
     .service-item.bottom-right {
-        bottom: 80px;
+        bottom: 150px;
         /* Adjusted position */
         right: 120px;
         /* Kept previous adjustment */

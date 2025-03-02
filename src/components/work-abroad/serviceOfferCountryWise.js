@@ -76,7 +76,7 @@ const ServiceOfferCountryWise = () => {
         const [maxHeight, setMaxHeight] = useState("400px"); // Default max height
         const cardsRef = useRef(null);
         const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    
+    const [hoveredService, setHoveredService] = useState(null);
 
      useEffect(() => {
          const handleResize = () => setScreenWidth(window.innerWidth);
@@ -91,12 +91,12 @@ const ServiceOfferCountryWise = () => {
          }, [showAll]);
 
     return (
-        <div className="service-container">
+        <div className="d-flex justify-content-center  align-items-center">
             {/* Service Offerings Section */}
-            <div className="service-bg">
-                <Container className="py-5">
-                    <Row className="justify-content-center mb-4">
-                        <Col md={8} className="text-center">
+            <div className="service-bg d-flex flex-column justify-content-start align-items-center">
+                <Container className="py-5 d-flex flex-column justify-content-start align-items-center">
+                    <Row className="justify-content-end mb-4 d-flex flex-column align-items-center ">
+                        <Col className="text-center d-flex justify-content-start align-items-center flex flex-column ">
                             <div className="section-title heading-big-medium">Service Offerings</div>
                             <div className="paragraph-big-medium text-content-secondary">
                                 Our comprehensive services are designed to streamline the process of <br />securing a job
@@ -108,16 +108,16 @@ const ServiceOfferCountryWise = () => {
                     <Row className="service-wave-layout justify-content-center">
                         {serviceOfferings.map((service, index) => (
                             <Col md={3} key={index} className={`service-item ${service.position}`}
-                                // onMouseEnter={() => setHoveredService(service.title)}
-                                // onMouseLeave={() => setHoveredService(null)}
+                                onMouseEnter={() => setHoveredService(service.title)}
+                                onMouseLeave={() => setHoveredService(null)}
                             >
                                 <img src={service.icon} alt={service.title} className="service-icon" />
                                 <div className="service-name-pill caption-bold">{service.title}</div>
-                                {/* {hoveredService === service.title && (
+                                {hoveredService === service.title && (
                                     <div className="service-description-popup">
                                         <p className="service-text paragraph-small-medium text-content-secondary">{service.description}</p>
                                     </div>
-                                )} */}
+                                )}
                             </Col>
                         ))}
                     </Row>
@@ -127,8 +127,8 @@ const ServiceOfferCountryWise = () => {
                 <Container className="py-5">
                     <Row className="justify-content-center mb-3 ">
                         <Col md={8} className="text-center">
-                            <div className="d-flex justify-content-center mx-auto align-items-center">
-                                <div className="tag-button text-center caption-bold">
+                            <div className="d-flex justify-content-center mx-auto align-items-center mb-2">
+                                <div className="tag-button text-center caption-bold  ">
                                     <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
                                     Skill Shortage Visas
                                 </div>
