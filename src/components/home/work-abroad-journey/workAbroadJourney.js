@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './workAbroadJourney.css';
 import { Col, Container, Row, Image } from 'react-bootstrap';
+
+import workJor0 from '../../../assets/images/home/workJoureny0.png';
 import workJor1 from '../../../assets/images/home/workJourney1.png';
 
 import workJor2 from '../../../assets/images/home/workJourney2.png';
@@ -17,6 +19,13 @@ const ParallaxScrollSnap = () => {
   const [activeSection, setActiveSection] = useState(0);
   
   const sections = [
+    {
+      id: "section0",
+      title: "Our Features",
+      description: "Discover essential features designed to simplify your study abroad journey, from expert guidance to seamless support.",
+      bgClass: "bg-section-0",
+      img:workJor0
+    },
     {
       id: "section1",
       title: "Job Matching",
@@ -123,7 +132,10 @@ const ParallaxScrollSnap = () => {
   };
   
   return (
-    <div className="parallax-outer-container" ref={containerRef}>
+    <div className="parallax-outer-container bg-primar" ref={containerRef}>
+
+      <div>heloooooooooooooooooo</div>
+
       {sections.map((section, index) => (
         <Container
           key={section.id}
@@ -133,13 +145,16 @@ const ParallaxScrollSnap = () => {
         >
           <Row className='bg-dar w-100'>
             <Col lg={6} md={6} sm={12} xs={12}><Image fluid src={section.img} alt='' className='image-fluid overflow-hidden' /> </Col>
-            <Col lg={6} md={6} sm={12} xs={12} className='b'> 
+            <Col lg={6} md={6} sm={12} xs={12} className='d-flex flex-column align-items-center justify-content-center text-start'> 
                {/* <div className={`parallax-bg ${section.bgClass}`}></div> 
            */}
-            <h2 className="subheading-big-medium text-content-primary">{section.title}</h2>
-            <p className="paragraph-big-medium text-content-secondary">{section.description}</p>
+           <div className='w-75 text-start'> 
+            
+            <div className="subheading-big-medium text-content-primary">{section.title}</div>
+            <div className="paragraph-big-medium text-content-secondary my-2">{section.description}</div>
             
             <button className='btn-secondary'>Learn More</button>
+            </div>
               </Col>
             
              
