@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState, useRef, useEffect } from "react";
+import { Container, Col, Row, Card, CardBody } from "react-bootstrap";
 import "./ServiceOfferCountryWise.css";
+
+import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 
 import resumeIcon from "../../../src/assets/images/work-abroad/icons/resumr.png";
 import jobMatchIcon from "../../../src/assets/images/work-abroad/icons/job_match.png";
@@ -71,36 +72,52 @@ const countryGuidance = [
 ];
 
 const ServiceOfferCountryWise = () => {
-    const [hoveredService, setHoveredService] = useState(null);
+     const [showAll, setShowAll] = useState(false);
+        const [maxHeight, setMaxHeight] = useState("400px"); // Default max height
+        const cardsRef = useRef(null);
+        const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    
+
+     useEffect(() => {
+         const handleResize = () => setScreenWidth(window.innerWidth);
+         window.addEventListener("resize", handleResize);
+         return () => window.removeEventListener("resize", handleResize);
+     }, []);
+     
+         useEffect(() => {
+             if (cardsRef.current) {
+                 setMaxHeight(showAll ? `${cardsRef.current.scrollHeight}px` : "500px");
+             }
+         }, [showAll]);
 
     return (
         <div className="service-container">
             {/* Service Offerings Section */}
             <div className="service-bg">
-                <Container className="py-5 con1">
+                <Container className="py-5">
                     <Row className="justify-content-center mb-4">
                         <Col md={8} className="text-center">
                             <div className="section-title heading-big-medium">Service Offerings</div>
-                            <p className="paragraph-big-medium text-content-secondary">
+                            <div className="paragraph-big-medium text-content-secondary">
                                 Our comprehensive services are designed to streamline the process of <br />securing a job
                                 and work visa in your chosen country.
-                            </p>
+                            </div>
                         </Col>
                     </Row>
 
                     <Row className="service-wave-layout justify-content-center">
                         {serviceOfferings.map((service, index) => (
                             <Col md={3} key={index} className={`service-item ${service.position}`}
-                                onMouseEnter={() => setHoveredService(service.title)}
-                                onMouseLeave={() => setHoveredService(null)}
+                                // onMouseEnter={() => setHoveredService(service.title)}
+                                // onMouseLeave={() => setHoveredService(null)}
                             >
                                 <img src={service.icon} alt={service.title} className="service-icon" />
                                 <div className="service-name-pill caption-bold">{service.title}</div>
-                                {hoveredService === service.title && (
+                                {/* {hoveredService === service.title && (
                                     <div className="service-description-popup">
                                         <p className="service-text paragraph-small-medium text-content-secondary">{service.description}</p>
                                     </div>
-                                )}
+                                )} */}
                             </Col>
                         ))}
                     </Row>
@@ -109,16 +126,13 @@ const ServiceOfferCountryWise = () => {
                 {/* Country Guidance Section */}
                 <Container className="py-5">
                     <Row className="justify-content-center mb-3 ">
-
                         <Col md={8} className="text-center">
-                            <div className="center-container " id="chan">
+                            <div className="d-flex justify-content-center mx-auto align-items-center">
                                 <div className="tag-button text-center caption-bold">
                                     <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
                                     Skill Shortage Visas
                                 </div>
                             </div>
-
-
                             <div className="heading-big-medium visadiscrip">Work Visa Guidance<br />Country-wise</div>
                             <div className="paragraph-big-medium text-content-secondary visadiscrip">
                                 Our comprehensive services are designed to streamline the process of securing a job and work visa in your chosen country.
@@ -127,10 +141,20 @@ const ServiceOfferCountryWise = () => {
                     </Row>
 
                     {/* Country Cards */}
-                    <Row className="justify-content-center">
+                    <div 
+                        ref={cardsRef} 
+                        className={`service-offering-cards-container row-equal-height ${showAll ? "expanded" : ""}`} 
+                        style={{ 
+                            maxHeight: screenWidth < 768 ? maxHeight : "none", 
+                            transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none", 
+                            overflow: screenWidth < 768 ? "hidden" : "visible"
+                        }}
+>
+                    <Row className="justify-content-center ">
                         {countryGuidance.map((country, index) => (
-                            <Col md={4} key={index} className="mb-4">
-                                <div className="country-card">
+                            <Col md={4} sm={12} xs={12} key={index} className="mb-lg-4">
+                                <div className="country-card"
+                                >
                                     <div className="country-header">
                                         <div className="country-name subheading-small-medium">{country.country}</div>
                                         <img src={country.flag} alt={country.country} className="country-flag" />
@@ -140,9 +164,25 @@ const ServiceOfferCountryWise = () => {
                             </Col>
                         ))}
                     </Row>
-                    <div className="d-flex justify-content-center mx-auto align-items-center mt-4 visadiscrip">
+                    </div>
+                    <div className="d-flex justify-content-center mx-auto align-items-center mt-2 visadiscrip">
                         <button className="btn-primary">Book Free Consultation</button>
                     </div>
+
+                      {/* Toggle Button */}
+                                    <div className="text-center d-block d-md-none mt-5">
+                          <button className="btn-secondary-outline" onClick={() => setShowAll(!showAll)}>
+                            {showAll ? (
+                              <>
+                                Close <ChevronUp className="ms-1" />
+                              </>
+                            ) : (
+                              <>
+                                View All <ChevronDown className="ms-1" />
+                              </>
+                            )}
+                          </button>
+                        </div>
                 </Container>
             </div>
         </div>
