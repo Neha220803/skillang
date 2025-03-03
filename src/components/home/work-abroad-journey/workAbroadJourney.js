@@ -21,7 +21,7 @@ const ParallaxScrollSnap = () => {
     { id: "section2", title: "Language & Test Prep", description: "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options.", bgClass: "bg-section-2", img: workJor2 },
     { id: "section3", title: "CV & Application Support", description: "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process.", bgClass: "bg-section-3", img: workJor3 },
     { id: "section4", title: "Application & Interview Support", description: "Stay on track with our transparent application process and real-time updates. Get expert mentorship and training to ace your interviews.", bgClass: "bg-section-4", img: workJor4 },
-    { id: "section5", title: "Visa & Relocation Support", description: "We guide you through the visa process for a higher success rate and assist with travel and accommodation.", bgClass: "bg-section-4", img: workJor5 }
+    { id: "section5", title: "Visa & Relocation Support", description: "We guide you through the visa process for a higher success rate and assist with travel and accommodation.", bgClass: "bg-section-5", img: workJor5 }
   ];
 
   useEffect(() => {
@@ -32,37 +32,61 @@ const ParallaxScrollSnap = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    const handleScroll = () => {
-      const containerRect = container.getBoundingClientRect();
-      const isVisible = containerRect.top < window.innerHeight && containerRect.bottom > 0;
-      setIsParallaxVisible(isVisible);
+    // Function to check if an element is in viewport
+    const isInViewport = (element) => {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0 &&
+        rect.left < window.innerWidth &&
+        rect.right > 0
+      );
+    };
 
-      let newActiveSection = 0;
-      let maxVisibility = 0;
+    // Function to handle scroll and intersection
+    const handleScrollAndIntersection = () => {
+      // Check if the container itself is in the viewport
+      const containerIsVisible = isInViewport(container);
+      setIsParallaxVisible(containerIsVisible);
 
-      sectionRefs.current.forEach((section, index) => {
-        if (!section) return;
+      // Only process active section if container is visible
+      if (containerIsVisible) {
+        // Calculate which section is most visible
+        const containerHeight = window.innerHeight;
+        const containerCenter = containerHeight / 2;
 
-        const sectionRect = section.getBoundingClientRect();
-        const visibleTop = Math.max(sectionRect.top, containerRect.top);
-        const visibleBottom = Math.min(sectionRect.bottom, containerRect.bottom);
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-        const visibilityRatio = visibleHeight / sectionRect.height;
+        let closestSection = 0;
+        let minDistance = Infinity;
 
-        if (visibilityRatio > maxVisibility) {
-          maxVisibility = visibilityRatio;
-          newActiveSection = index;
+        sectionRefs.current.forEach((section, index) => {
+          if (!section) return;
+
+          const sectionRect = section.getBoundingClientRect();
+          const sectionCenter = sectionRect.top + sectionRect.height / 2;
+          const distanceFromCenter = Math.abs(sectionCenter - containerCenter);
+
+          if (distanceFromCenter < minDistance) {
+            minDistance = distanceFromCenter;
+            closestSection = index;
+          }
+        });
+
+        if (closestSection !== activeSection) {
+          setActiveSection(closestSection);
         }
-      });
-
-      if (newActiveSection !== activeSection) {
-        setActiveSection(newActiveSection);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Set up both window scroll and container scroll listeners
+    window.addEventListener('scroll', handleScrollAndIntersection);
+    container.addEventListener('scroll', handleScrollAndIntersection);
+
+    // Initial check
+    handleScrollAndIntersection();
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScrollAndIntersection);
+      container.removeEventListener('scroll', handleScrollAndIntersection);
     };
   }, [activeSection]);
 
@@ -71,23 +95,27 @@ const ParallaxScrollSnap = () => {
     const section = sectionRefs.current[index];
 
     if (container && section) {
-      container.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
-      setActiveSection(index);
+      container.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
     <div className="parallax-outer-container bg-primar" ref={containerRef}>
-      <div className={`parallax-nav-dots ${isParallaxVisible ? '' : 'hidden'}`}>
-        {sections.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollToSection(index)}
-            className={`parallax-nav-dot ${activeSection === index ? 'active' : ''}`}
-            aria-label={`Scroll to section ${index}`}
-          ></button>
-        ))}
-      </div>
+      {isParallaxVisible && (
+        <div className="parallax-nav-dots">
+          {sections.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollToSection(index)}
+              className={`parallax-nav-dot ${activeSection === index ? 'active' : ''}`}
+              aria-label={`Scroll to section ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+      )}
 
       {sections.map((section, index) => (
         <Container
@@ -97,7 +125,9 @@ const ParallaxScrollSnap = () => {
           ref={el => sectionRefs.current[index] = el}
         >
           <Row className='w-100'>
-            <Col lg={6} md={6} sm={12} xs={12}><Image fluid src={section.img} alt={section.title} className='image-fluid' /></Col>
+            <Col lg={6} md={6} sm={12} xs={12}>
+              <Image fluid src={section.img} alt={section.title} className='image-fluid' />
+            </Col>
             <Col lg={6} md={6} sm={12} xs={12} className='d-flex flex-column align-items-center justify-content-center text-start'>
               <div className='w-75'>
                 <div className="subheading-big-medium text-content-primary">{section.title}</div>
