@@ -5,6 +5,7 @@ import errorSound from '../../assets/sounds/rejected.mp3';
 import useFormHandler from "../../hooks/useFormHandler";
 import '../../index.css';
 import '../../App.css';
+import '../home/header/home-header.css';
 import nurseHeaderImage from '../../assets/images/nursing/nurseHeaderImg.svg';
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
@@ -38,7 +39,7 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
 };
 
 const NurseMainHeader = () => {
-      const {
+       const {
     formData,
     otp,
     otpVisible,
@@ -51,7 +52,7 @@ const NurseMainHeader = () => {
     isOtpSent,
     validated,
     handleInputChange,
-    handleExperienceSelect,
+    handleOptionSelect,
     handleSubmit,
     handleOtpChange,
     handleVerifyOtp,
@@ -59,6 +60,17 @@ const NurseMainHeader = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
+   useEffect(() => {
+      // Only set these values once on component mount
+      handleOptionSelect("experience", "Not Applicable (Nurse Page Form)");
+      handleOptionSelect("county", "Not Applicable (Nurse Page Form)");
+      handleOptionSelect("origin", "Nurse Page Form");
+    }, []);
+  
+    // Handler for the looking-for selection with direct label click
+    const handleLookingForSelect = (option) => {
+      handleOptionSelect("lookingFor", option);
+    };
 formData.lookingFor="Study Aborad"; 
 formData.origin="Nursing Page Form";
   return (
@@ -94,14 +106,30 @@ formData.origin="Nursing Page Form";
                     </Col>
                   </Row>
                   <Form.Group className="mb-3" controlId="formLookingFor">
-                    <Form.Select name="lookingFor" value={formData.lookingFor} onChange={handleInputChange} required>
-                      <option value="">Looking For?</option>
-                      <option value="Nursing">Nursing</option>
-                      <option value="Work Abroad">Work Abroad</option>
-                      <option value="Study Abroad"  >Study Abroad</option>
-                      <option value="Language Prep">Language & Test Prep</option>
-                    </Form.Select>
-                  </Form.Group>
+                                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking For ?</Form.Label>
+                                      <div className="d-flex gap-2 flex-wrap">
+                                        {["Nursing", "Information Technology", "Hospitality", "Blue collared jobs"].map((option, index) => (
+                                          <div 
+                                            key={index} 
+                                            className={`experience-option ${formData.lookingFor === option ? "selected" : ""}`}
+                                            onClick={() => handleLookingForSelect(option)}
+                                          >
+                                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                                              {option}
+                                            </label>
+                                            <input
+                                              type="radio"
+                                              id={`looking-for-${index}`}
+                                              name="lookingFor"
+                                              value={option}
+                                              checked={formData.lookingFor === option}
+                                              onChange={() => {}} // Handled by the onClick on parent div
+                                              hidden
+                                            />
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </Form.Group>
 
                   {otpVisible && (
                     <Row className="mb-3">
