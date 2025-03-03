@@ -4,7 +4,8 @@
 .parallax-outer-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Only takes up one viewport height in the page flow */
+  height: 100vh;
+  /* Only takes up one viewport height in the page flow */
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory !important;
@@ -57,13 +58,17 @@
   z-index: 1;
 }
 
-/* Navigation dots */
+/* Navigation dots - fixed to be on the right side */
 .parallax-nav-dots {
-  position: absolute;
+  position: fixed;
+  /* Changed from absolute to fixed */
   right: 20px;
+  /* Ensure it's on the right side */
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
+  display: flex;
+  flex-direction: column;
 }
 
 .parallax-nav-dot {
@@ -71,7 +76,8 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: white; /* Default color will be overridden */
+  background-color: white;
+  /* Default color will be overridden */
   margin: 10px 0;
   opacity: 0.5;
   transition: opacity 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
@@ -107,7 +113,8 @@
 /* Active state with different dimensions */
 .parallax-nav-dot.active {
   opacity: 1;
-  width: 4px;
+  width: 3px;
   height: 64px;
-  border-radius: 2px; /* Changing to a pill shape when active */
+  border-radius: 2px;
+  /* Changing to a pill shape when active */
 }
