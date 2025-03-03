@@ -28,10 +28,10 @@ const cardData = [
 
 export default function StudyAbroad() {
   return (
-    <Container className="mx-auto align-items-center justify-content-center study-abroad-bg text-white" id="study-abroad">
-      <div className="text-center my-lg-4 heading-big-medium">Study Abroad Journey</div>
-      <div className="text-center">
-        <button className="btn-primary d-none d-md-block">Book a Free Consultation</button>
+    <Container className="align-items-center justify-content-center study-abroad-bg text-white" id="study-abroad">
+      <div className="text-center my-lg-4 heading-big-medium ">Study Abroad Journey</div>
+      <div className="text-center d-flex align-items-center justify-content-center">
+        <button className="btn-primary text-center d-none d-md-block">Book a Free Consultation</button>
       </div>
      
       {/* Scrollable Row */}

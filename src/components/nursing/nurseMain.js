@@ -80,7 +80,6 @@ formData.origin="Nursing Page Form";
   <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
     <Image src={nurseHeaderImage} fluid className="w-100 px-lg-2" />
   </Col>
-
           <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
             <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
               <div className="form-container m-0">

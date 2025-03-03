@@ -64,7 +64,7 @@
 
 /* Custom colors for each dot */
 .parallax-nav-dot:nth-child(1) {
-  background-color: #E95454;
+  background-color: transparent;
 }
 
 .parallax-nav-dot:nth-child(2) {
@@ -90,7 +90,7 @@
 /* Highlight active dot */
 .parallax-nav-dot.active {
   opacity: 1;
-  width: 3px;
+  width: 3px !important;
   height: 64px;
   border-radius: 2px;
 }

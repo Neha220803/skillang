@@ -77,8 +77,8 @@ const HomeHeader2 = () => {
   return (
     <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
       <Container className="">
-        <Row className="">
-          <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-0">
+        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> 
+          <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center ">
             <Image src={headerbg} fluid className="w-100 px-lg-5" />
           </Col>
 
@@ -133,7 +133,7 @@ const HomeHeader2 = () => {
                   </Form.Group>
 
                   {otpVisible && (
-                    <Row className="">
+                    <Row className="mb-2">
                       <Col lg={8}>
                         <Form.Control type="text" placeholder="Enter OTP - Sent in mail" value={otp} onChange={handleOtpChange} required />
                         <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
