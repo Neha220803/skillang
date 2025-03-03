@@ -5,12 +5,10 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  /* Only takes up one viewport height in the page flow */
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory !important;
-  /* scroll-behavior: smooth !important; */
-  scrollbar-width: none !important;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
 }
 
 /* Individual parallax sections */
@@ -24,46 +22,69 @@
   color: white;
   overflow: hidden;
   scroll-snap-align: center;
+  transition: opacity 0.4s ease-in-out;
 }
 
-/* Modified approach - we'll use scroll snapping instead of absolute positioning */
+.parallax-section:not(.active) {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Ensure smooth scroll snapping */
 .parallax-section {
+  scroll-snap-align: start;
+}
+
+/* Navigation dots */
+.parallax-nav-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
 }
 
-.parallax-section.active {
+/* Hide navigation dots when outside the parallax section */
+.parallax-nav-dots.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Dots styling */
+.parallax-nav-dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 10px 0;
+  opacity: 0.5;
+  transition: opacity 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.parallax-nav-dot.active {
   opacity: 1;
+  width: 3px;
+  height: 64px;
+  border-radius: 2px;
 }
 
-/* .parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
-  z-index: -1;
-} */
-
-.section-content {
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  max-width: 100%;
-  height: fit-content !important;
-  text-align: center;
-  z-index: 1;
+/* Hide scrollbar */
+.parallax-outer-container::-webkit-scrollbar {
+  display: none;
 }
 
-/* Navigation dots - fixed to be on the right side */
+/* Navigation dots - Ensure visibility across all sections */
 .parallax-nav-dots {
   position: fixed;
-  /* Changed from absolute to fixed */
+  /* Fixed so it stays visible */
   right: 20px;
-  /* Ensure it's on the right side */
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
@@ -71,13 +92,13 @@
   flex-direction: column;
 }
 
+/* Dots styling */
 .parallax-nav-dot {
   display: block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: white;
-  /* Default color will be overridden */
   margin: 10px 0;
   opacity: 0.5;
   transition: opacity 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
@@ -106,15 +127,27 @@
   background-color: #9473F2;
 }
 
-.parallax-nav-dot:hover {
-  opacity: 0.75;
-}
-
-/* Active state with different dimensions */
+/* Highlight active dot */
 .parallax-nav-dot.active {
   opacity: 1;
   width: 3px;
   height: 64px;
   border-radius: 2px;
-  /* Changing to a pill shape when active */
+}
+
+/* Hide scrollbar */
+.parallax-outer-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure each section scrolls properly */
+.parallax-section {
+  scroll-snap-align: start;
+  /* Ensures smooth scrolling */
+}
+
+/* Ensure sections fade in one by one */
+.parallax-section:not(.active) {
+  opacity: 0.2;
+  pointer-events: none;
 }
