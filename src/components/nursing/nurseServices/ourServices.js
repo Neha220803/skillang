@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { Card, CardText, CardTitle, Container, Image, Col, Row } from 'react-bootstrap';
+import React, { useState, useEffect, useRef } from 'react';
+import { Card, CardText, CardTitle, Container, Image, Col, Row, Button } from 'react-bootstrap';
+import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import nurseService from '../../../assets/images/nursing/nurseService.png';
 import './ourServices.css';
 
@@ -11,28 +12,46 @@ const services = [
   { title: 'Relocation Support', text: 'Assisting with accommodation, cultural adaptation, and settling in.' },
   { title: 'Job Placement', text: 'We connect you with reputable healthcare facilities across Germany' },
   { title: 'Cultural Integration', text: 'Assistance in adjusting to life and work in Germany' },
-  { title: 'Visa Assistance', text: 'Guidance through the visa application process' },
   { title: 'Ongoing Career Support', text: 'Continuous guidance to help you succeed long-term' }
 ];
 
 const OurServices = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [maxHeight, setMaxHeight] = useState("300px");
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const servicesRef = useRef(null);
   const scrollContainerRef = useRef(null);
-  // const duplicatedServices = [...services, ...services];
-    const duplicatedServices = [...services];
-
-
+  
+  // Monitor screen width
   useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+  // Update max height based on content
+  useEffect(() => {
+    if (servicesRef.current) {
+      setMaxHeight(showAll ? `${servicesRef.current.scrollHeight}px` : "300px");
+    }
+  }, [showAll]);
+  
+  // Auto-scrolling effect for desktop/tablet screens
+  useEffect(() => {
+    // Skip if on mobile
+    if (screenWidth <= 768) return;
+    
     const scrollContainer = scrollContainerRef.current;
     let animationFrameId;
     let scrollPosition = 0;
-    const scrollSpeed = 0.5; // Adjust for faster/slower scrolling
+    const scrollSpeed = 0.5;
 
     const autoScroll = () => {
       if (scrollContainer) {
         scrollPosition += scrollSpeed;
         
-        // Reset position when we've scrolled through the original set
-        if (scrollPosition >= scrollContainer.scrollHeight / 2) {
+        // Reset position when we've scrolled through all content
+        if (scrollPosition >= scrollContainer.scrollHeight - scrollContainer.clientHeight) {
           scrollPosition = 0;
         }
         
@@ -64,10 +83,10 @@ const OurServices = () => {
         scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
-  }, []);
+  }, [screenWidth]);
 
   return (
-    <Container className="py-5">
+    <Container className="">
       <Row className='bg-primar'>
         <Col md={8}>
           <Image fluid src={nurseService} alt="nurse" className="nurse-service-img" />
@@ -80,17 +99,42 @@ const OurServices = () => {
             </div>
           </div>
         </Col>
-        <Col md={4}>
+        <Col md={4} >
           <div 
             ref={scrollContainerRef}
-            className="services-scrollable-container"
+            className={screenWidth > 768 ? "services-scrollable-container" : "services-container"}
           >
-            {duplicatedServices.map((service, index) => (
-              <Card key={index} className="mb-4 nurse-serv-card">
-                <CardTitle className='subheading-small-medium'>{service.title}</CardTitle>
-                <CardText className='paragraph-small-medium text-content-secondary'>{service.text}</CardText>
-              </Card>
-            ))}
+            <div 
+              ref={servicesRef}
+              className={`services-content ${showAll ? "expanded" : ""}`}
+              style={{ 
+                maxHeight: screenWidth <= 768 ? maxHeight : "none", 
+                transition: screenWidth <= 768 ? "max-height 0.4s ease-in-out" : "none", 
+                overflow: screenWidth <= 768 ? "hidden" : "visible"
+              }}
+            >
+              {services.map((service, index) => (
+                <Card key={index} className="mb-4 nurse-serv-card">
+                  <CardTitle className='subheading-small-medium'>{service.title}</CardTitle>
+                  <CardText className='paragraph-small-medium text-content-secondary'>{service.text}</CardText>
+                </Card>
+              ))}
+            </div>
+            
+            {/* Toggle Button - Only visible on mobile */}
+            <div className="text-center d-block d-md-none mt-1">
+              <button className="btn-secondary-outline" onClick={() => setShowAll(!showAll)}>
+                {showAll ? (
+                  <>
+                    Close <ChevronUp className="ms-1" />
+                  </>
+                ) : (
+                  <>
+                    View All <ChevronDown className="ms-1" />
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </Col>
       </Row>
