@@ -1,0 +1,23 @@
+.lang-why-skill-card{
+    /* Frame 1618872817 */
+
+box-sizing: border-box !important;
+
+padding: 16px;
+
+width: 100% !important;
+height: 100% !important;
+
+background: #3B3B3B !important;
+border-radius: 24px !important;
+
+}
+
+.lang-why-skill-bg{
+    background-image: url('../../../assets/images/lang-test/LwhySkillBg.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left !important;
+  padding: 48px 0px !important;
+
+}

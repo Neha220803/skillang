@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row, Card, CardImg, CardTitle, CardText } from "react-bootstrap";
+import { Container, Col, Row, Card, CardImg, CardTitle, CardText, CardBody } from "react-bootstrap";
 import whyLearnImg from '../../../assets/images/lang-test/LWhyLearnImg.png';
 import whyLearnIcon1 from '../../../assets/icons/lang-test/collab.svg';
 import whyLearnIcon2 from '../../../assets/icons/lang-test/admission.svg';
@@ -30,9 +30,9 @@ const cardData = [
 const WhyLangTraining = () => {
   return (
     <div>
-      <Container className='d-flex justify-content-center  align-items-center'>
-        <Row className='h-100 d-flex justify-content-center align-items-center'>
-          <Col lg={6} md={6} sm={12} xs={12} className='d-flex flex-column justify-content-center mx-auto align-items-center'>
+      <Container className='d-flex justify-content-center align-items-center'>
+        <Row className=' d-flex justify-content-center align-items-center'>
+          <Col lg={6} md={6} sm={12} xs={12} className='d-flex flex-column justify-content-center  align-items-center'>
             <Row className=''>
               <div className='heading-big-medium text-content-primary'>
                 Why Language Training Matters?
@@ -42,6 +42,7 @@ const WhyLangTraining = () => {
               {cardData.slice(0, 2).map((card, index) => (
                 <Col lg={6} key={index} className=' mb-3'>
                   <Card className='why-lang-training-cards'>
+                    
                     <img src={card.icon} alt={card.alt} width="50" height="50" />
                     <CardTitle className='subheading-small-medium text-content-secondary'>
                       {card.title}
@@ -49,6 +50,7 @@ const WhyLangTraining = () => {
                     <CardText className='paragraph-big-medium text-content-secondary'>
                       {card.text}
                     </CardText>
+                   
                   </Card>
                 </Col>
               ))}
@@ -56,6 +58,7 @@ const WhyLangTraining = () => {
             <Col lg={12}>
               {cardData.slice(2, 3).map((card, index) => (
                 <Card key={index} className='why-lang-training-cards'>
+                
                   <img src={card.icon} alt={card.alt} width="50" height="50" />
                   <CardTitle className='subheading-small-medium text-content-secondary'>
                     {card.title}
@@ -63,11 +66,12 @@ const WhyLangTraining = () => {
                   <CardText className='paragraph-big-medium text-content-secondary'>
                     {card.text}
                   </CardText>
+                  
                 </Card>
               ))}
             </Col>
           </Col>
-          <Col lg={6} md={6} sm={12} xs={12} className='h-100 bg-primary d-flex justify-content-center mx-auto align-items-center'>
+          <Col lg={6} md={6} sm={12} xs={12} className='h-100 bg-primar d-flex justify-content-center mx-auto align-items-center'>
             <img src={whyLearnImg} alt="Language Training Image" className='image-fluid' />
           </Col>
         </Row>
