@@ -1,0 +1,60 @@
+.study-abroad-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.study-abroad-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.scroller {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroller__inner {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.destination-item {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    /* Reduce from 6rem to 3rem */
+    min-width: 150px;
+    /* Reduce from 200px to 150px */
+}
+
+.destination-flag {
+    width: 50px;
+    /* Reduce from 60px */
+    height: 50px;
+    /* Reduce from 60px */
+    margin-right: 0.5rem;
+    /* Reduce from 1rem */
+}
+
+.destination-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+}
