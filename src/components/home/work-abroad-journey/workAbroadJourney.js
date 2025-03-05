@@ -129,7 +129,7 @@ const ParallaxScrollSnap = () => {
               <Image fluid src={section.img} alt={section.title} className='image-fluid' />
             </Col>
             <Col lg={6} md={6} sm={12} xs={12} className='d-flex flex-column align-items-center justify-content-center text-start'>
-              <div className='w-75'>
+              <div className='work-journey-text-wrap'>
                 <div className="subheading-big-medium text-content-primary">{section.title}</div>
                 <div className="paragraph-big-medium text-content-secondary my-2">{section.description}</div>
                 <button className='btn-secondary'>Learn More</button>

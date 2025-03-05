@@ -16,15 +16,20 @@ const HomePage = () => {
     <div className="home-page-container">
       <div className="homepage-section-spacing"><HomeHeader2 /></div>
       <div className="homepage-section-spacing"><GlobalOprtunity /></div>
-      <div className=""><WorkAbroadOpportunity /></div>
-      {/* The ParallaxScrollSnap component should be in its own section without other elements */}
-      <div className="parallax-section-wrapper">
+      <div className="trying-snap-scroll">
+        <div className="homepage-section-spacing enable-snap-scroll">
+        <WorkAbroadOpportunity />
+      </div>
+      <div className="parallax-section-wrapper enable-snap-scroll">
         <ParallaxScrollSnap />
       </div>
-      <div className="homepage-section-spacing"><StudyAbroadJourney /></div>
+      
+      <div className="homepage-section-spacing enable-snap-scroll"><StudyAbroadJourney /></div>
+      </div>
+      
       <div className="homepage-section-spacing"><UniPartner /></div>
       <div className="homepage-section-spacing"><InternshipSection /></div>
-     <div className="homepage-section-spacing"> <TestPrep /></div>
+      <div className="homepage-section-spacing"><TestPrep /></div>
       <div className="homepage-section-spacing"><LoanSection /></div>
       <div className="homepage-section-spacing"><PartnerWithUsSection /></div>
     </div>

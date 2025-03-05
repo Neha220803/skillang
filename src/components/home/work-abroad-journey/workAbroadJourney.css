@@ -106,3 +106,18 @@
   position: relative;
   /* No height constraints here to allow the component to handle its own height */
 }
+
+.work-journey-text-wrap{
+  width: 75% !important;
+}
+
+@media (max-width: 768px) {
+  .work-journey-text-wrap{
+    width: 100% !important;
+   gap: 8px !important;
+      margin-top: 24px !important;}
+    .parallax-nav-dots {
+      display: none !important;
+     
+    }
+}

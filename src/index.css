@@ -171,6 +171,8 @@
 
 html, body {
   overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  scroll-behavior: smooth !important;
 }
 
 

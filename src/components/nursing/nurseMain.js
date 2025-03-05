@@ -54,6 +54,8 @@ const NurseMainHeader = () => {
     handleInputChange,
     handleOptionSelect,
     handleSubmit,
+    
+    handleExperienceSelect,
     handleOtpChange,
     handleVerifyOtp,
     handleResendOtp,
@@ -77,10 +79,10 @@ formData.origin="Nursing Page Form";
     <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2" id="home">
       <Container className="my-lg-0">
         <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
-  <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
+  <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
     <Image src={nurseHeaderImage} fluid className="w-100 px-lg-2" />
   </Col>
-          <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
+          <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
             <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
               <div className="form-container m-0">
                 <h3>Let's Connect to Explore More!</h3>
@@ -104,31 +106,27 @@ formData.origin="Nursing Page Form";
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="mb-3" controlId="formLookingFor">
-                                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking For ?</Form.Label>
-                                      <div className="d-flex gap-2 flex-wrap">
-                                        {["Nursing", "Information Technology", "Hospitality", "Blue collared jobs"].map((option, index) => (
-                                          <div 
-                                            key={index} 
-                                            className={`experience-option ${formData.lookingFor === option ? "selected" : ""}`}
-                                            onClick={() => handleLookingForSelect(option)}
-                                          >
-                                            <label className="w-100 m-0 caption-regular text-content-secondary">
-                                              {option}
-                                            </label>
-                                            <input
-                                              type="radio"
-                                              id={`looking-for-${index}`}
-                                              name="lookingFor"
-                                              value={option}
-                                              checked={formData.lookingFor === option}
-                                              onChange={() => {}} // Handled by the onClick on parent div
-                                              hidden
-                                            />
-                                          </div>
-                                        ))}
-                                      </div>
-                                    </Form.Group>
+                  <Form.Group className="mb-3 text-start">
+                                        <Form.Label>Select Experience</Form.Label>
+                                        <div className="d-flex gap-2 flex-wrap">
+                                          {["Student", "Freshers", "0-1 Years", "1-3 Years", "3-5 Years", "5+ Years"].map((option, index) => (
+                                            <div key={index} className={`experience-option ${formData.experience === option ? "selected" : ""}`}>
+                                              <input
+                                                type="radio"
+                                                id={`experience-${index}`}
+                                                name="experience"
+                                                value={option}
+                                                checked={formData.experience === option}
+                                                onChange={(e) => handleExperienceSelect(e.target.value)}
+                                                hidden
+                                              />
+                                              <label htmlFor={`experience-${index}`} className="w-100">
+                                                {option}
+                                              </label>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      </Form.Group>
 
                   {otpVisible && (
                     <Row className="mb-3">
