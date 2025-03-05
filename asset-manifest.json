@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/skillang/static/css/main.4f91961a.css",
-    "main.js": "/skillang/static/js/main.a889983a.js",
+    "main.js": "/skillang/static/js/main.2f9442c8.js",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.f6f26b2b159337903a63483280470ea4.svg",
     "static/media/Lheader-bg.svg": "/skillang/static/media/Lheader-bg.3552d3b1ed46ab35db8b05114da72c42.svg",
     "static/media/nurseHeaderImg.svg": "/skillang/static/media/nurseHeaderImg.c9f3653e073aca270662032d1b0b6b05.svg",
@@ -164,10 +164,10 @@
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "index.html": "/skillang/index.html",
     "main.4f91961a.css.map": "/skillang/static/css/main.4f91961a.css.map",
-    "main.a889983a.js.map": "/skillang/static/js/main.a889983a.js.map"
+    "main.2f9442c8.js.map": "/skillang/static/js/main.2f9442c8.js.map"
   },
   "entrypoints": [
     "static/css/main.4f91961a.css",
-    "static/js/main.a889983a.js"
+    "static/js/main.2f9442c8.js"
   ]
 }
