@@ -13,7 +13,7 @@ import '../../../App.css';
 
 const LoanSection = () => {
   return (
-    <div className="d-flex flex-column align-items-center justify-content-evenly h-md-100vh py-5 h-lg-100vh">
+    <div className="d-flex flex-column align-items-center justify-content-evenly">
       <Container className="d-flex flex-column align-items-start justify-content-center">
         <Col xs={12} sm={12} md={6} lg={5} className="mb-4 d-block d-md-none">
               <Image fluid src={loanImg} className="loan-image rounded-4" />

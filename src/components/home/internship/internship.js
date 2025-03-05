@@ -42,9 +42,9 @@ const InternshipSection = () => {
       }, [showAll]);
       
   return (
-    <section className="d-flex flex-column align-items-center justify-content-center py-5">
+    <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-lg-4 mb-md-4 text-center w-md-75">
+        <Row className="mb-lg-4 mb-md-4 text-center w-lg-75">
           <div className="heading-big-medium">Ausbildung (Internship) Program in Germany</div>
           <div className="paragraph-big-medium text-content-secondary">
             Gain hands-on experience and build a successful career in Germany with the Ausbildung Internship Program.

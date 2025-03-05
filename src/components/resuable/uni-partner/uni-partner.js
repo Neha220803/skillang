@@ -6,8 +6,8 @@ import './uni-partner.css';
 
 const UniPartner = () => {
   return (
-    <div className='d-flex flex-column align-items-center justify-content-center my-5'>
-      <Container className='my-4'>
+    <div className='d-flex flex-column align-items-center justify-content-center'>
+      <Container className=''>
         <Row>
           <Col lg={8} md={8} sm={12} xs={12} className='d-flex align-items-center justify-content-center mb-4'>
             <div className="scroll-wrapper d-flex align-items-center justify-content-center uni-partner-bg w-100 h-100">
