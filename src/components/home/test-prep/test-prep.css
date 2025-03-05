@@ -12,7 +12,8 @@
   background-repeat: no-repeat !important;
   padding: 40px !important;
   border-radius: 18px !important;
-  height: 100% !important;
+  background-position: right !important;
+  /* height: 100% !important; */
 }
 
 .test-lang-card {
@@ -35,5 +36,22 @@
   color: #240A6D !important;
   background-color: #F3EFFE !important;
   border-radius: 8px !important;
+  font-size: 14px !important;
   padding: 4px !important;
+}
+
+@media (max-width: 768px) {
+
+  .test-lang-left-bg {
+  background-image: url('../../../assets/images/home/testLangLeftBg.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat !important;
+  padding: 24px !important;
+  width: 100% !important;
+  height: 500px !important;
+  border-radius: 18px !important;
+  background-position: bottom !important;
+  /* height: 100% !important; */
+}
+
 }

@@ -8,7 +8,6 @@ import '../../../index.css';
 import work1 from '../../../assets/images/home/workAbroadCard1.png';
 import work2 from '../../../assets/images/home/workAbroadCard2.png';
 import work3 from '../../../assets/images/home/workAbroadCard3.png';
-
 import work4 from '../../../assets/icons/home/electrical.svg';
 import work5 from '../../../assets/icons/home/plumbing.svg';
 import work6 from '../../../assets/icons/home/vpaintin.svg';
@@ -68,7 +67,7 @@ const WorkAbroadOpportunity = () => {
         
         <Row className=''>
           <Col md={4} lg={9} className="work-abroad-left-bg flex-column text-white d-flex align-items-end justify-content-start py-4 text-start">
-            <div className='w-50'>
+            <div className='work-ops-textwrap'>
               <div className='text-white heading-small-medium'>Diverse Range of Opportunities</div>
               <div className='text-white paragraph-small-medium my-2'>We help you choose from large range of employment opportunities</div>
             <div>

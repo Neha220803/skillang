@@ -9,23 +9,24 @@ import LoanSection from "../components/home/loan/loan-section";
 import HomeHeader2 from "../components/home/header/home-header-2";
 import PartnerWithUsSection from "../components/resuable/partner-with-us/partnerWithUs";
 import ParallaxScrollSnap from "../components/home/work-abroad-journey/workAbroadJourney";
+import '../App.css';
 
 const HomePage = () => {
   return (
     <div className="home-page-container">
-      <HomeHeader2 />
-      <GlobalOprtunity />
-      <WorkAbroadOpportunity />
+      <div className="homepage-section-spacing"><HomeHeader2 /></div>
+      <div className="homepage-section-spacing"><GlobalOprtunity /></div>
+      <div className=""><WorkAbroadOpportunity /></div>
       {/* The ParallaxScrollSnap component should be in its own section without other elements */}
       <div className="parallax-section-wrapper">
         <ParallaxScrollSnap />
       </div>
-      <StudyAbroadJourney />
-      <UniPartner />
-      <InternshipSection />
-      <TestPrep />
-      <LoanSection />
-      <PartnerWithUsSection />
+      <div className="homepage-section-spacing"><StudyAbroadJourney /></div>
+      <div className="homepage-section-spacing"><UniPartner /></div>
+      <div className="homepage-section-spacing"><InternshipSection /></div>
+     <div className="homepage-section-spacing"> <TestPrep /></div>
+      <div className="homepage-section-spacing"><LoanSection /></div>
+      <div className="homepage-section-spacing"><PartnerWithUsSection /></div>
     </div>
   );
 };

@@ -24,11 +24,21 @@ section {
     margin-bottom: 0px !important;
   }
 
+.homepage-section-spacing{
+  padding-bottom: 96px !important;
+    margin-bottom: 0px !important;
+
+}
+
 @media (max-width: 768px) {
   .section-spacing {
     /* background-color: pink !important; */
     padding-bottom: 80px !important;
   }
+  .homepage-section-spacing{
+  padding-bottom: 80px !important;
+
+}
 }
 
 header {

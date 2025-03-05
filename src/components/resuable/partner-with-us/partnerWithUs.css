@@ -15,6 +15,8 @@
 .partner-subbox{
     border: #C4D8FE 1px solid !important;
     padding: 6px 12px !important;
+    gap:4px !important;
+    color: #E3E3E3 !important;
     border-radius: 999px !important;
 }
 
@@ -26,5 +28,7 @@
         border-radius: 0px !important;
 
     }
+
+    
 
 }
