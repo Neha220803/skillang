@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.4f91961a.css",
-    "main.js": "/skillang/static/js/main.2f9442c8.js",
+    "main.css": "/skillang/static/css/main.fcf45967.css",
+    "main.js": "/skillang/static/js/main.2441e0c6.js",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.f6f26b2b159337903a63483280470ea4.svg",
     "static/media/Lheader-bg.svg": "/skillang/static/media/Lheader-bg.3552d3b1ed46ab35db8b05114da72c42.svg",
     "static/media/nurseHeaderImg.svg": "/skillang/static/media/nurseHeaderImg.c9f3653e073aca270662032d1b0b6b05.svg",
@@ -25,12 +25,14 @@
     "static/media/workAbroadMainBg.png": "/skillang/static/media/workAbroadMainBg.cbf2e450a1b48deba5ec.png",
     "static/media/nurseService.png": "/skillang/static/media/nurseService.91b3468d51691449c50c.png",
     "static/media/PartnerImg.png": "/skillang/static/media/PartnerImg.6ff02f6a9c504b7e7095.png",
+    "static/media/work-2.png": "/skillang/static/media/work-2.57a8011fae783bb15502.png",
     "static/media/nurse-2.png": "/skillang/static/media/nurse-2.2b7c3af9372a8a7be7d1.png",
     "static/media/whystudyabroad.png": "/skillang/static/media/whystudyabroad.4177aeaed8b676fcdb5b.png",
     "static/media/nurse-1.png": "/skillang/static/media/nurse-1.17d4cf53fbc294d4fd54.png",
     "static/media/nurse-3.png": "/skillang/static/media/nurse-3.9d64ba345352620f451d.png",
     "static/media/study-1.png": "/skillang/static/media/study-1.596b8e0f53d60ee43575.png",
     "static/media/LWhyLearnImg.png": "/skillang/static/media/LWhyLearnImg.02267125a0e419cb6033.png",
+    "static/media/work-3.png": "/skillang/static/media/work-3.739dd265762a5eb33d0d.png",
     "static/media/resi.png": "/skillang/static/media/resi.a12889778c1136dfbcab.png",
     "static/media/intern-5.svg": "/skillang/static/media/intern-5.b3e2c79fd57c4df89dbccb21661fb69c.svg",
     "static/media/opsLeftImg.png": "/skillang/static/media/opsLeftImg.084cfa54ba24d730aff3.png",
@@ -146,13 +148,9 @@
     "static/media/whyus8.svg": "/skillang/static/media/whyus8.cb3862bba773c169a621aa0032dbfa81.svg",
     "static/media/carAdv1.svg": "/skillang/static/media/carAdv1.1de5311c3d2957e63350f9f74d47b284.svg",
     "static/media/whyGer3.svg": "/skillang/static/media/whyGer3.2716569f0b68814f4c39b56d9e51012e.svg",
-    "static/media/slick.svg": "/skillang/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/whyNurse3.svg": "/skillang/static/media/whyNurse3.68962220c71d5d891f4786f4ae60c294.svg",
     "static/media/wallet-money.svg": "/skillang/static/media/wallet-money.c09b1ac377acef0710bcdc2efc73c17e.svg",
-    "static/media/slick.eot": "/skillang/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/whyNurse8.svg": "/skillang/static/media/whyNurse8.554db351ed4a49f014e8141a2ab5aba2.svg",
-    "static/media/slick.ttf": "/skillang/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/skillang/static/media/slick.295183786cd8a1389865.woff",
     "static/media/recruitIcon.svg": "/skillang/static/media/recruitIcon.bcf222c52cb26672e14dc8fa57a841ab.svg",
     "static/media/instituteIcon.svg": "/skillang/static/media/instituteIcon.f048911463a6dbadcd89be1f459f7b60.svg",
     "static/media/whyNurse1.svg": "/skillang/static/media/whyNurse1.70802766e431a38adc5c8f7297cae43d.svg",
@@ -163,11 +161,11 @@
     "static/media/whySkillangBg.svg": "/skillang/static/media/whySkillangBg.6c4cb31db94650b98333.svg",
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "index.html": "/skillang/index.html",
-    "main.4f91961a.css.map": "/skillang/static/css/main.4f91961a.css.map",
-    "main.2f9442c8.js.map": "/skillang/static/js/main.2f9442c8.js.map"
+    "main.fcf45967.css.map": "/skillang/static/css/main.fcf45967.css.map",
+    "main.2441e0c6.js.map": "/skillang/static/js/main.2441e0c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f91961a.css",
-    "static/js/main.2f9442c8.js"
+    "static/css/main.fcf45967.css",
+    "static/js/main.2441e0c6.js"
   ]
 }
