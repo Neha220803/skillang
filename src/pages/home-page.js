@@ -11,6 +11,7 @@ import PartnerWithUsSection from "../components/resuable/partner-with-us/partner
 import ParallaxScrollSnap from "../components/home/work-abroad-journey/workAbroadJourney";
 import CardComponent from '../components/home/try-cards/TryCards.js';
 import '../App.css';
+import WorkAbroadJourneyTimeline from "../components/home/work-abroad-timeline/work-abroad-timeline.js";
 
 const HomePage = () => {
   return (
@@ -18,14 +19,14 @@ const HomePage = () => {
       <div className="homepage-section-spacing"><HomeHeader2 /></div>
       <div className="homepage-section-spacing"><GlobalOprtunity /></div>
       <div className="trying-snap-scroll">
-        <div className="homepage-section-spacing enable-snap-scroll">
+        <div className="homepage-section-spacing">
         <WorkAbroadOpportunity />
       </div>
-      <div className="parallax-section-wrapper enable-snap-scroll">
-        <ParallaxScrollSnap />
+      <div className="omepage-section-spacing">
+        <WorkAbroadJourneyTimeline />
       </div>
       
-      <div className="homepage-section-spacing enable-snap-scroll"><StudyAbroadJourney /></div>
+      <div className="homepage-section-spacing"><StudyAbroadJourney /></div>
       </div>
       
       <div className="homepage-section-spacing"><UniPartner /></div>

@@ -8,21 +8,18 @@
   border-radius: 12px !important;
 }
 
-
 .work-card-img{
   padding: 0% !important;
   margin: 0 !important;
   height: auto !important;
   width: 100% !important;
   border-radius: 12px !important;
-
 }
 
 .work-abroad-bg-card{
   background-image: url('../../../assets/images/home/workAbroadBg.svg');
-  background-size:cover;
+  background-size: cover;
   width: 100% !important;
-  /* background-position: left !important; */
   background-repeat: no-repeat;
   border-radius: 24px !important;
   padding: 56px 40px 40px !important;
@@ -30,21 +27,18 @@
 
 .work-abroad-left-bg{
   background-image: url('../../../assets/images/home/opsLeftImg.png');
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 24px !important;
-  /* background-position: left !important; */
   /* height: 100% !important; */
 }
 
 .work-abroad-right-bg{
   background-image: url('../../../assets/images/home/opsBg.png');
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 24px !important;
   padding: 24px !important;
-
-
 }
 
 .work-abroad-card{
@@ -76,7 +70,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
-  
 }
 
 /* Responsive Design */
@@ -85,7 +78,6 @@
 }
 
 @media (max-width: 576px) {
-
   .work-card-img{
     height: 180px !important;
     width: auto;
@@ -93,31 +85,24 @@
   }
 
   .work-abroad-bg-card{
+    background-repeat: no-repeat;
+    border-radius: 24px !important;
+    padding: 24px 16px !important;
+  }
 
-  background-repeat: no-repeat;
-  border-radius: 24px !important;
-  padding: 24px 16px !important;
-}
+  .prim-card {
+    padding: 24px !important;
+  }
 
-.prim-card {
-  padding: 24px !important;
-}
+  .work-ops-textwrap{
+    width: 75% !important;
+  }
 
-.work-ops-textwrap{
-  width: 75% !important;
-}
-
-.work-abroad-left-bg{
-  background-image: url('../../../assets/images/home/opsLeftImgMob.png');
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  border-radius: 16px !important;
-  height: 423px !important;
-  /* background-position: left !important; */
-  /* height: 100% !important; */
-}
-
-
-
-  
+  .work-abroad-left-bg{
+    background-image: url('../../../assets/images/home/opsLeftImgMob.png');
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-radius: 16px !important;
+    height: 423px !important;
+  }
 }

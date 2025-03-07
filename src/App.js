@@ -26,8 +26,8 @@ function Layout() {
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/nursing-in-germany" element={<LandingNursePage />} />
-        <Route path="/study-now-abroad" element={<LandingStudyAbroadPage />} />
-        <Route path="/work-now-abroad" element={<LandingWorkAbroadPage />} />
+        <Route path="/study-abroad-form" element={<LandingStudyAbroadPage />} />
+        <Route path="/work-abroad-form" element={<LandingWorkAbroadPage />} />
         <Route path="/nursing" element={<NursePage />} />
         <Route path="/work-abroad" element={<WorkAboradPage />} />
         <Route path="/study-abroad" element={<StudyAbroadPage />} />

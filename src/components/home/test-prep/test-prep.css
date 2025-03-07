@@ -8,13 +8,23 @@
 
 .test-lang-left-bg {
   background-image: url('../../../assets/images/home/testLangLeftBg.png') !important;
-  background-size: cover !important;
+  background-size: contain !important;
   background-repeat: no-repeat !important;
   padding: 40px !important;
   border-radius: 18px !important;
-  background-position: right !important;
-  /* height: 100% !important; */
+  height: 600px !important;
+  background-position: right bottom !important;
+  background-color: #DBD0FB !important;
 }
+
+.test-lang-right-col {
+  /* display: flex !important; */
+  flex-direction: column !important ;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
 
 .test-lang-card {
   box-sizing: border-box;

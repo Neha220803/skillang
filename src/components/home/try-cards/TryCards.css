@@ -1,10 +1,12 @@
+h2 {
+  font-family: 'Title';
+}
+
 .main {
   position: relative;
   margin-top: 50vh;
-  padding-bottom: 100vh !important;
-  scroll-snap-type: y mandatory !important;
-  overflow-y: auto !important;
-  height: 100vh !important;
+  /* Add padding to create space for all cards */
+  padding-bottom: 100vh; 
 }
 
 .cardContainer {
@@ -13,9 +15,7 @@
   align-items: center;
   justify-content: center;
   position: sticky !important;
-  top: 0px;
-  z-index: calc(1000 - var(--i, 0));
-  scroll-snap-align: start;
+  top: 0px !important;
 }
 
 .cardd {
@@ -23,15 +23,15 @@
   flex-direction: column;
   position: relative;
   top: -25%;
-  height: 100vh !important ;
-  /* width: 1000px; */
+  height: 500px;
+  width: 1000px;
   border-radius: 25px;
-  /* padding: 50px; */
-  transform-origin: center !important;
+  padding: 50px;
+  transform-origin: top;
   will-change: transform; /* Optimize transforms */
 }
 
-.cardd h2 {
+.card h2 {
   text-align: center;
   margin: 0px;
   font-size: 28px;

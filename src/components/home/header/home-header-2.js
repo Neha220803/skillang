@@ -75,11 +75,11 @@ const HomeHeader2 = () => {
   };
 
   return (
-    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
-      <Container className="">
+    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2 bg-primar" id="home">
+      <Container className="bg-dar">
         <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> 
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center ">
-            <Image src={headerbg} fluid className="w-100 px-lg-5" />
+            <Image src={headerbg} fluid className="w-100" />
           </Col>
 
           <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">

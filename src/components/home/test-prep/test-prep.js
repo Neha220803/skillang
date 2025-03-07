@@ -15,7 +15,7 @@ const TestPrep = () => {
   return (
     <div>
     <Container className="test-lag-bg d-flex flex-column align-items-center justify-content-center">
-      <Row className="w-100">
+      <Row className="w-100 d-flex align-items-center justify-content-center">
         <Col className="test-lang-left-bg text-start" lg={6} sm={12} xs={12}>
           <div className="heading-big-medium mb-4">Test and Language Preparation</div>
           <div className="paragraph-big-medium text-content-secondary mb-4">
@@ -26,13 +26,14 @@ const TestPrep = () => {
         </Col>
 
         {/* Right Section */}
-        <Col className=" d-flex flex-column mt-3" lg={6}  sm={12} xs={12}>
+        <Col className="px-4 flex-column align-items-center justify-content-center" lg={6} sm={12} xs={12}>
+
           {testPrepCourses.map(([course1, course2, isBestSeller], index) => (
-            <Row key={index} className=" d-flex">
-              <Col className=" " lg={6} sm={6} xs={6}>
+            <Row key={index} className="d-flex">
+              <Col className="pe-1" lg={6} sm={6} xs={6}>
                 <div className="test-lang-card paragraph-big-medium">{course1}</div>
               </Col>
-              <Col className="  " lg={6} sm={6} xs={6}>
+              <Col className="ps-1" lg={6} sm={6} xs={6}>
                 <div className="test-lang-card paragraph-big-medium">
                   {course2} {isBestSeller && <span className="best-seller d-none d-md-block">Best Seller</span>}
                 </div>

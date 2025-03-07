@@ -18,48 +18,37 @@ const projects = [
     title: "Our Features",
     description: "Discover essential features designed to simplify your study abroad journey, from expert guidance to seamless support.",
     src: workJor0,
-    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
-    // color: "#BBACAF"
   },
   {
     title: "Job Matching",
     description: "We Identify suitable jobs and submit applications in prominent industries",
     src: workJor1,
-    link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-    // color: "#977F6D"
   },
   {
     title: "Language & Test Prep",
     description: "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options.",
     src: workJor2,
-    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
-    // color: "#C2491D"
+    
   },
   {
     title: "CV & Application Support",
     description: "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process.",
     src: workJor3,
-    link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
-    // color: "#B62429"
   },
   {
     title: "Application & Interview Support",
     description: "Stay on track with our transparent application process and real-time updates. Get expert mentorship and training to ace your interviews.",
     src: workJor4,
-    link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
-    // color: "#88A28D"
+    
   },
 
    {
     title: "Visa & Relocation Support",
     description: "We guide you through the visa process for a higher success rate and assist with travel and accommodation.",
     src: workJor5,
-    // link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
-    // color: "#88A28D"
-  }
+     }
   // Add more projects as needed
 ];
-
 const CardComponent = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -127,38 +116,36 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
     >
       <motion.div 
         style={{
+          backgroundColor: color, 
           scale, 
           top: `calc(-5vh + ${i * 25}px)`
         }} 
-        className="bg-primar cardd"
+        className="cardd"
       >
-        <Container>
-          
-          <Row className='w-100'>
-                      <Col lg={6} md={6} sm={12} xs={12} className='bg-dar'>
-                          <div className="imageContainer w-100">
-                                <motion.div
-                                  className="inner"
-                                  style={{ scale: imageScale }}
-                                >
-                                  <img
-                                    src={src}
-                                    alt="project"
-                                    className='img-fluid'
-                                  />
-                                </motion.div>
-                              </div>
-                      </Col>
-                      <Col lg={6} md={6} sm={12} xs={12} className='d-flex flex-column align-items-center justify-content-center text-start'>
-                        <div className='work-journey-text-wrap'>
-                          <div className="subheading-big-medium text-content-primary">{title}</div>
-                          <div className="paragraph-big-medium text-content-secondary my-2">{description}</div>
-                          <button className='btn-secondary'>Learn More</button>
-                        </div>
-                      </Col>
-                    </Row>
-          
-        </Container>
+        <h2>{title}</h2>
+        <div className="body">
+          <div className="description">
+            <p>{description}</p>
+            <span>
+              <a href={url} target="_blank" rel="noreferrer">See more</a>
+              <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
+              </svg>
+            </span>
+          </div>
+
+          <div className="imageContainer">
+            <motion.div
+              className="inner"
+              style={{ scale: imageScale }}
+            >
+              <img
+                src={src}
+                alt="project"
+              />
+            </motion.div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );

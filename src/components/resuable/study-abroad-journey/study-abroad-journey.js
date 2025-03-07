@@ -26,21 +26,21 @@ const cardData = [
 
 export default function StudyAbroad() {
   return (
-    <Container className="align-items-center justify-content-center study-abroad-bg text-white" id="study-abroad">
-      <div className="text-center my-lg-4 heading-big-medium ">Study Abroad Journey</div>
-      <div className="text-center d-flex align-items-center justify-content-center">
+    <Container className="align-items-center justify-content-center study-abroad-bg" id="study-abroad">
+      <div className="text-center my-lg-4 heading-big-medium text-content-primaryInverse">Study Abroad Journey</div>
+      {/* <div className="text-center d-flex align-items-center justify-content-center">
         <button className="btn-primary text-center d-none d-md-block">Book a Free Consultation</button>
-      </div>
+      </div> */}
      
       {/* Scrollable Row */}
       <div className="scrollable-container">
         {cardData.map((card, index) => (
           <div key={index} className="card-container">
-            <Card className="custom-card my-4 border-0 text-white">
+            <Card className="custom-card my-4 border-0 ">
               <div className="card-image-wrapper" style={{ backgroundImage: `url(${card.img})` }}></div>
               <Card.Body className="">
-                <Card.Title className="subheading-small-medium mb-1">{card.title}</Card.Title>
-                <Card.Text className="paragraph-big-medium">{card.desc}</Card.Text>
+                <Card.Title className="subheading-small-medium text-content-primaryInverse mb-1">{card.title}</Card.Title>
+                <Card.Text className="paragraph-small-medium text-content-tertiaryInverse">{card.desc}</Card.Text>
                 <div className="button-container">
                   <button className="btn btn-primary btn-learn-more" onClick={() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
