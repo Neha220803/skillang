@@ -1,0 +1,91 @@
+.main {
+  position: relative;
+  margin-top: 50vh;
+  padding-bottom: 100vh !important;
+  scroll-snap-type: y mandatory !important;
+  overflow-y: auto !important;
+  height: 100vh !important;
+}
+
+.cardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky !important;
+  top: 0px;
+  z-index: calc(1000 - var(--i, 0));
+  scroll-snap-align: start;
+}
+
+.cardd {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -25%;
+  height: 100vh !important ;
+  /* width: 1000px; */
+  border-radius: 25px;
+  /* padding: 50px; */
+  transform-origin: center !important;
+  will-change: transform; /* Optimize transforms */
+}
+
+.cardd h2 {
+  text-align: center;
+  margin: 0px;
+  font-size: 28px;
+}
+
+.body {
+  display: flex;
+  height: 100%;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.description {
+  width: 40%;
+  position: relative;
+  top: 10%;
+}
+
+.description p {
+  font-size: 16px;
+}
+
+.description p::first-letter {
+  font-size: 28px;
+  font-family: 'Title';
+}
+
+.description span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.description a {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+.inner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

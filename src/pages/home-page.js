@@ -9,6 +9,7 @@ import LoanSection from "../components/home/loan/loan-section";
 import HomeHeader2 from "../components/home/header/home-header-2";
 import PartnerWithUsSection from "../components/resuable/partner-with-us/partnerWithUs";
 import ParallaxScrollSnap from "../components/home/work-abroad-journey/workAbroadJourney";
+import CardComponent from '../components/home/try-cards/TryCards.js';
 import '../App.css';
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ const HomePage = () => {
       <div className="homepage-section-spacing"><TestPrep /></div>
       <div className="homepage-section-spacing"><LoanSection /></div>
       <div className="homepage-section-spacing"><PartnerWithUsSection /></div>
+      {/* <div><CardComponent /></div> */}
     </div>
   );
 };

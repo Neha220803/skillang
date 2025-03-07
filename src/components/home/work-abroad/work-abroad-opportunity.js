@@ -1,7 +1,5 @@
 import React from 'react';
 import { CardTitle, Container, Card, Row, Col, CardBody, CardText, CardImg } from 'react-bootstrap';
-import 'slick-carousel/slick/slick.css'; 
-import 'slick-carousel/slick/slick-theme.css';
 import '../../../App.css';
 import './work-abroad-opportunity.css';
 import '../../../index.css';
@@ -32,10 +30,10 @@ const WorkAbroadOpportunity = () => {
   ];
 
   return (
-    <section className='d-flex flex-column align-items-center justify-content-center' id="work-abroad">
-        <Container className='p-0 w-100'>
-          <div className='work-abroad-bg-card align-items-center justify-content-center mb-5'>
-            <Row className='mb-2 m-0'>
+    <section className='d-flex flex-column align-items-center justify-content-center ' id="work-abroad">
+        <Container className='p-0 d-flex flex-column align-items-center justify-content-center'>
+          <div className='work-abroad-bg-card  align-items-center justify-content-center mb-5'>
+            <Row className='mb-2 m-0 '>
           <div className='heading-big-medium text-content-primary text-center'>Work Abroad Opportunities </div>
         </Row>
           <Row>
@@ -59,7 +57,6 @@ const WorkAbroadOpportunity = () => {
             </Col>
           ))}
           </Row>
-
           </div>
           <div>
 

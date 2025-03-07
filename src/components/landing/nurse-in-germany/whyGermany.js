@@ -40,7 +40,7 @@ const WhyGermany = () => {
                   className="mb-3 px-1"
                 >
                   <Card className="why-us-ger-card flex-row" style={{ width: "100%" }}>
-                    <CardImg variant='top' src={service.img} alt={`Reason ${index + 1}`} />
+                    <CardImg variant='top' src={service.img} alt={`Reason ${index + 1}`} style={{width:'48px',height:'48px'}} />
                     <CardBody className='why-ger-body p-0'>
                       <Card.Text className="paragraph-small-medium text-content-secondary">
                         <div className='paragraph-small-medium text-content-secondary why-ger-text text-start'>{service.text}</div>

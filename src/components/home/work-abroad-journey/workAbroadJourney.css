@@ -1,4 +1,4 @@
-/* ParallaxScrollSnap.css - Properly scoped to avoid affecting other components */
+/* ParallaxScrollSnap.css with enhanced animations */
 
 /* Main container that holds all the parallax sections */
 .parallax-outer-container {
@@ -27,16 +27,59 @@
   color: white;
   overflow: hidden;
   scroll-snap-align: start;
-  transition: opacity 0.4s ease-in-out;
+  transform-origin: center center;
+  transition: 
+    opacity 0.5s ease-in-out,
+    transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Custom easing for bounce effect */
 }
 
-/* Ensure sections fade in one by one */
+/* Exit animation: section shrinks when not active */
 .parallax-section:not(.active) {
   opacity: 0.2;
   pointer-events: none;
+  transform: scale(0.5); /* Shrink when exiting */
 }
 
-/* Navigation dots - Only shown when parent is visible */
+/* Entry animation: section starts large then settles */
+.parallax-section.active {
+  animation: sectionEnter 0.6s forwards;
+}
+
+@keyframes sectionEnter {
+  0% {
+    transform: scale(1.1); /* Start larger */
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1); /* Settle to normal size */
+    opacity: 1;
+  }
+}
+
+/* Additional animation for the content inside sections */
+.parallax-section .content-container {
+  transition: transform 0.5s ease-out;
+  will-change: transform; /* Performance optimization */
+}
+
+.parallax-section:not(.active) .content-container {
+  transform: scale(0.9); /* Slightly shrink content in inactive sections */
+}
+
+.parallax-section.active .content-container {
+  animation: contentEnter 0.7s 0.1s forwards; /* Slight delay after section animation */
+}
+
+@keyframes contentEnter {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Navigation dots styling - kept from original */
 .parallax-nav-dots {
   position: fixed;
   right: 20px;
@@ -104,20 +147,19 @@
 /* Add some style for the Home page section wrapper */
 .parallax-section-wrapper {
   position: relative;
-  /* No height constraints here to allow the component to handle its own height */
 }
 
-.work-journey-text-wrap{
+.work-journey-text-wrap {
   width: 75% !important;
 }
 
 @media (max-width: 768px) {
-  .work-journey-text-wrap{
+  .work-journey-text-wrap {
     width: 100% !important;
-   gap: 8px !important;
-      margin-top: 24px !important;}
-    .parallax-nav-dots {
-      display: none !important;
-     
-    }
+    gap: 8px !important;
+    margin-top: 24px !important;
+  }
+  .parallax-nav-dots {
+    display: none !important;
+  }
 }

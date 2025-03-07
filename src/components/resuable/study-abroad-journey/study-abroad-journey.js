@@ -1,7 +1,5 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import '../../../App.css';
 import './study-abroad-journey.css';
 import work1 from "../../../assets/images/reusable/s-journey-1.png";
