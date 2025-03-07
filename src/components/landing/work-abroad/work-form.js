@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { Container, Col, Button, Row, Form, Image, Toast, ToastContainer, Carousel } from "react-bootstrap";
 import workImage1 from "../../../assets/images/landing/work-1.png"; // Replace with your image path
 
+import workImage2 from "../../../assets/images/landing/work-2.png"; // Replace with your image path
+
+import workImage3 from "../../../assets/images/landing/work-3.png"; // Replace with your image path
+
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import '../../../index.css';
@@ -83,13 +87,13 @@ const WorkForm = () => {
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid src={workImage1} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
+                        <Image fluid src={workImage2} alt="Slide 2" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
                           <p>One-to-One Visa Assistance</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                        <Image fluid src={workImage1} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
+                        <Image fluid src={workImage3} alt="Slide 3" style={{ minHeight: "45vh", objectFit: "cover" }} />
                         <Carousel.Caption>
                           <p>One-to-One Visa Assistance</p>
                         </Carousel.Caption>
