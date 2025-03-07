@@ -9,13 +9,13 @@ import LangContactUs from '../components/lang-test/lang-connect/LangContactUs'
 const LangTestPage = () => {
   return (
     <div>
-      <LangTestHeader />
-      <WhyLangTraining />
-      <LangTestPrepProgs />
-      <WhySkillangPrep />
-      <LangTestPartners />
-      <LangContactUs />
-    </div>
+      <div className="section-spacing"><LangTestHeader />
+  </div>    <div className="section-spacing"><WhyLangTraining />
+ </div>     <div className="section-spacing"><LangTestPrepProgs /></div>
+      <div className="section-spacing"><WhySkillangPrep />
+ </div>     <div className="section-spacing"><LangTestPartners />
+</div>      <div className="section-spacing"><LangContactUs />
+   </div> </div>
   )
 }
 

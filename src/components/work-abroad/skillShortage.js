@@ -18,7 +18,7 @@ const SkillShortage = () => {
                     <Row className="w-100 m-0">
                         {/* Left Side (Title & Description) */}
                         <Col lg={6} className="d-flex flex-column justify-content-center left-content mb-4 mb-lg-0">
-                            <div className="mb-3 text-white heading-big-medium">Industries with Skill Shortages</div>
+                            <div className="mb-3  heading-big-medium">Industries with Skill Shortages</div>
                             <div className='paragraph-small-regular'>
                                 We focus on sectors with a high demand for skilled professionals,
                                 increasing your chances of securing employment and a work visa.
@@ -28,11 +28,11 @@ const SkillShortage = () => {
 
                         {/* Right Side (Accordion List) */}
                         <Col lg={6} className="d-flex flex-column right-content">
-                            <Accordion defaultActiveKey="1" className="custom-accordion w-100">
+                            <Accordion defaultActiveKey="0" className="custom-accordion w-100">
                                 {industries.map((industry, index) => (
                                     <Accordion.Item key={index} eventKey={index.toString()} className="dark-accordion-item">
-                                        <Accordion.Header>{industry.title}</Accordion.Header>
-                                        <Accordion.Body className="bg-secondary text-light">{industry.description}</Accordion.Body>
+                                        <Accordion.Header className='caption-bold text-content-primaryInverse'>{industry.title}</Accordion.Header>
+                                        <Accordion.Body className="paragraph-small-regular text-content-tertiaryInverse">{industry.description}</Accordion.Body>
                                     </Accordion.Item>
                                 ))}
                             </Accordion>

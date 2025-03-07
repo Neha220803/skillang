@@ -39,11 +39,6 @@
   z-index: -1;
 }
 
-/* Ensure main heading stays white */
-.skillshortage-container h1 {
-  color: white;
-}
-
 /* Left Section (Fixed Size) */
 .left-content {
   flex: 1;
@@ -53,11 +48,9 @@
 /* Custom styling for dark accordion headers */
 .accordion-dark {
   color: white !important;
-  background-color: #212529;
 }
 
 .accordion-dark button {
-  background-color: #212529 !important;
   /* This is Bootstrap's bg-dark color */
   color: white !important;
 }
@@ -86,15 +79,16 @@
 
 /* Dark accordion styling with plus/minus toggle */
 .custom-accordion .dark-accordion-item {
-  background-color: grey/900 px !important;
   border: none !important;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  
 }
 
 .custom-accordion .accordion-button {
   background-color: #232323 !important;
   color: white !important;
   box-shadow: none !important;
+  
 }
 
 .custom-accordion .accordion-button:focus {
@@ -102,7 +96,8 @@
   border-color: #6c757d !important;
   border: none !important;
   background-color: #2C2C2C !important;
-  border-radius: 12px !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
 }
 
 /* Change the default chevron icon to plus */
@@ -121,6 +116,8 @@
   background-color: #2C2C2C !important;
   color: white !important;
   border-top: 1px solid #595959 !important;
+  border-bottom-left-radius: 12px !important ;
+  border-bottom-right-radius: 12px !important ;
 }
 
 /* Media queries for mobile responsiveness */

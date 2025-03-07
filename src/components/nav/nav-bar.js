@@ -63,21 +63,19 @@ function CustomNavbar() {
          <Image src={logo} className="navbar-logo" />  
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
-
-       
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
           <Nav className="mx-auto d-flex align-items-center  ">
             {[
               { id: 'home', label: 'Home' },
-              { id: 'work-abroad', label: 'Nursing' },
-              { id: 'work-abroad-journey', label: 'Work Abroad' },
+              { id: 'nursing', label: 'Nursing' },
+              { id: 'work-abroad', label: 'Work Abroad' },
               { id: 'study-abroad', label: 'Study Abroad' },
-              { id: 'lang-test', label: 'Language & Test'}
+              { id: 'lang-test-prep', label: 'Language & Test'}
             ].map(({ id, label }) => (
               <Nav.Link
                 key={id}
-                href={`${BASE_PATH}/#${id}`}
-                onClick={(e) => handleScroll(id, e)}
+                href={`${BASE_PATH}/#/${id}`}
+               
                 className={`navpaths d-flex align-items-center ${activeSection === id ? 'active-link' : ''}`}
               >
                 {label}
