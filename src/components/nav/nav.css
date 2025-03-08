@@ -1,153 +1,153 @@
-/* Navbar Container */
-.navbar-logo {
-  width: 150px !important;
-  height: 50px !important;
-  object-fit: contain; /* Ensures proper scaling */
-}
-
-@media (max-width: 768px){
-
+  /* Navbar Container */
   .navbar-logo {
-    width: 100px !important;
+    width: 150px !important;
+    height: 50px !important;
+    object-fit: contain; /* Ensures proper scaling */
   }
 
-}
+  @media (max-width: 768px){
 
-.navcont {
-  background-color: white !important;
-  color: var(--content-secondary) !important;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: background-color 0.3s ease;     /* Smooth transition on scroll */
-}
+    .navbar-logo {
+      width: 100px !important;
+    }
 
-/* Navbar Brand Heading */
-.nav-head {
-  color: var(--primary-variant) !important;
-  font-weight: bold !important;
-  vertical-align: middle !important;
-  font-size: 32px !important;
-}
-
-/* Common Styling for Nav Links and Dropdown Trigger */
-.navpaths{
-  color: rgb(96, 96, 96) !important;
-  font-size: 14px !important;
-  border: none;
-  outline: none;
-  padding: 8px 20px !important;  /* Add horizontal padding */
-  margin: 0 5px !important;
-  display: flex !important;       /* Flex alignment */
-  align-items: center !important; /* Center content vertically */
-  background: transparent !important; /* Remove default background */
-  cursor: pointer;               /* Pointer cursor for interactivity */
-  transition: all 0.3s ease-in-out; /* Smooth hover effect */
-}
-
-.dropdown-toggle {
-  color: rgb(96, 96, 96) !important;
-  font-size: 18px !important;
-  border: none;
-  outline: none;
-  padding: 0px 0px !important;  /* Add horizontal padding */
-  margin: 0 5px !important;
-  display: flex !important;       /* Flex alignment */
-  align-items: center !important; /* Center content vertically */
-  background: transparent !important; /* Remove default background */
-  cursor: pointer;               /* Pointer cursor for interactivity */
-  transition: all 0.3s ease-in-out; /* Smooth hover effect */
-}
-
-
-/* Hover Effect for Nav Links & Dropdown */
-.navpaths:hover{
-  color: #E86E39 !important;
-  background-color: #FCF1ED !important;
-  border-radius: 999px !important;
-  padding: 8px 20px !important; /* Maintain padding */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
-
-.active-link {
- color: #E86E39 !important;
-  background-color: #FCF1ED !important;
-  border-radius: 999px !important;
-  padding: 8px 20px !important; /* Maintain padding */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
-
-
-.dropdown-toggle:hover{
-  color: #E86E39 !important;
-  background-color: #FCF1ED !important;
-  border-radius: 999px !important;
-  padding: 0px 0px !important; /* Maintain padding */
-  transition: all 0.3s ease-in-out; 
-}
-/* Active Link Highlight */
-/* .navpaths.active, */
-.dropdown-toggle.active {
-  color: #E86E39 !important;
-  background-color: #FCE9E4 !important;
-  border-radius: 999px !important;
-}
-
-/* Dropdown Menu Styling */
-.dropdown-menu {
-  border: none !important;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
-  padding: 10px 0 !important;
-  border-radius: 12px !important;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Dropdown Item Styling */
-.dropdown-item {
-  padding: 10px 20px !important;
-  font-size: 14px !important;
-  color: rgb(96, 96, 96) !important;
-  transition: background-color 0.3s ease-in-out;
-}
-
-/* Hover Effect for Dropdown Items */
-.dropdown-item:hover {
-  background-color: #FCF1ED !important;
-  color: #E86E39 !important;
-  border-radius: 999px !important;
-}
-
-
-/* Responsive Design */
-@media (max-width: 1200px) and (min-width: 1000px) {
-  .navpaths,
-  .dropdown-toggle {
-    font-size: 14px !important;
   }
 
+  .navcont {
+    background-color: white !important;
+    color: var(--content-secondary) !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease;     /* Smooth transition on scroll */
+  }
+
+  /* Navbar Brand Heading */
   .nav-head {
-    font-size: 24px !important;
+    color: var(--primary-variant) !important;
+    font-weight: bold !important;
+    vertical-align: middle !important;
+    font-size: 32px !important;
   }
-}
 
-@media (max-width: 992px) {
-  .navpaths,
+  /* Common Styling for Nav Links and Dropdown Trigger */
+  .navpaths{
+    color: rgb(96, 96, 96) !important;
+    font-size: 14px !important;
+    border: none;
+    outline: none;
+    padding: 8px 20px !important;  /* Add horizontal padding */
+    margin: 0 5px !important;
+    display: flex !important;       /* Flex alignment */
+    align-items: center !important; /* Center content vertically */
+    background: transparent !important; /* Remove default background */
+    cursor: pointer;               /* Pointer cursor for interactivity */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  }
+
   .dropdown-toggle {
-    font-size: 14px !important;
-    padding: 10px 15px !important;
+    color: rgb(96, 96, 96) !important;
+    font-size: 18px !important;
+    border: none;
+    outline: none;
+    padding: 0px 0px !important;  /* Add horizontal padding */
+    margin: 0 5px !important;
+    display: flex !important;       /* Flex alignment */
+    align-items: center !important; /* Center content vertically */
+    background: transparent !important; /* Remove default background */
+    cursor: pointer;               /* Pointer cursor for interactivity */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
   }
 
-  .navcont button {
-    font-size: 14px !important;
-  }
-}
 
-/* Dropdown Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+  /* Hover Effect for Nav Links & Dropdown */
+  .navpaths:hover{
+    color: #E86E39 !important;
+    background-color: #FCF1ED !important;
+    border-radius: 999px !important;
+    padding: 8px 20px !important; /* Maintain padding */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .active-link {
+  color: #E86E39 !important;
+    background-color: #FCF1ED !important;
+    border-radius: 999px !important;
+    padding: 8px 20px !important; /* Maintain padding */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
   }
-}
+
+
+  .dropdown-toggle:hover{
+    color: #E86E39 !important;
+    background-color: #FCF1ED !important;
+    border-radius: 999px !important;
+    padding: 0px 0px !important; /* Maintain padding */
+    transition: all 0.3s ease-in-out; 
+  }
+  /* Active Link Highlight */
+  /* .navpaths.active, */
+  .dropdown-toggle.active {
+    color: #E86E39 !important;
+    background-color: #FCE9E4 !important;
+    border-radius: 999px !important;
+  }
+
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    border: none !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 10px 0 !important;
+    border-radius: 12px !important;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Dropdown Item Styling */
+  .dropdown-item {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    color: rgb(96, 96, 96) !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /* Hover Effect for Dropdown Items */
+  .dropdown-item:hover {
+    background-color: #FCF1ED !important;
+    color: #E86E39 !important;
+    border-radius: 999px !important;
+  }
+
+
+  /* Responsive Design */
+  @media (max-width: 1200px) and (min-width: 1000px) {
+    .navpaths,
+    .dropdown-toggle {
+      font-size: 14px !important;
+    }
+
+    .nav-head {
+      font-size: 24px !important;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .navpaths,
+    .dropdown-toggle {
+      font-size: 14px !important;
+      padding: 10px 15px !important;
+    }
+
+    .navcont button {
+      font-size: 14px !important;
+    }
+  }
+
+  /* Dropdown Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
