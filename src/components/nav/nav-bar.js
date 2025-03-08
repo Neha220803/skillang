@@ -17,17 +17,44 @@ function CustomNavbar() {
   const handleScroll = (sectionId, event) => {
     event.preventDefault();
     if (sectionId) {
-      const targetElement = document.getElementById(sectionId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 70, // Adjust for fixed navbar height
-          behavior: 'smooth',
-        });
-      }
+      // Update the URL with the hash
+      window.location.hash = sectionId;
+      
+      // Scroll to the section (uncomment this part if you want scrolling behavior)
+      // const targetElement = document.getElementById(sectionId);
+      // if (targetElement) {
+      //   window.scrollTo({
+      //     top: targetElement.offsetTop - 70, // Adjust for fixed navbar height
+      //     behavior: 'smooth',
+      //   });
+      // }
+      
+      setActiveSection(sectionId); // Update active section
+      setExpanded(false);
     }
-    setActiveSection(sectionId); // Update active section
-    setExpanded(false);
   };
+
+  // Listen for hash changes in the URL to update active section
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        setActiveSection(hash);
+      }
+    };
+
+    // Set initial active section based on URL hash
+    handleHashChange();
+
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Clean up
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
 
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
@@ -43,13 +70,14 @@ function CustomNavbar() {
               { id: 'nursing', label: 'Nursing' },
               { id: 'work-abroad', label: 'Work Abroad' },
               { id: 'study-abroad', label: 'Study Abroad' },
-              { id: 'lang-test-prep', label: 'Language & Test'}
+              { id: 'lang-test-prep', label: 'Language & Test'},
             ].map(({ id, label }) => (
               <Nav.Link
                 key={id}
+
                 href={`${BASE_PATH}/#${id}`}
                 className={`navpaths d-flex align-items-center ${activeSection === id ? 'active-link' : ''}`}
-                // onClick={(e) => handleScroll(id, e)}
+                onClick={(e) => handleScroll(id, e)}
               >
                 {label}
               </Nav.Link>
