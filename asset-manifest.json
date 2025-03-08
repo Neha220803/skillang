@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.a7e2bef4.css",
-    "main.js": "/skillang/static/js/main.1b141fd3.js",
+    "main.css": "/skillang/static/css/main.a6269f56.css",
+    "main.js": "/skillang/static/js/main.35eb0d5e.js",
     "static/media/header-bg1.svg": "/skillang/static/media/header-bg1.f6f26b2b159337903a63483280470ea4.svg",
     "static/media/Lheader-bg.svg": "/skillang/static/media/Lheader-bg.3552d3b1ed46ab35db8b05114da72c42.svg",
     "static/media/nurseHeaderImg.svg": "/skillang/static/media/nurseHeaderImg.c9f3653e073aca270662032d1b0b6b05.svg",
@@ -171,11 +171,11 @@
     "index.html": "/skillang/index.html",
     "static/media/france.svg": "/skillang/static/media/france.31c6705435520b324774e8c21c19e4ec.svg",
     "static/media/ireland.svg": "/skillang/static/media/ireland.db0c2bf6229fc88f0613a401b9d4ae9c.svg",
-    "main.a7e2bef4.css.map": "/skillang/static/css/main.a7e2bef4.css.map",
-    "main.1b141fd3.js.map": "/skillang/static/js/main.1b141fd3.js.map"
+    "main.a6269f56.css.map": "/skillang/static/css/main.a6269f56.css.map",
+    "main.35eb0d5e.js.map": "/skillang/static/js/main.35eb0d5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7e2bef4.css",
-    "static/js/main.1b141fd3.js"
+    "static/css/main.a6269f56.css",
+    "static/js/main.35eb0d5e.js"
   ]
 }
