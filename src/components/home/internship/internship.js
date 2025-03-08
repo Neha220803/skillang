@@ -3,14 +3,14 @@ import { Container, Row, Col, Card, CardBody, CardTitle } from "react-bootstrap"
 import "../../../App.css";
 import "./internship.css";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
-import intern1 from "../../../assets/images/home/intern-1.svg";
-import intern2 from '../../../assets/images/home/intern-2.svg';
-import intern3 from "../../../assets/images/home/intern-3.svg";
-import intern4 from "../../../assets/images/home/intern-4.svg";
-import intern5 from "../../../assets/images/home/intern-5.svg";
-import intern6 from "../../../assets/images/home/intern-6.svg";
-import intern7 from "../../../assets/images/home/intern-7.svg";
-import intern8 from "../../../assets/images/home/intern-8.svg";
+import intern1 from "../../../assets/images/home/intern-1.jpg";
+import intern2 from '../../../assets/images/home/intern-2.jpg';
+import intern3 from "../../../assets/images/home/intern-3.jpg";
+import intern4 from "../../../assets/images/home/intern-4.jpg";
+import intern5 from "../../../assets/images/home/intern-5.jpg";
+import intern6 from "../../../assets/images/home/intern-6.jpg";
+import intern7 from "../../../assets/images/home/intern-7.jpg";
+import intern8 from "../../../assets/images/home/intern-8.jpg";
 
 const internCardData = [
   { title: "Job Oriented free study", img: intern1, desc: "No or minimal fee charged for the Ausbildung program in Germany.", colSpan: 4 },
@@ -44,8 +44,8 @@ const InternshipSection = () => {
   return (
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-lg-4 mb-md-4 text-center w-lg-75">
-          <div className="heading-big-medium">Ausbildung (Internship) Program in Germany</div>
+        <Row className="mb-lg-4 mb-md-4 text-center w-75">
+          <div className="heading-big-medium ">Ausbildung (Internship) Program in Germany</div>
           <div className="paragraph-big-medium text-content-secondary">
             Gain hands-on experience and build a successful career in Germany with the Ausbildung Internship Program.
           </div>
@@ -71,7 +71,7 @@ const InternshipSection = () => {
                 <CardBody className="d-flex flex-column justify-content-start align-items-start">
                   <div className="intern-card-text-wrapper">
                     <CardTitle><div className="subheading-small-medium text-content-secondary">{card.title}</div></CardTitle>
-                    <p className="caption-medium text-content-tertiary">{card.desc}</p>
+                    <div className="caption-medium text-content-tertiary">{card.desc}</div>
                   </div>
                 </CardBody>
               </Card>

@@ -5,7 +5,7 @@
   border-radius: 23px !important;
   justify-content:space-evenly !important;
   overflow: hidden !important;
-  border-radius: 12px !important;
+  border-radius: 24px !important;
 }
 
 .work-card-img{
@@ -54,6 +54,14 @@
   border: 1px solid #E3E3E3 !important;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.04) !important;
   border-radius: 16px !important;
+}
+
+#wac1{
+  border: 2px solid #F8D074 !important;
+}
+
+#wac2, #wac3{
+  border: 2px solid #DEDEDE !important;
 }
 
 .work-abroad-card-img{

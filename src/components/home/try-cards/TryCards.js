@@ -4,21 +4,21 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Lenis from 'lenis';
 import './TryCards.css';
 import { Col, Container, Row, Image } from 'react-bootstrap';
-import workJor0 from '../../../assets/images/home/workJoureny0.png';
-import workJor1 from '../../../assets/images/home/workJourney1.png';
-import workJor2 from '../../../assets/images/home/workJourney2.png';
-import workJor3 from '../../../assets/images/home/workJoureny3.png';
-import workJor4 from '../../../assets/images/home/workJoureny4.png';
-import workJor5 from '../../../assets/images/home/workJoureny5.png';
+// import workJor0 from '../../../assets/images/home/workJoureny0.png';
+import workJor1 from '../../../assets/images/home/workJourney1.jpg';
+import workJor2 from '../../../assets/images/home/workJourney2.jpg';
+import workJor3 from '../../../assets/images/home/workJoureny3.jpg';
+import workJor4 from '../../../assets/images/home/workJoureny4.jpg';
+import workJor5 from '../../../assets/images/home/workJoureny5.jpg';
 
 // Projects data (replace with your actual data)
 const projects = [
   // Example project structure - replace with your actual projects
- {
-    title: "Our Features",
-    description: "Discover essential features designed to simplify your study abroad journey, from expert guidance to seamless support.",
-    src: workJor0,
-  },
+//  {
+//     title: "Our Features",
+//     description: "Discover essential features designed to simplify your study abroad journey, from expert guidance to seamless support.",
+//     src: workJor0,
+//   },
   {
     title: "Job Matching",
     description: "We Identify suitable jobs and submit applications in prominent industries",

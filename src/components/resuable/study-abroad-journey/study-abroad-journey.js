@@ -2,15 +2,15 @@ import React from "react";
 import { Card, Container } from "react-bootstrap";
 import '../../../App.css';
 import './study-abroad-journey.css';
-import work1 from "../../../assets/images/reusable/s-journey-1.png";
-import work2 from "../../../assets/images/reusable/s-journey-2.png";
-import work3 from "../../../assets/images/reusable/s-journey-3.png";
-import work4 from "../../../assets/images/reusable/s-journey-4.png";
-import work5 from "../../../assets/images/reusable/s-journey-5.png";
-import work6 from "../../../assets/images/reusable/s-journey-6.png";
-import work7 from "../../../assets/images/reusable/s-journey-7.png";
-import work8 from "../../../assets/images/reusable/s-journey-8.png";
-import work9 from "../../../assets/images/reusable/s-journey-9.png";
+import work1 from "../../../assets/images/reusable/s-journey-1.jpg";
+import work2 from "../../../assets/images/reusable/s-journey-2.jpg";
+import work3 from "../../../assets/images/reusable/s-journey-3.jpg";
+import work4 from "../../../assets/images/reusable/s-journey-4.jpg";
+import work5 from "../../../assets/images/reusable/s-journey-5.jpg";
+import work6 from "../../../assets/images/reusable/s-journey-6.jpg";
+import work7 from "../../../assets/images/reusable/s-journey-7.jpg";
+import work8 from "../../../assets/images/reusable/s-journey-8.jpg";
+import work9 from "../../../assets/images/reusable/s-journey-9.jpg";
 
 const cardData = [
   { title: "Explore Universities and Courses", desc: "Experts guide you based on interests and background. Recommendations tailored to fit your budget.", img: work1 },

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import  nursePartnerImg from '../../../assets/images/nursing/nursePartner.png';
+import  nursePartnerImg from '../../../assets/images/reusable/partner-img.png';
 import institudeIcon from '../../../assets/icons/resuable/instituteIcon.svg';
 
 import companyIcon from '../../../assets/icons/resuable/companyIcon.svg';
@@ -25,8 +25,8 @@ const PartnerWithUsSection = () => {
                 </div>
                 <div className='d-flex flex-wrap gap-3 mb-3'>
                     <div className='partner-subbox d-flex align-items-center '><img src={institudeIcon} alt="" /> <div className='caption-medium'>Institutions</div></div>
-                    <div className='partner-subbox  d-flex align-items-center'>  <img src={institudeIcon} alt="" /> <div className='caption-medium'> Companies</div></div>
-                    <div className='partner-subbox  d-flex align-items-center'>  <img src={institudeIcon} alt="" /> <div className='caption-medium'> Recruiters</div></div>
+                    <div className='partner-subbox  d-flex align-items-center'>  <img src={companyIcon} alt="" /> <div className='caption-medium'> Companies</div></div>
+                    <div className='partner-subbox  d-flex align-items-center'>  <img src={recruiterIcon} alt="" /> <div className='caption-medium'> Recruiters</div></div>
                 </div>
                 <button className='btn-primary mt-3'> Connect Now
                 </button>

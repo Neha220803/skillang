@@ -1,5 +1,5 @@
 import React from "react";
-import loanImg from "../../../assets/images/home/loan-img.png";
+import loanImg from "../../../assets/images/home/loan-img.jpg";
 import {
   Container,
   Col,
@@ -22,7 +22,7 @@ const LoanSection = () => {
           <div className="heading-big-medium">Loan and Scholarships Assistance</div>
         </Row>
         <Row className="align-items-start">
-          <Col xs={12} sm={12} md={7} >
+          <Col xs={12} sm={12} md={7} lg={6}  >
             {/* This heading will only show on md and larger screens */}
             <div className="heading-big-medium d-none d-md-block">Loan and Scholarships Assistance</div>
             <div className="paragraph-big-medium text-content-secondary my-3">
@@ -43,7 +43,7 @@ const LoanSection = () => {
             </button>
           </Col>
 
-          <Col xs={12} sm={12} md={6} lg={5} className="mb-4 d-none d-md-block">
+          <Col xs={12} sm={12} md={6} lg={6} className="mb-4 d-none d-md-block">
               <Image fluid src={loanImg} className="loan-image rounded-4" />
             </Col>
          

@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import './workAbroadJourney.css';
 import { Col, Container, Row, Image } from 'react-bootstrap';
 
-import workJor0 from '../../../assets/images/home/workJoureny0.png';
-import workJor1 from '../../../assets/images/home/workJourney1.png';
-import workJor2 from '../../../assets/images/home/workJourney2.png';
-import workJor3 from '../../../assets/images/home/workJoureny3.png';
-import workJor4 from '../../../assets/images/home/workJoureny4.png';
-import workJor5 from '../../../assets/images/home/workJoureny5.png';
+// import workJor0 from '../../../assets/images/home/workJoureny0.png';
+import workJor1 from '../../../assets/images/home/workJourney1.jpg';
+import workJor2 from '../../../assets/images/home/workJourney2.jpg';
+import workJor3 from '../../../assets/images/home/workJoureny3.jpg';
+import workJor4 from '../../../assets/images/home/workJoureny4.jpg';
+import workJor5 from '../../../assets/images/home/workJoureny5.jpg';
 
 const ParallaxScrollSnap = () => {
   const containerRef = useRef(null);
@@ -16,7 +16,7 @@ const ParallaxScrollSnap = () => {
   const [isParallaxVisible, setIsParallaxVisible] = useState(false);
 
   const sections = [
-    { id: "section0", title: "Our Features", description: "Discover essential features designed to simplify your study abroad journey, from expert guidance to seamless support.", bgClass: "bg-section-0", img: workJor0 },
+    // { id: "section0", title: "Our Features", description: "Discover essential features designed to simplify your study abroad journey, from expert guidance to seamless support.", bgClass: "bg-section-0", img: workJor0 },
     { id: "section1", title: "Job Matching", description: "We Identify suitable jobs and submit applications in prominent industries", bgClass: "bg-section-1", img: workJor1 },
     { id: "section2", title: "Language & Test Prep", description: "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options.", bgClass: "bg-section-2", img: workJor2 },
     { id: "section3", title: "CV & Application Support", description: "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process.", bgClass: "bg-section-3", img: workJor3 },

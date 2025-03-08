@@ -3,9 +3,9 @@ import { CardTitle, Container, Card, Row, Col, CardBody, CardText, CardImg } fro
 import '../../../App.css';
 import './work-abroad-opportunity.css';
 import '../../../index.css';
-import work1 from '../../../assets/images/home/workAbroadCard1.png';
-import work2 from '../../../assets/images/home/workAbroadCard2.png';
-import work3 from '../../../assets/images/home/workAbroadCard3.png';
+import work1 from '../../../assets/images/home/workAbroadCard1.jpg';
+import work2 from '../../../assets/images/home/workAbroadCard2.jpg';
+import work3 from '../../../assets/images/home/workAbroadCard3.jpg';
 import work4 from '../../../assets/icons/home/electrical.svg';
 import work5 from '../../../assets/icons/home/plumbing.svg';
 import work6 from '../../../assets/icons/home/vpaintin.svg';
@@ -14,9 +14,9 @@ import work8 from '../../../assets/icons/home/mechanical.svg';
 import work9 from '../../../assets/icons/home/welding.svg';
 
 const primCardData = [
-  { title: "Nursing & Healthcare", img: work1, color: "#FCEBC3", colSize: 6, desc: 'Security testing involves evaluating software to ensure information protection.' },
-  { title: "Hospitality Management", img: work2, color: "#FFFFFF", colSize: 3, desc: 'Security testing involves evaluating software to ensure information protection.'  },
-  { title: "Information Technology", img: work3, color: "#FFFFFF", colSize: 3, desc: 'Security testing involves evaluating software to ensure information protection.' }
+  { title: "Nursing & Healthcare", img: work1, color: "#FCEBC3", btnType:"btn-secondary", colSize: 6, desc: 'Security testing involves evaluating software to ensure information protection.',id: "wac1" },
+  { title: "Hospitality Management", img: work2, color: "#FFFFFF",btnType:"btn-secondary-outline", colSize: 3, desc: 'Security testing involves evaluating software to ensure information protection.',id: "wac2" },
+  { title: "Information Technology", img: work3, color: "#FFFFFF",btnType:"btn-secondary-outline", colSize: 3, desc: 'Security testing involves evaluating software to ensure information protection.',id: "wac3" }
 ];
 
 const WorkAbroadOpportunity = () => {
@@ -39,18 +39,18 @@ const WorkAbroadOpportunity = () => {
           <Row className="gy-3">
             {primCardData.map((card, index) => (
               <Col key={index} lg={card.colSize} md={6} sm={12} xs={12}>
-                <Card className='prim-card d-flex border-0 mb-2' style={{ backgroundColor: card.color }}>
+                <Card className='prim-card d-flex border-0 mb-2' id={card.id} style={{ backgroundColor: card.color } }>
                   <Card.Img variant="top" className='work-card-img' src={card.img} alt="Card image" />
                   <CardBody className='d-flex flex-column justify-content-around px-1 pt-2 py-0'>
                     <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
                     <CardText className='paragraph-small-regular'>{card.desc}</CardText>
                     <div className='w-sm-100'>
-                      <button className='btn-secondary w-sm-100' onClick={() => {
+                      <button className={`${card.btnType} w-sm-100`} onClick={() => {
                         window.scrollTo({
                           top: 0,
                           behavior: 'smooth',
                         });
-                      }}>Get Started</button>
+                      }}>Know more</button>
                     </div>
                   </CardBody>
                 </Card>
