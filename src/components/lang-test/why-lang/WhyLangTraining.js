@@ -40,7 +40,7 @@ const WhyLangTraining = () => {
             </Row>
             <Row>
               {cardData.slice(0, 2).map((card, index) => (
-                <Col lg={6} key={index} className=' mb-3'>
+                <Col lg={6} sm={12} xs={12} key={index} className=' mb-3'>
                   <Card className='why-lang-training-cards'>
                     
                     <img src={card.icon} alt={card.alt} width="50" height="50" />
@@ -58,7 +58,6 @@ const WhyLangTraining = () => {
             <Col lg={12}>
               {cardData.slice(2, 3).map((card, index) => (
                 <Card key={index} className='why-lang-training-cards'>
-                
                   <img src={card.icon} alt={card.alt} width="50" height="50" />
                   <CardTitle className='subheading-small-medium text-content-secondary'>
                     {card.title}
@@ -66,12 +65,11 @@ const WhyLangTraining = () => {
                   <CardText className='paragraph-big-medium text-content-secondary'>
                     {card.text}
                   </CardText>
-                  
                 </Card>
               ))}
             </Col>
           </Col>
-          <Col lg={6} md={6} sm={12} xs={12} className='h-100 bg-primar d-flex justify-content-center mx-auto align-items-center'>
+          <Col lg={6} md={6} className='h-100 bg-primar d-flex justify-content-center mx-auto align-items-center d-none d-md-block'>
             <img src={whyLearnImg} alt="Language Training Image" className='image-fluid' />
           </Col>
         </Row>

@@ -62,9 +62,9 @@ const StudyAbroadHeader = () => {
         setOtp,
         setShowToast,
     } = useFormHandler();
-    formData.experience = "Not Applicable (Home Page Form)"
-    formData.county = "Not Applicable (Home Page Form)";
-    formData.origin = "Home Page Form";
+    formData.experience = "-"
+    formData.county = "-";
+    formData.origin = "Study Abroad Header Page Form";
 
 
 

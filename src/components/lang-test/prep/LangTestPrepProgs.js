@@ -31,14 +31,14 @@ const LangTestPrepProgs = () => {
     <div>
       <Container>
         <Row>
-          <div className="heading-big-medium text-content-primary text-center">
+          <div className="heading-big-medium text-content-primary text-center mb-3">
             Our Language & Test Prep Programs
           </div>
         </Row>
         <Row>
           {programs.map((program, index) => (
-            <Col key={index}>
-              <Card className="lang-program-card" id={program.cardIdName}>
+            <Col key={index} lg={4}  sm={12} xs={12} >
+              <Card className="lang-program-card mb-3" id={program.cardIdName}>
                 <CardTitle>{program.title}</CardTitle>
                 <CardText>{program.text}</CardText>
                 <div>

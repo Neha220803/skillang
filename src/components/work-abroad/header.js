@@ -64,9 +64,9 @@ const WorkAbroadHeader = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  formData.experience = "Not Applicable (Home Page Form)"
-  formData.county = "Not Applicable (Home Page Form)";
-  formData.origin = "Home Page Form";
+  formData.experience = "-"
+  formData.county = "-";
+  formData.origin = "Work Abroad Page Form";
   return (
     <header className="d-flex align-items-center justify-content-center mt-lg-4 m-0 px-2 bg-primar" id="home">
       <Container className="my-lg-0">
@@ -74,7 +74,6 @@ const WorkAbroadHeader = () => {
           <Col lg={8} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
             <Image src={headerbg} fluid className="w-100 px-lg-4" />
           </Col>
-
           <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
             <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
               <div className="form-container m-0">

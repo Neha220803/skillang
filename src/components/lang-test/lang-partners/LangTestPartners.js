@@ -10,13 +10,13 @@ const LangTestPartners = () => {
       <Container className=''>
       
       <Row>
-        <div className='heading-big-medium'>
+        <div className='heading-big-medium mb-5'>
         Our Language & Test Prep Programs
       </div>
 
       </Row>
       <Row>
-        <div className='d-flex gap-5 justify-content-center'>
+        <div className='d-flex gap-lg-5 gap-2 flex-wrap justify-content-center'>
           <img src={britishCounsil} alt=' ' />
           <img src={duo} alt=' ' />
           <img src={pear} alt=' ' />

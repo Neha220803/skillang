@@ -36,3 +36,10 @@
     height: 100%;
     width: 5px !important;
 }
+
+@media (max-width: 480px) {
+    .custom-image{
+        height: 140px !important;
+        width: auto !important;
+    }
+}

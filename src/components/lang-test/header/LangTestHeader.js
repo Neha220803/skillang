@@ -64,9 +64,9 @@ const LangTestHeader = () => {
   // Set default values for form
   useEffect(() => {
     // Only set these values once on component mount
-    handleOptionSelect("experience", "Not Applicable (Home Page Form)");
-    handleOptionSelect("county", "Not Applicable (Home Page Form)");
-    handleOptionSelect("origin", "Home Page Form");
+    handleOptionSelect("experience", "-");
+    handleOptionSelect("county", "-");
+    handleOptionSelect("origin", "Lang & Test Prep Page Form");
   }, []);
 
   // Handler for the looking-for selection with direct label click
@@ -78,7 +78,7 @@ const LangTestHeader = () => {
       <Container className="">
         <Row className="">
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-0">
-            <Image src={headerbg} fluid className="w-100 px-lg-5" />
+            <Image src={headerbg} fluid className="w-100 px-lg-5 pt-5 mt-5 pt-lg-0 mt-lg-0" />
           </Col>
 
           <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
@@ -108,7 +108,7 @@ const LangTestHeader = () => {
                   <Form.Group className="mb-3" controlId="formLookingFor">
                     <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking For ?</Form.Label>
                     <div className="d-flex gap-2 flex-wrap">
-                      {["Nursing", "Information Technology", "Hospitality", "Blue collared jobs"].map((option, index) => (
+                      {["IELTS", "TOEFL", "GRE", "GMAT", "PTE", "German language", "Others"].map((option, index) => (
                         <div 
                           key={index} 
                           className={`experience-option ${formData.lookingFor === option ? "selected" : ""}`}

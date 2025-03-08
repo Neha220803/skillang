@@ -64,8 +64,8 @@ const HomeHeader2 = () => {
   // Set default values for form
   useEffect(() => {
     // Only set these values once on component mount
-    handleOptionSelect("experience", "Not Applicable (Home Page Form)");
-    handleOptionSelect("county", "Not Applicable (Home Page Form)");
+    handleOptionSelect("experience", "-");
+    handleOptionSelect("county", "-");
     handleOptionSelect("origin", "Home Page Form");
   }, []);
 
