@@ -41,8 +41,8 @@
 .card-image-wrapper {
   width: 100% !important;
   height: 160px !important;
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: right !important;
   border-radius: 12px !important;
   margin-bottom: 12px !important;
 }
