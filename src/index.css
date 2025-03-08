@@ -17,6 +17,7 @@
    --content-primaryInverse: #FFFFFF !important;
   --content-secondaryInverse: #FBFBFB !important;
   --content-tertiaryInverse: #E3E3E3 !important;
+  --content-grey-500: #BCBCBC !important;
 
    --font-family: "Plus Jakarta Sans" !important;
 
@@ -137,6 +138,10 @@
 
 .text-content-tertiaryInverse {
   color: var(--content-tertiaryInverse) !important;
+}
+
+.text-content-grey-500 {
+  color: var(--content-grey-500) !important;
 }
 
 /* Universal Typography Classes */

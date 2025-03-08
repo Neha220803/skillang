@@ -48,7 +48,7 @@ const WhySkillangPrep = () => {
               <Card className='lang-why-skill-card '>
                 <img src={card.img} alt={card.title} />
                 <CardTitle className="subheading-small-medium text-content-primaryInverse">{card.title}</CardTitle>
-                <CardText className="paragraph-small-medium text-content-secondaryInverse">{card.text}</CardText>
+                <CardText className="paragraph-small-medium text-content-tertiaryInverse">{card.text}</CardText>
               </Card>
             </Col>
           ))}

@@ -11,18 +11,19 @@ import PartnerWithUsSection from '../components/resuable/partner-with-us/partner
 
 const WorkAboradPage = () => {
   return (
-    <div>WorkAboradPage
-      <WorkAbroadHeader />
-      <WhyChooseSkillang />
-      <CountriesWeServe />
-      <SkillShortage />
-      <ServiceOfferCountryWise />
-
-
-
-      <PartnerWithUsSection />
-      <AbroudJourney />
-    </div>
+    <div>
+      <div className=""><WorkAbroadHeader />
+</div>    
+<div className="section-spacing"><CountriesWeServe />
+</div> 
+ <div className="section-spacing"><SkillShortage />
+   </div>   
+  <div className="section-spacing"><WhyChooseSkillang /></div>
+  <div className="section-spacing"><ServiceOfferCountryWise /></div>
+           <div className="section-spacing"><AbroudJourney />
+   </div>
+      <div className="section-spacing"><PartnerWithUsSection /></div>
+      </div>
   )
 }
 

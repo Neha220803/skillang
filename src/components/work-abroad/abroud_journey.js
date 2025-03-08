@@ -5,16 +5,15 @@ import lineImage from '../../../src/assets/images/work-abroad/journey/line.png';
 const AbroudJourney = () => {
     return (
         <div className="work-abroad-container">
-            <div className="work-abroad-wrapper">
-                <div className="work-abroad-header">
-                    <h1>Work Abroad Journey</h1>
-                    <p className="paragraph-big-medium text-content-secondary">Start your work abroad journey in 3 simple steps</p>
+            <div className="work-abroad-wrapper ">
+                <div className="text-center">
+                    <div className='heading-big-medium'>Work Abroad Journey</div>
+                    <div className="paragraph-big-medium text-content-secondary">Start your work abroad journey in 3 simple steps</div>
                 </div>
-
-                <div className="journey-content">
+                <div className="journey-content bg-primar">
                     {/* Desktop View - Keep as is */}
-                    <div className="journey-progress desktop-only">
-                        <img src={lineImage} alt="Progress Line" className="progress-line-image" />
+                    <div className="journey-progress desktop-onl">
+                        <img src={lineImage} alt="Progress Line" className="img-fluid" />
                     </div>
 
                     {/* Mobile View - Exact match to the image */}

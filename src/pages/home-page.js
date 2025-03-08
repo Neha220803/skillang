@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className="homepage-section-spacing">
         <WorkAbroadOpportunity />
       </div>
-      <div className="omepage-section-spacing">
+      <div className="homepage-section-spacing">
         <WorkAbroadJourneyTimeline />
       </div>
       

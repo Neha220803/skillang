@@ -8,6 +8,7 @@ import marketingImage from '../../../assets/images/study-abroad/indemandcardcont
 import uiuxImage from '../../../assets/images/study-abroad/indemandcardcontent.png';
 import backgroundImage from '../../../assets/images/study-abroad/demandcoursebg.png';
 
+import { Container, Card, CardBody, CardImg } from "react-bootstrap";
 const courseData = [
     {
         title: 'Business Administration',
@@ -57,28 +58,30 @@ const IndemandCourse = () => {
     return (
         <div
             className="in-demand-courses-container"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
+            // style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-            <div className="content-wrapper">
-                <div className="text-content">
-                    <h2>In-Demand Courses & Career Paths</h2>
-                    <p>Each destination offers unique opportunities and challenges. We provide tailored guidance on job markets, salary expectations, cultural norms, and legal requirements for working abroad.</p>
-                    <button className="cta-button">Know More</button>
+            <div className="">
+                <div className="text-center">
+                    <div className='heading-big-medium'>In-Demand Courses & Career Paths</div>
+                    <div className='paragraph-bg-medium py-3'>Each destination offers unique opportunities and challenges. We provide tailored guidance on job markets, salary expectations, cultural norms, and legal requirements for working abroad.</div>
+                    <button className="btn-primary">Know More</button>
                 </div>
-
                 <div className="courses-section">
                     <div className="courses-grid">
                         {displayedCourses.map((course, index) => (
-                            <div key={index} className="course-card">
-                                <div className="card-image-wrapper">
-                                    <img src={course.image} alt={course.title} className="course-image" />
-                                </div>
-                                <div className="course-details">
-                                    <h3>{course.title}</h3>
-                                    <p className="career-paths">Career Paths</p>
-                                    <p className="career-specializations">{course.paths}</p>
-                                </div>
-                            </div>
+                            <Card key={index} className="course-card">
+                                <CardImg className="card-image-wrapper course-image" src={course.image} alt={course.title}  />
+                                
+                                <CardBody className="course-details d-flex flex-column justify-content-between">
+
+                                    <div className='subheading-small-medium text-content-primaryInverse'>{course.title}</div>
+                                    <div>
+                                        <div className="career-paths ">Career Paths</div>
+                                    <div className="career-specializations text-content-grey-500">{course.paths}</div>
+                                    </div>
+                                    
+                                </CardBody>
+                            </Card>
                         ))}
                     </div>
 

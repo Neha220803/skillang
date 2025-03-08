@@ -10,16 +10,13 @@ import UniPartner from '../components/resuable/uni-partner/uni-partner'
 const StudyAbroadPage = () => {
   return (
     <div>
-      <StudyAbroadHeader />
-      <WhyStudyAbroad />
-      <AbroadDestination />
-      <IndemandCourse />
-      <StudyAbroad />
-      <CountriesWeServe />
-      <UniPartner />
-
-
-
+       <div className="section-spacin"><StudyAbroadHeader /></div>
+       <div className="section-spacing"><WhyStudyAbroad /></div>
+       <div className="section-spacing"><AbroadDestination /></div>
+       <div className="section-spacing"><IndemandCourse /></div>
+       <div className="section-spacing"><StudyAbroad /></div>
+       <div className="section-spacing"><CountriesWeServe /></div>
+       <div className="section-spacing"><UniPartner /></div>
     </div>
   )
 }

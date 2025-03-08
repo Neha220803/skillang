@@ -12,14 +12,14 @@ const SkillShortage = () => {
     ];
 
     return (
-        <section className="skillshortage-bg position-relative my-5">
+        <div className="skillshortage-bg position-relative">
             <Container className="p-0"> {/* Removed padding from container */}
                 <div className="skillshortage-container">
                     <Row className="w-100 m-0">
                         {/* Left Side (Title & Description) */}
                         <Col lg={6} className="d-flex flex-column justify-content-center left-content mb-4 mb-lg-0">
-                            <div className="mb-3  heading-big-medium">Industries with Skill Shortages</div>
-                            <div className='paragraph-small-regular'>
+                            <div className="mb-3 heading-big-medium text-content-primaryInverse">Industries with Skill Shortages</div>
+                            <div className='paragraph-small-regular text-content-grey-500'>
                                 We focus on sectors with a high demand for skilled professionals,
                                 increasing your chances of securing employment and a work visa.
                                 Here are some primary industries we serve.
@@ -40,7 +40,7 @@ const SkillShortage = () => {
                     </Row>
                 </div>
             </Container>
-        </section>
+        </div>
     );
 };
 

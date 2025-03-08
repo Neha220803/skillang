@@ -25,10 +25,10 @@ const countries = [
 
 const CountriesWeServe = () => {
     return (
-        <div className="py-5 my-5 d-flex align-items-center justify-content-center">
+        <div className="bg-primar d-flex align-items-center justify-content-center">
             <Container>
                 <div className="text-center mb-4">
-                    <h2 className="heading-small-medium text-content-primary">Countries We Serve</h2>
+                    <div className="heading-big-medium text-content-primary">Countries We Serve</div>
                     <div className="paragraph-small-regular text-content-secondary text-center">
                         Each destination offers unique opportunities and challenges. We provide tailored guidance on job markets, salary expectations, cultural norms, and legal requirements for working abroad.
                     </div>

@@ -1,30 +1,20 @@
-/* Main container for the work abroad section */
-.work-abroad-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
 /* Wrapper with background image */
 .work-abroad-wrapper {
     width: 100% !important;
     max-width: 2000px !important;
     height: 538px !important;
-    margin: 0 auto;
-    padding: 0 80px;
+    /* margin: 0 auto; */
+    /* padding: 0 80px; */
     background-image: url('../../../src/assets/images/work-abroad/journey/jorneybg.png');
-    background-size: cover !important;
-    background-position: center !important;
+    background-size: contain !important;
+    /* background-position: center !important; */
     background-repeat: no-repeat !important;
+    background-position: bottom !important;
     position: relative;
 }
 
 /* Header styles */
-.work-abroad-header {
-    text-align: center;
-    padding-top: 48px;
-    margin-bottom: 60px;
-}
+
 
 .work-abroad-header h1 {
     font-size: 2.5rem;
@@ -130,12 +120,6 @@
 /* First connector line with small green start */
 .mobile-connector-line.first {
     background: linear-gradient(to bottom, #00C170 15%, #E5E5E5 15%);
-}
-
-
-/* Utility classes for responsive design */
-.desktop-only {
-    display: flex;
 }
 
 .mobile-only {

@@ -5,9 +5,9 @@ import '../study-abroad/abroad_destination.css';
 // Import flags
 import australiaFlag from "../../assets/images/work-abroad/countryflags/australia.png";
 import canadaFlag from "../../assets/images/work-abroad/countryflags/canada.png";
-import franceFlag from "../../assets/images/work-abroad/countryflags/canada.png";
+import franceFlag from "../../assets/images/work-abroad/countryflags/france.svg";
 import germanyFlag from "../../assets/images/work-abroad/countryflags/germany.png";
-import irelandFlag from "../../assets/images/work-abroad/countryflags/canada.png";
+import irelandFlag from "../../assets/images/work-abroad/countryflags/ireland.svg";
 import ukFlag from "../../assets/images/work-abroad/countryflags/uk.png";
 import usaFlag from "../../assets/images/work-abroad/countryflags/usa.png";
 
@@ -49,8 +49,8 @@ const AbroadDestinations = () => {
     return (
         <div className="study-abroad-container">
             <div className="text-center mb-4">
-                <h1 className="display-4 study-abroad-title">Popular Study Abroad <br /> Destinations</h1>
-                <p className="lead study-abroad-subtitle">
+                <div className="heading-big-medium">Popular Study Abroad <br /> Destinations</div>
+                <p className="paragraph-big-meidum text-content-secondary">
                     Explore top countries offering world-class education, cultural diversity, and<br /> global career opportunities
                 </p>
             </div>

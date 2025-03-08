@@ -79,7 +79,7 @@ formData.origin="Nursing Page Form";
     <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2" id="home">
       <Container className="my-lg-0">
         <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
-  <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-lg-5 p-0">
+  <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center  p-0">
     <Image src={nurseHeaderImage} fluid className="w-100 px-lg-2" />
   </Col>
           <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">

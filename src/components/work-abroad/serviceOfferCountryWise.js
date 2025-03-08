@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Container, Col, Row, Card, CardBody } from "react-bootstrap";
 import "./ServiceOfferCountryWise.css";
-
+import { MdFlight } from "react-icons/md";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 
 import resumeIcon from "../../../src/assets/images/work-abroad/icons/resumr.png";
@@ -91,14 +91,14 @@ const ServiceOfferCountryWise = () => {
          }, [showAll]);
 
     return (
-        <div className="d-flex justify-content-center  align-items-center">
+        <div className="d-flex justify-content-center  align-items-center bg-primar">
             {/* Service Offerings Section */}
             <div className="service-bg d-flex flex-column justify-content-start align-items-center">
-                <Container className="py-5 d-flex flex-column justify-content-start align-items-center">
+                <Container className=" d-flex flex-column justify-content-start align-items-center">
                     <Row className="justify-content-end mb-4 d-flex flex-column align-items-center ">
                         <Col className="text-center d-flex justify-content-start align-items-center flex flex-column ">
                             <div className="section-title heading-big-medium">Service Offerings</div>
-                            <div className="paragraph-big-medium text-content-secondary">
+                            <div className="paragraph-big-medium text-content-secondary mb-5">
                                 Our comprehensive services are designed to streamline the process of <br />securing a job
                                 and work visa in your chosen country.
                             </div>
@@ -115,7 +115,7 @@ const ServiceOfferCountryWise = () => {
                                 <div className="service-name-pill caption-bold">{service.title}</div>
                                 {hoveredService === service.title && (
                                     <div className="service-description-popup">
-                                        <p className="service-text paragraph-small-medium text-content-secondary">{service.description}</p>
+                                        <div className="paragraph-small-medium text-content-secondary">{service.description}</div>
                                     </div>
                                 )}
                             </Col>
@@ -128,8 +128,9 @@ const ServiceOfferCountryWise = () => {
                     <Row className="justify-content-center mb-3 ">
                         <Col md={8} className="text-center">
                             <div className="d-flex justify-content-center mx-auto align-items-center mb-2">
-                                <div className="tag-button text-center caption-bold  ">
-                                    <img src={airplane} alt="Airplane" className="tag-icon image-fluid" />
+                                <div className="tag-button text-center justify-content-center alignt-items-center caption-bold  ">
+                                    <MdFlight className="me-2 tag-icon image-fluid" />
+                                    {/* <img src={airplane} alt="Airplane" className="tag-icon image-fluid" /> */}
                                     Skill Shortage Visas
                                 </div>
                             </div>
@@ -153,7 +154,7 @@ const ServiceOfferCountryWise = () => {
                     <Row className="justify-content-center ">
                         {countryGuidance.map((country, index) => (
                             <Col md={4} sm={12} xs={12} key={index} className="mb-lg-4">
-                                <div className="country-card"
+                                <div className="country-card "
                                 >
                                     <div className="country-header">
                                         <div className="country-name subheading-small-medium">{country.country}</div>

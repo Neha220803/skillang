@@ -12,6 +12,7 @@
     background-image: url('../../../assets/images/reusable/whySkillangBg.svg');
     background-size: cover !important;
     background-position: center !important;
+    width: 100% !important;
     background-repeat: no-repeat !important;
 }
 
