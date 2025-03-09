@@ -1,4 +1,4 @@
-/* Wrapper with background image */
+/* Wrapper with background image - UNCHANGED */
 .work-abroad-wrapper {
     width: 100% !important;
     max-width: 2000px !important;
@@ -13,9 +13,7 @@
     position: relative;
 }
 
-/* Header styles */
-
-
+/* Header styles - UNCHANGED */
 .work-abroad-header h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -28,7 +26,7 @@
     font-size: 1rem;
 }
 
-/* Centered Journey Content */
+/* Centered Journey Content - UNCHANGED */
 .journey-content {
     display: flex;
     flex-direction: column;
@@ -37,7 +35,7 @@
     position: relative;
 }
 
-/* Desktop View - Keep Original Styles */
+/* Desktop View - UNCHANGED */
 .journey-progress {
     display: flex;
     justify-content: center;
@@ -53,7 +51,7 @@
     height: auto;
 }
 
-/* Mobile Timeline - Exact layout matching the image */
+/* Mobile Timeline - UNCHANGED */
 .mobile-journey {
     width: 100%;
     padding: 0 20px;
@@ -94,15 +92,14 @@
 }
 
 .active-step {
-    color: #00C170;
+    color: #030404 !important;
 }
 
 .pending-step {
     color: #666;
 }
 
-/* Adjusting connector lines */
-/* Default Connector Line */
+/* Connector Lines - UNCHANGED */
 .mobile-connector-line {
     width: 3px;
     height: 120px !important;
@@ -117,16 +114,19 @@
     position: relative;
 }
 
-/* First connector line with small green start */
 .mobile-connector-line.first {
     background: linear-gradient(to bottom, #00C170 15%, #E5E5E5 15%);
+}
+
+.desktop-only {
+    display: block;
 }
 
 .mobile-only {
     display: none;
 }
 
-/* Fixing the curve at the bottom */
+/* Fixing the curve at the bottom - UNCHANGED */
 .work-abroad-wrapper::after {
     content: '';
     position: absolute;
@@ -140,7 +140,7 @@
     z-index: 1;
 }
 
-/* Responsive styles for mobile */
+/* Responsive styles for mobile - ADDED ANIMATIONS HERE */
 @media (max-width: 768px) {
     .work-abroad-wrapper {
         padding: 20px;
@@ -175,5 +175,66 @@
     /* Remove the curved bottom in mobile */
     .work-abroad-wrapper::after {
         display: none;
+    }
+
+    /* ANIMATION STYLES - ONLY APPLIED IN MOBILE */
+
+    /* Circle animation */
+    .animated-circle {
+        animation: circleGreen 0.5s ease-in-out forwards;
+    }
+
+    @keyframes circleGreen {
+        from {
+            fill: #EEEEEE;
+        }
+
+        to {
+            fill: #00C170;
+        }
+    }
+
+    /* Text color transition */
+    .mobile-step-text h3 {
+        transition: color 0.5s ease-in-out;
+    }
+
+    /* Connector line animation */
+    .mobile-connector-line.animated-line {
+        position: relative;
+        background-color: #E5E5E5;
+        overflow: hidden;
+    }
+
+    .mobile-connector-line.animated-line::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background-color: #00C170;
+        animation: lineGrow 0.8s ease-in-out forwards;
+    }
+
+    @keyframes lineGrow {
+        from {
+            height: 0%;
+        }
+
+        to {
+            height: 100%;
+        }
+    }
+
+    /* Give some life to the checkmark */
+    .mobile-step-icon path {
+        stroke-dasharray: 30;
+        stroke-dashoffset: 30;
+        transition: stroke-dashoffset 0.5s ease-in-out 0.2s;
+    }
+
+    .mobile-step-icon.completed path {
+        stroke-dashoffset: 0;
     }
 }
