@@ -186,7 +186,7 @@
 
     @keyframes circleGreen {
         from {
-            fill: #EEEEEE;
+            fill: #f9f6f6 !important;
         }
 
         to {
@@ -236,5 +236,31 @@
 
     .mobile-step-icon.completed path {
         stroke-dashoffset: 0;
+    }
+
+
+    /* Add this to your existing CSS file */
+
+    /* Modify the checkmark animation styles */
+    .mobile-step-icon path {
+        stroke-dasharray: 30;
+        stroke-dashoffset: 0;
+        /* Changed from 30 to 0 to make checkmark visible before animation */
+        transition: stroke 0.5s ease-in-out;
+    }
+
+    /* Add new class for checkmark animation */
+    .mobile-step-icon path.animated-checkmark {
+        animation: checkmarkAnimate 0.5s ease-in-out forwards;
+    }
+
+    @keyframes checkmarkAnimate {
+        0% {
+            stroke: #CCCCCC;
+        }
+
+        100% {
+            stroke: white;
+        }
     }
 }

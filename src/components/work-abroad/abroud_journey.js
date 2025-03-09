@@ -107,10 +107,11 @@ const AbroudJourney = () => {
                                         />
                                         <path
                                             d="M7 12L10 15L17 8"
-                                            stroke="white"
+                                            stroke={animationStage >= 0 ? "white" : "#CCCCCC"}
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
+                                            className={animationStage >= 0 ? "animated-checkmark" : ""}
                                         />
                                     </svg>
                                 </div>
@@ -140,10 +141,11 @@ const AbroudJourney = () => {
                                         />
                                         <path
                                             d="M7 12L10 15L17 8"
-                                            stroke="white"
+                                            stroke={animationStage >= 3 ? "white" : "#CCCCCC"}
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
+                                            className={animationStage >= 3 ? "animated-checkmark" : ""}
                                         />
                                     </svg>
                                 </div>
@@ -173,10 +175,11 @@ const AbroudJourney = () => {
                                         />
                                         <path
                                             d="M7 12L10 15L17 8"
-                                            stroke="white"
+                                            stroke={animationStage >= 6 ? "white" : "#CCCCCC"}
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
+                                            className={animationStage >= 6 ? "animated-checkmark" : ""}
                                         />
                                     </svg>
                                 </div>
