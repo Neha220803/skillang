@@ -14,25 +14,25 @@ function CustomNavbar() {
   const [activeSection, setActiveSection] = useState('home'); // Track active section
 
   // Handle Scroll to Section & Navbar Collapse
-  const handleScroll = (sectionId, event) => {
-    event.preventDefault();
-    if (sectionId) {
-      // Update the URL with the hash
-      window.location.hash = sectionId;
+  // const handleScroll = (sectionId, event) => {
+  //   event.preventDefault();
+  //   if (sectionId) {
+  //     // Update the URL with the hash
+  //     window.location.hash = sectionId;
       
-      // Scroll to the section (uncomment this part if you want scrolling behavior)
-      // const targetElement = document.getElementById(sectionId);
-      // if (targetElement) {
-      //   window.scrollTo({
-      //     top: targetElement.offsetTop - 70, // Adjust for fixed navbar height
-      //     behavior: 'smooth',
-      //   });
-      // }
+  //     // Scroll to the section (uncomment this part if you want scrolling behavior)
+  //     // const targetElement = document.getElementById(sectionId);
+  //     // if (targetElement) {
+  //     //   window.scrollTo({
+  //     //     top: targetElement.offsetTop - 70, // Adjust for fixed navbar height
+  //     //     behavior: 'smooth',
+  //     //   });
+  //     // }
       
-      setActiveSection(sectionId); // Update active section
-      setExpanded(false);
-    }
-  };
+  //     setActiveSection(sectionId); // Update active section
+  //     setExpanded(false);
+  //   }
+  // };
 
   // Listen for hash changes in the URL to update active section
   useEffect(() => {
@@ -59,7 +59,7 @@ function CustomNavbar() {
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
       <Container className="d-flex align-items-center">
-        <Navbar.Brand href={`${BASE_PATH}/#home`} onClick={(e) => handleScroll('home', e)}>
+        <Navbar.Brand href={`${BASE_PATH}/#home`} >
           <Image src={logo} className="navbar-logo" />  
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
@@ -77,7 +77,7 @@ function CustomNavbar() {
 
                 href={`${BASE_PATH}/#${id}`}
                 className={`navpaths d-flex align-items-center ${activeSection === id ? 'active-link' : ''}`}
-                onClick={(e) => handleScroll(id, e)}
+                // onClick={(e) => handleScroll(id, e)}
               >
                 {label}
               </Nav.Link>

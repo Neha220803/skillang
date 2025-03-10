@@ -14,9 +14,9 @@ import work8 from '../../../assets/icons/home/mechanical.svg';
 import work9 from '../../../assets/icons/home/welding.svg';
 
 const primCardData = [
-  { title: "Nursing & Healthcare", img: work1, color: "#FCEBC3", btnType:"btn-secondary", colSize: 6, desc: 'Security testing involves evaluating software to ensure information protection.',id: "wac1" },
-  { title: "Hospitality Management", img: work2, color: "#FFFFFF",btnType:"btn-secondary-outline", colSize: 3, desc: 'Security testing involves evaluating software to ensure information protection.',id: "wac2" },
-  { title: "Information Technology", img: work3, color: "#FFFFFF",btnType:"btn-secondary-outline", colSize: 3, desc: 'Security testing involves evaluating software to ensure information protection.',id: "wac3" }
+  { title: "Nursing & Healthcare", img: work1, color: "#FCEBC3", btnType:"btn-secondary", colSize: 6, desc: 'We specialize in placing skilled nurses and healthcare professionals in abroad. We make the process seamless for both candidate and Employer.',id: "wac1" },
+  { title: "Hospitality Management", img: work2, color: "#FFFFFF",btnType:"btn-secondary-outline", colSize: 3,desc:"We connect skilled IT professionals with leading global companies. From software engineers to tech specialists, we match talent with the right opportunities seamlessly and efficiently",id: "wac2" },
+  { title: "Information Technology", img: work3, color: "#FFFFFF",btnType:"btn-secondary-outline", colSize: 3, desc: 'We connect world-class talent with leading hotels, resorts, and restaurants abroad. From chefs to managers and all other positions.',id: "wac3" }
 ];
 
 const WorkAbroadOpportunity = () => {
