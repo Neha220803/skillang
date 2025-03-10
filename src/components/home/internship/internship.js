@@ -131,7 +131,7 @@ const InternshipSection = () => {
         </Row>
         <div
           ref={cardsRef}
-          className={` row-equal-height ${showAll ? "expanded" : ""}`}
+          className={`service-offering-cards-container row-equal-height ${showAll ? "expanded" : ""}`}
           style={{
             maxHeight: screenWidth < 768 ? maxHeight : "none",
             transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none",
