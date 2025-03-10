@@ -11,8 +11,10 @@ import '../../App.css';
 const FooterSection = () => {
   return (
     <footer className="footer-container">
-      <Container className="footer-bg rounded-4 p-0 px-4 my-4">
+      <Container className="p-0 my-4">
+        
         <Row className="align-items-center">
+          <div  className="footer-bg d-flex">
           <Col md={6} className="d-none d-md-block" >
             <Image fluid src={footerimg} />
           </Col>
@@ -22,23 +24,26 @@ const FooterSection = () => {
             <div className="paragraph-big-medium text-content-secondary">© 2025 All Rights Reserved, Skillang</div>
           </Col>
           <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-start " style={{overflow:'hidden'}}>
-  <Image src={footerimg} alt="Partner Image" style={{ height: '130px'}} />
-</Col>
-
-
+        <Image src={footerimg} alt="Partner Image" style={{ height: '130px'}} />
+      </Col>
+      </div>
         </Row>
+    
       </Container>
 
       <Container className="rounded-4 mb-4 d-flex flex-column align-items-stretch justify-content-end">
-        <Row className="d-flex align-items-stretch justify-content-end">
-          <Col lg={8} className="bg-light rounded-4 p-3">
+        <Row className="d-flex align-items-stretch justify-content-end d-flex">
+           <div className="bg-light rounded-4 ">
+          <Col lg={8} className="p-3">
             <Row className="d-flex flex-wrap gap-4 px-5 py-4">
               <Col>
+             
                 <ul className="footer-nav">
                   <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Home</div></Link></li>
                   <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Nursing </div></Link></li>
                   <li><Link to="/programs" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Work Abroad </div></Link></li>
                 </ul>
+              
               </Col>
               <Col>
                 <ul className="footer-nav">
@@ -61,7 +66,9 @@ const FooterSection = () => {
                 </ul>
               </Col>
             </Row>
+           
           </Col>
+           </div>
           
          <Col lg={4} className="d-flex justify-content-end align-items-end ">
   <div className="bg-light rounded-4 px-3 mt-2 mt-lg-0">

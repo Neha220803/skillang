@@ -78,7 +78,7 @@ const WorkAbroadOpportunity = () => {
                 {secCardData.map((service, index) => (
                   <Col
                     key={index}
-                    className="mb-3"
+                    className="mb-3 "
                     lg={6} sm={6} xs={6}
                   >
                     <Card className="work-abroad-card flex-column">

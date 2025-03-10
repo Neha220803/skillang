@@ -34,8 +34,9 @@
   justify-content: space-between !important;
   padding: 24px 24px !important;
   /* gap: 4px !important; */
-  width: 100% !important;
+  width: 90% !important;
   height: 76px !important;
+  text-align: start !important;
   background-color: #FFFFFF !important;
   border: 2px solid #E3E3E3 !important;
   border-radius: 12px !important;
@@ -62,6 +63,13 @@
   border-radius: 18px !important;
   background-position: bottom !important;
   /* height: 100% !important; */
+}
+
+.test-lang-card {
+  height: 54px !important;
+  text-align: start !important;
+    padding: 16px 24px !important;
+    font-size: 12px !important;
 }
 
 }

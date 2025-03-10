@@ -3,7 +3,7 @@ import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-b
 import "../../../index.css";
 import "./home-header.css";
 import "../../../App.css";
-import headerbg from "../../../assets/images/home/header-bg1.svg";
+import headerbg from "../../../assets/images/home/header-bg1.jpg";
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import useFormHandler from "../../../hooks/useFormHandler";

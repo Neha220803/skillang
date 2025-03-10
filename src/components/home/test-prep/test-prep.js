@@ -26,15 +26,15 @@ const TestPrep = () => {
         </Col>
 
         {/* Right Section */}
-        <Col className="px-4 flex-column align-items-center justify-content-center" lg={6} sm={12} xs={12}>
+        <Col className="px-3 flex-column align-items-center justify-content-center bg-primar p-0 mt-3" lg={6} sm={12} xs={12}>
 
           {testPrepCourses.map(([course1, course2, isBestSeller], index) => (
-            <Row key={index} className="d-flex">
-              <Col className="pe-1" lg={6} sm={6} xs={6}>
-                <div className="test-lang-card paragraph-big-medium">{course1}</div>
+            <Row key={index} className="p-0 d-flex align-items-center justify-content-center">
+              <Col className=" bg-succes p-0 d-flex align-items-start justify-content-center" lg={6} sm={6} xs={6}>
+                <div className="test-lang-card paragraph-big-medium text-start">{course1}</div>
               </Col>
-              <Col className="ps-1" lg={6} sm={6} xs={6}>
-                <div className="test-lang-card paragraph-big-medium">
+              <Col className=" p-0 d-flex align-items-center justify-content-center text-start" lg={6} sm={6} xs={6}>
+                <div className="test-lang-card paragraph-big-medium ">
                   {course2} {isBestSeller && <span className="best-seller d-none d-md-block">Best Seller</span>}
                 </div>
               </Col>
