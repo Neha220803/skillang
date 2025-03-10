@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card, CardTitle, CardText, Accordion } from 'react-bootstrap';
-import nurseResi from '../../../assets/images/nursing/resi.png';
+import nurseResi from '../../../assets/images/nursing/resi.jpg';
 import './permResidentSection.css';
 
 const benefits = [
@@ -13,17 +13,17 @@ const benefits = [
 
 const PermResidentSection = () => {
   return (
-    <div className="bg-dark text-white">
+    <div className="bg-dark ">
       <Container>
         <Row className="py-4">
           <Col lg={6} className='d-block d-md-none'>
-            <Image fluid src={nurseResi} alt="Permanent Residency" />
+            <Image fluid src={nurseResi} alt="Permanent Residency" style={{borderRadius:'12px'}} />
           </Col>
           <Col lg={6} sm={12} xs={12}>
-            <div className="heading-big-medium">Permanent Residency and Citizenship Pathways</div>
+            <div className="heading-big-medium text-content-primaryInverse">Permanent Residency and Citizenship Pathways</div>
           </Col>
           <Col lg={6} className='d-none d-md-block'>
-            <Image fluid src={nurseResi} alt="Permanent Residency" className="w-100 h-auto" />
+            <Image fluid src={nurseResi} alt="Permanent Residency" className="w-100 h-auto" style={{borderRadius:'24px'}}  />
           </Col>
         </Row>
 
@@ -32,8 +32,8 @@ const PermResidentSection = () => {
           <Accordion defaultActiveKey="1"  className="custom-accordion">
             {benefits.map((benefit, index) => (
               <Accordion.Item eventKey={index.toString()} key={index} className="dark-accordion-item">
-                <Accordion.Header>{benefit.title}</Accordion.Header>
-                <Accordion.Body>{benefit.text}</Accordion.Body>
+                <Accordion.Header className='subheading-small-medium text-content-primaryInverse'>{benefit.title}</Accordion.Header>
+                <Accordion.Body className='paragraph-small-regular text-content-grey-400'>{benefit.text}</Accordion.Body>
               </Accordion.Item>
             ))}
           </Accordion>
@@ -44,8 +44,8 @@ const PermResidentSection = () => {
           {benefits.map((benefit, index) => (
             <Col key={index} lg={index < 3 ? 4 : 6} className="mb-4">
               <Card className="nurse-perm-card">
-                <CardTitle className='subheading-small-medium'>{benefit.title}</CardTitle>
-                <CardText className='paragraph-small-regular'>{benefit.text}</CardText>
+                <CardTitle className='subheading-small-medium text-content-primaryInverse'>{benefit.title}</CardTitle>
+                <CardText className='paragraph-small-regular text-content-grey-400'>{benefit.text}</CardText>
               </Card>
             </Col>
           ))}

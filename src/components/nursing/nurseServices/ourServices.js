@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardText, CardTitle, Container, Image, Col, Row, Button } from 'react-bootstrap';
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
-import nurseService from '../../../assets/images/nursing/nurseService.png';
+import nurseService from '../../../assets/images/nursing/nurseService.jpg';
 import './ourServices.css';
 
 const services = [

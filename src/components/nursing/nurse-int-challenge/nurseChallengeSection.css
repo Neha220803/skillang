@@ -8,6 +8,11 @@
   color: black !important;
   height: 100% !important;
   margin-bottom: 12px !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.int-challenge-card:hover{
+  transform: scale(1.02) !important;
 }
 
 .int-challenge-card img {

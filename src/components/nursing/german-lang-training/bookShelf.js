@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Col, Row } from "react-bootstrap";
-import nurseBookBg1 from '../../../assets/images/nursing/nurseBookBg1.svg';
-import nurseBookBg2 from '../../../assets/images/nursing/nurseBookBg2.svg';
-import nurseBookBg3 from '../../../assets/images/nursing/nurseBookBg3.svg';
-import nurseBookBg4 from '../../../assets/images/nursing/nurseBookBg4.svg';
-import nurseBookBg5 from '../../../assets/images/nursing/nurseBookBg5.svg';
+import nurseBookBg1 from '../../../assets/images/nursing/nurseBook1.png';
+import nurseBookBg2 from '../../../assets/images/nursing/nurseBook2.png';
+import nurseBookBg3 from '../../../assets/images/nursing/nurseBook3.png';
+import nurseBookBg4 from '../../../assets/images/nursing/nurseBook4.png';
+import nurseBookBg5 from '../../../assets/images/nursing/nurseBook5.png';
 import './nurseLangSection.css'; // Import the CSS file
 
 const BookShelf = () => {
@@ -12,11 +12,11 @@ const BookShelf = () => {
 
   // Data for books
   const rectangles = [
-    { title: 'Free Language Courses', content: "Free German and other language courses tailored for international nurses", img: nurseBookBg1 },
-    { title: 'Expert Training', content: 'Access to online and in-person training options from highly qualified trainers', img: nurseBookBg2 },
-    { title: 'Flexible Schedules', content: 'Flexible learning schedules to fit work commitments', img: nurseBookBg3 },
-    { title: 'Healthcare Integration', content: 'Support for integration into the German healthcare system', img: nurseBookBg4 },
-    { title: 'Certification', content: 'Certification upon course completion', img: nurseBookBg5 }
+    { title: 'Free Language Courses', content: "Free German and other language courses tailored for international nurses", img: nurseBookBg1,color:"#131313" },
+    { title: 'Expert Training', content: 'Access to online and in-person training options from highly qualified trainers', img: nurseBookBg2, color:"#F34E4E" },
+    { title: 'Flexible Schedules', content: 'Flexible learning schedules to fit work commitments', img: nurseBookBg3, color:"#F2AB0D" },
+    { title: 'Healthcare Integration', content: 'Support for integration into the German healthcare system', img: nurseBookBg4, color:"#131313" },
+    { title: 'Certification', content: 'Certification upon course completion', img: nurseBookBg5, color:"#F34E4E" }
   ];
 
   return (
@@ -29,7 +29,8 @@ const BookShelf = () => {
           style={{
             backgroundImage: `url(${rectangle.img})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'bottom end',
+            backgroundColor: rectangle.color,
             backgroundRepeat: 'no-repeat'
           }}
         >

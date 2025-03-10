@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, Container, Col, Row, CardBody, CardTitle, CardText } from 'react-bootstrap';
-import nurseChallenge1 from '../../../assets/images/nursing/nurseChallenge1.png';
-import nurseChallenge2 from '../../../assets/images/nursing/nurseChallenge2.png';
-import nurseChallenge3 from '../../../assets/images/nursing/nurseChallenge3.png';
+import nurseChallenge1 from '../../../assets/images/nursing/nurseChallenge1.jpg';
+import nurseChallenge2 from '../../../assets/images/nursing/nurseChallenge2.jpg';
+import nurseChallenge3 from '../../../assets/images/nursing/nurseChallenge3.jpg';
 import './nurseChallengeSection.css';
 
 const nurseCallenges = [

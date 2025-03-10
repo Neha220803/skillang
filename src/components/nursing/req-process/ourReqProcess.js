@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Image } from 'react-bootstrap'
-import reqImg from '../../../assets/images/nursing/reqProcess.svg';
+import reqImg from '../../../assets/images/nursing/reqProcess.jpg';
 import './ourReqProcess.css';
 
 const OurReqProcess = () => {

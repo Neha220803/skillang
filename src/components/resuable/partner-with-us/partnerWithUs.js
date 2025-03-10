@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import  nursePartnerImg from '../../../assets/images/reusable/partner-img.png';
+import  nursePartnerImg from '../../../assets/images/reusable/partner-image.png';
 import institudeIcon from '../../../assets/icons/resuable/instituteIcon.svg';
 
 import companyIcon from '../../../assets/icons/resuable/companyIcon.svg';

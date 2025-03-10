@@ -24,6 +24,10 @@
     position: relative;
 }
 
+.nurse-posi-card:hover{
+    transform: scale(1.02) !important;
+}
+
 /* Left border line */
 .nurse-posi-card::before {
     content: "";

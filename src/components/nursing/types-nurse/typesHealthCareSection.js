@@ -1,11 +1,11 @@
 import React from 'react';
 import { CardTitle, Container, Col, Card, Row } from 'react-bootstrap';
-import ntype1 from '../../../assets/images/nursing/nType1.png';
-import ntype2 from '../../../assets/images/nursing/nType2.png';
-import ntype3 from '../../../assets/images/nursing/nType3.png';
-import ntype4 from '../../../assets/images/nursing/nType4.png';
-import ntype5 from '../../../assets/images/nursing/nType5.png';
-import ntype6 from '../../../assets/images/nursing/nType6.png';
+import ntype1 from '../../../assets/images/nursing/nType1.jpg';
+import ntype2 from '../../../assets/images/nursing/nType2.jpg';
+import ntype3 from '../../../assets/images/nursing/nType3.jpg';
+import ntype4 from '../../../assets/images/nursing/nType4.jpg';
+import ntype5 from '../../../assets/images/nursing/nType5.jpg';
+import ntype6 from '../../../assets/images/nursing/nType6.jpg';
 import './typesHealthCareSection.css';
 
 const nurseTypes = [

@@ -13,7 +13,7 @@ const NursePathwaySection = () => {
           </Col>
           <Col lg={10}>
             <div className='mb-5 heading-big-medium'>Start your Pathway to a 🌐Global Healthcare Career</div>
-            <p className='mb-5 paragraph-big-medium'>
+            <p className='mb-5 paragraph-big-medium text-content-secondary'>
               Free German Courses, Online & In-Person Training & Flexible Learning Schedules all in One Place
             </p>
             {/* <button className='btn-primary-outline'
