@@ -9,36 +9,33 @@
     transform: scale(1.2);
 }
 
-/* Timeline Connector Animation */
+/* Timeline Connector Wrapper */
+.timeline-connector-wrapper {
+    position: relative;
+    width: 5px;
+    flex-grow: 1;
+}
+
+/* Timeline Connector Base */
 .timeline-connector {
-    transition: height 0.6s ease-in-out, background-color 0.5s ease;
-    background-color: #ccc;
-    width: 5px !important;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #ccc !important;
 }
 
-.timeline-connector.active {
-    height: 100%;
-    width: 5px !important;
-}
-
-/* Timeline Connector Animation */
-.timeline-connector {
-    transition: height 0.6s ease-in-out, background-color 0.5s ease;
-    /* height: 40px; */
-    background-color: #ccc;
-    
-    width: 5px !important;
-}
-
-
-.timeline-connector.active {
-    background-color: #E86E39;
-    height: 100%;
-    width: 5px !important;
+/* Timeline Connector Fill Animation */
+.timeline-connector-fill {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: height 0.3s ease-out;
+    z-index: 2;
 }
 
 @media (max-width: 480px) {
-    .custom-image{
+    .custom-image {
         height: 140px !important;
         width: auto !important;
     }

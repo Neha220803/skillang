@@ -19,6 +19,7 @@ import './work-abroad-timeline.css';
 const WorkAbroadJourneyTimeline = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [progressValues, setProgressValues] = useState(Array(5).fill(0)); // Track progress for each connector
   const timelineRefs = useRef([]);
 
   useEffect(() => {
@@ -29,61 +30,84 @@ const WorkAbroadJourneyTimeline = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      let newActiveIndex = 0;
+  const handleScroll = () => {
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight * 0.6;
+    const newProgressValues = [...progressValues];
+    let newActiveIndex = 0;
 
-      timelineRefs.current.forEach((ref, index) => {
-        if (ref) {
-          const rect = ref.getBoundingClientRect();
-          if (rect.top < windowHeight * 0.6) {
-            newActiveIndex = index;
-          }
+    timelineRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const rect = ref.getBoundingClientRect();
+        if (rect.top < triggerPoint) {
+          newActiveIndex = index;
         }
-      });
+      }
+    });
 
-      setActiveIndex(newActiveIndex);
-    };
+    timelineRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const currentRect = ref.getBoundingClientRect();
+        const nextRef = timelineRefs.current[index + 1];
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+        if (nextRef) {
+          const nextRect = nextRef.getBoundingClientRect();
+          const distanceToNextItem = nextRect.top - triggerPoint;
+          const totalDistance = nextRect.top - currentRect.top;
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+          const progress = 1 - Math.min(1, Math.max(0, distanceToNextItem / totalDistance));
+          newProgressValues[index] = progress;
+        } else {
+          // Ensure the last index's progress is 100% when it's active
+          
+          newProgressValues[index] = index === newActiveIndex ? 1 : 0;
+        }
+      }
+    });
+
+    setActiveIndex(newActiveIndex);
+    setProgressValues(newProgressValues);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Initial check
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [progressValues]);
+
 
   const timelineData = [
-  {
-    title: "Explore Opportunities",
-    description: "Explore the work abroad opportunities that fit your interest, education, and experience background.",
-    image: wjourney1,
-    color: "#E53935", // Red
-  },
-  {
-    title: "Language & Test Prep",
-    description: "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options for a successful career abroad.",
-    image: wjourney2,
-    color: "#FB8C00", // Orange
-  },
-  {
-    title: "CV & Application Support",
-    description: "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process, including real-time updates on your offer letter.",
-    image: wjourney3,
-    color: "#FDD835", // Yellow
-  },
-  {
-    title: "Application & Interview Support",
-    description: "Stay on track with our transparent application process and real-time updates. Get expert mentorship and training to ace your interviews and secure your offer letter.",
-    image: wjourney4,
-    color: "#1E88E5", // Blue
-  },
-  {
-    title: "Visa & Relocation Support",
-    description: "We guide you through the visa process for a higher success rate and assist with travel and accommodation to ensure a smooth, secure, and affordable transition.",
-    image: wjourney5,
-    color: "#8E24AA", // Purple
-  },
-];
-
+    {
+      title: "Explore Opportunities",
+      description: "Explore the work abroad opportunities that fit your interest, education, and experience background.",
+      image: wjourney1,
+      color: "#E53935", // Red
+    },
+    {
+      title: "Language & Test Prep",
+      description: "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options for a successful career abroad.",
+      image: wjourney2,
+      color: "#FB8C00", // Orange
+    },
+    {
+      title: "CV & Application Support",
+      description: "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process, including real-time updates on your offer letter.",
+      image: wjourney3,
+      color: "#FDD835", // Yellow
+    },
+    {
+      title: "Application & Interview Support",
+      description: "Stay on track with our transparent application process and real-time updates. Get expert mentorship and training to ace your interviews and secure your offer letter.",
+      image: wjourney4,
+      color: "#1E88E5", // Blue
+    },
+    {
+      title: "Visa & Relocation Support",
+      description: "We guide you through the visa process for a higher success rate and assist with travel and accommodation to ensure a smooth, secure, and affordable transition.",
+      image: wjourney5,
+      color: "#8E24AA", // Purple
+    },
+  ];
 
   return (
     <section>
@@ -103,14 +127,27 @@ const WorkAbroadJourneyTimeline = () => {
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineDot
-                    className={`timeline-dot ${index <= activeIndex ? "active" : ""}`}
-                    style={{
+                  className={`timeline-dot ${index <= activeIndex ? "active" : ""}`}
+                  style={{
                     backgroundColor: index <= activeIndex ? item.color : "white",
                     borderColor: item.color,
-                    }}
+                  }}
                 />
-                <TimelineConnector className={`timeline-connector ${index < activeIndex ? "active" : ""}`} />
-                </TimelineSeparator>
+                {index < timelineData.length && (
+                  <div className="timeline-connector-wrapper">
+                    <TimelineConnector className="timeline-connector" />
+                    <div 
+                      className="timeline-connector-fill"
+                      style={{
+                        backgroundColor: item.color,
+                        height: `${progressValues[index] * 100}%`,
+                        top: '0', // Ensure it starts from the top
+                        position: 'absolute'
+                      }}
+                    />
+                  </div>
+                )}
+              </TimelineSeparator>
               <TimelineContent>
                 <div className="text-start">
                   <div className="subheading-small-medium">{item.title}</div>
