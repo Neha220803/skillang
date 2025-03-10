@@ -7,25 +7,57 @@
   overflow: hidden !important;
   text-align: start !important;
   border-radius: 8px !important;
-  min-width: 250px !important;
+  /* min-width: 250px !important; */
   justify-items: start !important;
   justify-content: start !important;
-  padding: 15px !important;
+background-repeat: no-repeat !important;
+  padding: 24px !important;
 }
 
+.intern-heading-wrapper{
+  width: 75% !important;
+}
 
 @media (max-width: 640px) {
 
   .intern-card{
     width: 100% !important;
-    height: fit-content !important;
+    height: 290px !important;
     background-position: bottom right !important;
+    min-width: none !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    padding: 16px !important;
+    border: #E3E3E3 1px solid !important;
+    border-radius: 8px !important;
 
   }
 
-  .internship-slider-wrapper{
-    padding: 0px !important;
-  }
+  .intern-card-text-wrapper{
+   width: 100% !important;
+  text-align: start !important;
+}
+
+.intern-heading-wrapper{
+  width: 100% !important;
+}
+
+#intern-mobile-card-half{
+  height: 290px !important;
+}
+
+#intern-mobile-card-full .intern-card-text-wrapper{
+   width: 50% !important;
+  text-align: start !important;
+}
+
+
+#intern-mobile-card-full{
+  height: 200px !important;
+}
+
+
+
 
 }
 
@@ -38,9 +70,9 @@
 
 .internship-slider-wrapper{
   /* background-color: pink !important; */
-  row-gap: 20px !important;
-  border-radius: 24px !important;
-  padding: 0 !important;
-  padding: 0 !important;
+  /* row-gap: 20px !important; */
+  /* border-radius: 24px !important; */
+  padding: 10px !important;
+  /* padding: 0 !important; */
   overflow: hidden !important;
 }
