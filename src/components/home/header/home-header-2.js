@@ -60,18 +60,46 @@ const HomeHeader2 = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  
-  // Set default values for form
+
   useEffect(() => {
     // Only set these values once on component mount
     handleOptionSelect("experience", "-");
     handleOptionSelect("county", "-");
+    handleOptionSelect("studyLevel", "-");
     handleOptionSelect("origin", "Home Page Form");
   }, []);
 
   // Handler for the looking-for selection with direct label click
   const handleLookingForSelect = (option) => {
     handleOptionSelect("lookingFor", option);
+  };
+
+  // Handler for experience level selection
+  const handleExperienceSelect = (option) => {
+    handleOptionSelect("experience", option);
+  };
+
+  // Handler for study level selection
+  const handleStudyLevelSelect = (option) => {
+    handleOptionSelect("studyLevel", option);
+  };
+
+  // Handler for country selection
+  const handleCountrySelect = (option) => {
+    handleOptionSelect("country", option);
+  };
+
+  // Conditional rendering helper functions
+  const showExperienceOptions = () => {
+    return formData.lookingFor === "Nursing" || formData.lookingFor === "Work Abroad";
+  };
+
+  const showStudyLevelOptions = () => {
+    return formData.lookingFor === "Study Abroad";
+  };
+
+  const showCountryOptions = () => {
+    return formData.lookingFor === "Study Abroad";
   };
 
   return (
@@ -131,6 +159,93 @@ const HomeHeader2 = () => {
                       ))}
                     </div>
                   </Form.Group>
+
+                  {/* Conditional Experience Options for Nursing and Work Abroad */}
+                  {showExperienceOptions() && (
+                    <Form.Group className="mb-3" controlId="formExperience">
+                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">Experience</Form.Label>
+                      <div className="d-flex gap-2 flex-wrap">
+                        {["0-2 Years", "2-5 Years", "5+ Years"].map((option, index) => (
+                          <div 
+                            key={index} 
+                            className={`experience-option ${formData.experience === option ? "selected" : ""}`}
+                            onClick={() => handleExperienceSelect(option)}
+                          >
+                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                              {option}
+                            </label>
+                            <input
+                              type="radio"
+                              id={`experience-${index}`}
+                              name="experience"
+                              value={option}
+                              checked={formData.experience === option}
+                              onChange={() => {}} // Handled by the onClick on parent div
+                              hidden
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </Form.Group>
+                  )}
+
+                  {/* Conditional Study Level Options for Study Abroad */}
+                  {showStudyLevelOptions() && (
+                    <Form.Group className="mb-3" controlId="formStudyLevel">
+                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking for</Form.Label>
+                      <div className="d-flex gap-2 flex-wrap">
+                        {["Bachelors", "Masters"].map((option, index) => (
+                          <div 
+                            key={index} 
+                            className={`experience-option ${formData.studyLevel === option ? "selected" : ""}`}
+                            onClick={() => handleStudyLevelSelect(option)}
+                          >
+                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                              {option}
+                            </label>
+                            <input
+                              type="radio"
+                              id={`study-level-${index}`}
+                              name="studyLevel"
+                              value={option}
+                              checked={formData.studyLevel === option}
+                              onChange={() => {}} // Handled by the onClick on parent div
+                              hidden
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </Form.Group>
+                  )}
+
+                  {/* Conditional Country Options for Study Abroad */}
+                  {showCountryOptions() && (
+                    <Form.Group className="mb-3" controlId="formCountry">
+                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">Country</Form.Label>
+                      <div className="d-flex gap-2 flex-wrap">
+                        {["USA", "UK", "Germany", "Australia", "Europe"].map((option, index) => (
+                          <div 
+                            key={index} 
+                            className={`experience-option ${formData.country === option ? "selected" : ""}`}
+                            onClick={() => handleCountrySelect(option)}
+                          >
+                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                              {option}
+                            </label>
+                            <input
+                              type="radio"
+                              id={`country-${index}`}
+                              name="country"
+                              value={option}
+                              checked={formData.country === option}
+                              onChange={() => {}} // Handled by the onClick on parent div
+                              hidden
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </Form.Group>
+                  )}
 
                   {otpVisible && (
                     <Row className="mb-2">
