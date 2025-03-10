@@ -1,68 +1,164 @@
-.footer-container {
-  background-color: #634BA6;
-  padding: 20px;
-  gap: 20px;
-  overflow: hidden !important;
+/* Footer.css */
+.footer-wrapper {
+  background-color: #6f42c1;
+  padding: 40px 0;
+  /* color: white; */
 }
 
-.footer-nav {
+#footer-card-1{
+  background-image: url('../../assets/images/home/footer-bg.png');
+  background-repeat: no-repeat !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-size: cover !important;
+  background-position: top right !important;
+}
+
+.footer-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Banner Styles */
+.professionals-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0;
+}
+
+
+
+.skillang-logo {
+  /* width: 25px; */
+  height: auto;
+}
+
+.skillang-text {
+  font-weight: 500;
+  color: #212529;
+}
+
+.copyright-text {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Navigation Styles */
+.footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
-.footer-nav-link {
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
   color: black;
   text-decoration: none;
-  /* font-weight: 500; */
-  transition: all 0.3s ease;
+  /* font-size: 14px; */
+  transition: color 0.2s;
 }
 
-.footer-nav-link:hover {
-  text-decoration: underline;
+.footer-links a:hover {
+  color: #6f42c1;
 }
 
-.social-icon {
-  color: black;
-  font-size: 24px;
-  transition: all 0.3s ease;
+/* Contact Styles */
+.footer-card h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #212529;
 }
 
-/* .social-icon:hover {
-  color: #007bff;
+.social-icons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: #212529;
+  margin-right: 20px;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #6f42c1;
+}
+
+.contact-phone {
+  margin-bottom: 15px;
+}
+
+.contact-phone a {
+  display: flex;
+  align-items: center;
+  color: #212529;
+  text-decoration: none;
+}
+
+.contact-phone svg {
+  margin-right: 10px;
+}
+
+.contact-address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-address svg {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+/* .contact-address p {
+  margin: 0;
+  font-size: 14px;
+  color: #212529;
+  line-height: 1.5;
 } */
 
-.fb:hover { color: #3b5998; }
-.ig {
-    background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
+.main-copyright {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
-.ig:hover{
-   color: #cc2366 !important;
+@media (max-width: 991.98px) {
+  .banner-title {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
 }
 
-.social-icon:hover {
-  transform: scale(1.2); /* Optional hover effect */
-  cursor: pointer;
+@media (max-width: 767.98px) {
+  .banner-content {
+    /* margin-top: 20px; */
+  }
 }
 
-.tw:hover { color: #00acee; }
-.gl:hover { color: #ff0000; }
+@media (max-width: 575.98px) {
+  
+  .banner-content{
+      margin-top: 16px !important;
+            margin-left: 16px !important;
 
-.footer-bg {
-  background-image: url('../../assets/images/home/footer-bg.png');
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  border-radius: 16px;
-}
+  }
+  
+  .footer-wrapper {
+    padding: 20px 0;
+  }
 
-.footer-logo{
-  width: 140px !important;
-  height: auto !important;
+
 }

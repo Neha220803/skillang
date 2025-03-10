@@ -1,95 +1,123 @@
-import React from "react";
-import logo from "../../assets/images/logos/logo-3.svg";
-import { Container, Col, Row, Image } from "react-bootstrap";
-import { FaPhone, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import foorImg from '../../assets/images/home/footer-img.png';
+import logo from '../../assets/images/logos/logo-3.svg';
 import './footer.css';
-import footerimg from '../../assets/images/home/footer-img.png';
-import '../../index.css';
-import '../../App.css';
 
-const FooterSection = () => {
+const Footer = () => {
   return (
-    <footer className="footer-container">
-      <Container className="p-0 my-4">
+    <footer className="footer-wrapper">
+      <Container>
+        <Row className="mb-4">
+          <Col xs={12}>
+            <div className="footer-card" id="footer-card-1">
+              <Row className="align-items-center">
+                <Col md={5}>
+                  <div className="d-flex bg-primar justify-content-cente align-items-center">
+                    <Image 
+                      src={foorImg} 
+                      alt="Healthcare and Business Professionals" 
+                      className="professionals-image d-none d-md-block"
+                    />
+                  </div>
+                </Col>
+                <Col md={7} xs={12} sm={12}>
+                  <div className="banner-content">
+                    <div className="banner-title heading-small-medium">Gateway to Global Career</div>
+                    <div className="d-flex align-items-center mt-3">
+                      <div className="skillang-logo-container">
+                        <Image 
+                          src={logo} 
+                          alt="Skillang Logo" 
+                          className="skillang-logo"
+                        />
+                      </div>
+                    </div>
+                    <p className="copyright-text mt-2">© 2025 All Rights Reserved, Skillang</p>
+                  </div>
+                </Col>
+                <Col sm={12} xs={12} className='d-block d-md-none '>
+
+                <Image 
+                      src={foorImg} 
+                      alt="Healthcare and Business Professionals" 
+                      className="professionals-image"
+                    />
+
+                
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+
+        {/* Navigation and Contact Cards */}
+        <Row>
+          <Col lg={8} className="pe-lg-2 mb-4 mb-lg-0">
+            <div className="footer-card">
+              <Row>
+                <Col xs={6} md={3}>
+                  <ul className="footer-links">
+                    <li><a href="/"><div className='caption-medium'> Home</div></a></li>
+                    <li><a href="/#nursing"><div className='caption-medium'>Nursing</div></a></li>
+                    <li><a href="/#work-abroad"><div className='caption-medium'>Work Abroad</div></a></li>
+                  </ul>
+                </Col>
+                <Col xs={6} md={3}>
+                  <ul className="footer-links">
+                    <li><a href="/#study-abroad"><div className='caption-medium'> Study Abroad</div></a></li>
+                    <li><a href="/#lang-test-prep"><div className='caption-medium'> Language Prep</div></a></li>
+                    <li><a href="/#lang-test-prep"><div className='caption-medium'> Test Prep</div></a></li>
+                  </ul>
+                </Col>
+                <Col xs={6} md={3} className="mt-4 mt-md-0 d-none d-md-block">
+                  <ul className="footer-links">
+                    <li><a href="/login"><div className='caption-medium'>Login/Sign Up</div></a></li>
+                    <li><a href="/contact"><div className='caption-medium'>Contact Us</div></a></li>
+                    <li><a href="/news"><div className='caption-medium'>News & Blogs</div></a></li>
+                  </ul>
+                </Col>
+                <Col xs={6} md={3} className="mt-4 mt-md-0 d-none d-md-block">
+                  <ul className="footer-links">
+                    <li><a href="/terms"><div className='caption-medium'>Terms of Use</div></a></li>
+                    <li><a href="/privacy"><div className='caption-medium'>Privacy Policy</div></a></li>
+                  </ul>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+          <Col lg={4} className="ps-lg-2">
+            <div className="footer-card">
+              <div className='subheading-small-medium'>Socials</div>
+              <div className="social-icons">
+                <a href="#"><FaFacebookF /></a>
+                <a href="#"><FaInstagram /></a>
+                <a href="#"><FaTwitter /></a>
+                <a href="#"><FaYoutube /></a>
+              </div>
+              <div className="contact-phone">
+                <a href="tel:+917200630336">
+                  <FaPhone />
+                  <span>+91 - 7200 630 336</span>
+                </a>
+              </div>
+              <div className="contact-address">
+                <FaMapMarkerAlt />
+                <p className='caption-medium'>
+                  The Executive zone, 766, Anna Salai,<br />
+                  Shakti Tower-1, Thousand Lights, Chennai<br />
+                  Pincode - 600002.
+                </p>
+              </div>
+            </div>
+          </Col>
+        </Row>
         
-        <Row className="align-items-center">
-          <div  className="footer-bg d-flex">
-          <Col md={6} className="d-none d-md-block" >
-            <Image fluid src={footerimg} />
-          </Col>
-          <Col md={6} className="justify-content-start align-items-start text-start">
-            <div className="heading-big-medium text-content-primary my-4">Gateway to Global Career</div>
-            <img src={logo} alt="Logo" className="mb-3 footer-logo" />
-            <div className="paragraph-big-medium text-content-secondary">© 2025 All Rights Reserved, Skillang</div>
-          </Col>
-          <Col sm={6} xs={6} className="d-block d-md-none ms-auto d-flex justify-content-start " style={{overflow:'hidden'}}>
-        <Image src={footerimg} alt="Partner Image" style={{ height: '130px'}} />
-      </Col>
-      </div>
-        </Row>
-    
-      </Container>
-
-      <Container className="rounded-4 mb-4 d-flex flex-column align-items-stretch justify-content-end">
-        <Row className="d-flex align-items-stretch justify-content-end d-flex">
-           <div className="bg-light rounded-4 ">
-          <Col lg={8} className="p-3">
-            <Row className="d-flex flex-wrap gap-4 px-5 py-4">
-              <Col>
-             
-                <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Home</div></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Nursing </div></Link></li>
-                  <li><Link to="/programs" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Work Abroad </div></Link></li>
-                </ul>
-              
-              </Col>
-              <Col>
-                <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Study Abroad </div></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Language Prep </div></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Test Prep </div></Link></li>
-                </ul>
-              </Col>
-              <Col>
-                <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Login/Sign Up </div></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Contact Us </div></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">News & Blogs </div></Link></li>
-                </ul>
-              </Col>
-              <Col>
-                <ul className="footer-nav">
-                  <li><Link to="/" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Terms of Use </div></Link></li>
-                  <li><Link to="/about" className="footer-nav-link"><div className="paragraph-big-medium text-content-secondary">Privacy Policy </div></Link></li>
-                </ul>
-              </Col>
-            </Row>
-           
-          </Col>
-           </div>
-          
-         <Col lg={4} className="d-flex justify-content-end align-items-end ">
-  <div className="bg-light rounded-4 px-3 mt-2 mt-lg-0">
-    <div className="d-flex flex-column align-items-start p-3">
-      <h4>Socials</h4>
-      <div className="d-flex gap-3 mb-3">
-        <FaFacebook className="social-icon fb" />
-        <FaInstagram className="social-icon ig" />
-        <FaTwitter className="social-icon tw" />
-        <FaYoutube className="social-icon gl" />
-      </div>
-      <p><FaPhone className="me-2"/> +91 - 7200 630 336</p>
-      <p>The Executive zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights, Chennai <br></br>Pincode - 600002.</p>
-    </div>
-  </div>
-</Col>
-
-        </Row>
       </Container>
     </footer>
   );
 };
 
-export default FooterSection;
+export default Footer;
