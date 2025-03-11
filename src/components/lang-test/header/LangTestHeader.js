@@ -74,7 +74,7 @@ const LangTestHeader = () => {
     handleOptionSelect("lookingFor", option);
   };
   return (
-    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2" id="home">
+    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2">
       <Container className="">
         <Row className="">
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-0">

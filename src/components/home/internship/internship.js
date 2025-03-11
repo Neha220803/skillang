@@ -121,7 +121,7 @@ const InternshipSection = () => {
   return (
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
-        <Row className="mb-lg-4 mb-md-4 text-center intern-heading-wrapper">
+        <Row className=" text-center intern-heading-wrapper">
           <div className="heading-big-medium">
             Ausbildung (Internship) Program in Germany
           </div>

@@ -149,7 +149,7 @@
 }
 
 /* Universal Typography Classes */
-.heading-big-medium { font: var(--heading-big-medium) !important;; }
+.heading-big-medium { font: var(--heading-big-medium) !important; margin-bottom: 12px !important;   }
 .heading-small-medium { font: var(--heading-small-medium) !important; }
 
 .subheading-big-regular { font: var(--subheading-big-regular) !important;; }
@@ -161,17 +161,17 @@
 .caption-medium { font: var(--caption-medium) !important;; }
 .caption-bold { font: var(--caption-bold) !important;; }
 
-.paragraph-big-regular { font: var(--paragraph-big-regular) !important;; }
-.paragraph-big-medium { font: var(--paragraph-big-medium) !important;; }
-.paragraph-small-regular { font: var(--paragraph-small-regular) !important;; }
-.paragraph-small-medium { font: var(--paragraph-small-medium) !important;; }
+.paragraph-big-regular { font: var(--paragraph-big-regular) !important;}
+.paragraph-big-medium { font: var(--paragraph-big-medium) !important;}
+.paragraph-small-regular { font: var(--paragraph-small-regular) !important; }
+.paragraph-small-medium { font: var(--paragraph-small-medium) !important;}
 
 .display-medium { font: var(--display-medium) !important;; }
 .display-regular { font: var(--display-regular) !important;; }
 
 /* Mobile Specific */
 @media (max-width: 768px) {
-  .heading-big-medium { font: var(--mobile-heading-big-medium) !important; }
+  .heading-big-medium { font: var(--mobile-heading-big-medium) !important; margin-bottom: 8px !important; }
   .heading-small-medium { font: var(--mobile-heading-small-medium) !important; }
 
   .subheading-big-regular { font: var(--mobile-subheading-big-regular) !important; }
@@ -215,6 +215,7 @@ body {
     sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
 }
 
 .btn-primary{
