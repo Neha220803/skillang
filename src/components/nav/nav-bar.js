@@ -22,6 +22,7 @@ function CustomNavbar() {
   const handleNavigation = (path) => {
   if (location.pathname !== path) {
     navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };
 

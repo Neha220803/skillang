@@ -69,10 +69,12 @@ const WorkAbroadOpportunity = () => {
             {primCardData.map((card, index) => (
               <Col key={index} lg={card.colSize} md={6} sm={12} xs={12}>
                 <Card className='prim-card d-flex border-0 mb-2' id={card.id} style={{ backgroundColor: card.color }}>
-                  <Card.Img variant="top" className='work-card-img' src={card.img} alt="Card image" />
-                  <CardBody className='d-flex flex-column justify-content-around px-1 pt-2 py-0'>
-                    <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
-                    <CardText className='paragraph-small-regular'>{card.desc}</CardText>
+  <Card.Img variant="top" className='work-card-img' src={card.img} alt="Card image" />
+  <CardBody className='d-flex flex-column justify-content-between p-2'>
+    <div className='card-header-section flex-column'>
+      <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
+      <CardText className='paragraph-small-regular'>{card.desc}</CardText>
+    </div>
                     <div className='w-sm-100'>
                       <button className={`${card.btnType} w-sm-100`} onClick={() => {
                         navigate(card.link);
@@ -91,10 +93,10 @@ const WorkAbroadOpportunity = () => {
 
         <div className="w-100">
           <Row className='bg-primar w-100 mx-0'>
-            <Col lg={8} md={4} className="work-abroad-left-bg flex-column text-white d-flex align-items-end justify-content-start py-4 text-start">
-              <div className='work-ops-textwrap'>
+            <Col lg={8} md={4} className="work-abroad-left-bg flex-column text-white d-flex align-items-end justify-content-start text-start p-0">
+              <div className='work-ops-textwrap bg-primar'>
                 <div className='text-white heading-small-medium'>Diverse Range of Opportunities</div>
-                <div className='text-white paragraph-small-medium my-2'>We help you choose from large range of employment opportunities</div>
+                <div className='text-white paragraph-small-medium my-3'>We help you choose from large range of employment opportunities</div>
                 <div>
                   <button className='btn-primary'
                     onClick={() => {

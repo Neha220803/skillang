@@ -2,10 +2,20 @@
   padding: 24px !important;
   width: 100% !important;
   height: 100% !important;
-  border-radius: 23px !important;
-  justify-content:space-evenly !important;
-  overflow: hidden !important;
   border-radius: 24px !important;
+  justify-content: space-between !important; /* Changed from space-evenly to space-between */
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important; /* Ensure column layout */
+}
+
+/* New class for the header section containing title and text */
+.card-header-section {
+  display: flex !important;
+  flex-direction: row !important; /* Place title and text next to each other */
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-bottom: 16px !important;
 }
 
 .work-card-img{
@@ -71,7 +81,9 @@
 }
 
 .work-ops-textwrap{
-  width: 50% !important;
+  margin-top: 32px !important;
+  margin-right: 32px !important;
+  width: 40% !important;
 }
 
 .work-abroad-card-text {
@@ -87,6 +99,10 @@
 }
 
 @media (max-width: 576px) {
+  .card-header-section {
+    flex-direction: column !important; /* Stack on small screens */
+  }
+
   .work-card-img{
     height: 180px !important;
     width: auto;

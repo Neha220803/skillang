@@ -45,7 +45,7 @@ export default function StudyAbroad() {
                 <Card.Text className="paragraph-small-medium text-content-tertiaryInverse">{card.desc}</Card.Text>
                 <div className="button-container">
                   <button className="btn btn-primary btn-learn-more" onClick={() => {
-                    navigate('/work-abroad');
+                    navigate('/study-abroad');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}>Learn More</button>
                 </div>

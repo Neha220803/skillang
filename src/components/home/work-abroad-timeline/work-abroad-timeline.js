@@ -112,7 +112,7 @@ const WorkAbroadJourneyTimeline = () => {
     <section>
       <Container>
         <div className="text-center heading-big-medium">Work Abroad Journey</div>
-        <div className="text-center paragraph-big-medium text-content-secondary mb-md-5">
+        <div className="text-center paragraph-big-medium text-content-secondary mb-2 mb-md-5">
           Start your work abroad journey in 5 simple steps
         </div>
 
