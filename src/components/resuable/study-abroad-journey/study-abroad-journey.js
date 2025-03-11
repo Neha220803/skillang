@@ -11,6 +11,7 @@ import work6 from "../../../assets/images/reusable/s-journey-6.jpg";
 import work7 from "../../../assets/images/reusable/s-journey-7.jpg";
 import work8 from "../../../assets/images/reusable/s-journey-8.jpg";
 import work9 from "../../../assets/images/reusable/s-journey-9.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const cardData = [
   { title: "Explore Universities and Courses", desc: "Experts guide you based on interests and background. Recommendations tailored to fit your budget.", img: work1 },
@@ -25,13 +26,14 @@ const cardData = [
 ];
 
 export default function StudyAbroad() {
+  const navigate = useNavigate();
   return (
     <Container className="align-items-center justify-content-center study-abroad-bg">
       <div className="text-center my-lg-4 heading-big-medium text-content-primaryInverse">Study Abroad Journey</div>
       {/* <div className="text-center d-flex align-items-center justify-content-center">
         <button className="btn-primary text-center d-none d-md-block">Book a Free Consultation</button>
       </div> */}
-     
+
       {/* Scrollable Row */}
       <div className="scrollable-container">
         {cardData.map((card, index) => (
@@ -43,6 +45,7 @@ export default function StudyAbroad() {
                 <Card.Text className="paragraph-small-medium text-content-tertiaryInverse">{card.desc}</Card.Text>
                 <div className="button-container">
                   <button className="btn btn-primary btn-learn-more" onClick={() => {
+                    navigate('/work-abroad');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}>Learn More</button>
                 </div>

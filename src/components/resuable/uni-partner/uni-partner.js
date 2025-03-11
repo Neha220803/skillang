@@ -3,8 +3,10 @@ import '../../../App.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import ScrollEle from './scroll';
 import './uni-partner.css';
+import { useNavigate } from 'react-router-dom';
 
 const UniPartner = () => {
+  const navigate = useNavigate();
   return (
     <div className='d-flex flex-column align-items-center justify-content-center'>
       <Container className=''>
@@ -18,7 +20,7 @@ const UniPartner = () => {
             <div className='heading-big-medium mb-2'>Our Partnered Universities</div>
             <div className='paragraph-big-medium text-content-secondary'>Collaborating with Top Institutions to Bring You World-Class Education Opportunities.</div>
             <Row className='w-100 m-0 p-0 py-4'>
-              <Col lg={6} sm={6} xs={6}  className='p-0 pe-1'>
+              <Col lg={6} sm={6} xs={6} className='p-0 pe-1'>
                 <div className='num-cards'>
                   <div className='num-cards-title'>1,800+</div>
                   <div className='num-cards-subtitle'>Universities</div>
@@ -31,10 +33,15 @@ const UniPartner = () => {
                 </div>
               </Col>
               <div className='text-center text-lg-start mt-3 ps-0'>
-               <button className='btn-primary text-center'>Book a Free Consultation</button>
-            </div>
+                <button className='btn-primary text-center'
+
+                  onClick={() => {
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}>Book a Free Consultation</button>
+              </div>
             </Row>
-            
+
 
           </Col>
         </Row>

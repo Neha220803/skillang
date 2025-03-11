@@ -1,5 +1,6 @@
 import React from "react";
 import loanImg from "../../../assets/images/home/loan-img.jpg";
+
 import {
   Container,
   Col,
@@ -12,12 +13,13 @@ import '../../../index.css';
 import '../../../App.css';
 
 const LoanSection = () => {
+
   return (
     <div className="d-flex flex-column align-items-center justify-content-evenly">
       <Container className="d-flex flex-column align-items-start justify-content-center">
         <Col xs={12} sm={12} md={6} lg={5} className="mb-4 d-block d-md-none">
-              <Image fluid src={loanImg} className="loan-image rounded-4" />
-            </Col>
+          <Image fluid src={loanImg} className="loan-image rounded-4" />
+        </Col>
         <Row className="mb-md-3 d-block d-md-none">
           <div className="heading-big-medium">Loan and Scholarships Assistance</div>
         </Row>
@@ -33,6 +35,7 @@ const LoanSection = () => {
             <button
               className="btn-primary"
               onClick={() => {
+
                 window.scrollTo({
                   top: 0,
                   behavior: 'smooth',
@@ -44,9 +47,9 @@ const LoanSection = () => {
           </Col>
 
           <Col xs={12} sm={12} md={6} lg={6} className="mb-4 d-none d-md-block">
-              <Image fluid src={loanImg} className="loan-image rounded-4" />
-            </Col>
-         
+            <Image fluid src={loanImg} className="loan-image rounded-4" />
+          </Col>
+
         </Row>
       </Container>
     </div>
