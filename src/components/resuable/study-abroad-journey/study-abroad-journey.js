@@ -26,7 +26,7 @@ const cardData = [
 
 export default function StudyAbroad() {
   return (
-    <Container className="align-items-center justify-content-center study-abroad-bg" id="study-abroad">
+    <Container className="align-items-center justify-content-center study-abroad-bg">
       <div className="text-center my-lg-4 heading-big-medium text-content-primaryInverse">Study Abroad Journey</div>
       {/* <div className="text-center d-flex align-items-center justify-content-center">
         <button className="btn-primary text-center d-none d-md-block">Book a Free Consultation</button>

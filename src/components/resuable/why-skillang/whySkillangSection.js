@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'react-bootstrap';
 import './whySkillangSection.css';
 
-import whySkill1 from '../../../assets/images/reusable/whySkillang1.png';
-import whySkill2 from '../../../assets/images/reusable/whySkillang2.png';
-import whySkill3 from '../../../assets/images/reusable/whySkillang3.png';
+import whySkill1 from '../../../assets/images/reusable/whySkillang.jpg';
+import whySkill2 from '../../../assets/images/reusable/whySkillang2.jpg';
+import whySkill3 from '../../../assets/images/reusable/whySkillang3.jpg';
 
 const whySkillangCardData = [
   {
@@ -41,7 +41,7 @@ const WhySkillangSection = () => {
           {whySkillangCardData.map((card, index) => (
             <Col lg={4} key={index}>
               <Card className='why-skillang-card'>
-                <img src={card.image} alt={`why skillang ${index + 1}`} className='why-skillang-card-img' />
+                <img src={card.image} alt={`why skillang ${index + 1}`} className='why-skillang-card-img' style={{borderRadius:'12px'}} />
                 <CardBody className='px-0'>
                   <CardTitle className='subheading-small-medium'>{card.title}</CardTitle>
                   <CardText className='paragraph-small-regular'>{card.text}</CardText>

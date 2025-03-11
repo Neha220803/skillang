@@ -6,7 +6,7 @@ import useFormHandler from "../../hooks/useFormHandler";
 import '../../index.css';
 import '../../App.css';
 import '../home/header/home-header.css';
-import nurseHeaderImage from '../../assets/images/nursing/nurseHeaderImg.svg';
+import nurseHeaderImage from '../../assets/images/nursing/nurseHeaderImg.jpg';
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {

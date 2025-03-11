@@ -103,7 +103,7 @@ const HomeHeader2 = () => {
   };
 
   return (
-    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2 bg-primar" id="home">
+    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2 bg-primar">
       <Container className="bg-dar">
         <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> 
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center ">

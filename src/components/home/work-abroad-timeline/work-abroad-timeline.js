@@ -111,7 +111,7 @@ const WorkAbroadJourneyTimeline = () => {
 
   return (
     <section>
-      <Container id="work-abroad-journey">
+      <Container>
         <div className="text-center heading-big-medium">Work Abroad Journey</div>
         <div className="text-center paragraph-big-medium text-content-secondary mb-5">
           Start your work abroad journey in 5 simple steps

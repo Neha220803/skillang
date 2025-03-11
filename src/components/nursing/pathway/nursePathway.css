@@ -10,8 +10,8 @@
 
 @media (max-width: 768px) {
     .nurse-path-card{
-        background-image: url('../../../assets/images/nursing/nursePathMobBg.svg');
-        /* height: 600px  !important; */
+        background-image: url('../../../assets/images/nursing/nursePathMobileBg.jpg');
+        height: 360px  !important;
          background-size: contain !important;
 
     }

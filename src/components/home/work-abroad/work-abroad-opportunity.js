@@ -30,7 +30,7 @@ const WorkAbroadOpportunity = () => {
   ];
 
   return (
-    <section className='d-flex flex-column align-items-center justify-content-center' id="work-abroad">
+    <section className='d-flex flex-column align-items-center justify-content-center'>
       <Container className='p-0 m-0 d-flex flex-column align-items-center justify-content-center bg-primar w-100'>
         <div className='work-abroad-bg-card align-items-center justify-content-center mb-5'>
           <Row className='mb-2 m-0'>
