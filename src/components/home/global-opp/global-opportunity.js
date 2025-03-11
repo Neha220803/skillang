@@ -20,7 +20,9 @@ const GlobalOpportunity = () => {
           </div>
           <div>
             <button className='btn-primary-outline' onClick={() => {
+              navigate('/work-abroad');
               window.scrollTo({
+
                 top: 0,
                 behavior: 'smooth',
               });
