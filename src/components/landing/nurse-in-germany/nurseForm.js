@@ -69,7 +69,7 @@ const NurseForm = () => {
   formData.origin="Nursing Landing Page Form";
 
   return (
-    <header id="nurse-landing">
+    <header className="nurse-landing">
       <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
         <Row className=" justify-content-center align-items-center  ">
           <Col lg={1} md={1} className="d-none d-md-block "></Col>

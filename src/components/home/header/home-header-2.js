@@ -109,12 +109,11 @@ const HomeHeader2 = () => {
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center ">
             <Image src={headerbg} fluid className="w-100" />
           </Col>
-
           <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
             <Container className="d-flex align-items-center justify-content-center flex-column">
-              <div className="form-container m-0">
-                <div className="subheading-small-medium text-center mb-1">Let's Connect to Explore More!</div>
-                <div className="mb-3 text-center paragraph-small-regular text-content-tertiary">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
+              <div className="form-container">
+                <div className="subheading-small-medium text-center">Let's Connect to Explore More!</div>
+                <div className="text-center paragraph-small-regular text-content-tertiary">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                   <Form.Group className="" controlId="formName">
                     <Form.Control type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} required minLength={3} maxLength={40} />
@@ -134,7 +133,7 @@ const HomeHeader2 = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="mb-3" controlId="formLookingFor">
+                  <Form.Group className="" controlId="formLookingFor">
                     <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking For ?</Form.Label>
                     <div className="d-flex gap-2 flex-wrap">
                       {["Nursing", "Study Abroad", "Work Abroad", "Test & Language Prep"].map((option, index) => (
@@ -162,16 +161,16 @@ const HomeHeader2 = () => {
 
                   {/* Conditional Experience Options for Nursing and Work Abroad */}
                   {showExperienceOptions() && (
-                    <Form.Group className="mb-3" controlId="formExperience">
+                    <Form.Group className="" controlId="formExperience">
                       <Form.Label className="text-start paragraph-small-regular text-content-secondary">Experience</Form.Label>
                       <div className="d-flex gap-2 flex-wrap">
-                        {["0-2 Years", "2-5 Years", "5+ Years"].map((option, index) => (
+                        {["0-2 yrs", "2-5 Yrs", "5+ Yrs"].map((option, index) => (
                           <div 
                             key={index} 
                             className={`experience-option ${formData.experience === option ? "selected" : ""}`}
                             onClick={() => handleExperienceSelect(option)}
                           >
-                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                            <label className="w-100 caption-regular text-content-secondary">
                               {option}
                             </label>
                             <input
@@ -191,7 +190,7 @@ const HomeHeader2 = () => {
 
                   {/* Conditional Study Level Options for Study Abroad */}
                   {showStudyLevelOptions() && (
-                    <Form.Group className="mb-3" controlId="formStudyLevel">
+                    <Form.Group className="" controlId="formStudyLevel">
                       <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking for</Form.Label>
                       <div className="d-flex gap-2 flex-wrap">
                         {["Bachelors", "Masters"].map((option, index) => (
@@ -200,7 +199,7 @@ const HomeHeader2 = () => {
                             className={`experience-option ${formData.studyLevel === option ? "selected" : ""}`}
                             onClick={() => handleStudyLevelSelect(option)}
                           >
-                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                            <label className="w-100 caption-regular text-content-secondary">
                               {option}
                             </label>
                             <input
@@ -220,7 +219,7 @@ const HomeHeader2 = () => {
 
                   {/* Conditional Country Options for Study Abroad */}
                   {showCountryOptions() && (
-                    <Form.Group className="mb-3" controlId="formCountry">
+                    <Form.Group className="" controlId="formCountry">
                       <Form.Label className="text-start paragraph-small-regular text-content-secondary">Country</Form.Label>
                       <div className="d-flex gap-2 flex-wrap">
                         {["USA", "UK", "Germany", "Australia", "Europe"].map((option, index) => (
@@ -229,7 +228,7 @@ const HomeHeader2 = () => {
                             className={`experience-option ${formData.country === option ? "selected" : ""}`}
                             onClick={() => handleCountrySelect(option)}
                           >
-                            <label className="w-100 m-0 caption-regular text-content-secondary">
+                            <label className="w-100 caption-regular text-content-secondary">
                               {option}
                             </label>
                             <input
@@ -246,12 +245,12 @@ const HomeHeader2 = () => {
                       </div>
                     </Form.Group>
                   )}
-
+<div style={{marginTop:'12px'}}>
                   {otpVisible && (
                     <Row className="mb-2">
                       <Col lg={8}>
                         <Form.Control type="text" placeholder="Enter OTP - Sent in mail" value={otp} onChange={handleOtpChange} required />
-                        <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
+                        <div className={`text-start bg-primar ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
                           🔔 Resend OTP {resendDisabled ? `(${countdown}s)` : ""}
                         </div>
                       </Col>
@@ -261,8 +260,9 @@ const HomeHeader2 = () => {
                     </Row>
                   )}
 
-                  <button className="btn-primary " type="submit">Book your free consultation</button>
-                  <div className="text-center caption-regular text-content-secondary mt-1">By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
+                  <button className="btn-primary " type="submit" >Book your free consultation</button>
+                  <div className="text-center caption-regular text-content-secondary" style={{marginTop:'8px'}}>By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
+                  </div>
                 </Form>
               </div>
             </Container>
