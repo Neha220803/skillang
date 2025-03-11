@@ -3,7 +3,7 @@ import { Container, Col, Row, Form, Image, Toast, ToastContainer } from "react-b
 import "../../../index.css";
 import "../../../App.css";
 import '../../home/header/home-header.css';
-import headerbg from "../../../assets/images/lang-test/Lheader-bg.svg";
+import headerbg from "../../../assets/images/lang-test/Lheader-bg.jpg";
 import successSound from '../../../assets/sounds/success.mp3';
 import errorSound from '../../../assets/sounds/rejected.mp3';
 import useFormHandler from "../../../hooks/useFormHandler";
@@ -76,16 +76,17 @@ const LangTestHeader = () => {
   return (
     <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2">
       <Container className="">
-        <Row className="">
+        <Row className="pt-5">
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center p-0">
-            <Image src={headerbg} fluid className="w-100 px-lg-5 pt-5 mt-5 pt-lg-0 mt-lg-0" />
+            <Image src={headerbg} fluid className="w-100" />
           </Col>
 
-          <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
-            <Container className="d-flex align-items-center justify-content-center flex-column">
-              <div className="form-container m-0">
-                <div className="subheading-small-medium text-center mb-1">Let's Connect to Explore More!</div>
-                <div className="mb-3 text-center paragraph-small-regular text-content-tertiary">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
+          <Col lg={1} className="d-none d-md-block"></Col>
+                    <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
+                      <Container className="d-flex align-items-center justify-content-center flex-column">
+                        <div className="form-container">
+                          <div className="subheading-small-medium text-center" style={{marginBottom:'8px'}}>Let's Connect to Explore More!</div>
+                          <div className="text-center paragraph-small-regular text-content-tertiary mb-3">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                   <Form.Group className="" controlId="formName">
                     <Form.Control type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} required minLength={3} maxLength={40} />
@@ -105,7 +106,7 @@ const LangTestHeader = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="mb-3" controlId="formLookingFor">
+                  <Form.Group className="" controlId="formLookingFor">
                     <Form.Label className="text-start paragraph-small-regular text-content-secondary">Looking For ?</Form.Label>
                     <div className="d-flex gap-2 flex-wrap">
                       {["IELTS", "TOEFL", "GRE", "GMAT", "PTE", "German language", "Others"].map((option, index) => (
@@ -130,7 +131,7 @@ const LangTestHeader = () => {
                       ))}
                     </div>
                   </Form.Group>
-
+<div style={{marginTop:'12px'}}></div>
                   {otpVisible && (
                     <Row className="">
                       <Col lg={8}>
@@ -146,7 +147,7 @@ const LangTestHeader = () => {
                   )}
 
                   <button className="btn-primary " type="submit">Book your free consultation</button>
-                  <div className="text-center caption-regular text-content-secondary mt-1">By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
+                 <div className="text-center caption-regular text-content-secondary" style={{marginTop:'8px'}}>By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
                 </Form>
               </div>
             </Container>

@@ -19,7 +19,6 @@ function Layout() {
 
   return (
     <>
-   
       {/* Show Navbar only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <CustomNavbar />}
       <Routes>

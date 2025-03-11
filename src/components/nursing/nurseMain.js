@@ -76,40 +76,41 @@ const NurseMainHeader = () => {
 formData.lookingFor="Study Aborad"; 
 formData.origin="Nursing Page Form";
   return (
-    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2">
-      <Container className="my-lg-0">
-        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> {/* Remove gutter spacing */}
-  <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center  p-0">
-    <Image src={nurseHeaderImage} fluid className="w-100 px-lg-2" />
+    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2 bg-primar">
+          <Container className="bg-dar">
+            <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5"> 
+              <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center ">
+    <Image src={nurseHeaderImage} fluid className="w-100" />
   </Col>
-          <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-center justify-content-center mt-3 p-0 mt-lg-0">
-            <Container className="d-flex align-items-start justify-content-center flex-column p-lg-3 p-0">
+  <Col lg={1} className="d-none d-md-block"></Col>
+           <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
+            <Container className="d-flex align-items-center justify-content-center flex-column">
               <div className="form-container m-0">
-                <h3>Let's Connect to Explore More!</h3>
-                <div className="mb-3">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                  <Form.Group className="mb-3" controlId="formName">
-                    <Form.Control type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} required minLength={3} maxLength={40} />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="formEmail">
-                    <Form.Control type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />
-                  </Form.Group>
-                  <Row>
-                    <Col md={6} className="mb-3">
-                      <Form.Group controlId="formNumber">
-                        <Form.Control type="tel" placeholder="Mobile" name="phone" value={formData.phone} onChange={handleInputChange} required pattern="[0-9]{10}" />
-                      </Form.Group>
-                    </Col>
-                    <Col md={6} className="mb-3">
-                      <Form.Group controlId="formpincode">
-                        <Form.Control type="tel" placeholder="Pin Code" name="pincode" value={formData.pincode} onChange={handleInputChange} required pattern="[0-9]{6}" />
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                  <Form.Group className="mb-3 text-start">
-                                        <Form.Label>Select Experience</Form.Label>
+                <div className="subheading-small-medium text-center" style={{marginBottom:'8px'}}>Let's Connect to Explore More!</div>
+                                <div className="text-center paragraph-small-regular text-content-tertiary mb-3">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
+                                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                  <Form.Group className="" controlId="formName">
+                                    <Form.Control type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} required minLength={3} maxLength={40} />
+                                  </Form.Group>
+                                  <Form.Group className="" controlId="formEmail">
+                                    <Form.Control type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />
+                                  </Form.Group>
+                                  <Row>
+                                    <Col md={6} className="">
+                                      <Form.Group controlId="formNumber">
+                                        <Form.Control type="tel" placeholder="Mobile" name="phone" value={formData.phone} onChange={handleInputChange} required pattern="[0-9]{10}" />
+                                      </Form.Group>
+                                    </Col>
+                                    <Col md={6} className="">
+                                      <Form.Group controlId="formpincode">
+                                        <Form.Control type="tel" placeholder="Pin Code" name="pincode" value={formData.pincode} onChange={handleInputChange} required pattern="[0-9]{6}" />
+                                      </Form.Group>
+                                    </Col>
+                                  </Row>
+                  {/* <Form.Group className=" text-start">
+                                        <Form.Label className="text-start paragraph-small-regular text-content-secondary">Select Experience</Form.Label>
                                         <div className="d-flex gap-2 flex-wrap">
-                                          {["Student", "Freshers", "0-1 Years", "1-3 Years", "3-5 Years", "5+ Years"].map((option, index) => (
+                                          {["Student", "0-1 Years", "1-3 Years", "3-5 Years", "5+ Years"].map((option, index) => (
                                             <div key={index} className={`experience-option ${formData.experience === option ? "selected" : ""}`}>
                                               <input
                                                 type="radio"
@@ -126,10 +127,36 @@ formData.origin="Nursing Page Form";
                                             </div>
                                           ))}
                                         </div>
-                                      </Form.Group>
+                                      </Form.Group> */}
 
+                                      <Form.Group className="" controlId="formExperience">
+                                                            <Form.Label className="text-start paragraph-small-regular text-content-secondary">Select Experience</Form.Label>
+                                                            <div className="d-flex gap-2 flex-wrap">
+                                                              {["Student", "0-1 Years", "1-3 Years", "3-5 Years", "5+ Years"].map((option, index) => (
+                                                                <div 
+                                                                  key={index} 
+                                                                  className={`experience-option ${formData.experience === option ? "selected" : ""}`}
+                                                                  onClick={() => handleExperienceSelect(option)}
+                                                                >
+                                                                  <label className="w-100 caption-regular text-content-secondary">
+                                                                    {option}
+                                                                  </label>
+                                                                  <input
+                                                                    type="radio"
+                                                                    id={`experience-${index}`}
+                                                                    name="experience"
+                                                                    value={option}
+                                                                    checked={formData.experience === option}
+                                                                    onChange={() => {}} // Handled by the onClick on parent div
+                                                                    hidden
+                                                                  />
+                                                                </div>
+                                                              ))}
+                                                            </div>
+                                                          </Form.Group>
+<div style={{marginTop:'12px'}}></div>
                   {otpVisible && (
-                    <Row className="mb-3">
+                    <Row className="">
                       <Col lg={8}>
                         <Form.Control type="text" placeholder="Enter OTP - Sent in mail" value={otp} onChange={handleOtpChange} required />
                         <div className={`text-start ${resendDisabled ? "resend-disabled" : "resend-enabled"}`} onClick={!resendDisabled ? handleResendOtp : undefined}>
@@ -142,8 +169,8 @@ formData.origin="Nursing Page Form";
                     </Row>
                   )}
 
-                  <button className="btn-primary mt-3" type="submit">Book your free consultation</button>
-                  <div className="text-center">By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
+                  <button className="btn-primary" type="submit">Book your free consultation</button>
+                   <div className="text-center caption-regular text-content-secondary" style={{marginTop:'8px'}}>By submitting this form, you agree to the Terms of Use and Privacy Policy</div>
                 </Form>
               </div>
             </Container>

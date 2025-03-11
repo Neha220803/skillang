@@ -112,14 +112,14 @@ const WorkAbroadJourneyTimeline = () => {
     <section>
       <Container>
         <div className="text-center heading-big-medium">Work Abroad Journey</div>
-        <div className="text-center paragraph-big-medium text-content-secondary mb-5">
+        <div className="text-center paragraph-big-medium text-content-secondary mb-md-5">
           Start your work abroad journey in 5 simple steps
         </div>
 
-        <Timeline position={isMobile ? "right" : "alternate"}>
+        <Timeline position={isMobile ? "right" : "alternate"} className="p-0 m-0 bg-primar">
           {timelineData.map((item, index) => (
-            <TimelineItem key={index} ref={(el) => (timelineRefs.current[index] = el)} className="py-2">
-              <TimelineOppositeContent style={{ flex: isMobile ? "0" : "1" }}>
+            <TimelineItem key={index} ref={(el) => (timelineRefs.current[index] = el)} className="py-2 p-0 m-0 bg-dar">
+              <TimelineOppositeContent style={{ flex: isMobile ? "0" : "1" }} className="">
                 <div className="d-none d-md-block">
                   <Image fluid className="custom-image" src={item.image} alt={item.title} />
                 </div>

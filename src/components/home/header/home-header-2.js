@@ -109,11 +109,12 @@ const HomeHeader2 = () => {
           <Col lg={7} md={5} sm={12} xs={12} className="d-flex flex-column align-items-start justify-content-center ">
             <Image src={headerbg} fluid className="w-100" />
           </Col>
-          <Col lg={5} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
+          <Col lg={1} className="d-none d-md-block"></Col>
+          <Col lg={4} md={6} sm={12} xs={12} className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0">
             <Container className="d-flex align-items-center justify-content-center flex-column">
               <div className="form-container">
-                <div className="subheading-small-medium text-center">Let's Connect to Explore More!</div>
-                <div className="text-center paragraph-small-regular text-content-tertiary">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
+                <div className="subheading-small-medium text-center" style={{marginBottom:'8px'}}>Let's Connect to Explore More!</div>
+                <div className="text-center paragraph-small-regular text-content-tertiary mb-3">Looking for Work Abroad, Study Abroad, Language & Test preparation?</div>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                   <Form.Group className="" controlId="formName">
                     <Form.Control type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} required minLength={3} maxLength={40} />
