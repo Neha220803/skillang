@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/skillang/static/css/main.83e7391e.css",
-    "main.js": "/skillang/static/js/main.5987d158.js",
-    "static/media/Lheader-bg.svg": "/skillang/static/media/Lheader-bg.3552d3b1ed46ab35db8b05114da72c42.svg",
+    "main.css": "/skillang/static/css/main.69d3fb60.css",
+    "main.js": "/skillang/static/js/main.9d268f4b.js",
     "static/media/loan-img.jpg": "/skillang/static/media/loan-img.528bace046fb62a01637.jpg",
     "static/media/nurseService.jpg": "/skillang/static/media/nurseService.60b6e8ee6ac644b019ae.jpg",
     "static/media/header-bg1.jpg": "/skillang/static/media/header-bg1.83a74db320be64ed7820.jpg",
     "static/media/resi.jpg": "/skillang/static/media/resi.a3baf4f2507265c7a705.jpg",
+    "static/media/workAbroadMainBg.jpg": "/skillang/static/media/workAbroadMainBg.9bbb5a546e375df830c3.jpg",
+    "static/media/Lheader-bg.jpg": "/skillang/static/media/Lheader-bg.531595d7191c8b98b169.jpg",
     "static/media/opsLeftImg.jpg": "/skillang/static/media/opsLeftImg.79b72a2549bb955a123d.jpg",
     "static/media/nurseHeaderImg.jpg": "/skillang/static/media/nurseHeaderImg.e17c58de4ddea7d03d5f.jpg",
     "static/media/reqProcess.jpg": "/skillang/static/media/reqProcess.ee7b4f4c70de2e5d6605.jpg",
@@ -32,7 +33,6 @@
     "static/media/workJoureny5.jpg": "/skillang/static/media/workJoureny5.da05d7717d7c2962e825.jpg",
     "static/media/nType3.jpg": "/skillang/static/media/nType3.146b52855e785d899c9d.jpg",
     "static/media/headerimagebg.png": "/skillang/static/media/headerimagebg.9119b3a563fa542dab51.png",
-    "static/media/workAbroadMainBg.png": "/skillang/static/media/workAbroadMainBg.cbf2e450a1b48deba5ec.png",
     "static/media/s-journey-2.jpg": "/skillang/static/media/s-journey-2.7667b697f2307c490da6.jpg",
     "static/media/nurseChallenge3.jpg": "/skillang/static/media/nurseChallenge3.bf593cb9a51aefeacd82.jpg",
     "static/media/nType2.jpg": "/skillang/static/media/nType2.21441bae9ee81d6f2fd6.jpg",
@@ -174,11 +174,11 @@
     "static/media/whyus-bg.svg": "/skillang/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "static/media/france.svg": "/skillang/static/media/france.31c6705435520b324774e8c21c19e4ec.svg",
     "static/media/ireland.svg": "/skillang/static/media/ireland.db0c2bf6229fc88f0613a401b9d4ae9c.svg",
-    "main.83e7391e.css.map": "/skillang/static/css/main.83e7391e.css.map",
-    "main.5987d158.js.map": "/skillang/static/js/main.5987d158.js.map"
+    "main.69d3fb60.css.map": "/skillang/static/css/main.69d3fb60.css.map",
+    "main.9d268f4b.js.map": "/skillang/static/js/main.9d268f4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.83e7391e.css",
-    "static/js/main.5987d158.js"
+    "static/css/main.69d3fb60.css",
+    "static/js/main.9d268f4b.js"
   ]
 }
