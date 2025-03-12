@@ -120,7 +120,7 @@ const OurServices = () => {
                 </Card>
               ))}
             </div>
-            
+            </div>
             {/* Toggle Button - Only visible on mobile */}
             <div className="text-center d-block d-md-none mt-1">
               <button className="btn-secondary-outline" onClick={() => setShowAll(!showAll)}>
@@ -135,7 +135,7 @@ const OurServices = () => {
                 )}
               </button>
             </div>
-          </div>
+          
         </Col>
       </Row>
     </Container>

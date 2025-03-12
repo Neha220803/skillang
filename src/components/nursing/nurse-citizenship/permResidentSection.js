@@ -19,10 +19,10 @@ const PermResidentSection = () => {
           <Col lg={6} className='d-block d-md-none'>
             <Image fluid src={nurseResi} alt="Permanent Residency" style={{borderRadius:'12px'}} />
           </Col>
-          <Col lg={6} sm={12} xs={12}>
+          <Col lg={5} sm={12} xs={12}>
             <div className="heading-big-medium text-content-primaryInverse">Permanent Residency and Citizenship Pathways</div>
           </Col>
-          <Col lg={6} className='d-none d-md-block'>
+          <Col lg={7} className='d-none d-md-block'>
             <Image fluid src={nurseResi} alt="Permanent Residency" className="w-100 h-auto" style={{borderRadius:'24px'}}  />
           </Col>
         </Row>

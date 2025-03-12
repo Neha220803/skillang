@@ -20,7 +20,7 @@ const BookShelf = () => {
   ];
 
   return (
-    <div className="bookshelf-container">
+    <div className="bookshelf-container m-0">
       {rectangles.map((rectangle, index) => (
         <div
           key={index}

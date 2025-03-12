@@ -46,7 +46,7 @@ const NursingPosition = () => {
         {/* Cards Section */}
         <div
           ref={cardsRef}
-          className="nurse-cards-container row-equal-height m-0"
+          className="nurse-cards-container  row-equal-height m-0"
           style={{
             maxHeight: screenWidth < 768 ? maxHeight : "none",
             transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none",
@@ -56,7 +56,9 @@ const NursingPosition = () => {
           <Row>
             {nursingPositions.map((position, index) => (
               <Col key={index} className="px-3 mb-4" lg={4} md={6} sm={12} xs={12}>
-                <Card className={`nurse-posi-card border-0 h-100 ${showAll || screenWidth >= 768 ? "visible" : index < 3 ? "visible" : "hidden"}`}>
+                
+                <Card className={`nurse-posi-card h-100 ${showAll || screenWidth >= 768 ? "visible" : index < 3 ? "visible" : "hidden"}`}>
+                  <div className="tab-circle"></div>
                   <CardBody className="d-flex flex-column">
                     <div className="subheading-small-medium text-content-secondary mb-1">{position.title}</div>
                     <div className="paragraph-small-medium text-content-secondary">{position.text}</div>

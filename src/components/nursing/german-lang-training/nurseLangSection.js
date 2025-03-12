@@ -13,7 +13,7 @@ const NurseLangSection = () => {
         from application to job placement.
       </div>
       <BookShelf />
-      <Image fluid src={wood} alt="" className="d-none d-md-block"/>
+      <Image fluid src={wood} alt="" className="d-none d-md-block w-100"/>
     </div>
   );
 };

@@ -18,10 +18,11 @@ const NurseEligibility = () => {
   return (
     <div className='px-lg-5 px-2'>
     <Container>
-      <Row className='mt-lg-0 my-5'>
-        <div className='heading-small-medium text-content-primary text-center mb-2'>
+      <Row className='mt-lg-0 mb-5 text-lg-center'>
+        <div className='heading-big-medium text-content-primary text-lg-center mb-2'>
           Eligibility
         </div>
+        <div className='paragraph-big-medium text-content-secondary'>To work as a nurse in Germany, you need</div>
         {/* <div className='paragraph-big-medium text-content-secondary text-center'>
           To work as a nurse in Germany, you need
         </div> */}

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import walletIcon from '../../../assets/icons/nurse/carAdv1.svg';
+import walletIcon1 from '../../../assets/icons/nurse/carAdv1.svg';
+import walletIcon3 from '../../../assets/icons/nurse/carAdv3.svg'
+import walletIcon2 from '../../../assets/icons/nurse/carAdv2.svg'
 import './nurseCareerAdvSection.css';
 
 const NurseCareerAdvSection = () => {
   return (
-    <div className='px-lg-5  d-flex align-items-center justify-content-center w-100'>
+    <div className='d-flex align-items-center justify-content-center w-100'>
       <Container className='w-100 d-flex justify-content-center align-items-center'>
-       
         <Row  className='nurseCareerAdvbg py-4 ' >
              <Row>
             <div className='heading-big-medium mb-4'>
@@ -16,7 +17,7 @@ const NurseCareerAdvSection = () => {
             </Row>
           
             <Col lg={3} sm={12} xs={12} className='d-flex flex-row flex-md-column text-start justify-content-start align-items-start gap-3 mb-3'>
-            <img src={walletIcon} alt="" />
+            <img src={walletIcon1} alt="" />
             <div>
               <div className='subheading-small-medium text-content-secondary'>Higher Positions</div>
           <div  className=' align-items-end'>
@@ -31,7 +32,7 @@ const NurseCareerAdvSection = () => {
           
           </Col>
           <Col lg={3} sm={12} xs={12} className='d-flex flex-row flex-md-column text-start justify-content-start align-items-start gap-3 mb-3'>
-          <img src={walletIcon} alt="" />
+          <img src={walletIcon2} alt="" />
           <div>
 
 
@@ -44,7 +45,7 @@ const NurseCareerAdvSection = () => {
           </Col>
          
           <Col lg={3} sm={12} xs={12} className='d-flex flex-row flex-md-column text-start justify-content-start align-items-start gap-3 mb-3'>
-          <img src={walletIcon} alt="" />
+          <img src={walletIcon3} alt="" />
           <div>
           <div className='subheading-small-medium text-content-secondary'> Ongoing Training </div>
           <div  className=' align-items-end'>

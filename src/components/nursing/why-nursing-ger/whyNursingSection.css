@@ -1,8 +1,7 @@
 .why-nurse-cards-container {
     overflow: hidden;
     transition: max-height 0.8s ease-in-out;
-    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
-    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    
 }
 
 .why-nurse-cards-container.expanded {
@@ -39,15 +38,18 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.why-nurse-card:hover .why-nurse-card-img {
-    transform: scale(1.1);
-}
-
-.why-nurse-card:hover{
-    cursor:pointer !important;
+.why-nurse-card:hover  {
+    transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
+
+    .why-nurse-cards-container {
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+}
     .why-nurse-card-img {
         width: 48px !important;
         height: auto !important;

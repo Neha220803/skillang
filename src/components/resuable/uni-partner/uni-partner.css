@@ -115,3 +115,23 @@
     transform: translate(calc(-50% - 0.5rem));
   }
 }
+
+@media (max-width: 768px) {
+  .scroller-img{
+    height: 45px !important;
+    width: fit-content !important;
+  margin-right: 20px !important;
+  background-color: white !important;
+  padding: 10px 16px !important;
+  border-radius: 16px !important;
+  }
+
+  .uni-partner-bg{
+    background-size: cover !important;
+    background-position: top left !important;
+    width: 100% !important;
+    height: 250px!important;
+    padding: 50px 0px !important;
+  }
+
+}

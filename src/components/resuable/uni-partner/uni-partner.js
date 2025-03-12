@@ -17,7 +17,7 @@ const UniPartner = () => {
             </div>
           </Col>
           <Col lg={4} md={4} sm={12} xs={12} className='d-flex flex-column align-items-start justify-content-start text-center text-lg-start'>
-            <div className='heading-big-medium'>Our Partnered Universities</div>
+            <div className='heading-big-medium  w-100'>Our Partnered Universities</div>
             <div className='paragraph-big-medium text-content-secondary'>Collaborating with Top Institutions to Bring You World-Class Education Opportunities.</div>
             <Row className='w-100 m-0 p-0 py-4'>
               <Col lg={6} sm={6} xs={6} className='p-0 pe-1'>

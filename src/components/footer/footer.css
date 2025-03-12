@@ -1,6 +1,8 @@
 /* Footer.css */
 .footer-wrapper {
   background-color: #6f42c1;
+  /* border-top-left-radius: 24px !important ; */
+  /* border-top-right-radius: 24px !important ; */
   padding: 40px 0;
   /* color: white; */
 }

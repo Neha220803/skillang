@@ -1,7 +1,9 @@
 .nurse-service-img{
     width: 100% !important;
-    height: auto !important;
+    height: 250px !important;
     border-radius: 24px !important;
+    object-fit: cover !important;
+    object-position: bottom !important;
 }
 
 .nurse-serv-card{
@@ -20,11 +22,9 @@
     overflow-y: auto;
     padding-right: 10px;
     position: relative;
-    
-    /* Fade effect for bottom of container */
-    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
-    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
-    
+ /* Fade effect for bottom of container */
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%) !important;
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%) !important;
     /* Hide scrollbar by default */
     scrollbar-width: none !important;
 }
@@ -33,6 +33,11 @@
 .services-scrollable-container.user-scrolling {
     width: 0px !important;
     scrollbar-width: none !important;
+}
+
+.services-container{
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* For mobile view */
@@ -72,5 +77,7 @@
     .nurse-service-img{
         height: 206px !important;
         border-radius: 12px !important;
+        object-fit: cover !important;
+        object-position: top !important;
     }
 }

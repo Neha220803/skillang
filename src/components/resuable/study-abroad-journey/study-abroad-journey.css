@@ -4,17 +4,22 @@
   background-repeat: no-repeat;
   background-position: top !important;
   border-radius: 24px !important;
-  padding: 16px 0px 16px 80px !important;
+  /* padding: 16px 0px 16px 80px !important; */
+  padding: 24px 0px 24px 24px !important;
+  
 }
 
 /* Scrollable Row */
 .scrollable-container {
   display: flex;
-  scroll-snap-type: x mandatory !important;
+  /* scroll-snap-type: x mandatory !important; */
   gap: 16px !important;
   overflow-x: auto !important;
   white-space: nowrap !important;
   margin: 0 !important;
+  /* margin-left: 80px !important; */
+  /* background-color: pink; */
+  
   scrollbar-width: none !important;
 }
 
@@ -22,6 +27,9 @@
   scroll-snap-align: start;
   min-width: 300px;
   display: flex !important;
+  /* background-color: pink; */
+  
+  /* scroll-margin-left: 80px !important; */
 }
 
 .custom-card {
@@ -36,6 +44,10 @@
   white-space: normal !important;
   flex: 1 !important; /* Make card take full height of container */
 }
+
+/* #study-abroad-card1{
+  margin-left: 50px !important;
+} */
 
 /* Background Image for Cards */
 .card-image-wrapper {
