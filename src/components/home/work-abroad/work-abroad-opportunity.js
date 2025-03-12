@@ -31,7 +31,7 @@ const primCardData = [
     color: "#FFFFFF",
     btnType: "btn-secondary-outline",
     colSize: 3,
-    desc: "We connect skilled IT professionals with leading global companies. From software engineers to tech specialists, we match talent with the right opportunities seamlessly and efficiently",
+    desc: "We connect world-class talent with leading hotels, resorts, and restaurants abroad. From chefs to managers and all other positions.",
     id: "wac2",
     link: "/work-abroad" // Unique route
   },
@@ -41,7 +41,7 @@ const primCardData = [
     color: "#FFFFFF",
     btnType: "btn-secondary-outline",
     colSize: 3,
-    desc: 'We connect world-class talent with leading hotels, resorts, and restaurants abroad. From chefs to managers and all other positions.',
+    desc: 'We connect skilled IT professionals with leading global companies. From software engineers to tech specialists.',
     id: "wac3",
     link: "/work-abroad" // Unique route
   }

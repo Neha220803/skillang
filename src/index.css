@@ -5,6 +5,8 @@
   --primary-variant: #360FA3 !important; /* Primary variant - Red-700 */
   --secondary-color: #1A202C; /* Secondary - Grey-900 */
   --secondary-variant: #4A5568; /* Secondary variant - Grey-700 */
+
+  --primary-accent: #E86E39 !important;;
   
   --background-primary: #FFFFFF; /* Background Primary - G-100 */
   --background-secondary: #FAFBFC; /* Background Secondary - G-200 */

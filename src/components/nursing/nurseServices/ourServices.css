@@ -3,7 +3,7 @@
     height: 250px !important;
     border-radius: 24px !important;
     object-fit: cover !important;
-    object-position: bottom !important;
+    /* object-position: bottom !important; */
 }
 
 .nurse-serv-card{
@@ -36,12 +36,9 @@
 }
 
 .services-container{
-    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
-    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
-}
+    /* -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%); */
 
-/* For mobile view */
-.services-container {
     padding-right: 10px;
     position: relative;
 }
@@ -69,8 +66,11 @@
     width: 100%;
 }
 
-.services-content.expanded {
+.services-content.expanded .services-container {
     width: 100%;
+    background-color: pink;
+     -webkit-mask-image: none !important;
+    mask-image: none !important;
 }
 
 @media (max-width: 768px) {

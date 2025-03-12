@@ -46,7 +46,7 @@ const NursingPosition = () => {
         {/* Cards Section */}
         <div
           ref={cardsRef}
-          className="nurse-cards-container  row-equal-height m-0"
+          className="nurse-cards-container row-equal-height m-0"
           style={{
             maxHeight: screenWidth < 768 ? maxHeight : "none",
             transition: screenWidth < 768 ? "max-height 0.4s ease-in-out" : "none",
