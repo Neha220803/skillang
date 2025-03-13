@@ -7,8 +7,8 @@
   /* color: white; */
 }
 
-#footer-card-1{
-  background-image: url('../../assets/images/home/footer-bg.png');
+#footer-card-1 {
+  background-image: url("../../assets/images/home/footer-bg.png");
   background-repeat: no-repeat !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -36,8 +36,6 @@
   color: #212529;
   margin-bottom: 0;
 }
-
-
 
 .skillang-logo {
   /* width: 25px; */
@@ -97,6 +95,7 @@
 
 .social-icons a:hover {
   color: #6f42c1;
+  /* transform: scale(1.02); */
 }
 
 .contact-phone {
@@ -151,16 +150,12 @@
 }
 
 @media (max-width: 575.98px) {
-  
-  .banner-content{
-      margin-top: 16px !important;
-            margin-left: 16px !important;
-
+  .banner-content {
+    margin-top: 16px !important;
+    margin-left: 16px !important;
   }
-  
+
   .footer-wrapper {
     padding: 20px 0;
   }
-
-
 }
