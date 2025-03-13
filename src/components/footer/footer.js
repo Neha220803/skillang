@@ -66,7 +66,7 @@ const Footer = () => {
           <Col lg={8} className="pe-lg-2 mb-4 mb-lg-0">
             <div className="footer-card">
               <Row>
-                <Col xs={6} md={3}>
+                <Col xs={6} md={4}>
                   <ul className="footer-links">
                     <li>
                       <a href="/">
@@ -85,7 +85,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </Col>
-                <Col xs={6} md={3}>
+                <Col xs={6} md={4}>
                   <ul className="footer-links">
                     <li>
                       <a href="/study-abroad">
@@ -104,7 +104,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </Col>
-                <Col xs={6} md={3} className="mt-4 mt-md-0 d-none d-md-block">
+                {/* <Col xs={6} md={3} className="mt-4 mt-md-0 d-none d-md-block">
                   <ul className="footer-links">
                     <li>
                       <a href="/">
@@ -122,17 +122,22 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
-                </Col>
-                <Col xs={6} md={3} className="mt-4 mt-md-0 d-none d-md-block">
+                </Col> */}
+                <Col xs={6} md={4} className="mt-4 mt-md-0 d-none d-md-block">
                   <ul className="footer-links">
                     <li>
-                      <a href="/">
+                      <a href="/terms-of-use">
                         <div className="caption-medium">Terms of Use</div>
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="/privacy-policy">
                         <div className="caption-medium">Privacy Policy</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tel:+917200630336">
+                        <div className="caption-medium">Contact Us</div>
                       </a>
                     </li>
                   </ul>
