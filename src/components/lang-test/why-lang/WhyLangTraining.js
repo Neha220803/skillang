@@ -47,9 +47,9 @@ const WhyLangTraining = () => {
             md={6}
             sm={12}
             xs={12}
-            className="d-flex flex-column justify-content-center  align-items-center"
+            className="d-flex flex-column justify-content-center align-items-stretch"
           >
-            <Row className="">
+            <Row className="" style={{ marginBottom: "24px" }}>
               <div className="heading-big-medium text-content-primary">
                 Why Language Training Matters?
               </div>
@@ -91,7 +91,7 @@ const WhyLangTraining = () => {
           <Col
             lg={6}
             md={6}
-            className="w-50 bg-primar d-flex justify-content-center mx-auto align-items-center d-none d-md-block"
+            className="d-flex justify-content-center align-items-center d-none d-md-block overflow-hidden  p-0"
           >
             <Image
               src={whyLearnImg}
