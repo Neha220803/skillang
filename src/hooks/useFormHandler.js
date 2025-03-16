@@ -20,7 +20,7 @@ const useFormHandler = () => {
     lookingFor: "",
     experience: "",
     county: "",
-    origin: ""
+    origin: "",
   });
 
   // Countdown logic for Resend OTP
@@ -105,7 +105,10 @@ const useFormHandler = () => {
 
   const submitInquiry = async () => {
     try {
-      const response = await axios.post("https://skillang.com/api/submit-to-google-sheets", formData);
+      const response = await axios.post(
+        "https://skillang.com/api/submit-to-google-sheets",
+        formData
+      );
 
       setStatus(response.data.message || "✅ Inquiry submitted successfully!");
       setToastVariant("success");
@@ -119,7 +122,7 @@ const useFormHandler = () => {
         lookingFor: "",
         experience: "",
         county: "",
-        origin: ""
+        origin: "",
       });
 
       setOtp("");
@@ -152,6 +155,7 @@ const useFormHandler = () => {
         setResendDisabled(true);
         setCountdown(30);
         setIsOtpSent(true);
+
         return;
       }
 

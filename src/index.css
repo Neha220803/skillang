@@ -273,7 +273,7 @@
 html,
 body {
   overflow-x: hidden !important;
-  overflow-y: scroll !important;
+  /* overflow-y: scroll !important; */
   scroll-behavior: smooth !important;
 }
 
@@ -285,6 +285,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 0 !important;
 }
+
+/* .container {
+  max-width: none !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+} */
 
 .btn-primary {
   background-color: #e86e39 !important;
