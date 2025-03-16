@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../../App.css";
 import "./test-prep.css";
 import { useNavigate } from "react-router-dom";
+import ConsultationModal from "../../resuable/forms/calendly/LeadFormCalendly";
 
 const testPrepCourses = [
   ["IELTS", "German Language", true], // true means "Best Seller"
@@ -14,6 +15,10 @@ const testPrepCourses = [
 
 const TestPrep = () => {
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
   return (
     <div>
       <Container className="test-lag-bg d-flex flex-column align-items-center justify-content-center">
@@ -29,7 +34,8 @@ const TestPrep = () => {
             <button
               className="btn-secondary"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                // window.scrollTo({ top: 0, behavior: "smooth" });
+                handleShow();
               }}
             >
               Schedule Demo
@@ -87,6 +93,7 @@ const TestPrep = () => {
           </Col>
         </Row>
       </Container>
+      <ConsultationModal show={showModal} handleClose={handleClose} />
     </div>
   );
 };

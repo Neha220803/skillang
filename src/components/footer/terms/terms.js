@@ -238,7 +238,7 @@ const TermsPage = () => {
                 href="mailto:support@skillang.com"
                 className="text-content-primary-accent hover:text-primary-variant"
               >
-                skillang7@gmail.com
+                support@skillang.com
               </a>
             </p>
             <p className="paragraph-small-regular text-content-secondary mb-2">

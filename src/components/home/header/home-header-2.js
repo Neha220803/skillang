@@ -169,6 +169,8 @@ const HomeHeader2 = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+                      minLength={6}
+                      maxLength={50}
                     />
                   </Form.Group>
                   <Row>

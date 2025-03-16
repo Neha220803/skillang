@@ -280,10 +280,10 @@ const PrivacyPolicyPage = () => {
           <p className="paragraph-small-regular text-content-secondary mb-4">
             To exercise these rights, please contact us at{" "}
             <a
-              href="mailto:skillang7@gmail.com"
+              href="mailto:support@skillang.com"
               className="text-content-primary-accent hover:text-primary-variant"
             >
-              skillang7@gmail.com
+              support@skillang.com
             </a>
             .
           </p>

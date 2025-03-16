@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Modal, Row, Col, Form, Button, ToastContainer } from "react-bootstrap";
-import "./LeadFormCalendly.css";
-import consultationImage from "../../../../assets/images/reusable/consult-popup.jpg";
+import {
+  Modal,
+  Container,
+  Row,
+  Col,
+  Form,
+  Button,
+  Toast,
+  ToastContainer,
+} from "react-bootstrap";
+import consultationImage from "../../../../assets/images/reusable/partner-popup.jpg";
 import useFormHandler from "../../../../hooks/useFormHandler";
 import ToastMessage from "../../../../utils/toast";
 
-const ConsultationModal = ({ show, handleClose }) => {
+const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
   const {
-    formData,
+    partnerFormData,
     otp,
     otpVisible,
     showToast,
@@ -16,56 +24,32 @@ const ConsultationModal = ({ show, handleClose }) => {
     resendDisabled,
     countdown,
     isOtpVerified,
-    setFormData,
     isOtpSent,
     validated,
-    handleInputChange,
-    handleOptionSelect,
-    handleSubmit,
+    // Use the specific partner submission handler instead of the generic one
+    handlePartnerSubmit,
+    handlePartnerInputChange,
     handleOtpChange,
     handleVerifyOtp,
     handleResendOtp,
     setOtp,
     setShowToast,
+    setFormType,
   } = useFormHandler();
 
-  // State to track current step (1: form, 2: OTP verification)
   const [currentStep, setCurrentStep] = useState(1);
-  const [formIsValid, setFormIsValid] = useState(false);
 
-  // Add this useEffect to change steps after form validation
+  // Set the form type to 'partner' on component mount
   useEffect(() => {
-    if (formIsValid && isOtpSent) {
+    setFormType("partner");
+  }, [setFormType]);
+
+  // Move to step 2 when OTP is sent
+  useEffect(() => {
+    if (isOtpSent) {
       setCurrentStep(2);
     }
-  }, [formIsValid, isOtpSent]);
-
-  // Modify your form submission handling
-  const handleModalFormSubmit = (e) => {
-    // Call the original handleSubmit from the hook
-    handleSubmit(e);
-
-    // Check if form is valid
-    if (
-      formData.name &&
-      formData.phone &&
-      formData.email &&
-      formData.lookingFor
-    ) {
-      setFormIsValid(true);
-    }
-  };
-
-  // State for OTP inputs
-
-  // Remove the handleChange function and use handleInputChange from the hook
-
-  // const handleLookingForSelect = (option) => {
-  //   setFormData({
-  //     ...formData,
-  //     lookingFor: option,
-  //   });
-  // };
+  }, [isOtpSent]);
 
   return (
     <Modal
@@ -112,89 +96,86 @@ const ConsultationModal = ({ show, handleClose }) => {
                   Tell us more about yourself
                 </div>
 
+                {/* Use handlePartnerSubmit directly instead of a wrapper function */}
                 <Form
                   noValidate
                   validated={validated}
-                  onSubmit={handleModalFormSubmit}
+                  onSubmit={handlePartnerSubmit}
                 >
-                  <Form.Group className="" controlId="formName">
+                  <Form.Group className="mb-3" controlId="formName">
                     <Form.Control
                       type="text"
                       placeholder="Name"
                       name="name"
                       className="border-0"
-                      value={formData.name}
-                      onChange={handleInputChange}
+                      value={partnerFormData.name}
+                      onChange={handlePartnerInputChange}
                       required
                       minLength={3}
                       maxLength={40}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      Please enter your name (3-40 characters)
+                    </Form.Control.Feedback>
                   </Form.Group>
-                  {/* onChange={handleInputChange} */}
-                  <Form.Group className="border-0">
+
+                  <Form.Group className="">
                     <Form.Control
                       type="tel"
                       placeholder="Mobile"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
+                      value={partnerFormData.phone}
+                      onChange={handlePartnerInputChange}
                       required
-                      minLength={10}
-                      maxLength={10}
                       pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit phone number"
+                      maxLength={10}
                     />
+                    <Form.Control.Feedback type="invalid" className="m-0 p-0">
+                      Please enter a valid 10-digit phone number
+                    </Form.Control.Feedback>
                   </Form.Group>
-                  <Form.Group className="">
+
+                  <Form.Group className="mb-3">
                     <Form.Control
                       type="email"
                       placeholder="Email"
                       name="email"
-                      className=""
-                      value={formData.email}
-                      onChange={handleInputChange}
+                      value={partnerFormData.email}
+                      onChange={handlePartnerInputChange}
                       required
-                      minLength={10}
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                      title="Please enter a valid email address"
                       maxLength={50}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      Please enter a valid email address
+                    </Form.Control.Feedback>
                   </Form.Group>
-                  <Form.Group className="mb-4">
-                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Highest Qualification
-                    </Form.Label>
-                    <div className="d-flex gap-2 flex-wrap">
-                      {["In Graduation", "Graduate", "Post Graduate"].map(
-                        (option, index) => (
-                          <div
-                            key={index}
-                            className={`experience-option ${
-                              formData.lookingFor === option ? "selected" : ""
-                            }`}
-                            onClick={() =>
-                              handleOptionSelect("lookingFor", option)
-                            }
-                          >
-                            <label className="w-100 m-0 caption-regular text-content-secondary">
-                              {option}
-                            </label>
-                            <input
-                              type="radio"
-                              id={`looking-for-${index}`}
-                              name="lookingFor"
-                              value={option}
-                              checked={formData.lookingFor === option}
-                              onChange={() => {}} // Handled by the onClick on parent div
-                              hidden
-                            />
-                          </div>
-                        )
-                      )}
-                    </div>
+
+                  <Form.Group className="mb-3" controlId="formCompany">
+                    <Form.Control
+                      type="text"
+                      placeholder="Company/Institution Name"
+                      name="companyName"
+                      className="border-0"
+                      value={partnerFormData.companyName}
+                      onChange={handlePartnerInputChange}
+                      required
+                      minLength={3}
+                      maxLength={40}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Company name must be between 3-40 characters
+                    </Form.Control.Feedback>
                   </Form.Group>
+
                   <div className="d-grid">
                     <Button type="submit" className="btn-primary py-2">
                       Get Started
                     </Button>
                   </div>
+
                   <div className="text-center text-muted mt-3 small">
                     By submitting this form, you agree to the{" "}
                     <a href="/terms-of-use" className="text-decoration-none">
@@ -215,7 +196,7 @@ const ConsultationModal = ({ show, handleClose }) => {
                 </div>
                 <div className="d-flex justify-content-center align-items-center mb-4">
                   <div className="text-center paragraph-small-medium">
-                    {formData.email}
+                    {partnerFormData.email}
                   </div>
                   <Button
                     variant="link"
@@ -227,38 +208,44 @@ const ConsultationModal = ({ show, handleClose }) => {
                 </div>
 
                 <Form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    handleVerifyOtp();
+                    const success = await handleVerifyOtp();
+                    if (success) {
+                      setTimeout(() => {
+                        handleClose();
+                      }, 3000);
+                    }
                   }}
                 >
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter your OTP "
-                    value={otp}
-                    onChange={handleOtpChange}
-                    required
-                    minLength={4}
-                    maxLength={4}
-                  />
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter your OTP"
+                      value={otp}
+                      onChange={handleOtpChange}
+                      required
+                      maxLength={4}
+                    />
+                  </Form.Group>
 
                   <div className="text-center mb-4">
                     <div className="mb-2 text-content-secondary">
-                      🔔 Didn't receive an OTP?
+                      Didn't receive an OTP?
                     </div>
                     <Button
                       variant="link"
-                      className="text-decoration-none p-0 text-content-primary-accent"
-                      onClick={handleVerifyOtp}
+                      className={`text-decoration-none p-0 ${
+                        resendDisabled
+                          ? "text-muted"
+                          : "text-content-primary-accent"
+                      }`}
+                      onClick={!resendDisabled ? handleResendOtp : undefined}
+                      disabled={resendDisabled}
                     >
-                      <div
-                        className={`text-start bg-primar ${
-                          resendDisabled ? "resend-disabled" : "resend-enabled"
-                        }`}
-                        onClick={!resendDisabled ? handleResendOtp : undefined}
-                      >
-                        Resend OTP {resendDisabled ? `(${countdown}s)` : ""}
-                      </div>
+                      {resendDisabled
+                        ? `Resend in ${countdown} sec`
+                        : "Resend OTP"}
                     </Button>
                   </div>
 
@@ -285,4 +272,4 @@ const ConsultationModal = ({ show, handleClose }) => {
   );
 };
 
-export default ConsultationModal;
+export default PartnerWithUsPopUpModal;

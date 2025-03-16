@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import nursePartnerImg from "../../../assets/images/reusable/partner-image.png";
 import institudeIcon from "../../../assets/icons/resuable/instituteIcon.svg";
-
 import companyIcon from "../../../assets/icons/resuable/companyIcon.svg";
-
+import PartnerWithUsPopUpModal from "../forms/three-partner/partnerWithUsPopUp";
 import recruiterIcon from "../../../assets/icons/resuable/recruitIcon.svg";
 import "./partnerWithUs.css";
 
 const PartnerWithUsSection = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
   return (
     <div className="d-flex flex-column align-items-center justify-content-center mb-5">
       <Container className="nurse-partner-bg text-start">
@@ -46,7 +49,8 @@ const PartnerWithUsSection = () => {
             <button
               className="btn-primary mt-3"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                handleShow();
+                // window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
               {" "}
@@ -58,6 +62,7 @@ const PartnerWithUsSection = () => {
           </Col>
         </Row>
       </Container>
+      <PartnerWithUsPopUpModal show={showModal} handleClose={handleClose} />
     </div>
   );
 };
