@@ -36,7 +36,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
     setShowToast,
     setFormType,
   } = useFormHandler();
-
+  partnerFormData.type = "demo";
   const [currentStep, setCurrentStep] = useState(1);
 
   // Set the form type to 'partner' on component mount
