@@ -1,7 +1,9 @@
 .modal-90w {
   width: 60% !important;
   max-width: 60% !important;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+  /* height: max-content !important; */
 }
 
 /* Special class for calendly modal */

@@ -12,6 +12,7 @@ import {
 import consultationImage from "../../../../assets/images/reusable/partner-popup.jpg";
 import useFormHandler from "../../../../hooks/useFormHandler";
 import ToastMessage from "../../../../utils/toast";
+import "./partnerWithUsPopUp.css";
 
 const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
   const {
@@ -26,23 +27,29 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
     isOtpVerified,
     isOtpSent,
     validated,
-    // Use the specific partner submission handler instead of the generic one
     handlePartnerSubmit,
     handlePartnerInputChange,
     handleOtpChange,
     handleVerifyOtp,
     handleResendOtp,
+    submitPartnershipInquiry,
     setOtp,
     setShowToast,
     setFormType,
   } = useFormHandler();
-  partnerFormData.type = "demo";
+
   const [currentStep, setCurrentStep] = useState(1);
 
   // Set the form type to 'partner' on component mount
   useEffect(() => {
     setFormType("partner");
-  }, [setFormType]);
+    handlePartnerInputChange({
+      target: {
+        name: "type",
+        value: "Institution", // Set default value to "Institution"
+      },
+    });
+  }, [setFormType, handlePartnerInputChange]);
 
   // Move to step 2 when OTP is sent
   useEffect(() => {
@@ -50,6 +57,16 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
       setCurrentStep(2);
     }
   }, [isOtpSent]);
+
+  // Function to handle option selection
+  const handleOptionClick = (option) => {
+    handlePartnerInputChange({
+      target: {
+        name: "type",
+        value: option,
+      },
+    });
+  };
 
   return (
     <Modal
@@ -85,7 +102,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
               style={{ maxHeight: "500px" }}
             />
           </Col>
-          <Col md={6} className="p-5" style={{ minHeight: "500px" }}>
+          <Col md={6} className="px-5">
             {currentStep === 1 ? (
               /* Step 1: Initial Form */
               <>
@@ -96,12 +113,43 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
                   Tell us more about yourself
                 </div>
 
-                {/* Use handlePartnerSubmit directly instead of a wrapper function */}
                 <Form
                   noValidate
                   validated={validated}
                   onSubmit={handlePartnerSubmit}
                 >
+                  <Form.Group className="mb-3 text-center d-flex justify-content-center">
+                    <div className="d-flex gap-2 flex-wrap">
+                      {["Institution", "Company", "Recruiter"].map(
+                        (option, index) => (
+                          <div
+                            key={index}
+                            className={`experience-option ${
+                              partnerFormData.type === option ? "selected" : ""
+                            }`}
+                            onClick={() => handleOptionClick(option)}
+                          >
+                            <label
+                              className="w-100 m-0 caption-regular"
+                              style={{ cursor: "pointer" }}
+                            >
+                              {option}
+                            </label>
+                            <input
+                              type="radio"
+                              id={`looking-for-${index}`}
+                              name="type"
+                              value={option}
+                              checked={partnerFormData.type === option}
+                              onChange={handlePartnerInputChange} // Update to call handlePartnerInputChange
+                              hidden
+                              required
+                            />
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </Form.Group>
                   <Form.Group className="mb-3" controlId="formName">
                     <Form.Control
                       type="text"
@@ -119,7 +167,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  <Form.Group className="">
+                  <Form.Group className="mb-3">
                     <Form.Control
                       type="tel"
                       placeholder="Mobile"
@@ -169,7 +217,47 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
                       Company name must be between 3-40 characters
                     </Form.Control.Feedback>
                   </Form.Group>
-
+                  <Form.Group className="mb-3">
+                    <Form.Select
+                      aria-label="Select Designation"
+                      name="designation"
+                      value={partnerFormData.designation}
+                      className="custom-select"
+                      onChange={handlePartnerInputChange}
+                      required
+                    >
+                      <option value="">Select Designation</option>
+                      {[
+                        "Chief Executive Officer",
+                        "Chief Financial Officer",
+                        "Chief Operating Officer",
+                        "Chief Technology Officer",
+                        "Chief Marketing Officer",
+                        "Vice president",
+                        "General counsel",
+                        "Managing director",
+                        "Manager",
+                        "Project manager",
+                        "Senior management",
+                        "Assistant Manager",
+                        "Chief compliance officer",
+                        "General Manager",
+                        "HR Manager",
+                        "Account Executive",
+                        "Android Developer",
+                        "Associate",
+                        "Business Analyst",
+                        "Business Development Manager",
+                        "Chief digital officer",
+                        "Director of Operations",
+                        "Head Of Legal Affairs (Clo)",
+                      ].map((designation, index) => (
+                        <option key={index} value={designation}>
+                          {designation}
+                        </option>
+                      ))}
+                    </Form.Select>
+                  </Form.Group>
                   <div className="d-grid">
                     <Button type="submit" className="btn-primary py-2">
                       Get Started
@@ -212,10 +300,12 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
                     e.preventDefault();
                     const success = await handleVerifyOtp();
                     if (success) {
+                      await submitPartnershipInquiry();
                       setTimeout(() => {
                         handleClose();
                       }, 3000);
                     }
+                    setCurrentStep(1);
                   }}
                 >
                   <Form.Group className="mb-3">
@@ -251,7 +341,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
 
                   <div className="d-grid">
                     <Button type="submit" className="btn-primary py-2">
-                      Continue
+                      Submit
                     </Button>
                   </div>
                 </Form>

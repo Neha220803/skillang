@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 800; /* Define the range of weights */
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --primary-color: #9473f2; /* Primary - Red-500 (C) */
@@ -21,7 +28,7 @@
   --content-tertiaryInverse: #e3e3e3 !important;
   --content-grey-500: #bcbcbc !important;
 
-  --font-family: "Plus Jakarta Sans" !important;
+  --font-family: "Plus Jakarta Sans", sans-serif !important;
 
   /* Headings */
   --heading-big-medium: 500 48px/56px var(--font-family) !important;

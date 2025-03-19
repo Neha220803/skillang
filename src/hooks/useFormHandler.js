@@ -342,6 +342,7 @@ const useFormHandler = () => {
     handlePartnerSubmit,
     handlePartnerInputChange,
     handleOtpChange,
+    submitPartnershipInquiry,
     handleVerifyOtp,
     handleResendOtp,
     setOtp,
