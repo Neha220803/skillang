@@ -42,14 +42,24 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
 
   // Set the form type to 'partner' on component mount
   useEffect(() => {
-    setFormType("partner");
-    handlePartnerInputChange({
-      target: {
-        name: "type",
-        value: "Institution", // Set default value to "Institution"
-      },
-    });
-  }, [setFormType, handlePartnerInputChange]);
+    if (show) {
+      setFormType("partner");
+      handlePartnerInputChange({
+        target: {
+          name: "type",
+          value: "Institution", // Set default value to "Institution"
+        },
+      });
+    }
+
+    // Reset state when modal is closed
+    return () => {
+      if (!show) {
+        setCurrentStep(1);
+        setOtp("");
+      }
+    };
+  }, [show, setFormType, handlePartnerInputChange]);
 
   // Move to step 2 when OTP is sent
   useEffect(() => {
@@ -68,10 +78,21 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
     });
   };
 
+  // Handle modal close with cleanup
+  const onModalClose = () => {
+    setCurrentStep(1);
+    handleClose();
+  };
+
+  // Only render the component when show is true
+  if (!show) {
+    return null;
+  }
+
   return (
     <Modal
       show={show}
-      onHide={handleClose}
+      onHide={onModalClose}
       centered
       dialogClassName="modal-90w"
       size="lg"
@@ -141,7 +162,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
                               name="type"
                               value={option}
                               checked={partnerFormData.type === option}
-                              onChange={handlePartnerInputChange} // Update to call handlePartnerInputChange
+                              onChange={handlePartnerInputChange}
                               hidden
                               required
                             />
@@ -302,10 +323,10 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
                     if (success) {
                       await submitPartnershipInquiry();
                       setTimeout(() => {
-                        handleClose();
-                      }, 3000);
+                        setCurrentStep(1);
+                        onModalClose();
+                      }, 2000);
                     }
-                    setCurrentStep(1);
                   }}
                 >
                   <Form.Group className="mb-3">

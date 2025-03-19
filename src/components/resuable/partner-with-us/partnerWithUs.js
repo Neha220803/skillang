@@ -9,7 +9,6 @@ import "./partnerWithUs.css";
 
 const PartnerWithUsSection = () => {
   const [showModal, setShowModal] = useState(false);
-
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
   return (

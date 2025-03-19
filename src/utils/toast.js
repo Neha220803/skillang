@@ -18,7 +18,7 @@ const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
       show={showToast}
       onClose={onClose}
       autohide
-      delay={2500}
+      delay={2000}
       style={{
         position: "fixed",
         top: 20,

@@ -9,31 +9,47 @@ import LoanSection from "../components/home/loan/loan-section";
 import HomeHeader2 from "../components/home/header/home-header-2";
 import PartnerWithUsSection from "../components/resuable/partner-with-us/partnerWithUs";
 import ParallaxScrollSnap from "../components/home/work-abroad-journey/workAbroadJourney";
-import CardComponent from '../components/home/try-cards/TryCards.js';
-import '../App.css';
+import CardComponent from "../components/home/try-cards/TryCards.js";
+import "../App.css";
 import WorkAbroadJourneyTimeline from "../components/home/work-abroad-timeline/work-abroad-timeline.js";
 
 const HomePage = () => {
   return (
     <div className="home-page-container">
-      <div className="homepage-section-spacing"><HomeHeader2 /></div>
-      <div className="homepage-section-spacing"><GlobalOprtunity /></div>
-      <div className="trying-snap-scroll">
-        <div className="homepage-section-spacing">
-        <WorkAbroadOpportunity />
+      <div className="homepage-section-spacing">
+        <HomeHeader2 />
       </div>
       <div className="homepage-section-spacing">
-        <WorkAbroadJourneyTimeline />
+        <GlobalOprtunity />
       </div>
-      
-      <div className="homepage-section-spacing"><StudyAbroadJourney /></div>
+      <div className="trying-snap-scroll">
+        <div className="homepage-section-spacing">
+          <WorkAbroadOpportunity />
+        </div>
+        <div className="homepage-section-spacing">
+          <WorkAbroadJourneyTimeline />
+        </div>
+
+        <div className="homepage-section-spacing">
+          <StudyAbroadJourney />
+        </div>
       </div>
-      
-      <div className="homepage-section-spacing"><UniPartner /></div>
-      <div className="homepage-section-spacing"><InternshipSection /></div>
-      <div className="homepage-section-spacing"><TestPrep /></div>
-      <div className="homepage-section-spacing"><LoanSection /></div>
-      <div className="homepage-section-spacing"><PartnerWithUsSection /></div>
+
+      <div className="homepage-section-spacing">
+        <UniPartner />
+      </div>
+      <div className="homepage-section-spacing">
+        <InternshipSection />
+      </div>
+      <div className="homepage-section-spacing">
+        <TestPrep />
+      </div>
+      <div className="homepage-section-spacing">
+        <LoanSection />
+      </div>
+      <div className="homepage-section-spacing">
+        <PartnerWithUsSection />
+      </div>
       {/* <div><CardComponent /></div> */}
     </div>
   );

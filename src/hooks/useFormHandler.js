@@ -146,8 +146,8 @@ const useFormHandler = () => {
         return false;
       }
     } catch (error) {
-      console.error("❌ Error verifying OTP:", error);
-      setStatus("❌ Error verifying OTP. Please try again.");
+      console.error("❌ Wrong OTP, Please try again.", error);
+      setStatus("❌ Wrong OTP, Please try again.");
       setToastVariant("danger");
       return false;
     } finally {
