@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../../../index.css';
 import './partner_uni.css';
 import partner from "../../../assets/images/reusable/partnereduni.png";
 
 const PartneredUni = () => {
+    // Reference for the tab container for scrolling
+    const tabContainerRef = useRef(null);
+
     // State for managing tab data with exact counts specified
     const [tabs, setTabs] = useState([
         { name: 'All', count: 43 },
@@ -68,9 +71,29 @@ const PartneredUni = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Function to handle tab change
+    // Function to handle tab change and scroll into view
     const handleTabChange = (tabName) => {
         setActiveTab(tabName);
+
+        // Find the index of the clicked tab
+        const tabIndex = tabs.findIndex(tab => tab.name === tabName);
+
+        // Scroll the tab into view on mobile
+        if (window.innerWidth < 768 && tabContainerRef.current) {
+            const tabButtons = tabContainerRef.current.querySelectorAll('.tab-button');
+            if (tabButtons[tabIndex]) {
+                // Calculate position to center the tab
+                const containerWidth = tabContainerRef.current.offsetWidth;
+                const tabWidth = tabButtons[tabIndex].offsetWidth;
+                const tabLeft = tabButtons[tabIndex].offsetLeft;
+
+                // Smooth scroll to position
+                tabContainerRef.current.scrollTo({
+                    left: tabLeft - (containerWidth / 2) + (tabWidth / 2),
+                    behavior: 'smooth'
+                });
+            }
+        }
 
         // Only fetch if we don't already have this tab's data
         if (!tabData[tabName]) {
@@ -202,12 +225,12 @@ const PartneredUni = () => {
                 </div>
 
                 {/* Navigation Tabs - Scrollable on mobile */}
-                <div className="tab-nav-container">
-                    <div className="d-flex justify-content-center position-relative">
+                <div className="tab-nav-container" ref={tabContainerRef}>
+                    <div className="d-flex justify-content-start justify-content-md-center position-relative">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.name}
-                                className="btn mx-2 mb-0 border-0 tab-button"
+                                className="btn mx-1 mb-0 border-0 tab-button"
                                 onClick={() => handleTabChange(tab.name)}
                                 style={{
                                     borderRadius: 0,
