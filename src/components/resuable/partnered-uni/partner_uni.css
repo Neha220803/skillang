@@ -1,0 +1,92 @@
+.university-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns on mobile */
+    gap: 0;
+    width: 100%;
+    border-top: 1px solid #dee2e6;
+}
+
+.logo-cell {
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-top: none;
+    border-left: none;
+    height: 120px;
+}
+
+.logo-cell:nth-child(3n) {
+    border-right: none;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-container img {
+    max-height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.tab-nav-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+}
+
+.tab-button {
+    margin-bottom: 1rem;
+}
+
+/* Pagination button styling to match the image */
+.pagination-button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: #ffddc9;
+    color: #333;
+    border-radius: 4px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pagination-button:hover {
+    background-color: #ffcdb2;
+}
+
+.pagination-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+    .university-logo-grid {
+        grid-template-columns: repeat(7, 1fr);
+        /* 7 columns on desktop */
+    }
+
+    .logo-cell:nth-child(3n) {
+        border-right: 1px solid #dee2e6;
+    }
+
+    .logo-cell:nth-child(7n) {
+        border-right: none;
+    }
+
+    .tab-nav-container {
+        overflow-x: visible;
+        white-space: normal;
+    }
+}

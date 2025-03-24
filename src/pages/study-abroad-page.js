@@ -6,17 +6,20 @@ import IndemandCourse from '../components/study-abroad/indemand-courses/indemand
 import StudyAbroad from '../components/resuable/study-abroad-journey/study-abroad-journey'
 import CountriesWeServe from '../components/resuable/countries-we-serve/countriesWeServe'
 import UniPartner from '../components/resuable/uni-partner/uni-partner'
+import PartneredUni from '../components/resuable/partnered-uni/partnered_uni'
+
 
 const StudyAbroadPage = () => {
   return (
     <div>
-       <div className="section-spacin"><StudyAbroadHeader /></div>
-       <div className="section-spacing"><WhyStudyAbroad /></div>
-       <div className="section-spacing"><AbroadDestination /></div>
-       <div className="section-spacing"><IndemandCourse /></div>
-       <div className="section-spacing"><StudyAbroad /></div>
-       <div className="section-spacing"><CountriesWeServe /></div>
-       <div className="section-spacing"><UniPartner /></div>
+      <div className="section-spacin"><StudyAbroadHeader /></div>
+      <div className="section-spacing"><WhyStudyAbroad /></div>
+      <div className="section-spacing"><AbroadDestination /></div>
+      <div className="section-spacing"><IndemandCourse /></div>
+      <div className="section-spacing"><StudyAbroad /></div>
+      <div className="section-spacing"><CountriesWeServe /></div>
+      <div className="section-spacing"><UniPartner /></div>
+      <div className="section-spacing"><PartneredUni /></div>
     </div>
   )
 }
