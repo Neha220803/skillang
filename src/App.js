@@ -18,6 +18,7 @@ import LandingStudyAbroadPage from "./pages/landing-page-study";
 import LandingWorkAbroadPage from "./pages/landing-page-work";
 import TermsPage from "./components/footer/terms/terms";
 import PrivacyPolicyPage from "./components/footer/terms/privacyPolicy";
+import EducationLoanPage from "./pages/education-loan";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -44,6 +45,7 @@ function Layout() {
         <Route path="/work-abroad" element={<WorkAboradPage />} />
         <Route path="/study-abroad" element={<StudyAbroadPage />} />
         <Route path="/lang-test-prep" element={<LangTestPage />} />
+        <Route path="/education-loan" element={<EducationLoanPage />} />
 
         <Route path="/terms-of-use" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
