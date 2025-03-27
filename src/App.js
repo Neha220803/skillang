@@ -1,12 +1,6 @@
 import "./App.css";
 import CustomNavbar from "./components/nav/nav-bar";
-import {
-  HashRouter,
-  Routes,
-  Route,
-  useLocation,
-  BrowserRouter,
-} from "react-router-dom";
+import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
 import HomePage from "./pages/home-page";
 import NursePage from "./pages/nurse-page";
 import WorkAboradPage from "./pages/work-aborad-page";
@@ -18,6 +12,7 @@ import LandingStudyAbroadPage from "./pages/landing-page-study";
 import LandingWorkAbroadPage from "./pages/landing-page-work";
 import TermsPage from "./components/footer/terms/terms";
 import PrivacyPolicyPage from "./components/footer/terms/privacyPolicy";
+import CountryPage from "./pages/countryPage";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -47,6 +42,7 @@ function Layout() {
 
         <Route path="/terms-of-use" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/study-in-uk" element={<CountryPage />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}

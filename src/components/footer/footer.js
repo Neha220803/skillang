@@ -7,6 +7,7 @@ import {
   FaYoutube,
   FaPhone,
   FaMapMarkerAlt,
+  FaLinkedin,
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import foorImg from "../../assets/images/home/footer-img.png";
@@ -94,12 +95,17 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="/lang-test-prep">
-                        <div className="caption-medium"> Language Prep</div>
+                        <div className="caption-medium "> Language Prep</div>
                       </a>
                     </li>
-                    <li>
+                    <li className="d-none d-md-block">
                       <a href="/lang-test-prep">
                         <div className="caption-medium"> Test Prep</div>
+                      </a>
+                    </li>
+                    <li className="d-block d-md-none">
+                      <a href="tel:+917200630336">
+                        <div className="caption-medium"> Contact Us</div>
                       </a>
                     </li>
                   </ul>
@@ -149,17 +155,17 @@ const Footer = () => {
             <div className="footer-card">
               <div className="subheading-small-medium">Socials</div>
               <div className="social-icons">
-                <a href="#">
+                <a href="https://www.facebook.com/people/Skillang/61567723155875/">
                   <FaFacebookF />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/skillang_careers/">
                   <FaInstagram />
                 </a>
-                <a href="#">
+                {/* <a href="#">
                   <FaTwitter />
-                </a>
-                <a href="#">
-                  <FaYoutube />
+                </a> */}
+                <a href="https://www.linkedin.com/company/skillang/">
+                  <FaLinkedin />
                 </a>
               </div>
               <div className="contact-phone">

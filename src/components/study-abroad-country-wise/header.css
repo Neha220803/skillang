@@ -1,0 +1,10 @@
+.country-wise-img {
+  height: 470px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 32px !important;
+}
+
+.study-aborad-country-text-wrapper {
+  width: 50% !important;
+}

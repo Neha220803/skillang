@@ -181,6 +181,7 @@ const HomeHeader2 = () => {
                           placeholder="Mobile"
                           name="phone"
                           value={formData.phone}
+                          maxLength={10}
                           onChange={handleInputChange}
                           required
                           pattern="[0-9]{10}"
@@ -196,6 +197,7 @@ const HomeHeader2 = () => {
                           value={formData.pincode}
                           onChange={handleInputChange}
                           required
+                          maxLength={6}
                           pattern="[0-9]{6}"
                         />
                       </Form.Group>

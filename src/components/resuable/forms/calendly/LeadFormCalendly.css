@@ -6,10 +6,11 @@
   /* height: max-content !important; */
 }
 
-/* Special class for calendly modal */
-.modal-calendly {
-  width: 85% !important;
-  max-width: 85% !important;
+@media (max-width: 1000px) {
+  .modal-90w {
+    width: 99% !important;
+    max-width: 100% !important;
+  }
 }
 
 .form-control,

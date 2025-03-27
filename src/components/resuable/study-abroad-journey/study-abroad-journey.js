@@ -122,7 +122,7 @@ export default function StudyAbroad() {
   }, []);
 
   return (
-    <section>
+    <div className="">
       <Container
         ref={sectionRef}
         className="align-items-center justify-content-center study-abroad-bg"
@@ -167,6 +167,6 @@ export default function StudyAbroad() {
           ))}
         </div>
       </Container>
-    </section>
+    </div>
   );
 }

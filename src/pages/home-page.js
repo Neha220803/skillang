@@ -22,17 +22,15 @@ const HomePage = () => {
       <div className="homepage-section-spacing">
         <GlobalOprtunity />
       </div>
-      <div className="trying-snap-scroll">
-        <div className="homepage-section-spacing">
-          <WorkAbroadOpportunity />
-        </div>
-        <div className="homepage-section-spacing">
-          <WorkAbroadJourneyTimeline />
-        </div>
 
-        <div className="homepage-section-spacing">
-          <StudyAbroadJourney />
-        </div>
+      <div className="homepage-section-spacing">
+        <WorkAbroadOpportunity />
+      </div>
+      <div className="homepage-section-spacing">
+        <WorkAbroadJourneyTimeline />
+      </div>
+      <div className="homepage-section-spacing">
+        <StudyAbroadJourney />
       </div>
 
       <div className="homepage-section-spacing">

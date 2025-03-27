@@ -12,7 +12,7 @@ const PartnerWithUsSection = () => {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center mb-5">
+    <div className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="nurse-partner-bg text-start">
         <Row>
           <Col className="d-none d-md-block" md={6} sm={12} xs={12}>
