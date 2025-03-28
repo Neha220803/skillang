@@ -3,18 +3,18 @@ import { Container, Col, Row, Card, CardBody, CardImg, CardTitle, CardText } fro
 import '../../../index.css';
 import '../../../App.css';
 import './TypesAndEligiblity.css';
-import eli1 from '../../../assets/images/landing/nurse-eli1.svg';
-import eli2 from '../../../assets/images/landing/nurse-eli2.svg';
-import eli3 from '../../../assets/images/landing/nurse-eli3.svg';
-import eli4 from '../../../assets/images/landing/nurse-eli4.svg';
+import eligible1 from '../../../assets/images/education-loan/EduLoanEligiblity/eligible1.svg';
+import eligible2 from '../../../assets/images/education-loan/EduLoanEligiblity/eligible2.svg';
+import eligible3 from '../../../assets/images/education-loan/EduLoanEligiblity/eligible3.svg';
+import eligible4 from '../../../assets/images/education-loan/EduLoanEligiblity/eligible4.svg';
 
 
 
 const eligibilityData = [
-    { img: eli1, title: 'abcd', text: 'A recognized 3 years nursing diploma or Bachelor degree in nursing' },
-    { img: eli2, title: 'abcd', text: 'Language proficiency proof in German (usually B2 level) via any authorized institutes (GOETHE / TELC / ECL/ OSD).' },
-    { img: eli3, title: 'abcd', text: 'A valid nursing license from your home country. ' },
-    { img: eli4, title: 'abcd', text: 'A certificate of professional qualification recognition, which we help you to facilitate.' },
+    { img: eligible1, title: 'Credit History', text: 'A strong credit score and clean credit history enhance approval chances.' },
+    { img: eligible2, title: 'Co-signer Requirements', text: 'May be necessary for unsecured and international student loans.' },
+    { img: eligible3, title: 'Academic Records', text: 'Good academic standing can positively influence your loan terms. ' },
+    { img: eligible4, title: 'Proof of Admission', text: 'Essential documentation from an accredited foreign university.' },
 ];
 
 
@@ -36,7 +36,7 @@ const LoanEligiblity = () => {
                                 <CardImg src={item.img} alt={`Eligibility ${index + 1}`} className='loan-eligibility-img' />
 
                                 <CardBody className='p-0'>
-                                    <CardTitle >{item.title}</CardTitle>
+                                    <CardTitle className='small-medium' >{item.title}</CardTitle>
                                     <CardText className='loan-eligible-cards-text paragraph-small-medium text-content-secondary'>{item.text}</CardText>
                                 </CardBody>
                             </Card>
