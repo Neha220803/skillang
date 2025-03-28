@@ -14,11 +14,23 @@ import PermResidentSection from "../components/nursing/nurse-citizenship/permRes
 import NurseCareerAdvSection from "../components/nursing/career-adv/nurseCareerAdvSection";
 import NursePartner from "../components/resuable/partner-with-us/partnerWithUs";
 import TypesHealthCareSection from "../components/nursing/types-nurse/typesHealthCareSection";
+import { Helmet } from "react-helmet-async";
 import "../App.css";
 
 const NursePage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Abroad Nursing Job Consultants in Chennai</title>
+        <meta
+          name="description"
+          content="Discover the best abroad nursing job consultants in Chennai. We offer reliable guidance for nursing careers overseas."
+        />
+        <meta
+          name="keywords"
+          content="Abroad nursing job consultants, best nursing consultancy, Best abroad nursing job consultants"
+        />
+      </Helmet>
       <div className="section-spacing">
         <NurseMainHeader />
       </div>

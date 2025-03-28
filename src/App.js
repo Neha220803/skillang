@@ -14,6 +14,7 @@ import TermsPage from "./components/footer/terms/terms";
 import PrivacyPolicyPage from "./components/footer/terms/privacyPolicy";
 import CountryPage from "./pages/countryPage";
 import EducationLoanPage from "./pages/education-loan";
+import { HelmetProvider } from "react-helmet-async";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -54,9 +55,11 @@ function Layout() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

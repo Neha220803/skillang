@@ -11,11 +11,23 @@ import PartnerWithUsSection from "../components/resuable/partner-with-us/partner
 import ParallaxScrollSnap from "../components/home/work-abroad-journey/workAbroadJourney";
 import CardComponent from "../components/home/try-cards/TryCards.js";
 import "../App.css";
+import { Helmet } from "react-helmet-async";
 import WorkAbroadJourneyTimeline from "../components/home/work-abroad-timeline/work-abroad-timeline.js";
 
 const HomePage = () => {
   return (
     <div className="home-page-container">
+      <Helmet>
+        <title>Best Abroad Consultancy in Chennai</title>
+        <meta
+          name="description"
+          content="Looking for the best abroad consultancy in Chennai? We provide expert guidance for overseas education, work, and German language, IELTS coaching."
+        />
+        <meta
+          name="keywords"
+          content="abroad consultancy, Best abroad consultancy in Chennai, overseas consultancy, best overseas consultancy, Chennai best consultancy for abroad"
+        />
+      </Helmet>
       <div className="homepage-section-spacing">
         <HomeHeader2 />
       </div>
