@@ -1,0 +1,29 @@
+.header-path-card {
+    background-image: url('../../../assets/images/education-loan/headerbg.jpg');
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 500px !important;
+    /* padding: 24px !important; */
+}
+
+.edu-head-wrapper {
+    width: 60%;
+
+}
+
+@media (max-width: 768px) {
+    .header-path-card {
+        background-image: url('../../../assets/images/education-loan/headerbg.jpg');
+        height: 360px !important;
+        background-size: contain !important;
+
+    }
+
+    .edu-head-wrapper {
+        width: 100% !important;
+
+    }
+
+}
