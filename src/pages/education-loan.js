@@ -5,6 +5,7 @@ import TypesAndEligiblity from '../components/education-loan/typesandeligblity/T
 import LoanEligiblity from '../components/education-loan/typesandeligblity/Eligiblity'
 import WhySkillangEdu from '../components/education-loan/whyskillangEdu/WhySkillangEdu'
 import GetStart from '../components/education-loan/gettingstarted/GetStart'
+import LangContactUs from '../components/lang-test/lang-connect/LangContactUs'
 
 
 
@@ -18,6 +19,9 @@ const EducationLoanPage = () => {
             <div ><LoanEligiblity /></div>
             <div className='section-spacing'><WhySkillangEdu /></div>
             <div className='section-spacing'><GetStart /></div>
+            <div className="section-spacing">
+                <LangContactUs />
+            </div>
 
 
         </div>
