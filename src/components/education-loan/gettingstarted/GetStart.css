@@ -1,7 +1,7 @@
-/* GetStart.css */
+/* GetStart.css - Complete redesign with fixed progress lines */
 
 .getting-started-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 60px 20px;
     font-family: var(--font-family), sans-serif;
@@ -13,28 +13,40 @@
 }
 
 .progress-steps-container {
-    padding: 0 20px;
+    padding: 0;
+    margin: 0 auto;
 }
 
 /* Desktop View */
 .desktop-view {
     display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
 }
 
+/* ------- FIXED STEP PROGRESS BAR ------- */
 .step-progress-bar {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
     position: relative;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
 }
 
+/* Style for step items */
 .step-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 2;
     position: relative;
+    width: 20%;
 }
 
 .step-label {
@@ -59,47 +71,63 @@
 
 .step-circle svg {
     stroke: #dfe1e6;
-    /* Grey checkmark for inactive steps */
 }
 
 .step-circle.active {
-    background-color: var(--primary-color, #00A86B);
-    border-color: var(--primary-color, #00A86B);
+    background-color: #02A972;
+    border-color: #02A972;
 }
 
 .step-circle.active svg {
     stroke: white;
-    /* White checkmark for active step */
 }
 
-.progress-line {
+/* Progress line - final adjustment to eliminate any overflow */
+.step-progress-bar::before {
+    content: '';
     position: absolute;
-    top: 43px;
-    /* Position the line to align with circles */
+    top: 48px;
+    /* Position to align with middle of circles */
+    left: 125px;
+    /* Further adjusted to start precisely after first circle */
+    right: 125px;
+    /* Further adjusted to end precisely before last circle */
     height: 2px;
     background-color: #dfe1e6;
     z-index: 1;
-    width: 80%;
-    left: 10%;
-    /* Center the lines between steps */
 }
 
-.progress-line.active-line {
-    background-color: var(--primary-color, #00A86B);
+/* Active progress line overlay */
+.step-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 48px;
+    /* Match the position of the background line */
+    left: 125px;
+    /* Start from same position as main line */
+    width: 15%;
+    /* Only covers distance to first step - adjust as needed */
+    height: 2px;
+    background-color: #02A972;
+    z-index: 1;
+}
+
+/* Hide the old progress lines */
+.progress-line {
+    display: none;
 }
 
 .step-title {
     font-size: 16px;
     font-weight: 400;
-    /* Lighter weight for inactive steps */
     margin-bottom: 8px;
     text-align: center;
     color: var(--content-secondary, #666);
+    white-space: nowrap;
 }
 
 .step-item:first-child .step-title {
     font-weight: 600;
-    /* Bold only for Step 1 */
     color: var(--content-primary, #333);
 }
 
@@ -143,9 +171,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    /* Higher z-index to appear above lines */
     margin-bottom: 40px;
-    /* Spacing between steps */
 }
 
 .mobile-step-circle {
@@ -159,16 +185,14 @@
     justify-content: center;
     margin-right: 15px;
     z-index: 3;
-    /* Higher z-index to stay on top of lines */
     position: relative;
-    /* Needed for z-index */
     transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 /* Animation for the circle */
 .mobile-step-circle.animated-circle {
-    background-color: var(--primary-color, #00A86B);
-    border-color: var(--primary-color, #00A86B);
+    background-color: #02A972;
+    border-color: #02A972;
     animation: circleGreen 0.5s ease-in-out forwards;
 }
 
@@ -179,8 +203,8 @@
     }
 
     to {
-        background-color: var(--primary-color, #00A86B);
-        border-color: var(--primary-color, #00A86B);
+        background-color: #00A86B;
+        border-color: #00A86B;
     }
 }
 
@@ -220,35 +244,30 @@
     font-weight: 500;
 }
 
+/* Fixed mobile line positioning */
 .mobile-progress-line {
     position: absolute;
     left: 16px;
-    /* Center on the circle */
     width: 2px;
     height: 70px;
-    /* Increased height to avoid gaps */
     background-color: #E8E8E8;
     z-index: 1;
 }
 
 .mobile-progress-line.line1 {
     top: 42px;
-    /* Position from bottom of first circle */
 }
 
 .mobile-progress-line.line2 {
     top: 125px;
-    /* Position from bottom of second circle */
 }
 
 .mobile-progress-line.line3 {
     top: 208px;
-    /* Position from bottom of third circle */
 }
 
 .mobile-progress-line.line4 {
     top: 291px;
-    /* Position from bottom of fourth circle */
 }
 
 .mobile-progress-line.animated-line {
@@ -263,7 +282,7 @@
     left: 0;
     width: 100%;
     height: 0%;
-    background-color: var(--primary-color, #00A86B);
+    background-color: #02A972;
     animation: lineGrow 0.8s ease-in-out forwards;
 }
 
@@ -281,7 +300,6 @@
 @media (max-width: 992px) {
     .header-section {
         display: none;
-        /* Hide desktop header in mobile view */
     }
 
     .desktop-view {
@@ -294,7 +312,6 @@
         position: relative;
     }
 
-    /* Position lines to connect circles properly */
     .mobile-timeline-container {
         position: relative;
     }
@@ -302,10 +319,8 @@
     .mobile-step-item {
         padding: 10px 0;
         z-index: 2;
-        /* Ensure step items appear above lines */
     }
 
-    /* Mobile-Only Animation */
     .mobile-view .mobile-timeline-container {
         margin-left: 0;
         padding-left: 0;
@@ -314,35 +329,27 @@
     .mobile-view .mobile-progress-line {
         position: absolute;
         left: 16px;
-        /* Center of the circle */
         height: 83px;
-        /* Exact length to connect circles */
         z-index: 1;
-        /* Behind the circles */
         background-color: #E8E8E8;
     }
 
     .mobile-view .mobile-progress-line.line1 {
         top: 42px;
-        /* Position from bottom of first circle */
     }
 
     .mobile-view .mobile-progress-line.line2 {
         top: 125px;
-        /* Position from bottom of second circle */
     }
 
     .mobile-view .mobile-progress-line.line3 {
         top: 208px;
-        /* Position from bottom of third circle */
     }
 
     .mobile-view .mobile-progress-line.line4 {
         top: 291px;
-        /* Position from bottom of fourth circle */
     }
 
-    /* Last step doesn't need bottom margin */
     .mobile-step-item:last-child {
         margin-bottom: 0;
     }

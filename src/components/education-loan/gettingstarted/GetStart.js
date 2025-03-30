@@ -92,9 +92,10 @@ const GetStart = () => {
             </div>
 
             <div className="progress-steps-container">
-                {/* Desktop view */}
+                {/* Desktop view with improved grid layout */}
                 <div className="desktop-view">
                     <div className="step-progress-bar">
+                        {/* Step 1 */}
                         <div className="step-item active">
                             <div className="step-label">Step 1</div>
                             <div className="step-circle active">
@@ -105,8 +106,8 @@ const GetStart = () => {
                             <h3 className="step-title">Schedule a Consultation</h3>
                             <p className="step-description">Reach out via our website or contact form to set up your free consultation.</p>
                         </div>
-                        <div className="progress-line active-line"></div>
 
+                        {/* Step 2 */}
                         <div className="step-item">
                             <div className="step-label">Step 2</div>
                             <div className="step-circle">
@@ -117,8 +118,8 @@ const GetStart = () => {
                             <h3 className="step-title">Assessment of Needs</h3>
                             <p className="step-description">Discuss your financial situation, study plans, and budget requirements.</p>
                         </div>
-                        <div className="progress-line"></div>
 
+                        {/* Step 3 */}
                         <div className="step-item">
                             <div className="step-label">Step 3</div>
                             <div className="step-circle">
@@ -129,8 +130,8 @@ const GetStart = () => {
                             <h3 className="step-title">Explore Loan Options</h3>
                             <p className="step-description">We compare different loan options to find the best fit for you.</p>
                         </div>
-                        <div className="progress-line"></div>
 
+                        {/* Step 4 */}
                         <div className="step-item">
                             <div className="step-label">Step 4</div>
                             <div className="step-circle">
@@ -141,8 +142,8 @@ const GetStart = () => {
                             <h3 className="step-title">Application & Approval</h3>
                             <p className="step-description">Assistance with the complete application process for a successful outcome.</p>
                         </div>
-                        <div className="progress-line"></div>
 
+                        {/* Step 5 */}
                         <div className="step-item">
                             <div className="step-label">Step 5</div>
                             <div className="step-circle">
