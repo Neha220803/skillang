@@ -4,6 +4,7 @@ import EduLoanOurServices from '../components/education-loan/ourservices/ourserv
 import TypesAndEligiblity from '../components/education-loan/typesandeligblity/TypesAndEligiblity'
 import LoanEligiblity from '../components/education-loan/typesandeligblity/Eligiblity'
 import WhySkillangEdu from '../components/education-loan/whyskillangEdu/WhySkillangEdu'
+import GetStart from '../components/education-loan/gettingstarted/GetStart'
 
 
 
@@ -16,6 +17,7 @@ const EducationLoanPage = () => {
             <div ><TypesAndEligiblity /></div>
             <div ><LoanEligiblity /></div>
             <div className='section-spacing'><WhySkillangEdu /></div>
+            <div className='section-spacing'><GetStart /></div>
 
 
         </div>
