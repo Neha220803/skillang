@@ -45,13 +45,13 @@ const UniPartner = () => {
             <Row className="w-100 m-0 p-0 py-4">
               <Col lg={6} sm={6} xs={6} className="p-0 pe-1">
                 <div className="num-cards">
-                  <div className="num-cards-title">1,800+</div>
+                  <div className="num-cards-title">850+</div>
                   <div className="num-cards-subtitle">Universities</div>
                 </div>
               </Col>
               <Col lg={6} sm={6} xs={6} className="p-0 ps-2">
                 <div className="num-cards">
-                  <div className="num-cards-title">50+</div>
+                  <div className="num-cards-title">30+</div>
                   <div className="num-cards-subtitle">Countries</div>
                 </div>
               </Col>

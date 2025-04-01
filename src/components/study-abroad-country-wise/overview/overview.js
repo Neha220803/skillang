@@ -1,12 +1,116 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import countryWiseData from "../../../data/countryWiseData";
+import "./overview.css";
 
-const StudyAbroadCountryOverview = () => {
+const StudyAbroadCountryOverview = ({ country = "uk" }) => {
+  const data = countryWiseData[country];
+
+  if (!data || !data.overview) {
+    return <div>Country data not available</div>;
+  }
+
+  const { overview } = data;
+
+  // Split the reasons into chunks for display in columns
+  const leftReasons = overview.reasons.slice(
+    0,
+    Math.ceil(overview.reasons.length / 2)
+  );
+  const rightReasons = overview.reasons.slice(
+    Math.ceil(overview.reasons.length / 2)
+  );
+
   return (
-    <section className="d-flex flex-column align-items-center justify-content-center ">
+    <section className="d-flex flex-column align-items-center justify-content-center">
       <Container>
+        <Row className="mb-4">
+          <Col>
+            <div className="heading-big-medium">Overview</div>
+          </Col>
+        </Row>
+
         <Row>
-          <div className="heading-big-medium">Overview</div>
+          <Col lg={6}>
+            <Row className="mb-4">
+              <div className="subheading-big-medium">
+                Why Study in {data.fullForm}?
+              </div>
+            </Row>
+            <div className="mb-4 text-content-tertiary">
+              {overview.description}
+            </div>
+
+            <div className="mb-3 text-content-tertiary">
+              Here are some compelling reasons to consider the {data.shortForm}{" "}
+              as your study abroad destination:
+            </div>
+
+            <Row>
+              <Col lg={6}>
+                <ul className="ps-3">
+                  {leftReasons.map((reason, index) => (
+                    <li key={index} className="mb-2 text-content-tertiary">
+                      {reason}
+                    </li>
+                  ))}
+                </ul>
+              </Col>
+
+              <Col lg={6}>
+                <ul className="ps-3">
+                  {rightReasons.map((reason, index) => (
+                    <li key={index} className="mb-2 text-content-tertiary">
+                      {reason}
+                    </li>
+                  ))}
+                </ul>
+              </Col>
+            </Row>
+          </Col>
+
+          <Col lg={6}>
+            <Card className="facts-card">
+              <Card.Header className="bg-white border-0">
+                <div className="text-center subheading-big-medium text-content-secondary">
+                  Quick Facts
+                </div>
+              </Card.Header>
+              <Card.Body className="">
+                <Row>
+                  {overview.facts.map((fact, index) => (
+                    <Col md={6} key={index} className="">
+                      <div className="d-flex align-items-start fact-indi-card">
+                        <img
+                          src={fact.icon}
+                          alt={fact.label}
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                        <div>
+                          <div className="caption-bold text-content-tertiary mb-1">
+                            {fact.label}
+                          </div>
+                          <div className="subheading-small-medium text-content-secondary fs-5">
+                            {fact.hasSplit ? (
+                              <>
+                                {fact.value.split(fact.splitChar)[0]}
+                                <span className="caption-bold text-content-tertiary fs-6">
+                                  {fact.splitChar === "/" ? "/" : "("}
+                                  {fact.value.split(fact.splitChar)[1]}
+                                </span>
+                              </>
+                            ) : (
+                              fact.value
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
       </Container>
     </section>

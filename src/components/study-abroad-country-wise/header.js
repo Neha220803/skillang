@@ -3,7 +3,7 @@ import { Container, Image, Row } from "react-bootstrap";
 import countryWiseData from "../../data/countryWiseData";
 import "./header.css";
 
-const CountryWiseHeaderComp = ({ country = "country" }) => {
+const CountryWiseHeaderComp = ({ country = "uk" }) => {
   const data = countryWiseData[country];
 
   return (

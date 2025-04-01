@@ -1,6 +1,9 @@
 import React from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
+import WorkVisaRoute from "./workVisaRoute";
+import WorkTopCompanies from "./workTopCompanies";
+import UniContactComp from "../../resuable/uni-contact/UniContact";
 
 const WorkOppsAbroadComp = () => {
   return (
@@ -9,6 +12,14 @@ const WorkOppsAbroadComp = () => {
         <Row>
           <div className="heading-big-medium">Work Abroad Opps</div>
         </Row>
+        <WorkVisaRoute />
+        <UniContactComp
+          heading="Get a Two-Year Post Work Visa"
+          description="Explore your opportunities to work abroad after graduation."
+          buttonText="Connect with Us"
+          onButtonClick={() => console.log("Connect button clicked")}
+        />
+        <WorkTopCompanies />
       </Container>
     </section>
   );

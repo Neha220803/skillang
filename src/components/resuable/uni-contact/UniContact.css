@@ -1,0 +1,28 @@
+.university-choice-section {
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 255, 0.5) 0%,
+    rgba(240, 224, 255, 0.5) 35%,
+    rgba(255, 226, 240, 0.5) 100%
+  );
+  background-image: url("../../../assets/images/study-abroad-county-wise/countryBG.jpg");
+  border-radius: 16px;
+  padding: 40px;
+  margin: 30px 0;
+}
+
+/* For the button */
+.connect-button {
+  background-color: #f27851;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #e56641;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
