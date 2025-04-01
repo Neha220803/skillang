@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import LifeCostOflLiving from "./LifeCostOflLiving";
+import LifeKeyDestination from "./LifeKeyDestination";
 
 const LifeInAbroadCountry = () => {
   return (
@@ -8,6 +10,8 @@ const LifeInAbroadCountry = () => {
         <Row>
           <div className="heading-big-medium">Life</div>
         </Row>
+        <LifeCostOflLiving />
+        <LifeKeyDestination />
       </Container>
     </section>
   );

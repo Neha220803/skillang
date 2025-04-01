@@ -27,6 +27,7 @@
   --content-secondaryInverse: #fbfbfb !important;
   --content-tertiaryInverse: #e3e3e3 !important;
   --content-grey-500: #bcbcbc !important;
+  --grey-200: #fbfbfb !important;
 
   --font-family: "Plus Jakarta Sans", sans-serif !important;
 
@@ -269,6 +270,10 @@
   .display-regular {
     font: var(--mobile-display-regular);
   }
+}
+
+.grey-200 {
+  background-color: var(--grey-200) !important;
 }
 
 * {

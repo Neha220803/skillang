@@ -11,7 +11,7 @@ const LangTestPage = () => {
   return (
     <div>
       <Helmet>
-        <title>German Language Course Chennai</title>
+        {/* <title>German Language Course Chennai</title> */}
         <meta
           name="description"
           content="Join our German language course in Chennai. Expert trainers, beginner to advanced levels — boost fluency and communication skills."

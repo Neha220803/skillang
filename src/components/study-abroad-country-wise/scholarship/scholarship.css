@@ -1,0 +1,39 @@
+.edu-scholarship-bg {
+  background-image: url("../../../assets/images/study-abroad-county-wise/scholarShipBg.jpg");
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+}
+
+.scholarship-content {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.scholarship-item a {
+  transition: all 0.3s ease;
+  border-radius: 10px !important;
+}
+
+.scholarship-item a:hover {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateX(5px);
+}
+
+.scholarship-item i {
+  transition: all 0.3s ease;
+}
+
+.scholarship-item a:hover i {
+  transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+  .scholarship-section {
+    padding-bottom: 30px;
+  }
+
+  .scholarship-content {
+    text-align: center;
+  }
+}
