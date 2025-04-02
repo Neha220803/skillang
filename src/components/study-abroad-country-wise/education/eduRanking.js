@@ -16,7 +16,7 @@ const EduRankingComp = ({ country = "uk" }) => {
   if (!data || !data.overview || !data.overview.universityRankings) {
     return <div>University ranking data not available</div>;
   }
-  const universityRankings = data.overview.universityRankings;
+  const universityRankings = data.education.universityRankings;
   const displayedUniversities = showAll
     ? universityRankings
     : universityRankings.slice(0, 6);

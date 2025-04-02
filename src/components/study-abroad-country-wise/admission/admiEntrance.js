@@ -73,15 +73,15 @@ const AdmiEntranceComp = () => {
     : entranceExamData.slice(0, 5);
 
   return (
-    <section className="my-5">
+    <div className="my-5">
       <Container>
         <div className="subheading-big-medium text-content-secondary mb-4">
           Entrance Exam Required
         </div>
 
         <div className="table-responsive">
-          <Table hover className="entrance-exam-table">
-            <thead className="bg-light">
+          <table className="edu-ranking-table caption-bold text-content-secondary">
+            <thead className="">
               <tr>
                 <th className="py-3 px-4" style={{ width: "25%" }}>
                   Exam
@@ -114,7 +114,7 @@ const AdmiEntranceComp = () => {
                 </tr>
               ))}
             </tbody>
-          </Table>
+          </table>
         </div>
 
         <div className="text-center mt-3">
@@ -137,7 +137,7 @@ const AdmiEntranceComp = () => {
           vertical-align: middle;
         }
       `}</style>
-    </section>
+    </div>
   );
 };
 

@@ -15,7 +15,7 @@ const WorkVisaRoute = () => {
     {
       id: 1,
       route: "Graduate route",
-      icon: <FaGraduationCap size={18} />,
+      icon: <FaGraduationCap size={20} />,
       color: "#4285F4",
       requirements: [
         "Degree or relevant qualification from a UK Higher Education provider on or after 1 July 2021.",
@@ -25,7 +25,7 @@ const WorkVisaRoute = () => {
     {
       id: 2,
       route: "Skilled worker route",
-      icon: <FaBriefcase size={18} />,
+      icon: <FaBriefcase size={20} />,
       color: "#F4B400",
       requirements: [
         "Require sponsorship by a licensed employer for a specific job that meets minimum salary and skill requirements.",
@@ -35,7 +35,7 @@ const WorkVisaRoute = () => {
     {
       id: 3,
       route: "Start-up route",
-      icon: <FaRocket size={18} />,
+      icon: <FaRocket size={20} />,
       color: "#0F9D58",
       requirements: [
         "For those who want to start a business in the UK.",
@@ -45,7 +45,7 @@ const WorkVisaRoute = () => {
     {
       id: 4,
       route: "Students' union sabbatical officers",
-      icon: <FaUsers size={18} />,
+      icon: <FaUsers size={20} />,
       color: "#DB4437",
       requirements: [
         "Sabbatical officers at UK and overseas establishments or the National Union of Students can stay in the country under the Student route without being required to study.",
@@ -55,7 +55,7 @@ const WorkVisaRoute = () => {
     {
       id: 5,
       route: "Innovator Founder",
-      icon: <FaLightbulb size={18} />,
+      icon: <FaLightbulb size={20} />,
       color: "#4B0082",
       requirements: [
         "The route is for migrants wanting to start a new, innovative, viable, and scalable business in the UK.",
@@ -65,7 +65,7 @@ const WorkVisaRoute = () => {
     {
       id: 6,
       route: "India Young Professionals Scheme",
-      icon: <FaIdCard size={18} />,
+      icon: <FaIdCard size={20} />,
       color: "#00BFFF",
       requirements: [
         "Allows Indian citizens aged 18 to 30 to work and live in the UK for two years.",
@@ -79,16 +79,16 @@ const WorkVisaRoute = () => {
       <Container>
         <Row className="mb-4">
           <Col>
-            <h2 className="subheading-big-medium text-content-secondary">
+            <div className="subheading-big-medium text-content-secondary">
               Work Visa Route to UK
-            </h2>
+            </div>
           </Col>
         </Row>
 
         <Row>
           <Col>
             <div className="table-responsive">
-              <Table className="visa-route-table">
+              <table className="edu-ranking-table caption-bold text-content-secondary">
                 <thead className="bg-light">
                   <tr>
                     <th className="py-3 px-4" style={{ width: "30%" }}>
@@ -107,13 +107,13 @@ const WorkVisaRoute = () => {
                           <div
                             className="route-icon d-flex align-items-center justify-content-center rounded-circle me-3"
                             style={{
-                              width: "40px",
-                              height: "40px",
-                              backgroundColor: route.color,
-                              color: "white",
+                              width: "35px",
+                              height: "35px",
+                              backgroundColor: "#EBF2FF",
+                              color: "#1966FA",
                             }}
                           >
-                            <i className={`fas fa-${route.icon}`}></i>
+                            {route.icon}
                           </div>
                           <span>{route.route}</span>
                         </div>
@@ -133,7 +133,7 @@ const WorkVisaRoute = () => {
                     </tr>
                   ))}
                 </tbody>
-              </Table>
+              </table>
             </div>
           </Col>
         </Row>

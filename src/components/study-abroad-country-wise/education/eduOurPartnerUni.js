@@ -7,45 +7,11 @@ import uniPart4 from "../../../assets/images/study-abroad-county-wise/ourPartner
 import uniPart5 from "../../../assets/images/study-abroad-county-wise/ourPartnerUni5.jpg";
 import { HiOutlineDownload } from "react-icons/hi";
 import { ChevronRight } from "react-bootstrap-icons";
+import countryWiseData from "../../../data/countryWiseData";
 
-const EduOurPartnerUni = () => {
-  const universities = [
-    {
-      id: 1,
-      name: "University of Bristol",
-      location: "Bristol, England",
-      image: uniPart1, // Replace with your actual image path
-      qsRank: 55,
-    },
-    {
-      id: 2,
-      name: "University of Glasgow",
-      location: "Glasgow, Scotland",
-      image: uniPart2,
-      qsRank: 55,
-    },
-    {
-      id: 3,
-      name: "University of Southampton",
-      location: "Southampton, England",
-      image: uniPart3,
-      qsRank: 55,
-    },
-    {
-      id: 4,
-      name: "University of Birmingham",
-      location: "Birmingham, England",
-      image: uniPart4,
-      qsRank: 55,
-    },
-    {
-      id: 5,
-      name: "University of Bath",
-      location: "Bristol, England",
-      image: uniPart5,
-      qsRank: 55,
-    },
-  ];
+const EduOurPartnerUni = ({ country = "uk" }) => {
+  const data = countryWiseData[country];
+  const universities = data.education.partnerUniversities;
 
   const scrollContainerRef = useRef(null);
 

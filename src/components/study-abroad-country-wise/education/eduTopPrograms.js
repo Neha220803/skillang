@@ -6,59 +6,16 @@ import { IoLocationOutline } from "react-icons/io5";
 import { TbCalendarTime } from "react-icons/tb";
 import { GiCoins } from "react-icons/gi";
 import { ChevronRight } from "react-bootstrap-icons";
+
+import countryWiseData from "../../../data/countryWiseData";
 import "./education.css";
 
-const EduTopProgramsComponent = () => {
+const EduTopProgramsComponent = ({ country = "uk" }) => {
   const [activeTab, setActiveTab] = useState("all");
 
   // Sample programs data
-  const programsData = [
-    {
-      id: 1,
-      title: "BSc Data Science and Business Analytics",
-      degree: "Bachelor's Degree",
-      duration: "2 Years 5 Months",
-      university: "University Name",
-      salary: "$23,00,000 p/a",
-      type: "bachelors",
-    },
-    {
-      id: 2,
-      title: "BSc Data Science and Business Analytics",
-      degree: "Bachelor's Degree",
-      duration: "2 Years 5 Months",
-      university: "University Name",
-      salary: "$23,00,000 p/a",
-      type: "bachelors",
-    },
-    {
-      id: 3,
-      title: "BSc Data Science and Business Analytics",
-      degree: "Bachelor's Degree",
-      duration: "2 Years 5 Months",
-      university: "University Name",
-      salary: "$23,00,000 p/a",
-      type: "bachelors",
-    },
-    {
-      id: 4,
-      title: "MSc Data Science",
-      degree: "Master's Degree",
-      duration: "1 Year 6 Months",
-      university: "University Name",
-      salary: "$35,00,000 p/a",
-      type: "masters",
-    },
-    {
-      id: 5,
-      title: "PhD in Computer Science",
-      degree: "Doctorate",
-      duration: "3 Years",
-      university: "University Name",
-      salary: "$45,00,000 p/a",
-      type: "phd",
-    },
-  ];
+  const data = countryWiseData[country];
+  const programsData = data.education.topPrograms;
 
   // Filter programs based on active tab
   const filteredPrograms =

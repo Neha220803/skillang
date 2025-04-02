@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
+import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
 
 const WorkTopCompanies = () => {
   // Sample companies data
@@ -90,10 +91,12 @@ const WorkTopCompanies = () => {
   return (
     <section className="my-5">
       <Container>
-        <h2 className="mb-4">Top Companies in the UK</h2>
+        <div className="mb-4 subheading-big-medium">
+          Top Companies in the UK
+        </div>
 
         <div className="table-responsive">
-          <Table className="top-companies-table" hover>
+          <table className="edu-ranking-table caption-bold text-content-secondary">
             <thead className="bg-light">
               <tr>
                 <th className="py-3 px-4" style={{ width: "20%" }}>
@@ -125,17 +128,24 @@ const WorkTopCompanies = () => {
                 ))
               )}
             </tbody>
-          </Table>
+          </table>
         </div>
 
         <div className="text-center mt-3">
-          <Button
-            variant="outline-primary"
-            className="rounded-pill px-4"
+          <button
+            className="btn-secondary-outline d-flex align-items-center mx-auto"
             onClick={() => setShowAll(!showAll)}
           >
-            View all <i className="bi bi-chevron-down ms-1"></i>
-          </Button>
+            {showAll ? (
+              <>
+                Close all <ChevronUp className="ms-2" />
+              </>
+            ) : (
+              <>
+                View all <ChevronDown className="ms-2" />
+              </>
+            )}
+          </button>
         </div>
       </Container>
 

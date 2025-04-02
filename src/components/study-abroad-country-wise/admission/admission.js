@@ -3,13 +3,17 @@ import { Container, Row, Col } from "react-bootstrap";
 import AdmiRequirementComp from "./admiReq";
 import AdmiEntranceComp from "./admiEntrance";
 import UniContactComp from "../../resuable/uni-contact/UniContact";
+import countryWiseData from "../../../data/countryWiseData";
 
-const AdmissionAbroadCountry = () => {
+const AdmissionAbroadCountry = ({ country = "uk" }) => {
+  const data = countryWiseData[country];
   return (
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container>
         <Row>
-          <div className="heading-big-medium">Admissions in {}</div>
+          <div className="heading-big-medium">
+            Admissions in {data.fullForm}
+          </div>
         </Row>
         <AdmiRequirementComp />
         <AdmiEntranceComp />

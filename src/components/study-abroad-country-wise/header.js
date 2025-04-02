@@ -8,7 +8,7 @@ const CountryWiseHeaderComp = ({ country = "uk" }) => {
 
   return (
     <header className="d-flex align-items-center justify-content-center text-center pt-5">
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Image
             src={data.headerImage}

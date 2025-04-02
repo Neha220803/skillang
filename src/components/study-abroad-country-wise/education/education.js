@@ -26,7 +26,6 @@ const EducationAbroadCountry = () => {
           buttonText="Connect with Us"
           onButtonClick={() => console.log("Connect button clicked")}
         />
-
         <EduTopProgramsComponent />
       </Container>
     </section>

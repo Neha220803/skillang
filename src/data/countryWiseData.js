@@ -8,6 +8,11 @@ import fact6 from "../assets/images/study-abroad-county-wise/fact6.svg";
 import fact7 from "../assets/images/study-abroad-county-wise/fact7.svg";
 import fact8 from "../assets/images/study-abroad-county-wise/fact8.svg";
 import fact9 from "../assets/images/study-abroad-county-wise/fact9.svg";
+import uniPart1 from "../assets/images/study-abroad-county-wise/ourPartnerUni1.jpg";
+import uniPart2 from "../assets/images/study-abroad-county-wise/ourPartnerUni2.jpg";
+import uniPart3 from "../assets/images/study-abroad-county-wise/ourPartnerUni3.jpg";
+import uniPart4 from "../assets/images/study-abroad-county-wise/ourPartnerUni14.jpg";
+import uniPart5 from "../assets/images/study-abroad-county-wise/ourPartnerUni5.jpg";
 
 const countryWiseData = {
   uk: {
@@ -95,6 +100,8 @@ const countryWiseData = {
           splitChar: "/",
         },
       ],
+    },
+    education: {
       universityRankings: [
         {
           name: "Imperial College London",
@@ -145,6 +152,91 @@ const countryWiseData = {
           ranking2024: 41,
         },
       ],
+      partnerUniversities: [
+        {
+          id: 1,
+          name: "University of Bristol",
+          location: "Bristol, England",
+          image: uniPart1,
+          qsRank: 55,
+        },
+        {
+          id: 2,
+          name: "University of Glasgow",
+          location: "Glasgow, Scotland",
+          image: uniPart2,
+          qsRank: 55,
+        },
+        {
+          id: 3,
+          name: "University of Southampton",
+          location: "Southampton, England",
+          image: uniPart3,
+          qsRank: 55,
+        },
+        {
+          id: 4,
+          name: "University of Birmingham",
+          location: "Birmingham, England",
+          image: uniPart4,
+          qsRank: 55,
+        },
+        {
+          id: 5,
+          name: "University of Bath",
+          location: "Bristol, England",
+          image: uniPart5,
+          qsRank: 55,
+        },
+      ],
+      topPrograms: [
+        {
+          id: 1,
+          title: "BSc Data Science and Business Analytics",
+          degree: "Bachelor's Degree",
+          duration: "2 Years 5 Months",
+          university: "University Name",
+          salary: "$23,00,000 p/a",
+          type: "bachelors",
+        },
+        {
+          id: 2,
+          title: "BSc Data Science and Business Analytics",
+          degree: "Bachelor's Degree",
+          duration: "2 Years 5 Months",
+          university: "University Name",
+          salary: "$23,00,000 p/a",
+          type: "bachelors",
+        },
+        {
+          id: 3,
+          title: "BSc Data Science and Business Analytics",
+          degree: "Bachelor's Degree",
+          duration: "2 Years 5 Months",
+          university: "University Name",
+          salary: "$23,00,000 p/a",
+          type: "bachelors",
+        },
+        {
+          id: 4,
+          title: "MSc Data Science",
+          degree: "Master's Degree",
+          duration: "1 Year 6 Months",
+          university: "University Name",
+          salary: "$35,00,000 p/a",
+          type: "masters",
+        },
+        {
+          id: 5,
+          title: "PhD in Computer Science",
+          degree: "Doctorate",
+          duration: "3 Years",
+          university: "University Name",
+          salary: "$45,00,000 p/a",
+          type: "phd",
+        },
+      ],
+      programTypes: ["all", "bachelors", "masters", "phd"],
     },
   },
   us: {
@@ -232,6 +324,8 @@ const countryWiseData = {
           splitChar: "/",
         },
       ],
+    },
+    education: {
       universityRankings: [
         {
           name: "Massachusetts Institute of Technology (MIT)",
@@ -282,6 +376,91 @@ const countryWiseData = {
           ranking2024: 19,
         },
       ],
+      partnerUniversities: [
+        {
+          id: 1,
+          name: "Massachusetts Institute of Technology",
+          location: "Cambridge, Massachusetts",
+          image: uniPart1, // Replace with appropriate US university images
+          qsRank: 1,
+        },
+        {
+          id: 2,
+          name: "Stanford University",
+          location: "Stanford, California",
+          image: uniPart2,
+          qsRank: 4,
+        },
+        {
+          id: 3,
+          name: "Harvard University",
+          location: "Cambridge, Massachusetts",
+          image: uniPart3,
+          qsRank: 6,
+        },
+        {
+          id: 4,
+          name: "California Institute of Technology",
+          location: "Pasadena, California",
+          image: uniPart4,
+          qsRank: 7,
+        },
+        {
+          id: 5,
+          name: "University of Chicago",
+          location: "Chicago, Illinois",
+          image: uniPart5,
+          qsRank: 12,
+        },
+      ],
+      topPrograms: [
+        {
+          id: 1,
+          title: "BS Computer Science",
+          degree: "Bachelor's Degree",
+          duration: "4 Years",
+          university: "MIT",
+          salary: "$120,000 p/a",
+          type: "bachelors",
+        },
+        {
+          id: 2,
+          title: "BS Artificial Intelligence",
+          degree: "Bachelor's Degree",
+          duration: "4 Years",
+          university: "Stanford University",
+          salary: "$135,000 p/a",
+          type: "bachelors",
+        },
+        {
+          id: 3,
+          title: "MS Data Science",
+          degree: "Master's Degree",
+          duration: "2 Years",
+          university: "Harvard University",
+          salary: "$150,000 p/a",
+          type: "masters",
+        },
+        {
+          id: 4,
+          title: "MS Computer Engineering",
+          degree: "Master's Degree",
+          duration: "2 Years",
+          university: "University of Chicago",
+          salary: "$140,000 p/a",
+          type: "masters",
+        },
+        {
+          id: 5,
+          title: "PhD in Machine Learning",
+          degree: "Doctorate",
+          duration: "4-5 Years",
+          university: "MIT",
+          salary: "$180,000 p/a",
+          type: "phd",
+        },
+      ],
+      programTypes: ["all", "bachelors", "masters", "phd"],
     },
   },
   // Add more countries as needed

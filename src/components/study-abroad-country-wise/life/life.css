@@ -1,0 +1,29 @@
+.life-cost-card {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  padding: 24px !important;
+  gap: 16px !important;
+  /* width: 418.67px;
+  height: 102px; */
+  background: #ffffff;
+  border: 2px solid #e3e3e3 !important;
+  border-radius: 16px !important;
+}
+
+#life-cost-level {
+  /* Frame 2106257656 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px !important;
+  gap: 16px !important;
+  background: #e6f6f1 !important;
+  border: 1px solid #9addc6 !important;
+  border-radius: 16px !important;
+}

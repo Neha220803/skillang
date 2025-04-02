@@ -1,38 +1,7 @@
-.loan-eligible-cards {
-    height: 100% !important;
-    align-items: start;
-    display: flex !important;
-    flex-direction: row !important;
-    /* Frame 2106257645 */
-
-    box-sizing: border-box;
-
-    /* Auto layout */
-
-
-    padding: 24px !important;
-    gap: 16px !important;
-
-
-    background: #FFFFFF;
-    border: 1px solid #E3E3E3;
-    border-radius: 16px;
-
-    /* Inside auto layout */
-
-}
-
-.loan-eligibility-img {
-    width: 50px !important;
-    height: auto !important;
-}
-
 .loan-eligible-bg {
-    background-image: url("../../../assets/images/education-loan/eligblitybg.png") !important;
-    background-size: cover !important;
-    background-position: top !important;
-    background-repeat: no-repeat !important;
-    height: 700px !important;
-
-
+  background-image: url("../../../assets/images/education-loan/eligblitybg.png") !important;
+  background-size: cover !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  height: 700px !important;
 }

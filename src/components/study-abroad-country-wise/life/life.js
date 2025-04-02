@@ -8,7 +8,7 @@ const LifeInAbroadCountry = () => {
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container>
         <Row>
-          <div className="heading-big-medium">Life</div>
+          <div className="heading-big-medium">Life in {}</div>
         </Row>
         <LifeCostOflLiving />
         <LifeKeyDestination />

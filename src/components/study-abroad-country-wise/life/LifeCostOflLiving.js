@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { FaBed, FaUtensils, FaBus, FaWifi, FaReceipt } from "react-icons/fa";
-
+import "./life.css";
 const LifeCostOfLiving = () => {
   // State to track active currency
   const [activeCurrency, setActiveCurrency] = useState("pound");
@@ -91,7 +91,7 @@ const LifeCostOfLiving = () => {
       : { min: "₹75,000", max: "₹1,60,000", text: "₹75,000 to ₹1,60,000" };
 
   return (
-    <section className="my-5">
+    <div className="my-5">
       <Container>
         <div className="mb-4">
           <h2 className="subheading-big-medium text-content-secondary">
@@ -121,8 +121,8 @@ const LifeCostOfLiving = () => {
         <Row>
           {livingCosts[activeCurrency].map((cost) => (
             <Col lg={4} md={6} className="mb-4" key={cost.id}>
-              <Card className="h-100 border-0 shadow-sm rounded-4">
-                <Card.Body className="p-4">
+              <Card className="h-100 life-cost-card">
+                <Card.Body className="p-0">
                   <div className="d-flex align-items-center mb-3">
                     <div
                       className="me-3 d-flex align-items-center justify-content-center"
@@ -145,8 +145,8 @@ const LifeCostOfLiving = () => {
           ))}
 
           <Col lg={4} md={6} className="mb-4">
-            <Card className="h-100 border-0 shadow-sm rounded-4 bg-light bg-opacity-50">
-              <Card.Body className="p-4">
+            <Card className="h-100 life-cost-card" id="life-cost-level">
+              <Card.Body className="p-0">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <div className="small text-muted">
                     Total Monthly Cost of Living
@@ -166,7 +166,7 @@ const LifeCostOfLiving = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </div>
   );
 };
 
