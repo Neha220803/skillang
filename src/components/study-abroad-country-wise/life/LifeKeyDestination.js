@@ -63,76 +63,71 @@ const LifeKeyDestination = () => {
   };
 
   return (
-    <section className="my-5">
-      <Container>
-        <div className="mb-4">
-          <h2 className="subheading-big-medium text-content-secondary">
-            Key Destinations in United Kingdom
-          </h2>
-        </div>
+    <>
+      <div className="mb-4">
+        <h2 className="subheading-big-medium text-content-secondary">
+          Key Destinations in United Kingdom
+        </h2>
+      </div>
 
-        {/* City tabs */}
-        <div className="d-flex flex-wrap mb-4 city-tabs">
-          {cities.map((city) => (
-            <Button
-              key={city}
-              variant={activeCity === city ? "dark" : "light"}
-              className="rounded-pill me-2 mb-2 px-3 py-1"
-              onClick={() => setActiveCity(city)}
-            >
-              {city}
-            </Button>
-          ))}
-        </div>
+      {/* City tabs */}
+      <div className="d-flex flex-wrap mb-4 city-tabs">
+        {cities.map((city) => (
+          <Button
+            key={city}
+            variant={activeCity === city ? "dark" : "light"}
+            className="rounded-pill me-2 mb-2 px-3 py-1"
+            onClick={() => setActiveCity(city)}
+          >
+            {city}
+          </Button>
+        ))}
+      </div>
 
-        {/* Categories */}
-        <Row className="categories-row mb-4 text-center">
-          {categories.map((category) => (
-            <Col
-              key={category.id}
-              xs={4}
-              sm={3}
-              md={2}
-              lg={true}
-              className="mb-4"
-            >
-              <div className="category-item d-flex flex-column align-items-center">
-                <div
-                  className="category-icon rounded-circle mb-2 d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                    backgroundColor: "#4a90e2",
-                    color: "white",
-                    border: "2px solid #ff934f",
-                  }}
-                >
-                  {category.icon}
-                </div>
-                <div className="category-name small">{category.name}</div>
+      {/* Categories */}
+      <Row className="categories-row mb-4 text-center">
+        {categories.map((category) => (
+          <Col
+            key={category.id}
+            xs={4}
+            sm={3}
+            md={2}
+            lg={true}
+            className="mb-4"
+          >
+            <div className="category-item d-flex flex-column align-items-center">
+              <div
+                className="category-icon rounded-circle mb-2 d-flex align-items-center justify-content-center"
+                style={{
+                  width: "70px",
+                  height: "70px",
+                  backgroundColor: "#4a90e2",
+                  color: "white",
+                  border: "2px solid #ff934f",
+                }}
+              >
+                {category.icon}
               </div>
-            </Col>
-          ))}
-        </Row>
+              <div className="category-name small">{category.name}</div>
+            </div>
+          </Col>
+        ))}
+      </Row>
 
-        {/* City image */}
-        <div
-          className="city-image-container rounded-4 overflow-hidden mb-4"
-          style={{ height: "300px" }}
-        >
-          <img
-            src={cityImages[activeCity] || "/images/london-tower-bridge.jpg"}
-            alt={`${activeCity} landmark`}
-            className="w-100 h-100 object-fit-cover"
-            style={{ objectPosition: "center" }}
-          />
-        </div>
-      </Container>
+      {/* City image */}
+      <div
+        className="city-image-container rounded-4 overflow-hidden mb-4"
+        style={{ height: "300px" }}
+      >
+        <img
+          src={cityImages[activeCity] || "/images/london-tower-bridge.jpg"}
+          alt={`${activeCity} landmark`}
+          className="w-100 h-100 object-fit-cover"
+          style={{ objectPosition: "center" }}
+        />
+      </div>
 
       <style jsx>{`
-        .categories-row {
-          --bs-gutter-x: 0.5rem;
-        }
         .category-icon {
           transition: all 0.3s ease;
         }
@@ -143,7 +138,7 @@ const LifeKeyDestination = () => {
           transition: all 0.3s ease;
         }
       `}</style>
-    </section>
+    </>
   );
 };
 

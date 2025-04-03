@@ -13,7 +13,7 @@ import "./education.css";
 const EduRankingComp = ({ country = "uk" }) => {
   const [showAll, setShowAll] = useState(false);
   const data = countryWiseData[country];
-  if (!data || !data.overview || !data.overview.universityRankings) {
+  if (!data || !data.education || !data.education.universityRankings) {
     return <div>University ranking data not available</div>;
   }
   const universityRankings = data.education.universityRankings;

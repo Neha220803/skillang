@@ -8,3 +8,28 @@
 .study-aborad-country-text-wrapper {
   width: 50% !important;
 }
+
+.circle-blur {
+  position: absolute !important;
+  width: 190px !important;
+  height: 190px !important;
+  left: calc(50% - 190px / 2) !important;
+  bottom: 0px !important;
+  background: #f6c24c !important;
+  filter: blur(222px) !important;
+}
+
+@media (max-width: 768px) {
+  .country-wise-img {
+    height: 300px !important;
+    object-position: right !important;
+  }
+  .study-aborad-country-text-wrapper {
+    width: 100% !important;
+  }
+  .circle-blur {
+    width: 122px !important;
+    height: 122px !important;
+    left: calc(50% - 122px / 2 + 0.5px) !important;
+  }
+}

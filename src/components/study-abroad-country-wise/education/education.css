@@ -68,6 +68,7 @@
   gap: 16px !important;
   border: 1px solid #e3e3e3 !important;
   border-radius: 24px !important;
+  height: 100% !important;
 }
 
 .edu-top-progs-container {
@@ -76,4 +77,27 @@
   flex-wrap: nowrap !important;
   overflow-x: auto !important;
   /* d-flex flex-nowrap overflow-auto */
+}
+
+/* Custom styles for the program tabs */
+.program-tabs .nav-link.active {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+.program-tabs .nav-link {
+  transition: all 0.3s ease;
+}
+
+/* Make sure the card body expands to fill the available space */
+.edu-top-progs-card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex: 1 !important;
+}
+
+/* Remove scrollbar for a cleaner look */
+.edu-top-progs-container::-webkit-scrollbar {
+  display: none !important;
 }

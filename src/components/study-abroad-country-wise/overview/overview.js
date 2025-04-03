@@ -69,32 +69,34 @@ const StudyAbroadCountryOverview = ({ country = "uk" }) => {
             </Row>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} className="">
             <Card className="facts-card">
               <Card.Header className="bg-white border-0">
                 <div className="text-center subheading-big-medium text-content-secondary">
                   Quick Facts
                 </div>
               </Card.Header>
-              <Card.Body className="">
-                <Row>
+              <Card.Body className="w-100">
+                <Row className="g-2">
                   {overview.facts.map((fact, index) => (
-                    <Col md={6} key={index} className="">
-                      <div className="d-flex align-items-start fact-indi-card">
-                        <img
-                          src={fact.icon}
-                          alt={fact.label}
-                          style={{ width: "40px", height: "40px" }}
-                        />
-                        <div>
-                          <div className="caption-bold text-content-tertiary mb-1">
+                    <Col md={6} sm={6} xs={6} key={index} className="p-0">
+                      <div className="fact-indi-card h-100">
+                        <div className="fact-icon-container">
+                          <img
+                            src={fact.icon}
+                            alt={fact.label}
+                            className="fact-icon"
+                          />
+                        </div>
+                        <div className="fact-content">
+                          <div className="caption-bold text-content-tertiary mb-1 fact-label">
                             {fact.label}
                           </div>
-                          <div className="subheading-small-medium text-content-secondary fs-5">
+                          <div className="subheading-small-medium text-content-secondary fact-value">
                             {fact.hasSplit ? (
                               <>
                                 {fact.value.split(fact.splitChar)[0]}
-                                <span className="caption-bold text-content-tertiary fs-6">
+                                <span className="caption-bold text-content-tertiary">
                                   {fact.splitChar === "/" ? "/" : "("}
                                   {fact.value.split(fact.splitChar)[1]}
                                 </span>

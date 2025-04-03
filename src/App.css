@@ -29,6 +29,16 @@ section {
   margin-bottom: 0px !important;
 }
 
+.country-page-spacing {
+  padding-bottom: 154px !important;
+  margin-bottom: 0px !important;
+}
+
+.country-subsection-spacing {
+  padding-bottom: 72px !important;
+  margin-bottom: 0px !important;
+}
+
 @media (max-width: 768px) {
   .section-spacing {
     /* background-color: pink !important; */
@@ -36,6 +46,12 @@ section {
   }
   .homepage-section-spacing {
     padding-bottom: 80px !important;
+  }
+  .country-page-spacing {
+    padding-bottom: 64px !important;
+  }
+  .country-subsection-spacing {
+    padding-bottom: 24px !important;
   }
 }
 

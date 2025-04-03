@@ -7,8 +7,16 @@
   );
   background-image: url("../../../assets/images/study-abroad-county-wise/countryBG.jpg");
   border-radius: 16px;
-  padding: 40px;
-  margin: 30px 0;
+  background-repeat: no-repeat !important;
+  background-position: left !important;
+  background-size: cover !important;
+  padding: 45px !important;
+}
+@media (max-width: 768px) {
+  .university-choice-section {
+    padding: 20px !important;
+    background-position: center !important;
+  }
 }
 
 /* For the button */

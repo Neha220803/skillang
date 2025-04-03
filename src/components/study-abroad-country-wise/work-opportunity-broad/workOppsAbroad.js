@@ -12,14 +12,21 @@ const WorkOppsAbroadComp = () => {
         <Row>
           <div className="heading-big-medium">Work Abroad Opps</div>
         </Row>
-        <WorkVisaRoute />
-        <UniContactComp
-          heading="Get a Two-Year Post Work Visa"
-          description="Explore your opportunities to work abroad after graduation."
-          buttonText="Connect with Us"
-          onButtonClick={() => console.log("Connect button clicked")}
-        />
-        <WorkTopCompanies />
+        <div className="country-subsection-spacing ">
+          <WorkVisaRoute />
+        </div>
+
+        <div className="country-subsection-spacing">
+          <UniContactComp
+            heading="Get a Two-Year Post Work Visa"
+            description="Explore your opportunities to work abroad after graduation."
+            buttonText="Connect with Us"
+            onButtonClick={() => console.log("Connect button clicked")}
+          />
+        </div>
+        <div className="country-subsection-spacin">
+          <WorkTopCompanies />
+        </div>
       </Container>
     </section>
   );

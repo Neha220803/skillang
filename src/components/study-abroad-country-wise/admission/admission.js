@@ -9,14 +9,18 @@ const AdmissionAbroadCountry = ({ country = "uk" }) => {
   const data = countryWiseData[country];
   return (
     <section className="d-flex flex-column align-items-center justify-content-center ">
-      <Container>
+      <Container className="">
         <Row>
-          <div className="heading-big-medium">
+          <div className="heading-big-medium mb-5">
             Admissions in {data.fullForm}
           </div>
         </Row>
-        <AdmiRequirementComp />
-        <AdmiEntranceComp />
+        <div className="country-subsection-spacing ">
+          <AdmiRequirementComp />
+        </div>
+        <div className="country-subsection-spacing ">
+          <AdmiEntranceComp />
+        </div>
         <UniContactComp
           heading="Speak Confidently, Succeed Globally!"
           description="Master German & English | 🎯 Ace IELTS & More | 🚀 Book a Free Demo Today!"

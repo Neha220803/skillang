@@ -14,6 +14,22 @@ import uniPart3 from "../assets/images/study-abroad-county-wise/ourPartnerUni3.j
 import uniPart4 from "../assets/images/study-abroad-county-wise/ourPartnerUni14.jpg";
 import uniPart5 from "../assets/images/study-abroad-county-wise/ourPartnerUni5.jpg";
 
+import icon1 from "../assets/icons/study-abroad-country-wise/document-text.svg";
+import icon2 from "../assets/icons/study-abroad-country-wise/translate.svg";
+import icon3 from "../assets/icons/study-abroad-country-wise/paperclip-2.svg";
+import icon4 from "../assets/icons/study-abroad-country-wise/document-like.svg";
+import icon5 from "../assets/icons/study-abroad-country-wise/document.svg";
+import icon6 from "../assets/icons/study-abroad-country-wise/wallet-search.svg";
+
+import {
+  FaGraduationCap,
+  FaBriefcase,
+  FaRocket,
+  FaUsers,
+  FaLightbulb,
+  FaIdCard,
+} from "react-icons/fa";
+
 const countryWiseData = {
   uk: {
     shortForm: "UK",
@@ -237,6 +253,258 @@ const countryWiseData = {
         },
       ],
       programTypes: ["all", "bachelors", "masters", "phd"],
+    },
+    admission: {
+      requirementsData: [
+        {
+          id: 1,
+          icon: icon1,
+          title: "Academic Qualifications",
+          description:
+            "Hold a recognized secondary school certificate (for undergraduates) or a relevant bachelor's degree (for postgraduates) with satisfactory grades, along with any subject-specific prerequisites.",
+        },
+        {
+          id: 2,
+          icon: icon2,
+          title: "English Language Proficiency",
+          description:
+            "Achieve the required scores in tests like IELTS or TOEFL (typically an overall IELTS band of 6.0-7.0) to demonstrate adequate English skills.",
+        },
+        {
+          id: 3,
+          icon: icon3,
+          title: "SOP",
+          description:
+            "Submit a compelling essay outlining your academic goals, motivations, and reasons for choosing the UK.",
+        },
+        {
+          id: 4,
+          icon: icon4,
+          title: "Letters of Recommendation",
+          description:
+            "Provide one or more academic references from teachers or previous academic supervisors to support your application.",
+        },
+        {
+          id: 5,
+          icon: icon5,
+          title: "Additional Requirements",
+          description:
+            "Hold a recognized secondary school certificate (for undergraduates) or a relevant bachelor's degree (for postgraduates) with satisfactory grades, along with any subject-specific prerequisites.",
+        },
+        {
+          id: 6,
+          icon: icon6,
+          title: "Financial Proof",
+          description:
+            "Show evidence of sufficient funds to cover tuition fees and living expenses, as required by UK visa regulations.",
+        },
+      ],
+      entranceExamData: [
+        {
+          id: 1,
+          exam: "IELTS",
+          fullName: "(International English Language Testing System)",
+          criteria: [
+            "6.5 overall (with no band less than 6.0).",
+            "Higher scores for competitive programs like medicine or law.",
+          ],
+          requiredFor:
+            "Required for most undergraduate and postgraduate programs taught in English.",
+        },
+        {
+          id: 2,
+          exam: "TOEFL",
+          fullName: "(Test of English as a Foreign Language)",
+          criteria: [
+            "Minimum required scores typically range from 79-100, depending on the course.",
+          ],
+          requiredFor:
+            "Required for English-taught undergraduate and postgraduate programs.",
+        },
+        {
+          id: 3,
+          exam: "PTE Academic",
+          fullName: "(Pearson Test of English Academic)",
+          criteria: [
+            "Typically required scores: 58-65, depending on the university.",
+          ],
+          requiredFor:
+            "Accepted for a wide range of undergraduate and postgraduate programs.",
+        },
+        {
+          id: 4,
+          exam: "GMAT",
+          fullName: "(Graduate Management Admission Test)",
+          criteria: [
+            "Required scores: typically between 550-700, depending on the institution.",
+          ],
+          requiredFor:
+            "Required for MBA and postgraduate management-related programs.",
+        },
+        {
+          id: 5,
+          exam: "GRE",
+          fullName: "(Graduate Record Examinations)",
+          criteria: [
+            "Scores typically range from 300-320, depending on the institution.",
+          ],
+          requiredFor:
+            "Required for some postgraduate programs, especially in technical fields like engineering and computer science.",
+        },
+        {
+          id: 6,
+          exam: "SAT",
+          fullName: "(Scholastic Assessment Test)",
+          criteria: [
+            "Typically requires scores above 1200 for competitive universities.",
+          ],
+          requiredFor:
+            "Required for undergraduate admissions at some UK universities, especially for American curriculum students.",
+        },
+      ],
+    },
+    life: {},
+    workAbroadOpps: {
+      visaRoutes: [
+        {
+          id: 1,
+          route: "Graduate route",
+          icon: <FaGraduationCap size={20} />,
+          color: "#4285F4",
+          requirements: [
+            "Degree or relevant qualification from a UK Higher Education provider on or after 1 July 2021.",
+            "Two-year work visa.",
+          ],
+        },
+        {
+          id: 2,
+          route: "Skilled worker route",
+          icon: <FaBriefcase size={20} />,
+          color: "#F4B400",
+          requirements: [
+            "Require sponsorship by a licensed employer for a specific job that meets minimum salary and skill requirements.",
+            "Your salary must be at least £20,960 - or more.",
+          ],
+        },
+        {
+          id: 3,
+          route: "Start-up route",
+          icon: <FaRocket size={20} />,
+          color: "#0F9D58",
+          requirements: [
+            "For those who want to start a business in the UK.",
+            "Need an approved business plan endorsed by a Home Office-endorsed body.",
+          ],
+        },
+        {
+          id: 4,
+          route: "Students' union sabbatical officers",
+          icon: <FaUsers size={20} />,
+          color: "#DB4437",
+          requirements: [
+            "Sabbatical officers at UK and overseas establishments or the National Union of Students can stay in the country under the Student route without being required to study.",
+            "Permission can be granted for 12 months and extended to up to two years if elected.",
+          ],
+        },
+        {
+          id: 5,
+          route: "Innovator Founder",
+          icon: <FaLightbulb size={20} />,
+          color: "#4B0082",
+          requirements: [
+            "The route is for migrants wanting to start a new, innovative, viable, and scalable business in the UK.",
+            "Requires an endorsing body to endorse the business idea.",
+          ],
+        },
+        {
+          id: 6,
+          route: "India Young Professionals Scheme",
+          icon: <FaIdCard size={20} />,
+          color: "#00BFFF",
+          requirements: [
+            "Allows Indian citizens aged 18 to 30 to work and live in the UK for two years.",
+            "They must first be selected through the scheme's ballot process.",
+          ],
+        },
+      ],
+      topCompaniesData: [
+        {
+          id: 1,
+          city: "London/Greater London",
+          industries: [
+            {
+              name: "Finance, Technology",
+              companies: "Barclays, Google, Deloitte, Clifford Chance",
+            },
+            {
+              name: "Finance, Consulting",
+              companies: "HSBC, PwC, Bain & Company",
+            },
+            {
+              name: "Technology, Engineering",
+              companies: "Microsoft, Dyson, BP",
+            },
+            {
+              name: "Healthcare, Law",
+              companies: "GlaxoSmithKline, NHS, Freshfields Bruckhaus Deringer",
+            },
+            {
+              name: "Business, Finance",
+              companies: "EY, Lloyd's of London, Accenture",
+            },
+            {
+              name: "Medicine, Law",
+              companies: "Barts Health NHS Trust, Norton Rose Fulbright",
+            },
+            {
+              name: "Engineering, Design",
+              companies: "Jaguar Land Rover, Siemens, Sony",
+            },
+          ],
+        },
+        {
+          id: 2,
+          city: "Oxford/Oxfordshire",
+          industries: [
+            {
+              name: "Education, Research",
+              companies: "Oxford University Press, IBM, Oxford Nanopore",
+            },
+            {
+              name: "Automotive, Publishing",
+              companies: "BMW Group, Pearson Education",
+            },
+          ],
+        },
+        {
+          id: 3,
+          city: "Cambridge/Cambridgeshire",
+          industries: [
+            {
+              name: "Technology, Biotech",
+              companies: "AstraZeneca, ARM, Microsoft Research",
+            },
+            {
+              name: "Education, Healthcare",
+              companies: "Philips Healthcare, Addenbrooke's Hospital",
+            },
+          ],
+        },
+        {
+          id: 4,
+          city: "Manchester/Greater Manchester",
+          industries: [
+            {
+              name: "Media, Technology",
+              companies: "BBC, Auto Trader UK, Booking.com",
+            },
+            {
+              name: "Finance, Retail",
+              companies: "Co-operative Bank, Boohoo, JD Sports",
+            },
+          ],
+        },
+      ],
     },
   },
   us: {

@@ -27,6 +27,16 @@ const HomePage = () => {
           name="keywords"
           content="abroad consultancy, Best abroad consultancy in Chennai, overseas consultancy, best overseas consultancy, Chennai best consultancy for abroad"
         />
+        <meta
+          name="description"
+          content="Skillang offers comprehensive study abroad, work abroad, and language test preparation services for global opportunities."
+        />
+        {/* Additional meta tags */}
+        <meta
+          name="keywords"
+          content="Skillang, career abroad, study abroad, work abroad, language preparation"
+        />
+        <link rel="canonical" href="https://skillang.com" />
       </Helmet>
       <div className="homepage-section-spacing">
         <HomeHeader2 />

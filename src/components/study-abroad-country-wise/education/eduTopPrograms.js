@@ -42,7 +42,7 @@ const EduTopProgramsComponent = ({ country = "uk" }) => {
         <Nav.Item>
           <Nav.Link
             className={`rounded-pill me-2 px-4 ${
-              activeTab === "all" ? "active" : "bg-light text-dark"
+              activeTab === "all" ? "bg-dark text-white" : "bg-light text-dark"
             }`}
             onClick={() => setActiveTab("all")}
           >
@@ -52,7 +52,9 @@ const EduTopProgramsComponent = ({ country = "uk" }) => {
         <Nav.Item>
           <Nav.Link
             className={`rounded-pill me-2 px-4 ${
-              activeTab === "bachelors" ? "active" : "bg-light text-dark"
+              activeTab === "bachelors"
+                ? "bg-dark text-white"
+                : "bg-light text-dark"
             }`}
             onClick={() => setActiveTab("bachelors")}
           >
@@ -62,7 +64,9 @@ const EduTopProgramsComponent = ({ country = "uk" }) => {
         <Nav.Item>
           <Nav.Link
             className={`rounded-pill me-2 px-4 ${
-              activeTab === "masters" ? "active" : "bg-light text-dark"
+              activeTab === "masters"
+                ? "bg-dark text-white"
+                : "bg-light text-dark"
             }`}
             onClick={() => setActiveTab("masters")}
           >
@@ -72,7 +76,7 @@ const EduTopProgramsComponent = ({ country = "uk" }) => {
         <Nav.Item>
           <Nav.Link
             className={`rounded-pill me-2 px-4 ${
-              activeTab === "phd" ? "active" : "bg-light text-dark"
+              activeTab === "phd" ? "bg-dark text-white" : "bg-light text-dark"
             }`}
             onClick={() => setActiveTab("phd")}
           >
@@ -81,18 +85,18 @@ const EduTopProgramsComponent = ({ country = "uk" }) => {
         </Nav.Item>
       </Nav>
 
-      <div className=" edu-top-progs-container  pb-3">
+      <div className="edu-top-progs-container pb-3">
         {filteredPrograms.map((program) => (
           <div
             key={program.id}
             className="me-4"
             style={{ minWidth: "280px", maxWidth: "280px" }}
           >
-            <Card className="h-100 edu-top-progs-card ">
+            <Card className="h-100 edu-top-progs-card d-flex">
               <Card.Title className="paragraph-big-medium mb-3">
                 {program.title}
               </Card.Title>
-              <Card.Body className="p-0 justify-content-between">
+              <Card.Body className="p-0 d-flex flex-column justify-content-between flex-grow-1">
                 <div>
                   <div className="d-flex align-items-center text-content-secondary mb-2">
                     <FaGraduationCap className="me-2" />
@@ -123,7 +127,7 @@ const EduTopProgramsComponent = ({ country = "uk" }) => {
                   </div>
                 </div>
 
-                <div className="d-flex justify-content-between mt-3">
+                <div className="d-flex justify-content-between mt-auto">
                   <button className="btn-primary-outline me-2">
                     <IoBookmarksOutline
                       style={{ width: "24px", height: "24px" }}

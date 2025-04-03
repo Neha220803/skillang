@@ -1,167 +1,79 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
 import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
+import countryWiseData from "../../../data/countryWiseData";
 
-const WorkTopCompanies = () => {
-  // Sample companies data
-  const companiesData = [
-    {
-      id: 1,
-      city: "London/Greater London",
-      industries: [
-        {
-          name: "Finance, Technology",
-          companies: "Barclays, Google, Deloitte, Clifford Chance",
-        },
-        {
-          name: "Finance, Consulting",
-          companies: "HSBC, PwC, Bain & Company",
-        },
-        {
-          name: "Technology, Engineering",
-          companies: "Microsoft, Dyson, BP",
-        },
-        {
-          name: "Healthcare, Law",
-          companies: "GlaxoSmithKline, NHS, Freshfields Bruckhaus Deringer",
-        },
-        {
-          name: "Business, Finance",
-          companies: "EY, Lloyd's of London, Accenture",
-        },
-        {
-          name: "Medicine, Law",
-          companies: "Barts Health NHS Trust, Norton Rose Fulbright",
-        },
-        {
-          name: "Engineering, Design",
-          companies: "Jaguar Land Rover, Siemens, Sony",
-        },
-      ],
-    },
-    {
-      id: 2,
-      city: "Oxford/Oxfordshire",
-      industries: [
-        {
-          name: "Education, Research",
-          companies: "Oxford University Press, IBM, Oxford Nanopore",
-        },
-        {
-          name: "Automotive, Publishing",
-          companies: "BMW Group, Pearson Education",
-        },
-      ],
-    },
-    {
-      id: 3,
-      city: "Cambridge/Cambridgeshire",
-      industries: [
-        {
-          name: "Technology, Biotech",
-          companies: "AstraZeneca, ARM, Microsoft Research",
-        },
-        {
-          name: "Education, Healthcare",
-          companies: "Philips Healthcare, Addenbrooke's Hospital",
-        },
-      ],
-    },
-    {
-      id: 4,
-      city: "Manchester/Greater Manchester",
-      industries: [
-        {
-          name: "Media, Technology",
-          companies: "BBC, Auto Trader UK, Booking.com",
-        },
-        {
-          name: "Finance, Retail",
-          companies: "Co-operative Bank, Boohoo, JD Sports",
-        },
-      ],
-    },
-  ];
-
+const WorkTopCompanies = ({ country = "uk" }) => {
   const [showAll, setShowAll] = useState(false);
+  const data = countryWiseData[country];
+  if (!data || !data.workAbroadOpps || !data.workAbroadOpps.topCompaniesData) {
+    return <div>Top Companies data not available</div>;
+  }
+
+  const companiesData = data.workAbroadOpps.topCompaniesData;
   const displayedCompanies = showAll
     ? companiesData
     : companiesData.slice(0, 3);
 
   return (
-    <section className="my-5">
-      <Container>
-        <div className="mb-4 subheading-big-medium">
-          Top Companies in the UK
-        </div>
+    <>
+      <div className="mb-4 subheading-big-medium">
+        Top Companies in the {country.toUpperCase()}
+      </div>
 
-        <div className="table-responsive">
-          <table className="edu-ranking-table caption-bold text-content-secondary">
-            <thead className="bg-light">
-              <tr>
-                <th className="py-3 px-4" style={{ width: "20%" }}>
-                  City/County
-                </th>
-                <th className="py-3 px-4" style={{ width: "30%" }}>
-                  Industry
-                </th>
-                <th className="py-3 px-4" style={{ width: "50%" }}>
-                  Top Companies Nearby
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {displayedCompanies.map((cityData) =>
-                cityData.industries.map((industry, industryIndex) => (
-                  <tr key={`${cityData.id}-${industryIndex}`}>
-                    {industryIndex === 0 ? (
-                      <td
-                        className="py-3 px-4 align-middle"
-                        rowSpan={cityData.industries.length}
-                      >
-                        <strong>{cityData.city}</strong>
-                      </td>
-                    ) : null}
-                    <td className="py-3 px-4 text-muted">{industry.name}</td>
-                    <td className="py-3 px-4">{industry.companies}</td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="text-center mt-3">
-          <button
-            className="btn-secondary-outline d-flex align-items-center mx-auto"
-            onClick={() => setShowAll(!showAll)}
-          >
-            {showAll ? (
-              <>
-                Close all <ChevronUp className="ms-2" />
-              </>
-            ) : (
-              <>
-                View all <ChevronDown className="ms-2" />
-              </>
+      <div className="table-responsive">
+        <table className="edu-ranking-table caption-bold text-content-secondary">
+          <thead className="bg-light">
+            <tr>
+              <th className="py-3 px-4" style={{ width: "20%" }}>
+                City/County
+              </th>
+              <th className="py-3 px-4" style={{ width: "30%" }}>
+                Industry
+              </th>
+              <th className="py-3 px-4" style={{ width: "50%" }}>
+                Top Companies Nearby
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {displayedCompanies.map((cityData) =>
+              cityData.industries.map((industry, industryIndex) => (
+                <tr key={`${cityData.id}-${industryIndex}`}>
+                  {industryIndex === 0 ? (
+                    <td
+                      className="py-3 px-4 align-middle"
+                      rowSpan={cityData.industries.length}
+                    >
+                      <strong>{cityData.city}</strong>
+                    </td>
+                  ) : null}
+                  <td className="py-3 px-4 text-muted">{industry.name}</td>
+                  <td className="py-3 px-4">{industry.companies}</td>
+                </tr>
+              ))
             )}
-          </button>
-        </div>
-      </Container>
+          </tbody>
+        </table>
+      </div>
 
-      <style jsx>{`
-        .top-companies-table th {
-          font-weight: 600;
-          color: #505050;
-        }
-        .top-companies-table td {
-          vertical-align: middle;
-        }
-        .top-companies-table tr {
-          border-bottom: 1px solid #eee;
-        }
-      `}</style>
-    </section>
+      <div className="text-center mt-3">
+        <button
+          className="btn-secondary-outline d-flex align-items-center mx-auto"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? (
+            <>
+              Close all <ChevronUp className="ms-2" />
+            </>
+          ) : (
+            <>
+              View all <ChevronDown className="ms-2" />
+            </>
+          )}
+        </button>
+      </div>
+    </>
   );
 };
 

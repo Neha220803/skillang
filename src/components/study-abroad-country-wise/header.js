@@ -7,7 +7,8 @@ const CountryWiseHeaderComp = ({ country = "uk" }) => {
   const data = countryWiseData[country];
 
   return (
-    <header className="d-flex align-items-center justify-content-center text-center pt-5">
+    <header className="d-flex align-items-center justify-content-center text-center py-5 overflow-hidden">
+      <div className="circle-blur"></div>
       <Container className="mt-5">
         <Row>
           <Image
@@ -21,7 +22,7 @@ const CountryWiseHeaderComp = ({ country = "uk" }) => {
             Study in {data.fullForm}
           </div>
         </Row>
-        <Row className="d-flex align-items-center justify-content-center my-3">
+        <Row className="d-flex align-items-center justify-content-center my-2">
           <div className="paragraph-big-medium study-aborad-country-text-wrapper">
             {data.description}
           </div>

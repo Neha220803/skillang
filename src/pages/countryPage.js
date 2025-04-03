@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 import CountryWiseHeaderComp from "../components/study-abroad-country-wise/header";
 import StudyAbroadCountryOverview from "../components/study-abroad-country-wise/overview/overview";
 import NavSecondary from "../components/study-abroad-country-wise/nav/nav-secondary";
@@ -10,15 +11,27 @@ import WorkOppsAbroadComp from "../components/study-abroad-country-wise/work-opp
 
 const CountryPage = () => {
   return (
-    <div>
+    <div className="">
       <CountryWiseHeaderComp />
       <NavSecondary />
-      <StudyAbroadCountryOverview />
-      <EducationAbroadCountry />
-      <AdmissionAbroadCountry />
-      <ScholarshipAbroadCountry />
-      <LifeInAbroadCountry />
-      <WorkOppsAbroadComp />
+      <div className="country-page-spacing">
+        <StudyAbroadCountryOverview />
+      </div>
+      <div className="country-page-spacing">
+        <EducationAbroadCountry />
+      </div>
+      <div className="country-page-spacin">
+        <AdmissionAbroadCountry />
+      </div>
+      <div className="country-page-spacing">
+        <ScholarshipAbroadCountry />
+      </div>
+      <div className="country-page-spacing">
+        <LifeInAbroadCountry />
+      </div>
+      <div className="country-page-spacing">
+        <WorkOppsAbroadComp />
+      </div>
     </div>
   );
 };

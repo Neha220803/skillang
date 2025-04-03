@@ -2,12 +2,19 @@
   background-image: url("../../../assets/images/study-abroad-county-wise/scholarShipBg.jpg");
   background-position: top !important;
   background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-radius: 0 0 80px 80px !important;
+  /* width: 100vw !important; */
 }
 
 .scholarship-content {
   padding: 20px 0;
   position: relative;
   z-index: 1;
+}
+
+.scholarship-list {
+  width: 75% !important;
 }
 
 .scholarship-item a {
