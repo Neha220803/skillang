@@ -27,3 +27,91 @@
   border: 1px solid #9addc6 !important;
   border-radius: 16px !important;
 }
+
+.category-icon {
+  transition: all 0.3s ease;
+}
+.category-item:hover .category-icon {
+  transform: scale(1.05);
+}
+.city-tabs .btn {
+  transition: all 0.3s ease;
+}
+
+.category-item:hover .category-icon {
+  box-shadow: 0 0 15px rgba(255, 147, 79, 0.6);
+}
+
+/* Stories overlay styling */
+.stories-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stories-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+}
+
+.stories-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Add animation for the stories entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stories-overlay {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Make the story navigation clearer */
+.stories-overlay :global(.ril__navButtons) {
+  opacity: 0.7;
+}
+
+.stories-overlay :global(.ril__navButtons:hover) {
+  opacity: 1;
+}
+
+/* Add a hint to indicate the icons are clickable */
+.category-name::after {
+  content: "View Stories";
+  display: block;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #ff934f;
+  margin-top: 3px;
+}
+
+.category-item:hover .category-name::after {
+  opacity: 1;
+}
