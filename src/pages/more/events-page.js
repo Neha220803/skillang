@@ -1,11 +1,13 @@
 import React from "react";
+import EventsHeader from "../../sections/more/events-sections/eventsHeader";
+import UpComingEvents from "../../sections/more/events-sections/upComingEvents";
 
 const EventsPage = () => {
   return (
     <div>
       <div className="heading-big-medium">Events at Skillang</div>
-      <div className="heading-big-medium">Events at Skillang</div>
-      <div className="heading-big-medium">Events at Skillang</div>
+      <EventsHeader />
+      <UpComingEvents />
     </div>
   );
 };
