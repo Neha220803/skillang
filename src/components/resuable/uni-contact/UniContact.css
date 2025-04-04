@@ -18,19 +18,3 @@
     background-position: center !important;
   }
 }
-
-/* For the button */
-.connect-button {
-  background-color: #f27851;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.connect-button:hover {
-  background-color: #e56641;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}

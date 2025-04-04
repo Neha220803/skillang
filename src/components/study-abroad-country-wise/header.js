@@ -7,7 +7,7 @@ const CountryWiseHeaderComp = ({ country = "uk" }) => {
   const data = countryWiseData[country];
 
   return (
-    <header className="d-flex align-items-center justify-content-center text-center py-5 overflow-hidden">
+    <header className="d-flex align-items-center justify-content-center text-center py-5 study-aborad-country-header">
       <div className="circle-blur"></div>
       <Container className="mt-5">
         <Row>

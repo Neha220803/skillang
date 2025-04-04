@@ -16,9 +16,9 @@ const UniContactComp = ({
           <div className="paragraph-big-medium">{description}</div>
         </Col>
         <Col md={4} className="text-md-end">
-          <Button className="connect-button" onClick={onButtonClick}>
+          <button className="btn-primary" onClick={onButtonClick}>
             {buttonText}
-          </Button>
+          </button>
         </Col>
       </Row>
     </div>

@@ -21,6 +21,9 @@ import icon4 from "../assets/icons/study-abroad-country-wise/document-like.svg";
 import icon5 from "../assets/icons/study-abroad-country-wise/document.svg";
 import icon6 from "../assets/icons/study-abroad-country-wise/wallet-search.svg";
 
+import LandMark1 from "../assets/images/study-abroad-county-wise/keyDestiLand1.jpg";
+import LandMark2 from "../assets/images/study-abroad-county-wise/keyDestiLand2.jpg";
+
 import {
   FaGraduationCap,
   FaBriefcase,
@@ -363,7 +366,174 @@ const countryWiseData = {
         },
       ],
     },
-    life: {},
+    life: {
+      cities: ["London", "Oxford", "Cambridge", "Manchester", "Edinburgh"],
+      cityStoriesData: {
+        London: {
+          landmarks: [
+            {
+              url: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1486299267070-83823f5448dd",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1602940659805-770d1b3b9911",
+            },
+          ],
+          universities: [
+            {
+              url: "https://images.unsplash.com/photo-1543505298-b8be9b52a21a",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1591429939960-b7d5add10b5c",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1631193816258-28b94f43ea84",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1596465727821-253ebd5dffc6",
+            },
+          ],
+        },
+        Oxford: {
+          landmarks: [
+            {
+              url: "https://images.unsplash.com/photo-1560531516-294aa1bcc84c",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1548231644-3aa15efcbf68",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1580420098304-8561d17b707b",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1608456902986-73a8208e2184",
+            },
+          ],
+          universities: [
+            {
+              url: "https://images.unsplash.com/photo-1580420098304-8561d17b707b",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1610406716688-989c6a5d39c8",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1591429939960-b7d5add10b5c",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1613145206130-8afc6a11f8ba",
+            },
+          ],
+        },
+        Cambridge: {
+          landmarks: [
+            {
+              url: "https://images.unsplash.com/photo-1579960174756-1543a1490266",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1589894404892-7310b92ea7fd",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1579960174756-1543a1490266",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1621853665587-90b88b8d7082",
+            },
+          ],
+          universities: [
+            {
+              url: "https://images.unsplash.com/photo-1579960174756-1543a1490266",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1579960174756-1543a1490266",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1598867742498-4eba2656104c",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1579960174756-1543a1490266",
+            },
+          ],
+        },
+        Manchester: {
+          landmarks: [
+            {
+              url: "https://images.unsplash.com/photo-1583266600419-a569f2393af6",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1610560814085-81ce6aa1578e",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1516542285705-97ca682149a1",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1518984211399-4f3ce2e0594c",
+            },
+          ],
+          universities: [
+            {
+              url: "https://images.unsplash.com/photo-1577471488278-16eec37ffcc2",
+            },
+
+            {
+              url: "https://images.unsplash.com/photo-1633177638566-834213a0ced2",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655",
+            },
+          ],
+        },
+        Edinburgh: {
+          landmarks: [
+            {
+              url: "https://images.unsplash.com/photo-1568797629192-150fd85a32be",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1581069272774-2058e6df8c57",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1564604761388-83cf8bb5591c",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1566227283089-e017fcf54d8d",
+            },
+          ],
+          universities: [
+            {
+              url: "https://images.unsplash.com/photo-1596298501739-b5c0e3689645",
+            },
+
+            {
+              url: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1571085716425-8a5c9ee645f4",
+            },
+            {
+              url: "https://images.unsplash.com/photo-1596301518082-a9eb4445fbb3",
+            },
+          ],
+        },
+      },
+      cityImages: {
+        London: LandMark1,
+        Oxford: LandMark2,
+        Cambridge: LandMark1,
+        Manchester: LandMark2,
+        Edinburgh: LandMark1,
+        Birmingham: LandMark2,
+        Glasgow: LandMark1,
+        Bristol: LandMark2,
+        Cardiff: LandMark1,
+      },
+    },
     workAbroadOpps: {
       visaRoutes: [
         {

@@ -22,7 +22,7 @@ const StudyAbroadCountryOverview = ({ country = "uk" }) => {
   );
 
   return (
-    <section className="d-flex flex-column align-items-center justify-content-center">
+    <section className="d-flex flex-column align-items-center justify-content-center z-4">
       <Container>
         <Row className="mb-4">
           <Col>

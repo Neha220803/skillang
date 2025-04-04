@@ -34,14 +34,14 @@ const EduRankingComp = ({ country = "uk" }) => {
       <Row>
         <Col>
           <div className="table-responsive">
-            <table className=" edu-ranking-table caption-bold text-content-secondary">
+            <table className="edu-ranking-table caption-bold text-content-secondary">
               <thead className="">
                 <tr>
-                  <th className="py-3 px-4 ">University</th>
+                  <th className="py-3 px-4">University</th>
                   <th className="py-3 px-4 text-center">
-                    QS World Ranking 2025 <ArrowDown />
+                    QS World Ranking 2025 <ArrowDown className="ms-1" />
                   </th>
-                  <th className="py-3 px-4 text-center">
+                  <th className="py-3 px-4 text-center d-none d-md-table-cell">
                     QS World Ranking 2024
                   </th>
                 </tr>
@@ -50,24 +50,26 @@ const EduRankingComp = ({ country = "uk" }) => {
                 {displayedUniversities.map((university, index) => (
                   <tr key={index} className={index % 2 === 0 ? "" : "grey-200"}>
                     <td className="py-3 px-4">{university.name}</td>
-                    <td className="py-3 px-4 text-center d-flex aslign-items-center justify-content-center">
-                      <div className="uni-rank-text text-content-secondary d-flex">
-                        {university.ranking2025}
+                    <td className="py-3 px-4 text-start d-flex align-items-center justify-content-center">
+                      <div className="d-flex align-items-center justify-content-start">
+                        <div className="me-3 uni-rank-text text-content-secondary">
+                          {university.ranking2025}
+                        </div>
                         {university.change > 0 && (
-                          <span className="rank-success-pill">
+                          <span className="rank-success-pill px-2 py-1 rounded">
                             <CaretUpFill className="me-1" />
                             {university.change}
                           </span>
                         )}
                         {university.change < 0 && (
-                          <span className="text-danger ms-2">
+                          <span className="rank-danger-pill px-2 py-1 rounded">
                             <CaretDownFill className="me-1" />
                             {Math.abs(university.change)}
                           </span>
                         )}
                       </div>
                     </td>
-                    <td className="py-3 px-4 text-center ">
+                    <td className="py-3 px-4 text-center d-none d-md-table-cell">
                       {university.ranking2024}
                     </td>
                   </tr>

@@ -2,8 +2,11 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./scholarship.css";
 import EduScholarleftimg from "../../../assets/images/study-abroad-county-wise/scholarLeft.png";
+import countryWiseData from "../../../data/countryWiseData";
+import { ChevronRight } from "react-bootstrap-icons";
 
-const ScholarshipAbroadCountry = () => {
+const ScholarshipAbroadCountry = ({ country = "uk" }) => {
+  const data = countryWiseData[country];
   // Sample scholarship data
   const scholarships = [
     {
@@ -35,28 +38,30 @@ const ScholarshipAbroadCountry = () => {
           <Col lg={6} md={12}>
             <div className="scholarship-content">
               <h1 className="heading-big-medium text-white mb-3">
-                Top Scholarships Available to Study in {}
+                Top Scholarships Available to Study in {data.fullForm}
               </h1>
               <p className="text-white mb-4">
-                Discover diverse financial aid options that make your {}
-                education dream more accessible and affordable.
+                Discover diverse financial aid options that make your{" "}
+                {data.shortForm} education dream more accessible and affordable.
               </p>
 
               <div className="scholarship-list">
                 {scholarships.map((scholarship, index) => (
-                  <div key={scholarship.id} className="scholarship-item mb-3">
+                  <div key={scholarship.id} className="scholarship-item ">
                     <a
                       href={scholarship.link}
-                      className="d-flex justify-content-between align-items-center text-white text-decoration-none p-3  bg-light bg-opacity-25"
+                      className="d-flex justify-content-between align-items-center text-white text-decoration-none"
                     >
                       <span>{scholarship.name}</span>
-                      <i className="fas fa-chevron-right"></i>
+                      <span>
+                        <ChevronRight />
+                      </span>
                     </a>
                   </div>
                 ))}
               </div>
 
-              <button className="mt-4 btn-primary" href="/scholarships">
+              <button className="mt-md-4 mt-1 btn-primary">
                 View all Scholarship
               </button>
             </div>

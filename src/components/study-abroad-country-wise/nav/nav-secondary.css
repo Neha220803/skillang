@@ -1,3 +1,4 @@
+/* Secondary nav container */
 .secondary-nav-container {
   background-color: #fff;
   z-index: 998; /* Below primary nav but above content */
@@ -43,18 +44,39 @@
   position: relative;
   transition: all 0.3s ease;
   font-weight: 500;
+  background-color: transparent !important; /* Ensure no background */
+  border-radius: 0 !important; /* No border radius */
 }
 
 .sec-nav-link:hover {
   color: #e86e39 !important;
+  background-color: transparent !important; /* Ensure no background on hover */
 }
 
 .sec-active {
   color: #e86e39 !important;
   font-weight: 600;
+  background-color: transparent !important; /* Ensure no background */
 }
 
 .sec-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px;
+  background-color: #e86e39;
+}
+
+/* Remove Bootstrap's default styling for active links */
+.secondary-nav .nav-link.active {
+  color: #e86e39 !important;
+  font-weight: 600;
+  background-color: transparent !important;
+}
+
+.secondary-nav .nav-link.active::after {
   content: "";
   position: absolute;
   bottom: 0;

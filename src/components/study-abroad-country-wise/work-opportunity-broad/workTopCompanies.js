@@ -16,7 +16,7 @@ const WorkTopCompanies = ({ country = "uk" }) => {
     : companiesData.slice(0, 3);
 
   return (
-    <>
+    <div className="d-none d-md-block">
       <div className="mb-4 subheading-big-medium">
         Top Companies in the {country.toUpperCase()}
       </div>
@@ -73,7 +73,7 @@ const WorkTopCompanies = ({ country = "uk" }) => {
           )}
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

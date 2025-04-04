@@ -9,8 +9,6 @@
 
 .scholarship-content {
   padding: 20px 0;
-  position: relative;
-  z-index: 1;
 }
 
 .scholarship-list {
@@ -19,7 +17,16 @@
 
 .scholarship-item a {
   transition: all 0.3s ease;
-  border-radius: 10px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  padding: 16px !important;
+  gap: 16px !important;
+  background-color: #81a9f8 !important;
+  border: 1px solid #9dbefd !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px !important;
 }
 
 .scholarship-item a:hover {
@@ -36,11 +43,25 @@
 }
 
 @media (max-width: 992px) {
+  .edu-scholarship-bg {
+    background-image: url("../../../assets/images/study-abroad-county-wise/scholarShipBg.jpg");
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-radius: 0 0 24px 24px !important;
+    margin-bottom: 8px !important;
+    /* width: 100vw !important; */
+  }
   .scholarship-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
     padding-bottom: 30px;
   }
 
   .scholarship-content {
-    text-align: center;
+    text-align: left !important;
+  }
+  .scholarship-list {
+    width: 100% !important;
   }
 }

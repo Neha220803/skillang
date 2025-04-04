@@ -14,24 +14,30 @@ const CountryPage = () => {
     <div className="">
       <CountryWiseHeaderComp />
       <NavSecondary />
-      <div className="country-page-spacing">
+
+      <section id="overview" className="country-page-spacing">
         <StudyAbroadCountryOverview />
-      </div>
-      <div className="country-page-spacing">
+      </section>
+
+      <section id="education" className="country-page-spacing">
         <EducationAbroadCountry />
-      </div>
-      <div className="country-page-spacin">
+      </section>
+
+      <section id="admission-requirements" className="country-page-spacing">
         <AdmissionAbroadCountry />
-      </div>
-      <div className="country-page-spacing">
+      </section>
+
+      <section id="available-scholarships" className="country-page-spacing">
         <ScholarshipAbroadCountry />
-      </div>
-      <div className="country-page-spacing">
+      </section>
+
+      <section id="life" className="country-page-spacing">
         <LifeInAbroadCountry />
-      </div>
-      <div className="country-page-spacing">
+      </section>
+
+      <section id="work-opportunities" className="country-page-spacing">
         <WorkOppsAbroadComp />
-      </div>
+      </section>
     </div>
   );
 };
