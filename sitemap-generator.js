@@ -11,9 +11,7 @@ const routes = [
   "/work-abroad",
   "/study-abroad",
   "/nursing",
-  "/language-test-preparation",
-  "/ausbildung-program",
-  "/contact",
+
   // Add all other routes for your site
 ];
 

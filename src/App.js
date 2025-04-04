@@ -1,19 +1,19 @@
 import "./App.css";
 import CustomNavbar from "./components/nav/nav-bar";
 import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
-import HomePage from "./pages/home-page";
-import NursePage from "./pages/nurse-page";
-import WorkAboradPage from "./pages/work-aborad-page";
-import LangTestPage from "./pages/lang-test-page";
-import StudyAbroadPage from "./pages/study-abroad-page";
+import HomePage from "./pages/main/home-page";
+import NursePage from "./pages/main/nurse-page";
+import WorkAboradPage from "./pages/main/work-aborad-page";
+import LangTestPage from "./pages/main/lang-test-page";
+import StudyAbroadPage from "./pages/main/study-abroad-page";
 import FooterSection from "./components/footer/footer";
-import LandingNursePage from "./pages/landing-page-nurse";
-import LandingStudyAbroadPage from "./pages/landing-page-study";
-import LandingWorkAbroadPage from "./pages/landing-page-work";
-import TermsPage from "./components/footer/terms/terms";
-import PrivacyPolicyPage from "./components/footer/terms/privacyPolicy";
-import CountryPage from "./pages/countryPage";
-import EducationLoanPage from "./pages/education-loan";
+import LandingNursePage from "./pages/landing/landing-page-nurse";
+import LandingStudyAbroadPage from "./pages/landing/landing-page-study";
+import LandingWorkAbroadPage from "./pages/landing/landing-page-work";
+import TermsPage from "./sections/footer/terms/terms";
+import PrivacyPolicyPage from "./sections/footer/terms/privacyPolicy";
+import CountryPage from "./pages/main/countryPage";
+import EducationLoanPage from "./pages/more/education-loan";
 import { HelmetProvider } from "react-helmet-async";
 
 function Layout() {
