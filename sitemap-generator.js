@@ -11,8 +11,17 @@ const routes = [
   "/work-abroad",
   "/study-abroad",
   "/nursing",
-
-  // Add all other routes for your site
+  "/home",
+  "/nursing-in-germany",
+  "/study-abroad-form",
+  "/work-abroad-form",
+  "/lang-test-prep",
+  "/terms-of-use",
+  "/privacy-policy",
+  "/study-in-uk",
+  "/education-loan",
+  "/scholarships",
+  "/events",
 ];
 
 // Generate sitemap.xml content
