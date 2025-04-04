@@ -12,7 +12,7 @@ const WorkAboradPage = () => {
   return (
     <div>
       <Helmet>
-        {/* <title>Job Abroad Consultants in Chennai</title> */}
+        <title>Job Abroad Consultants in Chennai</title>
         <meta
           name="description"
           content="Skillang, the leading abroad job consultancy in Chennai. Get expert guidance, virtual services, and access to high-demand job opportunities."

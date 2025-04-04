@@ -12,7 +12,7 @@ const StudyAbroadPage = () => {
   return (
     <div>
       <Helmet>
-        {/* <title>Study Abroad Consultants in Chennai</title> */}
+        <title>Study Abroad Consultants in Chennai</title>
         <meta
           name="description"
           content="Get expert advice from the best study abroad consultants in Chennai. Simplify your study abroad process with reliable guidance and support."

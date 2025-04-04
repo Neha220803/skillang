@@ -18,6 +18,7 @@ const HomePage = () => {
   return (
     <div className="home-page-container">
       <Helmet>
+        <title>Best Abroad Consultancy in Chennai</title>
         <meta
           name="description"
           content="Looking for the best abroad consultancy in Chennai? We provide expert guidance for overseas education, work, and German language, IELTS coaching."
@@ -30,7 +31,6 @@ const HomePage = () => {
           name="description"
           content="Skillang offers comprehensive study abroad, work abroad, and language test preparation services for global opportunities."
         />
-        {/* Additional meta tags */}
         <meta
           name="keywords"
           content="Skillang, career abroad, study abroad, work abroad, language preparation"

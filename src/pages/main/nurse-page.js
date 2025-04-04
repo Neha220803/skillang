@@ -21,6 +21,7 @@ const NursePage = () => {
   return (
     <div>
       <Helmet>
+        <title>Abroad nursing job consultants in Chennai</title>
         <meta
           name="description"
           content="Discover the best abroad nursing job consultants in Chennai. We offer reliable guidance for nursing careers overseas."
