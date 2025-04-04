@@ -1,10 +1,10 @@
 import React from "react";
-import WorkAbroadHeader from "../../sections/work-abroad/header";
+import WorkAbroadHeader from "../../sections/main/work-abroad/header";
 import WhyChooseSkillang from "../../sections/resuable/why-skillang/whySkillangSection";
 import CountriesWeServe from "../../sections/resuable/countries-we-serve/countriesWeServe";
-import SkillShortage from "../../sections/work-abroad/skillShortage";
-import ServiceOfferCountryWise from "../../sections/work-abroad/serviceOfferCountryWise";
-import AbroudJourney from "../../sections/work-abroad/abroud_journey";
+import SkillShortage from "../../sections/main/work-abroad/skillShortage";
+import ServiceOfferCountryWise from "../../sections/main/work-abroad/serviceOfferCountryWise";
+import AbroudJourney from "../../sections/main/work-abroad/abroud_journey";
 import PartnerWithUsSection from "../../sections/resuable/partner-with-us/partnerWithUs";
 import { Helmet } from "react-helmet-async";
 

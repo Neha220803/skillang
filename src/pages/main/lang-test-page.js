@@ -1,10 +1,10 @@
 import React from "react";
-import LangTestHeader from "../../sections/lang-test/header/LangTestHeader";
-import WhyLangTraining from "../../sections/lang-test/why-lang/WhyLangTraining";
-import LangTestPrepProgs from "../../sections/lang-test/prep/LangTestPrepProgs";
-import WhySkillangPrep from "../../sections/lang-test/why-skillang/WhySkillangPrep";
-import LangTestPartners from "../../sections/lang-test/lang-partners/LangTestPartners";
-import LangContactUs from "../../sections/lang-test/lang-connect/LangContactUs";
+import LangTestHeader from "../../sections/main/lang-test/header/LangTestHeader";
+import WhyLangTraining from "../../sections/main/lang-test/why-lang/WhyLangTraining";
+import LangTestPrepProgs from "../../sections/main/lang-test/prep/LangTestPrepProgs";
+import WhySkillangPrep from "../../sections/main/lang-test/why-skillang/WhySkillangPrep";
+import LangTestPartners from "../../sections/main/lang-test/lang-partners/LangTestPartners";
+import LangContactUs from "../../sections/main/lang-test/lang-connect/LangContactUs";
 import { Helmet } from "react-helmet-async";
 
 const LangTestPage = () => {

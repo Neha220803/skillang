@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../../sections/education-loan/header/header";
-import EduLoanOurServices from "../../sections/education-loan/ourservices/ourservices";
-import TypesAndEligiblity from "../../sections/education-loan/typesandeligblity/TypesAndEligiblity";
-import LoanEligiblity from "../../sections/education-loan/typesandeligblity/Eligiblity";
-import WhySkillangEdu from "../../sections/education-loan/whyskillangEdu/WhySkillangEdu";
-import GetStart from "../../sections/education-loan/gettingstarted/GetStart";
-import LangContactUs from "../../sections/lang-test/lang-connect/LangContactUs";
+import Header from "../../sections/more/education-loan/header/header";
+import EduLoanOurServices from "../../sections/more/education-loan/ourservices/ourservices";
+import TypesAndEligiblity from "../../sections/more/education-loan/typesandeligblity/TypesAndEligiblity";
+import LoanEligiblity from "../../sections/more/education-loan/typesandeligblity/Eligiblity";
+import WhySkillangEdu from "../../sections/more/education-loan/whyskillangEdu/WhySkillangEdu";
+import GetStart from "../../sections/more/education-loan/gettingstarted/GetStart";
+import LangContactUs from "../../sections/main/lang-test/lang-connect/LangContactUs";
 
 const EducationLoanPage = () => {
   return (

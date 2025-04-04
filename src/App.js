@@ -10,11 +10,13 @@ import FooterSection from "./components/footer/footer";
 import LandingNursePage from "./pages/landing/landing-page-nurse";
 import LandingStudyAbroadPage from "./pages/landing/landing-page-study";
 import LandingWorkAbroadPage from "./pages/landing/landing-page-work";
-import TermsPage from "./sections/footer/terms/terms";
-import PrivacyPolicyPage from "./sections/footer/terms/privacyPolicy";
 import CountryPage from "./pages/main/countryPage";
 import EducationLoanPage from "./pages/more/education-loan";
 import { HelmetProvider } from "react-helmet-async";
+import ScholarshipPage from "./pages/more/scholarship-page";
+import EventsPage from "./pages/more/events-page";
+import TermsPage from "./pages/footer-pages/terms";
+import PrivacyPolicyPage from "./pages/footer-pages/terms";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -42,12 +44,14 @@ function Layout() {
         <Route path="/study-abroad" element={<StudyAbroadPage />} />
         <Route path="/lang-test-prep" element={<LangTestPage />} />
 
-        <Route path="/education-loan" element={<EducationLoanPage />} />
-
         <Route path="/terms-of-use" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
         <Route path="/study-in-uk" element={<CountryPage />} />
+
+        <Route path="/education-loan" element={<EducationLoanPage />} />
+        <Route path="/scholarships" element={<ScholarshipPage />} />
+        <Route path="/events" element={<EventsPage />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}

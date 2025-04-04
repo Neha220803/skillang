@@ -1,18 +1,18 @@
 import React from "react";
-import GlobalOprtunity from "../../sections/home/global-opp/global-opportunity";
-import WorkAbroadOpportunity from "../../sections/home/work-abroad/work-abroad-opportunity";
+import GlobalOprtunity from "../../sections/main/home/global-opp/global-opportunity";
+import WorkAbroadOpportunity from "../../sections/main/home/work-abroad/work-abroad-opportunity";
 import StudyAbroadJourney from "../../sections/resuable/study-abroad-journey/study-abroad-journey";
 import UniPartner from "../../sections/resuable/uni-partner/uni-partner";
-import InternshipSection from "../../sections/home/internship/internship";
-import TestPrep from "../../sections/home/test-prep/test-prep";
-import LoanSection from "../../sections/home/loan/loan-section";
-import HomeHeader2 from "../../sections/home/header/home-header-2";
+import InternshipSection from "../../sections/main/home/internship/internship";
+import TestPrep from "../../sections/main/home/test-prep/test-prep";
+import LoanSection from "../../sections/main/home/loan/loan-section";
+import HomeHeader2 from "../../sections/main/home/header/home-header-2";
 import PartnerWithUsSection from "../../sections/resuable/partner-with-us/partnerWithUs";
-import ParallaxScrollSnap from "../../sections/home/work-abroad-journey/workAbroadJourney";
-import CardComponent from "../../sections/home/try-cards/TryCards.js";
+import ParallaxScrollSnap from "../../sections/main/home/work-abroad-journey/workAbroadJourney";
+import CardComponent from "../../sections/main/home/try-cards/TryCards.js";
 import "../../App.css";
 import { Helmet } from "react-helmet-async";
-import WorkAbroadJourneyTimeline from "../../sections/home/work-abroad-timeline/work-abroad-timeline.js";
+import WorkAbroadJourneyTimeline from "../../sections/main/home/work-abroad-timeline/work-abroad-timeline.js";
 
 const HomePage = () => {
   return (
