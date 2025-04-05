@@ -5,11 +5,11 @@ import StudyAbroadCountryOverview from "../../sections/main/study-abroad-country
 import NavSecondary from "../../sections/main/study-abroad-country-wise/nav/nav-secondary";
 import EducationAbroadCountry from "../../sections/main/study-abroad-country-wise/education/education";
 import AdmissionAbroadCountry from "../../sections/main/study-abroad-country-wise/admission/admission";
-import ScholarshipAbroadCountry from "../../sections/main/study-abroad-country-wise/scholarship/scholarship";
+import ScholarshipWithModal from "../../sections/main/study-abroad-country-wise/scholarship/scholarship";
 import LifeInAbroadCountry from "../../sections/main/study-abroad-country-wise/life/life";
 import WorkOppsAbroadComp from "../../sections/main/study-abroad-country-wise/work-opportunity-broad/workOppsAbroad";
 
-const CountryPage = () => {
+const CountryPage = ({ country = "uk" }) => {
   return (
     <div className="">
       <CountryWiseHeaderComp />
@@ -27,7 +27,7 @@ const CountryPage = () => {
       </section>
 
       <section id="available-scholarships" className="country-page-spacing">
-        <ScholarshipAbroadCountry />
+        <ScholarshipWithModal country={country} />
       </section>
 
       <section id="life" className="country-page-spacing">

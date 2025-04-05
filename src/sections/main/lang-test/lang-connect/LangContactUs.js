@@ -20,10 +20,16 @@ const LangContactUs = () => {
           >
             <div className="lang-contact-us-title-content">
               <div>
-                <div className="heading-big-medium">
+                <div
+                  className="heading-big-medium"
+                  style={{ color: "#023655" }}
+                >
                   Still have queries? Let’s Connect
                 </div>
-                <div className="paragraph-big-medium  ">
+                <div
+                  className="paragraph-big-medium  "
+                  style={{ color: "#044971" }}
+                >
                   Get in touch with our Program Advisors & get your queries
                   clarified.
                 </div>
