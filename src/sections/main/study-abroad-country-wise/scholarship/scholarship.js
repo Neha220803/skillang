@@ -4,10 +4,14 @@ import "./scholarship.css";
 import EduScholarleftimg from "../../../../assets/images/study-abroad-county-wise/scholarLeft.png";
 import countryWiseData from "../../../../data/countryWiseData";
 import { ChevronRight } from "react-bootstrap-icons";
+import ViewOneScholarshipModal from "../../../resuable/forms/view-scholarships/viewOneScholarships";
+import scholar1 from "../../../../assets/images/study-abroad-county-wise/scholarship1.jpg";
+import ViewAllScholarshipPopUp from "../../../resuable/forms/view-scholarships/viewAllScholarship";
 
 const ScholarshipAbroadCountry = ({ country = "uk" }) => {
   // Add state for modal
   const [showModal, setShowModal] = useState(false);
+  const [showAllModal, setShowAllModal] = useState(false);
   const [selectedScholarship, setSelectedScholarship] = useState(null);
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -18,6 +22,7 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
       id: 1,
       name: "Erasmus Mundus Joint Masters Degree Scholarship",
       link: "/scholarships/erasmus-mundus",
+      image: scholar1,
       benefits:
         "Full tuition fees, travel costs, monthly stipend (€1,400), and installation costs.",
       eligibility: [
@@ -36,6 +41,7 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
       link: "/scholarships/commonwealth",
       benefits:
         "Full tuition fees, living allowance, travel costs, and other allowances.",
+      image: scholar1,
       eligibility: [
         "Citizen of a Commonwealth country",
         "Hold a first degree of at least upper second class honors",
@@ -49,6 +55,7 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
       name: "Dr. Manmohan Singh Scholarships",
       link: "/scholarships/manmohan-singh",
       benefits: "Full tuition fees, living expenses, and international travel.",
+      image: scholar1,
       eligibility: [
         "Indian nationals under the age of 35",
         "Hold a Master's or equivalent degree with 60% or more marks",
@@ -64,6 +71,7 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
       link: "/scholarships/chevening",
       benefits:
         "Full tuition fees, travel costs, monthly stipend (~£1,133 to £1,362 depending on region), and additional allowances.",
+      image: scholar1,
       eligibility: [
         "Must be a citizen of a Chevening-eligible country.",
         "Hold an undergraduate degree.",
@@ -80,15 +88,24 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
     setShowModal(true);
   };
 
-  // Function to close modal
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
+  // Function to open "View All" modal
+  const handleViewAllClick = () => {
+    setShowAllModal(true);
+  };
+
+  // Function to close "View All" modal
+  const handleCloseAllModal = () => {
+    setShowAllModal(false);
+  };
+
   return (
     <>
-      <section className="d-flex justify-content-end bg-primar edu-scholarship-bg pt-5">
-        <Container className="mt-5">
+      <section className="d-flex justify-content-end bg-primar edu-scholarship-bg ">
+        <Container className="">
           <Row className="align-items-center mt-5 ">
             <Col lg={6} md={12}>
               <div className="scholarship-content">
@@ -126,7 +143,10 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
                   ))}
                 </div>
 
-                <button className="mt-md-4 mt-1 btn-primary">
+                <button
+                  className="mt-md-4 mt-1 btn-primary"
+                  onClick={handleViewAllClick}
+                >
                   View all Scholarships
                 </button>
               </div>
@@ -146,66 +166,21 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
       </section>
 
       {/* Scholarship Details Modal */}
-      <Modal
-        show={showModal}
-        onHide={handleCloseModal}
-        centered
-        dialogClassName="modal-60w"
-        size="lg"
-        aria-labelledby="scholarship-modal"
-      >
-        {selectedScholarship && (
-          <>
-            <Modal.Header closeButton>
-              {currentStep !== 1 && (
-                <Button
-                  variant="link"
-                  className="p-0 me-2 text-dark"
-                  onClick={() => setCurrentStep(1)}
-                  aria-label="Go back"
-                >
-                  <i
-                    className="bi bi-arrow-left"
-                    style={{ fontSize: "1.2rem" }}
-                  ></i>
-                </Button>
-              )}
-              <Modal.Title className="subheading-medium">
-                {selectedScholarship.name}
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="p-4">
-              <Row>
-                <Col md={12}>
-                  <h4>Benefits</h4>
-                  <p>{selectedScholarship.benefits}</p>
-
-                  <h4>Eligibility Criteria</h4>
-                  <ul>
-                    {selectedScholarship.eligibility.map((criteria, index) => (
-                      <li key={index}>{criteria}</li>
-                    ))}
-                  </ul>
-
-                  <h4>When to Apply/Deadline</h4>
-                  <p>{selectedScholarship.deadline}</p>
-
-                  <div className="text-center mt-4">
-                    <Button
-                      variant="primary"
-                      href={selectedScholarship.applyLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Apply for Scholarship
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
-            </Modal.Body>
-          </>
-        )}
-      </Modal>
+      <ViewOneScholarshipModal
+        showModal={showModal}
+        handleCloseModal={handleCloseModal}
+        selectedScholarship={selectedScholarship}
+        currentStep={currentStep}
+        // curImg={}
+        setCurrentStep={setCurrentStep}
+      />
+      <ViewAllScholarshipPopUp
+        showAllModal={showAllModal}
+        handleCloseAllModal={handleCloseAllModal}
+        scholarships={scholarships}
+        handleScholarshipClick={handleScholarshipClick}
+        country={country}
+      />
     </>
   );
 };
