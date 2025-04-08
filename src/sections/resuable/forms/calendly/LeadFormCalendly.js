@@ -29,6 +29,8 @@ const ConsultationModal = ({ show, handleClose }) => {
     setOtp,
     setShowToast,
   } = useFormHandler();
+  formData.origin = "Calendly Form";
+  formData.pincode = "No applicable";
 
   // State to track current step (1: form, 2: OTP verification)
   const [currentStep, setCurrentStep] = useState(1);

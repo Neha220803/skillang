@@ -118,8 +118,8 @@
 }
 
 /* Fix any potential Bootstrap interference */
-.form-check-input:checked + .experience-option,
-.form-check-input:checked ~ .experience-option {
+.form-check-input:checked+.experience-option,
+.form-check-input:checked~.experience-option {
   background-color: var(--secondary-variant) !important;
   color: white !important;
   border-color: var(--secondary-variant) !important;

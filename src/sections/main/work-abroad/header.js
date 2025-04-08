@@ -70,7 +70,7 @@ const WorkAbroadHeader = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  formData.experience = "-";
+  formData.lookingFor = "Work Abroad";
   formData.county = "-";
   formData.origin = "Work Abroad Page Form";
   return (

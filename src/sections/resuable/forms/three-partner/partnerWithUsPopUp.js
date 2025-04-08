@@ -59,7 +59,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
         setOtp("");
       }
     };
-  }, [show, setFormType, handlePartnerInputChange]);
+  }, [show, setFormType]);
 
   // Move to step 2 when OTP is sent
   useEffect(() => {

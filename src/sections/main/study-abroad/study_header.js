@@ -72,12 +72,16 @@ const StudyAbroadHeader = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  formData.experience = "-";
-  formData.county = "-";
-  formData.origin = "Study Abroad Header Page Form";
+
+  useEffect(() => {
+    // Only set these values once on component mount
+    handleOptionSelect("experience", "-");
+    handleOptionSelect("studyLevel", "-");
+    handleOptionSelect("origin", "Study Abroad Header Page Form");
+  }, []);
 
   const handleStudyLevelSelect = (option) => {
-    handleOptionSelect("studyLevel", option);
+    handleOptionSelect("lookingFor", option);
   };
 
   // Handler for country selection
@@ -139,6 +143,8 @@ const StudyAbroadHeader = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+                      minLength={6}
+                      maxLength={50}
                     />
                   </Form.Group>
                   <Row>
@@ -151,6 +157,7 @@ const StudyAbroadHeader = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           required
+                          maxLength={10}
                           pattern="[0-9]{10}"
                         />
                       </Form.Group>
@@ -164,6 +171,7 @@ const StudyAbroadHeader = () => {
                           value={formData.pincode}
                           onChange={handleInputChange}
                           required
+                          maxLength={6}
                           pattern="[0-9]{6}"
                         />
                       </Form.Group>
@@ -171,7 +179,7 @@ const StudyAbroadHeader = () => {
                   </Row>
                   <Form.Group className="" controlId="formStudyLevel">
                     <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Looking for
+                      Looking for ?
                     </Form.Label>
                     <div className="d-flex gap-2 flex-wrap">
                       {["Bachelors", "Masters"].map((option, index) => (
