@@ -246,23 +246,23 @@ const useFormHandler = () => {
       return;
     }
 
-    if (!isOtpSent) {
-      const success = sendFormData("standard");
-      if (success) {
-        setOtpVisible(true);
-        setResendDisabled(true);
-        setCountdown(30);
-        setIsOtpSent(true);
-      }
-      return;
-    }
+    // if (!isOtpSent) {
+    //   const success = sendFormData("standard");
+    //   if (success) {
+    //     setOtpVisible(true);
+    //     setResendDisabled(true);
+    //     setCountdown(30);
+    //     setIsOtpSent(true);
+    //   }
+    //   return;
+    // }
 
-    if (!isOtpVerified) {
-      setStatus("❌ Please verify the OTP before submitting.");
-      setToastVariant("danger");
-      setShowToast(true);
-      return;
-    }
+    // if (!isOtpVerified) {
+    //   setStatus("❌ Please verify the OTP before submitting.");
+    //   setToastVariant("danger");
+    //   setShowToast(true);
+    //   return;
+    // }
 
     if (!formData.lookingFor) {
       setStatus("❌ Please select what you're looking for.");
