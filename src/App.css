@@ -44,12 +44,15 @@ section {
     /* background-color: pink !important; */
     padding-bottom: 80px !important;
   }
+
   .homepage-section-spacing {
     padding-bottom: 80px !important;
   }
+
   .country-page-spacing {
     padding-bottom: 64px !important;
   }
+
   .country-subsection-spacing {
     padding-bottom: 24px !important;
   }
@@ -99,12 +102,15 @@ p {
   h1 {
     font-size: 38px !important;
   }
+
   h2 {
     font-size: 34px !important;
   }
+
   h3 {
     font-size: 26px !important;
   }
+
   p {
     font-size: 16px !important;
   }
@@ -114,12 +120,15 @@ p {
   h1 {
     font-size: 32px !important;
   }
+
   h2 {
     font-size: 28px !important;
   }
+
   h3 {
     font-size: 24px !important;
   }
+
   p {
     font-size: 14px !important;
   }
@@ -129,12 +138,15 @@ p {
   h1 {
     font-size: 26px !important;
   }
+
   h2 {
     font-size: 24px !important;
   }
+
   h3 {
     font-size: 22px !important;
   }
+
   p {
     font-size: 13px !important;
   }
@@ -144,12 +156,15 @@ p {
   h1 {
     font-size: 20px !important;
   }
+
   h2 {
     font-size: 18px !important;
   }
+
   h3 {
     font-size: 16px !important;
   }
+
   p {
     font-size: 12px !important;
   }

@@ -8,7 +8,7 @@ import "../../../App.css";
 
 const LandingNavBar = () => {
   return (
-    <Navbar expand="lg" className="py-2 fixed-top navcont">
+    <Navbar expand="lg" className=" fixed-top navcont">
       <Container className="d-flex align-items-center justify-content-between">
         {/* Logo on the left */}
         <Navbar.Brand>

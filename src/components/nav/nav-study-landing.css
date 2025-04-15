@@ -1,0 +1,60 @@
+.study-sec-nav-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 80px;
+    gap: 16px;
+    isolation: isolate;
+    height: 70px;
+    background: #F3EFFE;
+    border-radius: 0px !important;
+    transition: all 0.3s ease;
+    /* Initial state is not sticky */
+    position: relative;
+    z-index: 998;
+    /* Below primary nav but above content */
+    width: 100%;
+    position: fixed;
+}
+
+/* Apply sticky positioning when needed */
+.study-sec-nav-bg.sticky-active {
+    position: fixed;
+    top: 70px;
+    /* Matches your primary navbar height, adjust as needed */
+    left: 0;
+    right: 0;
+}
+
+/* Add a placeholder when nav is sticky to prevent content jump */
+.study-sec-nav-bg.sticky-active+.nav-placeholder {
+    height: 80px;
+    /* Should match the height of your navbar */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .study-sec-nav-bg {
+        padding: 12px 20px;
+        height: 70px;
+    }
+
+    .study-sec-nav-bg.sticky-active {
+        top: 60px;
+        /* Adjust for smaller nav on mobile */
+    }
+
+    .study-sec-nav-bg.sticky-active+.nav-placeholder {
+        height: 70px;
+    }
+
+    .subheading-big-medium {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

@@ -1,15 +1,16 @@
-.nurse-eligible-cards{
+.nurse-eligible-cards {
     height: 100% !important;
     align-items: start;
     padding-left: 16px !important;
     border-radius: 0 !important;
     border-left: 4px solid #9473F2 !important;
     border-right: none !important;
-    border-top: none !important;   
-    border-bottom: none !important; 
+    border-top: none !important;
+    border-bottom: none !important;
 }
 
-.nurse-eligibility-img{
+.nurse-eligibility-img {
     width: 50px !important;
     height: auto !important;
+    color: pink !important;
 }

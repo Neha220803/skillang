@@ -17,14 +17,16 @@ import ScholarshipPage from "./pages/more/scholarship-page";
 import EventsPage from "./pages/more/events-page";
 import TermsPage from "./pages/footer-pages/terms";
 import PrivacyPolicyPage from "./pages/footer-pages/terms";
+import CountryUniversityPage from "./pages/main/countryUniversityPage";
+import SOPAndResumeWritingPage from "./pages/more/sop-and-resume-writing";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
 
   const hideNavbarPaths = [
     "/nursing-in-germany",
-    "/study-now-abroad",
-    "/work-now-abroad",
+    "/study-abroad-form",
+    "/work-abroad-form",
   ];
 
   return (
@@ -48,10 +50,15 @@ function Layout() {
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
         <Route path="/study-in-uk" element={<CountryPage />} />
+        <Route path="/country-university" element={<CountryUniversityPage />} />
 
         <Route path="/education-loan" element={<EducationLoanPage />} />
         <Route path="/scholarships" element={<ScholarshipPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route
+          path="/sop-and-resume-writing"
+          element={<SOPAndResumeWritingPage />}
+        />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}

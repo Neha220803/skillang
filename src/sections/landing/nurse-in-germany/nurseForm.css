@@ -1,10 +1,11 @@
 .nurse-landing {
   min-height: 100vh !important;
   overflow: hidden !important;
-  margin: 90px !important;
+  margin-top: 90px !important;
+  margin-left: 90px !important;
+  margin-right: 90px !important;
   margin-bottom: 0 !important;
 }
-
 
 .nurse-landing-card {
   /* height: 85vh !important; */
@@ -26,26 +27,24 @@
 
 @media (max-width: 768px) {
   .nurse-img-carousel {
-    max-height: 65vh; /* Limit height */
+    max-height: 65vh;
+    /* Limit height */
     overflow: hidden;
-  
+
   }
 
- .nurse-img-carousel img {
+  .nurse-img-carousel img {
     object-fit: cover !important;
-     max-height: 65vh;
+    max-height: 65vh;
     width: 100% !important;
     object-position: top;
-}
+  }
 
 
-   #nurse-landing{
+  #nurse-landing {
     margin: 0 !important;
   }
 }
-
-
-
 
 .nurse-img-carousel {
   height: 82vh !important;
@@ -54,7 +53,6 @@
   border-radius: 16px !important;
   width: 100% !important;
 }
-
 
 .experience-option {
   cursor: pointer;
@@ -84,8 +82,8 @@
 } */
 
 .carousel-indicators {
-   align-items: center !important;
-   gap: 4px !important;
+  align-items: center !important;
+  gap: 4px !important;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -95,10 +93,10 @@
   border: none;
   transition: all 0.3s ease-in-out;
   border-radius: 999px !important; */
- 
-width: 9px !important;
-height: 5px !important;
- background-color: white !important;
+
+  width: 9px !important;
+  height: 5px !important;
+  background-color: white !important;
 }
 
 .carousel-indicators .active {

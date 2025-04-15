@@ -1,7 +1,7 @@
 .reusable-header-card {
     background-image: var(--desktop-more-page-bg-image);
     background-repeat: no-repeat !important;
-    background-position: top !important;
+    background-position: bottom !important;
     background-size: cover !important;
     width: 100% !important;
     height: 600px !important;

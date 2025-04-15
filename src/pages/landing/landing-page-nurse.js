@@ -13,9 +13,15 @@ const LandingNursePage = () => {
       <LandingNavBar />
       <NurseForm />
       <WhyUsNurse />
-      <NurseEligibility />
-      <WhyGermany />
-      <NurseStats />
+      <div className="section-spacing">
+        <NurseEligibility />
+      </div>
+      <div className="section-spacing">
+        <WhyGermany />
+      </div>
+      <div className="section-spacing">
+        <NurseStats />
+      </div>
       <LandingFooter />
     </div>
   );
