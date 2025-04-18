@@ -5,8 +5,8 @@ const TermsPage = () => {
   return (
     <div>
       <div className="w-full bg-white min-h-screen">
-        <div className="max-w-5xl mx-auto px-4 py-8 container">
-          <div className="privacy-cont">
+        <div className="max-w-5xl mx-auto px-4 py-5 container">
+          <div className="privacy-cont mt-5">
             <div className="display-medium text-center">Terms of Use</div>
           </div>
           <p className="text-right text-content-tertiary mb-4">

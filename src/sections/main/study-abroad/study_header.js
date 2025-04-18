@@ -238,9 +238,7 @@ const StudyAbroadHeader = () => {
                       )}
                     </div>
                   </Form.Group>
-
                   <div style={{ marginTop: "12px" }}></div>
-
                   {otpVisible && (
                     <Row className="mb-2">
                       <Col lg={8}>

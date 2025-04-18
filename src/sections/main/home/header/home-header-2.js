@@ -277,7 +277,7 @@ const HomeHeader2 = () => {
                   {showStudyLevelOptions() && (
                     <Form.Group className="" controlId="formStudyLevel">
                       <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                        Looking for
+                        Looking for ?
                       </Form.Label>
                       <div className="d-flex gap-2 flex-wrap">
                         {["Bachelors", "Masters"].map((option, index) => (

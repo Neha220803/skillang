@@ -19,6 +19,8 @@ import TermsPage from "./pages/footer-pages/terms";
 import PrivacyPolicyPage from "./pages/footer-pages/terms";
 import CountryUniversityPage from "./pages/main/countryUniversityPage";
 import SOPAndResumeWritingPage from "./pages/more/sop-and-resume-writing";
+import BlogsPage from "./pages/more/blogsPage";
+import GermanOpportunityCardsPage from "./pages/more/german-opportunity-card";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -58,6 +60,11 @@ function Layout() {
         <Route
           path="/sop-and-resume-writing"
           element={<SOPAndResumeWritingPage />}
+        />
+        <Route path="/blogs" element={<BlogsPage />} />
+        <Route
+          path="/german-opportunity-card"
+          element={<GermanOpportunityCardsPage />}
         />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
