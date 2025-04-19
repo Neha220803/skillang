@@ -1,0 +1,292 @@
+/* blogsHeader.css */
+
+/* General Styles */
+.blogs-header-container {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    margin-top: 60px;
+    padding-top: 30px;
+}
+
+/* Layout Styles */
+.content-wrapper {
+    margin-top: 20px;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb-wrapper {
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #999;
+    font-weight: 500;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    color: #ccc;
+}
+
+/* Main Heading Styles */
+.main-heading {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Section Heading Styles */
+.section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Content Text Styles */
+.content-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Post Metadata Styles */
+.post-metadata {
+    padding: 5px 0;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.post-date {
+    margin-right: 20px;
+}
+
+.post-stats {
+    display: flex;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.stat-item i {
+    margin-right: 5px;
+}
+
+.post-actions {
+    display: flex;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    color: #666 !important;
+    transition: color 0.3s ease;
+}
+
+.action-btn:hover {
+    color: #000 !important;
+}
+
+/* Featured Image Styles */
+.featured-image-container {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Introduction Text Styles */
+.intro-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Filter Tabs Styles */
+.filter-tabs {
+    margin-bottom: 20px;
+}
+
+.nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-pills .nav-link {
+    color: #666;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #333;
+}
+
+/* Related Articles Styles */
+.related-articles-section {
+    padding-left: 15px;
+}
+
+/* Grid layout for related articles */
+.related-articles-container {
+    margin-top: 15px;
+    /* Remove max-height to eliminate scrollbar */
+    padding-right: 5px;
+}
+
+.article-card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.card-img-top {
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888;
+    font-size: 12px;
+}
+
+.card-meta .stats span {
+    margin-left: 10px;
+}
+
+.card-meta .stats span i {
+    margin-right: 3px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .related-articles-section {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .blogs-header-container {
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+
+    .main-heading {
+        font-size: 28px;
+    }
+
+    .section-heading {
+        font-size: 22px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    .content-text {
+        font-size: 15px;
+    }
+}
+
+/* Small screen adjustments */
+@media (max-width: 575px) {
+    .main-heading {
+        font-size: 24px;
+    }
+}
+
+/* Add the following to ensure icons are displayed properly */
+.fa,
+.fas,
+.far,
+.fab {
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+}
+
+/* Make sure action buttons are visible */
+.post-actions .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    min-height: 30px;
+}
