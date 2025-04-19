@@ -8,7 +8,7 @@ const WhatIsGermanOppCardComp = () => {
     <div>
       <Container>
         <Row>
-          <Col>
+          <Col sm={12} xs={12} md={6}>
             <h1 className="heading-big-medium">
               What is the Opportunity Card Visa?
             </h1>
@@ -26,7 +26,7 @@ const WhatIsGermanOppCardComp = () => {
               </ul>
             </div>
           </Col>
-          <Col>
+          <Col sm={12} xs={12} md={6}>
             <Image
               src={WhyOppCardImp}
               className="WhyGerOppCardImp"

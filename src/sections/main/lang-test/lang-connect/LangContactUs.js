@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import LPartnerImg from "../../../../assets/images/lang-test/PartnerImg.png";
 import "./LangContactUs.css";
+import ConsultationModal from "../../../resuable/forms/calendly/LeadFormCalendly";
 
 const LangContactUs = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
   return (
     <div>
       <Container className="lang-conteact-us-bg">
@@ -36,7 +41,15 @@ const LangContactUs = () => {
               </div>
 
               <div>
-                <button className="btn-primary">Connect with us</button>
+                <button
+                  className="btn-primary"
+                  onClick={() => {
+                    // window.scrollTo({ top: 0, behavior: "smooth" });
+                    handleShow();
+                  }}
+                >
+                  Connect with us
+                </button>
               </div>
             </div>
           </Col>
@@ -45,6 +58,7 @@ const LangContactUs = () => {
           </Col>
         </Row>
       </Container>
+      <ConsultationModal show={showModal} handleClose={handleClose} />
     </div>
   );
 };

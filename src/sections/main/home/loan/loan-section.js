@@ -6,8 +6,17 @@ import "../../../../App.css";
 import "./loan-section.css";
 import "../../../../index.css";
 import "../../../../App.css";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const LoanSection = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleNavigation = (path) => {
+    if (location.pathname !== path) {
+      navigate(path);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
     <div className="d-flex flex-column align-items-center justify-content-evenly">
       <Container className="d-flex flex-column align-items-start justify-content-center">
@@ -33,12 +42,7 @@ const LoanSection = () => {
             </div>
             <button
               className="btn-primary"
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
+              onClick={() => handleNavigation("/scholarships")}
             >
               Apply Now
             </button>

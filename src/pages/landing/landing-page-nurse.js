@@ -11,8 +11,12 @@ const LandingNursePage = () => {
   return (
     <div>
       <LandingNavBar />
-      <NurseForm />
-      <WhyUsNurse />
+      <div className="section-spacin mb-5 pb-5 pb-md-0">
+        <NurseForm />
+      </div>
+      <div className="section-spacig mb-5 pb-5 pb-md-0 mb-md-0">
+        <WhyUsNurse />
+      </div>
       <div className="section-spacing">
         <NurseEligibility />
       </div>

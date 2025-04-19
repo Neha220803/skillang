@@ -5,6 +5,7 @@ import WhyChooseOpportunityCardComp from "../../sections/more/german-opportunity
 import GermanOppApplicationProcessComp from "../../sections/more/german-opportunity-card/application-process/GermanOppApplicationProcess";
 import WhyLiveInGermanyComp from "../../sections/more/german-opportunity-card/why-live-in-germany/whyLiveInGermany";
 import GerOppCardConnectComp from "../../sections/more/german-opportunity-card/german-connect/GerOppCardConnect";
+import GerOppCardEligibilityComp from "../../sections/more/german-opportunity-card/ger-opp-card-eligibility/GerOppCardEligibility";
 
 const GermanOpportunityCardsPage = () => {
   return (
@@ -19,11 +20,15 @@ const GermanOpportunityCardsPage = () => {
         <WhyChooseOpportunityCardComp />
       </div>
       <div className="section-spacing">
+        <GerOppCardEligibilityComp />
+      </div>
+      <div className="section-spacing">
         <GermanOppApplicationProcessComp />
       </div>
       <div className="section-spacing">
         <WhyLiveInGermanyComp />
       </div>
+
       <div className="section-spacing">
         <GerOppCardConnectComp />
       </div>

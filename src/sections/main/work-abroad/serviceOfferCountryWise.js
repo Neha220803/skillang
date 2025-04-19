@@ -15,6 +15,7 @@ import germanyFlag from "../../../assets/images/work-abroad/countryflags/germany
 import usaFlag from "../../../assets/images/work-abroad/countryflags/usa.png";
 import australiaFlag from "../../../assets/images/work-abroad/countryflags/australia.png";
 import canadaFlag from "../../../assets/images/work-abroad/countryflags/canada.png";
+import ConsultationModal from "../../resuable/forms/calendly/LeadFormCalendly";
 
 const serviceOfferings = [
   {
@@ -85,6 +86,11 @@ const ServiceOfferCountryWise = () => {
   const cardsRef = useRef(null);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [hoveredService, setHoveredService] = useState(null);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
@@ -204,7 +210,15 @@ const ServiceOfferCountryWise = () => {
             </Row>
           </div>
           <div className="d-flex justify-content-center mx-auto align-items-center mt-2 visadiscrip">
-            <button className="btn-primary">Book Free Consultation</button>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                // window.scrollTo({ top: 0, behavior: "smooth" });
+                handleShow();
+              }}
+            >
+              Book Free Consultation
+            </button>
           </div>
 
           {/* Toggle Button */}
@@ -226,6 +240,7 @@ const ServiceOfferCountryWise = () => {
           </div>
         </Container>
       </div>
+      <ConsultationModal show={showModal} handleClose={handleClose} />
     </div>
   );
 };

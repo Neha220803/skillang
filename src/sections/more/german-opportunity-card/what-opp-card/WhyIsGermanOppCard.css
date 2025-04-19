@@ -2,7 +2,16 @@
     /* width: 620px; */
     height: 413.84px !important;
     border-radius: 32px !important;
-    flex: none;
-    order: 1;
-    flex-grow: 1;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+@media (max-width: 756px) {
+    .WhyGerOppCardImp {
+        /* width: 620px; */
+        height: 240px !important;
+        width: 100% !important;
+
+    }
+
 }

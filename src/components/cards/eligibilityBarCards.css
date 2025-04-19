@@ -1,4 +1,4 @@
-.nurse-eligible-cards {
+.eligibility-bar-card {
     height: 100% !important;
     align-items: start;
     padding-left: 16px !important;
@@ -9,8 +9,7 @@
     border-bottom: none !important;
 }
 
-.nurse-eligibility-img {
+.eligibility-bar-card-img {
     width: 50px !important;
     height: auto !important;
-    color: pink !important;
 }

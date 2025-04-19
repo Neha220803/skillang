@@ -30,7 +30,7 @@ function CustomNavbar() {
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
       <Container className="d-flex align-items-center">
-        <Navbar.Brand onClick={() => handleNavigation("/")}>
+        <Navbar.Brand onClick={() => handleNavigation("/home")}>
           <Image
             src={logo}
             className="navbar-logo"

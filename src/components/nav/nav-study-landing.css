@@ -38,6 +38,7 @@
     .study-sec-nav-bg {
         padding: 12px 20px;
         height: 70px;
+        display: none !important;
     }
 
     .study-sec-nav-bg.sticky-active {
