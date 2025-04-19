@@ -11,7 +11,7 @@ const GermanOppCardHeaderComp = () => {
         imageAlt={"GermanOppCardHeaderImg"}
         title={"Explore Germany with the Opportunity Card Visa"}
         subheading={
-          "Start your new chapter in one of the world’s most vibrant and opportunity-rich countries!"
+          "Start your new chapter in one of the world's most vibrant and opportunity-rich countries!"
         }
         buttonText="Get Started"
       />

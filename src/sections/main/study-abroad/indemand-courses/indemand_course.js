@@ -7,7 +7,7 @@ import dataAnalyticsImage from "../../../../assets/images/study-abroad/indemandc
 import marketingImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
 import uiuxImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
 import backgroundImage from "../../../../assets/images/study-abroad/demandcoursebg.png";
-
+import { useNavigate, useLocation } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 
 import { Container, Card, CardBody, CardImg } from "react-bootstrap";
@@ -49,6 +49,15 @@ const IndemandCourse = () => {
   const [showAll, setShowAll] = useState(false);
   const cardsRef = useRef(null);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleNavigation = (path) => {
+    if (location.pathname !== path) {
+      navigate(path);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
@@ -96,7 +105,12 @@ const IndemandCourse = () => {
             provide tailored guidance on job markets, salary expectations,
             cultural norms, and legal requirements for working abroad.
           </div>
-          <button className="btn-primary mb-4">Know More</button>
+          <button
+            className="btn-primary mb-4"
+            onClick={() => handleNavigation("/country-university")}
+          >
+            Know More
+          </button>
         </div>
         <div className="courses-section">
           <div

@@ -7,6 +7,13 @@ import "../../../../App.css";
 const Header = () => {
   return (
     <div className="d-flex align-items-start  mt-5 pt-5 justify-content-center header-path-card bg-primar">
+      {/* <MorePageHeader
+        desktopBgImage={desktopBackground}
+        mobileBgImage={mobileBackground} // Optional: same as desktop if not provided
+        title="SOP & Resume Writing Services at Skillang"
+        description="Craft a compelling SOP and a professional resume that opens doors to prestigious international universities and scholarship programs."
+        buttonText="Schedule a Free Consultation"
+      /> */}
       <Container className="text-center bg-whit justify-content-center">
         <Row className="bg-primar justify-content-center">
           <div className="edu-head-wrapper">

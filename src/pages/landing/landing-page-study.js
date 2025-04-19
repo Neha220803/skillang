@@ -22,7 +22,7 @@ const LandingStudyAbroadPage = () => {
         <AbroadDestinations />
       </div>
       <div className="section-spacing">
-        <StudyAbroad />
+        <StudyAbroad showAll={false} />
       </div>
       <div className="section-spacing">
         <LangContactUs />

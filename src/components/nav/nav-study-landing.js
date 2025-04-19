@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./nav-study-landing.css";
+import ConsultationModal from "../../sections/resuable/forms/calendly/LeadFormCalendly";
 
 const NavStudyLanding = () => {
   const [isSticky, setIsSticky] = useState(false);
   const navRef = useRef(null);
   const navPositionRef = useRef(null);
   const primaryNavHeight = 70; // Adjust this to match your primary navbar height
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
 
   // Handle sticky nav behavior
   useEffect(() => {
@@ -64,7 +68,7 @@ const NavStudyLanding = () => {
               </div>
             </Col>
             <Col className="text-end">
-              <button className="btn btn-primary">
+              <button className="btn btn-primary" onClick={handleShow}>
                 Book Free Consultation
               </button>
             </Col>
@@ -72,6 +76,7 @@ const NavStudyLanding = () => {
         </Container>
       </div>
       {isSticky && <div className="nav-placeholder"></div>}
+      <ConsultationModal show={showModal} handleClose={handleClose} />
     </>
   );
 };
