@@ -8,7 +8,7 @@ import eligible1 from "../../../../assets/images/education-loan/EduLoanEligiblit
 import eligible2 from "../../../../assets/images/education-loan/EduLoanEligiblity/eligible2.svg";
 import eligible3 from "../../../../assets/images/education-loan/EduLoanEligiblity/eligible3.svg";
 import eligible4 from "../../../../assets/images/education-loan/EduLoanEligiblity/eligible4.svg";
-import EligibilityCard from "../../../../utils/cards/blueIconCards"; // Import the card component
+import BlueIconCards from "../../../../utils/cards/blueIconCards"; // Import the card component
 
 const eligibilityData = [
   {
@@ -45,7 +45,7 @@ const LoanEligibility = () => {
         <Row>
           {eligibilityData.map((item, index) => (
             <Col key={index} lg={3} md={3} sm={12} xs={12} className="mb-4">
-              <EligibilityCard
+              <BlueIconCards
                 img={item.img}
                 title={item.title}
                 text={item.text}

@@ -5,14 +5,27 @@ import logo from "../../../assets/images/logos/logo-3.svg";
 import { FiPhoneCall } from "react-icons/fi";
 import "../../../index.css";
 import "../../../App.css";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const LandingNavBar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleNavigation = (path) => {
+    if (location.pathname !== path) {
+      navigate(path);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
     <Navbar expand="lg" className=" fixed-top navcont">
       <Container className="d-flex align-items-center justify-content-between">
         {/* Logo on the left */}
-        <Navbar.Brand>
-          <Image src={logo} className="navbar-logo" />
+        <Navbar.Brand onClick={() => handleNavigation("/home")}>
+          <Image
+            src={logo}
+            className="navbar-logo"
+            style={{ cursor: "pointer" }}
+          />
         </Navbar.Brand>
         {/* Push button to the right */}
         <button

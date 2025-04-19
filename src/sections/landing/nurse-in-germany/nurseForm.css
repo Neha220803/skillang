@@ -33,6 +33,15 @@
 
   }
 
+  .nurse-landing {
+    min-height: 100vh !important;
+    overflow: hidden !important;
+    margin-top: 40px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0 !important;
+  }
+
   .nurse-img-carousel img {
     object-fit: cover !important;
     max-height: 65vh;
