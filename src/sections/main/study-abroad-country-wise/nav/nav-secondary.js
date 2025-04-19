@@ -44,10 +44,13 @@ function NavSecondary() {
     };
 
     // Create the observer with options
+    const isMobile = window.innerWidth <= 768;
     const observerOptions = {
       root: null, // viewport
-      rootMargin: `-${primaryNavHeight + 50}px 0px -50% 0px`, // Adjust top margin for navbar
-      threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], // Multiple thresholds for better accuracy
+      rootMargin: isMobile
+        ? `-${primaryNavHeight}px 0px -10% 0px` // More aggressive margin for mobile
+        : `-${primaryNavHeight + 50}px 0px -50% 0px`, // Original desktop margin
+      threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], // Keep all thresholds
     };
 
     const observer = new IntersectionObserver(
@@ -129,7 +132,10 @@ function NavSecondary() {
     // Find the section element and scroll to it
     const element = document.getElementById(tabName);
     if (element) {
-      const yOffset = -(primaryNavHeight + 50); // Adjust for both navbars
+      const isMobile = window.innerWidth <= 768;
+      const yOffset = isMobile
+        ? -(primaryNavHeight + 20) // Slightly adjusted for mobile
+        : -(primaryNavHeight + 50); // Original desktop value
       const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
       window.scrollTo({
@@ -147,6 +153,17 @@ function NavSecondary() {
     window.history.pushState(null, "", `#${tabName}`);
   };
 
+  // Find the index of the active tab to scroll it into view on mobile
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      const activeElement = document.querySelector('.sec-active');
+      if (activeElement) {
+        // Scroll the active tab into view in the navbar
+        activeElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  }, [activeTab]);
+
   return (
     <div
       ref={navRef}
@@ -155,57 +172,50 @@ function NavSecondary() {
       <Container className="d-flex align-items-center justify-content-center">
         <Nav className="secondary-nav">
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "overview" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "overview" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("overview")}
           >
             Overview
           </Nav.Link>
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "education" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "education" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("education")}
           >
             Education
           </Nav.Link>
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "admission-requirements" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "admission-requirements" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("admission-requirements")}
           >
             Admission Requirements
           </Nav.Link>
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "available-scholarships" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "available-scholarships" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("available-scholarships")}
           >
             Available Scholarships
           </Nav.Link>
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "life" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "life" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("life")}
           >
             Life in UK
           </Nav.Link>
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "work-opportunities" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "work-opportunities" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("work-opportunities")}
           >
             Work Opportunities
           </Nav.Link>
           <Nav.Link
-            className={`sec-nav-link ${
-              activeTab === "faq" ? "sec-active" : ""
-            }`}
+            className={`sec-nav-link ${activeTab === "faq" ? "sec-active" : ""
+              }`}
             onClick={() => handleTabClick("faq")}
           >
             FAQ
