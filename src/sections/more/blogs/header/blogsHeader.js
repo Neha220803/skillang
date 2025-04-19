@@ -1,6 +1,18 @@
 import React from "react";
 import "./blogsHeader.css"; // Import CSS for styling
-import { Container, Row, Col, Card, Nav, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Card, Nav, Button } from "react-bootstrap"; // Import React Bootstrap components
+
+// Import React Icons
+import {
+  FaHeart,
+  FaComment,
+  FaEye,
+  FaBookmark,
+  FaThumbsUp,
+  FaEllipsisH,
+} from "react-icons/fa";
+
+// Import local images
 import featuredImg from "../../../../assets/images/Blogs/blogbg.jpg";
 import img1 from "../../../../assets/images/Blogs/trend1.jpg";
 import img2 from "../../../../assets/images/Blogs/trend2.jpg";
@@ -19,10 +31,10 @@ const ArticleCard = ({ image, title, date, likes, comments }) => {
             <span className="date">{date}</span>
             <div className="stats">
               <span>
-                <i className="far fa-heart"></i> {likes}
+                <FaHeart className="icon" /> {likes}
               </span>
               <span>
-                <i className="far fa-comment"></i> {comments}
+                <FaComment className="icon" /> {comments}
               </span>
             </div>
           </div>
@@ -110,21 +122,21 @@ const BlogsHeaderComp = () => {
                   <span className="post-date">Mar 23, 2025</span>
                   <div className="post-stats">
                     <span className="stat-item me-3">
-                      <i className="fa fa-comment"></i> 23
+                      <FaComment className="icon" /> 23
                     </span>
                     <span className="stat-item">
-                      <i className="fa fa-eye"></i> 23
+                      <FaEye className="icon" /> 23
                     </span>
                   </div>
                   <div className="post-actions ms-auto">
                     <Button variant="link" className="action-btn">
-                      <i className="fa fa-bookmark"></i>
+                      <FaBookmark />
                     </Button>
                     <Button variant="link" className="action-btn">
-                      <i className="fa fa-thumbs-up"></i>
+                      <FaThumbsUp />
                     </Button>
                     <Button variant="link" className="action-btn">
-                      <i className="fa fa-ellipsis-h"></i>
+                      <FaEllipsisH />
                     </Button>
                   </div>
                 </Col>
