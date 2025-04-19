@@ -89,8 +89,10 @@
     margin-right: 15px;
 }
 
-.stat-item i {
+/* React Icon Styles */
+.icon {
     margin-right: 5px;
+    font-size: 14px;
 }
 
 .post-actions {
@@ -101,6 +103,11 @@
     padding: 5px 10px;
     color: #666 !important;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
 }
 
 .action-btn:hover {
@@ -176,7 +183,6 @@
 /* Grid layout for related articles */
 .related-articles-container {
     margin-top: 15px;
-    /* Remove max-height to eliminate scrollbar */
     padding-right: 5px;
 }
 
@@ -227,12 +233,13 @@
 
 .card-meta .stats span {
     margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.card-meta .stats span i {
+.card-meta .stats span .icon {
     margin-right: 3px;
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
@@ -270,23 +277,4 @@
     .main-heading {
         font-size: 24px;
     }
-}
-
-/* Add the following to ensure icons are displayed properly */
-.fa,
-.fas,
-.far,
-.fab {
-    display: inline-block;
-    width: 1em;
-    text-align: center;
-}
-
-/* Make sure action buttons are visible */
-.post-actions .action-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 30px;
-    min-height: 30px;
 }
