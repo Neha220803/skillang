@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./morePaheHeader.css";
 import { Container, Row } from "react-bootstrap";
 import "../../../index.css";
 import "../../../App.css";
+import ConsultationModal from "../forms/calendly/LeadFormCalendly";
 
 const MorePageHeader = ({
   desktopBgImage,
@@ -12,14 +13,18 @@ const MorePageHeader = ({
   buttonText,
   buttonOnClick,
 }) => {
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
   // Default onClick handler if none provided
   const handleButtonClick =
     buttonOnClick ||
     (() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      handleShow();
+      // window.scrollTo({
+      //   top: 0,
+      //   behavior: "smooth",
+      // });
     });
 
   return (
@@ -45,6 +50,7 @@ const MorePageHeader = ({
           </div>
         </Row>
       </Container>
+      <ConsultationModal show={showModal} handleClose={handleClose} />;
     </div>
   );
 };

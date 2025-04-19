@@ -62,7 +62,7 @@ const cardData = [
   },
 ];
 
-export default function StudyAbroad() {
+export default function StudyAbroad({ showAll = true }) {
   const navigate = useNavigate();
   const scrollContainerRef = useRef(null);
   const sectionRef = useRef(null);
@@ -130,19 +130,18 @@ export default function StudyAbroad() {
         <div className="text-center my-lg-4 heading-big-medium text-content-primaryInverse">
           Study Abroad Journey
         </div>
-        {/* <div className="text-center d-flex align-items-center justify-content-center">
-        <button className="btn-primary text-center d-none d-md-block">Book a Free Consultation</button>
-      </div> */}
 
         {/* Scrollable Row */}
         <div ref={scrollContainerRef} className="scrollable-container">
           {cardData.map((card, index) => (
             <div key={index} className="card-container">
               <Card className="custom-card my-4 border-0 " id={card.id}>
-                <CardImg
-                  className="study-abroad-jounrey-card-image bg-primary"
-                  src={card.img}
-                />
+                {showAll && (
+                  <CardImg
+                    className="study-abroad-jounrey-card-image bg-primary"
+                    src={card.img}
+                  />
+                )}
                 <Card.Body className="">
                   <Card.Title className="subheading-small-medium text-content-primaryInverse mb-1">
                     {card.title}
@@ -150,17 +149,19 @@ export default function StudyAbroad() {
                   <Card.Text className="paragraph-small-medium text-content-tertiaryInverse">
                     {card.desc}
                   </Card.Text>
-                  <div className="button-container">
-                    <button
-                      className="btn btn-primary btn-learn-more"
-                      onClick={() => {
-                        navigate("/study-abroad");
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
-                    >
-                      Learn More
-                    </button>
-                  </div>
+                  {showAll && (
+                    <div className="button-container">
+                      <button
+                        className="btn btn-primary btn-learn-more"
+                        onClick={() => {
+                          navigate("/study-abroad");
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Learn More
+                      </button>
+                    </div>
+                  )}
                 </Card.Body>
               </Card>
             </div>

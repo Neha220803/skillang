@@ -12,10 +12,6 @@ const EventsHeader = () => {
         description="Join us for engaging events to help you navigate studying and working abroad. Connect with university reps and get practical application advice!"
         buttonText="Schedule a Free Consultation"
         // Optional: custom onClick handler
-        buttonOnClick={() => {
-          // Custom action, like opening a form
-          console.log("Custom action");
-        }}
       />
     </div>
   );

@@ -12,9 +12,6 @@ const SOPHeaderComp = () => {
         title="SOP & Resume Writing Services at Skillang"
         description="Craft a compelling SOP and a professional resume that opens doors to prestigious international universities and scholarship programs."
         buttonText="Schedule a Free Consultation"
-        buttonOnClick={() => {
-          console.log("Custom action");
-        }}
       />
     </div>
   );

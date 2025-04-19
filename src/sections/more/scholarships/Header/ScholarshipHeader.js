@@ -11,11 +11,6 @@ const ScholarshipHeader = () => {
         title="Education Loan Assistance at Skillang"
         description="Secure the funding needed to realize your academic dreams abroad."
         buttonText="Schedule a Free Consultation"
-        // Optional: custom onClick handler
-        buttonOnClick={() => {
-          // Custom action, like opening a form
-          console.log("Custom action");
-        }}
       />
     </div>
   );

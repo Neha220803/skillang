@@ -41,7 +41,8 @@
   flex-direction: column !important;
   word-wrap: break-word !important;
   white-space: normal !important;
-  flex: 1 !important; /* Make card take full height of container */
+  flex: 1 !important;
+  /* Make card take full height of container */
 }
 
 /* #study-abroad-card1{
