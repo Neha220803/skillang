@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b4011cbc.css",
-    "main.js": "/static/js/main.cac401e7.js",
+    "main.css": "/static/css/main.ac0940c2.css",
+    "main.js": "/static/js/main.e2c898ed.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
@@ -193,8 +193,11 @@
     "static/media/whyus9.svg": "/static/media/whyus9.55b36504efacadf1d7ed87beed56ecc3.svg",
     "static/media/whyNurse7.svg": "/static/media/whyNurse7.ac6d084b7437e8e657743168a58ba49b.svg",
     "static/media/nurse-eli1.svg": "/static/media/nurse-eli1.4a1889f84f35fb28bfda3256eb114595.svg",
+    "static/media/GerOppCardEli1.svg": "/static/media/GerOppCardEli1.b7b4fc656826f87f9d2abc277872caa2.svg",
     "static/media/vpaintin.svg": "/static/media/vpaintin.384f5426601748d57a7e2bd294b45750.svg",
+    "static/media/GerOppCardEli4.svg": "/static/media/GerOppCardEli4.b9c8e06f9bdd0cea611b22f62f71a79c.svg",
     "static/media/nurse-eli2.svg": "/static/media/nurse-eli2.f15efe6752fdfea969fc70233ed4a3b7.svg",
+    "static/media/GerOppCardEli2.svg": "/static/media/GerOppCardEli2.1a58ee591e827fe1571911c6411cc22a.svg",
     "static/media/companyIcon.svg": "/static/media/companyIcon.cac5b5c3d373ba92f6976cd6dd9572a5.svg",
     "static/media/whyGer6.svg": "/static/media/whyGer6.c938273bedbd4fd0d18ea24b9e155bb2.svg",
     "static/media/eduourserviceIcon4.svg": "/static/media/eduourserviceIcon4.e5de4f031a56ae770b8baf4c9ece4a12.svg",
@@ -221,6 +224,7 @@
     "static/media/carAdv2.svg": "/static/media/carAdv2.90991eaaa7bf98838cf2afc46f4a9f41.svg",
     "static/media/admission.svg": "/static/media/admission.b08df4bf389ba9835b3f3e406ead0081.svg",
     "static/media/whyNurse5.svg": "/static/media/whyNurse5.17bf9da643c64f1b2cff8c334899dafc.svg",
+    "static/media/GerOppCardEli3.svg": "/static/media/GerOppCardEli3.2541fc21e27098173ffccd5ed6827e55.svg",
     "static/media/whyus1.svg": "/static/media/whyus1.2de8b15d5949dd62446b0aa918f00d02.svg",
     "static/media/plumbing.svg": "/static/media/plumbing.8f119e6029473e6b32c0184351f65c75.svg",
     "static/media/carAdv3.svg": "/static/media/carAdv3.d48011664594d34216a17dde0d7a208d.svg",
@@ -263,11 +267,11 @@
     "static/media/document.svg": "/static/media/document.5fdb859e1c2f620eb11914ea48692a4e.svg",
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
-    "main.b4011cbc.css.map": "/static/css/main.b4011cbc.css.map",
-    "main.cac401e7.js.map": "/static/js/main.cac401e7.js.map"
+    "main.ac0940c2.css.map": "/static/css/main.ac0940c2.css.map",
+    "main.e2c898ed.js.map": "/static/js/main.e2c898ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4011cbc.css",
-    "static/js/main.cac401e7.js"
+    "static/css/main.ac0940c2.css",
+    "static/js/main.e2c898ed.js"
   ]
 }
