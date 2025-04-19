@@ -9,9 +9,9 @@ import careerIcon from "../../../assets/images/study-abroad/whystudyabroad/icons
 
 const WhyStudyAbroad = () => {
   return (
-    <Container fluid="lg" className="">
+    <Container className="">
       <Row className="align-items-center">
-        <Col md={7} className="content">
+        <Col md={7} className="">
           <div className="heading-big-medium">Why Study Abroad?</div>
           <p className="paragraph-big-medium text-content-secondary mt-1">
             Free German Courses, Online & In-Person Training & Flexible Learning
@@ -44,9 +44,9 @@ const WhyStudyAbroad = () => {
                   "Gain a degree that opens doors to global job markets",
               },
             ].map((benefit, index) => (
-              <Col md={6} key={index} className="benefit-card">
-                <Card className="equal-card mb-3">
-                  <Card.Body className="equal-card-body d-flex flex-column align-items-start">
+              <Col md={6} key={index} className="">
+                <Card className="mb-3">
+                  <Card.Body className="py-0 ">
                     <img
                       src={benefit.icon}
                       alt={benefit.title}
@@ -62,15 +62,8 @@ const WhyStudyAbroad = () => {
             ))}
           </Row>
         </Col>
-        <Col
-          md={5}
-          className="image-container d-flex justify-content-end align-items-stretch"
-        >
-          <img
-            src={whystudyabroad}
-            alt="Why Study Abroad"
-            className="responsive-img"
-          />
+        <Col md={5} className="">
+          <img src={whystudyabroad} alt="Why Study Abroad" className="" />
         </Col>
       </Row>
     </Container>

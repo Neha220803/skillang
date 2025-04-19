@@ -195,23 +195,7 @@
     transform: translateY(-3px);
 }
 
-.card {
-    border: none;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.card-img-top {
-    height: 120px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 15px;
-}
-
+/* 
 .card-title {
     font-size: 14px;
     font-weight: 600;
@@ -229,7 +213,7 @@
     align-items: center;
     color: #888;
     font-size: 12px;
-}
+} */
 
 .card-meta .stats span {
     margin-left: 10px;
