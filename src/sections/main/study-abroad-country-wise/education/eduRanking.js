@@ -50,23 +50,25 @@ const EduRankingComp = ({ country = "uk" }) => {
                 {displayedUniversities.map((university, index) => (
                   <tr key={index} className={index % 2 === 0 ? "" : "grey-200"}>
                     <td className="py-3 px-4">{university.name}</td>
-                    <td className="py-3 px-4 text-start d-flex align-items-center justify-content-center">
-                      <div className="d-flex align-items-center justify-content-start">
-                        <div className="me-3 uni-rank-text text-content-secondary">
-                          {university.ranking2025}
+                    <td className="py-3 px-4 text-center">
+                      <div className="d-flex align-items-center justify-content-center">
+                        <div style={{ width: "100px", display: "flex", justifyContent: "flex-start" }}>
+                          <div className="me-3 uni-rank-text text-content-secondary">
+                            {university.ranking2025}
+                          </div>
+                          {university.change > 0 && (
+                            <span className="rank-success-pill px-2 py-1 rounded">
+                              <CaretUpFill className="me-1" />
+                              {university.change}
+                            </span>
+                          )}
+                          {university.change < 0 && (
+                            <span className="rank-danger-pill px-2 py-1 rounded">
+                              <CaretDownFill className="me-1" />
+                              {Math.abs(university.change)}
+                            </span>
+                          )}
                         </div>
-                        {university.change > 0 && (
-                          <span className="rank-success-pill px-2 py-1 rounded">
-                            <CaretUpFill className="me-1" />
-                            {university.change}
-                          </span>
-                        )}
-                        {university.change < 0 && (
-                          <span className="rank-danger-pill px-2 py-1 rounded">
-                            <CaretDownFill className="me-1" />
-                            {Math.abs(university.change)}
-                          </span>
-                        )}
                       </div>
                     </td>
                     <td className="py-3 px-4 text-center d-none d-md-table-cell">
