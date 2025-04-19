@@ -1,13 +1,12 @@
 /* Secondary nav container */
 .secondary-nav-container {
   background-color: #fff;
-  z-index: 998; /* Below primary nav but above content */
+  z-index: 998;
+  /* Below primary nav but above content */
   border-bottom: 1px solid #eee;
   padding: 0;
-  /* height: 59px !important; */
   width: 100%;
   transition: all 0.3s ease;
-
   /* Initial state is not sticky */
   position: relative;
 }
@@ -15,10 +14,10 @@
 /* Apply sticky positioning when needed */
 .secondary-nav-container.sticky-active {
   position: fixed;
-  top: 70px; /* Matches primary navbar height */
+  top: 70px;
+  /* Matches primary navbar height */
   left: 0;
   right: 0;
-  /* height: 59px !important; */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
@@ -27,9 +26,14 @@
   overflow-x: auto;
   height: 50px !important;
   white-space: nowrap;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   padding: 0;
+  flex-wrap: nowrap;
+  /* Prevent wrapping to next line */
+  width: 100%;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -44,19 +48,27 @@
   position: relative;
   transition: all 0.3s ease;
   font-weight: 500;
-  background-color: transparent !important; /* Ensure no background */
-  border-radius: 0 !important; /* No border radius */
+  background-color: transparent !important;
+  /* Ensure no background */
+  border-radius: 0 !important;
+  /* No border radius */
+  flex: 0 0 auto;
+  /* Don't grow or shrink, use auto basis */
+  white-space: nowrap;
+  /* Prevent text wrapping */
 }
 
 .sec-nav-link:hover {
   color: #e86e39 !important;
-  background-color: transparent !important; /* Ensure no background on hover */
+  background-color: transparent !important;
+  /* Ensure no background on hover */
 }
 
 .sec-active {
   color: #e86e39 !important;
   font-weight: 600;
-  background-color: transparent !important; /* Ensure no background */
+  background-color: transparent !important;
+  /* Ensure no background */
 }
 
 .sec-active::after {
@@ -89,11 +101,19 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .secondary-nav-container.sticky-active {
-    top: 60px; /* Adjust for smaller nav on mobile */
+    top: 68px;
+    /* Adjust for smaller nav on mobile */
   }
 
   .sec-nav-link {
     padding: 10px 15px !important;
     font-size: 13px !important;
+  }
+
+  /* Ensure container allows horizontal scrolling on mobile */
+  .secondary-nav-container .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
