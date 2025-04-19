@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 
 const GetStartedTimeline = ({
   title = "Getting Started",
-  subtitle = "Secure your loan through a streamlined five-step process.",
+  subtitle = "",
   steps = [],
 }) => {
   // Animation state
