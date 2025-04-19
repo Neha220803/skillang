@@ -233,25 +233,6 @@
     margin-right: 3px;
 }
 
-/* Remove scrollbar styling since we're removing the scrollbar */
-/* Custom scrollbar for the related articles 
-.related-articles-container::-webkit-scrollbar {
-    width: 5px;
-}
-
-.related-articles-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.related-articles-container::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 10px;
-}
-
-.related-articles-container::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-} */
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
