@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./scholarship.css";
 import EduScholarleftimg from "../../../../assets/images/study-abroad-county-wise/scholarLeft.png";
 import countryWiseData from "../../../../data/countryWiseData";
@@ -104,9 +104,9 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
 
   return (
     <>
-      <section className="d-flex justify-content-end bg-primar edu-scholarship-bg ">
-        <Container className="">
-          <Row className="align-items-center mt-5 ">
+      <section className="d-flex justify-content-end edu-scholarship-bg">
+        <Container>
+          <Row className="align-items-center mt-5">
             <Col lg={6} md={12}>
               <div className="scholarship-content">
                 <h1 className="heading-big-medium text-white mb-3">
@@ -120,7 +120,7 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
                 </p>
 
                 <div className="scholarship-list">
-                  {scholarships.map((scholarship) => (
+                  {scholarships.slice(0, 3).map((scholarship) => (
                     <div
                       key={scholarship.id}
                       className="scholarship-item"
@@ -144,7 +144,7 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
                 </div>
 
                 <button
-                  className="mt-md-4 mt-1 btn-primary"
+                  className="mt-md-4 mt-3 btn btn-primary"
                   onClick={handleViewAllClick}
                 >
                   View all Scholarships
@@ -171,9 +171,10 @@ const ScholarshipAbroadCountry = ({ country = "uk" }) => {
         handleCloseModal={handleCloseModal}
         selectedScholarship={selectedScholarship}
         currentStep={currentStep}
-        // curImg={}
         setCurrentStep={setCurrentStep}
       />
+
+      {/* View All Scholarships Modal */}
       <ViewAllScholarshipPopUp
         showAllModal={showAllModal}
         handleCloseAllModal={handleCloseAllModal}
