@@ -1,18 +1,25 @@
 import React from "react";
-import "../header/blogsHeader.css"; // Import CSS for styling
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "./blogsHeader.css"; // Import CSS for styling
+import { Container, Row, Col, Card, Nav, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faComment } from '@fortawesome/free-regular-svg-icons';
+// Import React Bootstrap components
 
 // Import local images
-import featuredImg from "../../../../assets/images/Blogs/blogbg1.jpg";
+import featuredImg from "../../../../assets/images/Blogs/blogbg.jpg";
+import img1 from "../../../../assets/images/Blogs/trend1.jpg";
+import img2 from "../../../../assets/images/Blogs/trend2.jpg";
+import img3 from "../../../../assets/images/Blogs/trend3.jpg";
+import img4 from "../../../../assets/images/Blogs/trend4.jpg";
 
 // Article Card Component
 const ArticleCard = ({ image, title, date, likes, comments }) => {
   return (
     <div className="article-card">
-      <div className="card">
-        <img src={image} className="card-img-top" alt={title} />
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+      <Card>
+        <Card.Img variant="top" src={image} alt={title} />
+        <Card.Body>
+          <Card.Title className="card-title">{title}</Card.Title>
           <div className="card-meta">
             <span className="date">{date}</span>
             <div className="stats">
@@ -20,8 +27,8 @@ const ArticleCard = ({ image, title, date, likes, comments }) => {
               <span><i className="far fa-comment"></i> {comments}</span>
             </div>
           </div>
-        </div>
-      </div>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
@@ -31,7 +38,7 @@ const BlogsHeaderComp = () => {
   const articles = [
     {
       id: 1,
-      image: "https://via.placeholder.com/400x250?text=Placeholder",
+      image: img1,
       title: "Discover the Excitement of New York: A Guide for International Students",
       date: "Mar 23, 2025",
       likes: "432",
@@ -39,7 +46,7 @@ const BlogsHeaderComp = () => {
     },
     {
       id: 2,
-      image: "https://via.placeholder.com/400x250?text=Placeholder",
+      image: img2,
       title: "Experience New York: The Ultimate Study Abroad Adventure",
       date: "Mar 23, 2025",
       likes: "1.2k",
@@ -47,7 +54,7 @@ const BlogsHeaderComp = () => {
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/400x250?text=Placeholder",
+      image: img3,
       title: "Studying Abroad in New York: Your Gateway to Culture and Learning",
       date: "Mar 23, 2025",
       likes: "234",
@@ -55,7 +62,7 @@ const BlogsHeaderComp = () => {
     },
     {
       id: 4,
-      image: "https://via.placeholder.com/400x250?text=Placeholder",
+      image: img4,
       title: "New York Awaits: A Student's Guide to Exploring the City",
       date: "Mar 23, 2025",
       likes: "3k",
@@ -65,7 +72,7 @@ const BlogsHeaderComp = () => {
 
   return (
     <div className="blogs-header-container">
-      <div className="container-fluid p-0">
+      <Container>
         {/* Breadcrumb Navigation */}
         <div className="breadcrumb-wrapper">
           <nav aria-label="breadcrumb">
@@ -79,88 +86,119 @@ const BlogsHeaderComp = () => {
 
         {/* Main Content Section */}
         <div className="content-wrapper">
-          <div className="row">
+          <Row>
             {/* Main Article Content - Left Column */}
-            <div className="col-md-7">
+            <Col lg={8}>
               {/* Main Heading */}
-              <div className="row mb-4">
-                <div className="col-12">
+              <Row className="mb-4">
+                <Col xs={12}>
                   <h1 className="main-heading">Is New York the Right Place To Study Abroad?</h1>
-                </div>
-              </div>
+                </Col>
+              </Row>
 
               {/* Post Metadata */}
-              <div className="row post-metadata mb-4">
-                <div className="col-12 d-flex align-items-center">
+              <Row className="post-metadata mb-4">
+                <Col xs={12} className="d-flex align-items-center">
                   <span className="post-date">Mar 23, 2025</span>
                   <div className="post-stats">
-                    <span className="stat-item me-3"><i className="far fa-comment"></i> 23</span>
-                    <span className="stat-item"><i className="far fa-eye"></i> 23</span>
+                    <span className="stat-item me-3"><i className="fa fa-comment"></i> 23</span>
+                    <span className="stat-item"><i className="fa fa-eye"></i> 23</span>
                   </div>
                   <div className="post-actions ms-auto">
-                    <button className="btn action-btn"><i className="far fa-bookmark"></i></button>
-                    <button className="btn action-btn"><i className="far fa-thumbs-up"></i></button>
-                    <button className="btn action-btn"><i className="fas fa-ellipsis-h"></i></button>
+                    <Button variant="link" className="action-btn"><i className="fa fa-bookmark"></i></Button>
+                    <Button variant="link" className="action-btn"><i className="fa fa-thumbs-up"></i></Button>
+                    <Button variant="link" className="action-btn"><i className="fa fa-ellipsis-h"></i></Button>
                   </div>
-                </div>
-              </div>
+                </Col>
+              </Row>
 
               {/* Featured Image */}
-              <div className="row mb-4">
-                <div className="col-12">
+              <Row className="mb-4">
+                <Col xs={12}>
                   <div className="featured-image-container">
-                    <img
-                      src="https://via.placeholder.com/1200x400?text=Featured+Image"
-                      alt="New York Times Square"
-                      className="featured-image"
-                    />
-                    <div className="image-credit">source: placeholder</div>
+                    <img src={featuredImg} alt="New York Times Square" className="featured-image" />
+                    <div className="image-credit">source: unsplash</div>
                   </div>
-                </div>
-              </div>
-
+                </Col>
+              </Row>
 
               {/* Introduction Text */}
-              <div className="row mb-5">
-                <div className="col-12">
+              <Row className="mb-5">
+                <Col xs={12}>
                   <p className="intro-text">
                     It is a daunting experience for newcomers; however, it doesn't have to be. Here are four tips to enhance your enjoyment of the experience and productively utilize all your precious time.
                   </p>
-                </div>
-              </div>
-            </div>
+                </Col>
+              </Row>
+
+              {/* Additional Blog Content Section */}
+              <Row className="mb-5">
+                <Col xs={12}>
+                  <h2 className="section-heading">Enjoy New York From Out of Town</h2>
+                  <p className="content-text">
+                    The city is worth known because of its excitement, vitality, and excitement, but going abroad to study in New York gives you a chance to understand New York's different aspects.
+                  </p>
+                  <p className="content-text">
+                    The unpresumptious past aside, New York is a fascinating place to visit. Because of the city teeming past and current character, the city is an interesting place to study and live. However, amid all the hustle, it gives a chance to experience the real essence of the city.
+                  </p>
+                  <p className="content-text">
+                    From Chinatown Town Chinatown to Central Park to the Statue of Liberty, The city reflects a realistic image of its own for visitors who take a moment to reflect not only on what's going on within their own homes however also on the larger view of the globe as a whole.
+                  </p>
+                </Col>
+              </Row>
+
+              {/* Second Content Section */}
+              <Row className="mb-5">
+                <Col xs={12}>
+                  <h2 className="section-heading">Join in on The Chic verse</h2>
+                  <p className="content-text">
+                    If you are traveling abroad to New York, any student who wishes to immerse themselves amid the city's vibrant social scene should include the district of Midtown in their plans. The architecture and street layout of Fifth Avenue, combined with its contemporary structure, will let you experience an expression of the cosmopolitan scene, which is popular across the globe. A stroll through the middle of town can provide a fascinating understanding of the process that led to the American melting pot, where various cultures from all over the globe have joined forces to create a distinct cultures in the middle of the city. Students can walk through this melting pot of different styles and discover an echo of the communities which have come to depend on each other and give back to every one of their shared experiences.
+                  </p>
+                </Col>
+              </Row>
+            </Col>
 
             {/* Related Articles Section - Right Column */}
-            <div className="col-md-5">
+            <Col lg={4}>
               <div className="related-articles-section">
                 <div className="filter-tabs">
-                  <ul className="nav nav-pills">
-                    <li className="nav-item"><a className="nav-link" href="#all">All</a></li>
-                    <li className="nav-item"><a className="nav-link active" href="#trending">Trending</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#business">Business</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#topsalary">Top Salary</a></li>
-                  </ul>
+                  <Nav variant="pills" defaultActiveKey="#trending">
+                    <Nav.Item>
+                      <Nav.Link href="#all">All</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link href="#trending" active>Trending</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link href="#business">Business</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link href="#topsalary">Top Salary</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
                 </div>
 
-                {/* Horizontal scrollable articles row */}
+                {/* Grid layout for articles (2x2) */}
                 <div className="related-articles-container">
-                  {articles.map(article => (
-                    <div key={article.id} className="related-article-item">
-                      <ArticleCard
-                        image={article.image}
-                        title={article.title}
-                        date={article.date}
-                        likes={article.likes}
-                        comments={article.comments}
-                      />
-                    </div>
-                  ))}
+                  <Row xs={1} sm={2} className="g-3">
+                    {articles.map(article => (
+                      <Col key={article.id}>
+                        <ArticleCard
+                          image={article.image}
+                          title={article.title}
+                          date={article.date}
+                          likes={article.likes}
+                          comments={article.comments}
+                        />
+                      </Col>
+                    ))}
+                  </Row>
                 </div>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
