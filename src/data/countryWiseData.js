@@ -165,7 +165,7 @@ const countryWiseData = {
           ranking2024: 41,
         },
         {
-          name: "London School of Economics",
+          name: " ",
           ranking2025: 45,
           change: -4,
           ranking2024: 41,

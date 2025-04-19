@@ -1,8 +1,6 @@
 import React from "react";
 import "./blogsHeader.css"; // Import CSS for styling
-import { Container, Row, Col, Card, Nav, Button } from "react-bootstrap"; // Import React Bootstrap components
-
-// Import React Icons
+import { Container, Row, Col, Card, Nav, Button, Image } from "react-bootstrap"; // Import React Bootstrap components
 import {
   FaHeart,
   FaComment,
@@ -11,7 +9,6 @@ import {
   FaThumbsUp,
   FaEllipsisH,
 } from "react-icons/fa";
-
 // Import local images
 import featuredImg from "../../../../assets/images/Blogs/blogbg.jpg";
 import img1 from "../../../../assets/images/Blogs/trend1.jpg";
