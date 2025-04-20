@@ -46,26 +46,27 @@ function Layout() {
         <Route path="/nursing" element={<NursePage />} />
         <Route path="/work-abroad" element={<WorkAboradPage />} />
         <Route path="/study-abroad" element={<StudyAbroadPage />} />
+        <Route path="/study-abroad/uk" element={<CountryPage />} />
+
         <Route path="/lang-test-prep" element={<LangTestPage />} />
 
         <Route path="/terms-of-use" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
-        <Route path="/study-in-uk" element={<CountryPage />} />
         <Route path="/country-university" element={<CountryUniversityPage />} />
 
-        <Route path="/education-loan" element={<EducationLoanPage />} />
-        <Route path="/scholarships" element={<ScholarshipPage />} />
-        <Route path="/events" element={<EventsPage />} />
+        <Route path="/more/education-loan" element={<EducationLoanPage />} />
+        <Route path="/more/scholarships" element={<ScholarshipPage />} />
+        <Route path="/more/events" element={<EventsPage />} />
         <Route
-          path="/sop-and-resume-writing"
+          path="/more/sop-and-resume-writing"
           element={<SOPAndResumeWritingPage />}
         />
-        <Route path="/blogs" element={<BlogsPage />} />
         <Route
-          path="/german-opportunity-card"
+          path="/more/german-opportunity-card"
           element={<GermanOpportunityCardsPage />}
         />
+        <Route path="/more/blogs" element={<BlogsPage />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}

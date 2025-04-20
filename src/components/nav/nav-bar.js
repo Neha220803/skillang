@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Image } from "react-bootstrap";
+import { Container, Image, NavDropdown } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FiPhoneCall } from "react-icons/fi";
@@ -70,14 +70,28 @@ function CustomNavbar() {
             >
               Work Abroad
             </Nav.Link>
-            <Nav.Link
+            <NavDropdown
+              title="Study Abroad"
               className={`navpaths d-flex align-items-center ${
                 isActive("/study-abroad") ? "active-link" : ""
               }`}
-              onClick={() => handleNavigation("/study-abroad")}
             >
-              Study Abroad
-            </Nav.Link>
+              <NavDropdown.Item
+                onClick={() => handleNavigation("/study-abroad")}
+              >
+                Overview
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={() => handleNavigation("/study-abroad/uk")}
+              >
+                UK
+              </NavDropdown.Item>
+              {/* <NavDropdown.Item
+                onClick={() => handleNavigation("/study-abroad/canada")}
+              >
+                Canada
+              </NavDropdown.Item> */}
+            </NavDropdown>
             <Nav.Link
               className={`navpaths d-flex align-items-center ${
                 isActive("/lang-test-prep") ? "active-link" : ""
@@ -86,6 +100,35 @@ function CustomNavbar() {
             >
               Language & Test
             </Nav.Link>
+            <NavDropdown
+              title="More"
+              className={`navpaths d-flex align-items-center ${
+                isActive("/more") ? "active-link" : ""
+              }`}
+            >
+              <NavDropdown.Item
+                onClick={() => handleNavigation("/more/education-loan")}
+              >
+                Education Loan
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={() => handleNavigation("/more/scholarships")}
+              >
+                Scholarships
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={() => handleNavigation("/more/sop-and-resume-writing")}
+              >
+                SOP & Resume Writing
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={() =>
+                  handleNavigation("/more/german-opportunity-card")
+                }
+              >
+                German Opportunity Card
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <div className="ms-auto align-items-center justify-content-center text-center my-2">
             <button

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Image, Row } from "react-bootstrap";
 import "./ImageMainHeader.css";
+import ConsultationModal from "../../sections/resuable/forms/calendly/LeadFormCalendly";
 
 const ImageHeaderComponent = ({
   imageSrc,
@@ -9,6 +10,17 @@ const ImageHeaderComponent = ({
   subheading,
   buttonText = "Talk to an Expert",
 }) => {
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+  // Default onClick handler if none provided
+  const handleButtonClick = () => {
+    handleShow();
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
+  };
   return (
     <header className="d-flex align-items-center justify-content-center text-center py-5 study-aborad-country-header">
       <div className="circle-blur"></div>
@@ -26,10 +38,13 @@ const ImageHeaderComponent = ({
         </Row>
         <Row>
           <div>
-            <button className="btn-primary">{buttonText}</button>
+            <button className="btn-primary" onClick={handleButtonClick}>
+              {buttonText}
+            </button>
           </div>
         </Row>
       </Container>
+      <ConsultationModal show={showModal} handleClose={handleClose} />;
     </header>
   );
 };
