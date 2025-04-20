@@ -1,23 +1,30 @@
 @font-face {
   font-family: "Plus Jakarta Sans";
-  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 200 800; /* Define the range of weights */
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  /* Define the range of weights */
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --primary-color: #9473f2; /* Primary - Red-500 (C) */
-  --primary-variant: #360fa3 !important; /* Primary variant - Red-700 */
-  --secondary-color: #1a202c; /* Secondary - Grey-900 */
-  --secondary-variant: #4a5568; /* Secondary variant - Grey-700 */
+  --primary-color: #9473f2;
+  /* Primary - Red-500 (C) */
+  --primary-variant: #360fa3 !important;
+  /* Primary variant - Red-700 */
+  --secondary-color: #1a202c;
+  /* Secondary - Grey-900 */
+  --secondary-variant: #4a5568;
+  /* Secondary variant - Grey-700 */
 
   --primary-accent: #e86e39 !important;
 
-  --background-primary: #ffffff; /* Background Primary - G-100 */
-  --background-secondary: #fafbfc; /* Background Secondary - G-200 */
-  --background-tertiary: #dfe1e6; /* Background Tertiary - G-400 */
+  --background-primary: #ffffff;
+  /* Background Primary - G-100 */
+  --background-secondary: #fafbfc;
+  /* Background Secondary - G-200 */
+  --background-tertiary: #dfe1e6;
+  /* Background Tertiary - G-400 */
 
   --content-primary: #1a202c !important;
   --content-secondary: #4a5568 !important;
@@ -90,6 +97,7 @@
 .text-primary-variant {
   color: var(--primary-variant);
 }
+
 .bg-primary-variant {
   background-color: var(--primary-variant);
 }
@@ -98,6 +106,7 @@
 .text-secondary-color {
   color: var(--secondary-color);
 }
+
 .bg-secondary-color {
   background-color: var(--secondary-color);
 }
@@ -105,6 +114,7 @@
 .text-secondary-variant {
   color: var(--secondary-variant);
 }
+
 .bg-secondary-variant {
   background-color: var(--secondary-variant);
 }
@@ -126,6 +136,7 @@
 .text-content-primary {
   color: var(--content-primary);
 }
+
 .text-content-secondary {
   color: var(--content-secondary);
 }
@@ -171,6 +182,7 @@
   font: var(--heading-big-medium) !important;
   margin-bottom: 12px !important;
 }
+
 .heading-small-medium {
   font: var(--heading-small-medium) !important;
 }
@@ -178,12 +190,15 @@
 .subheading-big-regular {
   font: var(--subheading-big-regular) !important;
 }
+
 .subheading-big-medium {
   font: var(--subheading-big-medium) !important;
 }
+
 .subheading-small-regular {
   font: var(--subheading-small-regular) !important;
 }
+
 .subheading-small-medium {
   font: var(--subheading-small-medium) !important;
 }
@@ -191,9 +206,11 @@
 .caption-regular {
   font: var(--caption-regular) !important;
 }
+
 .caption-medium {
   font: var(--caption-medium) !important;
 }
+
 .caption-bold {
   font: var(--caption-bold) !important;
 }
@@ -201,12 +218,15 @@
 .paragraph-big-regular {
   font: var(--paragraph-big-regular) !important;
 }
+
 .paragraph-big-medium {
   font: var(--paragraph-big-medium) !important;
 }
+
 .paragraph-small-regular {
   font: var(--paragraph-small-regular) !important;
 }
+
 .paragraph-small-medium {
   font: var(--paragraph-small-medium) !important;
 }
@@ -214,6 +234,7 @@
 .display-medium {
   font: var(--display-medium) !important;
 }
+
 .display-regular {
   font: var(--display-regular) !important;
 }
@@ -224,6 +245,7 @@
     font: var(--mobile-heading-big-medium) !important;
     margin-bottom: 8px !important;
   }
+
   .heading-small-medium {
     font: var(--mobile-heading-small-medium) !important;
   }
@@ -231,12 +253,15 @@
   .subheading-big-regular {
     font: var(--mobile-subheading-big-regular) !important;
   }
+
   .subheading-big-medium {
     font: var(--mobile-subheading-big-medium) !important;
   }
+
   .subheading-small-regular {
     font: var(--mobile-subheading-small-regular) !important;
   }
+
   .subheading-small-medium {
     font: var(--mobile-subheading-small-medium) !important;
   }
@@ -244,9 +269,11 @@
   .caption-regular {
     font: var(--mobile-caption-regular);
   }
+
   .caption-medium {
     font: var(--mobile-caption-medium);
   }
+
   .caption-bold {
     font: var(--mobile-caption-bold);
   }
@@ -254,12 +281,15 @@
   .paragraph-big-regular {
     font: var(--mobile-paragraph-big-regular);
   }
+
   .paragraph-big-medium {
     font: var(--mobile-paragraph-big-medium);
   }
+
   .paragraph-small-regular {
     font: var(--mobile-paragraph-small-regular);
   }
+
   .paragraph-small-medium {
     font: var(--mobile-paragraph-small-medium);
   }
@@ -267,6 +297,7 @@
   .display-medium {
     font: var(--mobile-display-medium);
   }
+
   .display-regular {
     font: var(--mobile-display-regular);
   }
@@ -280,6 +311,10 @@
   /* margin: 0 !important;
     padding: 0 !important; */
   /* box-sizing: border-box !important; */
+}
+
+body {
+  margin-top: 85px !important;
 }
 
 html,
@@ -418,6 +453,7 @@ body {
 }
 
 @media (max-width: 1024px) {
+
   .btn-primary,
   .btn-secondary,
   .btn-ghost,
@@ -431,6 +467,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .btn-primary,
   .btn-secondary,
   .btn-ghost,

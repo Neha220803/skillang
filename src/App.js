@@ -16,11 +16,11 @@ import { HelmetProvider } from "react-helmet-async";
 import ScholarshipPage from "./pages/more/scholarship-page";
 import EventsPage from "./pages/more/events-page";
 import TermsPage from "./pages/footer-pages/terms";
-import PrivacyPolicyPage from "./pages/footer-pages/terms";
 import CountryUniversityPage from "./pages/main/countryUniversityPage";
 import SOPAndResumeWritingPage from "./pages/more/sop-and-resume-writing";
 import BlogsPage from "./pages/more/blogsPage";
 import GermanOpportunityCardsPage from "./pages/more/german-opportunity-card";
+import PrivacyPolicyPage from "./pages/footer-pages/privacyPolicy";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context

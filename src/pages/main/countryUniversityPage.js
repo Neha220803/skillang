@@ -4,7 +4,7 @@ import CountryWiseUniversity from "../../sections/main/country-wise-university/c
 
 const CountryUniversityPage = () => {
   return (
-    <div className="pt-5 mt-5">
+    <div className="">
       <PartneredUni />
       <CountryWiseUniversity />
     </div>

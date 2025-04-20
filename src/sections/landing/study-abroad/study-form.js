@@ -75,15 +75,15 @@ const StudyForm = () => {
   formData.origin = "Study Abroad Landing Page Form";
   return (
     <header className="d-flex justify-content-center align-items-center ">
-      <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0 my-5 m-lg-0">
-        <Row className=" justify-content-center align-items-center mt-2 ">
+      <Container className="d-flex justify-content-center align-items-end ">
+        <Row className=" justify-content-center align-items-center ">
           {/* <Col lg={1} md={1} className="d-none d-md-block "></Col> */}
           <Col
             lg={12}
             md={12}
             sm={12}
             xs={12}
-            className="d-flex justify-content-center align-items-center mt-lg-5"
+            className="d-flex justify-content-center align-items-center"
           >
             <div className="nurse-landing-card">
               <Row className=" d-flex justify-content-center align-items-center ">

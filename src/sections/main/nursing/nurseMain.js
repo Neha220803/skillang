@@ -86,9 +86,9 @@ const NurseMainHeader = () => {
   formData.lookingFor = "Study Aborad";
   formData.origin = "Nursing Page Form";
   return (
-    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2 bg-primar">
+    <header className="d-flex align-items-start justify-content-center ">
       <Container className="bg-dar">
-        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5">
+        <Row className="">
           <Col
             lg={7}
             md={5}
@@ -104,7 +104,7 @@ const NurseMainHeader = () => {
             md={6}
             sm={12}
             xs={12}
-            className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0"
+            className="d-flex align-items-start justify-content-center "
           >
             <Container className="d-flex align-items-center justify-content-center flex-column">
               <div className="form-container m-0">

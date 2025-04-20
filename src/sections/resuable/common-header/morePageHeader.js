@@ -29,7 +29,7 @@ const MorePageHeader = ({
 
   return (
     <div
-      className="d-flex align-items-start mt-5 pt-5 justify-content-center reusable-header-card"
+      className="d-flex align-items-start  justify-content-center reusable-header-card"
       style={{
         "--desktop-more-page-bg-image": `url(${desktopBgImage})`,
         "--mobile-more-page-bg-image": mobileBgImage

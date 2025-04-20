@@ -80,7 +80,7 @@ const NurseForm = () => {
 
   return (
     <div className="nurse-landing">
-      <Container className="d-flex justify-content-center align-items-end pt-5 pt-lg-0  m-lg-0">
+      <Container className="d-flex justify-content-center align-items-end ">
         <Row className="justify-content-center align-items-center  ">
           <Col lg={1} md={1} className="d-none d-md-block "></Col>
           <Col

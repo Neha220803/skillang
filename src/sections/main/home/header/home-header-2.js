@@ -116,9 +116,9 @@ const HomeHeader2 = () => {
   };
 
   return (
-    <header className="d-flex align-items-center justify-content-center mt-lg-5 m-0 px-2 bg-primar">
+    <header className="d-flex align-items-start justify-content-center">
       <Container className="bg-dar">
-        <Row className="mt-lg-0 pt-lg-0 mt-5 pt-5">
+        <Row className="">
           <Col
             lg={7}
             md={5}
@@ -134,10 +134,10 @@ const HomeHeader2 = () => {
             md={6}
             sm={12}
             xs={12}
-            className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0"
+            className="d-flex align-items-start justify-content-center "
           >
-            <div className="d-flex align-items-center justify-content-center flex-column">
-              <div className="form-container">
+            <Container className="d-flex align-items-center justify-content-center flex-column">
+              <div className="form-container m-0">
                 <div
                   className="subheading-small-medium text-center"
                   style={{ marginBottom: "8px" }}
@@ -389,7 +389,7 @@ const HomeHeader2 = () => {
                   </div>
                 </Form>
               </div>
-            </div>
+            </Container>
           </Col>
         </Row>
       </Container>

@@ -22,9 +22,9 @@ const ImageHeaderComponent = ({
     // });
   };
   return (
-    <header className="d-flex align-items-center justify-content-center text-center py-5 study-aborad-country-header">
+    <header className="d-flex align-items-start justify-content-center text-center study-aborad-country-header">
       <div className="circle-blur"></div>
-      <Container className="mt-5">
+      <Container className="">
         <Row>
           <Image src={imageSrc} alt={imageAlt} className="country-wise-img" />
         </Row>

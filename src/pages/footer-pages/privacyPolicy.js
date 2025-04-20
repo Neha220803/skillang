@@ -5,8 +5,8 @@ import "./terms.css";
 const PrivacyPolicyPage = () => {
   return (
     <div className="w-full bg-white min-h-screen">
-      <div className=" mx-auto px-4 py-5 container">
-        <div className="privacy-cont">
+      <div className="max-w-5xl mx-auto px-4 container">
+        <div className="privacy-con mb-5">
           <div className="display-medium text-center">Privacy Policy</div>
           {/* <div className="w-50 text-center">
             At TestMySkills.ai, we are committed to protecting your privacy.

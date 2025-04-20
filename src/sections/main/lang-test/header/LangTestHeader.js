@@ -84,15 +84,15 @@ const LangTestHeader = () => {
     handleOptionSelect("lookingFor", option);
   };
   return (
-    <header className="d-flex align-items-center justify-content-center my-lg-5 m-0 px-2">
+    <header className="d-flex align-items-start justify-content-center ">
       <Container className="">
-        <Row className="pt-5">
+        <Row className="">
           <Col
             lg={7}
             md={5}
             sm={12}
             xs={12}
-            className="d-flex flex-column align-items-start justify-content-center pt-md-0 pt-5"
+            className="d-flex flex-column align-items-start justify-content-center"
           >
             <Image src={headerbg} fluid className="w-100" />
           </Col>
@@ -103,10 +103,10 @@ const LangTestHeader = () => {
             md={6}
             sm={12}
             xs={12}
-            className="d-flex align-items-start justify-content-center mt-3 p-0 mt-lg-0"
+            className="d-flex align-items-start justify-content-center "
           >
             <Container className="d-flex align-items-center justify-content-center flex-column">
-              <div className="form-container">
+              <div className="form-container m-0">
                 <div
                   className="subheading-small-medium text-center"
                   style={{ marginBottom: "8px" }}
