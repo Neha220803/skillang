@@ -21,6 +21,7 @@ import SOPAndResumeWritingPage from "./pages/more/sop-and-resume-writing";
 import BlogsPage from "./pages/more/blogsPage";
 import GermanOpportunityCardsPage from "./pages/more/german-opportunity-card";
 import PrivacyPolicyPage from "./pages/footer-pages/privacyPolicy";
+import ApiDebugger from "./hooks/APIDebug";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -67,6 +68,7 @@ function Layout() {
           element={<GermanOpportunityCardsPage />}
         />
         <Route path="/more/blogs" element={<BlogsPage />} />
+        <Route path="/apidebug" element={<ApiDebugger />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}

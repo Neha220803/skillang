@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.57914e7e.css",
-    "main.js": "/static/js/main.ddc52b49.js",
+    "main.css": "/static/css/main.b480dfec.css",
+    "main.js": "/static/js/main.ab730492.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
@@ -272,11 +272,11 @@
     "static/media/document.svg": "/static/media/document.5fdb859e1c2f620eb11914ea48692a4e.svg",
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
-    "main.57914e7e.css.map": "/static/css/main.57914e7e.css.map",
-    "main.ddc52b49.js.map": "/static/js/main.ddc52b49.js.map"
+    "main.b480dfec.css.map": "/static/css/main.b480dfec.css.map",
+    "main.ab730492.js.map": "/static/js/main.ab730492.js.map"
   },
   "entrypoints": [
-    "static/css/main.57914e7e.css",
-    "static/js/main.ddc52b49.js"
+    "static/css/main.b480dfec.css",
+    "static/js/main.ab730492.js"
   ]
 }
