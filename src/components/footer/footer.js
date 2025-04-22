@@ -3,11 +3,10 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
-  FaYoutube,
   FaPhone,
   FaMapMarkerAlt,
   FaLinkedin,
+  FaEnvelope,
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import foorImg from "../../assets/images/home/footer-img.png";
@@ -166,6 +165,12 @@ const Footer = () => {
                 </a> */}
                 <a href="https://www.linkedin.com/company/skillang/">
                   <FaLinkedin />
+                </a>
+                <a
+                  href="mailto:support@skillang.com"
+                  // className="text-content-primary-accent hover:text-primary-variant"
+                >
+                  <FaEnvelope />
                 </a>
               </div>
               <div className="contact-phone">

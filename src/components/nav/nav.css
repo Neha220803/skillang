@@ -13,7 +13,17 @@
 
   .navcont {
     height: fit-content !important;
-    background-color: rgb(104, 53, 53) !important;
+    background-color: white !important;
+    /* Changed from rgb(104, 53, 53) to white */
+  }
+
+  /* Optional: Add styling for the expanded mobile menu */
+  .navbar-collapse {
+    background-color: white;
+    /* padding: 10px; */
+    width: 100% !important;
+    border-radius: 0 0 10px 10px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
   }
 }
 

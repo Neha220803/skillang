@@ -3,6 +3,7 @@ import { Container, Image, NavDropdown } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FiPhoneCall } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./nav.css";
 import "../../index.css";
@@ -10,8 +11,31 @@ import logo from "../../assets/images/logos/logo-3.svg";
 
 function CustomNavbar() {
   const [expanded, setExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const phoneNumber = "+917200630336";
+  const whatsappMessage =
+    "Hello, I'd like to know more about Skillang services.";
+
+  // Check if the device is mobile
+  useEffect(() => {
+    const checkDevice = () => {
+      // Using regex to detect mobile devices
+      const isMobileDevice =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+      setIsMobile(isMobileDevice);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => {
+      window.removeEventListener("resize", checkDevice);
+    };
+  }, []);
 
   // Close navbar whenever the route changes
   useEffect(() => {
@@ -24,6 +48,23 @@ function CustomNavbar() {
     if (location.pathname !== path) {
       navigate(path);
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleContactClick = () => {
+    if (isMobile) {
+      // For mobile devices, initiate a call
+      window.location.href = `tel:${phoneNumber}`;
+    } else {
+      // For desktop, open WhatsApp Web
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      window.open(
+        `https://web.whatsapp.com/send?phone=${phoneNumber.replace(
+          "+",
+          ""
+        )}&text=${encodedMessage}`,
+        "_blank"
+      );
     }
   };
 
@@ -133,15 +174,25 @@ function CustomNavbar() {
           <div className="ms-auto align-items-center justify-content-center text-center my-2">
             <button
               className="btn-primary-outline"
-              onClick={() => {
-                window.location.href = "tel:+917200630336";
-              }}
+              onClick={handleContactClick}
             >
-              <FiPhoneCall
-                className="me-3"
-                style={{ width: "18px", height: "auto" }}
-              />
-              Contact Us
+              {isMobile ? (
+                <>
+                  <FiPhoneCall
+                    className="me-3"
+                    style={{ width: "18px", height: "auto" }}
+                  />
+                  Contact Us
+                </>
+              ) : (
+                <>
+                  <FiPhoneCall
+                    className="me-3"
+                    style={{ width: "18px", height: "auto" }}
+                  />
+                  Contact Us
+                </>
+              )}
             </button>
           </div>
         </Navbar.Collapse>

@@ -32,7 +32,7 @@
 
 @media (max-width: 768px) {
     .country-wise-img {
-        height: 300px !important;
+        height: 75vh !important;
         object-position: right !important;
     }
 
