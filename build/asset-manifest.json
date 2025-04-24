@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c062ea12.css",
-    "main.js": "/static/js/main.b7fb3354.js",
+    "main.css": "/static/css/main.d6eab5b3.css",
+    "main.js": "/static/js/main.adb11441.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
@@ -41,7 +41,6 @@
     "static/media/ourservice1.png": "/static/media/ourservice1.167c590891901cc79590.png",
     "static/media/LwhySkill3.jpg": "/static/media/LwhySkill3.2e863b9cd04e42c3c489.jpg",
     "static/media/nurseBook1.png": "/static/media/nurseBook1.bce6cfeb656e0b20e415.png",
-    "static/media/trend1.jpg": "/static/media/trend1.7a5c684519eca8f2c879.jpg",
     "static/media/LwhySkill4.jpg": "/static/media/LwhySkill4.51433acc2c8a04420395.jpg",
     "static/media/keyDestiLand1.jpg": "/static/media/keyDestiLand1.888c1f36aa6235b6b3c7.jpg",
     "static/media/nurseBook5.png": "/static/media/nurseBook5.9c5db607f8a7919d2a83.png",
@@ -59,23 +58,24 @@
     "static/media/nurse-2.png": "/static/media/nurse-2.2b7c3af9372a8a7be7d1.png",
     "static/media/workAbroadCard3.jpg": "/static/media/workAbroadCard3.cae9eb9af9c46bdde58e.jpg",
     "static/media/whystudyabroad.png": "/static/media/whystudyabroad.4177aeaed8b676fcdb5b.png",
-    "static/media/trend2.jpg": "/static/media/trend2.2d40f4e6b9e502e1494e.jpg",
-    "static/media/trend3.jpg": "/static/media/trend3.f2f6e5bebe43053f8199.jpg",
     "static/media/nType6.jpg": "/static/media/nType6.de264c09ae74eebff6ec.jpg",
+    "static/media/trend-2.jpg": "/static/media/trend-2.47feb2262cc8289f7b78.jpg",
     "static/media/nurse-1.png": "/static/media/nurse-1.17d4cf53fbc294d4fd54.png",
     "static/media/whySkillang2.jpg": "/static/media/whySkillang2.8fb70284789130963271.jpg",
     "static/media/nurse-3.png": "/static/media/nurse-3.9d64ba345352620f451d.png",
     "static/media/LwhySkill1.jpg": "/static/media/LwhySkill1.54ccded7d712d7dd50b2.jpg",
     "static/media/intern-2.jpg": "/static/media/intern-2.b24d8ba67fdffe2944bc.jpg",
+    "static/media/trend-3.jpg": "/static/media/trend-3.c057a87abbab0ad95ac9.jpg",
     "static/media/scholarLeft.png": "/static/media/scholarLeft.0573dcafe83432386f17.png",
     "static/media/intern-8.jpg": "/static/media/intern-8.0b3c1dcd8bee37c3534c.jpg",
     "static/media/study-1.png": "/static/media/study-1.596b8e0f53d60ee43575.png",
     "static/media/s-journey-8.jpg": "/static/media/s-journey-8.b83b3878c0f0c347081c.jpg",
     "static/media/intern-5.jpg": "/static/media/intern-5.9106c950f036e69bb455.jpg",
     "static/media/K8s Operator-1.jpg": "/static/media/K8s Operator-1.86cddec5901793d32d47.jpg",
+    "static/media/header-blog-main.jpg": "/static/media/header-blog-main.2746845f8ece01fdecc4.jpg",
     "static/media/s-journey-7.jpg": "/static/media/s-journey-7.5f49e5fe5dc1ecfd9d58.jpg",
     "static/media/s-journey-1.jpg": "/static/media/s-journey-1.9eb9ddd407e4affec2b2.jpg",
-    "static/media/trend4.jpg": "/static/media/trend4.0baed199b93bb77d9f58.jpg",
+    "static/media/trend-4.jpg": "/static/media/trend-4.0e4f932a48ff4329b1e7.jpg",
     "static/media/work-3.png": "/static/media/work-3.739dd265762a5eb33d0d.png",
     "static/media/workAbroadBg.jpg": "/static/media/workAbroadBg.d34e29ebf702c9061e9b.jpg",
     "static/media/intern-3.jpg": "/static/media/intern-3.d0d4aec7c80bc124ff9c.jpg",
@@ -145,6 +145,7 @@
     "static/media/scholarShipBg.jpg": "/static/media/scholarShipBg.302f4d6ed873f789ef91.jpg",
     "static/media/uni-5.png": "/static/media/uni-5.4a08ec215c1e5bff36b7.png",
     "static/media/uni-4.png": "/static/media/uni-4.1030ac8bf99e5a0f9112.png",
+    "static/media/trend-1.jpg": "/static/media/trend-1.0d65430d36de315b247e.jpg",
     "static/media/jorneybg.png": "/static/media/jorneybg.068ebbf1840721216f0b.png",
     "static/media/emptyState.png": "/static/media/emptyState.d390d5e97e834ad84d0d.png",
     "static/media/line.png": "/static/media/line.84fc7f68858eb11b7a70.png",
@@ -272,11 +273,11 @@
     "static/media/document.svg": "/static/media/document.5fdb859e1c2f620eb11914ea48692a4e.svg",
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
-    "main.c062ea12.css.map": "/static/css/main.c062ea12.css.map",
-    "main.b7fb3354.js.map": "/static/js/main.b7fb3354.js.map"
+    "main.d6eab5b3.css.map": "/static/css/main.d6eab5b3.css.map",
+    "main.adb11441.js.map": "/static/js/main.adb11441.js.map"
   },
   "entrypoints": [
-    "static/css/main.c062ea12.css",
-    "static/js/main.b7fb3354.js"
+    "static/css/main.d6eab5b3.css",
+    "static/js/main.adb11441.js"
   ]
 }
