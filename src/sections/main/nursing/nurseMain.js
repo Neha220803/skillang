@@ -15,6 +15,7 @@ import "../../../index.css";
 import "../../../App.css";
 // import "../home/header/home-header.css";
 import nurseHeaderImage from "../../../assets/images/nursing/nurseHeaderImg.jpg";
+import FormRadioButton from "../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -64,7 +65,6 @@ const NurseMainHeader = () => {
     handleInputChange,
     handleOptionSelect,
     handleSubmit,
-
     handleExperienceSelect,
     handleOtpChange,
     handleVerifyOtp,
@@ -169,63 +169,23 @@ const NurseMainHeader = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  {/* <Form.Group className=" text-start">
-                                        <Form.Label className="text-start paragraph-small-regular text-content-secondary">Select Experience</Form.Label>
-                                        <div className="d-flex gap-2 flex-wrap">
-                                          {["Student", "0-1 Years", "1-3 Years", "3-5 Years", "5+ Years"].map((option, index) => (
-                                            <div key={index} className={`experience-option ${formData.experience === option ? "selected" : ""}`}>
-                                              <input
-                                                type="radio"
-                                                id={`experience-${index}`}
-                                                name="experience"
-                                                value={option}
-                                                checked={formData.experience === option}
-                                                onChange={(e) => handleExperienceSelect(e.target.value)}
-                                                hidden
-                                              />
-                                              <label htmlFor={`experience-${index}`} className="w-100">
-                                                {option}
-                                              </label>
-                                            </div>
-                                          ))}
-                                        </div>
-                                      </Form.Group> */}
-
-                  <Form.Group className="" controlId="formExperience">
-                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Select Experience
-                    </Form.Label>
-                    <div className="d-flex gap-2 flex-wrap">
-                      {[
-                        "Student",
-                        "0-1 Years",
-                        "1-3 Years",
-                        "3-5 Years",
-                        "5+ Years",
-                      ].map((option, index) => (
-                        <div
-                          key={index}
-                          className={`experience-option ${
-                            formData.experience === option ? "selected" : ""
-                          }`}
-                          onClick={() => handleExperienceSelect(option)}
-                        >
-                          <label className="w-100 caption-regular text-content-secondary">
-                            {option}
-                          </label>
-                          <input
-                            type="radio"
-                            id={`experience-${index}`}
-                            name="experience"
-                            value={option}
-                            checked={formData.experience === option}
-                            onChange={() => {}} // Handled by the onClick on parent div
-                            hidden
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </Form.Group>
+                  {/* Using our reusable FormRadioButton component */}
+                  <FormRadioButton
+                    label="Select Experience"
+                    options={[
+                      "Student",
+                      "0-1 Years",
+                      "1-3 Years",
+                      "3-5 Years",
+                      "5+ Years",
+                    ]}
+                    name="experience"
+                    value={formData.experience}
+                    onChange={handleExperienceSelect}
+                    controlId="formExperience"
+                    labelClassName="text-start paragraph-small-regular text-content-secondary"
+                    optionClassName="caption-regular text-content-secondary"
+                  />
                   <div style={{ marginTop: "12px" }}></div>
                   {otpVisible && (
                     <Row className="">

@@ -9,12 +9,12 @@ import {
   ToastContainer,
 } from "react-bootstrap";
 import "../../../../index.css";
-import "./home-header.css";
 import "../../../../App.css";
 import headerbg from "../../../../assets/images/home/header-bg1.jpg";
 import successSound from "../../../../assets/sounds/success.mp3";
 import errorSound from "../../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../../hooks/useFormHandler";
+import FormRadioButton from "../../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -203,143 +203,58 @@ const HomeHeader2 = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="" controlId="formLookingFor">
-                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Looking For ?
-                    </Form.Label>
-                    <div className="d-flex gap-2 flex-wrap">
-                      {[
-                        "Nursing",
-                        "Study Abroad",
-                        "Work Abroad",
-                        "Test & Language Prep",
-                      ].map((option, index) => (
-                        <div
-                          key={index}
-                          className={`experience-option ${
-                            formData.lookingFor === option ? "selected" : ""
-                          }`}
-                          onClick={() => handleLookingForSelect(option)}
-                        >
-                          <label className="w-100 m-0 caption-regular text-content-secondary">
-                            {option}
-                          </label>
-                          <input
-                            type="radio"
-                            id={`looking-for-${index}`}
-                            name="lookingFor"
-                            value={option}
-                            checked={formData.lookingFor === option}
-                            onChange={() => {}} // Handled by the onClick on parent div
-                            hidden
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </Form.Group>
+
+                  {/* Using our new reusable FormRadioButton component */}
+                  <FormRadioButton
+                    label="Looking For ?"
+                    options={[
+                      "Nursing",
+                      "Study Abroad",
+                      "Work Abroad",
+                      "Test & Language Prep",
+                    ]}
+                    name="lookingFor"
+                    value={formData.lookingFor}
+                    onChange={handleLookingForSelect}
+                    controlId="formLookingFor"
+                  />
 
                   {/* Conditional Experience Options for Nursing and Work Abroad */}
                   {showExperienceOptions() && (
-                    <Form.Group className="" controlId="formExperience">
-                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                        Experience
-                      </Form.Label>
-                      <div className="d-flex gap-2 flex-wrap">
-                        {["0-2 yrs", "2-5 Yrs", "5+ Yrs"].map(
-                          (option, index) => (
-                            <div
-                              key={index}
-                              className={`experience-option ${
-                                formData.experience === option ? "selected" : ""
-                              }`}
-                              onClick={() => handleExperienceSelect(option)}
-                            >
-                              <label className="w-100 caption-regular text-content-secondary">
-                                {option}
-                              </label>
-                              <input
-                                type="radio"
-                                id={`experience-${index}`}
-                                name="experience"
-                                value={option}
-                                checked={formData.experience === option}
-                                onChange={() => {}} // Handled by the onClick on parent div
-                                hidden
-                              />
-                            </div>
-                          )
-                        )}
-                      </div>
-                    </Form.Group>
+                    <FormRadioButton
+                      label="Experience"
+                      options={["0-2 yrs", "2-5 Yrs", "5+ Yrs"]}
+                      name="experience"
+                      value={formData.experience}
+                      onChange={handleExperienceSelect}
+                      controlId="formExperience"
+                    />
                   )}
 
                   {/* Conditional Study Level Options for Study Abroad */}
                   {showStudyLevelOptions() && (
-                    <Form.Group className="" controlId="formStudyLevel">
-                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                        Looking for ?
-                      </Form.Label>
-                      <div className="d-flex gap-2 flex-wrap">
-                        {["Bachelors", "Masters"].map((option, index) => (
-                          <div
-                            key={index}
-                            className={`experience-option ${
-                              formData.studyLevel === option ? "selected" : ""
-                            }`}
-                            onClick={() => handleStudyLevelSelect(option)}
-                          >
-                            <label className="w-100 caption-regular text-content-secondary">
-                              {option}
-                            </label>
-                            <input
-                              type="radio"
-                              id={`study-level-${index}`}
-                              name="studyLevel"
-                              value={option}
-                              checked={formData.studyLevel === option}
-                              onChange={() => {}} // Handled by the onClick on parent div
-                              hidden
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </Form.Group>
+                    <FormRadioButton
+                      label="Looking for ?"
+                      options={["Bachelors", "Masters"]}
+                      name="studyLevel"
+                      value={formData.studyLevel}
+                      onChange={handleStudyLevelSelect}
+                      controlId="formStudyLevel"
+                    />
                   )}
 
                   {/* Conditional Country Options for Study Abroad */}
                   {showCountryOptions() && (
-                    <Form.Group className="" controlId="formCountry">
-                      <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                        Country
-                      </Form.Label>
-                      <div className="d-flex gap-2 flex-wrap">
-                        {["USA", "UK", "Germany", "Australia", "Europe"].map(
-                          (option, index) => (
-                            <div
-                              key={index}
-                              className={`experience-option ${
-                                formData.country === option ? "selected" : ""
-                              }`}
-                              onClick={() => handleCountrySelect(option)}
-                            >
-                              <label className="w-100 caption-regular text-content-secondary">
-                                {option}
-                              </label>
-                              <input
-                                type="radio"
-                                id={`country-${index}`}
-                                name="country"
-                                value={option}
-                                checked={formData.country === option}
-                                onChange={() => {}} // Handled by the onClick on parent div
-                                hidden
-                              />
-                            </div>
-                          )
-                        )}
-                      </div>
-                    </Form.Group>
+                    <FormRadioButton
+                      label="Country"
+                      options={["USA", "UK", "Germany", "Australia", "Europe"]}
+                      name="country"
+                      value={formData.country}
+                      onChange={handleCountrySelect}
+                      controlId="formCountry"
+                    />
                   )}
+
                   <div style={{ marginTop: "12px" }}>
                     {otpVisible && (
                       <Row className="mb-2">

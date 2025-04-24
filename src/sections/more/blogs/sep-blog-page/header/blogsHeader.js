@@ -10,12 +10,12 @@ import {
   FaEllipsisH,
 } from "react-icons/fa";
 // Import local images
-import featuredImg from "../../../../assets/images/Blogs/blogbg.jpg";
-import img1 from "../../../../assets/images/Blogs/trend1.jpg";
-import img2 from "../../../../assets/images/Blogs/trend2.jpg";
-import img3 from "../../../../assets/images/Blogs/trend3.jpg";
-import img4 from "../../../../assets/images/Blogs/trend4.jpg";
 
+import featuredImg from "../../../../../assets/images/Blogs/blogbg.jpg";
+import img1 from "../../../../../assets/images/Blogs/trend-1.jpg";
+import img2 from "../../../../../assets/images/Blogs/trend-2.jpg";
+import img3 from "../../../../../assets/images/Blogs/trend-3.jpg";
+import img4 from "../../../../../assets/images/Blogs/trend-4.jpg";
 // Article Card Component
 const ArticleCard = ({ image, title, date, likes, comments }) => {
   return (
@@ -143,12 +143,12 @@ const BlogsHeaderComp = () => {
               <Row className="mb-4">
                 <Col xs={12}>
                   <div className="featured-image-container">
-                    <img1
+                    <img
                       src={featuredImg}
                       alt="New York Times Square"
-                      className="featured-image"
+                      className="w-100 blog-main-header-left-img"
                     />
-                    <div className="image-credit">source: unsplash</div>
+                    <div className="text-center">source: unsplash</div>
                   </div>
                 </Col>
               </Row>
@@ -156,7 +156,7 @@ const BlogsHeaderComp = () => {
               {/* Introduction Text */}
               <Row className="mb-5">
                 <Col xs={12}>
-                  <p className="intro-text">
+                  <p className="">
                     It is a daunting experience for newcomers; however, it
                     doesn't have to be. Here are four tips to enhance your
                     enjoyment of the experience and productively utilize all
@@ -168,22 +168,22 @@ const BlogsHeaderComp = () => {
               {/* Additional Blog Content Section */}
               <Row className="mb-5">
                 <Col xs={12}>
-                  <h2 className="section-heading">
+                  <h2 className="subheading-big-medium">
                     Enjoy New York From Out of Town
                   </h2>
-                  <p className="content-text">
+                  <p className="">
                     The city is worth known because of its excitement, vitality,
                     and excitement, but going abroad to study in New York gives
                     you a chance to understand New York's different aspects.
                   </p>
-                  <p className="content-text">
+                  <p className="">
                     The unpresumptious past aside, New York is a fascinating
                     place to visit. Because of the city teeming past and current
                     character, the city is an interesting place to study and
                     live. However, amid all the hustle, it gives a chance to
                     experience the real essence of the city.
                   </p>
-                  <p className="content-text">
+                  <p className="">
                     From Chinatown Town Chinatown to Central Park to the Statue
                     of Liberty, The city reflects a realistic image of its own
                     for visitors who take a moment to reflect not only on what's
@@ -196,8 +196,10 @@ const BlogsHeaderComp = () => {
               {/* Second Content Section */}
               <Row className="mb-5">
                 <Col xs={12}>
-                  <h2 className="section-heading">Join in on The Chic verse</h2>
-                  <p className="content-text">
+                  <h2 className="subheading-big-medium">
+                    Join in on The Chic verse
+                  </h2>
+                  <p className="">
                     If you are traveling abroad to New York, any student who
                     wishes to immerse themselves amid the city's vibrant social
                     scene should include the district of Midtown in their plans.

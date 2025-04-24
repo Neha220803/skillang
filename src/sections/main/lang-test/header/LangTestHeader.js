@@ -15,6 +15,7 @@ import headerbg from "../../../../assets/images/lang-test/Lheader-bg.jpg";
 import successSound from "../../../../assets/sounds/success.mp3";
 import errorSound from "../../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../../hooks/useFormHandler";
+import FormRadioButton from "../../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -168,43 +169,27 @@ const LangTestHeader = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="" controlId="formLookingFor">
-                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Looking For ?
-                    </Form.Label>
-                    <div className="d-flex gap-2 flex-wrap">
-                      {[
-                        "IELTS",
-                        "TOEFL",
-                        "GRE",
-                        "GMAT",
-                        "PTE",
-                        "German language",
-                        "Others",
-                      ].map((option, index) => (
-                        <div
-                          key={index}
-                          className={`experience-option ${
-                            formData.lookingFor === option ? "selected" : ""
-                          }`}
-                          onClick={() => handleLookingForSelect(option)}
-                        >
-                          <label className="w-100 m-0 caption-regular text-content-secondary">
-                            {option}
-                          </label>
-                          <input
-                            type="radio"
-                            id={`looking-for-${index}`}
-                            name="lookingFor"
-                            value={option}
-                            checked={formData.lookingFor === option}
-                            onChange={() => {}} // Handled by the onClick on parent div
-                            hidden
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </Form.Group>
+
+                  {/* Using our reusable FormRadioButton component */}
+                  <FormRadioButton
+                    label="Looking For ?"
+                    options={[
+                      "IELTS",
+                      "TOEFL",
+                      "GRE",
+                      "GMAT",
+                      "PTE",
+                      "German language",
+                      "Others",
+                    ]}
+                    name="lookingFor"
+                    value={formData.lookingFor}
+                    onChange={handleLookingForSelect}
+                    controlId="formLookingFor"
+                    labelClassName="text-start paragraph-small-regular text-content-secondary"
+                    optionClassName="caption-regular text-content-secondary"
+                  />
+
                   <div style={{ marginTop: "12px" }}></div>
                   {otpVisible && (
                     <Row className="">

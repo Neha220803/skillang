@@ -15,6 +15,7 @@ import successSound from "../../../assets/sounds/success.mp3";
 import errorSound from "../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../hooks/useFormHandler";
 import "./study_header.css";
+import FormRadioButton from "../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -177,67 +178,31 @@ const StudyAbroadHeader = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Form.Group className="" controlId="formStudyLevel">
-                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Looking for ?
-                    </Form.Label>
-                    <div className="d-flex gap-2 flex-wrap">
-                      {["Bachelors", "Masters"].map((option, index) => (
-                        <div
-                          key={index}
-                          className={`experience-option ${
-                            formData.studyLevel === option ? "selected" : ""
-                          }`}
-                          onClick={() => handleStudyLevelSelect(option)}
-                        >
-                          <label className="w-100 caption-regular text-content-secondary">
-                            {option}
-                          </label>
-                          <input
-                            type="radio"
-                            id={`study-level-${index}`}
-                            name="studyLevel"
-                            value={option}
-                            checked={formData.studyLevel === option}
-                            onChange={() => {}} // Handled by the onClick on parent div
-                            hidden
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </Form.Group>
 
-                  <Form.Group className="" controlId="formCountry">
-                    <Form.Label className="text-start paragraph-small-regular text-content-secondary">
-                      Country
-                    </Form.Label>
-                    <div className="d-flex gap-2 flex-wrap">
-                      {["USA", "UK", "Germany", "Australia", "Europe"].map(
-                        (option, index) => (
-                          <div
-                            key={index}
-                            className={`experience-option ${
-                              formData.country === option ? "selected" : ""
-                            }`}
-                            onClick={() => handleCountrySelect(option)}
-                          >
-                            <label className="w-100 caption-regular text-content-secondary">
-                              {option}
-                            </label>
-                            <input
-                              type="radio"
-                              id={`country-${index}`}
-                              name="country"
-                              value={option}
-                              checked={formData.country === option}
-                              onChange={() => {}} // Handled by the onClick on parent div
-                              hidden
-                            />
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </Form.Group>
+                  {/* Using our reusable FormRadioButton component for Study Level */}
+                  <FormRadioButton
+                    label="Looking for ?"
+                    options={["Bachelors", "Masters"]}
+                    name="studyLevel"
+                    value={formData.lookingFor}
+                    onChange={handleStudyLevelSelect}
+                    controlId="formStudyLevel"
+                    labelClassName="text-start paragraph-small-regular text-content-secondary"
+                    optionClassName="caption-regular text-content-secondary"
+                  />
+
+                  {/* Using our reusable FormRadioButton component for Country */}
+                  <FormRadioButton
+                    label="Country"
+                    options={["USA", "UK", "Germany", "Australia", "Europe"]}
+                    name="country"
+                    value={formData.country}
+                    onChange={handleCountrySelect}
+                    controlId="formCountry"
+                    labelClassName="text-start paragraph-small-regular text-content-secondary"
+                    optionClassName="caption-regular text-content-secondary"
+                  />
+
                   <div style={{ marginTop: "12px" }}></div>
                   {otpVisible && (
                     <Row className="mb-2">

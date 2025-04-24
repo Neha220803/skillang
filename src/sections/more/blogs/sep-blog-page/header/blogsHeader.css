@@ -1,0 +1,27 @@
+/* Breadcrumb Styles */
+.breadcrumb-wrapper {
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #999;
+    font-weight: 500;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    color: #ccc;
+}

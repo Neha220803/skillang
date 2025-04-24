@@ -175,7 +175,7 @@ const useFormHandler = () => {
         pincode: "",
         lookingFor: "",
         experience: "",
-        county: "",
+        country: "",
         origin: "",
       });
 

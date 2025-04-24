@@ -42,7 +42,7 @@ const LoanSection = () => {
             </div>
             <button
               className="btn-primary"
-              onClick={() => handleNavigation("/scholarships")}
+              onClick={() => handleNavigation("/more/scholarships")}
             >
               Apply Now
             </button>

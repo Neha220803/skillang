@@ -18,10 +18,11 @@ import EventsPage from "./pages/more/events-page";
 import TermsPage from "./pages/footer-pages/terms";
 import CountryUniversityPage from "./pages/main/countryUniversityPage";
 import SOPAndResumeWritingPage from "./pages/more/sop-and-resume-writing";
-import BlogsPage from "./pages/more/blogsPage";
 import GermanOpportunityCardsPage from "./pages/more/german-opportunity-card";
 import PrivacyPolicyPage from "./pages/footer-pages/privacyPolicy";
 import ApiDebugger from "./hooks/APIDebug";
+import BlogsMainPage from "./pages/more/blogs/blogsMainPage";
+import BlogsSepPage from "./pages/more/blogs/blogsSepPage";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -67,7 +68,9 @@ function Layout() {
           path="/more/german-opportunity-card"
           element={<GermanOpportunityCardsPage />}
         />
-        <Route path="/more/blogs" element={<BlogsPage />} />
+        <Route path="/more/blogs" element={<BlogsMainPage />} />
+        <Route path="/more/blogs/new-york" element={<BlogsSepPage />} />
+
         <Route path="/apidebug" element={<ApiDebugger />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}

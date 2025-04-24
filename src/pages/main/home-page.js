@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <div className="home-page-container">
       <Helmet>
-        <title>Best Abroad Consultancy in Chennai</title>
+        <title>Best Abroad Consultancy in Chennai | Skillang</title>
         <meta
           name="description"
           content="Looking for the best abroad consultancy in Chennai? We provide expert guidance for overseas education, work, and German language, IELTS coaching."
