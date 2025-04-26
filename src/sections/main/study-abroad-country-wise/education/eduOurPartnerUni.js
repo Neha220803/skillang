@@ -3,11 +3,26 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { HiOutlineDownload } from "react-icons/hi";
 import { ChevronRight } from "react-bootstrap-icons";
 import countryWiseData from "../../../../data/countryWiseData";
+import DownloadBrochurePopUp from "../../../resuable/forms/download-brochure/DownloadBrochurePopUp";
 
 const EduOurPartnerUni = ({ country = "uk" }) => {
   const data = countryWiseData[country];
   const universities = data.education.partnerUniversities;
   const [showAll, setShowAll] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  // Define the handleClose function
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+
+  // Default onClick handler if none provided
+  const handleButtonClick = () => {
+    handleShow();
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
+  };
 
   // Display only first 3 universities on mobile unless showAll is true
   const displayedUniversities = showAll
@@ -56,7 +71,10 @@ const EduOurPartnerUni = ({ country = "uk" }) => {
                     {university.location}
                   </Card.Text>
                   <div className="d-flex">
-                    <button className="me-2 p-3 d-flex align-items-center btn-secondary-outline">
+                    <button
+                      className="me-2 p-3 d-flex align-items-center btn-secondary-outline"
+                      onClick={handleButtonClick}
+                    >
                       <HiOutlineDownload
                         className="me-2"
                         style={{ width: "24px", height: "auto" }}
@@ -98,7 +116,10 @@ const EduOurPartnerUni = ({ country = "uk" }) => {
                     {university.location}
                   </Card.Text>
                   <div className="d-flex">
-                    <button className="me-2 p-3 d-flex align-items-center btn-secondary-outline">
+                    <button
+                      className="me-2 p-3 d-flex align-items-center btn-secondary-outline"
+                      onClick={handleButtonClick}
+                    >
                       <HiOutlineDownload
                         className="me-2"
                         style={{ width: "24px", height: "auto" }}
@@ -114,6 +135,10 @@ const EduOurPartnerUni = ({ country = "uk" }) => {
             </Col>
           ))}
         </Row>
+        <DownloadBrochurePopUp
+          showModal={showModal}
+          handleCloseModal={handleClose}
+        />
 
         {/* Mobile view all button */}
         {universities.length > 3 && !showAll && (

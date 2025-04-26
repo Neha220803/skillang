@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import ConsultationModal from "../../../resuable/forms/calendly/LeadFormCalendly";
 
 const GerOppCardConnectComp = () => {
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+  // Default onClick handler if none provided
+  const handleButtonClick = () => {
+    handleShow();
+  };
   return (
     <div>
       <Container>
@@ -13,11 +21,14 @@ const GerOppCardConnectComp = () => {
             Apply today and move closer to your career goals in Germany!
           </div>
           <div className="d-flex gap-2">
-            <button className="btn-secondary">Book a Free Consultation</button>
+            <button className="btn-secondary" onClick={handleButtonClick}>
+              Book a Free Consultation
+            </button>
             <button className="btn-primary">Start Application</button>
           </div>
         </div>
       </Container>
+      <ConsultationModal show={showModal} handleClose={handleClose} />;
     </div>
   );
 };

@@ -56,7 +56,7 @@ function Layout() {
         <Route path="/terms-of-use" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
-        <Route path="/country-university" element={<CountryUniversityPage />} />
+        <Route path="/universities" element={<CountryUniversityPage />} />
 
         <Route path="/more/education-loan" element={<EducationLoanPage />} />
         <Route path="/more/scholarships" element={<ScholarshipPage />} />
