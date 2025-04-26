@@ -7,11 +7,13 @@ const UniContactComp = ({
   description,
   buttonText,
   onButtonClick = () => {},
+  leftColSize = 8,
+  rightColSize = 4,
 }) => {
   return (
     <div className="university-choice-section">
       <Row className="align-items-center">
-        <Col md={8}>
+        <Col md={leftColSize}>
           <div className="heading-small-medium text-content-navy-900">
             {heading}
           </div>
@@ -19,7 +21,7 @@ const UniContactComp = ({
             {description}
           </div>
         </Col>
-        <Col md={4} className="text-md-end">
+        <Col md={rightColSize} className="">
           <button className="btn-primary" onClick={onButtonClick}>
             {buttonText}
           </button>

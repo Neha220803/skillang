@@ -23,6 +23,7 @@ import PrivacyPolicyPage from "./pages/footer-pages/privacyPolicy";
 import ApiDebugger from "./hooks/APIDebug";
 import BlogsMainPage from "./pages/more/blogs/blogsMainPage";
 import BlogsSepPage from "./pages/more/blogs/blogsSepPage";
+import WhatsappButtonsComp from "./components/buttons/whatsapp-button/WhatsappButtons";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -75,6 +76,7 @@ function Layout() {
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}
+      <WhatsappButtonsComp />
     </>
   );
 }

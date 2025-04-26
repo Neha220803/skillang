@@ -70,6 +70,7 @@
 }
 
 .blog-main-header-left-img {
-
     border-radius: 32px !important;
+    object-fit: cover !important;
+    object-position: center !important;
 }
