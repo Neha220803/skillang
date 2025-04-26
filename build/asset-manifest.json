@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6eab5b3.css",
-    "main.js": "/static/js/main.adb11441.js",
+    "main.css": "/static/css/main.09b8a36e.css",
+    "main.js": "/static/js/main.ab01e703.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
@@ -50,6 +50,7 @@
     "static/media/consult-popup.jpg": "/static/media/consult-popup.e9bb301012b7d935fc5b.jpg",
     "static/media/headerimagebg.png": "/static/media/headerimagebg.9119b3a563fa542dab51.png",
     "static/media/s-journey-2.jpg": "/static/media/s-journey-2.7667b697f2307c490da6.jpg",
+    "static/media/blogsep2.jpg": "/static/media/blogsep2.48fa78cd079e4d57dbe0.jpg",
     "static/media/nurseChallenge3.jpg": "/static/media/nurseChallenge3.bf593cb9a51aefeacd82.jpg",
     "static/media/nType2.jpg": "/static/media/nType2.21441bae9ee81d6f2fd6.jpg",
     "static/media/keyDestiLand2.jpg": "/static/media/keyDestiLand2.70e9a31ed87f2451c3bc.jpg",
@@ -139,6 +140,7 @@
     "static/media/uni-2.png": "/static/media/uni-2.1fa233154334b0d5631f.png",
     "static/media/K8s Operator-3.png": "/static/media/K8s Operator-3.915078a991516935221c.png",
     "static/media/ourPartnerUni3.jpg": "/static/media/ourPartnerUni3.89d29296d32dea00ae09.jpg",
+    "static/media/download-popup.jpg": "/static/media/download-popup.e6fd7be34a24a84498a1.jpg",
     "static/media/uni-6.png": "/static/media/uni-6.fb3739485b1904164d6b.png",
     "static/media/skillshortage-bg.png": "/static/media/skillshortage-bg.6b3a3a665d003dc0b4cf.png",
     "static/media/sop-mobile-header.jpg": "/static/media/sop-mobile-header.7d0f24a363fba38abd42.jpg",
@@ -273,11 +275,11 @@
     "static/media/document.svg": "/static/media/document.5fdb859e1c2f620eb11914ea48692a4e.svg",
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
-    "main.d6eab5b3.css.map": "/static/css/main.d6eab5b3.css.map",
-    "main.adb11441.js.map": "/static/js/main.adb11441.js.map"
+    "main.09b8a36e.css.map": "/static/css/main.09b8a36e.css.map",
+    "main.ab01e703.js.map": "/static/js/main.ab01e703.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6eab5b3.css",
-    "static/js/main.adb11441.js"
+    "static/css/main.09b8a36e.css",
+    "static/js/main.ab01e703.js"
   ]
 }
