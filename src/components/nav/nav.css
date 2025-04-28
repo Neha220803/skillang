@@ -14,19 +14,16 @@
   .navcont {
     height: fit-content !important;
     background-color: white !important;
+    /* Changed from rgb(104, 53, 53) to white */
   }
 
-  /* Scrollable mobile menu */
-  .scrollable-menu {
-    max-height: 80vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    /* Prevent horizontal scroll */
+  /* Optional: Add styling for the expanded mobile menu */
+  .navbar-collapse {
     background-color: white;
+    /* padding: 10px; */
     width: 100% !important;
     border-radius: 0 0 10px 10px;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
   }
 }
 
@@ -34,6 +31,7 @@
   background-color: white !important;
   color: var(--content-secondary) !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  /*idk why this is not being applied*/
   transition: background-color 0.3s ease;
   height: 70px !important;
 }
@@ -53,13 +51,18 @@
   border: none;
   outline: none;
   padding: 8px 20px !important;
+  /* Add horizontal padding */
   margin: 0 5px !important;
   display: flex !important;
+  /* Flex alignment */
   align-items: center !important;
+  /* Center content vertically */
   background: transparent !important;
+  /* Remove default background */
   cursor: pointer;
+  /* Pointer cursor for interactivity */
   transition: all 0.3s ease-in-out;
-  text-align: left !important;
+  /* Smooth hover effect */
 }
 
 .dropdown-toggle {
@@ -67,55 +70,13 @@
   font-size: 14px !important;
   border: none;
   outline: none;
-  padding: 8px 20px !important;
+  padding: 0px 0px !important;
   margin: 0 5px !important;
   display: flex !important;
   align-items: center !important;
   background: transparent !important;
   cursor: pointer !important;
   transition: all 0.3s ease-in-out !important;
-  text-align: left !important;
-  position: relative;
-}
-
-/* Mobile styles for navigation items */
-@media (max-width: 991px) {
-
-  .navpaths,
-  .dropdown-toggle {
-    width: 100% !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
-    padding-left: 20px !important;
-  }
-
-  .dropdown-toggle::after {
-    position: absolute;
-    right: 20px;
-  }
-
-  .active-link {
-    border-radius: 0 !important;
-    width: 100% !important;
-  }
-
-  /* Ensure navbar collapse fills available space */
-  .navbar-collapse.show {
-    max-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  /* Ensure Contact Us button doesn't create extra space */
-  Nav.Link:last-child,
-  .mt-3.mt-lg-0.ms-lg-auto {
-    margin-bottom: 0 !important;
-  }
-
-  /* Fix for bottom spacing */
-  .navbar-collapse {
-    padding-bottom: 0;
-  }
 }
 
 /* Hover Effect for Nav Links & Dropdown */
@@ -124,7 +85,10 @@
   color: #e86e39 !important;
   background-color: #fcf1ed !important;
   border-radius: 999px !important;
+  /* padding: 8px 20px !important; */
+  /* Maintain padding */
   transition: all 0.3s ease-in-out;
+  /* Smooth transition */
 }
 
 .active-link {
@@ -132,17 +96,9 @@
   background-color: #fcf1ed !important;
   border-radius: 999px !important;
   padding: 8px 20px !important;
+  /* Maintain padding */
   transition: all 0.3s ease-in-out;
-}
-
-/* Remove border radius for active links on mobile */
-@media (max-width: 991px) {
-
-  .active-link,
-  .navpaths:hover,
-  .dropdown-toggle:hover {
-    border-radius: 0 !important;
-  }
+  /* Smooth transition */
 }
 
 /* Responsive Design */
@@ -180,84 +136,38 @@
   }
 }
 
-/* Custom dropdown styling */
-.custom-dropdown {
-  position: relative;
-  display: inline-block;
-}
+/* Custom Dropdown Styling */
+.dropdown-menu {
 
-.custom-dropdown-menu {
   display: flex;
-  flex-direction: column;
-  background: white;
-  border-radius: 0;
-  padding: 0;
-  width: 100%;
-  z-index: 1000;
-  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  /* position: relative; */
+  /* width: 263px;
+  height: 180px; */
+  background: #FFFFFF !important;
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1), 0px 4px 6px -2px rgba(16, 24, 40, 0.05) !important;
+  border-radius: 12px !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Desktop styling */
-@media (min-width: 992px) {
-  .custom-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1), 0px 4px 6px -2px rgba(16, 24, 40, 0.05);
-    border-radius: 12px;
-  }
-}
-
-/* Mobile styling */
-@media (max-width: 991px) {
-  .custom-dropdown {
-    width: 100%;
-  }
-
-  .custom-dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: none;
-    padding-left: 20px;
-    max-height: none;
-    width: 100%;
-  }
-
-  .custom-dropdown .dropdown-toggle::after {
-    position: absolute;
-    right: 20px;
-  }
-}
-
-/* Keep your existing dropdown item styling */
-.custom-dropdown-menu .dropdown-item {
+.dropdown-item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
   width: 100%;
-  min-height: 44px;
-  transition: all 0.3s ease;
-  padding: 10px 14px;
-  color: rgb(96, 96, 96);
-  cursor: pointer;
-  text-align: left;
+  min-height: 44px !important;
+  transition: all 0.3s ease !important;
+  padding: 10px 14px !important;
+  color: rgb(96, 96, 96) !important;
+  ;
 }
 
-.custom-dropdown-menu .dropdown-item:hover {
-  background: #FCF2ED;
-  color: #e86e39;
-}
-
-/* Make Contact Us button responsive */
-@media (max-width: 991px) {
-  .btn-primary-outline {
-    width: 90%;
-    margin: 10px auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.dropdown-item:hover {
+  background: #FCF2ED !important;
+  color: #e86e39 !important;
 }
