@@ -47,28 +47,6 @@
     border-radius: 12px;
 }
 
-.blogs-trending-cards {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 0px !important;
-    gap: 8px !important;
-    border: none !important;
-
-    /* width: 204.5px;
-    height: 239px; */
-    /* flex: none;
-    order: 0;
-    align-self: stretch; */
-
-}
-
-.blog-trending-cards-image {
-    border-radius: 8px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-}
-
 .blog-main-header-left-img {
     border-radius: 32px !important;
     object-fit: cover !important;

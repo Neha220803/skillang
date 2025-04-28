@@ -1,29 +1,14 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Nav,
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-} from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import { HiTrendingUp } from "react-icons/hi";
-import { Chat, Heart } from "react-bootstrap-icons";
 import blogsData from "../../../../../data/blogsData";
+import { useNavigate } from "react-router-dom";
+import BlogCardComp from "../../../../../components/cards/blogs-cards/BlogCards";
 
 const ChooseByCategory = () => {
   // State to track active filter - default to "All"
   const [activeFilter, setActiveFilter] = useState("All");
-
-  // Convert category names to match format in blogsData
-  const categoryMapping = {
-    All: "All",
-    Trending: "Trending",
-    Business: "Business",
-    "Top Salary": "Top Salary",
-  };
+  const navigate = useNavigate();
 
   // Filter posts based on active filter
   const getFilteredPosts = () => {
@@ -41,6 +26,11 @@ const ChooseByCategory = () => {
   // Handle filter change
   const handleFilterChange = (filter) => {
     setActiveFilter(filter);
+  };
+
+  // Handle blog card click
+  const handleCardClick = (postId) => {
+    navigate(`/blogs/${postId}`);
   };
 
   return (
@@ -75,34 +65,11 @@ const ChooseByCategory = () => {
         <Row>
           {filteredPosts.map((post) => (
             <Col sm={12} xs={12} md={4} key={post.id} className="mb-3">
-              <Card
-                className="blog-trending-cards border-0"
-                data-categories={post.category?.join(",")}
-              >
-                <CardImg
-                  className="blog-trending-cards-image"
-                  src={post.featuredImage}
-                  alt={post.title}
-                />
-                <CardBody className="px-1 py-2">
-                  <CardTitle className="paragraph-big-medium">
-                    {post.title}
-                  </CardTitle>
-                  <div className="text-content-tertiary caption-regular">
-                    <div>{post.date}</div>
-                    {/* <div className="d-flex flex-row gap-2">
-                      <div>
-                        <Heart />
-                        {post.views}
-                      </div>
-                      <div>
-                        <Chat />
-                        {post.comments}
-                      </div>
-                    </div> */}
-                  </div>
-                </CardBody>
-              </Card>
+              <BlogCardComp
+                post={post}
+                onClick={handleCardClick}
+                showStats={true} // Enable view/comment statistics for this section
+              />
             </Col>
           ))}
         </Row>

@@ -1,27 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./blogsHeader.css"; // Import CSS for styling
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Nav,
-  Image,
-  CardImg,
-  CardBody,
-  CardTitle,
-  Breadcrumb,
-} from "react-bootstrap"; // Import React Bootstrap components
-import { Chat, Heart } from "react-bootstrap-icons";
+import { Container, Row, Col, Nav, Image, Breadcrumb } from "react-bootstrap"; // Import React Bootstrap components
 import { HiTrendingUp } from "react-icons/hi";
 import UniContactComp from "../../../../resuable/uni-contact/UniContact";
 import BlogsCommentsComp from "../comments/blogsComments";
 import blogsData from "../../../../../data/blogsData";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import BlogCardComp from "../../../../../components/cards/blogs-cards/BlogCards";
 
 const BlogsSepPageHeader = () => {
   // Get the blog post ID from URL parameters
   const { id } = useParams();
+  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("Trending");
   const [currentPost, setCurrentPost] = useState(null);
 
@@ -53,6 +43,11 @@ const BlogsSepPageHeader = () => {
     setActiveFilter(filter);
   };
 
+  // Handle blog card click to navigate to that blog post
+  const handleCardClick = (postId) => {
+    navigate(`/blogs/${postId}`);
+  };
+
   // If post is still loading, show loading state
   if (!currentPost) {
     return <div>Loading...</div>;
@@ -68,7 +63,7 @@ const BlogsSepPageHeader = () => {
           <Col sm={12} xs={12} md={7} className="bg-primar">
             <Breadcrumb>
               <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-              <Breadcrumb.Item href="/article">Article</Breadcrumb.Item>
+              <Breadcrumb.Item href="/blogs">Blogs</Breadcrumb.Item>
               <Breadcrumb.Item active>{title}</Breadcrumb.Item>
             </Breadcrumb>
             <h1 className="heading-big-medium mt-3">{title}</h1>
@@ -114,14 +109,8 @@ const BlogsSepPageHeader = () => {
                   }
                 })}
               <UniContactComp
-                heading={
-                  // section.title ||
-                  "Lost in Your University Search?"
-                }
-                description={
-                  // section.text ||
-                  "Let Us Guide You to Your Ideal Destination!"
-                }
+                heading="Lost in Your University Search?"
+                description="Let Us Guide You to Your Ideal Destination!"
                 buttonText="Book a Free Consultation"
                 leftColSize="12"
                 rightColSize="12"
@@ -176,34 +165,7 @@ const BlogsSepPageHeader = () => {
             <Row>
               {filteredPosts.map((post) => (
                 <Col sm={12} xs={12} md={6} key={post.id} className="mb-3">
-                  <Card
-                    className="blog-trending-cards border-0"
-                    data-categories={post.category?.join(",")}
-                  >
-                    <CardImg
-                      className="blog-trending-cards-image"
-                      src={post.featuredImage}
-                      alt={post.title}
-                    />
-                    <CardBody className="px-1 py-2">
-                      <CardTitle className="paragraph-big-medium">
-                        {post.title}
-                      </CardTitle>
-                      <div className="text-content-tertiary caption-regular">
-                        <div>{post.date}</div>
-                        {/* <div className="d-flex flex-row gap-2">
-                          <div>
-                            <Heart />
-                            {post.views}
-                          </div>
-                          <div>
-                            <Chat />
-                            {post.comments}
-                          </div>
-                        </div> */}
-                      </div>
-                    </CardBody>
-                  </Card>
+                  <BlogCardComp post={post} onClick={handleCardClick} />
                 </Col>
               ))}
             </Row>
