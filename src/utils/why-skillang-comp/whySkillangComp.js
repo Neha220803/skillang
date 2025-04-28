@@ -45,7 +45,7 @@ const ReusableWhyComponent = ({
     <div className={backgroundColor}>
       <Container>
         <Row className="mb-5">
-          <div className={titleClass}>{title}</div>
+          <h1 className={titleClass}>{title}</h1>
           <div className={subtitleClass}>{subtitle}</div>
         </Row>
         <Row>

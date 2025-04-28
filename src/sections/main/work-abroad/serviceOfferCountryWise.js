@@ -111,9 +111,9 @@ const ServiceOfferCountryWise = () => {
         <Container className=" d-flex flex-column justify-content-start align-items-center">
           <Row className="justify-content-end mb-4 d-flex flex-column align-items-center ">
             <Col className="text-center d-flex justify-content-start align-items-center flex flex-column ">
-              <div className="section-title heading-big-medium">
+              <h1 className="section-title heading-big-medium">
                 Service Offerings
-              </div>
+              </h1>
               <div className="paragraph-big-medium text-content-secondary mb-5">
                 Our comprehensive services are designed to streamline the
                 process of <br />

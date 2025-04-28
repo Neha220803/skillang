@@ -129,9 +129,9 @@ const InternshipSection = () => {
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
         <Row className=" text-center intern-heading-wrapper">
-          <div className="heading-big-medium">
+          <h1 className="heading-big-medium">
             Ausbildung (Internship) Program in Germany
-          </div>
+          </h1>
           <div className="paragraph-big-medium text-content-secondary">
             Gain hands-on experience and build a successful career in Germany
             with the Ausbildung Internship Program.

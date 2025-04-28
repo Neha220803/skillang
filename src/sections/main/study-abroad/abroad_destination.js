@@ -49,13 +49,12 @@ const AbroadDestinations = () => {
   return (
     <div className="study-abroad-container">
       <div className="text-center mb-4">
-        <div className="heading-big-medium">
-          Popular Study Abroad <br /> Destinations
-        </div>
+        <h1 className="heading-big-medium">
+          Popular Study Abroad Destinations
+        </h1>
         <p className="paragraph-big-meidum text-content-secondary">
           Explore top countries offering world-class education, cultural
-          diversity, and
-          <br /> global career opportunities
+          diversity, and global career opportunities
         </p>
       </div>
 

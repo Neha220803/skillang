@@ -31,9 +31,9 @@ const WhyGermany = () => {
             lg={6}
             className="why-germany-bg text-white d-flex align-items-start justify-content-center py-4 text-center mb-4"
           >
-            <div className="text-white heading-small-medium">
+            <h1 className="text-white heading-small-medium">
               Why Choose Germany?
-            </div>
+            </h1>
           </Col>
 
           {/* Second Column: Cards Layout */}

@@ -72,9 +72,9 @@ const WorkAbroadOpportunity = () => {
       <Container className="d-flex flex-column align-items-center justify-content-center bg-primar ">
         <div className="work-abroad-bg-card align-items-center justify-content-center mb-5">
           <Row className="mb-2 m-0">
-            <div className="heading-big-medium text-content-primary text-center">
+            <h1 className="heading-big-medium text-content-primary text-center">
               Work Abroad Opportunities
-            </div>
+            </h1>
           </Row>
           <Row className="gy-3">
             {primCardData.map((card, index) => (
@@ -128,13 +128,13 @@ const WorkAbroadOpportunity = () => {
               className="work-abroad-left-bg flex-column text-white d-flex align-items-end justify-content-start text-start p-0"
             >
               <div className="work-ops-textwrap bg-primar">
-                <div className="text-white heading-small-medium">
+                <h2 className="text-white heading-small-medium">
                   Diverse Range of Opportunities
-                </div>
-                <div className="text-white paragraph-small-medium my-3">
+                </h2>
+                <p className="text-white paragraph-small-medium my-3">
                   We help you choose from large range of employment
                   opportunities
-                </div>
+                </p>
                 <div>
                   <button
                     className="btn-primary"

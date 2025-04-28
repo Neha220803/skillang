@@ -122,7 +122,7 @@ const TopScholarshipComp = () => {
   return (
     <Container className="">
       <Container>
-        <h2 className="heading-big-medium mb-5 pb-5">Top Scholarships</h2>
+        <h1 className="heading-big-medium mb-5 pb-5">Top Scholarships</h1>
 
         {/* Country selection tabs */}
         <Nav

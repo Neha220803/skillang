@@ -40,7 +40,7 @@ const MorePageHeader = ({
       <Container className="text-center justify-content-center">
         <Row className="justify-content-center">
           <div className="header-wrapper">
-            <div className="heading-big-medium">{title || "Default Title"}</div>
+            <h1 className="heading-big-medium">{title || "Default Title"}</h1>
             <div className="paragraph-big-medium text-content-secondary">
               {description || "Default description text goes here."}
             </div>

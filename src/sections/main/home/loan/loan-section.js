@@ -24,9 +24,9 @@ const LoanSection = () => {
           <Image fluid src={loanImg} className="loan-image rounded-4" />
         </Col>
         <Row className="mb-md-3 d-block d-md-none">
-          <div className="heading-big-medium">
+          <h1 className="heading-big-medium">
             Loan and Scholarships Assistance
-          </div>
+          </h1>
         </Row>
         <Row className="align-items-start">
           <Col xs={12} sm={12} md={7} lg={6}>

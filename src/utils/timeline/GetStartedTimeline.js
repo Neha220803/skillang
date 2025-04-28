@@ -90,7 +90,7 @@ const GetStartedTimeline = ({
     <Container className="p-0">
       <div className="getting-started-container p-0" ref={componentRef}>
         <div className="header-section">
-          <div className="heading-big-medium text-content-primary">{title}</div>
+          <h1 className="heading-big-medium text-content-primary">{title}</h1>
           <div className="paragraph-big-medium text-content-secondary">
             {subtitle}
           </div>

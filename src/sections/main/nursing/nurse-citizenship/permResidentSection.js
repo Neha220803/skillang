@@ -49,9 +49,9 @@ const PermResidentSection = () => {
             />
           </Col>
           <Col lg={5} sm={12} xs={12}>
-            <div className="heading-big-medium text-content-primaryInverse">
+            <h1 className="heading-big-medium text-content-primaryInverse">
               Permanent Residency and Citizenship Pathways
-            </div>
+            </h1>
           </Col>
           <Col lg={7} className="d-none d-md-block">
             <Image

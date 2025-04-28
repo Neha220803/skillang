@@ -97,9 +97,9 @@ const IndemandCourse = () => {
     <div className="in-demand-courses-container">
       <div className="">
         <div className="text-center">
-          <div className="heading-big-medium">
+          <h1 className="heading-big-medium">
             In-Demand Courses & Career Paths
-          </div>
+          </h1>
           <div className="paragraph-bg-medium py-3">
             Each destination offers unique opportunities and challenges. We
             provide tailored guidance on job markets, salary expectations,

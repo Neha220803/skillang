@@ -40,9 +40,9 @@ const TypesAndEligiblity = () => {
     <div>
       <Container>
         <Row>
-          <div className="heading-big-medium text-content-primary text-center mb-4">
+          <h1 className="heading-big-medium text-content-primary text-center mb-4">
             Types of Education Loans
-          </div>
+          </h1>
         </Row>
         <Row>
           {TypesEduLoanData.map((card, index) => (

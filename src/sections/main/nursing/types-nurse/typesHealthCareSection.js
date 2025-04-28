@@ -23,9 +23,9 @@ const TypesHealthCareSection = () => {
       <Container className="">
         <Row>
           <div>
-            <div className="heading-big-medium text-md-center px-2">
+            <h1 className="heading-big-medium text-md-center px-2">
               Types of Healthcare Facilities Hiring Nurses
-            </div>
+            </h1>
           </div>
           {nurseTypes.map((challenge, index) => (
             <Col lg={4} sm={12} xs={12} className="mt-4">

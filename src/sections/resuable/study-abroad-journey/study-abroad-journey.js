@@ -127,9 +127,9 @@ export default function StudyAbroad({ showAll = true }) {
         ref={sectionRef}
         className="align-items-center justify-content-center study-abroad-bg"
       >
-        <div className="text-center my-lg-4 heading-big-medium text-content-primaryInverse">
+        <h1 className="text-center my-lg-4 heading-big-medium text-content-primaryInverse">
           Study Abroad Journey
-        </div>
+        </h1>
 
         {/* Scrollable Row */}
         <div ref={scrollContainerRef} className="scrollable-container">

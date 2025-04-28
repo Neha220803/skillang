@@ -4,7 +4,7 @@ import BlogsHeaderComp from "../../../sections/more/blogs/sep-blog-page/header/b
 const BlogsSepPage = () => {
   return (
     <div>
-      <BlogsHeaderComp />\
+      <BlogsHeaderComp />
     </div>
   );
 };

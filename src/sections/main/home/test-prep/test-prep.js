@@ -24,9 +24,9 @@ const TestPrep = () => {
       <Container className="test-lag-bg d-flex flex-column align-items-center justify-content-center">
         <Row className="w-100 d-flex align-items-center justify-content-center">
           <Col className="test-lang-left-bg text-start" lg={6} sm={12} xs={12}>
-            <div className="heading-big-medium mb-4">
+            <h1 className="heading-big-medium mb-4">
               Test and Language Preparation
-            </div>
+            </h1>
             <div className="paragraph-big-medium text-content-secondary mb-4">
               Boost your skills and confidence with our comprehensive test and
               language preparation courses.

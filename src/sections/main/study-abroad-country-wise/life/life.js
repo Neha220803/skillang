@@ -10,7 +10,7 @@ const LifeInAbroadCountry = ({ country = "uk" }) => {
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container>
         <Row className="mb-5">
-          <div className="heading-big-medium">Life in {data.fullForm}</div>
+          <h1 className="heading-big-medium">Life in {data.fullForm}</h1>
         </Row>
         <div className="country-subsection-spacing ">
           <LifeCostOflLiving />

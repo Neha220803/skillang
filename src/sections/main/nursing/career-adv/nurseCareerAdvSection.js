@@ -11,9 +11,9 @@ const NurseCareerAdvSection = () => {
       <Container className="w-100 d-flex justify-content-center align-items-center">
         <Row className="nurseCareerAdvbg py-4 ">
           <Row>
-            <div className="heading-big-medium mb-4">
+            <h1 className="heading-big-medium mb-4">
               Career Advancement Opportunities
-            </div>
+            </h1>
           </Row>
 
           <Col

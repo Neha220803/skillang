@@ -53,9 +53,9 @@ const NursingPosition = () => {
     <div className="">
       <Container>
         <Row className="text-md-center">
-          <div className="heading-big-medium text-content-primary mb-1">
+          <h1 className="heading-big-medium text-content-primary mb-1">
             Available Nursing Positions in Germany
-          </div>
+          </h1>
           <div className="paragraph-big-medium text-content-secondary mb-md-4">
             Position availability depends on regional healthcare needs
           </div>

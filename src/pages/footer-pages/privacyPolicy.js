@@ -7,7 +7,7 @@ const PrivacyPolicyPage = () => {
     <div className="w-full bg-white min-h-screen">
       <div className="max-w-5xl mx-auto px-4 container">
         <div className="privacy-con mb-5">
-          <div className="display-medium text-center">Privacy Policy</div>
+          <h1 className="display-medium text-center">Privacy Policy</h1>
           {/* <div className="w-50 text-center">
             At TestMySkills.ai, we are committed to protecting your privacy.
             This policy outlines how we collect, use, and safeguard your

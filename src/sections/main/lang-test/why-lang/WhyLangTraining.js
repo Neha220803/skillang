@@ -50,9 +50,9 @@ const WhyLangTraining = () => {
             className="d-flex flex-column justify-content-center align-items-stretch"
           >
             <Row className="" style={{ marginBottom: "24px" }}>
-              <div className="heading-big-medium text-content-primary">
+              <h1 className="heading-big-medium text-content-primary">
                 Why Language Training Matters?
-              </div>
+              </h1>
             </Row>
             <Row>
               {cardData.slice(0, 2).map((card, index) => (

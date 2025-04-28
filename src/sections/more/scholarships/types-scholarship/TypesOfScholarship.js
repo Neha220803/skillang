@@ -44,9 +44,9 @@ const TypesOfScholarship = () => {
     <div>
       <Container>
         <Row>
-          <div className="heading-big-medium mb-5 pb-5">
+          <h1 className="heading-big-medium mb-5 pb-5">
             Types of Scholarships Available
-          </div>
+          </h1>
         </Row>
         <Row>
           {typesOOfScholarshipData.map((item, index) => (

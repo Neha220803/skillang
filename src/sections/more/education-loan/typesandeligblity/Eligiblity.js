@@ -38,9 +38,9 @@ const LoanEligibility = () => {
     <div className="loan-eligible-bg d-flex justify-content-end align-items-center">
       <Container className="my-5 py-5 d-flex justify-content-end align-items-center flex-column">
         <Row>
-          <div className="heading-big-medium text-content-primary text-center my-5">
+          <h1 className="heading-big-medium text-content-primary text-center my-5">
             Eligibility and Requirements
-          </div>
+          </h1>
         </Row>
         <Row>
           {eligibilityData.map((item, index) => (

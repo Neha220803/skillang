@@ -7,7 +7,7 @@ const TermsPage = () => {
       <div className="w-full bg-white min-h-screen">
         <div className="max-w-5xl mx-auto px-4 py-3 privacy-wrapper container">
           <div className="privacy-cont ">
-            <div className="display-medium text-center">Terms of Use</div>
+            <h1 className="display-medium text-center">Terms of Use</h1>
           </div>
           <p className="text-right text-content-tertiary mb-4">
             Effective Date: March 14, 2025

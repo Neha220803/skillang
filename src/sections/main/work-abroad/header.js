@@ -75,7 +75,7 @@ const WorkAbroadHeader = () => {
   formData.county = "-";
   formData.origin = "Work Abroad Page Form";
   return (
-    <header className="d-flex align-items-start justify-content-center">
+    <header className="d-flex align-items-start justify-content-center bg-primar">
       <Container className="bg-dar">
         <Row className="">
           <Col

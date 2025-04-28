@@ -82,7 +82,7 @@ const AbroudJourney = () => {
     <div className="work-abroad-container" ref={componentRef}>
       <div className="work-abroad-wrapper ">
         <div className="text-center">
-          <div className="heading-big-medium">Work Abroad Journey</div>
+          <h1 className="heading-big-medium">Work Abroad Journey</h1>
           <div className="paragraph-big-medium text-content-secondary">
             Start your work abroad journey in 3 simple steps
           </div>

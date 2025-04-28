@@ -26,7 +26,7 @@ const StudyAbroadCountryOverview = ({ country = "uk" }) => {
       <Container>
         <Row className="mb-4">
           <Col>
-            <div className="heading-big-medium">Overview</div>
+            <h1 className="heading-big-medium">Overview</h1>
           </Col>
         </Row>
 

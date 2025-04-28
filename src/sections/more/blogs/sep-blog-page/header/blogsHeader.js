@@ -191,7 +191,7 @@ const BlogsSepPageHeader = () => {
                       </CardTitle>
                       <div className="text-content-tertiary caption-regular">
                         <div>{post.date}</div>
-                        <div className="d-flex flex-row gap-2">
+                        {/* <div className="d-flex flex-row gap-2">
                           <div>
                             <Heart />
                             {post.views}
@@ -200,7 +200,7 @@ const BlogsSepPageHeader = () => {
                             <Chat />
                             {post.comments}
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </CardBody>
                   </Card>

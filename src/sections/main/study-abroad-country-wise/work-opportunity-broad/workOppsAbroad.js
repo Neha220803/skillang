@@ -10,7 +10,7 @@ const WorkOppsAbroadComp = () => {
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container>
         <Row>
-          <div className="heading-big-medium">Work Abroad Opps</div>
+          <h1 className="heading-big-medium">Work Abroad Opps</h1>
         </Row>
         <div className="country-subsection-spacing ">
           <WorkVisaRoute />

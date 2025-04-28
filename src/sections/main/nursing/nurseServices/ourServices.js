@@ -132,9 +132,9 @@ const OurServices = () => {
             className="nurse-service-img"
           />
           <div className="my-3">
-            <div className="heading-big-medium mb-1 text-content-primary">
+            <h1 className="heading-big-medium mb-1 text-content-primary">
               Our Services
-            </div>
+            </h1>
             <div className="paragraph-big-medium text-content-tertiary">
               We offer tailored support for your study and work abroad journey,
               including career guidance, visa assistance, documentation help,

@@ -8,7 +8,6 @@ import {
   Image,
   Toast,
   ToastContainer,
-  Carousel,
 } from "react-bootstrap";
 import studyImage1 from "../../../assets/images/landing/study-1.png"; // Replace with your image path
 import successSound from "../../../assets/sounds/success.mp3";
@@ -16,6 +15,7 @@ import errorSound from "../../../assets/sounds/rejected.mp3";
 import "../../../index.css";
 import useFormHandler from "../../../hooks/useFormHandler";
 import "./study-form.css";
+import FormRadioButton from "../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -63,7 +63,7 @@ const StudyForm = () => {
     isOtpSent,
     validated,
     handleInputChange,
-    handleExperienceSelect,
+    handleOptionSelect,
     handleSubmit,
     handleOtpChange,
     handleVerifyOtp,
@@ -71,13 +71,26 @@ const StudyForm = () => {
     setOtp,
     setShowToast,
   } = useFormHandler();
-  formData.lookingFor = "Study Aborad";
-  formData.origin = "Study Abroad Landing Page Form";
+
+  useEffect(() => {
+    // Set default values when component mounts
+    handleOptionSelect("lookingFor", "Study Aborad");
+    handleOptionSelect("origin", "Study Abroad Landing Page Form");
+  }, []);
+
+  // Handler for experience/study level selection
+  const handleExperienceSelect = (option) => {
+    handleOptionSelect("experience", option);
+  };
+
+  // Handler for country selection
+  const handleCountrySelect = (option) => {
+    handleOptionSelect("country", option);
+  };
   return (
-    <header className="d-flex justify-content-center align-items-center ">
-      <Container className="d-flex justify-content-center align-items-end ">
+    <div className="d-flex justify-content-center align-items-start ">
+      <Container className="d-flex justify-content-center align-items-start ">
         <Row className=" justify-content-center align-items-center ">
-          {/* <Col lg={1} md={1} className="d-none d-md-block "></Col> */}
           <Col
             lg={12}
             md={12}
@@ -95,53 +108,23 @@ const StudyForm = () => {
                   className="justify-content-start align-items-center "
                 >
                   <div className="nurse-img-carousel">
-                    <Carousel
-                      interval={2500}
-                      controls={false}
-                      style={{ minHeight: "45vh" }}
-                    >
-                      <Carousel.Item>
-                        <Image
-                          fluid
-                          src={studyImage1}
-                          alt="Slide 1"
-                          style={{ minHeight: "45vh", objectFit: "cover" }}
-                        />
-                        <Carousel.Caption>
-                          <p>One-to-One Visa Assistance</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image
-                          fluid
-                          src={studyImage1}
-                          alt="Slide 2"
-                          style={{ minHeight: "45vh", objectFit: "cover" }}
-                        />
-                        <Carousel.Caption>
-                          <p>One-to-One Visa Assistance</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image
-                          fluid
-                          src={studyImage1}
-                          alt="Slide 3"
-                          style={{ minHeight: "45vh", objectFit: "cover" }}
-                        />
-                        <Carousel.Caption>
-                          <p>One-to-One Visa Assistance</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                    </Carousel>
+                    <Image
+                      fluid
+                      src={studyImage1}
+                      alt="Study Abroad"
+                      style={{ minHeight: "45vh", objectFit: "cover" }}
+                    />
+                    {/* <div className="carousel-caption">
+                      <p>One-to-One Visa Assistance</p>
+                    </div> */}
                   </div>
                 </Col>
                 {/* Right Side - Form */}
-                <Col md={6} lg={6} sm={12} xs={12} className="text-center ">
-                  <div className="subheading-big-medium text-content-primary mt-2 m-0 p-0 my-lg-2">
+                <Col md={6} lg={6} sm={12} xs={12} className=" ">
+                  <div className="subheading-big-medium text-content-primary mt-2 m-0 p-0 my-lg-2 text-center">
                     Start Your Study Abroad Journey
                   </div>
-                  <div className="mb-3 paragraph-small-medium text-content-secondary py-2">
+                  <div className="mb-3 paragraph-small-medium text-content-secondary py-2 text-center">
                     Tell Us About Yourself!
                   </div>
                   <Form validated={validated} onSubmit={handleSubmit}>
@@ -152,7 +135,6 @@ const StudyForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        // isInvalid={!!errors.name}
                         required
                         minLength={3}
                         maxLength={40}
@@ -167,7 +149,6 @@ const StudyForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        // isInvalid={!!errors.email}
                         required
                       />
                       <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -182,7 +163,6 @@ const StudyForm = () => {
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            // isInvalid={!!errors.phone}
                             required
                             pattern="[0-9]{10}"
                           />
@@ -197,7 +177,6 @@ const StudyForm = () => {
                             name="pincode"
                             value={formData.pincode}
                             onChange={handleInputChange}
-                            // isInvalid={!!errors.pincode}
                             required
                             pattern="[0-9]{6}"
                           />
@@ -206,72 +185,25 @@ const StudyForm = () => {
                       </Col>
                     </Row>
 
-                    <Form.Group className="mb-3 text-start">
-                      <Form.Label>Looking For?</Form.Label>
-                      <div className="d-flex gap-2 flex-wrap">
-                        {["Bachelors", "Masters"].map((option, index) => (
-                          <div
-                            key={index}
-                            className={`experience-option ${
-                              formData.experience === option ? "selected" : ""
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              id={`experience-${index}`}
-                              name="experience"
-                              value={option}
-                              checked={formData.experience === option}
-                              onChange={(e) =>
-                                handleExperienceSelect(e.target.value)
-                              }
-                              hidden
-                            />
-                            <label
-                              htmlFor={`experience-${index}`}
-                              className="w-100"
-                            >
-                              {option}
-                            </label>
-                          </div>
-                        ))}
-                      </div>
-                    </Form.Group>
+                    {/* Looking For Selection - Using FormRadioButton component */}
+                    <FormRadioButton
+                      label="Looking For?"
+                      options={["Bachelors", "Masters"]}
+                      name="experience"
+                      value={formData.experience}
+                      onChange={(value) => handleExperienceSelect(value)}
+                      controlId="formStudyLevel"
+                    />
 
-                    {/* Experience Selection */}
-                    <Form.Group className="mb-3 text-start">
-                      <Form.Label>Country</Form.Label>
-                      <div className="d-flex gap-2 flex-wrap">
-                        {["USA", "UK", "Germany", "Australia", "Europe"].map(
-                          (option, index) => (
-                            <div
-                              key={index}
-                              className={`experience-option ${
-                                formData.county === option ? "selected" : ""
-                              }`}
-                            >
-                              <input
-                                type="radio"
-                                id={`experience-${index}`}
-                                name="experience"
-                                value={option}
-                                checked={formData.county === option}
-                                onChange={(e) =>
-                                  handleExperienceSelect(e.target.value)
-                                }
-                                hidden
-                              />
-                              <label
-                                htmlFor={`experience-${index}`}
-                                className="w-100"
-                              >
-                                {option}
-                              </label>
-                            </div>
-                          )
-                        )}
-                      </div>
-                    </Form.Group>
+                    {/* Country Selection - Using FormRadioButton component */}
+                    <FormRadioButton
+                      label="Country"
+                      options={["USA", "UK", "Germany", "Australia", "Europe"]}
+                      name="country"
+                      value={formData.country}
+                      onChange={(value) => handleCountrySelect(value)}
+                      controlId="formCountry"
+                    />
 
                     {otpVisible && (
                       <Row className="mb-3">
@@ -282,8 +214,8 @@ const StudyForm = () => {
                               name="otp"
                               value={otp}
                               placeholder="Enter OTP - Sent in mail"
-                              onChange={handleOtpChange} // Ensure this function is properly passed
-                              disabled={!otpVisible} // OTP input should only be enabled when visible
+                              onChange={handleOtpChange}
+                              disabled={!otpVisible}
                             />
                           </Form.Group>
 
@@ -314,7 +246,11 @@ const StudyForm = () => {
                     )}
 
                     {/* Book Free Consultation Button */}
-                    <Button variant="primary" className="w-100" type="submit">
+                    <Button
+                      variant="primary"
+                      className="w-100 mt-3"
+                      type="submit"
+                    >
                       Book a Free Consultation
                     </Button>
 
@@ -338,7 +274,6 @@ const StudyForm = () => {
               </Row>
             </div>
           </Col>
-          {/* <Col lg={1} md={1} className="d-none d-md-block"></Col> */}
         </Row>
       </Container>
       <ToastContainer position="top-end" className="p-3">
@@ -349,7 +284,7 @@ const StudyForm = () => {
           status={status}
         />
       </ToastContainer>
-    </header>
+    </div>
   );
 };
 

@@ -21,9 +21,9 @@ const LandingFooter = () => {
             xs={12}
             className="justify-content-start align-items-start text-start pe-5"
           >
-            <div className="heading-small-medium my-4">
+            <h1 className="heading-small-medium my-4">
               Gateway to Global Nursing Career
-            </div>
+            </h1>
             <div>
               <img src={logo} alt="Logo" className="mb-3 footer-logo" />
             </div>

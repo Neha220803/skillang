@@ -43,9 +43,9 @@ const WhySkillangPrep = () => {
     <div className="lang-why-skill-bg">
       <Container className="">
         <Row className="mb-5">
-          <div className="heading-big-medium text-content-primaryInverse">
+          <h1 className="heading-big-medium text-content-primaryInverse">
             Why Choose Skillang for Language & Test Prep?
-          </div>
+          </h1>
           <div className="paragraph-big-medium text-content-secondaryInverse">
             Discover What Makes Skillang Your Best Path to Success
           </div>

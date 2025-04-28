@@ -11,9 +11,9 @@ const AdmissionAbroadCountry = ({ country = "uk" }) => {
     <section className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="">
         <Row>
-          <div className="heading-big-medium mb-5">
+          <h1 className="heading-big-medium mb-5">
             Admissions in {data.fullForm}
-          </div>
+          </h1>
         </Row>
         <div className="country-subsection-spacing ">
           <AdmiRequirementComp />

@@ -35,9 +35,9 @@ const UniPartner = () => {
             xs={12}
             className="d-flex flex-column align-items-start justify-content-start text-center text-lg-start"
           >
-            <div className="heading-big-medium  w-100">
+            <h1 className="heading-big-medium  w-100">
               Our Partnered Universities
-            </div>
+            </h1>
             <div className="paragraph-big-medium text-content-secondary">
               Collaborating with Top Institutions to Bring You World-Class
               Education Opportunities.

@@ -8,18 +8,13 @@ import {
   Image,
   Toast,
   ToastContainer,
-  Carousel,
 } from "react-bootstrap";
 import workImage1 from "../../../assets/images/landing/work-1.png"; // Replace with your image path
-
-import workImage2 from "../../../assets/images/landing/work-2.png"; // Replace with your image path
-
-import workImage3 from "../../../assets/images/landing/work-3.png"; // Replace with your image path
-
 import successSound from "../../../assets/sounds/success.mp3";
 import errorSound from "../../../assets/sounds/rejected.mp3";
 import "../../../index.css";
 import useFormHandler from "../../../hooks/useFormHandler";
+import FormRadioButton from "../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {
@@ -67,7 +62,7 @@ const WorkForm = () => {
     isOtpSent,
     validated,
     handleInputChange,
-    handleExperienceSelect,
+    handleOptionSelect,
     handleSubmit,
     handleOtpChange,
     handleVerifyOtp,
@@ -76,15 +71,22 @@ const WorkForm = () => {
     setShowToast,
   } = useFormHandler();
 
-  formData.lookingFor = "Work Abroad";
-  formData.county = "Not Applicable";
-  formData.origin = "Work Abroad Landing Page Form";
+  useEffect(() => {
+    // Set default values when component mounts
+    handleOptionSelect("lookingFor", "Work Abroad");
+    handleOptionSelect("country", "Not Applicable");
+    handleOptionSelect("origin", "Work Abroad Landing Page Form");
+  }, []);
+
+  // Handler for experience selection
+  const handleExperienceSelect = (option) => {
+    handleOptionSelect("experience", option);
+  };
 
   return (
-    <header className="d-flex justify-content-center align-items-center ">
-      <Container className="d-flex justify-content-center align-items-end ">
+    <div className="d-flex justify-content-center align-items-start ">
+      <Container className="d-flex justify-content-center align-items-start ">
         <Row className=" justify-content-center align-items-center mt-2">
-          {/* <Col lg={1} md={1} className="d-none d-md-block "></Col> */}
           <Col
             lg={12}
             md={12}
@@ -102,59 +104,23 @@ const WorkForm = () => {
                   className="justify-content-start align-items-center "
                 >
                   <div className="nurse-img-carousel">
-                    <Carousel
-                      interval={2500}
-                      controls={false}
-                      style={{ minHeight: "45vh" }}
-                    >
-                      <Carousel.Item>
-                        <Image
-                          fluid
-                          src={workImage1}
-                          alt="Slide 1"
-                          style={{ minHeight: "45vh", objectFit: "cover" }}
-                        />
-                        <Carousel.Caption>
-                          <p>One-to-One Visa Assistance</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image
-                          fluid
-                          src={workImage2}
-                          alt="Slide 2"
-                          style={{ minHeight: "45vh", objectFit: "cover" }}
-                        />
-                        <Carousel.Caption>
-                          <p>One-to-One Visa Assistance</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <Image
-                          fluid
-                          src={workImage3}
-                          alt="Slide 3"
-                          style={{ minHeight: "45vh", objectFit: "cover" }}
-                        />
-                        <Carousel.Caption>
-                          <p>One-to-One Visa Assistance</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                    </Carousel>
+                    <Image
+                      fluid
+                      src={workImage1}
+                      alt="Work Abroad"
+                      style={{ minHeight: "45vh", objectFit: "cover" }}
+                    />
+                    {/* <div className="carousel-caption">
+                      <p>One-to-One Visa Assistance</p>
+                    </div> */}
                   </div>
                 </Col>
                 {/* Right Side - Form */}
-                <Col
-                  md={6}
-                  lg={6}
-                  sm={12}
-                  xs={12}
-                  className="p-lg-4 p-2 text-center "
-                >
-                  <div className="subheading-big-medium text-content-primary mt-2 my-lg-2">
+                <Col md={6} lg={6} sm={12} xs={12} className="p-lg-4 p-2  ">
+                  <div className="subheading-big-medium text-content-primary mt-2 my-lg-2 text-center">
                     Start Your Work Abroad Journey
                   </div>
-                  <div className="mb-3 paragraph-small-medium text-content-secondary py-2">
+                  <div className="mb-3 paragraph-small-medium text-content-secondary py-2 text-center">
                     Tell Us About Yourself!
                   </div>
                   <Form validated={validated} onSubmit={handleSubmit}>
@@ -165,7 +131,6 @@ const WorkForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        // isInvalid={!!errors.name}
                         required
                         minLength={3}
                         maxLength={40}
@@ -180,7 +145,6 @@ const WorkForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        // isInvalid={!!errors.email}
                         required
                       />
                       <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -195,7 +159,6 @@ const WorkForm = () => {
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            // isInvalid={!!errors.phone}
                             required
                             pattern="[0-9]{10}"
                           />
@@ -210,7 +173,6 @@ const WorkForm = () => {
                             name="pincode"
                             value={formData.pincode}
                             onChange={handleInputChange}
-                            // isInvalid={!!errors.pincode}
                             required
                             pattern="[0-9]{6}"
                           />
@@ -219,45 +181,22 @@ const WorkForm = () => {
                       </Col>
                     </Row>
 
-                    {/* Experience Selection */}
-                    <Form.Group className="mb-3 text-start">
-                      <Form.Label>Select Experience</Form.Label>
-                      <div className="d-flex gap-2 flex-wrap">
-                        {[
-                          "Student",
-                          "Freshers",
-                          "0-1 Years",
-                          "1-3 Years",
-                          "3-5 Years",
-                          "5+ Years",
-                        ].map((option, index) => (
-                          <div
-                            key={index}
-                            className={`experience-option ${
-                              formData.experience === option ? "selected" : ""
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              id={`experience-${index}`}
-                              name="experience"
-                              value={option}
-                              checked={formData.experience === option}
-                              onChange={(e) =>
-                                handleExperienceSelect(e.target.value)
-                              }
-                              hidden
-                            />
-                            <label
-                              htmlFor={`experience-${index}`}
-                              className="w-100"
-                            >
-                              {option}
-                            </label>
-                          </div>
-                        ))}
-                      </div>
-                    </Form.Group>
+                    {/* Experience Selection - Using FormRadioButton component */}
+                    <FormRadioButton
+                      label="Select Experience"
+                      options={[
+                        "Student",
+                        "Freshers",
+                        "0-1 Years",
+                        "1-3 Years",
+                        "3-5 Years",
+                        "5+ Years",
+                      ]}
+                      name="experience"
+                      value={formData.experience}
+                      onChange={(value) => handleExperienceSelect(value)}
+                      controlId="formExperience"
+                    />
 
                     {otpVisible && (
                       <Row className="mb-3">
@@ -296,7 +235,11 @@ const WorkForm = () => {
                     )}
 
                     {/* Book Free Consultation Button */}
-                    <Button variant="primary" className="w-100" type="submit">
+                    <Button
+                      variant="primary"
+                      className="w-100 mt-3"
+                      type="submit"
+                    >
                       Book a Free Consultation
                     </Button>
 
@@ -320,7 +263,6 @@ const WorkForm = () => {
               </Row>
             </div>
           </Col>
-          {/* <Col lg={1} md={1} className="d-none d-md-block"></Col> */}
         </Row>
       </Container>
       <ToastContainer position="top-end" className="p-3">
@@ -331,7 +273,7 @@ const WorkForm = () => {
           status={status}
         />
       </ToastContainer>
-    </header>
+    </div>
   );
 };
 

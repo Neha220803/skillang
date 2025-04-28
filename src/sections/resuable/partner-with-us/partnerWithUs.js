@@ -22,9 +22,9 @@ const PartnerWithUsSection = () => {
             className="d-flex flex-column justify-content-center align-items-start text-start"
             md={6}
           >
-            <div className="heading-big-medium text-start mb-2 text-white ">
+            <h1 className="heading-big-medium text-start mb-2 text-white ">
               Partner 🤝 with Us
-            </div>
+            </h1>
             <div className="paragraph-big-medium text-start mb-3 text-white ">
               Join hands with us to create opportunities for students seeking
               world-class education and global exposure.

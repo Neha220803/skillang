@@ -11,7 +11,7 @@ const EducationAbroadCountry = () => {
       <Container>
         <Row className="mb-4">
           <Col>
-            <div className="heading-big-medium">Education</div>
+            <h1 className="heading-big-medium">Education</h1>
           </Col>
         </Row>
         <div className="country-subsection-spacing ">

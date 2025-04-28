@@ -119,9 +119,7 @@ const WorkAbroadJourneyTimeline = () => {
   return (
     <section>
       <Container>
-        <div className="text-center heading-big-medium">
-          Work Abroad Journey
-        </div>
+        <h1 className="text-center heading-big-medium">Work Abroad Journey</h1>
         <div className="text-center paragraph-big-medium text-content-secondary mb-2 mb-md-5">
           Start your work abroad journey in 5 simple steps
         </div>
@@ -185,9 +183,9 @@ const WorkAbroadJourneyTimeline = () => {
                       alt={item.title}
                     />
                   </div>
-                  <div className="paragraph-big-medium text-content-secondary">
+                  <p className="paragraph-big-medium text-content-secondary">
                     {item.description}
-                  </div>
+                  </p>
                 </div>
               </TimelineContent>
             </TimelineItem>

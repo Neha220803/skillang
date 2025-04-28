@@ -5,7 +5,7 @@ const SOPOverviewComp = () => {
   return (
     <Container>
       <Row className="mb-5">
-        <div className="heading-big-medium">Overview</div>
+        <h1 className="heading-big-medium">Overview</h1>
       </Row>
       <Row>
         <Col md={6} className="text-content-tertiary">

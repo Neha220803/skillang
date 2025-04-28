@@ -221,7 +221,7 @@ const PartneredUni = () => {
       <div className="container">
         {/* Header Section */}
         <div className="text-center mb-4">
-          <div className="heading-big-medium">Our University Partners</div>
+          <h1 className="heading-big-medium">Our University Partners</h1>
           <div className="subheading-small-regular text-content-secondary">
             Collaborating with Top Institutions to Bring You World-Class
             Education Opportunities.

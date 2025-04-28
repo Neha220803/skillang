@@ -64,9 +64,9 @@ const EduLoanOurServices = () => {
             className="d-flex flex-column justify-content-center align-items-stretch"
           >
             <Row className="" style={{ marginBottom: "24px" }}>
-              <div className="heading-big-medium text-content-primary">
+              <h1 className="heading-big-medium text-content-primary">
                 Our Services
-              </div>
+              </h1>
               <div className="subheading-small-medium text-content-secondary">
                 We offer a comprehensive range of loan services. Below are some
                 of the options available to you.

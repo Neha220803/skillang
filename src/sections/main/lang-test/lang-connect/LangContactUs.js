@@ -25,12 +25,9 @@ const LangContactUs = () => {
           >
             <div className="lang-contact-us-title-content">
               <div>
-                <div
-                  className="heading-big-medium"
-                  style={{ color: "#023655" }}
-                >
+                <h1 className="heading-big-medium" style={{ color: "#023655" }}>
                   Still have queries? Let’s Connect
-                </div>
+                </h1>
                 <div
                   className="paragraph-big-medium  "
                   style={{ color: "#044971" }}

@@ -57,9 +57,9 @@ const UpcomingEvents = () => {
       <Container>
         <Row className="mb-4">
           <Col>
-            <h2 className="subheading-big-medium events-title">
+            <h1 className="subheading-big-medium events-title">
               Join Our Upcoming Events
-            </h2>
+            </h1>
           </Col>
         </Row>
 

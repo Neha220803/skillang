@@ -43,9 +43,9 @@ const LangTestPrepProgs = () => {
     <div>
       <Container>
         <Row>
-          <div className="heading-big-medium text-content-primary text-center mb-3">
+          <h1 className="heading-big-medium text-content-primary text-center mb-3">
             Our Language & Test Prep Programs
-          </div>
+          </h1>
         </Row>
         <Row>
           {programs.map((program, index) => (
