@@ -26,7 +26,7 @@ const GerOppCardEligibilityComp = () => {
     <div>
       <EligibilityBarCardsComponent
         title="Eligibility"
-        subheading="To work as a nurse in Germany, you need"
+        subheading="To work in Germany, you need"
         eligibilityData={GerOppCardEligibilityData}
         className="german-opportunity-card-eligibility" // Optional custom class
       />

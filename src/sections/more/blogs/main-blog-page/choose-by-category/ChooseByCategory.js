@@ -3,7 +3,6 @@ import {
   Container,
   Row,
   Col,
-  Image,
   Nav,
   Card,
   CardImg,
@@ -11,84 +10,29 @@ import {
   CardTitle,
 } from "react-bootstrap";
 import { HiTrendingUp } from "react-icons/hi";
-import trend1 from "../../../../../assets/images/Blogs/trend-1.jpg";
-import trend2 from "../../../../../assets/images/Blogs/trend-2.jpg";
-import trend3 from "../../../../../assets/images/Blogs/trend-3.jpg";
-import trend4 from "../../../../../assets/images/Blogs/trend-4.jpg";
 import { Chat, Heart } from "react-bootstrap-icons";
+import blogsData from "../../../../../data/blogsData";
 
 const ChooseByCategory = () => {
-  // State to track active filter
-  const [activeFilter, setActiveFilter] = useState("trending");
+  // State to track active filter - default to "All"
+  const [activeFilter, setActiveFilter] = useState("All");
 
-  // Array of blog posts with categories
-  const allPosts = [
-    {
-      id: 1,
-      image: trend1,
-      title:
-        "Discover the Excitement of New York: A Guide for International Students",
-      date: "Mar 23, 2025",
-      likes: "432",
-      comments: "34",
-      categories: ["trending", "business"],
-    },
-    {
-      id: 2,
-      image: trend2,
-      title: "Experience New York: The Ultimate Study Abroad Adventure",
-      date: "Mar 23, 2025",
-      likes: "432",
-      comments: "34",
-      categories: ["trending"],
-    },
-    {
-      id: 3,
-      image: trend3,
-      title:
-        "Studying Abroad in New York: Your Gateway to Culture and Learning",
-      date: "Mar 23, 2025",
-      likes: "432",
-      comments: "34",
-      categories: ["business", "topSalary"],
-    },
-    {
-      id: 4,
-      image: trend1,
-      title:
-        "Discover the Excitement of New York: A Guide for International Students",
-      date: "Mar 23, 2025",
-      likes: "432",
-      comments: "34",
-      categories: ["trending", "business"],
-    },
-    {
-      id: 5,
-      image: trend2,
-      title: "Experience New York: The Ultimate Study Abroad Adventure",
-      date: "Mar 23, 2025",
-      likes: "432",
-      comments: "34",
-      categories: ["trending", "topSalary"],
-    },
-    {
-      id: 6,
-      image: trend3,
-      title:
-        "Studying Abroad in New York: Your Gateway to Culture and Learning",
-      date: "Mar 23, 2025",
-      likes: "432",
-      comments: "34",
-      categories: ["business"],
-    },
-  ];
+  // Convert category names to match format in blogsData
+  const categoryMapping = {
+    All: "All",
+    Trending: "Trending",
+    Business: "Business",
+    "Top Salary": "Top Salary",
+  };
 
   // Filter posts based on active filter
   const getFilteredPosts = () => {
-    if (activeFilter === "all") {
-      return allPosts;
+    if (activeFilter === "All") {
+      return blogsData.posts.slice(0, 6); // Limit to 6 posts for this section
     }
-    return allPosts.filter(post => post.categories.includes(activeFilter));
+    return blogsData.posts
+      .filter((post) => post.category.includes(activeFilter))
+      .slice(0, 6); // Limit to 6 posts
   };
 
   // Get filtered posts
@@ -108,50 +52,37 @@ const ChooseByCategory = () => {
         <Row>
           <div className="filter-tabs">
             <Nav variant="pills">
-              <Nav.Item>
-                <Nav.Link
-                  className={activeFilter === "all" ? "active" : ""}
-                  onClick={() => handleFilterChange("all")}
-                >
-                  All
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  className={activeFilter === "trending" ? "active" : ""}
-                  onClick={() => handleFilterChange("trending")}
-                >
-                  <HiTrendingUp style={{ width: "20px", height: "auto" }} />{" "}
-                  Trending
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  className={activeFilter === "business" ? "active" : ""}
-                  onClick={() => handleFilterChange("business")}
-                >
-                  Business
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  className={activeFilter === "topSalary" ? "active" : ""}
-                  onClick={() => handleFilterChange("topSalary")}
-                >
-                  Top Salary
-                </Nav.Link>
-              </Nav.Item>
+              {blogsData.categories
+                .filter((category) => category !== "Editor's Choice") // Exclude Editor's Choice from this section
+                .map((category, index) => (
+                  <Nav.Item key={index}>
+                    <Nav.Link
+                      className={activeFilter === category ? "active" : ""}
+                      onClick={() => handleFilterChange(category)}
+                    >
+                      {category === "Trending" && (
+                        <HiTrendingUp
+                          style={{ width: "20px", height: "auto" }}
+                        />
+                      )}
+                      {category}
+                    </Nav.Link>
+                  </Nav.Item>
+                ))}
             </Nav>
           </div>
         </Row>
         <Row>
           {filteredPosts.map((post) => (
             <Col sm={12} xs={12} md={4} key={post.id} className="mb-3">
-              <Card className="blog-trending-cards border-0" data-categories={post.categories?.join(",")}>
+              <Card
+                className="blog-trending-cards border-0"
+                data-categories={post.category?.join(",")}
+              >
                 <CardImg
                   className="blog-trending-cards-image"
-                  src={post.image}
-                  alt={`trend${post.id}-img`}
+                  src={post.featuredImage}
+                  alt={post.title}
                 />
                 <CardBody className="px-1 py-2">
                   <CardTitle className="paragraph-big-medium">
@@ -162,7 +93,7 @@ const ChooseByCategory = () => {
                     <div className="d-flex flex-row gap-2">
                       <div>
                         <Heart />
-                        {post.likes}
+                        {post.views}
                       </div>
                       <div>
                         <Chat />

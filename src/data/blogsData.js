@@ -244,7 +244,7 @@ const blogsData = {
       keywords: ["New York", "USA", "Student", "Study Abroad", "University"],
       excerpt:
         "It is a daunting experience for newcomers; however, it doesn't have to be. Here are four tips to enhance your enjoyment of the experience and productively utilize all your precious time.",
-      featuredImage: "/images/blogs/new-york-times-square.jpg",
+      featuredImage: blogMainHeaderImg,
       content: {
         heading: "Is New York the Right Place To Study Abroad?",
         imageCaption: "source: unsplash",
@@ -256,17 +256,18 @@ const blogsData = {
             text: "The city is well-known because of its excitement, vitality, and excitement, but going abroad to study in New York gives you a chance to understand New York's different aspects. Bot misperceptions put aside, New York is a fascinating place to visit. Reviews of the city frequently paint a picture of the city's blight and continuous commercial activity. However, amid all this bustle is a great chance to experience the real essence of the city. From Chinatown from Chinatown to Central Park to the Statue of Liberty, The city reflects a positive image of its own for visitors who take a moment to reflect not only on what's going on within their own homes however but also on the larger view of the globe as a whole.",
           },
           {
+            title: "summary",
             text: "Therefore, New York is an ideal location for students of art who study abroad, not just because of its fascinating and intricate urban landscape but due to the numerous ways this fantastically designed city can be explored.",
           },
           {
             title: "Join in on The Chic verse",
             text: "If you are travelling abroad to New York, any student who wishes to immerse themselves amid the city's vibrant social scene should include the district of Midtown in their plans. The midtown area has a completely different style of life than any other city. It is the ideal place to visit to experience an experience of the cosmopolitan scene, which is popular across the globe. A stroll through the middle of town can provide a fascinating understanding of the genesis that led to the American melting pan, where various cultures from all over the globe have joined forces to create a distinct landscape in the middle of the city. Students can walk through this melting pot of different styles and discover an echo of the communities which have come to depend on each other and get to know one another through these diverse experiences.",
           },
-          {
-            title: "Lost in Your University Search?",
-            text: "Let Us Guide You to Your Ideal Destination!",
-            callToAction: "Book a Free Consultation",
-          },
+          // {
+          //   title: "Lost in Your University Search?",
+          //   text: "Let Us Guide You to Your Ideal Destination!",
+          //   callToAction: "Book a Free Consultation",
+          // },
           {
             title: "Explore the city's fantastic art scene",
             text: "Students who study abroad will discover they have more opportunities to get involved with the New York art scene once they have a close relationship with it. Many emerging artists frequently exhibit their new and experimental collections of work in exhibitions and galleries throughout the city. With the variety of art forms with such a variety students constantly want more. That sensation of curiosity and excitement frequently leads to more creativity and inspiration.",
