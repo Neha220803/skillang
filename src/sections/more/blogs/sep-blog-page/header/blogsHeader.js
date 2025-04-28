@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./blogsHeader.css"; // Import CSS for styling
 import {
   Container,
@@ -24,9 +24,14 @@ import featuredImg2 from "../../../../../assets/images/Blogs/blogsep2.jpg";
 import UniPartner from "../../../../resuable/uni-partner/uni-partner";
 import UniContactComp from "../../../../resuable/uni-contact/UniContact";
 import BlogsCommentsComp from "../comments/blogsComments";
+
 // Article Card Component
 const BlogsSepPageHeader = ({ image, title, date, likes, comments }) => {
-  const trendingPosts = [
+  // State to track active filter
+  const [activeFilter, setActiveFilter] = useState("trending");
+
+  // Array of blog posts with categories
+  const allPosts = [
     {
       id: 1,
       image: trend1,
@@ -35,6 +40,7 @@ const BlogsSepPageHeader = ({ image, title, date, likes, comments }) => {
       date: "Mar 23, 2025",
       likes: "432",
       comments: "34",
+      categories: ["trending", "business"],
     },
     {
       id: 2,
@@ -43,6 +49,7 @@ const BlogsSepPageHeader = ({ image, title, date, likes, comments }) => {
       date: "Mar 23, 2025",
       likes: "432",
       comments: "34",
+      categories: ["trending", "topSalary"],
     },
     {
       id: 3,
@@ -52,6 +59,7 @@ const BlogsSepPageHeader = ({ image, title, date, likes, comments }) => {
       date: "Mar 23, 2025",
       likes: "432",
       comments: "34",
+      categories: ["business"],
     },
     {
       id: 4,
@@ -60,8 +68,26 @@ const BlogsSepPageHeader = ({ image, title, date, likes, comments }) => {
       date: "Mar 23, 2025",
       likes: "3k",
       comments: "874",
+      categories: ["trending", "business", "topSalary"],
     },
   ];
+
+  // Filter posts based on active filter
+  const getFilteredPosts = () => {
+    if (activeFilter === "all") {
+      return allPosts;
+    }
+    return allPosts.filter(post => post.categories.includes(activeFilter));
+  };
+
+  // Get filtered posts
+  const filteredPosts = getFilteredPosts();
+
+  // Handle filter change
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
+  };
+
   return (
     <section>
       <Container>
@@ -189,29 +215,47 @@ const BlogsSepPageHeader = ({ image, title, date, likes, comments }) => {
           <Col sm={12} xs={12} md={4}>
             <Row>
               <div className="filter-tabs">
-                <Nav variant="pills" defaultActiveKey="#trending">
+                <Nav variant="pills">
                   <Nav.Item>
-                    <Nav.Link href="#all">All</Nav.Link>
+                    <Nav.Link
+                      className={activeFilter === "all" ? "active" : ""}
+                      onClick={() => handleFilterChange("all")}
+                    >
+                      All
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="#trending" active>
+                    <Nav.Link
+                      className={activeFilter === "trending" ? "active" : ""}
+                      onClick={() => handleFilterChange("trending")}
+                    >
                       <HiTrendingUp style={{ width: "20px", height: "auto" }} />{" "}
                       Trending
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="#business">Business</Nav.Link>
+                    <Nav.Link
+                      className={activeFilter === "business" ? "active" : ""}
+                      onClick={() => handleFilterChange("business")}
+                    >
+                      Business
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="#topsalary">Top Salary</Nav.Link>
+                    <Nav.Link
+                      className={activeFilter === "topSalary" ? "active" : ""}
+                      onClick={() => handleFilterChange("topSalary")}
+                    >
+                      Top Salary
+                    </Nav.Link>
                   </Nav.Item>
                 </Nav>
               </div>
             </Row>
             <Row>
-              {trendingPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <Col sm={12} xs={12} md={6} key={post.id} className="mb-3">
-                  <Card className="blog-trending-cards border-0">
+                  <Card className="blog-trending-cards border-0" data-categories={post.categories?.join(",")}>
                     <CardImg
                       className="blog-trending-cards-image"
                       src={post.image}
