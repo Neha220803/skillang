@@ -11,6 +11,7 @@ import {
   Popover,
 } from "react-bootstrap";
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
+import "./countryWiseUniversity.css";
 import uniList1 from "../../../assets/images/study-abroad-county-wise/uni-list.jpg";
 
 const CountryWiseUniversity = () => {
@@ -700,23 +701,23 @@ const CountryWiseUniversity = () => {
         </div>
       ) : filteredUniversities.length > 0 ? (
         filteredUniversities.map((university) => (
-          <Card key={university.id} className="mb-4 border-0 shadow-sm">
+          <Card
+            key={university.id}
+            className="mb-4 country-wise-uni-card overflow-hidden"
+          >
             <Row className="g-0">
               <Col md={4}>
                 <img
                   src={university.image}
                   alt={university.name}
-                  className="img-fluid h-100 w-100 object-fit-cover"
-                  style={{ maxHeight: "200px" }}
+                  className="img-fluid h-100 w-100 object-fit-cover "
+                  // style={{ maxHeight: "200px" }}
                 />
               </Col>
-              <Col md={8}>
+              <Col md={6}>
                 <Card.Body className="p-4">
                   <div className="d-flex justify-content-between align-items-start mb-3">
                     <Card.Title as="h4">{university.name}</Card.Title>
-                    <Button variant="primary" className="rounded-pill">
-                      Check Eligibility
-                    </Button>
                   </div>
 
                   <div className="d-flex align-items-center mb-3">
@@ -725,11 +726,11 @@ const CountryWiseUniversity = () => {
                       {university.location}
                     </span>
 
-                    <Badge bg="light" text="dark" className="me-3 py-2 px-3">
+                    <Badge className=" display-badge-default-pill me-3">
                       {university.type}
                     </Badge>
 
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center display-badge-default-pill">
                       <div
                         className="bg-success rounded-circle p-1 me-1"
                         style={{ width: "10px", height: "10px" }}
@@ -751,13 +752,14 @@ const CountryWiseUniversity = () => {
                       <p className="fw-bold mb-0">{university.livingCost}</p>
                     </Col>
                   </Row>
-
-                  <div className="text-end mt-3">
-                    <Button variant="outline-primary" className="rounded-pill">
-                      View Details
-                    </Button>
-                  </div>
                 </Card.Body>
+              </Col>
+              <Col
+                md={2}
+                className="d-flex justify-content-center align-items-start gap-2 flex-column"
+              >
+                <Button variant="primary">Check Eligibility</Button>
+                <Button variant="secondary-outline">Download Brochure</Button>
               </Col>
             </Row>
           </Card>
