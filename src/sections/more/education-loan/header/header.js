@@ -11,8 +11,8 @@ const Header = () => {
       <MorePageHeader
         desktopBgImage={desktopBackground}
         mobileBgImage={desktopBackground} // Optional: same as desktop if not provided
-        title="SOP & Resume Writing Services at Skillang"
-        description="Craft a compelling SOP and a professional resume that opens doors to prestigious international universities and scholarship programs."
+        title="Education Loan Assistance at Skillang"
+        description="Secure the funding needed to realize your academic dreams abroad."
         buttonText="Schedule a Free Consultation"
       />
     </div>
