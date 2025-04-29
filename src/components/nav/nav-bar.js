@@ -12,6 +12,10 @@ import logo from "../../assets/images/logos/logo-3.svg";
 function CustomNavbar() {
   const [expanded, setExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [expandedMenus, setExpandedMenus] = useState({
+    studyAbroad: false,
+    more: false
+  });
   const navigate = useNavigate();
   const location = useLocation();
   const phoneNumber = "+917200630336";
@@ -40,6 +44,7 @@ function CustomNavbar() {
   // Close navbar whenever the route changes
   useEffect(() => {
     setExpanded(false);
+    setExpandedMenus({ studyAbroad: false, more: false });
   }, [location.pathname]);
 
   const isActive = (path) => location.pathname === path;
@@ -48,6 +53,17 @@ function CustomNavbar() {
     if (location.pathname !== path) {
       navigate(path);
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const toggleSubmenu = (menu, e) => {
+    if (isMobile) {
+      e.preventDefault();
+      e.stopPropagation();
+      setExpandedMenus(prev => ({
+        ...prev,
+        [menu]: !prev[menu]
+      }));
     }
   };
 
@@ -66,6 +82,141 @@ function CustomNavbar() {
         "_blank"
       );
     }
+  };
+
+  // Render standard NavDropdown for desktop & custom mobile dropdowns
+  const renderStudyAbroadNav = () => {
+    if (!isMobile) {
+      // Keep desktop view exactly as original
+      return (
+        <NavDropdown
+          title="Study Abroad"
+          className={`navpaths d-flex align-items-center ${isActive("/study-abroad") ? "active-link" : ""}`}
+        >
+          <NavDropdown.Item
+            onClick={() => handleNavigation("/study-abroad")}
+          >
+            Overview
+          </NavDropdown.Item>
+          <NavDropdown.Item
+            onClick={() => handleNavigation("/study-abroad/uk")}
+          >
+            UK
+          </NavDropdown.Item>
+          {/* <NavDropdown.Item
+            onClick={() => handleNavigation("/study-abroad/canada")}
+          >
+            Canada
+          </NavDropdown.Item> */}
+        </NavDropdown>
+      );
+    }
+
+    // Custom mobile dropdown
+    return (
+      <>
+        <div
+          className={`navpaths d-flex align-items-center ${isActive("/study-abroad") ? "active-link" : ""}`}
+          onClick={(e) => toggleSubmenu("studyAbroad", e)}
+        >
+          Study Abroad <span className="ms-auto dropdown-icon">{expandedMenus.studyAbroad ? "▲" : "▼"}</span>
+        </div>
+
+        {expandedMenus.studyAbroad && (
+          <div className="mobile-submenu">
+            <div
+              className="submenu-item"
+              onClick={() => handleNavigation("/study-abroad")}
+            >
+              Overview
+            </div>
+            <div
+              className="submenu-item"
+              onClick={() => handleNavigation("/study-abroad/uk")}
+            >
+              UK
+            </div>
+          </div>
+        )}
+      </>
+    );
+  };
+
+  // Render standard NavDropdown for desktop & custom mobile dropdowns
+  const renderMoreNav = () => {
+    if (!isMobile) {
+      // Keep desktop view exactly as original
+      return (
+        <NavDropdown
+          title="More"
+          className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""}`}
+        >
+          <NavDropdown.Item
+            onClick={() => handleNavigation("/more/education-loan")}
+          >
+            Education Loan
+          </NavDropdown.Item>
+          <NavDropdown.Item
+            onClick={() => handleNavigation("/more/scholarships")}
+          >
+            Scholarships
+          </NavDropdown.Item>
+          <NavDropdown.Item
+            onClick={() => handleNavigation("/more/sop-and-resume-writing")}
+          >
+            SOP & Resume Writing
+          </NavDropdown.Item>
+          <NavDropdown.Item
+            onClick={() =>
+              handleNavigation("/more/german-opportunity-card")
+            }
+          >
+            German Opportunity Card
+          </NavDropdown.Item>
+        </NavDropdown>
+      );
+    }
+
+    // Custom mobile dropdown
+    return (
+      <>
+        <div
+          className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""}`}
+          onClick={(e) => toggleSubmenu("more", e)}
+        >
+          More <span className="ms-auto dropdown-icon">{expandedMenus.more ? "▲" : "▼"}</span>
+        </div>
+
+        {expandedMenus.more && (
+          <div className="mobile-submenu">
+            <div
+              className="submenu-item"
+              onClick={() => handleNavigation("/more/education-loan")}
+            >
+              Education Loan
+            </div>
+            <div
+              className="submenu-item"
+              onClick={() => handleNavigation("/more/scholarships")}
+            >
+              Scholarships
+            </div>
+            <div
+              className="submenu-item"
+              onClick={() => handleNavigation("/more/sop-and-resume-writing")}
+            >
+              SOP & Resume Writing
+            </div>
+            <div
+              className="submenu-item"
+              onClick={() => handleNavigation("/more/german-opportunity-card")}
+            >
+              German Opportunity Card
+            </div>
+          </div>
+        )}
+      </>
+    );
   };
 
   return (
@@ -108,27 +259,9 @@ function CustomNavbar() {
             >
               Work Abroad
             </Nav.Link>
-            <NavDropdown
-              title="Study Abroad"
-              className={`navpaths d-flex align-items-center ${isActive("/study-abroad") ? "active-link" : ""
-                }`}
-            >
-              <NavDropdown.Item
-                onClick={() => handleNavigation("/study-abroad")}
-              >
-                Overview
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleNavigation("/study-abroad/uk")}
-              >
-                UK
-              </NavDropdown.Item>
-              {/* <NavDropdown.Item
-                onClick={() => handleNavigation("/study-abroad/canada")}
-              >
-                Canada
-              </NavDropdown.Item> */}
-            </NavDropdown>
+
+            {renderStudyAbroadNav()}
+
             <Nav.Link
               className={`navpaths d-flex align-items-center ${isActive("/lang-test-prep") ? "active-link" : ""
                 }`}
@@ -136,34 +269,8 @@ function CustomNavbar() {
             >
               Language & Test
             </Nav.Link>
-            <NavDropdown
-              title="More"
-              className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""
-                }`}
-            >
-              <NavDropdown.Item
-                onClick={() => handleNavigation("/more/education-loan")}
-              >
-                Education Loan
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleNavigation("/more/scholarships")}
-              >
-                Scholarships
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleNavigation("/more/sop-and-resume-writing")}
-              >
-                SOP & Resume Writing
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() =>
-                  handleNavigation("/more/german-opportunity-card")
-                }
-              >
-                German Opportunity Card
-              </NavDropdown.Item>
-            </NavDropdown>
+
+            {renderMoreNav()}
           </Nav>
           <div className="ms-auto align-items-center justify-content-center text-center my-2">
             <button

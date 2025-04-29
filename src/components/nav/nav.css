@@ -17,13 +17,49 @@
     /* Changed from rgb(104, 53, 53) to white */
   }
 
-  /* Optional: Add styling for the expanded mobile menu */
+  /* Mobile menu styling */
   .navbar-collapse {
     background-color: white;
-    /* padding: 10px; */
     width: 100% !important;
     border-radius: 0 0 10px 10px;
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+
+
+
+  }
+
+  /* Mobile submenu styling - only applies to mobile view */
+  .mobile-submenu {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    padding-left: 15px !important;
+  }
+
+  /* Individual submenu items - only applies to mobile view */
+  .submenu-item {
+    color: rgb(96, 96, 96) !important;
+    font-size: 14px !important;
+    padding: 8px 20px !important;
+    margin: 2px 0 !important;
+    margin-left: 15px !important;
+    transition: all 0.3s ease-in-out;
+    display: flex !important;
+    width: 100% !important;
+    text-align: left !important;
+    cursor: pointer;
+  }
+
+  .submenu-item:hover {
+    color: #e86e39 !important;
+    background-color: #fcf1ed !important;
+    border-radius: 999px !important;
+  }
+
+  /* Dropdown icon - only for mobile */
+  .dropdown-icon {
+    font-size: 12px;
   }
 }
 
@@ -116,6 +152,8 @@
   .navpaths {
     font-size: 14px !important;
     padding: 10px 15px !important;
+    width: 100% !important;
+    justify-content: space-between !important;
   }
 
   .navcont button {
@@ -138,7 +176,6 @@
 
 /* Custom Dropdown Styling */
 .dropdown-menu {
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
