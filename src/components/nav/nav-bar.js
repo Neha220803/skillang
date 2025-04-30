@@ -11,21 +11,20 @@ import logo from "../../assets/images/logos/logo-3.svg";
 
 function CustomNavbar() {
   const [expanded, setExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [expandedMenus, setExpandedMenus] = useState({
     studyAbroad: false,
-    more: false
+    more: false,
   });
   const navigate = useNavigate();
   const location = useLocation();
-  const phoneNumber = "+917200630336";
+  const phoneNumber = "+91 7200630336";
   const whatsappMessage =
     "Hello, I'd like to know more about Skillang services.";
 
-  // Check if the device is mobile
   useEffect(() => {
     const checkDevice = () => {
-      // Using regex to detect mobile devices
       const isMobileDevice =
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
@@ -41,7 +40,6 @@ function CustomNavbar() {
     };
   }, []);
 
-  // Close navbar whenever the route changes
   useEffect(() => {
     setExpanded(false);
     setExpandedMenus({ studyAbroad: false, more: false });
@@ -60,19 +58,17 @@ function CustomNavbar() {
     if (isMobile) {
       e.preventDefault();
       e.stopPropagation();
-      setExpandedMenus(prev => ({
+      setExpandedMenus((prev) => ({
         ...prev,
-        [menu]: !prev[menu]
+        [menu]: !prev[menu],
       }));
     }
   };
 
   const handleContactClick = () => {
     if (isMobile) {
-      // For mobile devices, initiate a call
       window.location.href = `tel:${phoneNumber}`;
     } else {
-      // For desktop, open WhatsApp Web
       const encodedMessage = encodeURIComponent(whatsappMessage);
       window.open(
         `https://web.whatsapp.com/send?phone=${phoneNumber.replace(
@@ -84,42 +80,39 @@ function CustomNavbar() {
     }
   };
 
-  // Render standard NavDropdown for desktop & custom mobile dropdowns
   const renderStudyAbroadNav = () => {
     if (!isMobile) {
-      // Keep desktop view exactly as original
       return (
         <NavDropdown
           title="Study Abroad"
-          className={`navpaths d-flex align-items-center ${isActive("/study-abroad") ? "active-link" : ""}`}
+          className={`navpaths d-flex align-items-center ${
+            isActive("/study-abroad") ? "active-link" : ""
+          }`}
         >
-          <NavDropdown.Item
-            onClick={() => handleNavigation("/study-abroad")}
-          >
+          <NavDropdown.Item onClick={() => handleNavigation("/study-abroad")}>
             Overview
           </NavDropdown.Item>
-          <NavDropdown.Item
+          {/* <NavDropdown.Item
             onClick={() => handleNavigation("/study-abroad/uk")}
           >
             UK
-          </NavDropdown.Item>
-          {/* <NavDropdown.Item
-            onClick={() => handleNavigation("/study-abroad/canada")}
-          >
-            Canada
           </NavDropdown.Item> */}
         </NavDropdown>
       );
     }
 
-    // Custom mobile dropdown
     return (
       <>
         <div
-          className={`navpaths d-flex align-items-center ${isActive("/study-abroad") ? "active-link" : ""}`}
+          className={`navpaths d-flex align-items-center ${
+            isActive("/study-abroad") ? "active-link" : ""
+          }`}
           onClick={(e) => toggleSubmenu("studyAbroad", e)}
         >
-          Study Abroad <span className="ms-auto dropdown-icon">{expandedMenus.studyAbroad ? "▲" : "▼"}</span>
+          Study Abroad{" "}
+          <span className="ms-auto dropdown-icon">
+            {expandedMenus.studyAbroad ? "▲" : "▼"}
+          </span>
         </div>
 
         {expandedMenus.studyAbroad && (
@@ -130,94 +123,91 @@ function CustomNavbar() {
             >
               Overview
             </div>
-            <div
+            {/* <div
               className="submenu-item"
               onClick={() => handleNavigation("/study-abroad/uk")}
             >
               UK
-            </div>
+            </div> */}
           </div>
         )}
       </>
     );
   };
 
-  // Render standard NavDropdown for desktop & custom mobile dropdowns
-  const renderMoreNav = () => {
-    if (!isMobile) {
-      // Keep desktop view exactly as original
-      return (
-        <NavDropdown
-          title="More"
-          className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""}`}
-        >
-          <NavDropdown.Item
-            onClick={() => handleNavigation("/more/education-loan")}
-          >
-            Education Loan
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            onClick={() => handleNavigation("/more/scholarships")}
-          >
-            Scholarships
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            onClick={() => handleNavigation("/more/sop-and-resume-writing")}
-          >
-            SOP & Resume Writing
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            onClick={() =>
-              handleNavigation("/more/german-opportunity-card")
-            }
-          >
-            German Opportunity Card
-          </NavDropdown.Item>
-        </NavDropdown>
-      );
-    }
+  // const renderMoreNav = () => {
+  //   if (!isMobile) {
+  //     return (
+  //       <NavDropdown
+  //         title="More"
+  //         className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""}`}
+  //       >
+  //         <NavDropdown.Item
+  //           onClick={() => handleNavigation("/more/education-loan")}
+  //         >
+  //           Education Loan
+  //         </NavDropdown.Item>
+  //         <NavDropdown.Item
+  //           onClick={() => handleNavigation("/more/scholarships")}
+  //         >
+  //           Scholarships
+  //         </NavDropdown.Item>
+  //         <NavDropdown.Item
+  //           onClick={() => handleNavigation("/more/sop-and-resume-writing")}
+  //         >
+  //           SOP & Resume Writing
+  //         </NavDropdown.Item>
+  //         <NavDropdown.Item
+  //           onClick={() =>
+  //             handleNavigation("/more/german-opportunity-card")
+  //           }
+  //         >
+  //           German Opportunity Card
+  //         </NavDropdown.Item>
+  //       </NavDropdown>
+  //     );
+  //   }
 
-    // Custom mobile dropdown
-    return (
-      <>
-        <div
-          className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""}`}
-          onClick={(e) => toggleSubmenu("more", e)}
-        >
-          More <span className="ms-auto dropdown-icon">{expandedMenus.more ? "▲" : "▼"}</span>
-        </div>
+  //   return (
+  //     <>
+  //       <div
+  //         className={`navpaths d-flex align-items-center ${isActive("/more") ? "active-link" : ""}`}
+  //         onClick={(e) => toggleSubmenu("more", e)}
+  //       >
+  //         More <span className="ms-auto dropdown-icon">{expandedMenus.more ? "▲" : "▼"}</span>
+  //       </div>
 
-        {expandedMenus.more && (
-          <div className="mobile-submenu">
-            <div
-              className="submenu-item"
-              onClick={() => handleNavigation("/more/education-loan")}
-            >
-              Education Loan
-            </div>
-            <div
-              className="submenu-item"
-              onClick={() => handleNavigation("/more/scholarships")}
-            >
-              Scholarships
-            </div>
-            <div
-              className="submenu-item"
-              onClick={() => handleNavigation("/more/sop-and-resume-writing")}
-            >
-              SOP & Resume Writing
-            </div>
-            <div
-              className="submenu-item"
-              onClick={() => handleNavigation("/more/german-opportunity-card")}
-            >
-              German Opportunity Card
-            </div>
-          </div>
-        )}
-      </>
-    );
-  };
+  //       {expandedMenus.more && (
+  //         <div className="mobile-submenu">
+  //           <div
+  //             className="submenu-item"
+  //             onClick={() => handleNavigation("/more/education-loan")}
+  //           >
+  //             Education Loan
+  //           </div>
+  //           <div
+  //             className="submenu-item"
+  //             onClick={() => handleNavigation("/more/scholarships")}
+  //           >
+  //             Scholarships
+  //           </div>
+  //           <div
+  //             className="submenu-item"
+  //             onClick={() => handleNavigation("/more/sop-and-resume-writing")}
+  //           >
+  //             SOP & Resume Writing
+  //           </div>
+  //           <div
+  //             className="submenu-item"
+  //             onClick={() => handleNavigation("/more/german-opportunity-card")}
+  //           >
+  //             German Opportunity Card
+  //           </div>
+  //         </div>
+  //       )}
+  //     </>
+  //   );
+  // };
 
   return (
     <Navbar expand="lg" className="py-2 fixed-top navcont" expanded={expanded}>
@@ -239,61 +229,64 @@ function CustomNavbar() {
         >
           <Nav className="mx-auto d-flex align-items-center">
             <Nav.Link
-              className={`navpaths d-flex align-items-center ${isActive("/") || isActive("/home") ? "active-link" : ""
-                }`}
+              className={`navpaths d-flex align-items-center ${
+                isActive("/") || isActive("/home") ? "active-link" : ""
+              }`}
               onClick={() => handleNavigation("/home")}
             >
               Home
             </Nav.Link>
             <Nav.Link
-              className={`navpaths d-flex align-items-center ${isActive("/nursing") ? "active-link" : ""
-                }`}
+              className={`navpaths d-flex align-items-center ${
+                isActive("/nursing") ? "active-link" : ""
+              }`}
               onClick={() => handleNavigation("/nursing")}
             >
               Nursing
             </Nav.Link>
             <Nav.Link
-              className={`navpaths d-flex align-items-center ${isActive("/work-abroad") ? "active-link" : ""
-                }`}
+              className={`navpaths d-flex align-items-center ${
+                isActive("/work-abroad") ? "active-link" : ""
+              }`}
               onClick={() => handleNavigation("/work-abroad")}
             >
               Work Abroad
             </Nav.Link>
+            <Nav.Link
+              className={`navpaths d-flex align-items-center ${
+                isActive("/study-abroad") ? "active-link" : ""
+              }`}
+              onClick={() => handleNavigation("/study-abroad")}
+            >
+              Study Abroad
+            </Nav.Link>
 
-            {renderStudyAbroadNav()}
+            {/* {renderStudyAbroadNav()} */}
 
             <Nav.Link
-              className={`navpaths d-flex align-items-center ${isActive("/lang-test-prep") ? "active-link" : ""
-                }`}
+              className={`navpaths d-flex align-items-center ${
+                isActive("/lang-test-prep") ? "active-link" : ""
+              }`}
               onClick={() => handleNavigation("/lang-test-prep")}
             >
               Language & Test
             </Nav.Link>
 
-            {renderMoreNav()}
+            {/* {renderMoreNav()} */}
           </Nav>
           <div className="ms-auto align-items-center justify-content-center text-center my-2">
             <button
               className="btn-primary-outline"
-              onClick={handleContactClick}
+              onClick={isMobile ? handleContactClick : undefined}
+              onMouseEnter={() => !isMobile && setIsHovered(true)}
+              onMouseLeave={() => !isMobile && setIsHovered(false)}
+              style={{ width: "200px" }}
             >
-              {isMobile ? (
-                <>
-                  <FiPhoneCall
-                    className="me-3"
-                    style={{ width: "18px", height: "auto" }}
-                  />
-                  Contact Us
-                </>
-              ) : (
-                <>
-                  <FiPhoneCall
-                    className="me-3"
-                    style={{ width: "18px", height: "auto" }}
-                  />
-                  Contact Us
-                </>
-              )}
+              <FiPhoneCall
+                className="me-3"
+                style={{ width: "18px", height: "auto" }}
+              />
+              {isMobile ? "Contact Us" : isHovered ? phoneNumber : "Contact Us"}
             </button>
           </div>
         </Navbar.Collapse>
