@@ -119,14 +119,18 @@ const HomeHeader2 = () => {
     <header className="d-flex align-items-start justify-content-center">
       <Container className="bg-dar">
         <Row className="">
+          {/* Left column with fixed image - ONLY CHANGES HERE */}
           <Col
             lg={7}
             md={5}
             sm={12}
             xs={12}
-            className="d-flex flex-column align-items-start justify-content-center "
+            className="d-flex flex-column align-items-start justify-content-center"
+            style={{ position: "relative" }}
           >
-            <Image src={headerbg} fluid className="w-100" />
+            <div style={{ position: "absolute", top: 0, left: 0, width: "100%" }}>
+              <Image src={headerbg} fluid className="w-100" />
+            </div>
           </Col>
           <Col lg={1} className="d-none d-md-block"></Col>
           <Col
@@ -267,11 +271,10 @@ const HomeHeader2 = () => {
                             required
                           />
                           <div
-                            className={`text-start bg-primar ${
-                              resendDisabled
-                                ? "resend-disabled"
-                                : "resend-enabled"
-                            }`}
+                            className={`text-start bg-primar ${resendDisabled
+                              ? "resend-disabled"
+                              : "resend-enabled"
+                              }`}
                             onClick={
                               !resendDisabled ? handleResendOtp : undefined
                             }
