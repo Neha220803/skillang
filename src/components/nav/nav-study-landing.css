@@ -8,29 +8,34 @@
     isolation: isolate;
     height: 70px;
     background: #F3EFFE;
-    border-radius: 0px !important;
     transition: all 0.3s ease;
-    /* Initial state is not sticky */
+    /* Initial state */
     position: relative;
     z-index: 998;
-    /* Below primary nav but above content */
     width: 100%;
-    position: fixed;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Apply sticky positioning when needed */
 .study-sec-nav-bg.sticky-active {
     position: fixed;
     top: 70px;
-    /* Matches your primary navbar height, adjust as needed */
+    /* Matches primary navbar height */
     left: 0;
     right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Add a placeholder when nav is sticky to prevent content jump */
-.study-sec-nav-bg.sticky-active+.nav-placeholder {
-    height: 80px;
+.nav-placeholder {
+    height: 70px;
     /* Should match the height of your navbar */
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 /* Responsive styles */
@@ -46,7 +51,7 @@
         /* Adjust for smaller nav on mobile */
     }
 
-    .study-sec-nav-bg.sticky-active+.nav-placeholder {
+    .nav-placeholder {
         height: 70px;
     }
 
