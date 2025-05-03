@@ -8,7 +8,12 @@ import marketingImage from "../../../../assets/images/study-abroad/indemandcardc
 import uiuxImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
 import backgroundImage from "../../../../assets/images/study-abroad/demandcoursebg.png";
 import { useNavigate, useLocation } from "react-router-dom";
-import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+} from "react-bootstrap-icons";
 
 import { Container, Card, CardBody, CardImg } from "react-bootstrap";
 const courseData = [
@@ -95,8 +100,8 @@ const IndemandCourse = () => {
 
   return (
     <div className="in-demand-courses-container">
-      <div className="">
-        <div className="text-center">
+      <div className="d-flex justify-content-center align-items-center flex-column">
+        <div className="text-center header-wrapper">
           <h1 className="heading-big-medium">
             In-Demand Courses & Career Paths
           </h1>
@@ -151,14 +156,14 @@ const IndemandCourse = () => {
                 onClick={handlePrevPage}
                 disabled={currentPage === 0}
               >
-                {"<"}
+                <ChevronLeft />
               </button>
               <button
                 className="pagination-button next"
                 onClick={handleNextPage}
                 disabled={currentPage === 1}
               >
-                {">"}
+                <ChevronRight />
               </button>
             </div>
           </div>

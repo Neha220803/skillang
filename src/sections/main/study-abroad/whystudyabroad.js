@@ -44,9 +44,9 @@ const WhyStudyAbroad = () => {
                   "Gain a degree that opens doors to global job markets",
               },
             ].map((benefit, index) => (
-              <Col md={6} key={index} className="">
-                <Card className="mb-3">
-                  <Card.Body className="py-0 ">
+              <Col md={6} key={index} className="mb-3 ">
+                <Card className="why-study-abroad-cards">
+                  <Card.Body className="py-0">
                     <img
                       src={benefit.icon}
                       alt={benefit.title}
