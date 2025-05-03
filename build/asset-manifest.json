@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.45fc684a.css",
-    "main.js": "/static/js/main.433bdb7f.js",
+    "main.css": "/static/css/main.ce2acc4d.css",
+    "main.js": "/static/js/main.32a645ea.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
@@ -262,20 +262,22 @@
     "static/media/uniPartnerBg.svg": "/static/media/uniPartnerBg.cbee2a8d5b0317f0f423.svg",
     "static/media/document-like.svg": "/static/media/document-like.42e06b356c7bd78839d04f55577f9718.svg",
     "static/media/whyNurse4.svg": "/static/media/whyNurse4.a346536be7714fd8924fc10acd9ca7f1.svg",
+    "static/media/finland.svg": "/static/media/finland.a7dcd73edd57a8ec485d4195c75102ad.svg",
     "static/media/whySkillangBg.svg": "/static/media/whySkillangBg.6c4cb31db94650b98333.svg",
     "static/media/whyus-bg.svg": "/static/media/whyus-bg.2d93a8af34630e5bf5bd.svg",
     "static/media/eligible3.svg": "/static/media/eligible3.98b5806240e97f54db79485ed3f0baa6.svg",
+    "static/media/austria.svg": "/static/media/austria.cb868f00ec40e9d7292fb02ae52a4f52.svg",
     "static/media/document-text.svg": "/static/media/document-text.7eddff0397554e5d2ad57faeb6fbb31e.svg",
     "static/media/france.svg": "/static/media/france.31c6705435520b324774e8c21c19e4ec.svg",
     "static/media/ireland.svg": "/static/media/ireland.db0c2bf6229fc88f0613a401b9d4ae9c.svg",
     "static/media/document.svg": "/static/media/document.5fdb859e1c2f620eb11914ea48692a4e.svg",
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
-    "main.45fc684a.css.map": "/static/css/main.45fc684a.css.map",
-    "main.433bdb7f.js.map": "/static/js/main.433bdb7f.js.map"
+    "main.ce2acc4d.css.map": "/static/css/main.ce2acc4d.css.map",
+    "main.32a645ea.js.map": "/static/js/main.32a645ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.45fc684a.css",
-    "static/js/main.433bdb7f.js"
+    "static/css/main.ce2acc4d.css",
+    "static/js/main.32a645ea.js"
   ]
 }
