@@ -1,3 +1,8 @@
+.abroad-header-wrapper {
+    width: 50% !important;
+    padding-bottom: 48px !important;
+}
+
 .scroller {
     max-width: 100%;
     overflow: hidden;
@@ -22,26 +27,19 @@
     }
 }
 
-.destination-item {
-    display: flex;
-    align-items: center;
-    margin-right: 3rem;
-    /* Reduce from 6rem to 3rem */
-    min-width: 150px;
-    /* Reduce from 200px to 150px */
+
+.study-abroad-destination-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 0px 24px !important;
+    gap: 8px !important;
+    border-radius: 16px !important;
+    border: 0px !important;
+
 }
 
 .destination-flag {
-    width: 50px;
-    /* Reduce from 60px */
-    height: 50px;
-    /* Reduce from 60px */
-    margin-right: 0.5rem;
-    /* Reduce from 1rem */
-}
-
-.destination-name {
-    font-weight: 500;
-    color: #333;
-    font-size: 1rem;
+    width: 50px !important;
+    height: auto !important;
 }

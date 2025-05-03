@@ -50,7 +50,7 @@ const LandingStudyAbroadPage = () => {
         <WhyStudyAbroad />
       </div>
       <div className="section-spacing">
-        <AbroadDestinations />
+        <AbroadDestinations isLanding={true} />
       </div>
       <div className="section-spacing">
         <StudyAbroad showAll={false} />

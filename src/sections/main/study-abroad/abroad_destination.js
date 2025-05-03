@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Container, Row, Col, Card, CardImg } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../study-abroad/abroad_destination.css";
 
@@ -10,8 +11,10 @@ import germanyFlag from "../../../assets/images/work-abroad/countryflags/germany
 import irelandFlag from "../../../assets/images/work-abroad/countryflags/ireland.svg";
 import ukFlag from "../../../assets/images/work-abroad/countryflags/uk.png";
 import usaFlag from "../../../assets/images/work-abroad/countryflags/usa.png";
+import finlandFlag from "../../../assets/images/work-abroad/countryflags/finland.svg";
+import austriaFlag from "../../../assets/images/work-abroad/countryflags/austria.svg";
 
-const AbroadDestinations = () => {
+const AbroadDestinations = ({ isLanding = false }) => {
   const destinations = [
     { name: "UK", flag: ukFlag },
     { name: "Germany", flag: germanyFlag },
@@ -20,60 +23,98 @@ const AbroadDestinations = () => {
     { name: "Canada", flag: canadaFlag },
     { name: "Ireland", flag: irelandFlag },
     { name: "France", flag: franceFlag },
+    { name: "Finland", flag: finlandFlag },
+    { name: "Austria", flag: austriaFlag },
   ];
 
   useEffect(() => {
-    const scrollers = document.querySelectorAll(".scroller");
+    if (!isLanding) {
+      const scrollers = document.querySelectorAll(".scroller");
 
-    // If a user hasn't opted in for reduced motion, then we add the animation
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      addAnimation();
-    }
+      // If a user hasn't opted in for reduced motion, then we add the animation
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+      }
 
-    function addAnimation() {
-      scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          scroller.setAttribute("data-animated", true);
 
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        const scrollerContent = Array.from(scrollerInner.children);
+          const scrollerInner = scroller.querySelector(".scroller__inner");
+          const scrollerContent = Array.from(scrollerInner.children);
 
-        scrollerContent.forEach((item) => {
-          const duplicatedItem = item.cloneNode(true);
-          duplicatedItem.setAttribute("aria-hidden", true);
-          scrollerInner.appendChild(duplicatedItem);
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
         });
-      });
+      }
     }
-  }, []);
+  }, [isLanding]);
+
+  // Create a function to render destination items
+  const renderDestinationItem = (destination, index) => (
+    <div key={index} className="study-abroad-destination-card me-4">
+      <img
+        src={destination.flag}
+        alt={`${destination.name} flag`}
+        className="destination-flag"
+      />
+      <span className="destination-name subheading-small-medium mb-1">
+        {destination.name}
+      </span>
+    </div>
+  );
 
   return (
-    <div className="study-abroad-container">
-      <div className="text-center mb-4">
+    <div className="d-flex flex-column align-items-center justify-content-center">
+      <div className="text-center abroad-header-wrapper">
         <h1 className="heading-big-medium">
           Popular Study Abroad Destinations
         </h1>
-        <p className="paragraph-big-meidum text-content-secondary">
+        <p className="paragraph-big-medium text-content-secondary">
           Explore top countries offering world-class education, cultural
           diversity, and global career opportunities
         </p>
       </div>
 
-      <div className="scroller w-100" data-direction="left" data-speed="slow">
-        <div className="scroller__inner">
-          {destinations.map((destination, index) => (
-            <div key={index} className="destination-item">
-              <img
-                src={destination.flag}
-                alt={`${destination.name} flag`}
-                className="destination-flag"
-              />
-              <span className="destination-name  subheading-small-medium  mb-1">
-                {destination.name}
-              </span>
-            </div>
-          ))}
+      {isLanding ? (
+        <Container className="mt-4">
+          <Row
+            xs={2}
+            sm={3}
+            md={4}
+            lg={5}
+            className="g-4 d-flex justify-content-center"
+          >
+            {destinations.map((destination, index) => (
+              <Col key={index} className="">
+                <Card className="study-abroad-destination-card">
+                  <CardImg
+                    src={destination.flag}
+                    alt={`${destination.name} flag`}
+                    className="card-img-top destination-flag"
+                  />
+                  <Card.Body className="text-center">
+                    <Card.Title className="subheading-big-medium">
+                      {destination.name}
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      ) : (
+        <div className="scroller w-100" data-direction="left" data-speed="slow">
+          <div className="scroller__inner">
+            {destinations.map((destination, index) =>
+              renderDestinationItem(destination, index)
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
