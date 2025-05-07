@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2e3164bd.css",
-    "main.js": "/static/js/main.29e96664.js",
+    "main.js": "/static/js/main.02b62486.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
@@ -274,10 +274,10 @@
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
     "main.2e3164bd.css.map": "/static/css/main.2e3164bd.css.map",
-    "main.29e96664.js.map": "/static/js/main.29e96664.js.map"
+    "main.02b62486.js.map": "/static/js/main.02b62486.js.map"
   },
   "entrypoints": [
     "static/css/main.2e3164bd.css",
-    "static/js/main.29e96664.js"
+    "static/js/main.02b62486.js"
   ]
 }

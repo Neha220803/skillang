@@ -8,9 +8,9 @@ const ScholarshipHeader = () => {
       <MorePageHeader
         desktopBgImage={desktopBackground}
         mobileBgImage={desktopBackground} // Optional: same as desktop if not provided
-        title="SOP & Resume Writing Services at Skillang"
-        description="Craft a compelling SOP and a professional resume that opens doors to prestigious international universities and scholarship programs."
-        buttonText="Schedule a Free Consultation"
+        title="Explore Scholarship Opportunities with Skillang"
+        description="Find and secure the financial support you need to study abroad-whether it's in the USA, UK, Canada, Australia, or beyond"
+        buttonText="Get Started Today"
       />
     </div>
   );
