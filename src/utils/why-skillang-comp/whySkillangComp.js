@@ -3,9 +3,10 @@ import {
   Container,
   Row,
   Col,
+  Card,
+  CardBody,
   CardTitle,
   CardText,
-  Card,
 } from "react-bootstrap";
 import "./whySkillangComp";
 // import "../../../../index.css";
@@ -14,60 +15,67 @@ import "./whySkillangComp";
  * ReusableWhyComponent - A reusable component for "Why Choose Us" sections
  *
  * @param {Object} props - Component props
- * @param {string} props.title - Main heading text (e.g. "Why Choose Skillang?")
+ * @param {string} props.title - Main heading text (e.g. "Why Choose")
+ * @param {string} props.highlightText - Text to be highlighted with different color (e.g. "Skillang?")
+ * @param {string} props.highlightColor - Color for highlighted text (default: "#AC92F5")
  * @param {string} props.subtitle - Subheading text
- * @param {string} props.backgroundColor - CSS class for background (default: "lang-why-skill-bg")
- * @param {Array} props.cardData - Array of objects with title, text, and img properties
- * @param {number} props.columns - Number of columns per row (default: 4)
- * @param {string} props.titleClass - CSS class for title (default: "heading-big-medium text-content-primaryInverse")
- * @param {string} props.subtitleClass - CSS class for subtitle (default: "paragraph-big-medium text-content-secondaryInverse")
- * @param {string} props.cardClass - CSS class for cards (default: "lang-why-skill-card")
- * @param {string} props.cardTitleClass - CSS class for card titles (default: "subheading-small-medium text-content-primaryInverse")
- * @param {string} props.cardTextClass - CSS class for card text (default: "paragraph-small-medium text-content-tertiaryInverse")
+ * @param {string} props.backgroundColor - CSS class for background (default: "why-skillang-bg")
+ * @param {Array} props.cardData - Array of objects with title, text, and image properties
+ * @param {boolean} props.showHighlight - Controls whether to highlight part of the title (default: true)
+ * @param {boolean} props.showBadge - Controls visibility of the "Empowering Global Careers" badge (default: true)
+ * @param {string} props.badgeText - Text to display in the badge (default: "Empowering Global Careers")
  * @returns {JSX.Element}
  */
 const ReusableWhyComponent = ({
-  title = "Why Choose Skillang?",
+  title = "Why Choose",
+  highlightText = "Skillang?",
+  highlightColor = "#AC92F5",
   subtitle = "Discover What Makes Skillang Your Best Path to Success",
-  backgroundColor = "lang-why-skill-bg",
+  backgroundColor = "why-skillang-bg",
   cardData = [],
-  columns = 4,
-  titleClass = "heading-big-medium text-content-primaryInverse",
-  subtitleClass = "paragraph-big-medium text-content-secondaryInverse",
-  cardClass = "lang-why-skill-card",
-  cardTitleClass = "subheading-small-medium text-content-primaryInverse",
-  cardTextClass = "paragraph-small-medium text-content-tertiaryInverse",
+  showHighlight = false,
+  showBadge = true,
+  badgeText = "Empowering Global Careers",
 }) => {
-  // Calculate Bootstrap column size based on specified columns
-  const colSize = 12 / columns;
-
   return (
-    <div className={backgroundColor}>
+    <div className={`${backgroundColor} text-white py-5 px-2`}>
       <Container>
-        <Row className="mb-5">
-          <h1 className={titleClass}>{title}</h1>
-          <div className={subtitleClass}>{subtitle}</div>
-        </Row>
+        {showBadge && (
+          <Row className="mb-3">
+            <div className="emp-cont caption-bold ms-2">{badgeText}</div>
+          </Row>
+        )}
         <Row>
+          <h1 className="heading-big-medium mb-2">
+            {title}{" "}
+            {showHighlight && (
+              <span style={{ color: highlightColor }}>{highlightText}</span>
+            )}
+          </h1>
+          <div className="paragraph-big-regular">{subtitle}</div>
+        </Row>
+      </Container>
+      <Container className="py-4">
+        <Row className="row-equal-height">
           {cardData.map((card, index) => (
-            <Col
-              key={index}
-              lg={colSize}
-              md={6}
-              sm={12}
-              xs={12}
-              className="mb-3"
-            >
-              <Card className={cardClass}>
+            <Col lg={12 / (cardData.length || 1)} key={index}>
+              <Card className="why-skillang-card">
                 {card.img && (
                   <img
                     src={card.img}
-                    alt={card.title}
+                    alt={`${card.title || `why-reason-${index + 1}`}`}
+                    className="why-skillang-card-img"
                     style={{ borderRadius: "12px" }}
                   />
                 )}
-                <CardTitle className={cardTitleClass}>{card.title}</CardTitle>
-                <CardText className={cardTextClass}>{card.text}</CardText>
+                <CardBody className="px-0">
+                  <CardTitle className="subheading-small-medium">
+                    {card.title}
+                  </CardTitle>
+                  <CardText className="paragraph-small-regular">
+                    {card.text}
+                  </CardText>
+                </CardBody>
               </Card>
             </Col>
           ))}

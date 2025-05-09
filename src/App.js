@@ -24,6 +24,8 @@ import ApiDebugger from "./hooks/APIDebug";
 import BlogsMainPage from "./pages/more/blogs/blogsMainPage";
 import BlogsSepPage from "./pages/more/blogs/blogsSepPage";
 import WhatsappButtonsComp from "./components/buttons/whatsapp-button/WhatsappButtons";
+import ErrorPage from "./pages/more/error-page/ErrorPage";
+import PartnerWithUsPage from "./pages/more/partnerWithUsPage";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -69,8 +71,13 @@ function Layout() {
           path="/more/german-opportunity-card"
           element={<GermanOpportunityCardsPage />}
         />
+
+        <Route path="/more/partner-with-us" element={<PartnerWithUsPage />} />
+
         <Route path="/more/blogs" element={<BlogsMainPage />} />
         <Route path="/more/blogs/new-york" element={<BlogsSepPage />} />
+
+        <Route path="*" element={<ErrorPage />} />
 
         <Route path="/apidebug" element={<ApiDebugger />} />
       </Routes>
