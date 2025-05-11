@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../indemand-courses/indemand_course.css";
-import businessAdminImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
-import engineeringImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
-import computerScienceImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
-import dataAnalyticsImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
-import marketingImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
-import uiuxImage from "../../../../assets/images/study-abroad/indemandcardcontent.png";
+import "./indemand_course.css";
+import businessAdminImage from "../../../../assets/images/study-abroad/businessAdmin.jpg";
+import engineeringImage from "../../../../assets/images/study-abroad/Engineering.jpg";
+import computerScienceImage from "../../../../assets/images/study-abroad/compsci.jpg";
+import medicineImg from "../../../../assets/images/study-abroad/medicine.jpg";
+import itImg from "../../../../assets/images/study-abroad/it.jpg";
+import bioTechImg from "../../../../assets/images/study-abroad/biotech.jpg";
 import backgroundImage from "../../../../assets/images/study-abroad/demandcoursebg.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -33,19 +33,19 @@ const courseData = [
     image: computerScienceImage,
   },
   {
-    title: "Data Analytics",
-    paths: "Business Intelligence, Data Science",
-    image: dataAnalyticsImage,
+    title: "Medicine",
+    paths: "Doctors, Surgeons, Medical Researchers",
+    image: medicineImg,
   },
   {
-    title: "Marketing",
-    paths: "Digital Marketing, Brand Management",
-    image: marketingImage,
+    title: "Information Technology",
+    paths: "Cloud, Data Science, Network Security",
+    image: itImg,
   },
   {
-    title: "UI/UX Design",
-    paths: "Product Design, User Research",
-    image: uiuxImage,
+    title: "Biotechnology",
+    paths: "Biomedical, Pharma, Genetic Research",
+    image: bioTechImg,
   },
 ];
 
@@ -99,8 +99,8 @@ const IndemandCourse = () => {
   const displayedCourses = getDisplayedCourses();
 
   return (
-    <div className="in-demand-courses-container">
-      <div className="d-flex justify-content-center align-items-center flex-column">
+    <div className="in-demand-courses-container ">
+      <div className="d-flex justify-content-center align-items-center flex-column container">
         <div className="text-center header-wrapper">
           <h1 className="heading-big-medium">
             In-Demand Courses & Career Paths
