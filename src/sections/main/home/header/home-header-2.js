@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Col,
@@ -72,13 +72,32 @@ const HomeHeader2 = () => {
     setShowToast,
   } = useFormHandler();
 
+  // State to track if specific containers should be rendered
+  const [displayExperience, setDisplayExperience] = useState(false);
+  const [displayStudyLevel, setDisplayStudyLevel] = useState(false);
+  const [displayCountry, setDisplayCountry] = useState(false);
+
   useEffect(() => {
-    // Only set these values once on component mount
+    // Set default values but don't show the conditional fields initially
     handleOptionSelect("experience", "-");
     handleOptionSelect("county", "-");
     handleOptionSelect("studyLevel", "-");
     handleOptionSelect("origin", "Home Page Form");
+
+    // Initialize lookingFor to empty to avoid showing any conditional fields
+    handleOptionSelect("lookingFor", "");
   }, []);
+
+  // Update the display states when lookingFor changes
+  useEffect(() => {
+    setDisplayExperience(
+      formData.lookingFor === "Nursing" || formData.lookingFor === "Work Abroad"
+    );
+
+    const isStudyAbroad = formData.lookingFor === "Study Abroad";
+    setDisplayStudyLevel(isStudyAbroad);
+    setDisplayCountry(isStudyAbroad);
+  }, [formData.lookingFor]);
 
   // Handler for the looking-for selection with direct label click
   const handleLookingForSelect = (option) => {
@@ -100,39 +119,14 @@ const HomeHeader2 = () => {
     handleOptionSelect("country", option);
   };
 
-  // Conditional rendering helper functions
-  const showExperienceOptions = () => {
-    return (
-      formData.lookingFor === "Nursing" || formData.lookingFor === "Work Abroad"
-    );
-  };
-
-  const showStudyLevelOptions = () => {
-    return formData.lookingFor === "Study Abroad";
-  };
-
-  const showCountryOptions = () => {
-    return formData.lookingFor === "Study Abroad";
-  };
-
   return (
     <header className="d-flex align-items-start justify-content-center">
-      <Container className="bg-dar">
-        <Row className="">
-          {/* Left column with fixed image - ONLY CHANGES HERE */}
-          <Col
-            lg={7}
-            md={5}
-            sm={12}
-            xs={12}
-            className="d-flex flex-column align-items-start justify-content-center"
-            style={{ position: "relative" }}
-          >
-            <div
-              className="bg-primary"
-              // style={{ position: "absolute", top: 0, left: 0, width: "100%" }}
-            >
-              <Image src={headerbg} fluid className="w-100 " />
+      <Container>
+        <Row>
+          {/* Left column with fixed image - Always aligned at the top */}
+          <Col lg={7} md={5} sm={12} xs={12} className="align-self-start">
+            <div className="bg-primary">
+              <Image src={headerbg} fluid className="w-100" />
             </div>
           </Col>
           <Col lg={1} className="d-none d-md-block"></Col>
@@ -141,7 +135,7 @@ const HomeHeader2 = () => {
             md={6}
             sm={12}
             xs={12}
-            className="d-flex align-items-start justify-content-center "
+            className="d-flex align-items-start justify-content-center"
           >
             <Container className="d-flex align-items-center justify-content-center flex-column">
               <div className="form-container m-0">
@@ -156,7 +150,7 @@ const HomeHeader2 = () => {
                   preparation?
                 </div>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                  <Form.Group className="" controlId="formName">
+                  <Form.Group className="mb-3" controlId="formName">
                     <Form.Control
                       type="text"
                       placeholder="Name"
@@ -168,7 +162,7 @@ const HomeHeader2 = () => {
                       maxLength={40}
                     />
                   </Form.Group>
-                  <Form.Group className="" controlId="formEmail">
+                  <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Control
                       type="email"
                       placeholder="Email"
@@ -180,8 +174,8 @@ const HomeHeader2 = () => {
                       maxLength={50}
                     />
                   </Form.Group>
-                  <Row>
-                    <Col md={6} className="">
+                  <Row className="mb-3">
+                    <Col md={6}>
                       <Form.Group controlId="formNumber">
                         <Form.Control
                           type="tel"
@@ -195,7 +189,7 @@ const HomeHeader2 = () => {
                         />
                       </Form.Group>
                     </Col>
-                    <Col md={6} className="">
+                    <Col md={6}>
                       <Form.Group controlId="formpincode">
                         <Form.Control
                           type="tel"
@@ -211,56 +205,73 @@ const HomeHeader2 = () => {
                     </Col>
                   </Row>
 
-                  {/* Using our new reusable FormRadioButton component */}
-                  <FormRadioButton
-                    label="Looking For ?"
-                    options={[
-                      "Nursing",
-                      "Study Abroad",
-                      "Work Abroad",
-                      "Test & Language Prep",
-                    ]}
-                    name="lookingFor"
-                    value={formData.lookingFor}
-                    onChange={handleLookingForSelect}
-                    controlId="formLookingFor"
-                  />
-
-                  {/* Conditional Experience Options for Nursing and Work Abroad */}
-                  {showExperienceOptions() && (
+                  {/* Using our reusable FormRadioButton component */}
+                  <div className="mb-3">
                     <FormRadioButton
-                      label="Experience"
-                      options={["0-2 yrs", "2-5 Yrs", "5+ Yrs"]}
-                      name="experience"
-                      value={formData.experience}
-                      onChange={handleExperienceSelect}
-                      controlId="formExperience"
+                      label="Looking For ?"
+                      options={[
+                        "Nursing",
+                        "Study Abroad",
+                        "Work Abroad",
+                        "Test & Language Prep",
+                      ]}
+                      name="lookingFor"
+                      value={formData.lookingFor}
+                      onChange={handleLookingForSelect}
+                      controlId="formLookingFor"
                     />
-                  )}
+                  </div>
 
-                  {/* Conditional Study Level Options for Study Abroad */}
-                  {showStudyLevelOptions() && (
-                    <FormRadioButton
-                      label="Looking for ?"
-                      options={["Bachelors", "Masters"]}
-                      name="studyLevel"
-                      value={formData.studyLevel}
-                      onChange={handleStudyLevelSelect}
-                      controlId="formStudyLevel"
-                    />
-                  )}
+                  {/* Fixed height container for conditional fields to prevent layout shifts */}
+                  <div style={{ minHeight: "0px" }}>
+                    {/* Conditional Experience Options for Nursing and Work Abroad */}
+                    {displayExperience && (
+                      <div className="mb-3">
+                        <FormRadioButton
+                          label="Experience"
+                          options={["0-2 yrs", "2-5 Yrs", "5+ Yrs"]}
+                          name="experience"
+                          value={formData.experience}
+                          onChange={handleExperienceSelect}
+                          controlId="formExperience"
+                        />
+                      </div>
+                    )}
 
-                  {/* Conditional Country Options for Study Abroad */}
-                  {showCountryOptions() && (
-                    <FormRadioButton
-                      label="Country"
-                      options={["USA", "UK", "Germany", "Australia", "Europe"]}
-                      name="country"
-                      value={formData.country}
-                      onChange={handleCountrySelect}
-                      controlId="formCountry"
-                    />
-                  )}
+                    {/* Conditional Study Level Options for Study Abroad */}
+                    {displayStudyLevel && (
+                      <div className="mb-3">
+                        <FormRadioButton
+                          label="Looking for ?"
+                          options={["Bachelors", "Masters"]}
+                          name="studyLevel"
+                          value={formData.studyLevel}
+                          onChange={handleStudyLevelSelect}
+                          controlId="formStudyLevel"
+                        />
+                      </div>
+                    )}
+
+                    {/* Conditional Country Options for Study Abroad */}
+                    {displayCountry && (
+                      <div className="mb-3">
+                        <FormRadioButton
+                          label="Country"
+                          options={[
+                            "USA",
+                            "UK",
+                            "Germany",
+                            "Australia",
+                            "Europe",
+                          ]}
+                          name="country"
+                          value={formData.country}
+                          onChange={handleCountrySelect}
+                          controlId="formCountry"
+                        />
+                      </div>
+                    )}
+                  </div>
 
                   <div style={{ marginTop: "12px" }}>
                     {otpVisible && (
@@ -274,11 +285,16 @@ const HomeHeader2 = () => {
                             required
                           />
                           <div
-                            className={`text-start bg-primar ${
-                              resendDisabled
-                                ? "resend-disabled"
-                                : "resend-enabled"
+                            className={`text-start ${
+                              resendDisabled ? "text-muted" : "text-primary"
                             }`}
+                            style={{
+                              cursor: resendDisabled
+                                ? "not-allowed"
+                                : "pointer",
+                              fontSize: "0.875rem",
+                              marginTop: "0.25rem",
+                            }}
                             onClick={
                               !resendDisabled ? handleResendOtp : undefined
                             }
@@ -298,7 +314,7 @@ const HomeHeader2 = () => {
                       </Row>
                     )}
 
-                    <button className="btn-primary " type="submit">
+                    <button className="btn-primary w-100" type="submit">
                       Book your free consultation
                     </button>
                     <div

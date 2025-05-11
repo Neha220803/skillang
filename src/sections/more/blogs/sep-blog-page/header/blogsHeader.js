@@ -117,7 +117,7 @@ const BlogsSepPageHeader = () => {
               />
               {/* Render keywords if available */}
               {keywords && keywords.length > 0 && (
-                <div className="mt-5">
+                <div className="my-5">
                   <h3 className="subheading-small-medium">
                     Suggested Keywords
                   </h3>
@@ -135,40 +135,44 @@ const BlogsSepPageHeader = () => {
               )}
 
               {/* Comments section */}
-              <BlogsCommentsComp comments={content.comments} />
+              {/* <BlogsCommentsComp comments={content.comments} /> */}
             </Container>
           </Col>
           <Col sm={12} xs={12} md={5}>
-            <Row>
-              <div className="filter-tabs">
-                <Nav variant="pills">
-                  {blogsData.categories
-                    .filter((category) => category !== "Editor's Choice")
-                    .map((category, index) => (
-                      <Nav.Item key={index}>
-                        <Nav.Link
-                          className={activeFilter === category ? "active" : ""}
-                          onClick={() => handleFilterChange(category)}
-                        >
-                          {category === "Trending" && (
-                            <HiTrendingUp
-                              style={{ width: "20px", height: "auto" }}
-                            />
-                          )}
-                          {category}
-                        </Nav.Link>
-                      </Nav.Item>
-                    ))}
-                </Nav>
-              </div>
-            </Row>
-            <Row>
-              {filteredPosts.map((post) => (
-                <Col sm={12} xs={12} md={6} key={post.id} className="mb-3">
-                  <BlogCardComp post={post} onClick={handleCardClick} />
-                </Col>
-              ))}
-            </Row>
+            <div className="sticky-sidebar">
+              <Row>
+                <div className="filter-tabs">
+                  <Nav variant="pills">
+                    {blogsData.categories
+                      .filter((category) => category !== "Editor's Choice")
+                      .map((category, index) => (
+                        <Nav.Item key={index}>
+                          <Nav.Link
+                            className={
+                              activeFilter === category ? "active" : ""
+                            }
+                            onClick={() => handleFilterChange(category)}
+                          >
+                            {category === "Trending" && (
+                              <HiTrendingUp
+                                style={{ width: "20px", height: "auto" }}
+                              />
+                            )}
+                            {category}
+                          </Nav.Link>
+                        </Nav.Item>
+                      ))}
+                  </Nav>
+                </div>
+              </Row>
+              <Row>
+                {filteredPosts.map((post) => (
+                  <Col sm={12} xs={12} md={6} key={post.id} className="mb-3">
+                    <BlogCardComp post={post} onClick={handleCardClick} />
+                  </Col>
+                ))}
+              </Row>
+            </div>
           </Col>
         </Row>
       </Container>

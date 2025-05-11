@@ -27,21 +27,18 @@
 }
 
 .blogs-summary-bg {
-    /* Frame 2106257823 */
-
     box-sizing: border-box !important;
-
-    /* Auto layout */
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 10px 12px 10px 24px !important;
     /* gap: 8px; */
-    /* 
-    width: 758px;
-    height: 68px; */
     background: #FBFBFB !important;
     border-left: 4px solid #E86E39 !important;
     border-radius: 8px !important;
+}
+
+.sticky-sidebar {
+    position: static !important;
 }
