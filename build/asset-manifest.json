@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e3164bd.css",
-    "main.js": "/static/js/main.02b62486.js",
+    "main.css": "/static/css/main.bc178531.css",
+    "main.js": "/static/js/main.24f4a7b9.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/loan-img.jpg": "/static/media/loan-img.528bace046fb62a01637.jpg",
     "static/media/nurseService.jpg": "/static/media/nurseService.8e17cf97586e27b9ce3d.jpg",
     "static/media/GermanOppCardHeaderImg.jpg": "/static/media/GermanOppCardHeaderImg.8c1b760906f2890177a8.jpg",
     "static/media/WhatGermanOppCardVisaImg.jpg": "/static/media/WhatGermanOppCardVisaImg.09095456468db1ac2e43.jpg",
+    "static/media/HeaderImg.jpg": "/static/media/HeaderImg.1d7d3bb3b03da143054a.jpg",
     "static/media/resi.jpg": "/static/media/resi.a3baf4f2507265c7a705.jpg",
     "static/media/workAbroadMainBg.jpg": "/static/media/workAbroadMainBg.9bbb5a546e375df830c3.jpg",
     "static/media/Lheader-bg.jpg": "/static/media/Lheader-bg.531595d7191c8b98b169.jpg",
@@ -26,6 +27,7 @@
     "static/media/WhyLiveGerImg.jpg": "/static/media/WhyLiveGerImg.39847ebba9f7e7581525.jpg",
     "static/media/nurseBook2.png": "/static/media/nurseBook2.8084cb5835152219cc10.png",
     "static/media/partner-image.png": "/static/media/partner-image.4b36d95cc5be1c3042f6.png",
+    "static/media/PartnerWith2.jpg": "/static/media/PartnerWith2.20a257687f8c990d84dd.jpg",
     "static/media/nType4.jpg": "/static/media/nType4.70fb48de649b06e59b9f.jpg",
     "static/media/workJourney2.jpg": "/static/media/workJourney2.b63cda716f8e78a95771.jpg",
     "static/media/workJoureny4.jpg": "/static/media/workJoureny4.14d1be74b16623e3eb4b.jpg",
@@ -43,6 +45,7 @@
     "static/media/LwhySkill4.jpg": "/static/media/LwhySkill4.51433acc2c8a04420395.jpg",
     "static/media/keyDestiLand1.jpg": "/static/media/keyDestiLand1.888c1f36aa6235b6b3c7.jpg",
     "static/media/nurseBook5.png": "/static/media/nurseBook5.9c5db607f8a7919d2a83.png",
+    "static/media/PartnerWith3.jpg": "/static/media/PartnerWith3.727f013ccdb1d6d70a9b.jpg",
     "static/media/s-journey-4.jpg": "/static/media/s-journey-4.a39c961f7107dda910e3.jpg",
     "static/media/workJoureny5.jpg": "/static/media/workJoureny5.da05d7717d7c2962e825.jpg",
     "static/media/nType3.jpg": "/static/media/nType3.146b52855e785d899c9d.jpg",
@@ -54,6 +57,7 @@
     "static/media/keyDestiLand2.jpg": "/static/media/keyDestiLand2.70e9a31ed87f2451c3bc.jpg",
     "static/media/PartnerImg.png": "/static/media/PartnerImg.6ff02f6a9c504b7e7095.png",
     "static/media/nurse-2.png": "/static/media/nurse-2.2b7c3af9372a8a7be7d1.png",
+    "static/media/PartnerWith1.jpg": "/static/media/PartnerWith1.f56060d2976f9d739c4e.jpg",
     "static/media/workAbroadCard3.jpg": "/static/media/workAbroadCard3.cae9eb9af9c46bdde58e.jpg",
     "static/media/whystudyabroad.png": "/static/media/whystudyabroad.4177aeaed8b676fcdb5b.png",
     "static/media/nType6.jpg": "/static/media/nType6.de264c09ae74eebff6ec.jpg",
@@ -147,6 +151,7 @@
     "static/media/jorneybg.png": "/static/media/jorneybg.068ebbf1840721216f0b.png",
     "static/media/emptyState.png": "/static/media/emptyState.d390d5e97e834ad84d0d.png",
     "static/media/line.png": "/static/media/line.84fc7f68858eb11b7a70.png",
+    "static/media/error-img.jpg": "/static/media/error-img.a082cb0e76a8bfd45884.jpg",
     "static/media/rejected.mp3": "/static/media/rejected.9b20c86ce38035b51a1f.mp3",
     "static/media/indemandcardcontent.png": "/static/media/indemandcardcontent.368a972ec74c690d2139.png",
     "static/media/studyAbroadBg.png": "/static/media/studyAbroadBg.695ef95d2333e6983ea8.png",
@@ -202,7 +207,7 @@
     "static/media/GerOppCardEli4.svg": "/static/media/GerOppCardEli4.b9c8e06f9bdd0cea611b22f62f71a79c.svg",
     "static/media/nurse-eli2.svg": "/static/media/nurse-eli2.f15efe6752fdfea969fc70233ed4a3b7.svg",
     "static/media/GerOppCardEli2.svg": "/static/media/GerOppCardEli2.1a58ee591e827fe1571911c6411cc22a.svg",
-    "static/media/companyIcon.svg": "/static/media/companyIcon.cac5b5c3d373ba92f6976cd6dd9572a5.svg",
+    "static/media/companyIcon.svg": "/static/media/companyIcon.99b4cc67491660a4922538d57c747df3.svg",
     "static/media/whyGer6.svg": "/static/media/whyGer6.c938273bedbd4fd0d18ea24b9e155bb2.svg",
     "static/media/eduourserviceIcon4.svg": "/static/media/eduourserviceIcon4.e5de4f031a56ae770b8baf4c9ece4a12.svg",
     "static/media/careerboost.svg": "/static/media/careerboost.2cea9cac7aa116d92492a1de8e5364fe.svg",
@@ -242,6 +247,7 @@
     "static/media/lifeStoryIcon8.svg": "/static/media/lifeStoryIcon8.efb7b8ef6cf9499b262982fce8bf763d.svg",
     "static/media/whyGer3.svg": "/static/media/whyGer3.2716569f0b68814f4c39b56d9e51012e.svg",
     "static/media/fact1.svg": "/static/media/fact1.8d7b94a37a7d2e46b1c6656f21237539.svg",
+    "static/media/recuriterIcon.svg": "/static/media/recuriterIcon.69e566fdc7b1b2344d9fda57eaa34267.svg",
     "index.html": "/index.html",
     "static/media/lifeStoryIcon9.svg": "/static/media/lifeStoryIcon9.c63dc304c24b8cd75fe53949c97175bc.svg",
     "static/media/loan1.svg": "/static/media/loan1.4820c2561712ffba87a4a7836420dd5a.svg",
@@ -271,13 +277,14 @@
     "static/media/france.svg": "/static/media/france.31c6705435520b324774e8c21c19e4ec.svg",
     "static/media/ireland.svg": "/static/media/ireland.db0c2bf6229fc88f0613a401b9d4ae9c.svg",
     "static/media/document.svg": "/static/media/document.5fdb859e1c2f620eb11914ea48692a4e.svg",
+    "static/media/instiIcon.svg": "/static/media/instiIcon.86845b45b8ab69d65598c946ccdb78fb.svg",
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
-    "main.2e3164bd.css.map": "/static/css/main.2e3164bd.css.map",
-    "main.02b62486.js.map": "/static/js/main.02b62486.js.map"
+    "main.bc178531.css.map": "/static/css/main.bc178531.css.map",
+    "main.24f4a7b9.js.map": "/static/js/main.24f4a7b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e3164bd.css",
-    "static/js/main.02b62486.js"
+    "static/css/main.bc178531.css",
+    "static/js/main.24f4a7b9.js"
   ]
 }
