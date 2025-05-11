@@ -43,9 +43,10 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .study-sec-nav-bg {
-        padding: 12px 20px;
+        padding: 45px 20px !important;
+        justify-content: start !important;
         height: 70px;
-        display: none !important;
+        /* display: none !important; */
     }
 
     .study-sec-nav-bg.sticky-active {

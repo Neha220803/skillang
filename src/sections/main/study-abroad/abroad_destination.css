@@ -1,6 +1,7 @@
 .abroad-header-wrapper {
     width: 50% !important;
     padding-bottom: 48px !important;
+    text-align: center !important;
 }
 
 .scroller {
@@ -42,4 +43,24 @@
 .destination-flag {
     width: 50px !important;
     height: auto !important;
+}
+
+@media (max-width: 768px) {
+    .abroad-header-wrapper {
+        width: 100% !important;
+        padding-bottom: 24px !important;
+        text-align: start !important;
+    }
+
+    /* .scroller__inner {
+        animation: scroll 10s linear infinite;
+    }
+
+    .study-abroad-destination-card {
+        padding: 0px 12px !important;
+    }
+
+    .destination-flag {
+        width: 40px !important;
+    } */
 }

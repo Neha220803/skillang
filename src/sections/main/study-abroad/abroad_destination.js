@@ -68,8 +68,8 @@ const AbroadDestinations = ({ isLanding = false }) => {
   );
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center">
-      <div className="text-center abroad-header-wrapper">
+    <div className=" container d-flex flex-column align-items-center justify-content-center">
+      <div className=" abroad-header-wrapper">
         <h1 className="heading-big-medium">
           Popular Study Abroad Destinations
         </h1>
@@ -80,32 +80,30 @@ const AbroadDestinations = ({ isLanding = false }) => {
       </div>
 
       {isLanding ? (
-        <Container className="mt-4">
-          <Row
-            xs={2}
-            sm={3}
-            md={4}
-            lg={5}
-            className="g-4 d-flex justify-content-center"
-          >
-            {destinations.map((destination, index) => (
-              <Col key={index} className="">
-                <Card className="study-abroad-destination-card">
-                  <CardImg
-                    src={destination.flag}
-                    alt={`${destination.name} flag`}
-                    className="card-img-top destination-flag"
-                  />
-                  <Card.Body className="text-center">
-                    <Card.Title className="subheading-big-medium">
-                      {destination.name}
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
+        <Row
+          xs={2}
+          sm={3}
+          md={4}
+          lg={5}
+          className="g-2 d-flex justify-content-center"
+        >
+          {destinations.map((destination, index) => (
+            <Col key={index} className="">
+              <Card className="study-abroad-destination-card">
+                <CardImg
+                  src={destination.flag}
+                  alt={`${destination.name} flag`}
+                  className="card-img-top destination-flag"
+                />
+                <Card.Body className="text-center">
+                  <Card.Title className="subheading-big-medium">
+                    {destination.name}
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       ) : (
         <div className="scroller w-100" data-direction="left" data-speed="slow">
           <div className="scroller__inner">
