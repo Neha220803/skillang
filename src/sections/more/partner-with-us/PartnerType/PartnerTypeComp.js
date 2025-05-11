@@ -53,7 +53,7 @@ const PartnerTypeSection = () => {
         </Row>
         <Row>
           {partnerTypes.map((partner, index) => (
-            <Col key={index} md={4} sm={12} xs={12}>
+            <Col key={index} md={4} sm={12} xs={12} className="mb-3">
               <Card className="why-nurse-card">
                 <Card.Img
                   variant="top"
