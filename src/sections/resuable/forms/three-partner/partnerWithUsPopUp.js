@@ -14,7 +14,12 @@ import useFormHandler from "../../../../hooks/useFormHandler";
 import ToastMessage from "../../../../utils/toast";
 import "./partnerWithUsPopUp.css";
 
-const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
+// Added defaultType as a prop with "Institution" as the fallback default
+const PartnerWithUsPopUpModal = ({
+  show,
+  handleClose,
+  defaultType = "Institution",
+}) => {
   const {
     partnerFormData,
     otp,
@@ -47,7 +52,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
       handlePartnerInputChange({
         target: {
           name: "type",
-          value: "Institution", // Set default value to "Institution"
+          value: defaultType, // Use the default type from props
         },
       });
     }
@@ -59,7 +64,7 @@ const PartnerWithUsPopUpModal = ({ show, handleClose }) => {
         setOtp("");
       }
     };
-  }, [show, setFormType]);
+  }, [show, setFormType, defaultType]); // Added defaultType to dependencies
 
   // Move to step 2 when OTP is sent
   useEffect(() => {
