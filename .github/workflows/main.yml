@@ -3,7 +3,7 @@ name: Deploy Built React App to EC2
 on:
   push:
     branches:
-      - deploy-to-aws  # or the branch you use to trigger deployment
+      - main  # or the branch you use to trigger deployment
 
 jobs:
   deploy:
