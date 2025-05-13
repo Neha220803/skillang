@@ -10,6 +10,17 @@ import GerOppCardEligibilityComp from "../../sections/more/german-opportunity-ca
 const GermanOpportunityCardsPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>German Opportunity Card | Skillang</title>
+        <meta
+          name="description"
+          content="Explore job opportunities in germany with the germany opportunity card. Apply easily with skillang's expert guidance and support."
+        />
+        <meta
+          name="keywords"
+          content="germany opportunity card,opportunity card germany,opportunity card germany apply online,germany opportunity card application,opportunity card germany apply,germany opportunity card apply"
+        />
+      </Helmet>
       <div className="section-spacing">
         <GermanOppCardHeaderComp />
       </div>

@@ -6,10 +6,24 @@ import WhySkillangEdu from "../../sections/more/education-loan/whyskillangEdu/Wh
 import ScholarshipTimeline from "../../sections/more/scholarships/steps-timeline/ScholarshipTimeline";
 import PartneredUni from "../../sections/resuable/partnered-uni/partnered_uni";
 import TopScholarshipComp from "../../sections/more/scholarships/topScolarships/TopScholarship";
+import { Helmet } from "react-helmet-async";
 
 const ScholarshipPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          Study Abroad Scholarships | Abroad University Scholorships
+        </title>
+        <meta
+          name="description"
+          content="Make your global education dream a reality. Discover study abroad scholarships, eligibility details, and expert help to submit winning applications"
+        />
+        <meta
+          name="keywords"
+          content="study abroad scholarships,abroad university scholorships,scholorships for indian students,scholarship abroad,scholarships to study abroad"
+        />
+      </Helmet>
       <div className="mb-5">
         <ScholarshipHeader />
       </div>

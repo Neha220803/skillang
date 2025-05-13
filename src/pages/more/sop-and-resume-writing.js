@@ -5,10 +5,22 @@ import SOPHeaderComp from "../../sections/more/sop-and-resume-writing/Header/SOP
 import SOPStepsTimelineComp from "../../sections/more/sop-and-resume-writing/steps-timeline/sopSteps";
 import WhySkillangSOPComp from "../../sections/more/sop-and-resume-writing/why-skillang-sop/WhySkillangSOP";
 import SOPOverviewComp from "../../sections/more/sop-and-resume-writing/overview/overview";
+import { Helmet } from "react-helmet-async";
 
 const SOPAndResumeWritingPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>SOP Writing Services In Chennai</title>
+        <meta
+          name="description"
+          content="For your SOP, you will undoubtedly seek experienced guidance. We provide high-quality sop writing services in chennai . Get in touch with us"
+        />
+        <meta
+          name="keywords"
+          content="sop writing services,sop writer,statement of purpose writer,sop writing services in chennai,professional sop writers in chennai"
+        />
+      </Helmet>
       <div className="section-spacing">
         <SOPHeaderComp />
       </div>

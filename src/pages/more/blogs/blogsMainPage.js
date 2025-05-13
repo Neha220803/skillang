@@ -6,6 +6,17 @@ import ChooseByCategory from "../../../sections/more/blogs/main-blog-page/choose
 const BlogsMainPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Study Abroad Consultants In Chennai | Blog</title>
+        <meta
+          name="description"
+          content="Plan your international education with expert study abroad consultants in chennai. Personalized guidance for top universities and visa success"
+        />
+        <meta
+          name="keywords"
+          content="study abroad consultants in chennai,study abroad consultants,study abroad chennai"
+        />
+      </Helmet>
       <BlogMainPageHeader />
       <EditorsChoiceSection />
       <ChooseByCategory />
