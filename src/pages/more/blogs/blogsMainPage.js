@@ -2,6 +2,7 @@ import React from "react";
 import BlogMainPageHeader from "../../../sections/more/blogs/main-blog-page/header/BlogMainPageHeader";
 import EditorsChoiceSection from "../../../sections/more/blogs/main-blog-page/editors-choice-section/EditorsChoiceSection";
 import ChooseByCategory from "../../../sections/more/blogs/main-blog-page/choose-by-category/ChooseByCategory";
+import { Helmet } from "react-helmet-async";
 
 const BlogsMainPage = () => {
   return (

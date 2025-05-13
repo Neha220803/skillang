@@ -6,6 +6,7 @@ import GermanOppApplicationProcessComp from "../../sections/more/german-opportun
 import WhyLiveInGermanyComp from "../../sections/more/german-opportunity-card/why-live-in-germany/whyLiveInGermany";
 import GerOppCardConnectComp from "../../sections/more/german-opportunity-card/german-connect/GerOppCardConnect";
 import GerOppCardEligibilityComp from "../../sections/more/german-opportunity-card/ger-opp-card-eligibility/GerOppCardEligibility";
+import { Helmet } from "react-helmet-async";
 
 const GermanOpportunityCardsPage = () => {
   return (

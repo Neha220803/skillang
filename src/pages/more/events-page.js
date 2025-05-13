@@ -1,6 +1,7 @@
 import React from "react";
 import EventsHeader from "../../sections/more/events-sections/eventsHeader";
 import UpComingEvents from "../../sections/more/events-sections/upComingEvents";
+import { Helmet } from "react-helmet-async";
 
 const EventsPage = () => {
   return (
