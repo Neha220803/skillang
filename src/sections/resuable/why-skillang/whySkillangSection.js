@@ -9,11 +9,14 @@ import {
   CardText,
 } from "react-bootstrap";
 import "./whySkillangSection.css";
-
-import whySkill1 from "../../../assets/images/reusable/whySkillang.jpg";
-import whySkill2 from "../../../assets/images/reusable/whySkillang2.jpg";
-import whySkill3 from "../../../assets/images/reusable/whySkillang3.jpg";
 import ReusableWhyComponent from "../../../utils/why-skillang-comp/whySkillangComp";
+
+const whySkill1 =
+  "https://cms.skillang.com/uploads/why_Skillang_a2a03fb683.jpg";
+const whySkill2 =
+  "https://cms.skillang.com/uploads/why_Skillang2_9000c78852.jpg";
+const whySkill3 =
+  "https://cms.skillang.com/uploads/why_Skillang3_6a6be41623.jpg";
 
 const WhySkillangSection = () => {
   const whySkillangCardData = [

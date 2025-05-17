@@ -13,7 +13,6 @@ import errorSound from "../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../hooks/useFormHandler";
 import "../../../index.css";
 import "../../../App.css";
-import nurseHeaderImage from "../../../assets/images/nursing/nurseHeaderImg.jpg";
 import FormRadioButton from "../../../components/buttons/from-radio-buttons/FormRadioButton";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
@@ -95,7 +94,11 @@ const NurseMainHeader = () => {
             xs={12}
             className="d-flex flex-column align-items-start justify-content-center "
           >
-            <Image src={nurseHeaderImage} fluid className="w-100" />
+            <Image
+              src="https://cms.skillang.com/uploads/nurse_Header_Img_1b260fe32f.jpg"
+              fluid
+              className="w-100"
+            />
           </Col>
           <Col lg={1} className="d-none d-md-block"></Col>
           <Col

@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import "../../../../index.css";
 import "../../../../App.css";
 import "./whyNursingSection.css";
+
 import whyNurse1 from "../../../../assets/icons/nurse/whyNurse1.svg";
 import whyNurse2 from "../../../../assets/icons/nurse/whyNurse2.svg";
 import whyNurse3 from "../../../../assets/icons/nurse/whyNurse3.svg";

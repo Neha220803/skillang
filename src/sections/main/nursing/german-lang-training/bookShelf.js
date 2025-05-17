@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import nurseBookBg1 from "../../../../assets/images/nursing/nurseBook1.png";
-import nurseBookBg2 from "../../../../assets/images/nursing/nurseBook2.png";
-import nurseBookBg3 from "../../../../assets/images/nursing/nurseBook3.png";
-import nurseBookBg4 from "../../../../assets/images/nursing/nurseBook4.png";
-import nurseBookBg5 from "../../../../assets/images/nursing/nurseBook5.png";
 import "./nurseLangSection.css"; // Import the CSS file
+
+const nurseBookBg1 =
+  "https://cms.skillang.com/uploads/nurse_Book1_6d8d4df324.png";
+const nurseBookBg2 =
+  "https://cms.skillang.com/uploads/nurse_Book2_7724d05782.png";
+const nurseBookBg3 =
+  "https://cms.skillang.com/uploads/nurse_Book3_ffe89030b7.png";
+const nurseBookBg4 =
+  "https://cms.skillang.com/uploads/nurse_Book4_7ee2b9cf33.png";
+const nurseBookBg5 =
+  "https://cms.skillang.com/uploads/nurse_Book5_dbb798a520.png";
 
 const BookShelf = () => {
   const [activeIndex, setActiveIndex] = useState(0);

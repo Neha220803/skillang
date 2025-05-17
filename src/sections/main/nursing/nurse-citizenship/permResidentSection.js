@@ -9,8 +9,9 @@ import {
   CardText,
   Accordion,
 } from "react-bootstrap";
-import nurseResi from "../../../../assets/images/nursing/resi.jpg";
 import "./permResidentSection.css";
+
+const nurseResi = "https://cms.skillang.com/uploads/resi_6b8aafb9b3.jpg";
 
 const benefits = [
   {

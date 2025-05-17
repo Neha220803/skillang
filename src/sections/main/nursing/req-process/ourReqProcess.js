@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Image } from "react-bootstrap";
-import reqImg from "../../../../assets/images/nursing/reqProcess.jpg";
 import "./ourReqProcess.css";
+
+const reqImg = "https://cms.skillang.com/uploads/req_Process_c5dee14dcd.jpg";
 
 const OurReqProcess = () => {
   return (

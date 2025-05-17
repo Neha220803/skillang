@@ -8,10 +8,14 @@ import {
   CardTitle,
   CardText,
 } from "react-bootstrap";
-import nurseChallenge1 from "../../../../assets/images/nursing/nurseChallenge1.jpg";
-import nurseChallenge2 from "../../../../assets/images/nursing/nurseChallenge2.jpg";
-import nurseChallenge3 from "../../../../assets/images/nursing/nurseChallenge3.jpg";
 import "./nurseChallengeSection.css";
+
+const nurseChallenge1 =
+  "https://cms.skillang.com/uploads/nurse_Challenge1_ede188c52e.jpg";
+const nurseChallenge2 =
+  "https://cms.skillang.com/uploads/nurse_Challenge2_cb985efaf5.jpg";
+const nurseChallenge3 =
+  "https://cms.skillang.com/uploads/nurse_Challenge3_957ef1498c.jpg";
 
 const nurseCallenges = [
   {

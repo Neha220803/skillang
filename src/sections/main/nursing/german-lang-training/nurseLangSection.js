@@ -2,7 +2,7 @@ import React from "react";
 import "./nurseLangSection.css";
 import { Image } from "react-bootstrap";
 import BookShelf from "./bookShelf";
-import wood from "../../../../assets/images/nursing/woord.png";
+const wood = "https://cms.skillang.com/uploads/woord_54eacdc261.png";
 
 const NurseLangSection = () => {
   return (

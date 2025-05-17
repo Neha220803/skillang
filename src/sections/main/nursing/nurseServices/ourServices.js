@@ -10,8 +10,10 @@ import {
   Button,
 } from "react-bootstrap";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
-import nurseService from "../../../../assets/images/nursing/nurseService.jpg";
 import "./ourServices.css";
+
+const nurseService =
+  "https://cms.skillang.com/uploads/nurse_Service_c315ee7cb7.jpg";
 
 const services = [
   {

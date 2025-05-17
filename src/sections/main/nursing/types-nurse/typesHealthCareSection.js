@@ -1,12 +1,13 @@
 import React from "react";
 import { CardTitle, Container, Col, Card, Row } from "react-bootstrap";
-import ntype1 from "../../../../assets/images/nursing/nType1.jpg";
-import ntype2 from "../../../../assets/images/nursing/nType2.jpg";
-import ntype3 from "../../../../assets/images/nursing/nType3.jpg";
-import ntype4 from "../../../../assets/images/nursing/nType4.jpg";
-import ntype5 from "../../../../assets/images/nursing/nType5.jpg";
-import ntype6 from "../../../../assets/images/nursing/nType6.jpg";
 import "./typesHealthCareSection.css";
+
+const ntype1 = "https://cms.skillang.com/uploads/n_Type1_92f3840669.jpg";
+const ntype2 = "https://cms.skillang.com/uploads/n_Type2_cb90a45f32.jpg";
+const ntype3 = "https://cms.skillang.com/uploads/n_Type3_ab88679daa.jpg";
+const ntype4 = "https://cms.skillang.com/uploads/n_Type4_18a3bff56d.jpg";
+const ntype5 = "https://cms.skillang.com/uploads/n_Type5_734afb3ede.jpg";
+const ntype6 = "https://cms.skillang.com/uploads/n_Type6_70a7960d99.jpg";
 
 const nurseTypes = [
   { title: "Hospital  (public and private)", img: ntype1 },
