@@ -1,11 +1,8 @@
 import React from "react";
-import loanImg from "../../../../assets/images/home/loan-img.jpg";
-
 import { Container, Col, Row, Image } from "react-bootstrap";
 import "../../../../App.css";
 import "./loan-section.css";
 import "../../../../index.css";
-import "../../../../App.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const LoanSection = () => {
@@ -21,7 +18,11 @@ const LoanSection = () => {
     <div className="d-flex flex-column align-items-center justify-content-evenly">
       <Container className="d-flex flex-column align-items-start justify-content-center">
         <Col xs={12} sm={12} md={6} lg={5} className="mb-4 d-block d-md-none">
-          <Image fluid src={loanImg} className="loan-image rounded-4" />
+          <Image
+            fluid
+            src="https://cms.skillang.com/uploads/loan_img_b98ce382ae.jpg"
+            className="loan-image rounded-4"
+          />
         </Col>
         <Row className="mb-md-3 d-block d-md-none">
           <h1 className="heading-big-medium">
@@ -49,7 +50,11 @@ const LoanSection = () => {
           </Col>
 
           <Col xs={12} sm={12} md={6} lg={6} className="mb-4 d-none d-md-block">
-            <Image fluid src={loanImg} className="loan-image rounded-4" />
+            <Image
+              fluid
+              src="https://cms.skillang.com/uploads/loan_img_b98ce382ae.jpg"
+              className="loan-image rounded-4"
+            />
           </Col>
         </Row>
       </Container>

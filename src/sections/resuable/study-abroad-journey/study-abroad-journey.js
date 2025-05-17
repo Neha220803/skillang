@@ -2,63 +2,54 @@ import React, { useEffect, useRef } from "react";
 import { Card, CardImg, Container } from "react-bootstrap";
 import "../../../App.css";
 import "./study-abroad-journey.css";
-import work1 from "../../../assets/images/reusable/s-journey-1.jpg";
-import work2 from "../../../assets/images/reusable/s-journey-2.jpg";
-import work3 from "../../../assets/images/reusable/s-journey-3.jpg";
-import work4 from "../../../assets/images/reusable/s-journey-4.jpg";
-import work5 from "../../../assets/images/reusable/s-journey-5.jpg";
-import work6 from "../../../assets/images/reusable/s-journey-6.jpg";
-import work7 from "../../../assets/images/reusable/s-journey-7.jpg";
-import work8 from "../../../assets/images/reusable/s-journey-8.jpg";
-import work9 from "../../../assets/images/reusable/s-journey-9.jpg";
 import { useNavigate } from "react-router-dom";
 
 const cardData = [
   {
     title: "Explore Universities and Courses",
     desc: "Experts guide you based on interests and background. Recommendations tailored to fit your budget.",
-    img: work1,
+    img: "https://cms.skillang.com/uploads/s_journey_1_da7f000a8d.jpg",
     id: "study-abroad-card1",
   },
   {
     title: "Personalised counselling",
     desc: "Clarify doubts before finalizing decisions. Multiple sessions ensure thorough understanding.",
-    img: work2,
+    img: "https://cms.skillang.com/uploads/s_journey_2_fde53009eb.jpg",
   },
   {
     title: "Test Preparation",
     desc: "Personalized plans based on your strengths and challenges. Expert guidance for IELTS, TOEFL, and more.",
-    img: work3,
+    img: "https://cms.skillang.com/uploads/s_journey_3_8d0c1e410e.jpg",
   },
   {
     title: "Alumni & University Rep Connect",
     desc: "Connect with alumni for personalized insights. One-on-one discussions with university representatives.",
-    img: work4,
+    img: "https://cms.skillang.com/uploads/s_journey_4_1dac72164d.jpg",
   },
   {
     title: "University Application Process",
     desc: "Our team guides you through the university application process. Real-time tracking of your application status.",
-    img: work5,
+    img: "https://cms.skillang.com/uploads/s_journey_5_f43d4ccc38.jpg",
   },
   {
     title: "Education Loan Assistance",
     desc: "Our Loan team connects you with financial institutions. Assistance provided for seamless loan processing.",
-    img: work6,
+    img: "https://cms.skillang.com/uploads/s_journey_6_31692fb714.jpg",
   },
   {
     title: "Travel and Accommodations",
     desc: "End-to-end guidance for travel and accommodation. Secure and affordable cost options.",
-    img: work7,
+    img: "https://cms.skillang.com/uploads/s_journey_7_21f8312af9.jpg",
   },
   {
     title: "Post Travel Support",
     desc: "Skillang membership grants access to alumni network. Connect, learn, and network in your destination country.",
-    img: work8,
+    img: "https://cms.skillang.com/uploads/s_journey_8_ee608651cb.jpg",
   },
   {
     title: "Job Assistance",
     desc: "Our Career support team assists with job applications. Guidance for part-time and full-time jobs abroad.",
-    img: work9,
+    img: "https://cms.skillang.com/uploads/s_journey_9_bba69c49ba.jpg",
   },
 ];
 

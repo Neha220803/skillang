@@ -12,9 +12,6 @@ import {
 import "../../../../App.css";
 import "./work-abroad-opportunity.css";
 import "../../../../index.css";
-import work1 from "../../../../assets/images/home/workAbroadCard1.jpg";
-import work2 from "../../../../assets/images/home/workAbroadCard2.jpg";
-import work3 from "../../../../assets/images/home/workAbroadCard3.jpg";
 import work4 from "../../../../assets/icons/home/electrical.svg";
 import work5 from "../../../../assets/icons/home/plumbing.svg";
 import work6 from "../../../../assets/icons/home/vpaintin.svg";
@@ -26,33 +23,33 @@ import { useNavigate } from "react-router-dom";
 const primCardData = [
   {
     title: "Nursing & Healthcare",
-    img: work1,
+    img: "https://cms.skillang.com/uploads/work_Abroad_Card1_27f26318d0.jpg",
     color: "#FCEBC3",
     btnType: "btn-secondary",
     colSize: 6,
     desc: "We specialize in placing skilled nurses and healthcare professionals abroad. We make the process seamless for both candidates and employers.",
     id: "wac1",
-    link: "/nursing", // Unique route for this card
+    link: "/nursing",
   },
   {
     title: "Hospitality Management",
-    img: work2,
+    img: "https://cms.skillang.com/uploads/work_Abroad_Card2_4c86752600.jpg",
     color: "#FFFFFF",
     btnType: "btn-secondary-outline",
     colSize: 3,
     desc: "We connect world-class talent with leading hotels, resorts, and restaurants abroad. From chefs to managers and all other positions.",
     id: "wac2",
-    link: "/work-abroad", // Unique route
+    link: "/work-abroad",
   },
   {
     title: "Information Technology",
-    img: work3,
+    img: "https://cms.skillang.com/uploads/work_Abroad_Card3_dc7b25ef0e.jpg",
     color: "#FFFFFF",
     btnType: "btn-secondary-outline",
     colSize: 3,
-    desc: "We connect skilled IT professionals with leading global companies. From software engineers to tech specialists.",
+    desc: "We connect skilled IT professionals with leading global companies. From software engineers to tech specialists.",
     id: "wac3",
-    link: "/work-abroad", // Unique route
+    link: "/work-abroad",
   },
 ];
 

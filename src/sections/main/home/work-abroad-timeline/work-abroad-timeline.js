@@ -7,11 +7,11 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { Container, Image } from "react-bootstrap";
-import wjourney1 from "../../../../assets/images/home/workJourney1.jpg";
-import wjourney2 from "../../../../assets/images/home/workJourney2.jpg";
-import wjourney3 from "../../../../assets/images/home/workJoureny3.jpg";
-import wjourney4 from "../../../../assets/images/home/workJoureny4.jpg";
-import wjourney5 from "../../../../assets/images/home/workJoureny5.jpg";
+// import wjourney1 from "../../../../assets/images/home/workJourney1.jpg";
+// import wjourney2 from "../../../../assets/images/home/workJourney2.jpg";
+// import wjourney3 from "../../../../assets/images/home/workJoureny3.jpg";
+// import wjourney4 from "../../../../assets/images/home/workJoureny4.jpg";
+// import wjourney5 from "../../../../assets/images/home/workJoureny5.jpg";
 import "../../../../App.css";
 import "../../../../index.css";
 import "./work-abroad-timeline.css";
@@ -83,35 +83,35 @@ const WorkAbroadJourneyTimeline = () => {
       title: "Explore Opportunities",
       description:
         "Explore the work abroad opportunities that fit your interest, education, and experience background.",
-      image: wjourney1,
+      image: "https://cms.skillang.com/uploads/work_Journey1_c5cb43e438.jpg",
       color: "#E53935",
     },
     {
       title: "Language & Test Prep",
       description:
         "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options for a successful career abroad.",
-      image: wjourney2,
+      image: "https://cms.skillang.com/uploads/work_Journey2_8eb54ad137.jpg",
       color: "#FB8C00",
     },
     {
       title: "CV & Application Support",
       description:
         "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process, including real-time updates on your offer letter.",
-      image: wjourney3,
+      image: "https://cms.skillang.com/uploads/work_Joureny3_c20ffee9d8.jpg",
       color: "#FDD835",
     },
     {
       title: "Application & Interview Support",
       description:
         "Stay on track with our transparent application process and real-time updates. Get expert mentorship and training to ace your interviews and secure your offer letter.",
-      image: wjourney4,
+      image: "https://cms.skillang.com/uploads/work_Joureny4_6dcba9684b.jpg",
       color: "#1E88E5",
     },
     {
       title: "Visa & Relocation Support",
       description:
         "We guide you through the visa process for a higher success rate and assist with travel and accommodation to ensure a smooth, secure, and affordable transition.",
-      image: wjourney5,
+      image: "https://cms.skillang.com/uploads/work_Joureny5_41d4b3bd04.jpg",
       color: "#8E24AA",
     },
   ];

@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import "../../../../index.css";
 import "../../../../App.css";
-import headerbg from "../../../../assets/images/home/header-bg1.jpg";
 import successSound from "../../../../assets/sounds/success.mp3";
 import errorSound from "../../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../../hooks/useFormHandler";
@@ -125,8 +124,12 @@ const HomeHeader2 = () => {
         <Row>
           {/* Left column with fixed image - Always aligned at the top */}
           <Col lg={7} md={5} sm={12} xs={12} className="align-self-start">
-            <div className="bg-primary">
-              <Image src={headerbg} fluid className="w-100" />
+            <div className="">
+              <Image
+                src="https://cms.skillang.com/uploads/header_bg1_1b4c8fe074.jpg"
+                fluid
+                className="w-100"
+              />
             </div>
           </Col>
           <Col lg={1} className="d-none d-md-block"></Col>

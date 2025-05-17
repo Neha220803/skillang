@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import nursePartnerImg from "../../../assets/images/reusable/partner-image.png";
 import institudeIcon from "../../../assets/icons/resuable/instituteIcon.svg";
 import companyIcon from "../../../assets/icons/resuable/companyIcon.svg";
 import PartnerWithUsPopUpModal from "../forms/three-partner/partnerWithUsPopUp";
 import recruiterIcon from "../../../assets/icons/resuable/recruitIcon.svg";
 import "./partnerWithUs.css";
+
+const nursePartnerImg =
+  "https://cms.skillang.com/uploads/partner_image_5fac58e764.png";
 
 const PartnerWithUsSection = () => {
   const [showModal, setShowModal] = useState(false);
