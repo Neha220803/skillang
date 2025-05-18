@@ -1,11 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "../study-abroad/whystudyabroad.css";
-import whystudyabroad from "../../../assets/images/study-abroad/whystudyabroad/whystudyabroad.png";
 import globalIcon from "../../../assets/images/study-abroad/whystudyabroad/icons/globalexpose.svg";
 import educationIcon from "../../../assets/images/study-abroad/whystudyabroad/icons/topquality.svg";
 import networkingIcon from "../../../assets/images/study-abroad/whystudyabroad/icons/network.svg";
 import careerIcon from "../../../assets/images/study-abroad/whystudyabroad/icons/careerboost.svg";
+
+const whystudyabroad =
+  "https://cms.skillang.com/uploads/whystudyabroad_00275f4de2.png";
 
 const WhyStudyAbroad = () => {
   return (

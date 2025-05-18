@@ -10,12 +10,14 @@ import {
 } from "react-bootstrap";
 import "../../../index.css";
 import "../../../App.css";
-import headerbg from "../../../assets/images/study-abroad/headerimagebg.png";
 import successSound from "../../../assets/sounds/success.mp3";
 import errorSound from "../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../hooks/useFormHandler";
 import "./study_header.css";
 import FormRadioButton from "../../../components/buttons/from-radio-buttons/FormRadioButton";
+
+const headerbg =
+  "https://cms.skillang.com/uploads/headerimagebg_f6e0827d66.png";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {

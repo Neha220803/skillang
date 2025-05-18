@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./indemand_course.css";
-import businessAdminImage from "../../../../assets/images/study-abroad/businessAdmin.jpg";
-import engineeringImage from "../../../../assets/images/study-abroad/Engineering.jpg";
-import computerScienceImage from "../../../../assets/images/study-abroad/compsci.jpg";
-import medicineImg from "../../../../assets/images/study-abroad/medicine.jpg";
-import itImg from "../../../../assets/images/study-abroad/it.jpg";
-import bioTechImg from "../../../../assets/images/study-abroad/biotech.jpg";
-import backgroundImage from "../../../../assets/images/study-abroad/demandcoursebg.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   ChevronDown,
@@ -14,8 +7,19 @@ import {
   ChevronRight,
   ChevronUp,
 } from "react-bootstrap-icons";
-
 import { Container, Card, CardBody, CardImg } from "react-bootstrap";
+
+const businessAdminImage =
+  "https://cms.skillang.com/uploads/indemandcardcontent_e4d75790a5.png";
+const engineeringImage =
+  "https://cms.skillang.com/uploads/Engineering_4ab3e651a7.jpg";
+const computerScienceImage =
+  "https://cms.skillang.com/uploads/compsci_95ca348643.jpg";
+const medicineImg = "https://cms.skillang.com/uploads/medicine_77103029da.jpg";
+const itImg = "https://cms.skillang.com/uploads/it_32ebb44bab.jpg";
+const bioTechImg = "https://cms.skillang.com/uploads/biotech_dc8e72d98e.jpg";
+const backgroundImage =
+  "https://cms.skillang.com/uploads/demandcoursebg_17fe271827.png";
 const courseData = [
   {
     title: "Business Administration",
