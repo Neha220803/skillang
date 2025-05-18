@@ -8,13 +8,13 @@ import resumeIcon from "../../../assets/images/work-abroad/icons/resumr.png";
 import jobMatchIcon from "../../../assets/images/work-abroad/icons/job_match.png";
 import interviewIcon from "../../../assets/images/work-abroad/icons/interview_preparation.png";
 import visaIcon from "../../../assets/images/work-abroad/icons/visa_assistance.png";
-import airplane from "../../../assets/images/work-abroad/icons/airplane.png";
 
 import ukFlag from "../../../assets/images/work-abroad/countryflags/uk.png";
 import germanyFlag from "../../../assets/images/work-abroad/countryflags/germany.png";
 import usaFlag from "../../../assets/images/work-abroad/countryflags/usa.png";
 import australiaFlag from "../../../assets/images/work-abroad/countryflags/australia.png";
 import canadaFlag from "../../../assets/images/work-abroad/countryflags/canada.png";
+
 import ConsultationModal from "../../resuable/forms/calendly/LeadFormCalendly";
 
 const serviceOfferings = [

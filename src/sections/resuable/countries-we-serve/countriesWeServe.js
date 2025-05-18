@@ -5,13 +5,18 @@ import "../../../index.css";
 import "./countriesWeServe.css";
 import "../../../App.css";
 
-import australiaImage from "../../../assets/images/work-abroad/countryaustralia.png";
-import canadaImage from "../../../assets/images/work-abroad/countrycanada.png";
-import franceImage from "../../../assets/images/work-abroad/countryfrance.png";
-import germanyImage from "../../../assets/images/work-abroad/countrygermany.png";
-import irelandImage from "../../../assets/images/work-abroad/countryireland.png";
-import ukImage from "../../../assets/images/work-abroad/countryuk.png";
-import usaImage from "../../../assets/images/work-abroad/countryusa.png";
+const australiaImage =
+  "https://cms.skillang.com/uploads/countryaustralia_63a47de43b.png";
+const canadaImage =
+  "https://cms.skillang.com/uploads/countrycanada_5adf740d16.png";
+const franceImage =
+  "https://cms.skillang.com/uploads/countryfrance_d31e4d7c8f.png";
+const germanyImage =
+  "https://cms.skillang.com/uploads/countrygermany_58b2114e41.png";
+const irelandImage =
+  "https://cms.skillang.com/uploads/countryireland_7246410299.png";
+const ukImage = "https://cms.skillang.com/uploads/countryuk_a521b25964.png";
+const usaImage = "https://cms.skillang.com/uploads/countryusa_316757d32d.png";
 
 const countries = [
   {
