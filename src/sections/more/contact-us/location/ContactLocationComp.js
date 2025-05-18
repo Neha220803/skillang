@@ -41,7 +41,7 @@ const ContactLocationComp = () => {
                 <div className="subheading-small-medium mb-2">
                   Other Locations
                 </div>
-                <Col>
+                <Col sm={12} xs={12} md={4}>
                   <h4 className="paragraph-big-medium">Office 1</h4>
                   <div className="paragraph-small-medium text-content-secondary">
                     ABC- Street Name, Chennai-123456
@@ -50,7 +50,7 @@ const ContactLocationComp = () => {
                     See on map
                   </button>
                 </Col>
-                <Col>
+                <Col sm={12} xs={12} md={4} className="my-4 my-md-0">
                   <h4 className="paragraph-big-medium">Office 2</h4>
                   <div className="paragraph-small-medium text-content-secondary">
                     ABC- Street Name, Chennai-123456
@@ -59,8 +59,8 @@ const ContactLocationComp = () => {
                     See on map
                   </button>
                 </Col>
-                <Col>
-                  <h4 className="paragraph-big-medium">Office 2</h4>
+                <Col sm={12} xs={12} md={4}>
+                  <h4 className="paragraph-big-medium">Office 3</h4>
                   <div className="paragraph-small-medium text-content-secondary">
                     ABC- Street Name, Chennai-123456
                   </div>

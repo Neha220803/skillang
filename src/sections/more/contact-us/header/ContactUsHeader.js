@@ -109,21 +109,21 @@ const ContactUsHeader = () => {
             <Row className="mt-5">
               <Col sm={12} xs={12} md={4}>
                 <h4 className="paragraph-big-medium">Customer Support</h4>
-                <div>
+                <div className="text-content-secondary">
                   Our support team is available around the clock to address any
                   concerns or queries you may have.
                 </div>
               </Col>
               <Col sm={12} xs={12} md={4} className="my-4 my-md-0">
                 <h4 className="paragraph-big-medium">Feedback & Suggestions</h4>
-                <div>
+                <div className="text-content-secondary">
                   We value your feedback & are continuously working to improve
                   us. Your input is crucial in shaping the our future.
                 </div>
               </Col>
               <Col sm={12} xs={12} md={4}>
                 <h4 className="paragraph-big-medium">Study Abroad Inquiry</h4>
-                <div>
+                <div className="text-content-secondary">
                   If you have questions about studying abroad, our team is here
                   to help.
                 </div>

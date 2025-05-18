@@ -12,7 +12,6 @@ const ContactUsPage = () => {
       <div className="section-spacing">
         <ContactLocationComp />
       </div>
-
       <div className="section-spacing">
         {" "}
         <ContactFAQComp />
