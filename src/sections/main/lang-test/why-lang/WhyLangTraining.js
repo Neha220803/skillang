@@ -10,11 +10,13 @@ import {
   CardText,
   CardBody,
 } from "react-bootstrap";
-import whyLearnImg from "../../../../assets/images/lang-test/LWhyLearnImg.jpg";
 import whyLearnIcon1 from "../../../../assets/icons/lang-test/collab.svg";
 import whyLearnIcon2 from "../../../../assets/icons/lang-test/admission.svg";
 import whyLearnIcon3 from "../../../../assets/icons/lang-test/communicate.svg";
 import "./WhyLangTraining.css";
+
+const whyLearnImg =
+  "https://cms.skillang.com/uploads/L_Why_Learn_Img_ea0793b3ad.jpg";
 
 const cardData = [
   {

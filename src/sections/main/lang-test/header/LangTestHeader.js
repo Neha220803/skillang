@@ -11,11 +11,12 @@ import {
 import "../../../../index.css";
 import "../../../../App.css";
 // import "../../home/header/home-header.css";
-import headerbg from "../../../../assets/images/lang-test/Lheader-bg.jpg";
 import successSound from "../../../../assets/sounds/success.mp3";
 import errorSound from "../../../../assets/sounds/rejected.mp3";
 import useFormHandler from "../../../../hooks/useFormHandler";
 import FormRadioButton from "../../../../components/buttons/from-radio-buttons/FormRadioButton";
+
+const headerbg = "https://cms.skillang.com/uploads/Lheader_bg_ccf6a9bd27.jpg";
 
 const ToastMessage = ({ showToast, onClose, toastVariant, status }) => {
   useEffect(() => {

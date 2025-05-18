@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import LPartnerImg from "../../../../assets/images/lang-test/PartnerImg.png";
 import "./LangContactUs.css";
 import ConsultationModal from "../../../resuable/forms/calendly/LeadFormCalendly";
+
+const LPartnerImg =
+  "https://cms.skillang.com/uploads/Partner_Img_8040b41d1b.png";
 
 const LangContactUs = () => {
   const [showModal, setShowModal] = useState(false);

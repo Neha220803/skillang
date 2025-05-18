@@ -12,12 +12,9 @@
 }
 
 #lang-program-card-1 {
-  background-image: url('../../../../assets/images/lang-test/langTestprepBg1.png') !important;
+  background-image: url('https://cms.skillang.com/uploads/lang_Testprep_Bg1_7b9a6d86be.png') !important;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 24px !important;
-
   border: 2px solid #F7D6C8 !important;
-
-
 }

@@ -7,10 +7,10 @@ import {
   CardText,
   Card,
 } from "react-bootstrap";
-import LwhySkill1 from "../../../../assets/images/lang-test/LwhySkill1.jpg";
-import LwhySkill2 from "../../../../assets/images/lang-test/LwhySkill2.jpg";
-import LwhySkill3 from "../../../../assets/images/lang-test/LwhySkill3.jpg";
-import LwhySkill4 from "../../../../assets/images/lang-test/LwhySkill4.jpg";
+import LwhySkill1 from "https://cms.skillang.com/uploads/Lwhy_Skill1_a2db1f31c6.jpg";
+import LwhySkill2 from "https://cms.skillang.com/uploads/Lwhy_Skill2_78da29ebb8.jpg";
+import LwhySkill3 from "https://cms.skillang.com/uploads/Lwhy_Skill3_8a71aaf9ee.jpg";
+import LwhySkill4 from "https://cms.skillang.com/uploads/Lwhy_Skill4_c763c40e39.jpg";
 import "./WhySkillangPrep.css";
 import "../../../../index.css";
 
