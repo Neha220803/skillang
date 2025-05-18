@@ -1,0 +1,22 @@
+.location-badge {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 10px 12px !important;
+    gap: 6px !important;
+    width: fit-content !important;
+    background: #FEF8EB !important;
+    border-radius: 8px !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #664905;
+}
+
+.map-container {
+    background: #EEEEEE !important;
+    border-radius: 24px !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}

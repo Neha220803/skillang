@@ -26,6 +26,7 @@ import BlogsSepPage from "./pages/more/blogs/blogsSepPage";
 import WhatsappButtonsComp from "./components/buttons/whatsapp-button/WhatsappButtons";
 import ErrorPage from "./pages/more/error-page/ErrorPage";
 import PartnerWithUsPage from "./pages/more/partnerWithUsPage";
+import ContactUsPage from "./pages/more/contact-us-page";
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -73,6 +74,8 @@ function Layout() {
         />
 
         <Route path="/more/partner-with-us" element={<PartnerWithUsPage />} />
+
+        <Route path="/more/contact-us" element={<ContactUsPage />} />
 
         <Route path="/more/blogs" element={<BlogsMainPage />} />
         <Route path="/more/blogs/new-york" element={<BlogsSepPage />} />

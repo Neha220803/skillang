@@ -58,6 +58,10 @@
   box-shadow: none !important;
 }
 
+.accordion-button:hover {
+  background: none !important;
+}
+
 .accordion-dark button:not(.collapsed) {
   background-color: #1a1d20 !important;
   /* Slightly darker when expanded */
