@@ -27,6 +27,8 @@ import WhatsappButtonsComp from "./components/buttons/whatsapp-button/WhatsappBu
 import ErrorPage from "./pages/more/error-page/ErrorPage";
 import PartnerWithUsPage from "./pages/more/partnerWithUsPage";
 import ContactUsPage from "./pages/more/contact-us-page";
+import Mail from "./pages/mail/mail";
+
 
 function Layout() {
   const location = useLocation(); // Now inside Router context
@@ -83,6 +85,7 @@ function Layout() {
         <Route path="*" element={<ErrorPage />} />
 
         <Route path="/apidebug" element={<ApiDebugger />} />
+        <Route path="/send-mails" element={<Mail />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}
