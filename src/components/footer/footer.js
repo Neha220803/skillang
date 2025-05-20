@@ -141,7 +141,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="tel:+917200630336">
+                      <a href="/more/contact-us">
                         <div className="caption-medium">Contact Us</div>
                       </a>
                     </li>

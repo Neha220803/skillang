@@ -69,14 +69,7 @@ function CustomNavbar() {
     if (isMobile) {
       window.location.href = `tel:${phoneNumber}`;
     } else {
-      const encodedMessage = encodeURIComponent(whatsappMessage);
-      window.open(
-        `https://web.whatsapp.com/send?phone=${phoneNumber.replace(
-          "+",
-          ""
-        )}&text=${encodedMessage}`,
-        "_blank"
-      );
+      handleNavigation("/more/contact-us");
     }
   };
 
@@ -281,7 +274,7 @@ function CustomNavbar() {
           <div className="ms-auto align-items-center justify-content-center text-center my-2">
             <button
               className="btn-primary-outline"
-              onClick={isMobile ? handleContactClick : undefined}
+              onClick={handleContactClick}
               onMouseEnter={() => !isMobile && setIsHovered(true)}
               onMouseLeave={() => !isMobile && setIsHovered(false)}
               style={{ width: "200px" }}
