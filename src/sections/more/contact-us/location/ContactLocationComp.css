@@ -19,4 +19,15 @@
     border-radius: 24px !important;
     height: 100% !important;
     overflow: hidden !important;
+    min-height: 400px !important;
+}
+
+.location-address-wrap {
+    width: 50% !important;
+}
+
+@media (max-width: 768px) {
+    .location-address-wrap {
+        width: 60% !important;
+    }
 }

@@ -36,7 +36,7 @@ const CommonFAQComp = ({ faqData, showButtons = false }) => {
 
   return (
     <div>
-      <Container className="d-flex flex-column align-items-center">
+      <Container className="d-flex flex-column align-items-center p-0">
         <Row className="text-center mb-4">
           <h1 className="heading-big-medium">Frequently Asked Questions</h1>
         </Row>

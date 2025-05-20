@@ -29,14 +29,17 @@ const ContactLocationComp = () => {
                 <HiLocationMarker size={16} /> Our Location
               </div>
               <div>
-                <h1 className="heading-big-medium">Connecting Near & Far</h1>
-                <div className="paragraph-big-medium">Headquarters</div>
-                <div className="paragraph-small-medium text-content-secondary">
-                  ABC- Street Name, Chennai-123456
+                <h1 className="heading-big-medium mb-3">
+                  Connecting Near & Far
+                </h1>
+                <div className="paragraph-big-medium mb-2">Headquarters</div>
+                <div className="paragraph-small-medium text-content-secondary location-address-wrap">
+                  Executive Zone, Shakti Tower 1, 766, Anna Salai, Thousand
+                  Lights, Chennai, Tamil Nadu 600002
                 </div>
               </div>
             </div>
-            <div>
+            {/* <div>
               <Row>
                 <div className="subheading-small-medium mb-2">
                   Other Locations
@@ -69,7 +72,7 @@ const ContactLocationComp = () => {
                   </button>
                 </Col>
               </Row>
-            </div>
+            </div> */}
           </Col>
         </Row>
       </Container>

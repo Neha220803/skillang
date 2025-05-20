@@ -131,7 +131,7 @@ const ContactUsHeader = () => {
             </Row>
           </Col>
           <Col md={4} xs={12} sm={12}>
-            <Container className="d-flex align-items-center justify-content-center flex-column mt-4 mt-md-0">
+            <Container className="d-flex align-items-center justify-content-center flex-column mt-4 mt-md-0 p-0">
               <div className="form-container m-0">
                 <div
                   className="subheading-small-medium text-center"
