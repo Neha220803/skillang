@@ -4,6 +4,11 @@ import { Button, Card, Form, Container, Row, Col, Alert, Spinner, Table } from '
 import Papa from 'papaparse';
 
 const Mailer = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [authUsername, setAuthUsername] = useState('');
+    const [authPassword, setAuthPassword] = useState('');
+    const [authError, setAuthError] = useState('');
+
     const [senderEmail, setSenderEmail] = useState('');
     const [templateKey, setTemplateKey] = useState('');
     const [templates, setTemplates] = useState([]);
@@ -17,6 +22,8 @@ const Mailer = () => {
     const fileInputRef = useRef(null);
 
     useEffect(() => {
+        if (!isAuthenticated) return;
+
         const fetchTemplates = async () => {
             setTemplatesLoading(true);
             try {
@@ -39,7 +46,7 @@ const Mailer = () => {
         };
 
         fetchTemplates();
-    }, []);
+    }, [isAuthenticated]);
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -119,7 +126,7 @@ const Mailer = () => {
             setRecipients([]);
             setError('');
 
-            // Clear the file input UI
+            // Clear file input UI
             if (fileInputRef.current) {
                 fileInputRef.current.value = '';
             }
@@ -130,6 +137,55 @@ const Mailer = () => {
             setLoading(false);
         }
     };
+
+    const handleLogin = () => {
+        if (authUsername === 'mailagent1' && authPassword === 'lokskill123') {
+            setIsAuthenticated(true);
+            setAuthError('');
+        } else {
+            setAuthError('Invalid username or password.');
+        }
+    };
+
+    if (!isAuthenticated) {
+        return (
+            <Container className="mt-5">
+                <Row className="justify-content-md-center">
+                    <Col md={6}>
+                        <Card>
+                            <Card.Header as="h5">Restricted Access</Card.Header>
+                            <Card.Body>
+                                {authError && <Alert variant="danger">{authError}</Alert>}
+                                <Form>
+                                    <Form.Group className="mb-3" controlId="authUsername">
+                                        <Form.Label>Username</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            value={authUsername}
+                                            onChange={(e) => setAuthUsername(e.target.value)}
+                                        />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3" controlId="authPassword">
+                                        <Form.Label>Password</Form.Label>
+                                        <Form.Control
+                                            type="password"
+                                            value={authPassword}
+                                            onChange={(e) => setAuthPassword(e.target.value)}
+                                        />
+                                    </Form.Group>
+
+                                    <Button variant="primary" onClick={handleLogin}>
+                                        Login
+                                    </Button>
+                                </Form>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        );
+    }
 
     return (
         <Container className="mt-5 mb-5">
