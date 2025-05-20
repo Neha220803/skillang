@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.09db23d9.css",
-    "main.js": "/static/js/main.4cd79826.js",
+    "main.js": "/static/js/main.3cff8e9f.js",
     "static/media/country-wise-header-uk.jpg": "/static/media/country-wise-header-uk.611249ad1aaad0d9853b.jpg",
     "static/media/headerbg.jpg": "/static/media/headerbg.263ecb24bebfe7fc4e82.jpg",
     "static/media/GermanOppCardHeaderImg.jpg": "/static/media/GermanOppCardHeaderImg.8c1b760906f2890177a8.jpg",
@@ -179,10 +179,10 @@
     "static/media/eligible4.svg": "/static/media/eligible4.dee498f11934c161c98c3256c94522f2.svg",
     "static/media/paperclip-2.svg": "/static/media/paperclip-2.c4f1e5cdcf98febaa686b392fee7b19d.svg",
     "main.09db23d9.css.map": "/static/css/main.09db23d9.css.map",
-    "main.4cd79826.js.map": "/static/js/main.4cd79826.js.map"
+    "main.3cff8e9f.js.map": "/static/js/main.3cff8e9f.js.map"
   },
   "entrypoints": [
     "static/css/main.09db23d9.css",
-    "static/js/main.4cd79826.js"
+    "static/js/main.3cff8e9f.js"
   ]
 }
