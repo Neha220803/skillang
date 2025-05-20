@@ -28,6 +28,7 @@ import ErrorPage from "./pages/more/error-page/ErrorPage";
 import PartnerWithUsPage from "./pages/more/partnerWithUsPage";
 import ContactUsPage from "./pages/more/contact-us-page";
 import Mail from "./pages/mail/mail";
+import Schedulemail from "./pages/mail/schedulemail";
 
 
 function Layout() {
@@ -86,6 +87,7 @@ function Layout() {
 
         <Route path="/apidebug" element={<ApiDebugger />} />
         <Route path="/send-mails" element={<Mail />} />
+        <Route path="/schedule-mails" element={<Schedulemail />} />
       </Routes>
       {/* Show Footer only if not on specified Landing Pages */}
       {!hideNavbarPaths.includes(location.pathname) && <FooterSection />}
