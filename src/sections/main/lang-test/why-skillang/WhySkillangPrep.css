@@ -13,7 +13,8 @@
 }
 
 .lang-why-skill-bg {
-  background-image: url("https: //cms.skillang.com/uploads/Lwhy_Skill_Bg_78abb858f0.png");
+  background-image: url("https://cms.skillang.com/uploads/Lwhy_Skill_Bg_78abb858f0.png");
+  background-color: #191919 !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left !important;
