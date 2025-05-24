@@ -103,7 +103,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className="d-block d-md-none">
-                      <a href="tel:+917200630336">
+                      <a href="/more/contact-us">
                         <div className="caption-medium"> Contact Us</div>
                       </a>
                     </li>
