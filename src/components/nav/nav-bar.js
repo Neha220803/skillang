@@ -69,7 +69,7 @@ function CustomNavbar() {
     if (isMobile) {
       window.location.href = `tel:${phoneNumber}`;
     } else {
-      // handleNavigation("/more/contact-us");
+      handleNavigation("/more/contact-us");
     }
   };
 
