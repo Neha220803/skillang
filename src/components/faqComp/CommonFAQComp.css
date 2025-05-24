@@ -58,27 +58,26 @@
     border-top: 1px solid rgba(0, 0, 0, .125) !important;
 }
 
-.accordion-button:hover {
-    background-color: none !important;
-    color: black !important;
+/* FIXED: Scope the hover effect to only FAQ items, not all accordions */
+.faq-item .accordion-button:hover {
+    background-color: #f8f9fa !important;
+    color: #505050 !important;
 }
 
-/* accordion-button:hover  - refelcting from othe files*/
-
 /* Keep the focus styling minimal */
-.accordion-button:focus {
+.faq-item .accordion-button:focus {
     box-shadow: none !important;
     border-color: rgba(0, 0, 0, .125) !important;
 }
 
-.accordion-button:not(.collapsed) {
+.faq-item .accordion-button:not(.collapsed) {
     color: #505050 !important;
     background-color: #fff !important;
     box-shadow: none !important;
 }
 
 /* Remove the default accordion button after pseudo-element (the arrow) */
-.accordion-button::after {
+.faq-item .accordion-button::after {
     display: none !important;
 }
 
@@ -93,17 +92,17 @@
 }
 
 /* Allow the default accordion structure */
-.accordion-collapse {
+.faq-container .accordion-collapse {
     border-top: 0 !important;
     /* This ensures we only have our custom divider */
 }
 
-/* Adjust accordion header padding to match your design */
-.accordion-header .accordion-button {
+/* Adjust accordion header padding to match your design - scoped to FAQ only */
+.faq-item .accordion-header .accordion-button {
     padding: 20px !important;
 }
 
-/* Add padding to accordion body to match your design */
-.accordion-body {
+/* Add padding to accordion body to match your design - scoped to FAQ only */
+.faq-item .accordion-body {
     padding: 20px !important;
 }

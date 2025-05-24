@@ -44,15 +44,6 @@
   min-width: 50%;
 }
 
-/* Custom styling for dark accordion headers */
-.accordion-dark {
-  /* color: white !important; */
-}
-
-.accordion-dark button {
-  /* This is Bootstrap's bg-dark color */
-  /* color: white !important; */
-}
 
 .accordion-dark button:focus {
   box-shadow: none !important;
